@@ -5,7 +5,7 @@
 # instance fields
 .field private final a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
 
-.field private final b:Lcn/com/smartdevices/bracelet/e/c;
+.field private final b:Lcn/com/smartdevices/bracelet/d/c;
 
 .field private final c:I
 
@@ -68,13 +68,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->l:Ljava/lang/String;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/e/c;
+    new-instance v0, Lcn/com/smartdevices/bracelet/d/c;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/e/e;->a:Lcn/com/smartdevices/bracelet/e/e;
+    sget-object v1, Lcn/com/smartdevices/bracelet/d/e;->a:Lcn/com/smartdevices/bracelet/d/e;
 
-    invoke-direct {v0, p1, v1, v2}, Lcn/com/smartdevices/bracelet/e/c;-><init>(Ljava/lang/String;Lcn/com/smartdevices/bracelet/e/e;Z)V
+    invoke-direct {v0, p1, v1, v2}, Lcn/com/smartdevices/bracelet/d/c;-><init>(Ljava/lang/String;Lcn/com/smartdevices/bracelet/d/e;Z)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
 
@@ -98,9 +98,9 @@
 
     const/4 v2, 0x1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/c;->b()Ljava/io/File;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->b()Ljava/io/File;
 
     move-result-object v0
 
@@ -110,14 +110,14 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/c;->i()Ljava/io/File;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->i()Ljava/io/File;
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/c;->c()Ljava/io/File;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->c()Ljava/io/File;
 
     move-result-object v0
 
@@ -136,9 +136,9 @@
     :cond_2
     new-instance v7, Ljava/io/FileInputStream;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/c;->c()Ljava/io/File;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->c()Ljava/io/File;
 
     move-result-object v0
 
@@ -196,7 +196,7 @@
 
     invoke-static {v0, v10}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -233,13 +233,13 @@
     move v0, v2
 
     :goto_2
-    iget-object v12, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v12, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v12}, Lcn/com/smartdevices/bracelet/e/c;->f()Ljava/io/File;
+    invoke-virtual {v12}, Lcn/com/smartdevices/bracelet/d/c;->f()Ljava/io/File;
 
     move-result-object v12
 
-    invoke-virtual {v10, v11, v0, v12}, Lcn/com/smartdevices/bracelet/e/c;->a(Ljava/lang/String;ZLjava/io/File;)V
+    invoke-virtual {v10, v11, v0, v12}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/lang/String;ZLjava/io/File;)V
 
     :cond_4
     const-string v0, "[:/]"
@@ -578,7 +578,7 @@
 
     move-result-object v5
 
-    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -603,13 +603,13 @@
     move v5, v2
 
     :goto_4
-    iget-object v12, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v12, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v12}, Lcn/com/smartdevices/bracelet/e/c;->e()Ljava/io/File;
+    invoke-virtual {v12}, Lcn/com/smartdevices/bracelet/d/c;->e()Ljava/io/File;
 
     move-result-object v12
 
-    invoke-virtual {v10, v11, v5, v12}, Lcn/com/smartdevices/bracelet/e/c;->a(Ljava/lang/String;ZLjava/io/File;)V
+    invoke-virtual {v10, v11, v5, v12}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/lang/String;ZLjava/io/File;)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -682,15 +682,15 @@
 
     move-result-object v5
 
-    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v11}, Lcn/com/smartdevices/bracelet/e/c;->e()Ljava/io/File;
+    invoke-virtual {v11}, Lcn/com/smartdevices/bracelet/d/c;->e()Ljava/io/File;
 
     move-result-object v11
 
-    invoke-virtual {v10, v5, v2, v11}, Lcn/com/smartdevices/bracelet/e/c;->a(Ljava/lang/String;ZLjava/io/File;)V
+    invoke-virtual {v10, v5, v2, v11}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/lang/String;ZLjava/io/File;)V
 
     goto/16 :goto_1
 
@@ -711,7 +711,7 @@
 
     if-nez v0, :cond_14
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -746,13 +746,13 @@
     if-le v3, v2, :cond_15
 
     :goto_5
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/e/c;->f()Ljava/io/File;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/c;->f()Ljava/io/File;
 
     move-result-object v1
 
-    invoke-virtual {v0, v4, v2, v1}, Lcn/com/smartdevices/bracelet/e/c;->a(Ljava/lang/String;ZLjava/io/File;)V
+    invoke-virtual {v0, v4, v2, v1}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/lang/String;ZLjava/io/File;)V
 
     :cond_14
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
@@ -786,9 +786,9 @@
 .method public a()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/c;->g()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->g()V
 
     return-void
 .end method
@@ -858,7 +858,7 @@
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->e:I
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
     if-eqz v1, :cond_3
 
@@ -920,9 +920,9 @@
     goto :goto_1
 
     :cond_2
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/e/c;->a(Ljava/util/List;)V
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/util/List;)V
 
     const/4 v1, 0x0
 
@@ -1013,9 +1013,9 @@
 
     :cond_1
     :try_start_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/c;->h()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->h()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -1099,9 +1099,9 @@
 .method public d()I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/c;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->a()I
 
     move-result v0
 
@@ -1111,9 +1111,9 @@
 .method public e()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/c;->b()Ljava/io/File;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->b()Ljava/io/File;
 
     move-result-object v0
 
@@ -1359,11 +1359,11 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->l:Ljava/lang/String;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->b:Lcn/com/smartdevices/bracelet/d/c;
 
     const-string v2, "userID"
 
-    invoke-virtual {v1, v2, p1, p4, v0}, Lcn/com/smartdevices/bracelet/e/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, p1, p4, v0}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "gaocept"
 

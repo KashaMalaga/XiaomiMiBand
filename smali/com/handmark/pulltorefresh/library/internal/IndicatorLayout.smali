@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field private final mArrowImageView:Landroid/widget/ImageView;
+.field private mArrowImageView:Landroid/widget/ImageView;
 
-.field private final mInAnim:Landroid/view/animation/Animation;
+.field private mInAnim:Landroid/view/animation/Animation;
 
-.field private final mOutAnim:Landroid/view/animation/Animation;
+.field private mOutAnim:Landroid/view/animation/Animation;
 
 .field private final mResetRotateAnimation:Landroid/view/animation/Animation;
 
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    const v5, 0x7f020118
+    sget v5, Lcom/handmark/pulltorefresh/library/R$drawable;->indicator_arrow:I
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    const v5, 0x7f0a00dc
+    sget v5, Lcom/handmark/pulltorefresh/library/R$dimen;->indicator_internal_padding:I
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -93,11 +93,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    const v5, 0x7f040013
+    sget v5, Lcom/handmark/pulltorefresh/library/R$anim;->slide_in_from_top:I
 
-    const v0, 0x7f040015
+    sget v0, Lcom/handmark/pulltorefresh/library/R$anim;->slide_out_to_top:I
 
-    const v6, 0x7f02011a
+    sget v6, Lcom/handmark/pulltorefresh/library/R$drawable;->indicator_bg_top:I
 
     invoke-virtual {p0, v6}, Lcom/handmark/pulltorefresh/library/internal/IndicatorLayout;->setBackgroundResource(I)V
 
@@ -185,11 +185,11 @@
     return-void
 
     :pswitch_0
-    const v5, 0x7f040012
+    sget v5, Lcom/handmark/pulltorefresh/library/R$anim;->slide_in_from_bottom:I
 
-    const v0, 0x7f040014
+    sget v0, Lcom/handmark/pulltorefresh/library/R$anim;->slide_out_to_bottom:I
 
-    const v7, 0x7f020119
+    sget v7, Lcom/handmark/pulltorefresh/library/R$drawable;->indicator_bg_bottom:I
 
     invoke-virtual {p0, v7}, Lcom/handmark/pulltorefresh/library/internal/IndicatorLayout;->setBackgroundResource(I)V
 
@@ -227,7 +227,9 @@
 
     invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    goto/16 :goto_0
+    goto :goto_0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

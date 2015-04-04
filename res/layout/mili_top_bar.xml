@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/top_area_h"
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/common_sliding_panel_top_height"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@id/device_battery_area" android:layout_width="fill_parent" android:layout_height="@dimen/top_area_h">
+    <RelativeLayout android:id="@id/device_battery_area" android:layout_width="fill_parent" android:layout_height="@dimen/common_sliding_panel_top_height">
         <TextView android:id="@id/home_back" android:visibility="invisible" android:text="@string/action_pop_my_bracelet" style="@style/BackButton" />
-        <cn.com.smartdevices.bracelet.chart.LinePieChartView android:id="@id/battery_pie_chart" android:layout_width="@dimen/center_pie_size" android:layout_height="@dimen/center_pie_size" android:layout_centerInParent="true" />
+        <cn.com.smartdevices.bracelet.chart.LinePieChartView android:id="@id/battery_pie_chart" android:layout_width="@dimen/center_pie_size" android:layout_height="@dimen/center_pie_size" android:layout_centerInParent="true" app:line_mode="1" xmlns:app="http://schemas.android.com/apk/res-auto" />
         <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="51.0sp" android:textColor="@color/person_page_user_info_main_color" android:ellipsize="middle" android:id="@id/device_battery_percent_text" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="160.0dip" android:text="100" android:singleLine="true" android:layout_centerInParent="true" android:fontFamily="miui" />
         <LinearLayout android:orientation="vertical" android:id="@id/device_battery_percent_mark" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="8.0dip" android:layout_toRightOf="@id/device_battery_percent_text" android:layout_alignTop="@id/device_battery_percent_text">
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/percent_mark" />

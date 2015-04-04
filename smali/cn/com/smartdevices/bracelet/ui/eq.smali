@@ -1,134 +1,83 @@
-.class Lcn/com/smartdevices/bracelet/ui/eq;
-.super Lcn/com/smartdevices/bracelet/a/b;
+.class Lcn/com/smartdevices/bracelet/ui/eQ;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
+.field final synthetic a:Landroid/widget/TextView;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/eO;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/eO;Landroid/widget/TextView;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/eq;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/eQ;->b:Lcn/com/smartdevices/bracelet/ui/eO;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/eQ;->a:Landroid/widget/TextView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
-    .locals 0
-
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
-
-    return-void
-.end method
-
-.method public c(Ljava/lang/Object;)V
+.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 3
 
-    const/4 v2, 0x0
+    if-eqz p2, :cond_0
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
-
-    const v1, 0x7f070159
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eQ;->b:Lcn/com/smartdevices/bracelet/ui/eO;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/eO;->a(Lcn/com/smartdevices/bracelet/ui/eO;Z)Z
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eQ;->a:Landroid/widget/TextView;
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/eQ;->b:Lcn/com/smartdevices/bracelet/ui/eO;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/eO;->getResources()Landroid/content/res/Resources;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    const v2, 0x7f0a0001
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
-    const-string v1, "Pair_For_SmartLock_Success"
+    move-result v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
-
-    const v1, 0x7f080191
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    :try_start_0
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.settings.SECURITY_SETTINGS"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/eq;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
-
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     :goto_0
     return-void
 
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
-
-    const-string v1, "Pair_For_SmartLock_Success_NoSecuritySetting"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.settings.SETTINGS"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/eq;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
-
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
-
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eQ;->b:Lcn/com/smartdevices/bracelet/ui/eO;
 
-    const v1, 0x7f080192
+    const/4 v1, 0x0
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/eO;->a(Lcn/com/smartdevices/bracelet/ui/eO;Z)Z
 
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eQ;->a:Landroid/widget/TextView;
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/eQ;->b:Lcn/com/smartdevices/bracelet/ui/eO;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/eO;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0a0030
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     goto :goto_0
-.end method
-
-.method public d(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
-
-    return-void
 .end method

@@ -174,7 +174,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/b;->d:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/a;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/a;->a(Lcn/com/smartdevices/bracelet/weight/a;Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
 
     :cond_1
     return-void

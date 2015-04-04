@@ -280,7 +280,7 @@
 
     const-string v0, ".MISportLab"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a;->d(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b/a;->d(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 

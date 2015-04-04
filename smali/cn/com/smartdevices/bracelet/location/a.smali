@@ -84,6 +84,18 @@
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/location/Location$Address;->g(Ljava/lang/String;)V
 
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getAdCode()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/location/Location$Address;->h(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getCityCode()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/location/Location$Address;->i(Ljava/lang/String;)V
+
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/location/Location;->a(Lcn/com/smartdevices/bracelet/location/Location$Address;)V
 
     return-object v0
@@ -595,7 +607,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0

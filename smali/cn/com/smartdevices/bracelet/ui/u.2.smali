@@ -1,61 +1,69 @@
 .class Lcn/com/smartdevices/bracelet/ui/u;
-.super Lcom/d/a/a/h;
+.super Lcn/com/smartdevices/bracelet/a/b;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+.field final synthetic b:Lorg/json/JSONObject;
+
+.field final synthetic c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Lorg/json/JSONObject;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/u;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/u;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/u;->b:Lorg/json/JSONObject;
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+.method public b()V
     .locals 0
+
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
 
     return-void
 .end method
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 2
+.method public c(Ljava/lang/Object;)V
+    .locals 3
 
-    if-eqz p3, :cond_0
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
 
-    new-instance v0, Ljava/lang/String;
+    if-eqz p1, :cond_0
 
-    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/u;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/u;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/u;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
+    check-cast p1, Ljava/lang/String;
 
-    move-result-object v0
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/u;->b:Lorg/json/JSONObject;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
+    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v2
 
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(J)V
+    invoke-static {v0, v1, p1, v2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public d(Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
+
     return-void
 .end method

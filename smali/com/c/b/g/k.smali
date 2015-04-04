@@ -1,5 +1,5 @@
 .class public final Lcom/c/b/g/k;
-.super Lcom/c/b/g/w;
+.super Lcom/c/b/g/y;
 
 
 # static fields
@@ -10,7 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/c/b/g/w;-><init>()V
+    invoke-direct {p0}, Lcom/c/b/g/y;-><init>()V
 
     return-void
 .end method
@@ -27,7 +27,7 @@
             "II",
             "Ljava/util/Map",
             "<",
-            "Lcom/c/b/f;",
+            "Lcom/c/b/g;",
             "*>;)",
             "Lcom/c/b/c/b;"
         }
@@ -62,14 +62,14 @@
     throw v0
 
     :cond_0
-    invoke-super/range {p0 .. p5}, Lcom/c/b/g/w;->a(Ljava/lang/String;Lcom/c/b/a;IILjava/util/Map;)Lcom/c/b/c/b;
+    invoke-super/range {p0 .. p5}, Lcom/c/b/g/y;->a(Ljava/lang/String;Lcom/c/b/a;IILjava/util/Map;)Lcom/c/b/c/b;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public a(Ljava/lang/String;)[B
+.method public a(Ljava/lang/String;)[Z
     .locals 7
 
     const/4 v6, 0x1
@@ -115,11 +115,11 @@
     :cond_0
     const/16 v0, 0x43
 
-    new-array v3, v0, [B
+    new-array v3, v0, [Z
 
-    sget-object v0, Lcom/c/b/g/v;->b:[I
+    sget-object v0, Lcom/c/b/g/x;->b:[I
 
-    invoke-static {v3, v1, v0, v6}, Lcom/c/b/g/k;->a([BI[II)I
+    invoke-static {v3, v1, v0, v6}, Lcom/c/b/g/k;->a([ZI[IZ)I
 
     move-result v0
 
@@ -144,11 +144,11 @@
 
     move-result v4
 
-    sget-object v5, Lcom/c/b/g/v;->f:[[I
+    sget-object v5, Lcom/c/b/g/x;->d:[[I
 
     aget-object v4, v5, v4
 
-    invoke-static {v3, v2, v4, v1}, Lcom/c/b/g/k;->a([BI[II)I
+    invoke-static {v3, v2, v4, v1}, Lcom/c/b/g/k;->a([ZI[IZ)I
 
     move-result v4
 
@@ -159,9 +159,9 @@
     goto :goto_0
 
     :cond_1
-    sget-object v0, Lcom/c/b/g/v;->e:[I
+    sget-object v0, Lcom/c/b/g/x;->c:[I
 
-    invoke-static {v3, v2, v0, v1}, Lcom/c/b/g/k;->a([BI[II)I
+    invoke-static {v3, v2, v0, v1}, Lcom/c/b/g/k;->a([ZI[IZ)I
 
     move-result v0
 
@@ -184,11 +184,11 @@
 
     move-result v2
 
-    sget-object v4, Lcom/c/b/g/v;->f:[[I
+    sget-object v4, Lcom/c/b/g/x;->d:[[I
 
     aget-object v2, v4, v2
 
-    invoke-static {v3, v1, v2, v6}, Lcom/c/b/g/k;->a([BI[II)I
+    invoke-static {v3, v1, v2, v6}, Lcom/c/b/g/k;->a([ZI[IZ)I
 
     move-result v2
 
@@ -199,13 +199,9 @@
     goto :goto_1
 
     :cond_2
-    sget-object v0, Lcom/c/b/g/v;->b:[I
+    sget-object v0, Lcom/c/b/g/x;->b:[I
 
-    invoke-static {v3, v1, v0, v6}, Lcom/c/b/g/k;->a([BI[II)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
+    invoke-static {v3, v1, v0, v6}, Lcom/c/b/g/k;->a([ZI[IZ)I
 
     return-object v3
 .end method

@@ -1,30 +1,47 @@
-.class Landroid/support/v4/widget/ad;
-.super Landroid/support/v4/widget/ab;
+.class final Landroid/support/v4/widget/aD;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/SearchView$OnQueryTextListener;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/widget/aG;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/widget/aG;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/support/v4/widget/ab;-><init>()V
+    iput-object p1, p0, Landroid/support/v4/widget/aD;->a:Landroid/support/v4/widget/aG;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
+.method public onQueryTextChange(Ljava/lang/String;)Z
     .locals 1
 
-    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    iget-object v0, p0, Landroid/support/v4/widget/aD;->a:Landroid/support/v4/widget/aG;
 
-    move-result-object v0
+    invoke-interface {v0, p1}, Landroid/support/v4/widget/aG;->b(Ljava/lang/String;)Z
 
-    check-cast v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;
+    move-result v0
 
-    iget-object v0, v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->d:Landroid/graphics/Paint;
+    return v0
+.end method
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/as;->a(Landroid/view/View;Landroid/graphics/Paint;)V
+.method public onQueryTextSubmit(Ljava/lang/String;)Z
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Landroid/support/v4/widget/aD;->a:Landroid/support/v4/widget/aG;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/widget/aG;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
 .end method

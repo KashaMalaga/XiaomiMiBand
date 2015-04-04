@@ -3,11 +3,11 @@
 
 
 # instance fields
-.field private a:Ljavax/crypto/Cipher;
+.field private j:Ljavax/crypto/Cipher;
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljava/lang/String;
+.method public final h(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     const/4 v0, 0x0
@@ -17,7 +17,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/a/a;->a:Ljavax/crypto/Cipher;
+    iget-object v1, p0, Lcom/tencent/mm/a/a;->j:Ljavax/crypto/Cipher;
 
     invoke-virtual {v1, v0}, Ljavax/crypto/Cipher;->doFinal([B)[B
 

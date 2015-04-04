@@ -251,7 +251,7 @@
 
     move-result-wide v9
 
-    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->m:D
+    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->p:D
 
     add-int/lit8 v3, v3, 0x8
 
@@ -259,7 +259,7 @@
 
     move-result-wide v9
 
-    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->n:D
+    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->q:D
 
     add-int/lit8 v3, v3, 0x8
 
@@ -267,7 +267,7 @@
 
     move-result-wide v9
 
-    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->l:D
+    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->o:D
 
     add-int/lit8 v3, v3, 0x8
 
@@ -275,7 +275,7 @@
 
     move-result-wide v9
 
-    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->o:J
+    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->r:J
 
     add-int/lit8 v3, v3, 0x8
 
@@ -283,15 +283,7 @@
 
     move-result v9
 
-    iput v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->q:I
-
-    add-int/lit8 v3, v3, 0x4
-
-    invoke-static {v5, v3}, Lcn/com/smartdevices/bracelet/gps/d/b;->b([BI)F
-
-    move-result v9
-
-    iput v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->p:F
+    iput v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->t:I
 
     add-int/lit8 v3, v3, 0x4
 
@@ -307,7 +299,15 @@
 
     move-result v9
 
-    iput v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->r:F
+    iput v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->v:F
+
+    add-int/lit8 v3, v3, 0x4
+
+    invoke-static {v5, v3}, Lcn/com/smartdevices/bracelet/gps/d/b;->b([BI)F
+
+    move-result v9
+
+    iput v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->u:F
 
     add-int/lit8 v3, v3, 0x4
 
@@ -348,25 +348,25 @@
 
     const/4 v0, 0x0
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->m:D
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->p:D
 
     invoke-static {v1, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BDI)V
 
     const/16 v0, 0x8
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->n:D
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->q:D
 
     invoke-static {v1, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BDI)V
 
     const/16 v0, 0x10
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->l:D
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->o:D
 
     invoke-static {v1, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BDI)V
 
     const/16 v0, 0x18
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->o:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->r:J
 
     invoke-static {v1, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BJI)V
 

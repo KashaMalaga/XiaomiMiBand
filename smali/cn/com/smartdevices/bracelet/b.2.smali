@@ -92,6 +92,21 @@
     return-void
 .end method
 
+.method public static a(Lcom/xiaomi/hm/bleservice/profile/ISyncDataCb;J)V
+    .locals 1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/B;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/B;
+
+    invoke-interface {v0, p0, p1, p2}, Lcom/xiaomi/hm/bleservice/B;->a(Lcom/xiaomi/hm/bleservice/profile/ISyncDataCb;J)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public static b()V
     .locals 1
 
@@ -512,7 +527,7 @@
 
     sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/B;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/B;->k()V
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/B;->d()V
 
     :cond_0
     return-void
@@ -527,7 +542,7 @@
 
     sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/B;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/B;->d()V
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/B;->c()V
 
     :cond_0
     return-void
@@ -542,28 +557,13 @@
 
     sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/B;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/B;->c()V
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/B;->k()V
 
     :cond_0
     return-void
 .end method
 
-.method public static n()V
-    .locals 1
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/B;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/B;
-
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/B;->l()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static o()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+.method public static n()Lcom/xiaomi/hm/bleservice/HwConnStatus;
     .locals 1
 
     sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/B;
@@ -587,7 +587,7 @@
     goto :goto_0
 .end method
 
-.method public static p()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+.method public static o()Lcom/xiaomi/hm/bleservice/HwConnStatus;
     .locals 1
 
     sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/B;
@@ -611,7 +611,7 @@
     goto :goto_0
 .end method
 
-.method public static q()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+.method public static p()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
     .locals 1
 
     sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/B;
@@ -635,7 +635,7 @@
     goto :goto_0
 .end method
 
-.method public static r()Z
+.method public static q()Z
     .locals 1
 
     sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/B;

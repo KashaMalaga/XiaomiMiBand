@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcn/com/smartdevices/bracelet/weight/F;
 
 
 # instance fields
@@ -22,114 +22,55 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 5
-
-    const/4 v4, 0x0
+.method public a()V
+    .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/w;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->d(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)Landroid/widget/LinearLayout;
+    const/4 v1, 0x0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->buildDrawingCache()V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->a(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;Z)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/w;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->d(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->d(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getDrawingCache()Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "/"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "share.jpg"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/w;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->e(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)Landroid/widget/ImageButton;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v4}, Landroid/widget/ImageButton;->setVisibility(I)V
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/w;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->f(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)Landroid/widget/RelativeLayout;
-
-    move-result-object v2
-
-    const/16 v3, 0x8
-
-    invoke-virtual {v2, v3}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/w;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->g(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)Landroid/widget/ImageButton;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v4}, Landroid/widget/ImageButton;->setVisibility(I)V
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/lang/String;Landroid/graphics/Bitmap;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->isSupport(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/w;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
+
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
-    new-instance v0, Landroid/content/Intent;
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/w;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    const v1, 0x1020002
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/w;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
-    const-class v3, Lcn/com/smartdevices/bracelet/ui/WeightReportShareActivity;
+    move-result-object v0
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    if-eqz v0, :cond_0
 
-    const-string v2, "pic_url"
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/w;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
-
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
 
     goto :goto_0
 .end method

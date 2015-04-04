@@ -41,7 +41,7 @@
 
     const/16 v11, 0xf
 
-    const v0, 0x7f0700da
+    const v0, 0x7f070124
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -59,19 +59,19 @@
 
     move-result-object v0
 
-    const v1, 0x7f02017b
+    const v1, 0x7f0201bf
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f080085
+    const v1, 0x7f090099
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f090011
+    const v2, 0x7f0a0030
 
     const/16 v3, 0xc
 
@@ -83,7 +83,7 @@
 
     move-result-object v14
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cx;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cX;
 
     const/4 v2, 0x2
 
@@ -95,7 +95,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f090010
+    const v5, 0x7f0a0001
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -105,7 +105,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f090012
+    const v6, 0x7f0a0031
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -115,7 +115,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f090013
+    const v7, 0x7f0a0032
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -133,11 +133,11 @@
 
     move v12, v11
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cx;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cX;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0700d9
+    const v0, 0x7f070123
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -157,7 +157,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->e:Landroid/widget/TextView;
 
-    const v1, 0x7f0800a3
+    const v1, 0x7f0900b7
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -213,7 +213,7 @@
 
     invoke-virtual {v1, v0}, Lkankan/wheel/widget/WheelView;->c(I)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0700b8
+    const v0, 0x7f070100
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -221,7 +221,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07009d
+    const v0, 0x7f0700e3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -234,7 +234,7 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->e:Landroid/widget/TextView;
 
-    const v1, 0x7f0800a2
+    const v1, 0x7f0900b6
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -318,7 +318,7 @@
 
     invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Z
 
     move-result v0
 
@@ -332,9 +332,9 @@
 
     move-result v2
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/aM;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/aS;
 
-    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/aM;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;)V
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/aS;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;)V
 
     invoke-direct {v0, v2, v3}, Lcn/com/smartdevices/bracelet/a/q;-><init>(ILcn/com/smartdevices/bracelet/a/b;)V
 
@@ -397,9 +397,9 @@
 
     iput-wide v1, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aN;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aT;
 
-    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/ui/aN;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/ui/aT;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/d/a/a/h;)V
 
@@ -430,8 +430,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f07009d -> :sswitch_1
-        0x7f0700b8 -> :sswitch_0
+        0x7f0700e3 -> :sswitch_1
+        0x7f070100 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -440,7 +440,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03009c
+    const v0, 0x7f0300b1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->setContentView(I)V
 
@@ -468,7 +468,7 @@
 
     move-result v1
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -506,9 +506,9 @@
 
     const-string v0, "PageBraceletGoal"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -520,9 +520,9 @@
 
     const-string v0, "PageBraceletGoal"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
 
     return-void
 .end method

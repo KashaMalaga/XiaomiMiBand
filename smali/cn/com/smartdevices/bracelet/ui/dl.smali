@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/tencent/tauth/IUiListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dI;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dG;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dI;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dG;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dL;->a:Lcn/com/smartdevices/bracelet/ui/dI;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dL;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,66 +22,18 @@
 
 
 # virtual methods
-.method public onCancel()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onComplete(Ljava/lang/Object;)V
+.method public onClick(Landroid/view/View;)V
     .locals 2
 
-    const-string v0, "ShareDialog"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dL;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dL;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dL;->a:Lcn/com/smartdevices/bracelet/ui/dI;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dI;->dismiss()V
-
-    return-void
-.end method
-
-.method public onError(Lcom/tencent/tauth/UiError;)V
-    .locals 3
-
-    const-string v0, "ShareDialog"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v2, p1, Lcom/tencent/tauth/UiError;->errorMessage:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/dG;->c(Lcn/com/smartdevices/bracelet/ui/dG;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
 
     move-result-object v1
 
-    const-string v2, "|"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p1, Lcom/tencent/tauth/UiError;->errorCode:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dL;->a:Lcn/com/smartdevices/bracelet/ui/dI;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dI;->dismiss()V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dG;->c(Lcn/com/smartdevices/bracelet/ui/dG;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
 
     return-void
 .end method

@@ -34,7 +34,7 @@
     # setter for: Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->cptValue:[B
     invoke-static {v0, p1}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->access$202(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;[B)[B
 
-    sget-object v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v0, "WeightProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
 

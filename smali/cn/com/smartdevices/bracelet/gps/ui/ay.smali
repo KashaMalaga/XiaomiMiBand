@@ -1,19 +1,20 @@
-.class Lcn/com/smartdevices/bracelet/gps/ui/ay;
+.class public Lcn/com/smartdevices/bracelet/gps/ui/ay;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/gps/ui/aJ;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+.field public a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public d:I
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)V
+.method public constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/ay;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,16 +23,16 @@
 
 
 # virtual methods
-.method public a(Landroid/graphics/Bitmap;)V
-    .locals 2
+.method public a(IIII)V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ay;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/ay;->a:I
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/az;
+    iput p2, p0, Lcn/com/smartdevices/bracelet/gps/ui/ay;->b:I
 
-    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/az;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/ay;Landroid/graphics/Bitmap;)V
+    iput p3, p0, Lcn/com/smartdevices/bracelet/gps/ui/ay;->c:I
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->runOnUiThread(Ljava/lang/Runnable;)V
+    iput p4, p0, Lcn/com/smartdevices/bracelet/gps/ui/ay;->d:I
 
     return-void
 .end method

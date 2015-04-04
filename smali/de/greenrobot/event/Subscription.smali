@@ -3,20 +3,30 @@
 
 
 # instance fields
+.field volatile active:Z
+
+.field final priority:I
+
 .field final subscriber:Ljava/lang/Object;
 
 .field final subscriberMethod:Lde/greenrobot/event/SubscriberMethod;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Object;Lde/greenrobot/event/SubscriberMethod;)V
-    .locals 0
+.method constructor <init>(Ljava/lang/Object;Lde/greenrobot/event/SubscriberMethod;I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lde/greenrobot/event/Subscription;->subscriber:Ljava/lang/Object;
 
     iput-object p2, p0, Lde/greenrobot/event/Subscription;->subscriberMethod:Lde/greenrobot/event/SubscriberMethod;
+
+    iput p3, p0, Lde/greenrobot/event/Subscription;->priority:I
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lde/greenrobot/event/Subscription;->active:Z
 
     return-void
 .end method

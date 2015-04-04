@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>Seg.</item>
+        <item>Ter.</item>
+        <item>Qua.</item>
+        <item>Qui.</item>
+        <item>Sex.</item>
+        <item>Sáb.</item>
+        <item>Dom.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Seg.</item>
+        <item>Ter.</item>
+        <item>Qua.</item>
+        <item>Qui.</item>
+        <item>Sex.</item>
+        <item>Sáb.</item>
+        <item>Dom.</item>
+    </string-array>
+    <string-array name="months">
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+        <item>Março</item>
+        <item>Abril</item>
+        <item>Maio</item>
+        <item>Junho</item>
+        <item>Julho</item>
+        <item>Agosto</item>
+        <item>Setembro</item>
+        <item>Outubro</item>
+        <item>Novembro</item>
+        <item>Dezembro</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>Uma vez</item>
+        <item>Diariamente</item>
+        <item>Dias úteis</item>
+        <item>Personalizar</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>Não há um substituto para a consistência.</item>
+        <item>Esforce-ce para o progresso, não para a perfeição.</item>
+        <item>A repetição é o pai do sucesso.</item>
+        <item>Energia e persistência conquistam qualquer coisa.</item>
+        <item>Defina metas pequenas e aumente-as gradualmente.</item>
+        <item>Cada jornada começa com um único passo.</item>
+        <item>Atinja uma meta por dia.</item>
+        <item>Não importa o quão lento você vá, você ainda estará à frente de todos que estão no sofá.</item>
+        <item>Corra quando você puder. Caminhe se for preciso. Rasteje se você deve. Mas nunca desista.</item>
+        <item>Lembre-se, a sensação obtida de um bom treino é melhor do que a sensação de sentar esperando que você tivesse treinado.</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>Ótimo</item>
+        <item>Bom</item>
+        <item>Moderado</item>
+        <item>Atenção</item>
+        <item>Insalubre</item>
+        <item>Muito insalubre</item>
+    </string-array>
+    <string-array name="weight_unit">
+        <item>kg</item>
+        <item>jin</item>
+        <item>lb</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>Abaixo do peso</item>
+        <item>Peso normal</item>
+        <item>Sobrepeso</item>
+        <item>Obeso</item>
+        <item>Obeso</item>
+    </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>Categoria de IMC: Abaixo do peso</item>
+        <item>Categoria de IMC: Peso normal</item>
+        <item>Categoria de IMC: Sobrepeso</item>
+        <item>Categoria de IMC: Obeso</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>Defina uma meta para ajudar a controlar seu peso.</item>
+        <item>Parabéns! Você está dentro da sua meta de peso.</item>
+        <item>Você está abaixo da sua meta de peso</item>
+        <item>Você está acima da sua meta de peso</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>Defina uma meta para ajudar a controlar seu peso.</item>
+        <item>Parabéns! Você está dentro da sua meta de peso.</item>
+        <item>Você está abaixo da sua meta de peso</item>
+        <item>Você está acima da sua meta de peso</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>Meta superada</item>
+        <item>Sua meta não foi atingida</item>
+        <item>Você atingiu sua meta!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>Você ainda não atingiu sua meta</item>
+        <item>Você ainda não atingiu sua meta</item>
+        <item>Você ainda não atingiu sua meta</item>
+        <item>Você atingiu sua meta (%1$s%2$s)!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>Você ainda não atingiu sua meta</item>
+        <item>Você ainda não atingiu sua meta</item>
+        <item>Você ainda não atingiu sua meta</item>
+        <item>Você atingiu sua meta (%1$s%2$s)!</item>
+    </string-array>
+</resources>

@@ -1,25 +1,19 @@
-.class final Landroid/support/v4/widget/i;
+.class Landroid/support/v4/widget/i;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Ljava/lang/Runnable;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/widget/DrawerLayout$SavedState;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/widget/ContentLoadingProgressBar;)V
     .locals 0
+
+    iput-object p1, p0, Landroid/support/v4/widget/i;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,40 +22,35 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Landroid/support/v4/widget/DrawerLayout$SavedState;
-    .locals 1
+.method public run()V
+    .locals 4
 
-    new-instance v0, Landroid/support/v4/widget/DrawerLayout$SavedState;
+    const/4 v3, 0x0
 
-    invoke-direct {v0, p1}, Landroid/support/v4/widget/DrawerLayout$SavedState;-><init>(Landroid/os/Parcel;)V
+    iget-object v0, p0, Landroid/support/v4/widget/i;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-    return-object v0
-.end method
+    invoke-static {v0, v3}, Landroid/support/v4/widget/ContentLoadingProgressBar;->b(Landroid/support/v4/widget/ContentLoadingProgressBar;Z)Z
 
-.method public a(I)[Landroid/support/v4/widget/DrawerLayout$SavedState;
-    .locals 1
+    iget-object v0, p0, Landroid/support/v4/widget/i;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-    new-array v0, p1, [Landroid/support/v4/widget/DrawerLayout$SavedState;
+    invoke-static {v0}, Landroid/support/v4/widget/ContentLoadingProgressBar;->a(Landroid/support/v4/widget/ContentLoadingProgressBar;)Z
 
-    return-object v0
-.end method
+    move-result v0
 
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/widget/i;->a(Landroid/os/Parcel;)Landroid/support/v4/widget/DrawerLayout$SavedState;
+    iget-object v0, p0, Landroid/support/v4/widget/i;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-    move-result-object v0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    return-object v0
-.end method
+    move-result-wide v1
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+    invoke-static {v0, v1, v2}, Landroid/support/v4/widget/ContentLoadingProgressBar;->a(Landroid/support/v4/widget/ContentLoadingProgressBar;J)J
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/widget/i;->a(I)[Landroid/support/v4/widget/DrawerLayout$SavedState;
+    iget-object v0, p0, Landroid/support/v4/widget/i;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-    move-result-object v0
+    invoke-virtual {v0, v3}, Landroid/support/v4/widget/ContentLoadingProgressBar;->setVisibility(I)V
 
-    return-object v0
+    :cond_0
+    return-void
 .end method

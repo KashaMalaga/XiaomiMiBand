@@ -3,7 +3,7 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "TextHttpResponseHandler"
+.field private static final LOG_TAG:Ljava/lang/String; = "TextHttpResponseHandler"
 
 
 # direct methods
@@ -27,7 +27,7 @@
     return-void
 .end method
 
-.method public static a([BLjava/lang/String;)Ljava/lang/String;
+.method public static getResponseString([BLjava/lang/String;)Ljava/lang/String;
     .locals 4
 
     const/4 v0, 0x0
@@ -63,10 +63,7 @@
 
 
 # virtual methods
-.method public abstract a(I[Lorg/apache/http/Header;Ljava/lang/String;)V
-.end method
-
-.method public abstract a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public abstract onFailure(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
 .end method
 
 .method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
@@ -76,13 +73,16 @@
 
     move-result-object v0
 
-    invoke-static {p3, v0}, Lcom/d/a/a/Y;->a([BLjava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, v0}, Lcom/d/a/a/Y;->getResponseString([BLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, p2, v0, p4}, Lcom/d/a/a/Y;->a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p0, p1, p2, v0, p4}, Lcom/d/a/a/Y;->onFailure(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
+.end method
+
+.method public abstract onSuccess(I[Lorg/apache/http/Header;Ljava/lang/String;)V
 .end method
 
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
@@ -92,11 +92,11 @@
 
     move-result-object v0
 
-    invoke-static {p3, v0}, Lcom/d/a/a/Y;->a([BLjava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, v0}, Lcom/d/a/a/Y;->getResponseString([BLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/d/a/a/Y;->a(I[Lorg/apache/http/Header;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/d/a/a/Y;->onSuccess(I[Lorg/apache/http/Header;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;
+.implements Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
 
 
 # instance fields
@@ -22,14 +22,27 @@
 
 
 # virtual methods
-.method public onChanged(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
-    .locals 1
+.method public onLowBattery()V
+    .locals 2
 
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+    const-string v0, "BLEService"
+
+    const-string v1, "onLowBattery"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/r;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->m_Handler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$500(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+    new-instance v1, Lcom/xiaomi/hm/bleservice/s;
+
+    invoke-direct {v1, p0}, Lcom/xiaomi/hm/bleservice/s;-><init>(Lcom/xiaomi/hm/bleservice/r;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

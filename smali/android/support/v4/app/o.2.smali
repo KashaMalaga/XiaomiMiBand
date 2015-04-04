@@ -1,51 +1,75 @@
 .class Landroid/support/v4/app/o;
-.super Landroid/support/v4/app/n;
-
-
-# instance fields
-.field private final a:Landroid/support/v4/app/p;
+.super Ljava/lang/Object;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/app/p;)V
+.method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/support/v4/app/n;-><init>()V
-
-    iput-object p1, p0, Landroid/support/v4/app/o;->a:Landroid/support/v4/app/p;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a()Landroid/os/Bundle;
+.method private static a(Landroid/support/v4/app/p;)Landroid/app/SharedElementCallback;
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/app/o;->a:Landroid/support/v4/app/p;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/support/v4/app/p;->a()Landroid/os/Bundle;
+    if-eqz p0, :cond_0
 
-    move-result-object v0
+    new-instance v0, Landroid/support/v4/app/q;
 
+    invoke-direct {v0, p0}, Landroid/support/v4/app/q;-><init>(Landroid/support/v4/app/p;)V
+
+    :cond_0
     return-object v0
 .end method
 
-.method public a(Landroid/support/v4/app/n;)V
-    .locals 2
+.method public static a(Landroid/app/Activity;)V
+    .locals 0
 
-    instance-of v0, p1, Landroid/support/v4/app/o;
+    invoke-virtual {p0}, Landroid/app/Activity;->finishAfterTransition()V
 
-    if-eqz v0, :cond_0
+    return-void
+.end method
 
-    check-cast p1, Landroid/support/v4/app/o;
+.method public static a(Landroid/app/Activity;Landroid/support/v4/app/p;)V
+    .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/app/o;->a:Landroid/support/v4/app/p;
+    invoke-static {p1}, Landroid/support/v4/app/o;->a(Landroid/support/v4/app/p;)Landroid/app/SharedElementCallback;
 
-    iget-object v1, p1, Landroid/support/v4/app/o;->a:Landroid/support/v4/app/p;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/p;->a(Landroid/support/v4/app/p;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setEnterSharedElementCallback(Landroid/app/SharedElementCallback;)V
 
-    :cond_0
+    return-void
+.end method
+
+.method public static b(Landroid/app/Activity;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->postponeEnterTransition()V
+
+    return-void
+.end method
+
+.method public static b(Landroid/app/Activity;Landroid/support/v4/app/p;)V
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/app/o;->a(Landroid/support/v4/app/p;)Landroid/app/SharedElementCallback;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setExitSharedElementCallback(Landroid/app/SharedElementCallback;)V
+
+    return-void
+.end method
+
+.method public static c(Landroid/app/Activity;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->startPostponedEnterTransition()V
+
     return-void
 .end method

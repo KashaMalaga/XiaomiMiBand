@@ -1,205 +1,120 @@
-.class Lcn/com/smartdevices/bracelet/gps/ui/aa;
-.super Landroid/os/Handler;
+.class final enum Lcn/com/smartdevices/bracelet/gps/ui/aa;
+.super Ljava/lang/Enum;
 
 
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcn/com/smartdevices/bracelet/gps/ui/aa;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcn/com/smartdevices/bracelet/gps/ui/aa;
+
+.field public static final enum b:Lcn/com/smartdevices/bracelet/gps/ui/aa;
+
+.field public static final enum c:Lcn/com/smartdevices/bracelet/gps/ui/aa;
+
+.field private static final synthetic d:[Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
-
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a()V
-    .locals 3
-
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
-
-    move-result-object v0
-
-    const/16 v1, 0x3e8
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    const-wide/16 v1, 0x12c
-
-    invoke-virtual {p0, v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/ui/aa;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    return-void
-.end method
-
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 8
+    const/4 v4, 0x2
 
     const/4 v3, 0x1
 
-    const-wide v6, 0x3f60624dd2f1a9fcL
-
-    const-wide v4, 0x3f50624dd2f1a9fcL
-
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    if-ne v0, v2, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
-
     const/4 v2, 0x0
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;Z)Z
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
+    const-string v1, "ANCHORED"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)I
+    invoke-direct {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/ui/aa;-><init>(Ljava/lang/String;I)V
 
-    move-result v0
+    sput-object v0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    if-nez v0, :cond_1
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
+    const-string v1, "COLLAPSED"
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;Z)Z
+    invoke-direct {v0, v1, v3}, Lcn/com/smartdevices/bracelet/gps/ui/aa;-><init>(Ljava/lang/String;I)V
 
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
+    sput-object v0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->b:Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->c(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)Z
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    move-result v0
+    const-string v1, "EXPANDED"
 
-    if-eqz v0, :cond_2
+    invoke-direct {v0, v1, v4}, Lcn/com/smartdevices/bracelet/gps/ui/aa;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
+    sput-object v0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->c:Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->d(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)I
+    const/4 v0, 0x3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
+    new-array v0, v0, [Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)Ljava/util/List;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    move-result-object v0
+    aput-object v1, v0, v2
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/aa;->b:Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)I
+    aput-object v1, v0, v3
 
-    move-result v2
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/aa;->c:Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    aput-object v1, v0, v4
 
-    move-result-object v0
+    sput-object v0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->d:[Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
+    return-void
+.end method
 
-    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->m:D
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
-    add-double/2addr v2, v4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->m:D
+    return-void
+.end method
 
-    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->n:D
+.method public static valueOf(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/gps/ui/aa;
+    .locals 1
 
-    add-double/2addr v2, v4
+    const-class v0, Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->n:D
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :goto_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->f(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)Lcn/com/smartdevices/bracelet/gps/b/o;
-
-    move-result-object v0
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/gps/b/u;
-
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/gps/b/u;-><init>()V
-
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/b/o;->c(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/u;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a()V
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->e(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)I
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)Ljava/util/List;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)I
+    return-object v0
+.end method
 
-    move-result v2
+.method public static values()[Lcn/com/smartdevices/bracelet/gps/ui/aa;
+    .locals 1
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/aa;->d:[Lcn/com/smartdevices/bracelet/gps/ui/aa;
+
+    invoke-virtual {v0}, [Lcn/com/smartdevices/bracelet/gps/ui/aa;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
+    check-cast v0, [Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->m:D
-
-    sub-double/2addr v2, v6
-
-    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->m:D
-
-    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->n:D
-
-    sub-double/2addr v2, v6
-
-    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->n:D
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :pswitch_data_0
-    .packed-switch 0x3e8
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

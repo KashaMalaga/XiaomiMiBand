@@ -1,65 +1,58 @@
 .class Lcn/com/smartdevices/bracelet/lab/ui/q;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
 
+# static fields
+.field static final a:I = 0x7d0
 
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+.field static b:J
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/q;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    const-wide/16 v0, 0x0
+
+    sput-wide v0, Lcn/com/smartdevices/bracelet/lab/ui/q;->b:J
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method static a()Z
+    .locals 6
 
-# virtual methods
-.method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/q;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    move-result-wide v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b()[Ljava/lang/String;
+    sget-wide v2, Lcn/com/smartdevices/bracelet/lab/ui/q;->b:J
 
-    move-result-object v1
+    sub-long v2, v0, v2
 
-    aget-object v1, v1, p3
+    const-wide/16 v4, 0x7d0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/lang/String;)Ljava/lang/String;
+    cmp-long v2, v2, v4
+
+    if-gtz v2, :cond_0
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/widget/AdapterView;->setVisibility(I)V
+    :goto_0
+    return v0
 
-    return-void
-.end method
+    :cond_0
+    sput-wide v0, Lcn/com/smartdevices/bracelet/lab/ui/q;->b:J
 
-.method public onNothingSelected(Landroid/widget/AdapterView;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;)V"
-        }
-    .end annotation
+    const/4 v0, 0x1
 
-    return-void
+    goto :goto_0
 .end method

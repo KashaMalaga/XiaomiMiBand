@@ -243,11 +243,14 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    if-eqz v1, :cond_0
+
     :try_start_2
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
 
+    :cond_0
     :goto_0
     return-void
 
@@ -267,6 +270,8 @@
     invoke-static {v0, v2}, Lcom/sina/weibo/sdk/utils/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    if-eqz v1, :cond_0
 
     :try_start_4
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
@@ -288,11 +293,14 @@
     move-object v1, v2
 
     :goto_2
+    if-eqz v1, :cond_1
+
     :try_start_5
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
 
+    :cond_1
     :goto_3
     throw v0
 

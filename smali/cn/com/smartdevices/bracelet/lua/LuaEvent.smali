@@ -83,7 +83,7 @@
 
     iget-object v2, v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/E;->w(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/G;->w(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -108,6 +108,18 @@
     move-result-object v2
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->setLocale(Ljava/lang/String;)V
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->__instance:Lcn/com/smartdevices/bracelet/lua/LuaEvent;
+
+    new-instance v2, Landroid/text/format/DateFormat;
+
+    invoke-direct {v2}, Landroid/text/format/DateFormat;-><init>()V
+
+    invoke-static {p0}, Landroid/text/format/DateFormat;->is24HourFormat(Landroid/content/Context;)Z
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->set24HourFormat(Z)V
 
     :cond_0
     sget-object v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->__instance:Lcn/com/smartdevices/bracelet/lua/LuaEvent;
@@ -458,7 +470,39 @@
     return-void
 .end method
 
-.method public setActivities(Lcn/com/smartdevices/bracelet/analysis/ActiveItem;)V
+.method public set24HourFormat(Z)V
+    .locals 4
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getInstance()Lcn/com/smartdevices/bracelet/lua/LuaManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getLuaState()Lorg/keplerproject/luajava/LuaState;
+
+    move-result-object v1
+
+    sget-object v2, Lorg/keplerproject/luajava/LuaState;->LUA_GLOBALSINDEX:Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    const-string v3, "set24HourFormat"
+
+    invoke-virtual {v1, v2, v3}, Lorg/keplerproject/luajava/LuaState;->getField(ILjava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Lorg/keplerproject/luajava/LuaState;->pushBoolean(Z)V
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->callLua(II)V
+
+    return-void
+.end method
+
+.method public setActivities(Lcom/xiaomi/hm/health/dataprocess/ActiveItem;)V
     .locals 3
 
     const-string v0, "chenee"
@@ -467,13 +511,13 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Activity MODE = "
+    const-string v2, "Activity KEY_MODE = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->getMode()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/ActiveItem;->getMode()I
 
     move-result v2
 
@@ -487,7 +531,7 @@
 
     move-result-object v1
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->start:I
+    iget v2, p1, Lcom/xiaomi/hm/health/dataprocess/ActiveItem;->start:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -499,7 +543,7 @@
 
     move-result-object v1
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->stop:I
+    iget v2, p1, Lcom/xiaomi/hm/health/dataprocess/ActiveItem;->stop:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -511,7 +555,7 @@
 
     move-result-object v1
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->distance:I
+    iget v2, p1, Lcom/xiaomi/hm/health/dataprocess/ActiveItem;->distance:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -523,7 +567,7 @@
 
     move-result-object v1
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->calories:I
+    iget v2, p1, Lcom/xiaomi/hm/health/dataprocess/ActiveItem;->calories:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -535,7 +579,7 @@
 
     move-result-object v1
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->steps:I
+    iget v2, p1, Lcom/xiaomi/hm/health/dataprocess/ActiveItem;->steps:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -549,7 +593,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setActiveItem(Lcn/com/smartdevices/bracelet/analysis/ActiveItem;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setActiveItem(Lcom/xiaomi/hm/health/dataprocess/ActiveItem;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
@@ -683,11 +727,11 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->c()Z
 
     move-result v2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->e()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->f()Z
 
     move-result v3
 
@@ -727,7 +771,7 @@
 
     move-result-object v7
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->e()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->f()Z
 
     move-result v8
 
@@ -751,7 +795,7 @@
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->b()Z
 
     move-result v6
 
@@ -774,11 +818,11 @@
     if-eqz v2, :cond_1
 
     :cond_0
-    new-instance v2, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v2, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
+    invoke-direct {v2}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportDay;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -789,7 +833,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/SportDay;->fromString(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v2}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->fromString(Ljava/lang/String;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     move-result-object v2
 
@@ -825,11 +869,11 @@
 
     move-result-object v4
 
-    new-instance v5, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v5, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v5}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
+    invoke-direct {v5}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
 
-    invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/model/SportDay;->offsetDay(Lcn/com/smartdevices/bracelet/model/SportDay;)I
+    invoke-virtual {v2, v5}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->offsetDay(Lcom/xiaomi/hm/health/dataprocess/SportDay;)I
 
     move-result v5
 
@@ -847,11 +891,11 @@
 
     invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v3, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v3}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
+    invoke-direct {v3}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/model/SportDay;->offsetDay(Lcn/com/smartdevices/bracelet/model/SportDay;)I
+    invoke-virtual {v2, v3}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->offsetDay(Lcom/xiaomi/hm/health/dataprocess/SportDay;)I
 
     move-result v2
 
@@ -868,7 +912,7 @@
     :goto_0
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/E;->p(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/G;->o(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -876,7 +920,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/E;->q(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/G;->p(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -1100,12 +1144,12 @@
     return-void
 .end method
 
-.method public setSleep(Lcn/com/smartdevices/bracelet/analysis/SleepInfo;)V
+.method public setSleep(Lcom/xiaomi/hm/health/dataprocess/SleepInfo;)V
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setSleepInfo(Lcn/com/smartdevices/bracelet/analysis/SleepInfo;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setSleepInfo(Lcom/xiaomi/hm/health/dataprocess/SleepInfo;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 

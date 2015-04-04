@@ -11,14 +11,14 @@
 # instance fields
 .field private AQILevel:I
 
-.field private activeItem:Lcn/com/smartdevices/bracelet/analysis/ActiveItem;
+.field private activeItem:Lcom/xiaomi/hm/health/dataprocess/ActiveItem;
 
 .field private activeItems:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/analysis/ActiveItem;",
+            "Lcom/xiaomi/hm/health/dataprocess/ActiveItem;",
             ">;"
         }
     .end annotation
@@ -104,7 +104,7 @@
 
 .field private sleepAverageDeepTime:I
 
-.field sleepInfo:Lcn/com/smartdevices/bracelet/analysis/SleepInfo;
+.field sleepInfo:Lcom/xiaomi/hm/health/dataprocess/SleepInfo;
 
 .field private sleepPercent:I
 
@@ -263,7 +263,7 @@
 
     iput-object v2, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->activeItems:Ljava/util/ArrayList;
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->activeItem:Lcn/com/smartdevices/bracelet/analysis/ActiveItem;
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->activeItem:Lcom/xiaomi/hm/health/dataprocess/ActiveItem;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -275,7 +275,7 @@
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->sleepAverageDeepTime:I
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->sleepInfo:Lcn/com/smartdevices/bracelet/analysis/SleepInfo;
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->sleepInfo:Lcom/xiaomi/hm/health/dataprocess/SleepInfo;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -345,10 +345,10 @@
     return v0
 .end method
 
-.method public getActiveItem()Lcn/com/smartdevices/bracelet/analysis/ActiveItem;
+.method public getActiveItem()Lcom/xiaomi/hm/health/dataprocess/ActiveItem;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->activeItem:Lcn/com/smartdevices/bracelet/analysis/ActiveItem;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->activeItem:Lcom/xiaomi/hm/health/dataprocess/ActiveItem;
 
     return-object v0
 .end method
@@ -360,7 +360,7 @@
             "()",
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/analysis/ActiveItem;",
+            "Lcom/xiaomi/hm/health/dataprocess/ActiveItem;",
             ">;"
         }
     .end annotation
@@ -670,10 +670,10 @@
     return v0
 .end method
 
-.method public getSleepInfo()Lcn/com/smartdevices/bracelet/analysis/SleepInfo;
+.method public getSleepInfo()Lcom/xiaomi/hm/health/dataprocess/SleepInfo;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->sleepInfo:Lcn/com/smartdevices/bracelet/analysis/SleepInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->sleepInfo:Lcom/xiaomi/hm/health/dataprocess/SleepInfo;
 
     return-object v0
 .end method
@@ -813,9 +813,9 @@
 
     move-result-object v0
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->l:Lcn/com/smartdevices/bracelet/config/o;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->l:Lcn/com/smartdevices/bracelet/config/p;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/o;->a:Ljava/lang/Boolean;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/p;->a:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -902,10 +902,10 @@
     return-void
 .end method
 
-.method public setActiveItem(Lcn/com/smartdevices/bracelet/analysis/ActiveItem;)V
+.method public setActiveItem(Lcom/xiaomi/hm/health/dataprocess/ActiveItem;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->activeItem:Lcn/com/smartdevices/bracelet/analysis/ActiveItem;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->activeItem:Lcom/xiaomi/hm/health/dataprocess/ActiveItem;
 
     return-void
 .end method
@@ -917,7 +917,7 @@
             "(",
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/analysis/ActiveItem;",
+            "Lcom/xiaomi/hm/health/dataprocess/ActiveItem;",
             ">;)V"
         }
     .end annotation
@@ -1287,10 +1287,10 @@
     return-void
 .end method
 
-.method public setSleepInfo(Lcn/com/smartdevices/bracelet/analysis/SleepInfo;)V
+.method public setSleepInfo(Lcom/xiaomi/hm/health/dataprocess/SleepInfo;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->sleepInfo:Lcn/com/smartdevices/bracelet/analysis/SleepInfo;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->sleepInfo:Lcom/xiaomi/hm/health/dataprocess/SleepInfo;
 
     return-void
 .end method

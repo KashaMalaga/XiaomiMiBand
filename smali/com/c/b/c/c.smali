@@ -26,7 +26,7 @@
 .method public a()I
     .locals 1
 
-    iget v0, p0, Lcom/c/b/c/c;->b:I
+    iget v0, p0, Lcom/c/b/c/c;->c:I
 
     return v0
 .end method
@@ -46,12 +46,22 @@
 
     const/16 v0, 0x20
 
+    if-gt p1, v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
+
+    move-result v0
+
     if-le p1, v0, :cond_1
 
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -186,6 +196,14 @@
 .end method
 
 .method public b()I
+    .locals 1
+
+    iget v0, p0, Lcom/c/b/c/c;->b:I
+
+    return v0
+.end method
+
+.method public c()I
     .locals 2
 
     iget-object v0, p0, Lcom/c/b/c/c;->a:[B

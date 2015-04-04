@@ -3,22 +3,22 @@
 
 
 # static fields
+.field private static final G:[J
+
 .field private static final GMT:Ljava/util/TimeZone;
 
-.field private static final t:[J
+.field private static final H:[J
 
-.field private static final u:[J
+.field private static final I:[C
 
-.field private static final v:[C
-
-.field private static final w:[Ljava/lang/String;
+.field private static final J:[Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 4
 
-    const/4 v1, 0x5
+    const/16 v1, 0x9
 
     const/4 v3, 0x4
 
@@ -26,13 +26,13 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/e;->t:[J
+    sput-object v0, Lcom/tencent/mm/sdk/b/e;->G:[J
 
     new-array v0, v3, [J
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/e;->u:[J
+    sput-object v0, Lcom/tencent/mm/sdk/b/e;->H:[J
 
     const-string v0, "GMT"
 
@@ -46,7 +46,7 @@
 
     fill-array-data v0, :array_2
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/e;->v:[C
+    sput-object v0, Lcom/tencent/mm/sdk/b/e;->I:[C
 
     new-array v0, v1, [Ljava/lang/String;
 
@@ -78,7 +78,31 @@
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/e;->w:[Ljava/lang/String;
+    const/4 v1, 0x5
+
+    const-string v2, "&#x0D;"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x6
+
+    const-string v2, "&#x0A;"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x7
+
+    const-string v2, "&#x20;"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8
+
+    const-string v2, "&#x09;"
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/tencent/mm/sdk/b/e;->J:[Ljava/lang/String;
 
     return-void
 
@@ -105,10 +129,14 @@
         0x22s
         0x27s
         0x26s
+        0xds
+        0xas
+        0x20s
+        0x9s
     .end array-data
 .end method
 
-.method public static c(Ljava/lang/String;)Z
+.method public static j(Ljava/lang/String;)Z
     .locals 1
 
     if-eqz p0, :cond_0

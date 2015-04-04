@@ -62,32 +62,39 @@
     :pswitch_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/g;->a:Lcn/com/smartdevices/bracelet/tag/a/c;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->c(Lcn/com/smartdevices/bracelet/tag/a/c;)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->e()V
 
     goto :goto_0
 
     :pswitch_3
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/g;->a:Lcn/com/smartdevices/bracelet/tag/a/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->quit()Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->c(Lcn/com/smartdevices/bracelet/tag/a/c;)V
 
     goto :goto_0
 
     :pswitch_4
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/g;->a:Lcn/com/smartdevices/bracelet/tag/a/c;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->d(Lcn/com/smartdevices/bracelet/tag/a/c;)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->quit()Z
 
     goto :goto_0
 
     :pswitch_5
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/g;->a:Lcn/com/smartdevices/bracelet/tag/a/c;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->e(Lcn/com/smartdevices/bracelet/tag/a/c;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->d(Lcn/com/smartdevices/bracelet/tag/a/c;)V
 
     goto :goto_0
 
     :pswitch_6
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/g;->a:Lcn/com/smartdevices/bracelet/tag/a/c;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->e(Lcn/com/smartdevices/bracelet/tag/a/c;)V
+
+    goto :goto_0
+
+    :pswitch_7
     new-instance v0, Lcn/com/smartdevices/bracelet/a/u;
 
     new-instance v1, Lcn/com/smartdevices/bracelet/tag/a/h;
@@ -109,11 +116,12 @@
     :pswitch_data_0
     .packed-switch 0x1001
         :pswitch_1
-        :pswitch_2
         :pswitch_3
-        :pswitch_0
         :pswitch_4
+        :pswitch_0
         :pswitch_5
         :pswitch_6
+        :pswitch_7
+        :pswitch_2
     .end packed-switch
 .end method

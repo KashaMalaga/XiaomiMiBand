@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/bg_mode_weight" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/person_info_part_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/info_title_margin_bottom" android:text="@string/set_user_succ" style="@style/InfoTitle" />
+        <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/content_color" android:gravity="center" android:id="@id/bracelet_login_title_info" android:paddingLeft="@dimen/login_ui_margin_side" android:paddingRight="@dimen/login_ui_margin_side" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/bracelet_login_title" android:layout_centerHorizontal="true" />
+        <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/create_user_succ" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/wheel_margin_t" />
+        <TextView android:textSize="11.0sp" android:textColor="@color/weight_report_white_40" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="50.0dip" android:text="@string/set_user_suc_tips" android:lines="2" />
+    </LinearLayout>
+    <cn.com.smartdevices.bracelet.ui.widget.DimPanelBottomBar android:id="@id/bottom_bar" android:paddingBottom="@dimen/bottom_btn_maring_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:left_text="@string/gotit" app:left_text_color="@color/content_color" app:show_style="dark" xmlns:app="http://schemas.android.com/apk/res-auto" />
+</RelativeLayout>

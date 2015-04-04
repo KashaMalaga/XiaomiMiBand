@@ -1,4 +1,4 @@
-.class Landroid/support/v4/view/a/v;
+.class Landroid/support/v4/view/a/V;
 .super Ljava/lang/Object;
 
 
@@ -11,144 +11,12 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/View;I)Ljava/lang/Object;
+.method public static a(Landroid/support/v4/view/a/X;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->obtain(Landroid/view/View;I)Landroid/view/accessibility/AccessibilityNodeInfo;
+    new-instance v0, Landroid/support/v4/view/a/W;
 
-    move-result-object v0
+    invoke-direct {v0, p0}, Landroid/support/v4/view/a/W;-><init>(Landroid/support/v4/view/a/X;)V
 
     return-object v0
-.end method
-
-.method public static a(Ljava/lang/Object;I)V
-    .locals 0
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setMovementGranularities(I)V
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Object;Landroid/view/View;I)V
-    .locals 0
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->addChild(Landroid/view/View;I)V
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Object;Z)V
-    .locals 0
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setVisibleToUser(Z)V
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Object;)Z
-    .locals 1
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isVisibleToUser()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static a(Ljava/lang/Object;ILandroid/os/Bundle;)Z
-    .locals 1
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->performAction(ILandroid/os/Bundle;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getMovementGranularities()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(Ljava/lang/Object;I)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->findFocus(I)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/lang/Object;Landroid/view/View;I)V
-    .locals 0
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setSource(Landroid/view/View;I)V
-
-    return-void
-.end method
-
-.method public static b(Ljava/lang/Object;Z)V
-    .locals 0
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setAccessibilityFocused(Z)V
-
-    return-void
-.end method
-
-.method public static c(Ljava/lang/Object;I)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->focusSearch(I)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static c(Ljava/lang/Object;Landroid/view/View;I)V
-    .locals 0
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setParent(Landroid/view/View;I)V
-
-    return-void
-.end method
-
-.method public static c(Ljava/lang/Object;)Z
-    .locals 1
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isAccessibilityFocused()Z
-
-    move-result v0
-
-    return v0
 .end method

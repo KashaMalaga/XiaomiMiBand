@@ -36,7 +36,7 @@
 
     const-string v1, "debug_channel"
 
-    const-string v2, "Normal"
+    const-string v2, ""
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

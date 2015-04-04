@@ -1,11 +1,5 @@
-.class public final Lcn/com/smartdevices/bracelet/gps/b/k;
+.class public Lcn/com/smartdevices/bracelet/gps/b/k;
 .super Ljava/lang/Object;
-
-
-# static fields
-.field public static final a:I = 0x1
-
-.field public static final b:I = 0x2
 
 
 # direct methods
@@ -17,23 +11,29 @@
     return-void
 .end method
 
-.method public static a(I)Z
-    .locals 2
+.method public static a(Landroid/content/Context;ILcn/com/smartdevices/bracelet/gps/b/E;)Lcn/com/smartdevices/bracelet/gps/b/v;
+    .locals 1
 
-    const/4 v0, 0x1
+    packed-switch p1, :pswitch_data_0
 
-    if-eq v0, p0, :cond_0
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/o;
 
-    const/4 v1, 0x2
+    invoke-direct {v0, p0, p2}, Lcn/com/smartdevices/bracelet/gps/b/o;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/E;)V
 
-    if-ne p0, v1, :cond_1
-
-    :cond_0
     :goto_0
-    return v0
+    return-object v0
 
-    :cond_1
-    const/4 v0, 0x0
+    :pswitch_0
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/o;
+
+    invoke-direct {v0, p0, p2}, Lcn/com/smartdevices/bracelet/gps/b/o;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/E;)V
 
     goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

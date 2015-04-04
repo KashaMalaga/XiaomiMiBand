@@ -184,7 +184,7 @@
     move-exception v1
 
     :goto_2
-    iput v7, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v7, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     sget-object v2, Lcn/com/smartdevices/bracelet/k/h;->a:Ljava/lang/String;
 
@@ -376,7 +376,7 @@
     move-exception v1
 
     :goto_1
-    iput v5, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v5, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     sget-object v2, Lcn/com/smartdevices/bracelet/k/h;->a:Ljava/lang/String;
 
@@ -392,7 +392,7 @@
     const/4 v1, 0x2
 
     :try_start_2
-    iput v1, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -533,7 +533,7 @@
     :goto_2
     const/4 v2, 0x2
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     sget-object v2, Lcn/com/smartdevices/bracelet/k/h;->a:Ljava/lang/String;
 
@@ -653,7 +653,7 @@
 .method public static a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
     .locals 2
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/E;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/G;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1402,7 +1402,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->f(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->f(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1449,7 +1449,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->f(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->f(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

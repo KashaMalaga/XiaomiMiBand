@@ -1,42 +1,61 @@
-.class Lcn/com/smartdevices/bracelet/gps/services/i;
-.super Ljava/util/TimerTask;
+.class public final Lcn/com/smartdevices/bracelet/gps/services/i;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
+.field public a:Lcn/com/smartdevices/bracelet/gps/b/E;
 
-.field final synthetic b:Lcn/com/smartdevices/bracelet/gps/services/d;
+.field public b:I
+
+.field public c:I
+
+.field public d:J
+
+.field public e:I
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/d;Landroid/content/Context;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->b:Lcn/com/smartdevices/bracelet/gps/services/d;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->a:Landroid/content/Context;
-
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 6
+.method public a()Z
+    .locals 4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->b:Lcn/com/smartdevices/bracelet/gps/services/d;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->a:Landroid/content/Context;
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->d:J
 
     const-wide/16 v2, 0x0
 
-    const/4 v4, 0x0
+    cmp-long v0, v0, v2
 
-    const-string v5, "gps"
+    if-lez v0, :cond_0
 
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/d;->a(Lcn/com/smartdevices/bracelet/gps/services/d;Landroid/content/Context;JFLjava/lang/String;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->a:Lcn/com/smartdevices/bracelet/gps/b/E;
 
-    return-void
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->b:I
+
+    if-lez v0, :cond_0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->c:I
+
+    if-gtz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

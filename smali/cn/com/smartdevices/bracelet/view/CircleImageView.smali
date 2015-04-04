@@ -164,7 +164,7 @@
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/view/CircleImageView;->l:I
 
-    sget-object v0, Lcom/xiaomi/hm/a/t;->CircleImageView:[I
+    sget-object v0, Lcom/xiaomi/hm/health/t;->CircleImageView:[I
 
     invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

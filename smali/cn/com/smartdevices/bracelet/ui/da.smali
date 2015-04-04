@@ -1,22 +1,41 @@
-.class public Lcn/com/smartdevices/bracelet/ui/dA;
-.super Lcn/com/smartdevices/bracelet/ui/W;
+.class Lcn/com/smartdevices/bracelet/ui/dA;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/W;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dA;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()I
-    .locals 1
+.method public onClick(Landroid/view/View;)V
+    .locals 3
 
-    const v0, 0x7f03006b
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dA;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
 
-    return v0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->d(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)Landroid/support/v4/view/ViewPager;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/view/ViewPager;->a(IZ)V
+
+    return-void
 .end method

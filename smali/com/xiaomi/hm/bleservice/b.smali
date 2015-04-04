@@ -9,6 +9,9 @@
 .method public abstract a(Landroid/bluetooth/BluetoothDevice;Z)V
 .end method
 
+.method public abstract a(Lcom/xiaomi/hm/bleservice/profile/ISyncDataCb;J)V
+.end method
+
 .method public abstract b()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
 .end method
 
@@ -40,7 +43,4 @@
 .end method
 
 .method public abstract k()V
-.end method
-
-.method public abstract l()V
 .end method

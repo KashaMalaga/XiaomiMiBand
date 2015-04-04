@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="numberOfPullUpdateReport">
+        <item quantity="other">আইটেম %d আপডেট হয়েছে৷</item>
+        <item quantity="one">আইটেম %d আপডেট হয়েছে৷</item>
+    </plurals>
+    <plurals name="numberFoot">
+        <item quantity="other">%s feet</item>
+        <item quantity="one">%s ft</item>
+    </plurals>
+    <plurals name="numberInch">
+        <item quantity="other">%s inches</item>
+        <item quantity="one">%s inch</item>
+    </plurals>
+</resources>

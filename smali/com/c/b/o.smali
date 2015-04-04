@@ -1,241 +1,420 @@
 .class public final Lcom/c/b/o;
-.super Ljava/lang/Object;
+.super Lcom/c/b/j;
+
+
+# static fields
+.field private static final a:I = 0x2
 
 
 # instance fields
-.field private final a:Ljava/lang/String;
-
 .field private final b:[B
 
-.field private c:[Lcom/c/b/q;
+.field private final c:I
 
-.field private final d:Lcom/c/b/a;
+.field private final d:I
 
-.field private e:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map",
-            "<",
-            "Lcom/c/b/p;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final e:I
 
-.field private final f:J
+.field private final f:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;[B[Lcom/c/b/q;Lcom/c/b/a;)V
-    .locals 7
+.method public constructor <init>([BIIIIIIZ)V
+    .locals 2
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-direct {p0, p6, p7}, Lcom/c/b/j;-><init>(II)V
 
-    move-result-wide v5
+    add-int v0, p4, p6
 
-    move-object v0, p0
+    if-gt v0, p2, :cond_0
 
-    move-object v1, p1
+    add-int v0, p5, p7
 
-    move-object v2, p2
+    if-le v0, p3, :cond_1
 
-    move-object v3, p3
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    move-object v4, p4
+    const-string v1, "Crop rectangle does not fit within image data."
 
-    invoke-direct/range {v0 .. v6}, Lcom/c/b/o;-><init>(Ljava/lang/String;[B[Lcom/c/b/q;Lcom/c/b/a;J)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
+    throw v0
+
+    :cond_1
+    iput-object p1, p0, Lcom/c/b/o;->b:[B
+
+    iput p2, p0, Lcom/c/b/o;->c:I
+
+    iput p3, p0, Lcom/c/b/o;->d:I
+
+    iput p4, p0, Lcom/c/b/o;->e:I
+
+    iput p5, p0, Lcom/c/b/o;->f:I
+
+    if-eqz p8, :cond_2
+
+    invoke-direct {p0, p6, p7}, Lcom/c/b/o;->a(II)V
+
+    :cond_2
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;[B[Lcom/c/b/q;Lcom/c/b/a;J)V
-    .locals 1
+.method private a(II)V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/c/b/o;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lcom/c/b/o;->b:[B
-
-    iput-object p3, p0, Lcom/c/b/o;->c:[Lcom/c/b/q;
-
-    iput-object p4, p0, Lcom/c/b/o;->d:Lcom/c/b/a;
+    iget-object v4, p0, Lcom/c/b/o;->b:[B
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/c/b/o;->e:Ljava/util/Map;
+    iget v1, p0, Lcom/c/b/o;->f:I
 
-    iput-wide p5, p0, Lcom/c/b/o;->f:J
+    iget v2, p0, Lcom/c/b/o;->c:I
 
+    mul-int/2addr v1, v2
+
+    iget v2, p0, Lcom/c/b/o;->e:I
+
+    add-int/2addr v2, v1
+
+    move v3, v0
+
+    :goto_0
+    if-ge v3, p2, :cond_1
+
+    div-int/lit8 v0, p1, 0x2
+
+    add-int v5, v2, v0
+
+    add-int v0, v2, p1
+
+    add-int/lit8 v0, v0, -0x1
+
+    move v1, v2
+
+    :goto_1
+    if-ge v1, v5, :cond_0
+
+    aget-byte v6, v4, v1
+
+    aget-byte v7, v4, v0
+
+    aput-byte v7, v4, v1
+
+    aput-byte v6, v4, v0
+
+    add-int/lit8 v1, v1, 0x1
+
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v0, v3, 0x1
+
+    iget v1, p0, Lcom/c/b/o;->c:I
+
+    add-int/2addr v2, v1
+
+    move v3, v0
+
+    goto :goto_0
+
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
+.method public a(IIII)Lcom/c/b/j;
+    .locals 9
 
-    iget-object v0, p0, Lcom/c/b/o;->a:Ljava/lang/String;
+    new-instance v0, Lcom/c/b/o;
+
+    iget-object v1, p0, Lcom/c/b/o;->b:[B
+
+    iget v2, p0, Lcom/c/b/o;->c:I
+
+    iget v3, p0, Lcom/c/b/o;->d:I
+
+    iget v4, p0, Lcom/c/b/o;->e:I
+
+    add-int/2addr v4, p1
+
+    iget v5, p0, Lcom/c/b/o;->f:I
+
+    add-int/2addr v5, p2
+
+    const/4 v8, 0x0
+
+    move v6, p3
+
+    move v7, p4
+
+    invoke-direct/range {v0 .. v8}, Lcom/c/b/o;-><init>([BIIIIIIZ)V
 
     return-object v0
 .end method
 
-.method public a(Lcom/c/b/p;Ljava/lang/Object;)V
-    .locals 2
+.method public a()[B
+    .locals 7
 
-    iget-object v0, p0, Lcom/c/b/o;->e:Ljava/util/Map;
+    const/4 v1, 0x0
 
-    if-nez v0, :cond_0
+    invoke-virtual {p0}, Lcom/c/b/o;->g()I
 
-    new-instance v0, Ljava/util/EnumMap;
+    move-result v3
 
-    const-class v1, Lcom/c/b/p;
+    invoke-virtual {p0}, Lcom/c/b/o;->h()I
 
-    invoke-direct {v0, v1}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
+    move-result v4
 
-    iput-object v0, p0, Lcom/c/b/o;->e:Ljava/util/Map;
+    iget v0, p0, Lcom/c/b/o;->c:I
 
-    :cond_0
-    iget-object v0, p0, Lcom/c/b/o;->e:Ljava/util/Map;
+    if-ne v3, v0, :cond_1
 
-    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Lcom/c/b/o;->d:I
 
-    return-void
-.end method
-
-.method public a(Ljava/util/Map;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map",
-            "<",
-            "Lcom/c/b/p;",
-            "Ljava/lang/Object;",
-            ">;)V"
-        }
-    .end annotation
-
-    if-eqz p1, :cond_0
-
-    iget-object v0, p0, Lcom/c/b/o;->e:Ljava/util/Map;
-
-    if-nez v0, :cond_1
-
-    iput-object p1, p0, Lcom/c/b/o;->e:Ljava/util/Map;
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/c/b/o;->e:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
-
-    goto :goto_0
-.end method
-
-.method public a([Lcom/c/b/q;)V
-    .locals 4
-
-    const/4 v3, 0x0
-
-    iget-object v0, p0, Lcom/c/b/o;->c:[Lcom/c/b/q;
-
-    if-nez v0, :cond_1
-
-    iput-object p1, p0, Lcom/c/b/o;->c:[Lcom/c/b/q;
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    if-eqz p1, :cond_0
-
-    array-length v1, p1
-
-    if-lez v1, :cond_0
-
-    array-length v1, v0
-
-    array-length v2, p1
-
-    add-int/2addr v1, v2
-
-    new-array v1, v1, [Lcom/c/b/q;
-
-    array-length v2, v0
-
-    invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    array-length v0, v0
-
-    array-length v2, p1
-
-    invoke-static {p1, v3, v1, v0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iput-object v1, p0, Lcom/c/b/o;->c:[Lcom/c/b/q;
-
-    goto :goto_0
-.end method
-
-.method public b()[B
-    .locals 1
+    if-ne v4, v0, :cond_1
 
     iget-object v0, p0, Lcom/c/b/o;->b:[B
 
+    :cond_0
+    :goto_0
     return-object v0
+
+    :cond_1
+    mul-int v5, v3, v4
+
+    new-array v0, v5, [B
+
+    iget v2, p0, Lcom/c/b/o;->f:I
+
+    iget v6, p0, Lcom/c/b/o;->c:I
+
+    mul-int/2addr v2, v6
+
+    iget v6, p0, Lcom/c/b/o;->e:I
+
+    add-int/2addr v2, v6
+
+    iget v6, p0, Lcom/c/b/o;->c:I
+
+    if-ne v3, v6, :cond_2
+
+    iget-object v3, p0, Lcom/c/b/o;->b:[B
+
+    invoke-static {v3, v2, v0, v1, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v5, p0, Lcom/c/b/o;->b:[B
+
+    :goto_1
+    if-ge v1, v4, :cond_0
+
+    mul-int v6, v1, v3
+
+    invoke-static {v5, v2, v0, v6, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget v6, p0, Lcom/c/b/o;->c:I
+
+    add-int/2addr v2, v6
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
 .end method
 
-.method public c()[Lcom/c/b/q;
+.method public a(I[B)[B
+    .locals 4
+
+    if-ltz p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/c/b/o;->h()I
+
+    move-result v0
+
+    if-lt p1, v0, :cond_1
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Requested row is outside the image: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/c/b/o;->g()I
+
+    move-result v0
+
+    if-eqz p2, :cond_2
+
+    array-length v1, p2
+
+    if-ge v1, v0, :cond_3
+
+    :cond_2
+    new-array p2, v0, [B
+
+    :cond_3
+    iget v1, p0, Lcom/c/b/o;->f:I
+
+    add-int/2addr v1, p1
+
+    iget v2, p0, Lcom/c/b/o;->c:I
+
+    mul-int/2addr v1, v2
+
+    iget v2, p0, Lcom/c/b/o;->e:I
+
+    add-int/2addr v1, v2
+
+    iget-object v2, p0, Lcom/c/b/o;->b:[B
+
+    const/4 v3, 0x0
+
+    invoke-static {v2, v1, p2, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    return-object p2
+.end method
+
+.method public b()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/o;->c:[Lcom/c/b/q;
+    const/4 v0, 0x1
 
-    return-object v0
+    return v0
 .end method
 
-.method public d()Lcom/c/b/a;
+.method public i()[I
+    .locals 13
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0}, Lcom/c/b/o;->g()I
+
+    move-result v0
+
+    div-int/lit8 v4, v0, 0x2
+
+    invoke-virtual {p0}, Lcom/c/b/o;->h()I
+
+    move-result v0
+
+    div-int/lit8 v5, v0, 0x2
+
+    mul-int v0, v4, v5
+
+    new-array v6, v0, [I
+
+    iget-object v7, p0, Lcom/c/b/o;->b:[B
+
+    iget v0, p0, Lcom/c/b/o;->f:I
+
+    iget v2, p0, Lcom/c/b/o;->c:I
+
+    mul-int/2addr v0, v2
+
+    iget v2, p0, Lcom/c/b/o;->e:I
+
+    add-int/2addr v0, v2
+
+    move v2, v1
+
+    move v3, v0
+
+    :goto_0
+    if-ge v2, v5, :cond_1
+
+    mul-int v8, v2, v4
+
+    move v0, v1
+
+    :goto_1
+    if-ge v0, v4, :cond_0
+
+    mul-int/lit8 v9, v0, 0x2
+
+    add-int/2addr v9, v3
+
+    aget-byte v9, v7, v9
+
+    and-int/lit16 v9, v9, 0xff
+
+    add-int v10, v8, v0
+
+    const/high16 v11, -0x1000000
+
+    const v12, 0x10101
+
+    mul-int/2addr v9, v12
+
+    or-int/2addr v9, v11
+
+    aput v9, v6, v10
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_0
+    iget v0, p0, Lcom/c/b/o;->c:I
+
+    mul-int/lit8 v0, v0, 0x2
+
+    add-int/2addr v3, v0
+
+    add-int/lit8 v0, v2, 0x1
+
+    move v2, v0
+
+    goto :goto_0
+
+    :cond_1
+    return-object v6
+.end method
+
+.method public j()I
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/o;->d:Lcom/c/b/a;
+    invoke-virtual {p0}, Lcom/c/b/o;->g()I
 
-    return-object v0
+    move-result v0
+
+    div-int/lit8 v0, v0, 0x2
+
+    return v0
 .end method
 
-.method public e()Ljava/util/Map;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map",
-            "<",
-            "Lcom/c/b/p;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/c/b/o;->e:Ljava/util/Map;
-
-    return-object v0
-.end method
-
-.method public f()J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/c/b/o;->f:J
-
-    return-wide v0
-.end method
-
-.method public toString()Ljava/lang/String;
+.method public k()I
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/o;->a:Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/c/b/o;->h()I
 
-    return-object v0
+    move-result v0
+
+    div-int/lit8 v0, v0, 0x2
+
+    return v0
 .end method

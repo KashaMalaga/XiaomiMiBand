@@ -11,10 +11,10 @@
 
 .field private static d:Lcom/activeandroid/f;
 
-.field private static e:Landroid/support/v4/j/e;
+.field private static e:Landroid/support/v4/l/i;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/v4/j/e",
+            "Landroid/support/v4/l/i",
             "<",
             "Ljava/lang/String;",
             "Lcom/activeandroid/g;",
@@ -63,7 +63,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/j/e;
+    sget-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/l/i;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -73,7 +73,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Landroid/support/v4/j/e;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Landroid/support/v4/l/i;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -201,9 +201,9 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/j/e;
+    sget-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/l/i;
 
-    invoke-virtual {v0}, Landroid/support/v4/j/e;->a()V
+    invoke-virtual {v0}, Landroid/support/v4/l/i;->a()V
 
     const-string v0, "Cache cleared."
 
@@ -266,15 +266,15 @@
 
     sput-object v0, Lcom/activeandroid/b;->d:Lcom/activeandroid/f;
 
-    new-instance v0, Landroid/support/v4/j/e;
+    new-instance v0, Landroid/support/v4/l/i;
 
     invoke-virtual {p0}, Lcom/activeandroid/c;->g()I
 
     move-result v2
 
-    invoke-direct {v0, v2}, Landroid/support/v4/j/e;-><init>(I)V
+    invoke-direct {v0, v2}, Landroid/support/v4/l/i;-><init>(I)V
 
-    sput-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/j/e;
+    sput-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/l/i;
 
     invoke-static {}, Lcom/activeandroid/b;->d()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -346,7 +346,7 @@
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/j/e;
+    sput-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/l/i;
 
     const/4 v0, 0x0
 
@@ -386,13 +386,13 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/j/e;
+    sget-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/l/i;
 
     invoke-static {p0}, Lcom/activeandroid/b;->a(Lcom/activeandroid/g;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, p0}, Landroid/support/v4/j/e;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, p0}, Landroid/support/v4/l/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -458,13 +458,13 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/j/e;
+    sget-object v0, Lcom/activeandroid/b;->e:Landroid/support/v4/l/i;
 
     invoke-static {p0}, Lcom/activeandroid/b;->a(Lcom/activeandroid/g;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Landroid/support/v4/j/e;->b(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Landroid/support/v4/l/i;->b(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

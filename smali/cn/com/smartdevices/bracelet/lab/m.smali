@@ -44,7 +44,7 @@
 .method public static a(Landroid/content/Context;)V
     .locals 5
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/E;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/G;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 

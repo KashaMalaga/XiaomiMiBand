@@ -13,14 +13,14 @@
 
 
 # virtual methods
-.method public a(Lcom/c/b/o;)Lcom/c/b/b/a/C;
+.method public a(Lcom/c/b/s;)Lcom/c/b/b/a/C;
     .locals 5
 
     const/4 v4, 0x1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1}, Lcom/c/b/o;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/c/b/s;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -55,7 +55,7 @@
 
     aget-object v1, v1, v3
 
-    invoke-static {v1}, Lcom/c/b/b/a/D;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Lcom/c/b/b/a/D;->a(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -68,10 +68,10 @@
     goto :goto_0
 .end method
 
-.method public synthetic b(Lcom/c/b/o;)Lcom/c/b/b/a/q;
+.method public synthetic b(Lcom/c/b/s;)Lcom/c/b/b/a/q;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/c/b/b/a/f;->a(Lcom/c/b/o;)Lcom/c/b/b/a/C;
+    invoke-virtual {p0, p1}, Lcom/c/b/b/a/f;->a(Lcom/c/b/s;)Lcom/c/b/b/a/C;
 
     move-result-object v0
 

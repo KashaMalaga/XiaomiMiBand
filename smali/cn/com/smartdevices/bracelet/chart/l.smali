@@ -1,24 +1,30 @@
-.class public Lcn/com/smartdevices/bracelet/chart/L;
-.super Lcn/com/smartdevices/bracelet/chart/b/e;
+.class public Lcn/com/smartdevices/bracelet/chart/l;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field public static final a:I = 0x3
+
+.field public static final b:I = 0x2
+
+.field public static final c:I = 0x1
+
+.field public static final d:I = 0x4
 
 
 # instance fields
-.field public a:I
+.field public e:I
 
-.field public b:I
+.field public f:I
 
-.field public c:I
-
-.field public d:F
-
-.field public e:Ljava/lang/String;
+.field public g:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/chart/b/e;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

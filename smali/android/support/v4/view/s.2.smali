@@ -623,13 +623,13 @@
 
     iget-object v2, p0, Landroid/support/v4/view/s;->A:Landroid/view/VelocityTracker;
 
-    invoke-static {v2, v0}, Landroid/support/v4/view/an;->a(Landroid/view/VelocityTracker;I)F
+    invoke-static {v2, v0}, Landroid/support/v4/view/au;->a(Landroid/view/VelocityTracker;I)F
 
     move-result v2
 
     iget-object v5, p0, Landroid/support/v4/view/s;->A:Landroid/view/VelocityTracker;
 
-    invoke-static {v5, v0}, Landroid/support/v4/view/an;->b(Landroid/view/VelocityTracker;I)F
+    invoke-static {v5, v0}, Landroid/support/v4/view/au;->b(Landroid/view/VelocityTracker;I)F
 
     move-result v5
 
@@ -652,7 +652,7 @@
 
     iget-object v8, p0, Landroid/support/v4/view/s;->A:Landroid/view/VelocityTracker;
 
-    invoke-static {v8, v7}, Landroid/support/v4/view/an;->a(Landroid/view/VelocityTracker;I)F
+    invoke-static {v8, v7}, Landroid/support/v4/view/au;->a(Landroid/view/VelocityTracker;I)F
 
     move-result v8
 
@@ -660,7 +660,7 @@
 
     iget-object v9, p0, Landroid/support/v4/view/s;->A:Landroid/view/VelocityTracker;
 
-    invoke-static {v9, v7}, Landroid/support/v4/view/an;->b(Landroid/view/VelocityTracker;I)F
+    invoke-static {v9, v7}, Landroid/support/v4/view/au;->b(Landroid/view/VelocityTracker;I)F
 
     move-result v7
 
@@ -1085,11 +1085,11 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    invoke-static {v0, v2}, Landroid/support/v4/view/an;->b(Landroid/view/VelocityTracker;I)F
+    invoke-static {v0, v2}, Landroid/support/v4/view/au;->b(Landroid/view/VelocityTracker;I)F
 
     move-result v4
 
-    invoke-static {v0, v2}, Landroid/support/v4/view/an;->a(Landroid/view/VelocityTracker;I)F
+    invoke-static {v0, v2}, Landroid/support/v4/view/au;->a(Landroid/view/VelocityTracker;I)F
 
     move-result v0
 

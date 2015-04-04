@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@color/bg_mode_weight" android:layout_width="fill_parent" android:layout_height="@dimen/common_header_height">
+        <TextView android:id="@id/home_back" android:text="@string/weight_settings_merge_title" style="@style/BackButton" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/weight_settings_merge_ll" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/common_list_item_1_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:minHeight="@dimen/item_height">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/common_list_item_main_font" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/weight_settings_merge_title" style="@style/ListItemTitleText" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="center" android:paddingRight="@dimen/mili_margin" android:clickable="true" android:layout_width="63.0dip" android:layout_height="fill_parent">
+            <Switch android:layout_gravity="center" android:id="@id/weight_settings_merge_switch" android:background="@drawable/switch_track_enable" android:focusable="false" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="40.0dip" android:layout_height="21.0dip" android:textOn="" android:textOff="" android:thumb="@drawable/switch_thumb" android:track="@drawable/switch_track_trans" android:switchMinWidth="38.0dip" android:thumbTextPadding="10.0dip" />
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/split_line_with_margin" />
+    <LinearLayout android:id="@id/weight_settings_about" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="6.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="6.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:minHeight="@dimen/item_height">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/weight_settings_merge_tips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/weight_settings_merge_tips" style="@style/ListItemValueText" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="9.0dip" android:text="" style="@style/ListItemValueText" />
+        <ImageView android:layout_gravity="center|right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+    </LinearLayout>
+</LinearLayout>

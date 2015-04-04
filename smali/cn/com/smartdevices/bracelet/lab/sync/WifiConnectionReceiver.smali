@@ -60,7 +60,7 @@
 
     invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/tag/a/c;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->h()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->i()V
 
     goto :goto_0
 

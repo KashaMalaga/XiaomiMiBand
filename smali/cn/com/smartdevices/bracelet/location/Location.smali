@@ -188,7 +188,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location;->c:Lcn/com/smartdevices/bracelet/location/Location$Address;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/location/Location$Address;->h()Ljava/lang/String;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/location/Location$Address;->j()Ljava/lang/String;
 
     move-result-object v2
 

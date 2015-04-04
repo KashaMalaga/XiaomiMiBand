@@ -100,7 +100,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->d:Landroid/widget/TextView;
 
-    const v3, 0x7f080161
+    const v3, 0x7f09017b
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->getString(I)Ljava/lang/String;
 
@@ -136,7 +136,7 @@
 .method private b()V
     .locals 4
 
-    const v0, 0x7f0700b8
+    const v0, 0x7f070100
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -144,7 +144,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07009d
+    const v0, 0x7f0700e3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -152,7 +152,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0701a0
+    const v0, 0x7f0701e9
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -162,7 +162,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->d:Landroid/widget/TextView;
 
-    const v0, 0x7f0701a1
+    const v0, 0x7f0701ea
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -200,7 +200,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d0002
+    const v1, 0x7f0f0002
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -208,13 +208,13 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->b:Lcn/com/smartdevices/bracelet/view/SelectDaysView;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/view/c;
+    new-instance v2, Lcn/com/smartdevices/bracelet/view/b;
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->c:I
 
-    invoke-direct {v2, p0, v0, v3}, Lcn/com/smartdevices/bracelet/view/c;-><init>(Landroid/content/Context;[Ljava/lang/String;I)V
+    invoke-direct {v2, p0, v0, v3}, Lcn/com/smartdevices/bracelet/view/b;-><init>(Landroid/content/Context;[Ljava/lang/String;I)V
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a(Lcn/com/smartdevices/bracelet/view/aa;)V
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a(Lcn/com/smartdevices/bracelet/view/Y;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->b:Lcn/com/smartdevices/bracelet/view/SelectDaysView;
 
@@ -283,8 +283,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f07009d -> :sswitch_1
-        0x7f0700b8 -> :sswitch_0
+        0x7f0700e3 -> :sswitch_1
+        0x7f070100 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -295,7 +295,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03003f
+    const v0, 0x7f03004e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->setContentView(I)V
 
@@ -333,9 +333,9 @@
 
     const-string v0, "PageAlarmNewRepeatCustom"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -347,9 +347,9 @@
 
     const-string v0, "PageAlarmNewRepeatCustom"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
 
     return-void
 .end method

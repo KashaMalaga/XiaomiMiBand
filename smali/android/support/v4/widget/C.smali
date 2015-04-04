@@ -1,56 +1,9 @@
-.class public Landroid/support/v4/widget/C;
+.class Landroid/support/v4/widget/C;
 .super Ljava/lang/Object;
 
 
-# static fields
-.field private static final a:Landroid/support/v4/widget/J;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xe
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Landroid/support/v4/widget/I;
-
-    invoke-direct {v0}, Landroid/support/v4/widget/I;-><init>()V
-
-    sput-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_1
-
-    new-instance v0, Landroid/support/v4/widget/F;
-
-    invoke-direct {v0}, Landroid/support/v4/widget/F;-><init>()V
-
-    sput-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Landroid/support/v4/widget/K;
-
-    invoke-direct {v0}, Landroid/support/v4/widget/K;-><init>()V
-
-    sput-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    goto :goto_0
-.end method
-
-.method private constructor <init>(Landroid/content/Context;)V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,184 +11,179 @@
     return-void
 .end method
 
-.method static synthetic a()Landroid/support/v4/widget/J;
+.method public static a(Ljava/lang/Object;)I
     .locals 1
 
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
+    if-eqz p0, :cond_0
 
-    return-object v0
-.end method
+    check-cast p0, Landroid/view/WindowInsets;
 
-.method public static a(Landroid/content/Context;)Landroid/view/View;
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/widget/J;->a(Landroid/content/Context;)Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Landroid/view/View;)Ljava/lang/CharSequence;
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/widget/J;->a(Landroid/view/View;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Landroid/view/View;I)V
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/J;->b(Landroid/view/View;I)V
-
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;Landroid/content/ComponentName;)V
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/J;->a(Landroid/view/View;Landroid/content/ComponentName;)V
-
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;Landroid/support/v4/widget/D;)V
-    .locals 2
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    iget-object v1, p1, Landroid/support/v4/widget/D;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, p0, v1}, Landroid/support/v4/widget/J;->b(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;Landroid/support/v4/widget/E;)V
-    .locals 2
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    iget-object v1, p1, Landroid/support/v4/widget/E;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, p0, v1}, Landroid/support/v4/widget/J;->a(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;Ljava/lang/CharSequence;)V
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/J;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;Ljava/lang/CharSequence;Z)V
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/widget/J;->a(Landroid/view/View;Ljava/lang/CharSequence;Z)V
-
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;Z)V
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/J;->a(Landroid/view/View;Z)V
-
-    return-void
-.end method
-
-.method public static b(Landroid/view/View;I)V
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/J;->c(Landroid/view/View;I)V
-
-    return-void
-.end method
-
-.method public static b(Landroid/view/View;Z)V
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/J;->b(Landroid/view/View;Z)V
-
-    return-void
-.end method
-
-.method public static b(Landroid/view/View;)Z
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/widget/J;->b(Landroid/view/View;)Z
+    invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
     move-result v0
 
+    :goto_0
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
-.method public static c(Landroid/view/View;I)V
+.method public static a(Landroid/view/View;)V
     .locals 1
 
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
+    instance-of v0, p0, Landroid/support/v4/widget/E;
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/J;->a(Landroid/view/View;I)V
+    if-eqz v0, :cond_0
 
+    new-instance v0, Landroid/support/v4/widget/D;
+
+    invoke-direct {v0}, Landroid/support/v4/widget/D;-><init>()V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
+
+    const/16 v0, 0x500
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    :cond_0
     return-void
 .end method
 
-.method public static c(Landroid/view/View;Z)V
-    .locals 1
+.method public static a(Landroid/view/View;Ljava/lang/Object;I)V
+    .locals 4
 
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
+    const/4 v3, 0x0
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/J;->c(Landroid/view/View;Z)V
+    check-cast p1, Landroid/view/WindowInsets;
+
+    const/4 v0, 0x3
+
+    if-ne p2, v0, :cond_1
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetLeft()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
+
+    move-result v2
+
+    invoke-virtual {p1, v0, v1, v3, v2}, Landroid/view/WindowInsets;->replaceSystemWindowInsets(IIII)Landroid/view/WindowInsets;
+
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
     return-void
-.end method
 
-.method public static c(Landroid/view/View;)Z
-    .locals 1
+    :cond_1
+    const/4 v0, 0x5
 
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
+    if-ne p2, v0, :cond_0
 
-    invoke-interface {v0, p0}, Landroid/support/v4/widget/J;->c(Landroid/view/View;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static d(Landroid/view/View;)Z
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/widget/C;->a:Landroid/support/v4/widget/J;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/widget/J;->d(Landroid/view/View;)Z
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
     move-result v0
 
-    return v0
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetRight()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
+
+    move-result v2
+
+    invoke-virtual {p1, v3, v0, v1, v2}, Landroid/view/WindowInsets;->replaceSystemWindowInsets(IIII)Landroid/view/WindowInsets;
+
+    move-result-object p1
+
+    goto :goto_0
+.end method
+
+.method public static a(Landroid/view/ViewGroup$MarginLayoutParams;Ljava/lang/Object;I)V
+    .locals 4
+
+    const/4 v3, 0x0
+
+    check-cast p1, Landroid/view/WindowInsets;
+
+    const/4 v0, 0x3
+
+    if-ne p2, v0, :cond_1
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetLeft()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
+
+    move-result v2
+
+    invoke-virtual {p1, v0, v1, v3, v2}, Landroid/view/WindowInsets;->replaceSystemWindowInsets(IIII)Landroid/view/WindowInsets;
+
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetLeft()I
+
+    move-result v0
+
+    iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
+
+    move-result v0
+
+    iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetRight()I
+
+    move-result v0
+
+    iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
+
+    move-result v0
+
+    iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    return-void
+
+    :cond_1
+    const/4 v0, 0x5
+
+    if-ne p2, v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetRight()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
+
+    move-result v2
+
+    invoke-virtual {p1, v3, v0, v1, v2}, Landroid/view/WindowInsets;->replaceSystemWindowInsets(IIII)Landroid/view/WindowInsets;
+
+    move-result-object p1
+
+    goto :goto_0
 .end method

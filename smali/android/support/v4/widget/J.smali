@@ -1,58 +1,104 @@
-.class interface abstract Landroid/support/v4/widget/J;
+.class Landroid/support/v4/widget/J;
 .super Ljava/lang/Object;
 
 
-# virtual methods
-.method public abstract a(Landroid/content/Context;)Landroid/view/View;
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public abstract a(Landroid/view/View;)Ljava/lang/CharSequence;
+.method public static a(Landroid/content/Context;)Ljava/lang/Object;
+    .locals 1
+
+    new-instance v0, Landroid/widget/EdgeEffect;
+
+    invoke-direct {v0, p0}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
+
+    return-object v0
 .end method
 
-.method public abstract a(Landroid/support/v4/widget/D;)Ljava/lang/Object;
+.method public static a(Ljava/lang/Object;II)V
+    .locals 0
+
+    check-cast p0, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->setSize(II)V
+
+    return-void
 .end method
 
-.method public abstract a(Landroid/support/v4/widget/E;)Ljava/lang/Object;
+.method public static a(Ljava/lang/Object;)Z
+    .locals 1
+
+    check-cast p0, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0}, Landroid/widget/EdgeEffect;->isFinished()Z
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public abstract a(Landroid/view/View;I)V
+.method public static a(Ljava/lang/Object;F)Z
+    .locals 1
+
+    check-cast p0, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0, p1}, Landroid/widget/EdgeEffect;->onPull(F)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
-.method public abstract a(Landroid/view/View;Landroid/content/ComponentName;)V
+.method public static a(Ljava/lang/Object;I)Z
+    .locals 1
+
+    check-cast p0, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0, p1}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
-.method public abstract a(Landroid/view/View;Ljava/lang/CharSequence;)V
+.method public static a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
+    .locals 1
+
+    check-cast p0, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0, p1}, Landroid/widget/EdgeEffect;->draw(Landroid/graphics/Canvas;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public abstract a(Landroid/view/View;Ljava/lang/CharSequence;Z)V
+.method public static b(Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p0, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0}, Landroid/widget/EdgeEffect;->finish()V
+
+    return-void
 .end method
 
-.method public abstract a(Landroid/view/View;Z)V
-.end method
+.method public static c(Ljava/lang/Object;)Z
+    .locals 1
 
-.method public abstract a(Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
+    check-cast p0, Landroid/widget/EdgeEffect;
 
-.method public abstract b(Landroid/view/View;I)V
-.end method
+    invoke-virtual {p0}, Landroid/widget/EdgeEffect;->onRelease()V
 
-.method public abstract b(Landroid/view/View;Z)V
-.end method
+    invoke-virtual {p0}, Landroid/widget/EdgeEffect;->isFinished()Z
 
-.method public abstract b(Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
+    move-result v0
 
-.method public abstract b(Landroid/view/View;)Z
-.end method
-
-.method public abstract c(Landroid/view/View;I)V
-.end method
-
-.method public abstract c(Landroid/view/View;Z)V
-.end method
-
-.method public abstract c(Landroid/view/View;)Z
-.end method
-
-.method public abstract d(Landroid/view/View;)Z
+    return v0
 .end method

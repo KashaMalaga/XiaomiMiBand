@@ -1,202 +1,144 @@
-.class interface abstract Landroid/support/v4/view/a/q;
+.class Landroid/support/v4/view/a/Q;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v4/view/a/X;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/view/a/L;
+
+.field final synthetic b:Landroid/support/v4/view/a/P;
+
+
+# direct methods
+.method constructor <init>(Landroid/support/v4/view/a/P;Landroid/support/v4/view/a/L;)V
+    .locals 0
+
+    iput-object p1, p0, Landroid/support/v4/view/a/Q;->b:Landroid/support/v4/view/a/P;
+
+    iput-object p2, p0, Landroid/support/v4/view/a/Q;->a:Landroid/support/v4/view/a/L;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/Object;
+.method public a(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/view/a/Q;->a:Landroid/support/v4/view/a/L;
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/view/a/L;->a(I)Landroid/support/v4/view/a/o;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/support/v4/view/a/o;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
-.method public abstract a(Landroid/view/View;)Ljava/lang/Object;
-.end method
-
-.method public abstract a(Landroid/view/View;I)Ljava/lang/Object;
-.end method
-
-.method public abstract a(Ljava/lang/Object;)Ljava/lang/Object;
-.end method
-
-.method public abstract a(Ljava/lang/Object;Ljava/lang/String;)Ljava/util/List;
+.method public a(Ljava/lang/String;I)Ljava/util/List;
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/lang/Object;",
             "Ljava/lang/String;",
-            ")",
+            "I)",
             "Ljava/util/List",
             "<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
+
+    iget-object v0, p0, Landroid/support/v4/view/a/Q;->a:Landroid/support/v4/view/a/L;
+
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a/L;->a(Ljava/lang/String;I)Ljava/util/List;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, v4, :cond_0
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/view/a/o;
+
+    invoke-virtual {v0}, Landroid/support/v4/view/a/o;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    return-object v3
 .end method
 
-.method public abstract a(Ljava/lang/Object;I)V
+.method public a(IILandroid/os/Bundle;)Z
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/view/a/Q;->a:Landroid/support/v4/view/a/L;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/view/a/L;->a(IILandroid/os/Bundle;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public abstract a(Ljava/lang/Object;Landroid/graphics/Rect;)V
-.end method
+.method public b(I)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract a(Ljava/lang/Object;Landroid/view/View;)V
-.end method
+    iget-object v0, p0, Landroid/support/v4/view/a/Q;->a:Landroid/support/v4/view/a/L;
 
-.method public abstract a(Ljava/lang/Object;Landroid/view/View;I)V
-.end method
+    invoke-virtual {v0, p1}, Landroid/support/v4/view/a/L;->b(I)Landroid/support/v4/view/a/o;
 
-.method public abstract a(Ljava/lang/Object;Ljava/lang/CharSequence;)V
-.end method
+    move-result-object v0
 
-.method public abstract a(Ljava/lang/Object;Z)V
-.end method
+    if-nez v0, :cond_0
 
-.method public abstract a(Ljava/lang/Object;ILandroid/os/Bundle;)Z
-.end method
+    const/4 v0, 0x0
 
-.method public abstract b(Ljava/lang/Object;)I
-.end method
+    :goto_0
+    return-object v0
 
-.method public abstract b(Ljava/lang/Object;I)Ljava/lang/Object;
-.end method
+    :cond_0
+    invoke-virtual {v0}, Landroid/support/v4/view/a/o;->a()Ljava/lang/Object;
 
-.method public abstract b(Ljava/lang/Object;Landroid/graphics/Rect;)V
-.end method
+    move-result-object v0
 
-.method public abstract b(Ljava/lang/Object;Landroid/view/View;)V
-.end method
-
-.method public abstract b(Ljava/lang/Object;Landroid/view/View;I)V
-.end method
-
-.method public abstract b(Ljava/lang/Object;Ljava/lang/CharSequence;)V
-.end method
-
-.method public abstract b(Ljava/lang/Object;Ljava/lang/String;)V
-.end method
-
-.method public abstract b(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract c(Ljava/lang/Object;)I
-.end method
-
-.method public abstract c(Ljava/lang/Object;Landroid/graphics/Rect;)V
-.end method
-
-.method public abstract c(Ljava/lang/Object;Landroid/view/View;)V
-.end method
-
-.method public abstract c(Ljava/lang/Object;Landroid/view/View;I)V
-.end method
-
-.method public abstract c(Ljava/lang/Object;Ljava/lang/CharSequence;)V
-.end method
-
-.method public abstract c(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract c(Ljava/lang/Object;I)Z
-.end method
-
-.method public abstract d(Ljava/lang/Object;)Ljava/lang/CharSequence;
-.end method
-
-.method public abstract d(Ljava/lang/Object;I)Ljava/lang/Object;
-.end method
-
-.method public abstract d(Ljava/lang/Object;Landroid/graphics/Rect;)V
-.end method
-
-.method public abstract d(Ljava/lang/Object;Ljava/lang/CharSequence;)V
-.end method
-
-.method public abstract d(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract e(Ljava/lang/Object;)Ljava/lang/CharSequence;
-.end method
-
-.method public abstract e(Ljava/lang/Object;I)Ljava/lang/Object;
-.end method
-
-.method public abstract e(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract f(Ljava/lang/Object;)Ljava/lang/CharSequence;
-.end method
-
-.method public abstract f(Ljava/lang/Object;I)V
-.end method
-
-.method public abstract f(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract g(Ljava/lang/Object;)Ljava/lang/Object;
-.end method
-
-.method public abstract g(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract h(Ljava/lang/Object;)Ljava/lang/CharSequence;
-.end method
-
-.method public abstract h(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract i(Ljava/lang/Object;)I
-.end method
-
-.method public abstract i(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract j(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract j(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract k(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract k(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract l(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract l(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract m(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract n(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract o(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract p(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract q(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract r(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract s(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract t(Ljava/lang/Object;)V
-.end method
-
-.method public abstract u(Ljava/lang/Object;)I
-.end method
-
-.method public abstract v(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract w(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract x(Ljava/lang/Object;)Ljava/lang/String;
+    goto :goto_0
 .end method

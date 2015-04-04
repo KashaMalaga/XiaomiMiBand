@@ -1,48 +1,67 @@
-.class Landroid/support/v4/view/bc;
-.super Landroid/database/DataSetObserver;
+.class final Landroid/support/v4/view/bC;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v4/g/g;
 
 
-# instance fields
-.field final synthetic a:Landroid/support/v4/view/ViewPager;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/support/v4/g/g",
+        "<",
+        "Landroid/support/v4/view/ViewPager$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method private constructor <init>(Landroid/support/v4/view/ViewPager;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/view/bc;->a:Landroid/support/v4/view/ViewPager;
-
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v4/view/ViewPager;Landroid/support/v4/view/aT;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Landroid/support/v4/view/bc;-><init>(Landroid/support/v4/view/ViewPager;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChanged()V
+.method public synthetic a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/view/bc;->a:Landroid/support/v4/view/ViewPager;
+    invoke-virtual {p0, p1, p2}, Landroid/support/v4/view/bC;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/support/v4/view/ViewPager$SavedState;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->f()V
+    move-result-object v0
 
-    return-void
+    return-object v0
 .end method
 
-.method public onInvalidated()V
+.method public synthetic a(I)[Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/view/bc;->a:Landroid/support/v4/view/ViewPager;
+    invoke-virtual {p0, p1}, Landroid/support/v4/view/bC;->b(I)[Landroid/support/v4/view/ViewPager$SavedState;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->f()V
+    move-result-object v0
 
-    return-void
+    return-object v0
+.end method
+
+.method public b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/support/v4/view/ViewPager$SavedState;
+    .locals 1
+
+    new-instance v0, Landroid/support/v4/view/ViewPager$SavedState;
+
+    invoke-direct {v0, p1, p2}, Landroid/support/v4/view/ViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+
+    return-object v0
+.end method
+
+.method public b(I)[Landroid/support/v4/view/ViewPager$SavedState;
+    .locals 1
+
+    new-array v0, p1, [Landroid/support/v4/view/ViewPager$SavedState;
+
+    return-object v0
 .end method

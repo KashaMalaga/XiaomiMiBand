@@ -15,6 +15,16 @@
 
 .field public static final ACTIVITY_WEIBO:Ljava/lang/String; = "com.sina.weibo.sdk.action.ACTION_WEIBO_ACTIVITY"
 
+.field public static final ACTIVITY_WEIBO_PAY:Ljava/lang/String; = "com.sina.weibo.sdk.action.ACTION_WEIBO_PAY_ACTIVITY"
+
+.field public static final ACTIVITY_WEIBO_PAY_REQ:Ljava/lang/String; = "com.sina.weibo.sdk.action.ACTION_SDK_REQ_PAY_ACTIVITY"
+
+.field public static final AID:Ljava/lang/String; = "aid"
+
+.field public static final AUTH_ACCESS_TOKEN:Ljava/lang/String; = "access_token"
+
+.field public static final AUTH_PARAMS_AID:Ljava/lang/String; = "aid"
+
 .field public static final AUTH_PARAMS_CLIENT_ID:Ljava/lang/String; = "client_id"
 
 .field public static final AUTH_PARAMS_CLIENT_SECRET:Ljava/lang/String; = "client_secret"
@@ -35,7 +45,11 @@
 
 .field public static final AUTH_PARAMS_SCOPE:Ljava/lang/String; = "scope"
 
+.field public static final AUTH_PARAMS_VERSION:Ljava/lang/String; = "version"
+
 .field public static final COMMAND_FROM_WEIBO:I = 0x2
+
+.field public static final COMMAND_PAY:I = 0x4
 
 .field public static final COMMAND_SSO:I = 0x3
 
@@ -63,9 +77,9 @@
 
 .field public static final WEIBO_FLAG_SDK:I = 0x20130329
 
-.field public static final WEIBO_SDK_VERSION:I = 0x16
+.field public static final WEIBO_SDK_VERSION_CODE:Ljava/lang/String; = "0030105000"
 
-.field public static final WEIBO_SDK_VERSION_NAME:Ljava/lang/String; = "2.2"
+.field public static final WEIBO_SIGN:Ljava/lang/String; = "18da2bf10352443a00a5e046d9fca6bd"
 
 
 # direct methods

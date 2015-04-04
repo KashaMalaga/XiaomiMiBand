@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@id/share_content_ll" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <RelativeLayout android:id="@id/share_content_ll" android:background="@color/main_ui_bg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
             <View android:id="@id/share_background_v" android:background="#fff57130" android:layout_width="fill_parent" android:layout_height="372.0dip" />
             <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
@@ -27,6 +27,38 @@
         <TextView android:textSize="14.0sp" android:textColor="#ff898989" android:gravity="center" android:id="@id/share_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:text="Descriptions" android:layout_below="@id/share_person_name_tv" android:layout_centerHorizontal="true" />
         <include layout="@layout/brand_pane" />
     </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/share_content_for_weight" android:background="@drawable/weight_report_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <RelativeLayout android:id="@id/wr_header" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="45.0dip">
+                <TextView android:id="@id/wr_home_back" android:layout_width="fill_parent" android:text="@string/share" android:singleLine="true" android:layout_toLeftOf="@id/wr_share" style="@style/BackButton" />
+            </RelativeLayout>
+            <include android:layout_gravity="center_horizontal" android:layout_width="67.0dip" android:layout_height="90.0dip" android:layout_marginTop="10.0dip" layout="@layout/userimg_with_name" />
+            <View android:background="@color/weight_report_white_30" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="45.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/weight_report_white_40" android:gravity="center" android:id="@id/current_weight_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" />
+            <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="68.0sp" android:textColor="@color/weight_report_white_90" android:gravity="center" android:id="@id/current_weight_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:fontFamily="miui-light" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/weight_report_white_70" android:gravity="center" android:id="@id/current_weight_tips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+            <View android:background="@color/weight_report_white_30" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="35.0dip" />
+            <RelativeLayout android:layout_gravity="center" android:id="@id/bmi_layout" android:layout_width="fill_parent" android:layout_height="180.0dip">
+                <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="42.0dip" android:layout_toLeftOf="@id/middle_line">
+                    <ImageView android:id="@id/weight_report_figure" android:background="@drawable/weight_report_figure" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_centerHorizontal="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/weight_report_white_40" android:id="@id/wr_figure_tips_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/body_figure" android:layout_below="@id/weight_report_figure" android:layout_centerHorizontal="true" />
+                    <TextView android:textColor="@color/weight_report_white_70" android:id="@id/wr_figure_tips_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="- -" android:layout_below="@id/wr_figure_tips_title" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <View android:id="@id/middle_line" android:background="@color/weight_report_white_30" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="22.0dip" android:layout_marginBottom="22.0dip" android:layout_centerHorizontal="true" />
+                <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="42.0dip" android:layout_weight="1.0" android:layout_toRightOf="@id/middle_line">
+                    <ImageView android:id="@id/weight_report_bmi" android:background="@drawable/weight_report_bmi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_centerHorizontal="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/weight_report_white_40" android:id="@id/wr_bmi_tips_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="BMI" android:layout_below="@id/weight_report_bmi" android:layout_centerHorizontal="true" />
+                    <TextView android:textColor="@color/weight_report_white_70" android:id="@id/wr_bmi_tips_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="- -" android:layout_below="@id/wr_bmi_tips_title" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout android:visibility="visible" android:layout_width="fill_parent" android:layout_height="63.0dip">
+            <RelativeLayout android:id="@id/app_share_layout" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageView android:id="@id/icon" android:background="@drawable/app_icon" android:layout_width="33.0dip" android:layout_height="33.0dip" />
+                <TextView android:textColor="@color/weight_report_white_40" android:id="@id/share_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="9.0dip" android:layout_toRightOf="@id/icon" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
     <RelativeLayout android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h">
         <TextView android:id="@id/home_back" android:text="@string/share" style="@style/BackButton" />
         <TextView android:id="@id/share_photo" android:paddingRight="10.0dip" android:visibility="gone" android:text="@string/lab_factory_share_photo" android:drawableLeft="@null" android:layout_alignParentRight="true" style="@style/BackButton" />

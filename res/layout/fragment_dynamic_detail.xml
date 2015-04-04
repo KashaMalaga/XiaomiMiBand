@@ -29,8 +29,8 @@
                 </FrameLayout>
             </LinearLayout>
         </view>
-        <include android:layout_gravity="center_horizontal" android:id="@id/float_sleep_info" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="22.0dip" layout="@layout/fragment_dynamic_detail_float_info_sleep" />
-        <include android:layout_gravity="center_horizontal" android:id="@id/float_step_info" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="22.0dip" layout="@layout/fragment_dynamic_detail_float_info_step" />
+        <include android:layout_gravity="center_horizontal" android:id="@id/float_sleep_info" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="22.0dip" layout="@layout/fragment_dynamic_detail_float_info_sleep" />
+        <include android:layout_gravity="center_horizontal" android:id="@id/float_step_info" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="22.0dip" layout="@layout/fragment_dynamic_detail_float_info_step" />
         <TextView android:textSize="15.0sp" android:textColor="#a2ffffff" android:layout_gravity="center_horizontal" android:id="@id/data_state_tip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" />
     </FrameLayout>
     <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/common_footer_height">

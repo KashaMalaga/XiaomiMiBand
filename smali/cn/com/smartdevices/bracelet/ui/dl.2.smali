@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dg;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dg;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dl;->a:Lcn/com/smartdevices/bracelet/ui/dg;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dl;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +22,34 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public run()V
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dl;->a:Lcn/com/smartdevices/bracelet/ui/dg;
+    new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dl;->a:Lcn/com/smartdevices/bracelet/ui/dg;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dl;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/dg;->c(Lcn/com/smartdevices/bracelet/ui/dg;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
+    const-class v2, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    move-result-object v1
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dg;->c(Lcn/com/smartdevices/bracelet/ui/dg;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dl;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dl;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
+
+    const v1, 0x7f040006
+
+    const v2, 0x7f040009
+
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;->overridePendingTransition(II)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dl;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;->finish()V
 
     return-void
 .end method

@@ -21,3 +21,47 @@
 
     return-void
 .end method
+
+.method public a(Landroid/graphics/drawable/Drawable;FF)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Landroid/graphics/drawable/Drawable;IIII)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Landroid/graphics/drawable/Drawable;Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method

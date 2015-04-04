@@ -45,9 +45,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/family/e;->c()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "UserInfoFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -104,7 +102,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;)V
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -112,9 +110,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/family/e;->c()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "UserInfoFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -164,7 +160,7 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventUserDel;
+    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/weight/EventUserDeleted;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/family/g;->a:Lcn/com/smartdevices/bracelet/weight/family/f;
 
@@ -176,9 +172,9 @@
 
     iget v2, v2, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/eventbus/EventUserDel;-><init>(I)V
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/eventbus/weight/EventUserDeleted;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->postSticky(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/g;->a:Lcn/com/smartdevices/bracelet/weight/family/f;
 
@@ -190,13 +186,23 @@
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/g;->a:Lcn/com/smartdevices/bracelet/weight/family/f;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weight/family/f;->a:Lcn/com/smartdevices/bracelet/weight/family/e;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weight/family/e;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "Weight_Del_User_Succ"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
+
     :goto_0
     return-void
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/family/e;->c()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "UserInfoFragment"
 
     const-string v1, "onSyncFail"
 
@@ -218,11 +224,23 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    invoke-static {v0, v1, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/g;->a:Lcn/com/smartdevices/bracelet/weight/family/f;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weight/family/f;->a:Lcn/com/smartdevices/bracelet/weight/family/e;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weight/family/e;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "Weight_Del_User_Fail"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -262,9 +280,9 @@
 
     move-result-object v0
 
-    const v1, 0x7f0802a7
+    const v1, 0x7f0902cb
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;I)V
 
     return-void
 .end method

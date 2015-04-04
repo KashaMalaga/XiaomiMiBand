@@ -100,13 +100,9 @@
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->af()Z
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/b;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->b()Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->h(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Z
 
     move-result v0
 
@@ -122,9 +118,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/b;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/es;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/eO;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/W;->b(Landroid/app/Activity;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aa;->showPanel(Landroid/app/Activity;Ljava/lang/Class;)V
 
     :cond_0
     return-void

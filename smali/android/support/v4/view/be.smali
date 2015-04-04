@@ -1,12 +1,24 @@
-.class public Landroid/support/v4/view/be;
+.class Landroid/support/v4/view/bE;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/view/ba;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Landroid/view/View;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -16,20 +28,61 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 0
+.method public a(Landroid/view/View;Landroid/view/View;)I
+    .locals 4
 
-    return-void
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/view/ViewPager$LayoutParams;
+
+    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/support/v4/view/ViewPager$LayoutParams;
+
+    iget-boolean v2, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->a:Z
+
+    iget-boolean v3, v1, Landroid/support/v4/view/ViewPager$LayoutParams;->a:Z
+
+    if-eq v2, v3, :cond_1
+
+    iget-boolean v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->a:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    iget v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->e:I
+
+    iget v1, v1, Landroid/support/v4/view/ViewPager$LayoutParams;->e:I
+
+    sub-int/2addr v0, v1
+
+    goto :goto_0
 .end method
 
-.method public a(IFI)V
-    .locals 0
+.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
 
-    return-void
-.end method
+    check-cast p1, Landroid/view/View;
 
-.method public b(I)V
-    .locals 0
+    check-cast p2, Landroid/view/View;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Landroid/support/v4/view/bE;->a(Landroid/view/View;Landroid/view/View;)I
+
+    move-result v0
+
+    return v0
 .end method

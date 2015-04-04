@@ -32,11 +32,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f030048
+    const v1, 0x7f030057
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0701bf
+    const v0, 0x7f070209
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -46,7 +46,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f0701c1
+    const v0, 0x7f07020b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -56,13 +56,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0701be
+    const v0, 0x7f070208
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    const v0, 0x7f0701c0
+    const v0, 0x7f07020a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -72,7 +72,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/xiaomi/hm/a/t;->DimPanelFragmentBottomBar:[I
+    sget-object v1, Lcom/xiaomi/hm/health/t;->DimPanelFragmentBottomBar:[I
 
     invoke-virtual {v0, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -96,7 +96,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f090010
+    const v2, 0x7f0a0001
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -112,7 +112,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f090010
+    const v2, 0x7f0a0001
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -166,11 +166,11 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v2, 0x7f020071
+    const v2, 0x7f020072
 
-    const v1, 0x7f020072
+    const v1, 0x7f020073
 
-    const v0, 0x7f020073
+    const v0, 0x7f020074
 
     const-string v11, "dark"
 
@@ -180,13 +180,13 @@
 
     if-eqz v10, :cond_0
 
-    const v2, 0x7f020070
+    const v2, 0x7f020071
 
-    const v1, 0x7f020079
+    const v1, 0x7f02007a
 
-    const v0, 0x7f02007a
+    const v0, 0x7f02007b
 
-    const v10, 0x7f090005
+    const v10, 0x7f0a0009
 
     invoke-virtual {v4, v10}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -295,7 +295,7 @@
 
     invoke-virtual {v4, v0}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f090023
+    const v0, 0x7f0a003d
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setBackgroundResource(I)V
 

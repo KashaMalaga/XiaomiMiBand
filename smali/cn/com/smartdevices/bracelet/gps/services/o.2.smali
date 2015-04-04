@@ -1,326 +1,208 @@
 .class final Lcn/com/smartdevices/bracelet/gps/services/o;
-.super Lcn/com/smartdevices/bracelet/gps/services/l;
+.super Landroid/os/Handler;
+
+
+# static fields
+.field static final a:I = 0x1
+
+.field static final b:I = 0x2
 
 
 # instance fields
-.field final synthetic d:Lcn/com/smartdevices/bracelet/gps/services/k;
+.field final synthetic c:Lcn/com/smartdevices/bracelet/gps/services/m;
 
-.field private e:I
-
-.field private f:Landroid/content/Context;
-
-.field private g:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private d:Landroid/os/Looper;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/k;Landroid/content/Context;I)V
-    .locals 2
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/m;Landroid/content/Context;Landroid/os/Looper;)V
+    .locals 1
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->c:Lcn/com/smartdevices/bracelet/gps/services/m;
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->d:Lcn/com/smartdevices/bracelet/gps/services/k;
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/l;-><init>(Lcn/com/smartdevices/bracelet/gps/services/k;)V
+    invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->e:I
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->d:Landroid/os/Looper;
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->f:Landroid/content/Context;
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->d:Landroid/os/Looper;
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->g:Ljava/util/List;
+    return-void
+.end method
 
-    iput p3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->e:I
+.method private b()V
+    .locals 4
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->f:Landroid/content/Context;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->d:Landroid/os/Looper;
+
+    invoke-virtual {v0}, Landroid/os/Looper;->quit()V
+
+    const-string v0, "RService"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "quitSelf "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Thread;->getId()J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected varargs a([Ljava/lang/Void;)Ljava/lang/Void;
-    .locals 2
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->g:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->g:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-gtz v0, :cond_1
-
-    :cond_0
-    :goto_0
-    return-object v1
-
-    :cond_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/o;->c()V
-
-    goto :goto_0
-.end method
-
-.method public a(Ljava/util/List;)V
+.method public a()V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/Long;",
-            ">;)V"
-        }
-    .end annotation
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->g:Ljava/util/List;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/services/o;->b()V
 
     return-void
 .end method
 
-.method c()V
-    .locals 8
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 4
 
-    :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->g:Ljava/util/List;
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    packed-switch v0, :pswitch_data_0
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    instance-of v0, v0, Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->c:Lcn/com/smartdevices/bracelet/gps/services/m;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->c:Lcn/com/smartdevices/bracelet/gps/services/m;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->a(Lcn/com/smartdevices/bracelet/gps/services/m;)Landroid/content/Context;
+
+    move-result-object v2
+
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->a(Lcn/com/smartdevices/bracelet/gps/services/m;Landroid/content/Context;Ljava/util/List;)Z
+
+    const-string v0, "RService"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "MSG_SAVE_TRACK_DATA threadId = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move-result v0
+    move-result-object v2
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v2}, Ljava/lang/Thread;->getId()J
 
     move-result-wide v2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->f:Landroid/content/Context;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->e:I
+    move-result-object v1
 
-    invoke-static {v0, v2, v3, v4}, Lcn/com/smartdevices/bracelet/gps/a/b;->b(Landroid/content/Context;JI)Lcn/com/smartdevices/bracelet/gps/services/q;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-nez v0, :cond_1
-
-    const-string v0, "Track"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "LoadContourTrackTask track is null trackId = "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
+    :pswitch_1
+    const-string v0, "RService"
 
-    const-string v1, "Track"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "MSG_FINISH_TRACK threadId = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Thread;->getId()J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->c:Lcn/com/smartdevices/bracelet/gps/services/m;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->a(Lcn/com/smartdevices/bracelet/gps/services/m;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    :cond_0
-    return-void
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sync/G;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/a/b;)V
 
-    :cond_1
-    :try_start_1
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/q;->d()Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->c:Lcn/com/smartdevices/bracelet/gps/services/m;
 
-    move-result-object v4
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->b(Lcn/com/smartdevices/bracelet/gps/services/m;)V
 
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    new-instance v5, Ljava/io/File;
-
-    invoke-direct {v5, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5}, Ljava/io/File;->exists()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->d:Lcn/com/smartdevices/bracelet/gps/services/k;
-
-    invoke-static {v0, v2, v3, v4}, Lcn/com/smartdevices/bracelet/gps/services/k;->a(Lcn/com/smartdevices/bracelet/gps/services/k;JLjava/lang/String;)V
-
-    const-string v0, "Track"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "LoadContourTrackTask existed oldUri = "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, ",trackId = "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/services/o;->b()V
 
     goto :goto_0
 
-    :cond_2
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->d:Lcn/com/smartdevices/bracelet/gps/services/k;
+    nop
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->f:Landroid/content/Context;
-
-    invoke-static {v4, v5, v0}, Lcn/com/smartdevices/bracelet/gps/services/k;->a(Lcn/com/smartdevices/bracelet/gps/services/k;Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/q;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    const-string v0, "Track"
-
-    const-string v2, "LoadContourTrackTask newUri is null"
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    :cond_3
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->f:Landroid/content/Context;
-
-    invoke-static {v4, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;JLjava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_4
-
-    const-string v5, "Track"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "LoadContourTrackTask isSaved = "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v6, ",trackId = "
-
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v6, ",newUri = "
-
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v5, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_4
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->d:Lcn/com/smartdevices/bracelet/gps/services/k;
-
-    invoke-static {v4, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/services/k;->a(Lcn/com/smartdevices/bracelet/gps/services/k;JLjava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto/16 :goto_0
-.end method
-
-.method protected synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p1, [Ljava/lang/Void;
-
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/o;->a([Ljava/lang/Void;)Ljava/lang/Void;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

@@ -37,8 +37,6 @@
 
 .field private p:Landroid/graphics/Bitmap;
 
-.field private q:Landroid/animation/ValueAnimator;
-
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
@@ -64,8 +62,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 6
 
-    const/4 v0, 0x0
-
     const/4 v5, 0x1
 
     const v2, -0xff0100
@@ -82,9 +78,9 @@
 
     iput v4, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->o:I
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->p:Landroid/graphics/Bitmap;
+    const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->q:Landroid/animation/ValueAnimator;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->p:Landroid/graphics/Bitmap;
 
     new-instance v0, Landroid/graphics/Paint;
 
@@ -92,7 +88,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->c:Landroid/graphics/Paint;
 
-    sget-object v0, Lcom/xiaomi/hm/a/t;->RoundProgressBar:[I
+    sget-object v0, Lcom/xiaomi/hm/health/t;->RoundProgressBar:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -196,125 +192,6 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->k:I
-
-    return v0
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)I
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->k:I
-
-    return p1
-.end method
-
-.method private a(IFF)V
-    .locals 3
-
-    if-gtz p1, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    cmpl-float v0, p2, p3
-
-    if-gez v0, :cond_0
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [F
-
-    const/4 v1, 0x0
-
-    aput p2, v0, v1
-
-    const/4 v1, 0x1
-
-    aput p3, v0, v1
-
-    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->q:Landroid/animation/ValueAnimator;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->q:Landroid/animation/ValueAnimator;
-
-    mul-int/lit8 v1, p1, 0x14
-
-    int-to-long v1, v1
-
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance v0, Landroid/view/animation/LinearInterpolator;
-
-    invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->q:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->q:Landroid/animation/ValueAnimator;
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/view/A;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/A;-><init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->q:Landroid/animation/ValueAnimator;
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/view/B;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/B;-><init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->q:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
-
-    goto :goto_0
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;IFF)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->a(IFF)V
-
-    return-void
-.end method
-
-.method static synthetic b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->l:I
-
-    return v0
-.end method
-
-.method static synthetic b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)I
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->j:I
-
-    return p1
-.end method
-
-.method static synthetic c(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->j:I
-
-    return v0
-.end method
-
 
 # virtual methods
 .method public declared-synchronized a()I
@@ -405,14 +282,6 @@
     throw v0
 .end method
 
-.method public b(F)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->h:F
-
-    return-void
-.end method
-
 .method public declared-synchronized b(I)V
     .locals 2
     .annotation build Landroid/annotation/SuppressLint;
@@ -473,7 +342,7 @@
 .method public c()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->d:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->f:I
 
     return v0
 .end method
@@ -481,55 +350,15 @@
 .method public c(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->d:I
-
-    return-void
-.end method
-
-.method public d()I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->e:I
-
-    return v0
-.end method
-
-.method public d(I)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->e:I
-
-    return-void
-.end method
-
-.method public e()I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->f:I
-
-    return v0
-.end method
-
-.method public e(I)V
-    .locals 0
-
     iput p1, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->f:I
 
     return-void
 .end method
 
-.method public f()F
+.method public d()F
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->g:F
-
-    return v0
-.end method
-
-.method public g()F
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->h:F
 
     return v0
 .end method

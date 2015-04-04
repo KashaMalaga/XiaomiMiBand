@@ -1,4 +1,4 @@
-.class Lcom/c/b/i/a/f;
+.class final Lcom/c/b/i/a/f;
 .super Lcom/c/b/i/a/c;
 
 

@@ -2,65 +2,110 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
-.field final a:Landroid/view/View;
+.field final synthetic a:Landroid/support/v4/widget/Z;
 
-.field final synthetic b:Landroid/support/v4/widget/SlidingPaneLayout;
+.field final synthetic b:Landroid/support/v4/widget/T;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
+.method constructor <init>(Landroid/support/v4/widget/T;Landroid/support/v4/widget/Z;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/widget/V;->b:Landroid/support/v4/widget/SlidingPaneLayout;
+    iput-object p1, p0, Landroid/support/v4/widget/V;->b:Landroid/support/v4/widget/T;
+
+    iput-object p2, p0, Landroid/support/v4/widget/V;->a:Landroid/support/v4/widget/Z;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Landroid/support/v4/widget/V;->a:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 3
-
-    iget-object v0, p0, Landroid/support/v4/widget/V;->a:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    iget-object v1, p0, Landroid/support/v4/widget/V;->b:Landroid/support/v4/widget/SlidingPaneLayout;
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/widget/V;->a:Landroid/view/View;
-
-    const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Landroid/support/v4/view/as;->a(Landroid/view/View;ILandroid/graphics/Paint;)V
+    iget-object v0, p0, Landroid/support/v4/widget/V;->a:Landroid/support/v4/widget/Z;
 
-    iget-object v0, p0, Landroid/support/v4/widget/V;->b:Landroid/support/v4/widget/SlidingPaneLayout;
+    invoke-virtual {v0}, Landroid/support/v4/widget/Z;->l()V
 
-    iget-object v1, p0, Landroid/support/v4/widget/V;->a:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/V;->a:Landroid/support/v4/widget/Z;
 
-    invoke-static {v0, v1}, Landroid/support/v4/widget/SlidingPaneLayout;->a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
+    invoke-virtual {v0}, Landroid/support/v4/widget/Z;->a()V
+
+    iget-object v0, p0, Landroid/support/v4/widget/V;->a:Landroid/support/v4/widget/Z;
+
+    iget-object v1, p0, Landroid/support/v4/widget/V;->a:Landroid/support/v4/widget/Z;
+
+    invoke-virtual {v1}, Landroid/support/v4/widget/Z;->g()F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/Z;->b(F)V
+
+    iget-object v0, p0, Landroid/support/v4/widget/V;->b:Landroid/support/v4/widget/T;
+
+    iget-boolean v0, v0, Landroid/support/v4/widget/T;->c:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v4/widget/V;->b:Landroid/support/v4/widget/T;
+
+    iput-boolean v2, v0, Landroid/support/v4/widget/T;->c:Z
+
+    const-wide/16 v0, 0x535
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
+
+    iget-object v0, p0, Landroid/support/v4/widget/V;->a:Landroid/support/v4/widget/Z;
+
+    invoke-virtual {v0, v2}, Landroid/support/v4/widget/Z;->a(Z)V
+
+    :goto_0
+    return-void
 
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/V;->b:Landroid/support/v4/widget/SlidingPaneLayout;
+    iget-object v0, p0, Landroid/support/v4/widget/V;->b:Landroid/support/v4/widget/T;
 
-    invoke-static {v0}, Landroid/support/v4/widget/SlidingPaneLayout;->f(Landroid/support/v4/widget/SlidingPaneLayout;)Ljava/util/ArrayList;
+    iget-object v1, p0, Landroid/support/v4/widget/V;->b:Landroid/support/v4/widget/T;
 
-    move-result-object v0
+    invoke-static {v1}, Landroid/support/v4/widget/T;->a(Landroid/support/v4/widget/T;)F
 
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    move-result v1
+
+    const/high16 v2, 0x3f800000
+
+    add-float/2addr v1, v2
+
+    const/high16 v2, 0x40a00000
+
+    rem-float/2addr v1, v2
+
+    invoke-static {v0, v1}, Landroid/support/v4/widget/T;->a(Landroid/support/v4/widget/T;F)F
+
+    goto :goto_0
+.end method
+
+.method public onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/widget/V;->b:Landroid/support/v4/widget/T;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/support/v4/widget/T;->a(Landroid/support/v4/widget/T;F)F
 
     return-void
 .end method

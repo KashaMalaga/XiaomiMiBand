@@ -53,7 +53,7 @@
     return-object v0
 .end method
 
-.method public o()Ljava/lang/String;
+.method public q()Ljava/lang/String;
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;

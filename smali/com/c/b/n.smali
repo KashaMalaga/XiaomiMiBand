@@ -1,22 +1,36 @@
-.class public abstract Lcom/c/b/n;
-.super Ljava/lang/Exception;
+.class public final Lcom/c/b/n;
+.super Lcom/c/b/r;
+
+
+# static fields
+.field private static final b:Lcom/c/b/n;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
+    new-instance v0, Lcom/c/b/n;
+
+    invoke-direct {v0}, Lcom/c/b/n;-><init>()V
+
+    sput-object v0, Lcom/c/b/n;->b:Lcom/c/b/n;
 
     return-void
 .end method
 
+.method private constructor <init>()V
+    .locals 0
 
-# virtual methods
-.method public final fillInStackTrace()Ljava/lang/Throwable;
+    invoke-direct {p0}, Lcom/c/b/r;-><init>()V
+
+    return-void
+.end method
+
+.method public static a()Lcom/c/b/n;
     .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lcom/c/b/n;->b:Lcom/c/b/n;
 
     return-object v0
 .end method

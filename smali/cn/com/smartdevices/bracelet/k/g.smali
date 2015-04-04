@@ -132,7 +132,7 @@
 
     const-string v1, "huami.health.scale.usergoal.saveusergoal.json"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -200,7 +200,7 @@
 
     const-string v1, "huami.health.scale.usergoal.deleteusergoal.json"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -272,7 +272,7 @@
 
     const-string v1, "huami.health.scale.usergoal.getusergoallast.json"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -344,7 +344,7 @@
 
     const-string v1, "huami.health.scale.usergoal.getusergoallist.json"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -461,6 +461,52 @@
     goto :goto_0
 .end method
 
+.method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;ILcom/d/a/a/h;)V
+    .locals 5
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
+
+    move-result-object v0
+
+    const-string v1, "versioncode"
+
+    invoke-virtual {v0, v1, p1}, Lcom/d/a/a/O;->a(Ljava/lang/String;I)V
+
+    const-string v1, "huami.health.apk.upgrade.detect.json"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/g;->a:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "checkBetaApk, url ="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
+
+    invoke-virtual {v2, v1, v0, p2}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
+.end method
+
 .method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;IZLcom/d/a/a/h;)V
     .locals 6
 
@@ -479,7 +525,7 @@
     :goto_0
     const-string v1, "huami.health.scale.familymember.get.json"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -547,6 +593,70 @@
     goto :goto_0
 .end method
 
+.method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;JILcom/d/a/a/h;)V
+    .locals 4
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
+
+    move-result-object v0
+
+    const-string v1, "limit"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "offset"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "huami.health.band.userFriend.getFriendList.json"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
+
+    invoke-virtual {v2, v1, v0, p4}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
+.end method
+
 .method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;JJIZLcom/d/a/a/h;)V
     .locals 5
 
@@ -593,7 +703,7 @@
 
     const-string v1, "huami.health.scale.get.json"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -633,6 +743,74 @@
     invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
+.end method
+
+.method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;JJLcom/d/a/a/h;)V
+    .locals 5
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
+
+    move-result-object v0
+
+    const-string v1, "f_uid"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "from_date"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-wide/16 v3, 0x3e8
+
+    div-long v3, p3, v3
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "huami.health.band.userFriend.getUserFriendInfo.json"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
+
+    invoke-virtual {v2, v1, v0, p5}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
 .end method
 
 .method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;JLcom/d/a/a/h;)V
@@ -677,8 +855,110 @@
     return-void
 .end method
 
+.method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;JLjava/lang/String;Lcom/d/a/a/h;)V
+    .locals 4
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
+
+    move-result-object v0
+
+    const-string v1, "to_uid"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "nick"
+
+    invoke-virtual {v0, v1, p3}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "huami.health.band.userFriend.updateFriendNick.json"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
+
+    invoke-virtual {v2, v1, v0, p4}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
+.end method
+
+.method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;JZLcom/d/a/a/h;)V
+    .locals 4
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
+
+    move-result-object v1
+
+    const-string v0, "from_uid"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "status"
+
+    if-eqz p3, :cond_0
+
+    const-string v0, "1"
+
+    :goto_0
+    invoke-virtual {v1, v2, v0}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "huami.health.band.pushMessage.acceptInvitation.json"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
+
+    invoke-virtual {v2, v0, v1, p4}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
+
+    :cond_0
+    const-string v0, "0"
+
+    goto :goto_0
+.end method
+
 .method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/d/a/a/h;)V
-    .locals 5
+    .locals 6
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
 
@@ -840,6 +1120,42 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->an()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->al()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "city"
+
+    invoke-virtual {v1, v2, v0}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->am()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    const-string v2, "country"
+
+    invoke-virtual {v1, v2, v0}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
     new-instance v0, Lcom/c/a/r;
 
     invoke-direct {v0}, Lcom/c/a/r;-><init>()V
@@ -863,7 +1179,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/E;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/G;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -883,7 +1199,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/E;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/G;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -903,7 +1219,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/E;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/G;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -946,9 +1262,37 @@
 
     move-result-object v0
 
+    const/4 v2, 0x1
+
+    invoke-static {v2, v0, v1}, Lcom/d/a/a/X;->a(ZLjava/lang/String;Lcom/d/a/a/O;)Ljava/lang/String;
+
+    move-result-object v2
+
+    sget-object v3, Lcn/com/smartdevices/bracelet/k/g;->a:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "updateProfile : "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
     iget-object v2, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->avatarPath:Ljava/lang/String;
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_2
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getNeedSyncServer()I
 
@@ -956,9 +1300,9 @@
 
     and-int/lit8 v2, v2, 0x1
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_3
 
-    :cond_0
+    :cond_2
     sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
 
     invoke-virtual {v2, v0, v1, p2}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
@@ -973,7 +1317,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_3
     :try_start_1
     const-string v2, "icon"
 
@@ -1238,7 +1582,7 @@
 
     const-string v1, "huami.health.scale.familymember.save.json"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1902,6 +2246,180 @@
     goto :goto_0
 .end method
 
+.method public static a(Ljava/lang/String;ILcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Lcom/d/a/a/h;)V
+    .locals 5
+
+    const-string v0, "huami.partner.bindThirdApp.json"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, p2, p3}, Lcn/com/smartdevices/bracelet/k/c;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;)Lcom/d/a/a/O;
+
+    move-result-object v1
+
+    const-string v2, "unbind"
+
+    invoke-virtual {v1, v2, p1}, Lcom/d/a/a/O;->a(Ljava/lang/String;I)V
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/g;->a:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "bindThirdPartyApp url:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " params:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->b:Lcom/d/a/a/X;
+
+    invoke-virtual {v2, v0, v1, p4}, Lcom/d/a/a/X;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Lcom/d/a/a/h;)V
+    .locals 5
+
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
+
+    move-result-object v0
+
+    const-string v1, "third_appid"
+
+    invoke-virtual {v0, v1, p0}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "third_app_uid"
+
+    iget-object v2, p2, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->uid:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "huami.partner.checkBindStatus.json"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/g;->a:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "queryBindStateFromServer url:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " params:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->b:Lcom/d/a/a/X;
+
+    invoke-virtual {v2, v1, v0, p3}, Lcom/d/a/a/X;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/d/a/a/h;)V
+    .locals 5
+
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
+
+    move-result-object v0
+
+    const-string v1, "third_appid"
+
+    invoke-virtual {v0, v1, p0}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "huami.partner.getAppToken.json"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/g;->a:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "queryLoginStateFromServer url:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " params:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->b:Lcom/d/a/a/X;
+
+    invoke-virtual {v2, v1, v0, p2}, Lcom/d/a/a/X;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
+.end method
+
 .method public static a(Ljava/lang/String;Lcom/d/a/a/h;)V
     .locals 1
 
@@ -2027,42 +2545,26 @@
     return-void
 .end method
 
-.method public static b(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/SystemInfo;ILcom/d/a/a/h;)V
+.method public static b(Lcn/com/smartdevices/bracelet/model/LoginData;JLcom/d/a/a/h;)V
     .locals 4
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
 
     move-result-object v0
 
-    const-string v1, "deviceid"
-
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/model/SystemInfo;->deviceId:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "mac"
-
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/model/SystemInfo;->macAddress:Ljava/lang/String;
-
-    invoke-static {v2}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "devicetype"
+    const-string v1, "to_uid"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, ""
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -2072,51 +2574,9 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "miui_version_code"
+    const-string v1, "huami.health.band.userFriend.remindFriend.json"
 
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/model/SystemInfo;->miuiVersionCode:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "miui_version_name"
-
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/model/SystemInfo;->miuiVersionName:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "phone_brand"
-
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/model/SystemInfo;->phoneBrand:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "phone_model"
-
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/model/SystemInfo;->phoneModel:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "phone_system"
-
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/model/SystemInfo;->phoneSystem:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "fwversion"
-
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/model/SystemInfo;->fwVersion:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "softversion"
-
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/model/SystemInfo;->softVersion:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "huami.health.scale.usergoal.saveusergoal.json"
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2285,6 +2745,58 @@
     return-void
 .end method
 
+.method public static b(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Lcom/d/a/a/h;)V
+    .locals 5
+
+    invoke-static {p0, p1, p2}, Lcn/com/smartdevices/bracelet/k/c;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;)Lcom/d/a/a/O;
+
+    move-result-object v0
+
+    const-string v1, "huami.partner.updateAppToken.json"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/g;->a:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "uploadToken2Server url:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " params:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->b:Lcom/d/a/a/X;
+
+    invoke-virtual {v2, v1, v0, p3}, Lcom/d/a/a/X;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
+.end method
+
 .method public static c(Landroid/content/Context;Lcom/d/a/a/h;)V
     .locals 3
 
@@ -2305,6 +2817,48 @@
     sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
 
     invoke-virtual {v2, v1, v0, p1}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
+.end method
+
+.method public static c(Lcn/com/smartdevices/bracelet/model/LoginData;JLcom/d/a/a/h;)V
+    .locals 4
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
+
+    move-result-object v0
+
+    const-string v1, "to_uid"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "huami.health.band.userFriend.removeRelationship.json"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
+
+    invoke-virtual {v2, v1, v0, p3}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
 
     return-void
 .end method
@@ -2330,47 +2884,67 @@
 .end method
 
 .method public static c(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
-    .locals 5
+    .locals 3
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
 
     move-result-object v0
 
-    const-string v1, "jsondata"
+    const-string v1, "deviceid"
 
     invoke-virtual {v0, v1, p1}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "huami.health.scale.familymember.delete.json"
+    const-string v1, "wxunbind.json"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    sget-object v2, Lcn/com/smartdevices/bracelet/k/g;->a:Ljava/lang/String;
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1, v0, p2}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    return-void
+.end method
 
-    const-string v4, "Sync Deleted UserInfos To Server : "
+.method public static d(Lcn/com/smartdevices/bracelet/model/LoginData;JLcom/d/a/a/h;)V
+    .locals 4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "to_uid"
 
-    move-result-object v3
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v3
+    invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v2
 
-    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->b:Lcom/d/a/a/X;
+    const-string v3, ""
 
-    invoke-virtual {v2, v1, v0, p2}, Lcom/d/a/a/X;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "huami.health.band.pushMessage.sendInvitation.json"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
+
+    invoke-virtual {v2, v1, v0, p3}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
 
     return-void
 .end method
@@ -2396,7 +2970,7 @@
 .end method
 
 .method public static d(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
-    .locals 5
+    .locals 6
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
 
@@ -2406,43 +2980,85 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "devicetype"
+    const-string v1, "huami.health.scale.familymember.delete.json"
 
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;I)V
-
-    const-string v1, "huami.health.scale.delete.json"
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    sget-object v2, Lcn/com/smartdevices/bracelet/k/g;->a:Ljava/lang/String;
+    const/4 v2, 0x1
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-static {v2, v1, v0}, Lcom/d/a/a/X;->a(ZLjava/lang/String;Lcom/d/a/a/O;)Ljava/lang/String;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v2
 
-    const-string v4, "Sync Deleted WeightInfos To Server : "
+    sget-object v3, Lcn/com/smartdevices/bracelet/k/g;->a:Ljava/lang/String;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v5, "Sync Deleted UserInfos To Server : "
 
-    move-result-object v3
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v4
 
-    move-result-object v3
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->b:Lcom/d/a/a/X;
 
     invoke-virtual {v2, v1, v0, p2}, Lcom/d/a/a/X;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
+.end method
+
+.method public static e(Lcn/com/smartdevices/bracelet/model/LoginData;JLcom/d/a/a/h;)V
+    .locals 4
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
+
+    move-result-object v0
+
+    const-string v1, "search_uid"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "huami.health.band.userBasicInfo.searchUser.json"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
+
+    invoke-virtual {v2, v1, v0, p3}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
 
     return-void
 .end method
@@ -2484,9 +3100,9 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;I)V
 
-    const-string v1, "huami.health.scale.save.json"
+    const-string v1, "huami.health.scale.delete.json"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2496,7 +3112,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Sync WeightInfos To Server : "
+    const-string v4, "Sync Deleted WeightInfos To Server : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2540,25 +3156,53 @@
 .end method
 
 .method public static f(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
-    .locals 3
+    .locals 5
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
 
     move-result-object v0
 
-    const-string v1, "huami.health.cancelAuthorization.json"
+    const-string v1, "jsondata"
+
+    invoke-virtual {v0, v1, p1}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "devicetype"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lcom/d/a/a/O;->a(Ljava/lang/String;I)V
+
+    const-string v1, "huami.health.scale.save.json"
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "third_appid"
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/g;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v2, p1}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2, v1, v0, p2}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+    const-string v4, "Sync WeightInfos To Server : "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->b:Lcom/d/a/a/X;
+
+    invoke-virtual {v2, v1, v0, p2}, Lcom/d/a/a/X;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
 
     return-void
 .end method
@@ -2579,6 +3223,30 @@
     sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
 
     invoke-virtual {v2, v1, v0, p1}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
+
+    return-void
+.end method
+
+.method public static g(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
+    .locals 3
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/c;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/d/a/a/O;
+
+    move-result-object v0
+
+    const-string v1, "huami.health.cancelAuthorization.json"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/k/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "third_appid"
+
+    invoke-virtual {v0, v2, p1}, Lcom/d/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
+
+    invoke-virtual {v2, v1, v0, p2}, Lcom/d/a/a/a;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
 
     return-void
 .end method

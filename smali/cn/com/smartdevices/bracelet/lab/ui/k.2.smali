@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/k;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->c(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)Landroid/widget/Switch;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)Landroid/widget/Switch;
 
     move-result-object v0
 

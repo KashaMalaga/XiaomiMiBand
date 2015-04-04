@@ -11,28 +11,24 @@
 
 .field private static final d:[[I
 
-.field private static final e:[[I
+.field private static final e:I = 0x1f25
 
-.field private static final f:[[I
+.field private static final f:I = 0x537
 
-.field private static final g:I = 0x1f25
-
-.field private static final h:I = 0x537
-
-.field private static final i:I = 0x5412
+.field private static final g:I = 0x5412
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 8
 
-    const/4 v7, 0x5
+    const/4 v7, 0x1
 
-    const/4 v6, 0x1
+    const/4 v6, 0x0
 
-    const/4 v5, 0x2
+    const/4 v5, 0x5
 
-    const/4 v4, 0x0
+    const/4 v4, 0x2
 
     const/4 v3, 0x7
 
@@ -42,19 +38,19 @@
 
     fill-array-data v1, :array_0
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v6
 
     new-array v1, v3, [I
 
     fill-array-data v1, :array_1
 
-    aput-object v1, v0, v6
+    aput-object v1, v0, v7
 
     new-array v1, v3, [I
 
     fill-array-data v1, :array_2
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v4
 
     const/4 v1, 0x3
 
@@ -76,7 +72,7 @@
 
     fill-array-data v1, :array_5
 
-    aput-object v1, v0, v7
+    aput-object v1, v0, v5
 
     const/4 v1, 0x6
 
@@ -88,107 +84,43 @@
 
     sput-object v0, Lcom/c/b/i/c/f;->a:[[I
 
-    new-array v0, v6, [[I
+    new-array v0, v5, [[I
 
-    const/16 v1, 0x8
-
-    new-array v1, v1, [I
+    new-array v1, v5, [I
 
     fill-array-data v1, :array_7
 
-    aput-object v1, v0, v4
-
-    sput-object v0, Lcom/c/b/i/c/f;->b:[[I
-
-    new-array v0, v3, [[I
-
-    new-array v1, v6, [I
-
-    aput v4, v1, v4
-
-    aput-object v1, v0, v4
-
-    new-array v1, v6, [I
-
-    aput v4, v1, v4
-
     aput-object v1, v0, v6
 
-    new-array v1, v6, [I
+    new-array v1, v5, [I
 
-    aput v4, v1, v4
+    fill-array-data v1, :array_8
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v7
+
+    new-array v1, v5, [I
+
+    fill-array-data v1, :array_9
+
+    aput-object v1, v0, v4
 
     const/4 v1, 0x3
 
-    new-array v2, v6, [I
+    new-array v2, v5, [I
 
-    aput v4, v2, v4
+    fill-array-data v2, :array_a
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x4
 
-    new-array v2, v6, [I
-
-    aput v4, v2, v4
-
-    aput-object v2, v0, v1
-
-    new-array v1, v6, [I
-
-    aput v4, v1, v4
-
-    aput-object v1, v0, v7
-
-    const/4 v1, 0x6
-
-    new-array v2, v6, [I
-
-    aput v4, v2, v4
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/c/b/i/c/f;->c:[[I
-
-    new-array v0, v7, [[I
-
-    new-array v1, v7, [I
-
-    fill-array-data v1, :array_8
-
-    aput-object v1, v0, v4
-
-    new-array v1, v7, [I
-
-    fill-array-data v1, :array_9
-
-    aput-object v1, v0, v6
-
-    new-array v1, v7, [I
-
-    fill-array-data v1, :array_a
-
-    aput-object v1, v0, v5
-
-    const/4 v1, 0x3
-
-    new-array v2, v7, [I
+    new-array v2, v5, [I
 
     fill-array-data v2, :array_b
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x4
-
-    new-array v2, v7, [I
-
-    fill-array-data v2, :array_c
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/c/b/i/c/f;->d:[[I
+    sput-object v0, Lcom/c/b/i/c/f;->b:[[I
 
     const/16 v0, 0x28
 
@@ -196,23 +128,31 @@
 
     new-array v1, v3, [I
 
-    fill-array-data v1, :array_d
-
-    aput-object v1, v0, v4
-
-    new-array v1, v3, [I
-
-    fill-array-data v1, :array_e
+    fill-array-data v1, :array_c
 
     aput-object v1, v0, v6
 
     new-array v1, v3, [I
 
-    fill-array-data v1, :array_f
+    fill-array-data v1, :array_d
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v7
+
+    new-array v1, v3, [I
+
+    fill-array-data v1, :array_e
+
+    aput-object v1, v0, v4
 
     const/4 v1, 0x3
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_f
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x4
 
     new-array v2, v3, [I
 
@@ -220,35 +160,35 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x4
-
-    new-array v2, v3, [I
-
-    fill-array-data v2, :array_11
-
-    aput-object v2, v0, v1
-
     new-array v1, v3, [I
 
-    fill-array-data v1, :array_12
+    fill-array-data v1, :array_11
 
-    aput-object v1, v0, v7
+    aput-object v1, v0, v5
 
     const/4 v1, 0x6
 
     new-array v2, v3, [I
 
-    fill-array-data v2, :array_13
+    fill-array-data v2, :array_12
 
     aput-object v2, v0, v1
 
     new-array v1, v3, [I
 
-    fill-array-data v1, :array_14
+    fill-array-data v1, :array_13
 
     aput-object v1, v0, v3
 
     const/16 v1, 0x8
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_14
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9
 
     new-array v2, v3, [I
 
@@ -256,7 +196,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x9
+    const/16 v1, 0xa
 
     new-array v2, v3, [I
 
@@ -264,7 +204,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xa
+    const/16 v1, 0xb
 
     new-array v2, v3, [I
 
@@ -272,7 +212,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xb
+    const/16 v1, 0xc
 
     new-array v2, v3, [I
 
@@ -280,7 +220,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xc
+    const/16 v1, 0xd
 
     new-array v2, v3, [I
 
@@ -288,7 +228,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xd
+    const/16 v1, 0xe
 
     new-array v2, v3, [I
 
@@ -296,7 +236,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xe
+    const/16 v1, 0xf
 
     new-array v2, v3, [I
 
@@ -304,7 +244,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xf
+    const/16 v1, 0x10
 
     new-array v2, v3, [I
 
@@ -312,7 +252,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x10
+    const/16 v1, 0x11
 
     new-array v2, v3, [I
 
@@ -320,7 +260,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x11
+    const/16 v1, 0x12
 
     new-array v2, v3, [I
 
@@ -328,7 +268,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x12
+    const/16 v1, 0x13
 
     new-array v2, v3, [I
 
@@ -336,7 +276,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x13
+    const/16 v1, 0x14
 
     new-array v2, v3, [I
 
@@ -344,7 +284,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x14
+    const/16 v1, 0x15
 
     new-array v2, v3, [I
 
@@ -352,7 +292,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x15
+    const/16 v1, 0x16
 
     new-array v2, v3, [I
 
@@ -360,7 +300,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x16
+    const/16 v1, 0x17
 
     new-array v2, v3, [I
 
@@ -368,7 +308,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x17
+    const/16 v1, 0x18
 
     new-array v2, v3, [I
 
@@ -376,7 +316,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x18
+    const/16 v1, 0x19
 
     new-array v2, v3, [I
 
@@ -384,7 +324,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x19
+    const/16 v1, 0x1a
 
     new-array v2, v3, [I
 
@@ -392,7 +332,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x1a
+    const/16 v1, 0x1b
 
     new-array v2, v3, [I
 
@@ -400,7 +340,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x1b
+    const/16 v1, 0x1c
 
     new-array v2, v3, [I
 
@@ -408,7 +348,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x1c
+    const/16 v1, 0x1d
 
     new-array v2, v3, [I
 
@@ -416,7 +356,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x1d
+    const/16 v1, 0x1e
 
     new-array v2, v3, [I
 
@@ -424,7 +364,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x1e
+    const/16 v1, 0x1f
 
     new-array v2, v3, [I
 
@@ -432,7 +372,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x1f
+    const/16 v1, 0x20
 
     new-array v2, v3, [I
 
@@ -440,7 +380,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x20
+    const/16 v1, 0x21
 
     new-array v2, v3, [I
 
@@ -448,7 +388,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x21
+    const/16 v1, 0x22
 
     new-array v2, v3, [I
 
@@ -456,7 +396,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x22
+    const/16 v1, 0x23
 
     new-array v2, v3, [I
 
@@ -464,7 +404,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x23
+    const/16 v1, 0x24
 
     new-array v2, v3, [I
 
@@ -472,7 +412,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x24
+    const/16 v1, 0x25
 
     new-array v2, v3, [I
 
@@ -480,7 +420,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x25
+    const/16 v1, 0x26
 
     new-array v2, v3, [I
 
@@ -488,7 +428,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x26
+    const/16 v1, 0x27
 
     new-array v2, v3, [I
 
@@ -496,131 +436,123 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x27
-
-    new-array v2, v3, [I
-
-    fill-array-data v2, :array_34
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/c/b/i/c/f;->e:[[I
+    sput-object v0, Lcom/c/b/i/c/f;->c:[[I
 
     const/16 v0, 0xf
 
     new-array v0, v0, [[I
 
-    new-array v1, v5, [I
+    new-array v1, v4, [I
 
-    fill-array-data v1, :array_35
-
-    aput-object v1, v0, v4
-
-    new-array v1, v5, [I
-
-    fill-array-data v1, :array_36
+    fill-array-data v1, :array_34
 
     aput-object v1, v0, v6
 
-    new-array v1, v5, [I
+    new-array v1, v4, [I
 
-    fill-array-data v1, :array_37
+    fill-array-data v1, :array_35
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v7
+
+    new-array v1, v4, [I
+
+    fill-array-data v1, :array_36
+
+    aput-object v1, v0, v4
 
     const/4 v1, 0x3
 
-    new-array v2, v5, [I
+    new-array v2, v4, [I
 
-    fill-array-data v2, :array_38
+    fill-array-data v2, :array_37
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x4
 
-    new-array v2, v5, [I
+    new-array v2, v4, [I
 
-    fill-array-data v2, :array_39
+    fill-array-data v2, :array_38
 
     aput-object v2, v0, v1
 
-    new-array v1, v5, [I
+    new-array v1, v4, [I
 
-    fill-array-data v1, :array_3a
+    fill-array-data v1, :array_39
 
-    aput-object v1, v0, v7
+    aput-object v1, v0, v5
 
     const/4 v1, 0x6
 
-    new-array v2, v5, [I
+    new-array v2, v4, [I
 
-    fill-array-data v2, :array_3b
+    fill-array-data v2, :array_3a
 
     aput-object v2, v0, v1
 
-    new-array v1, v5, [I
+    new-array v1, v4, [I
 
-    fill-array-data v1, :array_3c
+    fill-array-data v1, :array_3b
 
     aput-object v1, v0, v3
 
     const/16 v1, 0x8
 
-    new-array v2, v5, [I
+    new-array v2, v4, [I
 
-    fill-array-data v2, :array_3d
+    fill-array-data v2, :array_3c
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    new-array v2, v5, [I
+    new-array v2, v4, [I
 
-    fill-array-data v2, :array_3e
+    fill-array-data v2, :array_3d
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
-    new-array v2, v5, [I
+    new-array v2, v4, [I
 
-    fill-array-data v2, :array_3f
+    fill-array-data v2, :array_3e
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xb
 
-    new-array v2, v5, [I
+    new-array v2, v4, [I
 
-    fill-array-data v2, :array_40
+    fill-array-data v2, :array_3f
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xc
 
-    new-array v2, v5, [I
+    new-array v2, v4, [I
 
-    fill-array-data v2, :array_41
+    fill-array-data v2, :array_40
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xd
 
-    new-array v2, v5, [I
+    new-array v2, v4, [I
 
-    fill-array-data v2, :array_42
+    fill-array-data v2, :array_41
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xe
 
-    new-array v2, v5, [I
+    new-array v2, v4, [I
 
-    fill-array-data v2, :array_43
+    fill-array-data v2, :array_42
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/c/b/i/c/f;->f:[[I
+    sput-object v0, Lcom/c/b/i/c/f;->d:[[I
 
     return-void
 
@@ -703,22 +635,19 @@
 
     :array_7
     .array-data 4
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
+        0x1
+        0x1
+        0x1
+        0x1
+        0x1
     .end array-data
 
     :array_8
     .array-data 4
         0x1
-        0x1
-        0x1
-        0x1
+        0x0
+        0x0
+        0x0
         0x1
     .end array-data
 
@@ -726,7 +655,7 @@
     .array-data 4
         0x1
         0x0
-        0x0
+        0x1
         0x0
         0x1
     .end array-data
@@ -735,7 +664,7 @@
     .array-data 4
         0x1
         0x0
-        0x1
+        0x0
         0x0
         0x1
     .end array-data
@@ -743,33 +672,24 @@
     :array_b
     .array-data 4
         0x1
-        0x0
-        0x0
-        0x0
+        0x1
+        0x1
+        0x1
         0x1
     .end array-data
 
     :array_c
     .array-data 4
-        0x1
-        0x1
-        0x1
-        0x1
-        0x1
+        -0x1
+        -0x1
+        -0x1
+        -0x1
+        -0x1
+        -0x1
+        -0x1
     .end array-data
 
     :array_d
-    .array-data 4
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-    .end array-data
-
-    :array_e
     .array-data 4
         0x6
         0x12
@@ -780,10 +700,21 @@
         -0x1
     .end array-data
 
-    :array_f
+    :array_e
     .array-data 4
         0x6
         0x16
+        -0x1
+        -0x1
+        -0x1
+        -0x1
+        -0x1
+    .end array-data
+
+    :array_f
+    .array-data 4
+        0x6
+        0x1a
         -0x1
         -0x1
         -0x1
@@ -794,7 +725,7 @@
     :array_10
     .array-data 4
         0x6
-        0x1a
+        0x1e
         -0x1
         -0x1
         -0x1
@@ -805,7 +736,7 @@
     :array_11
     .array-data 4
         0x6
-        0x1e
+        0x22
         -0x1
         -0x1
         -0x1
@@ -816,17 +747,6 @@
     :array_12
     .array-data 4
         0x6
-        0x22
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-    .end array-data
-
-    :array_13
-    .array-data 4
-        0x6
         0x16
         0x26
         -0x1
@@ -835,7 +755,7 @@
         -0x1
     .end array-data
 
-    :array_14
+    :array_13
     .array-data 4
         0x6
         0x18
@@ -846,7 +766,7 @@
         -0x1
     .end array-data
 
-    :array_15
+    :array_14
     .array-data 4
         0x6
         0x1a
@@ -857,7 +777,7 @@
         -0x1
     .end array-data
 
-    :array_16
+    :array_15
     .array-data 4
         0x6
         0x1c
@@ -868,7 +788,7 @@
         -0x1
     .end array-data
 
-    :array_17
+    :array_16
     .array-data 4
         0x6
         0x1e
@@ -879,7 +799,7 @@
         -0x1
     .end array-data
 
-    :array_18
+    :array_17
     .array-data 4
         0x6
         0x20
@@ -890,7 +810,7 @@
         -0x1
     .end array-data
 
-    :array_19
+    :array_18
     .array-data 4
         0x6
         0x22
@@ -901,7 +821,7 @@
         -0x1
     .end array-data
 
-    :array_1a
+    :array_19
     .array-data 4
         0x6
         0x1a
@@ -912,7 +832,7 @@
         -0x1
     .end array-data
 
-    :array_1b
+    :array_1a
     .array-data 4
         0x6
         0x1a
@@ -923,7 +843,7 @@
         -0x1
     .end array-data
 
-    :array_1c
+    :array_1b
     .array-data 4
         0x6
         0x1a
@@ -934,7 +854,7 @@
         -0x1
     .end array-data
 
-    :array_1d
+    :array_1c
     .array-data 4
         0x6
         0x1e
@@ -945,7 +865,7 @@
         -0x1
     .end array-data
 
-    :array_1e
+    :array_1d
     .array-data 4
         0x6
         0x1e
@@ -956,7 +876,7 @@
         -0x1
     .end array-data
 
-    :array_1f
+    :array_1e
     .array-data 4
         0x6
         0x1e
@@ -967,7 +887,7 @@
         -0x1
     .end array-data
 
-    :array_20
+    :array_1f
     .array-data 4
         0x6
         0x22
@@ -978,7 +898,7 @@
         -0x1
     .end array-data
 
-    :array_21
+    :array_20
     .array-data 4
         0x6
         0x1c
@@ -989,7 +909,7 @@
         -0x1
     .end array-data
 
-    :array_22
+    :array_21
     .array-data 4
         0x6
         0x1a
@@ -1000,7 +920,7 @@
         -0x1
     .end array-data
 
-    :array_23
+    :array_22
     .array-data 4
         0x6
         0x1e
@@ -1011,7 +931,7 @@
         -0x1
     .end array-data
 
-    :array_24
+    :array_23
     .array-data 4
         0x6
         0x1c
@@ -1022,7 +942,7 @@
         -0x1
     .end array-data
 
-    :array_25
+    :array_24
     .array-data 4
         0x6
         0x20
@@ -1033,7 +953,7 @@
         -0x1
     .end array-data
 
-    :array_26
+    :array_25
     .array-data 4
         0x6
         0x1e
@@ -1044,7 +964,7 @@
         -0x1
     .end array-data
 
-    :array_27
+    :array_26
     .array-data 4
         0x6
         0x22
@@ -1055,7 +975,7 @@
         -0x1
     .end array-data
 
-    :array_28
+    :array_27
     .array-data 4
         0x6
         0x1a
@@ -1066,7 +986,7 @@
         -0x1
     .end array-data
 
-    :array_29
+    :array_28
     .array-data 4
         0x6
         0x1e
@@ -1077,7 +997,7 @@
         -0x1
     .end array-data
 
-    :array_2a
+    :array_29
     .array-data 4
         0x6
         0x1a
@@ -1088,7 +1008,7 @@
         -0x1
     .end array-data
 
-    :array_2b
+    :array_2a
     .array-data 4
         0x6
         0x1e
@@ -1099,7 +1019,7 @@
         -0x1
     .end array-data
 
-    :array_2c
+    :array_2b
     .array-data 4
         0x6
         0x22
@@ -1110,7 +1030,7 @@
         -0x1
     .end array-data
 
-    :array_2d
+    :array_2c
     .array-data 4
         0x6
         0x1e
@@ -1121,7 +1041,7 @@
         -0x1
     .end array-data
 
-    :array_2e
+    :array_2d
     .array-data 4
         0x6
         0x22
@@ -1132,7 +1052,7 @@
         -0x1
     .end array-data
 
-    :array_2f
+    :array_2e
     .array-data 4
         0x6
         0x1e
@@ -1143,7 +1063,7 @@
         0x96
     .end array-data
 
-    :array_30
+    :array_2f
     .array-data 4
         0x6
         0x18
@@ -1154,7 +1074,7 @@
         0x9a
     .end array-data
 
-    :array_31
+    :array_30
     .array-data 4
         0x6
         0x1c
@@ -1165,7 +1085,7 @@
         0x9e
     .end array-data
 
-    :array_32
+    :array_31
     .array-data 4
         0x6
         0x20
@@ -1176,7 +1096,7 @@
         0xa2
     .end array-data
 
-    :array_33
+    :array_32
     .array-data 4
         0x6
         0x1a
@@ -1187,7 +1107,7 @@
         0xa6
     .end array-data
 
-    :array_34
+    :array_33
     .array-data 4
         0x6
         0x1e
@@ -1198,91 +1118,91 @@
         0xaa
     .end array-data
 
-    :array_35
+    :array_34
     .array-data 4
         0x8
         0x0
     .end array-data
 
-    :array_36
+    :array_35
     .array-data 4
         0x8
         0x1
+    .end array-data
+
+    :array_36
+    .array-data 4
+        0x8
+        0x2
     .end array-data
 
     :array_37
     .array-data 4
         0x8
-        0x2
+        0x3
     .end array-data
 
     :array_38
     .array-data 4
         0x8
-        0x3
+        0x4
     .end array-data
 
     :array_39
     .array-data 4
         0x8
-        0x4
+        0x5
     .end array-data
 
     :array_3a
     .array-data 4
         0x8
-        0x5
+        0x7
     .end array-data
 
     :array_3b
     .array-data 4
         0x8
-        0x7
+        0x8
     .end array-data
 
     :array_3c
     .array-data 4
-        0x8
+        0x7
         0x8
     .end array-data
 
     :array_3d
     .array-data 4
-        0x7
+        0x5
         0x8
     .end array-data
 
     :array_3e
     .array-data 4
-        0x5
+        0x4
         0x8
     .end array-data
 
     :array_3f
     .array-data 4
-        0x4
+        0x3
         0x8
     .end array-data
 
     :array_40
     .array-data 4
-        0x3
+        0x2
         0x8
     .end array-data
 
     :array_41
     .array-data 4
-        0x2
-        0x8
-    .end array-data
-
-    :array_42
-    .array-data 4
         0x1
         0x8
     .end array-data
 
-    :array_43
+    :array_42
     .array-data 4
         0x0
         0x8
@@ -1318,6 +1238,17 @@
 .method static a(II)I
     .locals 3
 
+    if-nez p1, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "0 polynomial"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
     invoke-static {p1}, Lcom/c/b/i/c/f;->a(I)I
 
     move-result v1
@@ -1331,7 +1262,7 @@
 
     move-result v2
 
-    if-lt v2, v1, :cond_0
+    if-lt v2, v1, :cond_1
 
     invoke-static {v0}, Lcom/c/b/i/c/f;->a(I)I
 
@@ -1345,47 +1276,21 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     return v0
 .end method
 
 .method private static a(IILcom/c/b/i/c/b;)V
-    .locals 5
-
-    const/16 v4, 0x8
+    .locals 3
 
     const/4 v1, 0x0
 
-    sget-object v0, Lcom/c/b/i/c/f;->b:[[I
-
-    aget-object v0, v0, v1
-
-    array-length v0, v0
-
-    if-ne v0, v4, :cond_0
-
-    sget-object v0, Lcom/c/b/i/c/f;->b:[[I
-
-    array-length v0, v0
-
-    const/4 v2, 0x1
-
-    if-eq v0, v2, :cond_1
-
-    :cond_0
-    new-instance v0, Lcom/c/b/t;
-
-    const-string v1, "Bad horizontal separation pattern"
-
-    invoke-direct {v0, v1}, Lcom/c/b/t;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
     move v0, v1
 
     :goto_0
-    if-ge v0, v4, :cond_3
+    const/16 v2, 0x8
+
+    if-ge v0, v2, :cond_1
 
     add-int v2, p0, v0
 
@@ -1397,101 +1302,24 @@
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_0
 
-    new-instance v0, Lcom/c/b/t;
+    new-instance v0, Lcom/c/b/x;
 
-    invoke-direct {v0}, Lcom/c/b/t;-><init>()V
+    invoke-direct {v0}, Lcom/c/b/x;-><init>()V
 
     throw v0
 
-    :cond_2
+    :cond_0
     add-int v2, p0, v0
 
-    sget-object v3, Lcom/c/b/i/c/f;->b:[[I
-
-    aget-object v3, v3, v1
-
-    aget v3, v3, v0
-
-    invoke-virtual {p2, v2, p1, v3}, Lcom/c/b/i/c/b;->a(III)V
+    invoke-virtual {p2, v2, p1, v1}, Lcom/c/b/i/c/b;->a(III)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :cond_3
-    return-void
-.end method
-
-.method static a(ILcom/c/b/c/a;)V
-    .locals 3
-
-    const/4 v0, 0x6
-
-    invoke-virtual {p1, p0, v0}, Lcom/c/b/c/a;->c(II)V
-
-    const/16 v0, 0x1f25
-
-    invoke-static {p0, v0}, Lcom/c/b/i/c/f;->a(II)I
-
-    move-result v0
-
-    const/16 v1, 0xc
-
-    invoke-virtual {p1, v0, v1}, Lcom/c/b/c/a;->c(II)V
-
-    invoke-virtual {p1}, Lcom/c/b/c/a;->a()I
-
-    move-result v0
-
-    const/16 v1, 0x12
-
-    if-eq v0, v1, :cond_0
-
-    new-instance v0, Lcom/c/b/t;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "should not happen but we got: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lcom/c/b/c/a;->a()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/c/b/t;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
-
-.method static a(ILcom/c/b/i/c/b;)V
-    .locals 0
-
-    invoke-static {p1}, Lcom/c/b/i/c/f;->d(Lcom/c/b/i/c/b;)V
-
-    invoke-static {p1}, Lcom/c/b/i/c/f;->c(Lcom/c/b/i/c/b;)V
-
-    invoke-static {p0, p1}, Lcom/c/b/i/c/f;->c(ILcom/c/b/i/c/b;)V
-
-    invoke-static {p1}, Lcom/c/b/i/c/f;->b(Lcom/c/b/i/c/b;)V
-
+    :cond_1
     return-void
 .end method
 
@@ -1651,7 +1479,7 @@
 
     if-eq v3, v0, :cond_7
 
-    new-instance v0, Lcom/c/b/t;
+    new-instance v0, Lcom/c/b/x;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1685,7 +1513,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/c/b/t;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/c/b/x;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -1702,16 +1530,16 @@
     goto :goto_1
 .end method
 
-.method static a(Lcom/c/b/c/a;Lcom/c/b/i/a/o;IILcom/c/b/i/c/b;)V
+.method static a(Lcom/c/b/c/a;Lcom/c/b/i/a/o;Lcom/c/b/i/a/s;ILcom/c/b/i/c/b;)V
     .locals 0
 
     invoke-static {p4}, Lcom/c/b/i/c/f;->a(Lcom/c/b/i/c/b;)V
 
-    invoke-static {p2, p4}, Lcom/c/b/i/c/f;->a(ILcom/c/b/i/c/b;)V
+    invoke-static {p2, p4}, Lcom/c/b/i/c/f;->a(Lcom/c/b/i/a/s;Lcom/c/b/i/c/b;)V
 
     invoke-static {p1, p3, p4}, Lcom/c/b/i/c/f;->a(Lcom/c/b/i/a/o;ILcom/c/b/i/c/b;)V
 
-    invoke-static {p2, p4}, Lcom/c/b/i/c/f;->b(ILcom/c/b/i/c/b;)V
+    invoke-static {p2, p4}, Lcom/c/b/i/c/f;->b(Lcom/c/b/i/a/s;Lcom/c/b/i/c/b;)V
 
     invoke-static {p0, p3, p4}, Lcom/c/b/i/c/f;->a(Lcom/c/b/c/a;ILcom/c/b/i/c/b;)V
 
@@ -1723,17 +1551,17 @@
 
     const/16 v2, 0xf
 
-    invoke-static {p1}, Lcom/c/b/i/c/g;->h(I)Z
+    invoke-static {p1}, Lcom/c/b/i/c/g;->b(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/c/b/t;
+    new-instance v0, Lcom/c/b/x;
 
     const-string v1, "Invalid mask pattern"
 
-    invoke-direct {v0, v1}, Lcom/c/b/t;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/c/b/x;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -1776,7 +1604,7 @@
 
     if-eq v0, v2, :cond_1
 
-    new-instance v0, Lcom/c/b/t;
+    new-instance v0, Lcom/c/b/x;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1800,7 +1628,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/c/b/t;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/c/b/x;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -1842,13 +1670,13 @@
 
     move-result v3
 
-    sget-object v4, Lcom/c/b/i/c/f;->f:[[I
+    sget-object v4, Lcom/c/b/i/c/f;->d:[[I
 
     aget-object v4, v4, v0
 
     aget v4, v4, v1
 
-    sget-object v5, Lcom/c/b/i/c/f;->f:[[I
+    sget-object v5, Lcom/c/b/i/c/f;->d:[[I
 
     aget-object v5, v5, v0
 
@@ -1894,6 +1722,85 @@
     return-void
 .end method
 
+.method static a(Lcom/c/b/i/a/s;Lcom/c/b/c/a;)V
+    .locals 3
+
+    invoke-virtual {p0}, Lcom/c/b/i/a/s;->a()I
+
+    move-result v0
+
+    const/4 v1, 0x6
+
+    invoke-virtual {p1, v0, v1}, Lcom/c/b/c/a;->c(II)V
+
+    invoke-virtual {p0}, Lcom/c/b/i/a/s;->a()I
+
+    move-result v0
+
+    const/16 v1, 0x1f25
+
+    invoke-static {v0, v1}, Lcom/c/b/i/c/f;->a(II)I
+
+    move-result v0
+
+    const/16 v1, 0xc
+
+    invoke-virtual {p1, v0, v1}, Lcom/c/b/c/a;->c(II)V
+
+    invoke-virtual {p1}, Lcom/c/b/c/a;->a()I
+
+    move-result v0
+
+    const/16 v1, 0x12
+
+    if-eq v0, v1, :cond_0
+
+    new-instance v0, Lcom/c/b/x;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "should not happen but we got: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcom/c/b/c/a;->a()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/c/b/x;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    return-void
+.end method
+
+.method static a(Lcom/c/b/i/a/s;Lcom/c/b/i/c/b;)V
+    .locals 0
+
+    invoke-static {p1}, Lcom/c/b/i/c/f;->d(Lcom/c/b/i/c/b;)V
+
+    invoke-static {p1}, Lcom/c/b/i/c/f;->c(Lcom/c/b/i/c/b;)V
+
+    invoke-static {p0, p1}, Lcom/c/b/i/c/f;->c(Lcom/c/b/i/a/s;Lcom/c/b/i/c/b;)V
+
+    invoke-static {p1}, Lcom/c/b/i/c/f;->b(Lcom/c/b/i/c/b;)V
+
+    return-void
+.end method
+
 .method static a(Lcom/c/b/i/c/b;)V
     .locals 1
 
@@ -1905,42 +1812,16 @@
 .end method
 
 .method private static b(IILcom/c/b/i/c/b;)V
-    .locals 5
-
-    const/4 v4, 0x7
+    .locals 3
 
     const/4 v1, 0x0
 
-    sget-object v0, Lcom/c/b/i/c/f;->c:[[I
-
-    aget-object v0, v0, v1
-
-    array-length v0, v0
-
-    const/4 v2, 0x1
-
-    if-ne v0, v2, :cond_0
-
-    sget-object v0, Lcom/c/b/i/c/f;->c:[[I
-
-    array-length v0, v0
-
-    if-eq v0, v4, :cond_1
-
-    :cond_0
-    new-instance v0, Lcom/c/b/t;
-
-    const-string v1, "Bad vertical separation pattern"
-
-    invoke-direct {v0, v1}, Lcom/c/b/t;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
     move v0, v1
 
     :goto_0
-    if-ge v0, v4, :cond_3
+    const/4 v2, 0x7
+
+    if-ge v0, v2, :cond_1
 
     add-int v2, p1, v0
 
@@ -1952,41 +1833,39 @@
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_0
 
-    new-instance v0, Lcom/c/b/t;
+    new-instance v0, Lcom/c/b/x;
 
-    invoke-direct {v0}, Lcom/c/b/t;-><init>()V
+    invoke-direct {v0}, Lcom/c/b/x;-><init>()V
 
     throw v0
 
-    :cond_2
+    :cond_0
     add-int v2, p1, v0
 
-    sget-object v3, Lcom/c/b/i/c/f;->c:[[I
-
-    aget-object v3, v3, v0
-
-    aget v3, v3, v1
-
-    invoke-virtual {p2, p0, v2, v3}, Lcom/c/b/i/c/b;->a(III)V
+    invoke-virtual {p2, p0, v2, v1}, Lcom/c/b/i/c/b;->a(III)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :cond_3
+    :cond_1
     return-void
 .end method
 
-.method static b(ILcom/c/b/i/c/b;)V
+.method static b(Lcom/c/b/i/a/s;Lcom/c/b/i/c/b;)V
     .locals 7
 
     const/4 v1, 0x0
 
-    const/4 v0, 0x7
+    invoke-virtual {p0}, Lcom/c/b/i/a/s;->a()I
 
-    if-ge p0, v0, :cond_1
+    move-result v0
+
+    const/4 v2, 0x7
+
+    if-ge v0, v2, :cond_1
 
     :cond_0
     return-void
@@ -1996,7 +1875,7 @@
 
     invoke-direct {v4}, Lcom/c/b/c/a;-><init>()V
 
-    invoke-static {p0, v4}, Lcom/c/b/i/c/f;->a(ILcom/c/b/c/a;)V
+    invoke-static {p0, v4}, Lcom/c/b/i/c/f;->a(Lcom/c/b/i/a/s;Lcom/c/b/c/a;)V
 
     const/16 v0, 0x11
 
@@ -2070,7 +1949,7 @@
 
     add-int/lit8 v1, v1, -0x8
 
-    if-ge v0, v1, :cond_4
+    if-ge v0, v1, :cond_2
 
     add-int/lit8 v1, v0, 0x1
 
@@ -2080,20 +1959,16 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/c/b/i/c/f;->c(I)Z
+    invoke-static {v2}, Lcom/c/b/i/c/f;->b(I)Z
 
     move-result v2
 
-    if-nez v2, :cond_0
+    if-eqz v2, :cond_0
 
-    new-instance v0, Lcom/c/b/t;
-
-    invoke-direct {v0}, Lcom/c/b/t;-><init>()V
-
-    throw v0
+    invoke-virtual {p0, v0, v3, v1}, Lcom/c/b/i/c/b;->a(III)V
 
     :cond_0
-    invoke-virtual {p0, v0, v3}, Lcom/c/b/i/c/b;->a(II)B
+    invoke-virtual {p0, v3, v0}, Lcom/c/b/i/c/b;->a(II)B
 
     move-result v2
 
@@ -2103,44 +1978,14 @@
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {p0, v0, v3, v1}, Lcom/c/b/i/c/b;->a(III)V
-
-    :cond_1
-    invoke-virtual {p0, v3, v0}, Lcom/c/b/i/c/b;->a(II)B
-
-    move-result v2
-
-    invoke-static {v2}, Lcom/c/b/i/c/f;->c(I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    new-instance v0, Lcom/c/b/t;
-
-    invoke-direct {v0}, Lcom/c/b/t;-><init>()V
-
-    throw v0
-
-    :cond_2
-    invoke-virtual {p0, v3, v0}, Lcom/c/b/i/c/b;->a(II)B
-
-    move-result v2
-
-    invoke-static {v2}, Lcom/c/b/i/c/f;->b(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
     invoke-virtual {p0, v3, v0, v1}, Lcom/c/b/i/c/b;->a(III)V
 
-    :cond_3
+    :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :cond_4
+    :cond_2
     return-void
 .end method
 
@@ -2165,70 +2010,25 @@
 .method private static c(IILcom/c/b/i/c/b;)V
     .locals 7
 
-    const/4 v1, 0x0
-
     const/4 v6, 0x5
 
-    sget-object v0, Lcom/c/b/i/c/f;->d:[[I
+    const/4 v1, 0x0
 
-    aget-object v0, v0, v1
-
-    array-length v0, v0
-
-    if-ne v0, v6, :cond_0
-
-    sget-object v0, Lcom/c/b/i/c/f;->d:[[I
-
-    array-length v0, v0
-
-    if-eq v0, v6, :cond_1
-
-    :cond_0
-    new-instance v0, Lcom/c/b/t;
-
-    const-string v1, "Bad position adjustment"
-
-    invoke-direct {v0, v1}, Lcom/c/b/t;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
     move v2, v1
 
     :goto_0
-    if-ge v2, v6, :cond_4
+    if-ge v2, v6, :cond_1
 
     move v0, v1
 
     :goto_1
-    if-ge v0, v6, :cond_3
+    if-ge v0, v6, :cond_0
 
     add-int v3, p0, v0
 
     add-int v4, p1, v2
 
-    invoke-virtual {p2, v3, v4}, Lcom/c/b/i/c/b;->a(II)B
-
-    move-result v3
-
-    invoke-static {v3}, Lcom/c/b/i/c/f;->b(I)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    new-instance v0, Lcom/c/b/t;
-
-    invoke-direct {v0}, Lcom/c/b/t;-><init>()V
-
-    throw v0
-
-    :cond_2
-    add-int v3, p0, v0
-
-    add-int v4, p1, v2
-
-    sget-object v5, Lcom/c/b/i/c/f;->d:[[I
+    sget-object v5, Lcom/c/b/i/c/f;->b:[[I
 
     aget-object v5, v5, v2
 
@@ -2240,39 +2040,47 @@
 
     goto :goto_1
 
-    :cond_3
+    :cond_0
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
 
     goto :goto_0
 
-    :cond_4
+    :cond_1
     return-void
 .end method
 
-.method private static c(ILcom/c/b/i/c/b;)V
+.method private static c(Lcom/c/b/i/a/s;Lcom/c/b/i/c/b;)V
     .locals 9
 
     const/4 v1, 0x0
 
     const/4 v8, -0x1
 
-    const/4 v0, 0x2
+    invoke-virtual {p0}, Lcom/c/b/i/a/s;->a()I
 
-    if-ge p0, v0, :cond_1
+    move-result v0
+
+    const/4 v2, 0x2
+
+    if-ge v0, v2, :cond_1
 
     :cond_0
     return-void
 
     :cond_1
-    add-int/lit8 v0, p0, -0x1
+    invoke-virtual {p0}, Lcom/c/b/i/a/s;->a()I
 
-    sget-object v2, Lcom/c/b/i/c/f;->e:[[I
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    sget-object v2, Lcom/c/b/i/c/f;->c:[[I
 
     aget-object v3, v2, v0
 
-    sget-object v2, Lcom/c/b/i/c/f;->e:[[I
+    sget-object v2, Lcom/c/b/i/c/f;->c:[[I
 
     aget-object v0, v2, v0
 
@@ -2346,9 +2154,9 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/c/b/t;
+    new-instance v0, Lcom/c/b/x;
 
-    invoke-direct {v0}, Lcom/c/b/t;-><init>()V
+    invoke-direct {v0}, Lcom/c/b/x;-><init>()V
 
     throw v0
 
@@ -2366,91 +2174,23 @@
     return-void
 .end method
 
-.method private static c(I)Z
-    .locals 2
-
-    const/4 v0, 0x1
-
-    const/4 v1, -0x1
-
-    if-eq p0, v1, :cond_0
-
-    if-eqz p0, :cond_0
-
-    if-ne p0, v0, :cond_1
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method private static d(IILcom/c/b/i/c/b;)V
     .locals 7
 
-    const/4 v1, 0x0
-
     const/4 v6, 0x7
 
-    sget-object v0, Lcom/c/b/i/c/f;->a:[[I
+    const/4 v1, 0x0
 
-    aget-object v0, v0, v1
-
-    array-length v0, v0
-
-    if-ne v0, v6, :cond_0
-
-    sget-object v0, Lcom/c/b/i/c/f;->a:[[I
-
-    array-length v0, v0
-
-    if-eq v0, v6, :cond_1
-
-    :cond_0
-    new-instance v0, Lcom/c/b/t;
-
-    const-string v1, "Bad position detection pattern"
-
-    invoke-direct {v0, v1}, Lcom/c/b/t;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
     move v2, v1
 
     :goto_0
-    if-ge v2, v6, :cond_4
+    if-ge v2, v6, :cond_1
 
     move v0, v1
 
     :goto_1
-    if-ge v0, v6, :cond_3
+    if-ge v0, v6, :cond_0
 
-    add-int v3, p0, v0
-
-    add-int v4, p1, v2
-
-    invoke-virtual {p2, v3, v4}, Lcom/c/b/i/c/b;->a(II)B
-
-    move-result v3
-
-    invoke-static {v3}, Lcom/c/b/i/c/f;->b(I)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    new-instance v0, Lcom/c/b/t;
-
-    invoke-direct {v0}, Lcom/c/b/t;-><init>()V
-
-    throw v0
-
-    :cond_2
     add-int v3, p0, v0
 
     add-int v4, p1, v2
@@ -2467,29 +2207,31 @@
 
     goto :goto_1
 
-    :cond_3
+    :cond_0
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
 
     goto :goto_0
 
-    :cond_4
+    :cond_1
     return-void
 .end method
 
 .method private static d(Lcom/c/b/i/c/b;)V
     .locals 4
 
-    const/4 v3, 0x0
+    const/4 v3, 0x7
+
+    const/4 v2, 0x0
 
     sget-object v0, Lcom/c/b/i/c/f;->a:[[I
 
-    aget-object v0, v0, v3
+    aget-object v0, v0, v2
 
     array-length v0, v0
 
-    invoke-static {v3, v3, p0}, Lcom/c/b/i/c/f;->d(IILcom/c/b/i/c/b;)V
+    invoke-static {v2, v2, p0}, Lcom/c/b/i/c/f;->d(IILcom/c/b/i/c/b;)V
 
     invoke-virtual {p0}, Lcom/c/b/i/c/b;->b()I
 
@@ -2497,7 +2239,7 @@
 
     sub-int/2addr v1, v0
 
-    invoke-static {v1, v3, p0}, Lcom/c/b/i/c/f;->d(IILcom/c/b/i/c/b;)V
+    invoke-static {v1, v2, p0}, Lcom/c/b/i/c/f;->d(IILcom/c/b/i/c/b;)V
 
     invoke-virtual {p0}, Lcom/c/b/i/c/b;->b()I
 
@@ -2505,17 +2247,11 @@
 
     sub-int v0, v1, v0
 
-    invoke-static {v3, v0, p0}, Lcom/c/b/i/c/f;->d(IILcom/c/b/i/c/b;)V
+    invoke-static {v2, v0, p0}, Lcom/c/b/i/c/f;->d(IILcom/c/b/i/c/b;)V
 
-    sget-object v0, Lcom/c/b/i/c/f;->b:[[I
+    const/16 v0, 0x8
 
-    aget-object v0, v0, v3
-
-    array-length v0, v0
-
-    add-int/lit8 v1, v0, -0x1
-
-    invoke-static {v3, v1, p0}, Lcom/c/b/i/c/f;->a(IILcom/c/b/i/c/b;)V
+    invoke-static {v2, v3, p0}, Lcom/c/b/i/c/f;->a(IILcom/c/b/i/c/b;)V
 
     invoke-virtual {p0}, Lcom/c/b/i/c/b;->b()I
 
@@ -2523,9 +2259,7 @@
 
     sub-int/2addr v1, v0
 
-    add-int/lit8 v2, v0, -0x1
-
-    invoke-static {v1, v2, p0}, Lcom/c/b/i/c/f;->a(IILcom/c/b/i/c/b;)V
+    invoke-static {v1, v3, p0}, Lcom/c/b/i/c/f;->a(IILcom/c/b/i/c/b;)V
 
     invoke-virtual {p0}, Lcom/c/b/i/c/b;->b()I
 
@@ -2533,31 +2267,27 @@
 
     sub-int v0, v1, v0
 
-    invoke-static {v3, v0, p0}, Lcom/c/b/i/c/f;->a(IILcom/c/b/i/c/b;)V
+    invoke-static {v2, v0, p0}, Lcom/c/b/i/c/f;->a(IILcom/c/b/i/c/b;)V
 
-    sget-object v0, Lcom/c/b/i/c/f;->c:[[I
-
-    array-length v0, v0
-
-    invoke-static {v0, v3, p0}, Lcom/c/b/i/c/f;->b(IILcom/c/b/i/c/b;)V
+    invoke-static {v3, v2, p0}, Lcom/c/b/i/c/f;->b(IILcom/c/b/i/c/b;)V
 
     invoke-virtual {p0}, Lcom/c/b/i/c/b;->a()I
 
-    move-result v1
+    move-result v0
 
-    sub-int/2addr v1, v0
+    sub-int/2addr v0, v3
 
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 v0, v0, -0x1
 
-    invoke-static {v1, v3, p0}, Lcom/c/b/i/c/f;->b(IILcom/c/b/i/c/b;)V
+    invoke-static {v0, v2, p0}, Lcom/c/b/i/c/f;->b(IILcom/c/b/i/c/b;)V
 
     invoke-virtual {p0}, Lcom/c/b/i/c/b;->a()I
 
-    move-result v1
+    move-result v0
 
-    sub-int/2addr v1, v0
+    sub-int/2addr v0, v3
 
-    invoke-static {v0, v1, p0}, Lcom/c/b/i/c/f;->b(IILcom/c/b/i/c/b;)V
+    invoke-static {v3, v0, p0}, Lcom/c/b/i/c/f;->b(IILcom/c/b/i/c/b;)V
 
     return-void
 .end method

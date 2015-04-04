@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+.implements Landroid/support/v4/app/Q;
 
 
 # instance fields
 .field final synthetic a:Landroid/support/v4/app/Fragment;
 
-.field final synthetic b:Landroid/support/v4/app/F;
-
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/app/F;Landroid/support/v4/app/Fragment;)V
+.method constructor <init>(Landroid/support/v4/app/Fragment;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/app/K;->b:Landroid/support/v4/app/F;
-
-    iput-object p2, p0, Landroid/support/v4/app/K;->a:Landroid/support/v4/app/Fragment;
+    iput-object p1, p0, Landroid/support/v4/app/K;->a:Landroid/support/v4/app/Fragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,49 +22,51 @@
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 6
-
-    const/4 v3, 0x0
+.method public a(I)Landroid/view/View;
+    .locals 2
 
     iget-object v0, p0, Landroid/support/v4/app/K;->a:Landroid/support/v4/app/Fragment;
 
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mAnimatingAway:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Fragment does not have a view"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/app/K;->a:Landroid/support/v4/app/Fragment;
+
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a()Z
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/app/K;->a:Landroid/support/v4/app/Fragment;
+
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v4/app/K;->a:Landroid/support/v4/app/Fragment;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Landroid/support/v4/app/Fragment;->mAnimatingAway:Landroid/view/View;
-
-    iget-object v0, p0, Landroid/support/v4/app/K;->b:Landroid/support/v4/app/F;
-
-    iget-object v1, p0, Landroid/support/v4/app/K;->a:Landroid/support/v4/app/Fragment;
-
-    iget-object v2, p0, Landroid/support/v4/app/K;->a:Landroid/support/v4/app/Fragment;
-
-    iget v2, v2, Landroid/support/v4/app/Fragment;->mStateAfterAnimating:I
-
-    move v4, v3
-
-    move v5, v3
-
-    invoke-virtual/range {v0 .. v5}, Landroid/support/v4/app/F;->a(Landroid/support/v4/app/Fragment;IIIZ)V
+    :goto_0
+    return v0
 
     :cond_0
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
+    goto :goto_0
 .end method

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/btn_more" android:id="@id/action_more" android:orderInCategory="100" android:title="@string/label_more" android:showAsAction="ifRoom" />
+</menu>

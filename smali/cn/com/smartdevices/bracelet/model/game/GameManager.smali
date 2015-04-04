@@ -113,12 +113,12 @@
     return-void
 .end method
 
-.method private checkContinusReachGoal(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/model/SportDay;)I
+.method private checkContinusReachGoal(Lcom/xiaomi/hm/health/dataprocess/SportDay;Lcom/xiaomi/hm/health/dataprocess/SportDay;)I
     .locals 8
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->offsetDay(Lcn/com/smartdevices/bracelet/model/SportDay;)I
+    invoke-virtual {p2, p1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->offsetDay(Lcom/xiaomi/hm/health/dataprocess/SportDay;)I
 
     move-result v1
 
@@ -230,7 +230,7 @@
     :goto_1
     if-ge v1, v2, :cond_0
 
-    invoke-virtual {p1, v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->addDay(I)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {p1, v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->addDay(I)Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     move-result-object v3
 
@@ -238,11 +238,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/s;->b(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
+    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/s;->b(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Lcom/xiaomi/hm/health/dataprocess/DaySportData$Summary;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;->getSteps()I
+    invoke-interface {v4}, Lcom/xiaomi/hm/health/dataprocess/DaySportData$Summary;->getSteps()I
 
     move-result v4
 
@@ -282,7 +282,7 @@
 
     if-le v5, v4, :cond_2
 
-    iget-object v0, v3, Lcn/com/smartdevices/bracelet/model/SportDay;->calendar:Ljava/util/Calendar;
+    iget-object v0, v3, Lcom/xiaomi/hm/health/dataprocess/SportDay;->calendar:Ljava/util/Calendar;
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
@@ -728,15 +728,15 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v3, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v3, v1}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v3, v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v1, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v1, v2}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
 
-    invoke-direct {p0, v3, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->checkContinusReachGoal(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/model/SportDay;)I
+    invoke-direct {p0, v3, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->checkContinusReachGoal(Lcom/xiaomi/hm/health/dataprocess/SportDay;Lcom/xiaomi/hm/health/dataprocess/SportDay;)I
 
     move-result v1
 
@@ -940,19 +940,19 @@
 
     invoke-virtual {v3, v4, v5}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v3, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v3, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v3, v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
 
-    invoke-virtual {v0, v6}, Lcn/com/smartdevices/bracelet/model/SportDay;->addDay(I)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {v0, v6}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->addDay(I)Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     move-result-object v0
 
-    invoke-direct {p0, v3, v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->checkContinusReachGoal(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/model/SportDay;)I
+    invoke-direct {p0, v3, v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->checkContinusReachGoal(Lcom/xiaomi/hm/health/dataprocess/SportDay;Lcom/xiaomi/hm/health/dataprocess/SportDay;)I
 
     move-result v3
 
@@ -973,11 +973,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v1, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
+    invoke-direct {v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/s;->b(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/s;->b(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Lcom/xiaomi/hm/health/dataprocess/DaySportData$Summary;
 
     move-result-object v0
 
@@ -1085,7 +1085,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;->getSteps()I
+    invoke-interface {v0}, Lcom/xiaomi/hm/health/dataprocess/DaySportData$Summary;->getSteps()I
 
     move-result v3
 
@@ -1103,7 +1103,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;->getSteps()I
+    invoke-interface {v0}, Lcom/xiaomi/hm/health/dataprocess/DaySportData$Summary;->getSteps()I
 
     move-result v0
 

@@ -1,40 +1,52 @@
-.class public Lcn/com/smartdevices/bracelet/ui/aW;
-.super Lcn/com/smartdevices/bracelet/ui/aV;
+.class Lcn/com/smartdevices/bracelet/ui/aW;
+.super Landroid/webkit/WebViewClient;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aV;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aV;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aV;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aW;->a:Lcn/com/smartdevices/bracelet/ui/aV;
+
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 3
+.method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 2
 
-    const v0, 0x7f03000b
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->a:Lcn/com/smartdevices/bracelet/ui/aV;
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aV;->a(Lcn/com/smartdevices/bracelet/ui/aV;)Landroid/widget/ProgressBar;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aW;->a(Landroid/view/View;)V
+    const/4 v1, 0x4
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aW;->c_:Landroid/widget/TextSwitcher;
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    const v2, 0x7f0801ae
+    return-void
+.end method
 
-    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/aW;->getString(I)Ljava/lang/String;
+.method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
+    .locals 2
 
-    move-result-object v2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->a:Lcn/com/smartdevices/bracelet/ui/aV;
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextSwitcher;->setCurrentText(Ljava/lang/CharSequence;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aV;->a(Lcn/com/smartdevices/bracelet/ui/aV;)Landroid/widget/ProgressBar;
 
-    return-object v0
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    return-void
 .end method

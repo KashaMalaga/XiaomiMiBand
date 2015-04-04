@@ -1,68 +1,68 @@
-.class public abstract Landroid/support/v4/app/as;
-.super Ljava/lang/Object;
+.class public Landroid/support/v4/app/aS;
+.super Landroid/support/v4/app/bj;
 
 
 # instance fields
-.field d:Landroid/support/v4/app/al;
-
-.field e:Ljava/lang/CharSequence;
-
-.field f:Ljava/lang/CharSequence;
-
-.field g:Z
+.field a:Ljava/lang/CharSequence;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/app/bj;-><init>()V
 
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    iput-boolean v0, p0, Landroid/support/v4/app/as;->g:Z
+.method public constructor <init>(Landroid/support/v4/app/aT;)V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/support/v4/app/bj;-><init>()V
+
+    invoke-virtual {p0, p1}, Landroid/support/v4/app/aS;->a(Landroid/support/v4/app/aT;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Landroid/app/Notification;
-    .locals 2
+.method public a(Ljava/lang/CharSequence;)Landroid/support/v4/app/aS;
+    .locals 1
 
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Landroid/support/v4/app/as;->d:Landroid/support/v4/app/al;
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/app/as;->d:Landroid/support/v4/app/al;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/al;->b()Landroid/app/Notification;
+    invoke-static {p1}, Landroid/support/v4/app/aT;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    :cond_0
-    return-object v0
+    iput-object v0, p0, Landroid/support/v4/app/aS;->e:Ljava/lang/CharSequence;
+
+    return-object p0
 .end method
 
-.method public a(Landroid/support/v4/app/al;)V
+.method public b(Ljava/lang/CharSequence;)Landroid/support/v4/app/aS;
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/app/as;->d:Landroid/support/v4/app/al;
+    invoke-static {p1}, Landroid/support/v4/app/aT;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    if-eq v0, p1, :cond_0
+    move-result-object v0
 
-    iput-object p1, p0, Landroid/support/v4/app/as;->d:Landroid/support/v4/app/al;
+    iput-object v0, p0, Landroid/support/v4/app/aS;->f:Ljava/lang/CharSequence;
 
-    iget-object v0, p0, Landroid/support/v4/app/as;->d:Landroid/support/v4/app/al;
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    iput-boolean v0, p0, Landroid/support/v4/app/aS;->g:Z
 
-    iget-object v0, p0, Landroid/support/v4/app/as;->d:Landroid/support/v4/app/al;
+    return-object p0
+.end method
 
-    invoke-virtual {v0, p0}, Landroid/support/v4/app/al;->a(Landroid/support/v4/app/as;)Landroid/support/v4/app/al;
+.method public c(Ljava/lang/CharSequence;)Landroid/support/v4/app/aS;
+    .locals 1
 
-    :cond_0
-    return-void
+    invoke-static {p1}, Landroid/support/v4/app/aT;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v4/app/aS;->a:Ljava/lang/CharSequence;
+
+    return-object p0
 .end method

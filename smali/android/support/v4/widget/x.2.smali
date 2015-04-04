@@ -1,8 +1,20 @@
-.class Landroid/support/v4/widget/x;
+.class final Landroid/support/v4/widget/x;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/widget/w;
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v4/widget/DrawerLayout$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
@@ -16,220 +28,40 @@
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Landroid/view/animation/Interpolator;)Ljava/lang/Object;
+.method public a(Landroid/os/Parcel;)Landroid/support/v4/widget/DrawerLayout$SavedState;
     .locals 1
 
-    if-eqz p2, :cond_0
+    new-instance v0, Landroid/support/v4/widget/DrawerLayout$SavedState;
 
-    new-instance v0, Landroid/widget/Scroller;
+    invoke-direct {v0, p1}, Landroid/support/v4/widget/DrawerLayout$SavedState;-><init>(Landroid/os/Parcel;)V
 
-    invoke-direct {v0, p1, p2}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
-
-    :goto_0
     return-object v0
-
-    :cond_0
-    new-instance v0, Landroid/widget/Scroller;
-
-    invoke-direct {v0, p1}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;)V
-
-    goto :goto_0
 .end method
 
-.method public a(Ljava/lang/Object;III)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;IIII)V
-    .locals 0
-
-    check-cast p1, Landroid/widget/Scroller;
-
-    invoke-virtual {p1, p2, p3, p4, p5}, Landroid/widget/Scroller;->startScroll(IIII)V
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;IIIII)V
-    .locals 6
-
-    move-object v0, p1
-
-    check-cast v0, Landroid/widget/Scroller;
-
-    move v1, p2
-
-    move v2, p3
-
-    move v3, p4
-
-    move v4, p5
-
-    move v5, p6
-
-    invoke-virtual/range {v0 .. v5}, Landroid/widget/Scroller;->startScroll(IIIII)V
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;IIIIIIII)V
-    .locals 9
-
-    move-object v0, p1
-
-    check-cast v0, Landroid/widget/Scroller;
-
-    move v1, p2
-
-    move v2, p3
-
-    move v3, p4
-
-    move v4, p5
-
-    move v5, p6
-
-    move/from16 v6, p7
-
-    move/from16 v7, p8
-
-    move/from16 v8, p9
-
-    invoke-virtual/range {v0 .. v8}, Landroid/widget/Scroller;->fling(IIIIIIII)V
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;IIIIIIIIII)V
-    .locals 9
-
-    move-object v0, p1
-
-    check-cast v0, Landroid/widget/Scroller;
-
-    move v1, p2
-
-    move v2, p3
-
-    move v3, p4
-
-    move v4, p5
-
-    move v5, p6
-
-    move/from16 v6, p7
-
-    move/from16 v7, p8
-
-    move/from16 v8, p9
-
-    invoke-virtual/range {v0 .. v8}, Landroid/widget/Scroller;->fling(IIIIIIII)V
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;)Z
+.method public a(I)[Landroid/support/v4/widget/DrawerLayout$SavedState;
     .locals 1
 
-    check-cast p1, Landroid/widget/Scroller;
+    new-array v0, p1, [Landroid/support/v4/widget/DrawerLayout$SavedState;
 
-    invoke-virtual {p1}, Landroid/widget/Scroller;->isFinished()Z
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method
 
-.method public b(Ljava/lang/Object;)I
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    check-cast p1, Landroid/widget/Scroller;
+    invoke-virtual {p0, p1}, Landroid/support/v4/widget/x;->a(Landroid/os/Parcel;)Landroid/support/v4/widget/DrawerLayout$SavedState;
 
-    invoke-virtual {p1}, Landroid/widget/Scroller;->getCurrX()I
+    move-result-object v0
 
-    move-result v0
-
-    return v0
+    return-object v0
 .end method
 
-.method public b(Ljava/lang/Object;III)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public c(Ljava/lang/Object;)I
+.method public synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    check-cast p1, Landroid/widget/Scroller;
+    invoke-virtual {p0, p1}, Landroid/support/v4/widget/x;->a(I)[Landroid/support/v4/widget/DrawerLayout$SavedState;
 
-    invoke-virtual {p1}, Landroid/widget/Scroller;->getCurrY()I
+    move-result-object v0
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public d(Ljava/lang/Object;)F
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public e(Ljava/lang/Object;)Z
-    .locals 1
-
-    check-cast p1, Landroid/widget/Scroller;
-
-    invoke-virtual {p1}, Landroid/widget/Scroller;->computeScrollOffset()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public f(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, Landroid/widget/Scroller;
-
-    invoke-virtual {p1}, Landroid/widget/Scroller;->abortAnimation()V
-
-    return-void
-.end method
-
-.method public g(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public h(Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p1, Landroid/widget/Scroller;
-
-    invoke-virtual {p1}, Landroid/widget/Scroller;->getFinalX()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public i(Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p1, Landroid/widget/Scroller;
-
-    invoke-virtual {p1}, Landroid/widget/Scroller;->getFinalY()I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

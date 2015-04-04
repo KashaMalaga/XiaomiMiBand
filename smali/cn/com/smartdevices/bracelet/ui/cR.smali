@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Lkankan/wheel/widget/e;
 
 
 # instance fields
@@ -22,14 +22,24 @@
 
 
 # virtual methods
-.method public onLongClick(Landroid/view/View;)Z
-    .locals 1
+.method public a(Lkankan/wheel/widget/WheelView;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Lkankan/wheel/widget/WheelView;)V
+    .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cR;->a:Lcn/com/smartdevices/bracelet/ui/cP;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cP;->b(Lcn/com/smartdevices/bracelet/ui/cP;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cP;->c(Lcn/com/smartdevices/bracelet/ui/cP;)V
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cR;->a:Lcn/com/smartdevices/bracelet/ui/cP;
 
-    return v0
+    const/4 v1, 0x1
+
+    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;Lkankan/wheel/widget/WheelView;I)V
+
+    return-void
 .end method

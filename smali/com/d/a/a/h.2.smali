@@ -16,7 +16,7 @@
 
 .field protected static final FINISH_MESSAGE:I = 0x3
 
-.field private static final LOG_TAG:Ljava/lang/String; = "AsyncHttpResponseHandler"
+.field private static final LOG_TAG:Ljava/lang/String; = "AsyncHttpResponse"
 
 .field protected static final PROGRESS_MESSAGE:I = 0x4
 
@@ -310,7 +310,7 @@
     goto :goto_0
 
     :cond_0
-    const-string v0, "AsyncHttpResponseHandler"
+    const-string v0, "AsyncHttpResponse"
 
     const-string v1, "SUCCESS_MESSAGE didn\'t got enough params"
 
@@ -362,7 +362,7 @@
     goto :goto_0
 
     :cond_1
-    const-string v0, "AsyncHttpResponseHandler"
+    const-string v0, "AsyncHttpResponse"
 
     const-string v1, "FAILURE_MESSAGE didn\'t got enough params"
 
@@ -423,7 +423,7 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "AsyncHttpResponseHandler"
+    const-string v1, "AsyncHttpResponse"
 
     const-string v2, "custom onProgress contains an error"
 
@@ -432,7 +432,7 @@
     goto/16 :goto_0
 
     :cond_2
-    const-string v0, "AsyncHttpResponseHandler"
+    const-string v0, "AsyncHttpResponse"
 
     const-string v1, "PROGRESS_MESSAGE didn\'t got enough params"
 
@@ -466,7 +466,7 @@
     goto/16 :goto_0
 
     :cond_3
-    const-string v0, "AsyncHttpResponseHandler"
+    const-string v0, "AsyncHttpResponse"
 
     const-string v1, "RETRY_MESSAGE didn\'t get enough params"
 
@@ -525,7 +525,7 @@
 .method public onCancel()V
     .locals 2
 
-    const-string v0, "AsyncHttpResponseHandler"
+    const-string v0, "AsyncHttpResponse"
 
     const-string v1, "Request got cancelled"
 
@@ -546,7 +546,7 @@
 .method public onProgress(II)V
     .locals 8
 
-    const-string v2, "AsyncHttpResponseHandler"
+    const-string v2, "AsyncHttpResponse"
 
     const-string v3, "Progress %d from %d (%2.0f%%)"
 
@@ -612,7 +612,7 @@
 .method public onRetry(I)V
     .locals 5
 
-    const-string v0, "AsyncHttpResponseHandler"
+    const-string v0, "AsyncHttpResponse"
 
     const-string v1, "Request retry no. %d"
 
@@ -1010,9 +1010,9 @@
 
     const/4 p1, 0x1
 
-    const-string v0, "AsyncHttpResponseHandler"
+    const-string v0, "AsyncHttpResponse"
 
-    const-string v1, "Current thread has not called Looper.prepare(). Forcing synchronous mode."
+    const-string v1, "Current thread has not called Looper.prepare().Forcing synchronous mode"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 

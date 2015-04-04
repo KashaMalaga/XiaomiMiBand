@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
@@ -22,74 +22,28 @@
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationEnd(Landroid/animation/Animator;)V
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/x;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->c(Lcn/com/smartdevices/bracelet/chart/LinePieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/w;
+    check-cast v0, Ljava/lang/Float;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/w;->b()V
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/x;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->d(Lcn/com/smartdevices/bracelet/chart/LinePieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->e(Lcn/com/smartdevices/bracelet/chart/LinePieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/w;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/v;
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/w;->g(F)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/x;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->postInvalidateOnAnimation()V
-
-    return-void
-.end method
-
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/x;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->a(Lcn/com/smartdevices/bracelet/chart/LinePieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/w;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/w;->a()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/x;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->b(Lcn/com/smartdevices/bracelet/chart/LinePieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/w;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/w;->g(F)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/v;->g(F)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/x;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
 

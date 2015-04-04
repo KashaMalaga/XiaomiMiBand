@@ -124,7 +124,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->b()Z
 
     move-result v2
 
@@ -142,7 +142,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f0802c6
+    const v4, 0x7f09035e
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -158,7 +158,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f0802c5
+    const v4, 0x7f09035d
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -184,7 +184,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f0802df
+    const v4, 0x7f090377
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -226,7 +226,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f080312
+    const v4, 0x7f0903aa
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -253,7 +253,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f080275
+    const v4, 0x7f09029a
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -286,7 +286,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f080379
+    const v4, 0x7f090415
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -313,7 +313,7 @@
 
     invoke-direct {v1, v3}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v3, 0x7f080378
+    const v3, 0x7f090414
 
     iput v3, v1, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -328,39 +328,55 @@
 
     if-eqz v1, :cond_8
 
+    :try_start_0
     new-instance v1, Lcn/com/smartdevices/bracelet/lab/a;
 
     const-string v3, "Other"
 
     invoke-direct {v1, v3}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v3, 0x7f080399
+    const v3, 0x7f09047d
 
     iput v3, v1, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
-    const-class v3, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    const-string v3, "cn.com.smartdevices.bracelet.lab.ui.LabFactoryTestActivity"
+
+    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v3
 
     iput-object v3, v1, Lcn/com/smartdevices/bracelet/lab/a;->b:Ljava/lang/Class;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
+    :goto_1
+    :try_start_1
     new-instance v1, Lcn/com/smartdevices/bracelet/lab/a;
 
     const-string v3, "RunningHelperTester"
 
     invoke-direct {v1, v3}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v3, 0x7f080394
+    const v3, 0x7f09047e
 
     iput v3, v1, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
-    const-class v3, Lcn/com/smartdevices/bracelet/gps/ui/GaodeTestActivity;
+    const-string v3, "cn.com.smartdevices.bracelet.gps.ui.GaodeTestActivity"
+
+    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v3
 
     iput-object v3, v1, Lcn/com/smartdevices/bracelet/lab/a;->b:Ljava/lang/Class;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     :cond_8
+    :goto_2
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v1
@@ -372,6 +388,16 @@
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     goto/16 :goto_0
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_1
 .end method
 
 

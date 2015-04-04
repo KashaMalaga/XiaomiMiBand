@@ -3,13 +3,16 @@
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnLongClickListener;
 .implements Lcn/com/smartdevices/bracelet/tag/b;
 
 
 # instance fields
-.field private c:Landroid/widget/TextView;
+.field c:Lcn/com/smartdevices/bracelet/tag/a/c;
 
-.field private d:Landroid/view/View;
+.field private d:Landroid/widget/TextView;
+
+.field private e:Landroid/view/View;
 
 
 # direct methods
@@ -36,19 +39,19 @@
 
     invoke-direct {v1}, Lcn/com/smartdevices/bracelet/tag/k;-><init>()V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->c:Landroid/widget/TextView;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->d:Landroid/widget/TextView;
 
-    const v3, 0x7f080379
+    const v3, 0x7f090415
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->d:Landroid/view/View;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->e:Landroid/view/View;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    const v2, 0x7f0700ad
+    const v2, 0x7f070072
 
     invoke-virtual {v0, v2, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -130,8 +133,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070035 -> :sswitch_0
-        0x7f0700b7 -> :sswitch_1
+        0x7f07003d -> :sswitch_0
+        0x7f0700fc -> :sswitch_1
     .end sparse-switch
 .end method
 
@@ -140,11 +143,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03001e
+    const v0, 0x7f030026
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagActivity;->setContentView(I)V
 
-    const v0, 0x7f070035
+    const v0, 0x7f07003d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagActivity;->findViewById(I)Landroid/view/View;
 
@@ -152,21 +155,29 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->c:Landroid/widget/TextView;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->d:Landroid/widget/TextView;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->c:Landroid/widget/TextView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->d:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700b7
+    const v0, 0x7f070051
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->d:Landroid/view/View;
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->d:Landroid/view/View;
+    const v0, 0x7f0700fc
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->e:Landroid/view/View;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->e:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -186,9 +197,9 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->c:Landroid/widget/TextView;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->d:Landroid/widget/TextView;
 
-    const v2, 0x7f080385
+    const v2, 0x7f090421
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -196,7 +207,7 @@
 
     invoke-direct {v1}, Lcn/com/smartdevices/bracelet/tag/h;-><init>()V
 
-    const v2, 0x7f0700ad
+    const v2, 0x7f070072
 
     invoke-virtual {v0, v2, v1}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -204,9 +215,17 @@
     invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
     :cond_0
+    new-instance v0, Lcn/com/smartdevices/bracelet/tag/a/c;
+
+    const-string v1, ""
+
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/tag/a/c;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->c:Lcn/com/smartdevices/bracelet/tag/a/c;
+
     const-string v0, "PartnerHealthIn"
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 
@@ -216,14 +235,52 @@
     goto :goto_0
 .end method
 
+.method public onLongClick(Landroid/view/View;)Z
+    .locals 2
+
+    const/4 v1, 0x0
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/lab/b/c;->f(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "\u5f53\u524d\u7f51\u7edc\u73af\u5883\u4e0d\u662fwifi\uff0c\u8bf7\u5230wifi\u4e0b\u518d\u6b21\u91cd\u8bd5"
+
+    invoke-static {p0, v0, v1}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    :goto_0
+    return v1
+
+    :cond_0
+    const-string v0, "\u5f00\u59cb\u4e0a\u4f20\uff0c\u8bf7\u4fdd\u6301\u7f51\u7edc\u73af\u5883\u7a33\u5b9a\uff01"
+
+    invoke-static {p0, v0, v1}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->c:Lcn/com/smartdevices/bracelet/tag/a/c;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->i()V
+
+    goto :goto_0
+.end method
+
 .method protected onPause()V
     .locals 1
 
     const-string v0, "PageLabMarkAction"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;)V
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onPause()V
 
@@ -233,11 +290,11 @@
 .method protected onResume()V
     .locals 1
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
 
     const-string v0, "PageLabMarkAction"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 

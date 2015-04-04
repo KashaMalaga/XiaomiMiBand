@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>সোম</item>
+        <item>মঙ্গল</item>
+        <item>বুধ</item>
+        <item>বৃহস্পতি</item>
+        <item>শুক্র</item>
+        <item>শনি</item>
+        <item>রবি</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>সোম</item>
+        <item>মঙ্গল</item>
+        <item>বুধ</item>
+        <item>বৃহস্পতি</item>
+        <item>শুক্র</item>
+        <item>শনি</item>
+        <item>রবি</item>
+    </string-array>
+    <string-array name="months">
+        <item>জানুয়ারী</item>
+        <item>ফেব্রুয়ারী</item>
+        <item>মার্চ</item>
+        <item>এপ্রিল</item>
+        <item>মে</item>
+        <item>জুন</item>
+        <item>জুলাই</item>
+        <item>আগস্ট</item>
+        <item>সেপ্টেম্বর</item>
+        <item>অক্টোবর</item>
+        <item>নভেম্বর</item>
+        <item>ডিসেম্বর</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>একবার</item>
+        <item>প্রতিদিন</item>
+        <item>কাজের দিন</item>
+        <item>কাস্টমাইজ করুন</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>সমণ্বয়ের বিকল্প নেই৷</item>
+        <item>প্রগতির চেষ্টা করুন, উত্কৃষ্টতার না৷</item>
+        <item>পুনরাবৃত্তি করে সফল হওয়া যায়৷</item>
+        <item>কর্মশক্তি এবং অধ্যবসায় দিয়ে জিত সুনিশ্চিত৷</item>
+        <item>ছোট ছোট লক্ষ্য স্থির করে ক্রমশ অগ্রসর হন৷</item>
+        <item>সব যাত্রার শুরু একটি পদক্ষেপ দিয়ে৷</item>
+        <item>দিনে একটি করে লক্ষ্যসাধন করুন৷</item>
+        <item>আপনি যতই মন্থর চলুন না কেন, অলস লোকেদের হারিয়ে দিচ্ছেন৷</item>
+        <item>যখন সম্ভব দৌড়াবেন৷ দরকার হলে হাঁটবেন৷ বাধ্য হলে হামাগুড়ি দেবেন৷ হাল ছেড়ে দেবেন না৷</item>
+        <item>মনে রাখবেন, ভালো ওয়ার্ক আউট করে যে তৃপ্তি পাওয়া যায় তা অলসভাবে বসে থেকে শুধু ওয়ার্ক আউট করার কথা ভেবে কখনোই পাওয়া যায় না৷</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>অসাধারণ</item>
+        <item>ভালো</item>
+        <item>মোটামুটি</item>
+        <item>সাবধান</item>
+        <item>অস্বাস্থ্যকর</item>
+        <item>খুব অস্বাস্থ্যকর</item>
+    </string-array>
+    <string-array name="weight_unit">
+        <item>kg</item>
+        <item>jin</item>
+        <item>পাউন্ড</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>কম ওজন</item>
+        <item>স্বাভাবিক ওজন</item>
+        <item>বেশী ওজন</item>
+        <item>খুব মোটা</item>
+        <item>খুব মোটা</item>
+    </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>BMI শ্রেণী: কম ওজন</item>
+        <item>BMI শ্রেণী: স্বাভাবিক ওজন</item>
+        <item>BMI শ্রেণী: বেশী ওজন</item>
+        <item>BMI শ্রেণী: খুব মোটা</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>Set a goal to help manage your weight.</item>
+        <item>"Congratulations! You're at your at your target weight."</item>
+        <item>"You're under your target weight"</item>
+        <item>"You're over your target weight"</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>Set a goal to help manage your weight.</item>
+        <item>"Congratulations! You're at your at your target weight."</item>
+        <item>"You're under your target weight"</item>
+        <item>"You're over your target weight"</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>লক্ষ্য ছাড়িয়েছেন</item>
+        <item>আপনার লক্ষ্যে পৌঁছাননি</item>
+        <item>আপনার লক্ষ্যে পৌঁছেছেন!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>আপনি এখনও আপনার লক্ষ্যে পৌঁছাননি</item>
+        <item>আপনি এখনও আপনার লক্ষ্যে পৌঁছাননি</item>
+        <item>আপনি এখনও আপনার লক্ষ্যে পৌঁছাননি</item>
+        <item>আপনি আপনার লক্ষ্যে পৌঁছেছেন (%1$s%2$s)!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>আপনি এখনও আপনার লক্ষ্যে পৌঁছাননি</item>
+        <item>আপনি এখনও আপনার লক্ষ্যে পৌঁছাননি</item>
+        <item>আপনি এখনও আপনার লক্ষ্যে পৌঁছাননি</item>
+        <item>আপনি আপনার লক্ষ্যে পৌঁছেছেন (%1$s%2$s)!</item>
+    </string-array>
+</resources>

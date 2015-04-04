@@ -3,39 +3,69 @@
 
 
 # static fields
-.field public static final A:Ljava/lang/String; = "huami.health.getUserLazyDay.json"
+.field public static final A:Ljava/lang/String; = "huami.health.cancelAuthorization.json"
 
-.field public static final B:Ljava/lang/String; = "huami.health.setUserLazyDay.json"
+.field public static final B:Ljava/lang/String; = "huami.health.authorizeThirdApp.json"
 
-.field public static final C:Ljava/lang/String; = "huami.health.uploadTag.json"
+.field public static final C:Ljava/lang/String; = "huami.health.fetchThirdAppData.json"
 
-.field public static final D:Ljava/lang/String; = "huami.health.scale.save.json"
+.field public static final D:Ljava/lang/String; = "huami.partner.bindThirdApp.json"
 
-.field public static final E:Ljava/lang/String; = "huami.health.scale.get.json"
+.field public static final E:Ljava/lang/String; = "huami.partner.checkBindStatus.json"
 
-.field public static final F:Ljava/lang/String; = "huami.health.scale.delete.json"
+.field public static final F:Ljava/lang/String; = "huami.partner.updateAppToken.json"
 
-.field public static final G:Ljava/lang/String; = "huami.health.scale.familymember.save.json"
+.field public static final G:Ljava/lang/String; = "huami.partner.getAppToken.json"
 
-.field public static final H:Ljava/lang/String; = "huami.health.scale.familymember.get.json"
+.field public static final H:Ljava/lang/String; = "huami.health.getUserLazyDay.json"
 
-.field public static final I:Ljava/lang/String; = "huami.health.scale.familymember.delete.json"
+.field public static final I:Ljava/lang/String; = "huami.health.setUserLazyDay.json"
 
-.field public static final J:Ljava/lang/String; = "huami.health.scale.device.save.json"
+.field public static final J:Ljava/lang/String; = "huami.health.uploadTag.json"
 
-.field public static final K:Ljava/lang/String; = "huami.health.scale.device.get.json"
+.field public static final K:Ljava/lang/String; = "huami.health.band.userFriend.remindFriend.json"
 
-.field public static final L:Ljava/lang/String; = "huami.health.scale.usergoal.saveusergoal.json"
+.field public static final L:Ljava/lang/String; = "huami.health.band.pushMessage.acceptInvitation.json"
 
-.field public static final M:Ljava/lang/String; = "huami.health.scale.usergoal.getusergoal.json"
+.field public static final M:Ljava/lang/String; = "huami.health.band.userFriend.removeRelationship.json"
 
-.field public static final N:Ljava/lang/String; = "huami.health.scale.usergoal.getusergoallist.json"
+.field public static final N:Ljava/lang/String; = "huami.health.band.pushMessage.sendInvitation.json"
 
-.field public static final O:Ljava/lang/String; = "huami.health.scale.usergoal.getusergoallast.json"
+.field public static final O:Ljava/lang/String; = "huami.health.band.userFriend.getFriendList.json"
 
-.field public static final P:Ljava/lang/String; = "huami.health.scale.usergoal.deleteusergoal.json"
+.field public static final P:Ljava/lang/String; = "huami.health.band.userBasicInfo.searchUser.json"
+
+.field public static final Q:Ljava/lang/String; = "huami.health.band.userFriend.getUserFriendInfo.json"
+
+.field public static final R:Ljava/lang/String; = "huami.health.band.userFriend.updateFriendNick.json"
+
+.field public static final S:Ljava/lang/String; = "huami.health.scale.save.json"
+
+.field public static final T:Ljava/lang/String; = "huami.health.scale.get.json"
+
+.field public static final U:Ljava/lang/String; = "huami.health.scale.delete.json"
+
+.field public static final V:Ljava/lang/String; = "huami.health.scale.familymember.save.json"
+
+.field public static final W:Ljava/lang/String; = "huami.health.scale.familymember.get.json"
+
+.field public static final X:Ljava/lang/String; = "huami.health.scale.familymember.delete.json"
+
+.field public static final Y:Ljava/lang/String; = "huami.health.scale.device.save.json"
+
+.field public static final Z:Ljava/lang/String; = "huami.health.scale.device.get.json"
 
 .field public static final a:Ljava/lang/String; = "huami.health.receiveData.json"
+
+.field public static final aa:Ljava/lang/String; = "huami.health.scale.usergoal.saveusergoal.json"
+
+.field public static final ab:Ljava/lang/String; = "huami.health.scale.usergoal.getusergoal.json"
+
+.field public static final ac:Ljava/lang/String; = "huami.health.scale.usergoal.getusergoallist.json"
+
+.field public static final ad:Ljava/lang/String; = "huami.health.scale.usergoal.getusergoallast.json"
+
+.field public static final ae:Ljava/lang/String; = "huami.health.scale.usergoal.deleteusergoal.json"
 
 .field public static final b:Ljava/lang/String; = "huami.health.bindProfile.json"
 
@@ -61,25 +91,23 @@
 
 .field public static final m:Ljava/lang/String; = "huami.health.getlatestluaversion.json"
 
-.field public static final q:Ljava/lang/String; = "huami.health.getlatestluaversionlist.json"
+.field public static final r:Ljava/lang/String; = "huami.health.getlatestluaversionlist.json"
 
-.field public static final r:Ljava/lang/String; = "huami.health.gethuodongconfig.json"
+.field public static final s:Ljava/lang/String; = "huami.health.gethuodongconfig.json"
 
-.field public static final s:Ljava/lang/String; = "huami.health.detectuserwhetherjoinhuodong.json"
+.field public static final t:Ljava/lang/String; = "huami.health.detectuserwhetherjoinhuodong.json"
 
-.field public static final t:Ljava/lang/String; = "huami.health.getSysTime.json"
+.field public static final u:Ljava/lang/String; = "huami.health.getSysTime.json"
 
-.field public static final u:Ljava/lang/String; = "huami.health.loginout.json"
+.field public static final v:Ljava/lang/String; = "huami.health.loginout.json"
 
-.field public static final v:Ljava/lang/String; = "huami.health.queryRecordRank.json"
+.field public static final w:Ljava/lang/String; = "huami.health.queryRecordRank.json"
 
-.field public static final w:Ljava/lang/String; = "huami.health.getThirdAppList.json"
+.field public static final x:Ljava/lang/String; = "huami.health.apk.upgrade.detect.json"
 
-.field public static final x:Ljava/lang/String; = "huami.health.cancelAuthorization.json"
+.field public static final y:Ljava/lang/String; = "wxunbind.json"
 
-.field public static final y:Ljava/lang/String; = "huami.health.authorizeThirdApp.json"
-
-.field public static final z:Ljava/lang/String; = "huami.health.fetchThirdAppData.json"
+.field public static final z:Ljava/lang/String; = "huami.health.getThirdAppList.json"
 
 
 # direct methods

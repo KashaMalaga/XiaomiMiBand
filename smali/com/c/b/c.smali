@@ -61,11 +61,11 @@
 
     iget-object v0, p0, Lcom/c/b/c;->a:Lcom/c/b/b;
 
-    invoke-virtual {v0}, Lcom/c/b/b;->a()Lcom/c/b/h;
+    invoke-virtual {v0}, Lcom/c/b/b;->a()Lcom/c/b/j;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/c/b/h;->a(IIII)Lcom/c/b/h;
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/c/b/j;->a(IIII)Lcom/c/b/j;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 
     iget-object v2, p0, Lcom/c/b/c;->a:Lcom/c/b/b;
 
-    invoke-virtual {v2, v0}, Lcom/c/b/b;->a(Lcom/c/b/h;)Lcom/c/b/b;
+    invoke-virtual {v2, v0}, Lcom/c/b/b;->a(Lcom/c/b/j;)Lcom/c/b/b;
 
     move-result-object v0
 
@@ -120,11 +120,11 @@
 
     iget-object v0, p0, Lcom/c/b/c;->a:Lcom/c/b/b;
 
-    invoke-virtual {v0}, Lcom/c/b/b;->a()Lcom/c/b/h;
+    invoke-virtual {v0}, Lcom/c/b/b;->a()Lcom/c/b/j;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/c/b/h;->d()Z
+    invoke-virtual {v0}, Lcom/c/b/j;->b()Z
 
     move-result v0
 
@@ -136,11 +136,11 @@
 
     iget-object v0, p0, Lcom/c/b/c;->a:Lcom/c/b/b;
 
-    invoke-virtual {v0}, Lcom/c/b/b;->a()Lcom/c/b/h;
+    invoke-virtual {v0}, Lcom/c/b/b;->a()Lcom/c/b/j;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/c/b/h;->e()Z
+    invoke-virtual {v0}, Lcom/c/b/j;->c()Z
 
     move-result v0
 
@@ -152,11 +152,11 @@
 
     iget-object v0, p0, Lcom/c/b/c;->a:Lcom/c/b/b;
 
-    invoke-virtual {v0}, Lcom/c/b/b;->a()Lcom/c/b/h;
+    invoke-virtual {v0}, Lcom/c/b/b;->a()Lcom/c/b/j;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/c/b/h;->f()Lcom/c/b/h;
+    invoke-virtual {v0}, Lcom/c/b/j;->e()Lcom/c/b/j;
 
     move-result-object v0
 
@@ -164,11 +164,62 @@
 
     iget-object v2, p0, Lcom/c/b/c;->a:Lcom/c/b/b;
 
-    invoke-virtual {v2, v0}, Lcom/c/b/b;->a(Lcom/c/b/h;)Lcom/c/b/b;
+    invoke-virtual {v2, v0}, Lcom/c/b/b;->a(Lcom/c/b/j;)Lcom/c/b/b;
 
     move-result-object v0
 
     invoke-direct {v1, v0}, Lcom/c/b/c;-><init>(Lcom/c/b/b;)V
 
     return-object v1
+.end method
+
+.method public g()Lcom/c/b/c;
+    .locals 3
+
+    iget-object v0, p0, Lcom/c/b/c;->a:Lcom/c/b/b;
+
+    invoke-virtual {v0}, Lcom/c/b/b;->a()Lcom/c/b/j;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/c/b/j;->f()Lcom/c/b/j;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/c/b/c;
+
+    iget-object v2, p0, Lcom/c/b/c;->a:Lcom/c/b/b;
+
+    invoke-virtual {v2, v0}, Lcom/c/b/b;->a(Lcom/c/b/j;)Lcom/c/b/b;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Lcom/c/b/c;-><init>(Lcom/c/b/b;)V
+
+    return-object v1
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    :try_start_0
+    invoke-virtual {p0}, Lcom/c/b/c;->c()Lcom/c/b/c/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/c/b/c/b;->toString()Ljava/lang/String;
+    :try_end_0
+    .catch Lcom/c/b/n; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v0, ""
+
+    goto :goto_0
 .end method

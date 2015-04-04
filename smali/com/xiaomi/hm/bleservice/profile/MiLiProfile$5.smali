@@ -77,7 +77,7 @@
 
     const-string v0, "ExceptSyncDataBeforeHead"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->b(Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -146,7 +146,7 @@
 
     const-string v0, "ExceptSyncDataLengthError"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->b(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -418,10 +418,7 @@
     move v0, v7
 
     :goto_2
-    # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$100()Ljava/lang/String;
-
-    move-result-object v2
+    const-string v2, "MiLiProfile"
 
     invoke-static {p1}, Lcom/xiaomi/hm/bleservice/w;->b([B)Ljava/lang/String;
 
@@ -434,7 +431,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_DataSourceOutputStream:Ljava/io/PipedOutputStream;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$500(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$400(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
 
     move-result-object v0
 
@@ -488,7 +485,7 @@
 
     const-string v0, "ExceptSyncDataHeadComing"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->b(Ljava/lang/String;)V
 
     move v0, v7
 

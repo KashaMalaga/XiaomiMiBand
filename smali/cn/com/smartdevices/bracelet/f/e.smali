@@ -1,62 +1,44 @@
-.class public Lcn/com/smartdevices/bracelet/f/e;
-.super Lcn/com/smartdevices/bracelet/f/d;
+.class public interface abstract annotation Lcn/com/smartdevices/bracelet/f/E;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+# annotations
+.annotation system Ldalvik/annotation/AnnotationDefault;
+    value = .subannotation Lcn/com/smartdevices/bracelet/f/E;
+        a = ""
+        b = false
+        c = false
+        d = ""
+        e = false
+    .end subannotation
+.end annotation
 
-    const/4 v0, 0x0
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/f/d;-><init>(I)V
-
-    return-void
-.end method
+.annotation runtime Ljava/lang/annotation/Target;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;
+    }
+.end annotation
 
 
 # virtual methods
-.method public a(ZLcn/com/smartdevices/bracelet/f/c;)Z
-    .locals 2
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/k;
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/f/f;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/f/f;-><init>(Lcn/com/smartdevices/bracelet/f/e;)V
-
-    invoke-direct {v0, v1, p1, p2}, Lcn/com/smartdevices/bracelet/a/k;-><init>(Lcn/com/smartdevices/bracelet/a/b;ZLcn/com/smartdevices/bracelet/f/c;)V
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/k;->c()V
-
-    const/4 v0, 0x1
-
-    return v0
+.method public abstract a()Ljava/lang/String;
 .end method
 
-.method public b()I
-    .locals 2
+.method public abstract b()Z
+.end method
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->a()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+.method public abstract c()Z
+.end method
 
-    move-result-object v0
+.method public abstract d()Ljava/lang/String;
+.end method
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->getRealtimeSteps()I
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+.method public abstract e()Z
 .end method

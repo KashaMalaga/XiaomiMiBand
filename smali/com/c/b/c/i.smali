@@ -46,11 +46,11 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {p0}, Lcom/c/b/c/b;->e()I
+    invoke-virtual {p0}, Lcom/c/b/c/b;->f()I
 
     move-result v4
 
-    invoke-virtual {p0}, Lcom/c/b/c/b;->f()I
+    invoke-virtual {p0}, Lcom/c/b/c/b;->g()I
 
     move-result v5
 
@@ -84,7 +84,7 @@
     if-le v6, v5, :cond_1
 
     :cond_0
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -173,7 +173,7 @@
     if-le v6, v5, :cond_7
 
     :cond_6
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 

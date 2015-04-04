@@ -52,7 +52,11 @@
 .method public static a(FFFFFFFF)Lcom/c/b/c/k;
     .locals 10
 
-    sub-float v0, p7, p5
+    sub-float v0, p0, p2
+
+    add-float/2addr v0, p4
+
+    sub-float v0, v0, p6
 
     sub-float v1, p1, p3
 
@@ -102,33 +106,29 @@
 
     sub-float v3, p6, p4
 
-    sub-float v4, p0, p2
+    sub-float v4, p3, p5
 
-    add-float/2addr v4, p4
+    sub-float v5, p7, p5
 
-    sub-float v4, v4, p6
+    mul-float v6, v2, v5
 
-    sub-float v5, p3, p5
-
-    mul-float v6, v2, v0
-
-    mul-float v7, v3, v5
+    mul-float v7, v3, v4
 
     sub-float/2addr v6, v7
 
-    mul-float/2addr v0, v4
+    mul-float/2addr v5, v0
 
     mul-float/2addr v3, v1
 
-    sub-float/2addr v0, v3
+    sub-float v3, v5, v3
 
-    div-float v7, v0, v6
+    div-float v7, v3, v6
 
-    mul-float v0, v2, v1
+    mul-float/2addr v1, v2
 
-    mul-float v1, v4, v5
+    mul-float/2addr v0, v4
 
-    sub-float/2addr v0, v1
+    sub-float v0, v1, v0
 
     div-float v8, v0, v6
 

@@ -1,68 +1,60 @@
 .class Landroid/support/v4/content/y;
-.super Landroid/support/v4/content/E;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/support/v4/content/E",
-        "<TParams;TResult;>;"
-    }
-.end annotation
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/content/w;
+.field final a:Landroid/content/IntentFilter;
+
+.field final b:Landroid/content/BroadcastReceiver;
+
+.field c:Z
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/content/w;)V
-    .locals 1
+.method constructor <init>(Landroid/content/IntentFilter;Landroid/content/BroadcastReceiver;)V
+    .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/content/y;->a:Landroid/support/v4/content/w;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Landroid/support/v4/content/y;->a:Landroid/content/IntentFilter;
 
-    invoke-direct {p0, v0}, Landroid/support/v4/content/E;-><init>(Landroid/support/v4/content/x;)V
+    iput-object p2, p0, Landroid/support/v4/content/y;->b:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public call()Ljava/lang/Object;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TResult;"
-        }
-    .end annotation
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, p0, Landroid/support/v4/content/y;->a:Landroid/support/v4/content/w;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Landroid/support/v4/content/w;->a(Landroid/support/v4/content/w;)Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/16 v1, 0x80
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const/4 v1, 0x1
+    const-string v1, "Receiver{"
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v0, 0xa
+    iget-object v1, p0, Landroid/support/v4/content/y;->b:Landroid/content/BroadcastReceiver;
 
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Landroid/support/v4/content/y;->a:Landroid/support/v4/content/w;
+    const-string v1, " filter="
 
-    iget-object v1, p0, Landroid/support/v4/content/y;->a:Landroid/support/v4/content/w;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Landroid/support/v4/content/y;->b:[Ljava/lang/Object;
+    iget-object v1, p0, Landroid/support/v4/content/y;->a:Landroid/content/IntentFilter;
 
-    invoke-virtual {v1, v2}, Landroid/support/v4/content/w;->a([Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v1, "}"
 
-    invoke-static {v0, v1}, Landroid/support/v4/content/w;->a(Landroid/support/v4/content/w;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

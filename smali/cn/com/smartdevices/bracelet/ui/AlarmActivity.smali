@@ -398,7 +398,7 @@
 
     const-string v1, "AlarmActivity"
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
     move-result-object v3
 
@@ -408,7 +408,7 @@
 
     invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
     move-result-object v1
 
@@ -608,7 +608,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->z:Landroid/view/View;
 
-    const v1, 0x7f09003d
+    const v1, 0x7f0a000c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -634,7 +634,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->z:Landroid/view/View;
 
-    const v1, 0x7f09003e
+    const v1, 0x7f0a0055
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -676,7 +676,7 @@
 .method private e()V
     .locals 2
 
-    const v0, 0x7f07019f
+    const v0, 0x7f0701e8
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -698,7 +698,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    const v0, 0x7f070040
+    const v0, 0x7f070048
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -706,7 +706,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->y:Landroid/view/View;
 
-    const v0, 0x7f070045
+    const v0, 0x7f070066
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -800,7 +800,7 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     :try_start_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
     move-result-object v0
 
@@ -857,7 +857,7 @@
 
     invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/c;-><init>(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)V
 
-    invoke-static {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;Ljava/util/HashMap;Lcn/com/smartdevices/bracelet/V;)V
+    invoke-static {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;Ljava/util/HashMap;Lcn/com/smartdevices/bracelet/Y;)V
 
     return-void
 
@@ -1048,7 +1048,7 @@
 
     invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;)V
 
-    const v0, 0x7f03003e
+    const v0, 0x7f03004d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->setContentView(I)V
 
@@ -1193,7 +1193,7 @@
 
     const-string v2, "AlarmSetting"
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -1236,9 +1236,9 @@
 
     const-string v0, "PageAlarm"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -1271,9 +1271,9 @@
     :cond_0
     const-string v0, "PageAlarm"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
 
     return-void
 .end method

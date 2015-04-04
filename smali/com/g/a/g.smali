@@ -1,49 +1,66 @@
-.class Lcom/g/a/G;
+.class public Lcom/g/a/g;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Landroid/webkit/WebView;
-
-.field final synthetic b:Z
-
-.field final synthetic c:Lcom/g/a/E;
+.field private a:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcom/g/a/E;Landroid/webkit/WebView;Z)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/g/a/G;->c:Lcom/g/a/E;
-
-    iput-object p2, p0, Lcom/g/a/G;->a:Landroid/webkit/WebView;
-
-    iput-boolean p3, p0, Lcom/g/a/G;->b:Z
+.method public constructor <init>(Landroid/content/Context;Landroid/webkit/WebView;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/g/a/g;->a:Landroid/content/Context;
+
+    invoke-virtual {p2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
+
+    new-instance v0, Lcom/g/a/h;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/g/a/h;-><init>(Lcom/g/a/g;Landroid/webkit/WebChromeClient;)V
+
+    invoke-virtual {p2, v0}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Landroid/webkit/WebView;Landroid/webkit/WebChromeClient;)V
+    .locals 2
 
-# virtual methods
-.method public run()V
-    .locals 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lcom/g/a/G;->c:Lcom/g/a/E;
+    iput-object p1, p0, Lcom/g/a/g;->a:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/g/a/G;->a:Landroid/webkit/WebView;
+    invoke-virtual {p2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
-    iget-boolean v2, p0, Lcom/g/a/G;->b:Z
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Landroid/webkit/WebView;->pageDown(Z)Z
+    const/4 v1, 0x1
 
-    move-result v1
+    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    invoke-static {v0, v1}, Lcom/g/a/E;->a(Lcom/g/a/E;Z)Z
+    new-instance v0, Lcom/g/a/h;
+
+    invoke-direct {v0, p0, p3}, Lcom/g/a/h;-><init>(Lcom/g/a/g;Landroid/webkit/WebChromeClient;)V
+
+    invoke-virtual {p2, v0}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
     return-void
+.end method
+
+.method static synthetic a(Lcom/g/a/g;)Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Lcom/g/a/g;->a:Landroid/content/Context;
+
+    return-object v0
 .end method

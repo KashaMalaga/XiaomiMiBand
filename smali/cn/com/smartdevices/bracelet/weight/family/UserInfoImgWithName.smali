@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private b:Landroid/widget/ImageButton;
+.field private b:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
 .field private c:Landroid/widget/TextView;
 
@@ -73,7 +73,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300ba
+    const v1, 0x7f0300d1
 
     const/4 v2, 0x1
 
@@ -81,21 +81,21 @@
 
     move-result-object v1
 
-    const v0, 0x7f070365
+    const v0, 0x7f0703bf
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageButton;
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Landroid/widget/ImageButton;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
-    invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070366
+    const v0, 0x7f0703c0
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -111,15 +111,11 @@
 
 # virtual methods
 .method public a(I)V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->c:Landroid/widget/TextView;
 
-    new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
-
-    invoke-direct {v1, p1, p1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
     return-void
 .end method
@@ -127,9 +123,9 @@
 .method public a(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->c:Landroid/widget/TextView;
 
@@ -185,11 +181,11 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
-    const v1, 0x7f020082
+    const v1, 0x7f020085
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->setBackgroundResource(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->c:Landroid/widget/TextView;
 
@@ -229,7 +225,7 @@
 
     if-eqz p1, :cond_0
 
-    const v0, 0x7f070364
+    const v0, 0x7f0703be
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->findViewById(I)Landroid/view/View;
 
@@ -249,7 +245,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f070366
+    const v0, 0x7f0703c0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->findViewById(I)Landroid/view/View;
 
@@ -262,12 +258,40 @@
     goto :goto_0
 .end method
 
+.method public b(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->c:Landroid/widget/TextView;
+
+    int-to-float v1, p1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
+
+    return-void
+.end method
+
 .method public b(Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/E;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Landroid/widget/ImageView;)V
+    iget v1, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/G;->c(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->a(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
+
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->a(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
+
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/G;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Landroid/widget/ImageView;)V
 
     return-void
 .end method
@@ -309,7 +333,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070365
+    .packed-switch 0x7f0703bf
         :pswitch_0
     .end packed-switch
 .end method

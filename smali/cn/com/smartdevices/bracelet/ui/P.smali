@@ -1,91 +1,107 @@
-.class public Lcn/com/smartdevices/bracelet/ui/P;
-.super Landroid/support/v13/app/i;
+.class Lcn/com/smartdevices/bracelet/ui/P;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/i/d;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/FragmentManager;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/support/v13/app/i;-><init>(Landroid/app/FragmentManager;)V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/P;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)I
-    .locals 1
+.method public a(D)V
+    .locals 3
 
-    const/4 v0, -0x2
+    const/4 v2, 0x1
 
-    return v0
-.end method
+    const-wide/16 v0, 0x0
 
-.method public a(I)Landroid/app/Fragment;
-    .locals 1
+    cmpl-double v0, p1, v0
 
-    const/4 v0, 0x0
+    if-ltz v0, :cond_1
 
-    packed-switch p1, :pswitch_data_0
+    const-wide v0, 0x4058c00000000000L
+
+    cmpg-double v0, p1, v0
+
+    if-gtz v0, :cond_0
+
+    invoke-static {p1, p2, v2}, Lcn/com/smartdevices/bracelet/gps/d/f;->b(DI)Ljava/lang/String;
+
+    move-result-object v0
 
     :goto_0
-    return-object v0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/do;
+    const-string v1, "%"
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/do;-><init>()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/P;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->b(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :goto_1
+    return-void
 
     :cond_0
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/w;
+    const/4 v0, 0x2
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/w;-><init>()V
+    invoke-static {p1, p2, v0}, Lcn/com/smartdevices/bracelet/gps/d/f;->b(DI)Ljava/lang/String;
 
-    goto :goto_0
-
-    :pswitch_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dE;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dE;-><init>()V
+    move-result-object v0
 
     goto :goto_0
 
     :cond_1
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/x;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/P;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/x;-><init>()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->b(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Landroid/widget/TextView;
 
-    goto :goto_0
+    move-result-object v0
 
-    nop
+    const/high16 v1, 0x41500000
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
+    invoke-virtual {v0, v2, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-.method public b()I
-    .locals 1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/P;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->h()I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->b(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Landroid/widget/TextView;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
+    const v1, 0x7f0902d7
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    goto :goto_1
 .end method

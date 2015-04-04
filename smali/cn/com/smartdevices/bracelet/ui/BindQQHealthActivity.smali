@@ -32,15 +32,15 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->d:Lcn/com/smartdevices/bracelet/config/b;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/y;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/A;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/y;-><init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/A;-><init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->e:Lcom/tencent/tauth/IUiListener;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/z;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/B;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/z;-><init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/B;-><init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->f:Lcom/tencent/tauth/IUiListener;
 
@@ -108,7 +108,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f080148
+    const v0, 0x7f090160
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
 
@@ -132,7 +132,7 @@
 
     invoke-virtual {p2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v1, 0x7f08008e
+    const v1, 0x7f0900a2
 
     const/4 v2, 0x1
 
@@ -163,7 +163,7 @@
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f08013e
+    const v0, 0x7f090156
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
 
@@ -197,9 +197,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a:Landroid/os/Handler;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/C;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/E;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/C;-><init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/E;-><init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
 
     const-wide/16 v2, 0x3e8
 
@@ -264,7 +264,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030002
+    const v0, 0x7f030003
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->setContentView(I)V
 
@@ -289,7 +289,7 @@
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a()V
 
     :cond_0
-    const v0, 0x7f070034
+    const v0, 0x7f07003c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->findViewById(I)Landroid/view/View;
 
@@ -301,13 +301,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->g:Landroid/widget/Button;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/A;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/C;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/A;-><init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/C;-><init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07003a
+    const v0, 0x7f070042
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->findViewById(I)Landroid/view/View;
 
@@ -366,9 +366,9 @@
 
     const-string v0, "PageBindQQHealth"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void
@@ -395,11 +395,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
 
     const-string v0, "PageBindQQHealth"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/tencent/QQLogin;
 
@@ -483,9 +483,9 @@
 
     if-eqz v0, :cond_5
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/B;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/D;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/B;-><init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/D;-><init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
 
     new-instance v1, Landroid/os/Bundle;
 
@@ -493,7 +493,7 @@
 
     const-string v2, "Msg"
 
-    const v3, 0x7f0802be
+    const v3, 0x7f0902ff
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->getString(I)Ljava/lang/String;
 
@@ -503,7 +503,7 @@
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/m;->setArguments(Landroid/os/Bundle;)V
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/W;->a(Landroid/app/Activity;Landroid/app/DialogFragment;)V
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aa;->showPanel(Landroid/app/Activity;Landroid/app/DialogFragment;)V
 
     goto :goto_0
 

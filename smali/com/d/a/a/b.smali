@@ -112,7 +112,7 @@
 
     invoke-direct {v4, v5}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2, v3, v0, v4}, Lcom/d/a/a/z;->a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v2, v3, v0, v4}, Lcom/d/a/a/z;->onFailure(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 

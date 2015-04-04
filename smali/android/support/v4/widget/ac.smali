@@ -1,131 +1,200 @@
-.class Landroid/support/v4/widget/ac;
-.super Landroid/support/v4/widget/ab;
-
-
-# instance fields
-.field private a:Ljava/lang/reflect/Method;
-
-.field private b:Ljava/lang/reflect/Field;
+.class Landroid/support/v4/widget/aC;
+.super Ljava/lang/Object;
 
 
 # direct methods
 .method constructor <init>()V
-    .locals 3
+    .locals 0
 
-    invoke-direct {p0}, Landroid/support/v4/widget/ab;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    const-class v1, Landroid/view/View;
-
-    const-string v2, "getDisplayList"
-
-    const/4 v0, 0x0
-
-    check-cast v0, [Ljava/lang/Class;
-
-    invoke-virtual {v1, v2, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v4/widget/ac;->a:Ljava/lang/reflect/Method;
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    :try_start_1
-    const-class v0, Landroid/view/View;
-
-    const-string v1, "mRecreateDisplayList"
-
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v4/widget/ac;->b:Ljava/lang/reflect/Field;
-
-    iget-object v0, p0, Landroid/support/v4/widget/ac;->b:Ljava/lang/reflect/Field;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_1 .. :try_end_1} :catch_1
-
-    :goto_1
     return-void
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "SlidingPaneLayout"
-
-    const-string v2, "Couldn\'t fetch getDisplayList method; dimming won\'t work right."
-
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    const-string v1, "SlidingPaneLayout"
-
-    const-string v2, "Couldn\'t fetch mRecreateDisplayList field; dimming will be slow."
-
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_1
 .end method
 
+.method public static a(Landroid/content/Context;)Landroid/view/View;
+    .locals 1
 
-# virtual methods
-.method public a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
-    .locals 3
+    new-instance v0, Landroid/widget/SearchView;
 
-    iget-object v0, p0, Landroid/support/v4/widget/ac;->a:Ljava/lang/reflect/Method;
+    invoke-direct {v0, p0}, Landroid/widget/SearchView;-><init>(Landroid/content/Context;)V
 
-    if-eqz v0, :cond_0
+    return-object v0
+.end method
 
-    iget-object v0, p0, Landroid/support/v4/widget/ac;->b:Ljava/lang/reflect/Field;
+.method public static a(Landroid/view/View;)Ljava/lang/CharSequence;
+    .locals 1
 
-    if-eqz v0, :cond_0
+    check-cast p0, Landroid/widget/SearchView;
 
-    :try_start_0
-    iget-object v0, p0, Landroid/support/v4/widget/ac;->b:Ljava/lang/reflect/Field;
+    invoke-virtual {p0}, Landroid/widget/SearchView;->getQuery()Ljava/lang/CharSequence;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    invoke-virtual {v0, p2, v1}, Ljava/lang/reflect/Field;->setBoolean(Ljava/lang/Object;Z)V
+    return-object v0
+.end method
 
-    iget-object v1, p0, Landroid/support/v4/widget/ac;->a:Ljava/lang/reflect/Method;
+.method public static a(Landroid/support/v4/widget/aF;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x0
+    new-instance v0, Landroid/support/v4/widget/aE;
 
-    check-cast v0, [Ljava/lang/Object;
+    invoke-direct {v0, p0}, Landroid/support/v4/widget/aE;-><init>(Landroid/support/v4/widget/aF;)V
 
-    invoke-virtual {v1, p2, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    return-object v0
+.end method
 
-    :goto_0
-    invoke-super {p0, p1, p2}, Landroid/support/v4/widget/ab;->a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
+.method public static a(Landroid/support/v4/widget/aG;)Ljava/lang/Object;
+    .locals 1
 
-    :goto_1
+    new-instance v0, Landroid/support/v4/widget/aD;
+
+    invoke-direct {v0, p0}, Landroid/support/v4/widget/aD;-><init>(Landroid/support/v4/widget/aG;)V
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/view/View;I)V
+    .locals 0
+
+    check-cast p0, Landroid/widget/SearchView;
+
+    invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setMaxWidth(I)V
+
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
+.method public static a(Landroid/view/View;Landroid/content/ComponentName;)V
+    .locals 2
 
-    const-string v1, "SlidingPaneLayout"
+    check-cast p0, Landroid/widget/SearchView;
 
-    const-string v2, "Error refreshing display list state"
+    invoke-virtual {p0}, Landroid/widget/SearchView;->getContext()Landroid/content/Context;
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    move-result-object v0
 
-    goto :goto_0
+    const-string v1, "search"
 
-    :cond_0
-    invoke-virtual {p2}, Landroid/view/View;->invalidate()V
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    goto :goto_1
+    move-result-object v0
+
+    check-cast v0, Landroid/app/SearchManager;
+
+    invoke-virtual {v0, p1}, Landroid/app/SearchManager;->getSearchableInfo(Landroid/content/ComponentName;)Landroid/app/SearchableInfo;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/widget/SearchView;->setSearchableInfo(Landroid/app/SearchableInfo;)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    .locals 0
+
+    check-cast p0, Landroid/widget/SearchView;
+
+    invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setQueryHint(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/view/View;Ljava/lang/CharSequence;Z)V
+    .locals 0
+
+    check-cast p0, Landroid/widget/SearchView;
+
+    invoke-virtual {p0, p1, p2}, Landroid/widget/SearchView;->setQuery(Ljava/lang/CharSequence;Z)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/view/View;Z)V
+    .locals 0
+
+    check-cast p0, Landroid/widget/SearchView;
+
+    invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setIconified(Z)V
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p0, Landroid/widget/SearchView;
+
+    check-cast p1, Landroid/widget/SearchView$OnQueryTextListener;
+
+    invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setOnQueryTextListener(Landroid/widget/SearchView$OnQueryTextListener;)V
+
+    return-void
+.end method
+
+.method public static b(Landroid/view/View;Z)V
+    .locals 0
+
+    check-cast p0, Landroid/widget/SearchView;
+
+    invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setSubmitButtonEnabled(Z)V
+
+    return-void
+.end method
+
+.method public static b(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p0, Landroid/widget/SearchView;
+
+    check-cast p1, Landroid/widget/SearchView$OnCloseListener;
+
+    invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setOnCloseListener(Landroid/widget/SearchView$OnCloseListener;)V
+
+    return-void
+.end method
+
+.method public static b(Landroid/view/View;)Z
+    .locals 1
+
+    check-cast p0, Landroid/widget/SearchView;
+
+    invoke-virtual {p0}, Landroid/widget/SearchView;->isIconified()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static c(Landroid/view/View;Z)V
+    .locals 0
+
+    check-cast p0, Landroid/widget/SearchView;
+
+    invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setQueryRefinementEnabled(Z)V
+
+    return-void
+.end method
+
+.method public static c(Landroid/view/View;)Z
+    .locals 1
+
+    check-cast p0, Landroid/widget/SearchView;
+
+    invoke-virtual {p0}, Landroid/widget/SearchView;->isSubmitButtonEnabled()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static d(Landroid/view/View;)Z
+    .locals 1
+
+    check-cast p0, Landroid/widget/SearchView;
+
+    invoke-virtual {p0}, Landroid/widget/SearchView;->isQueryRefinementEnabled()Z
+
+    move-result v0
+
+    return v0
 .end method

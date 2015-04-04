@@ -6,7 +6,7 @@
 
 
 # static fields
-.field protected static final a:Ljava/lang/String;
+.field protected static final a:Ljava/lang/String; = "MemberInfoBaseActivity"
 
 .field public static final b:Ljava/lang/String; = "USER_INFO_UID"
 
@@ -28,20 +28,6 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 2
 
@@ -67,7 +53,7 @@
 .method protected a()V
     .locals 1
 
-    const v0, 0x7f0701c1
+    const v0, 0x7f07020b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -79,7 +65,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0701bf
+    const v0, 0x7f070209
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -97,7 +83,7 @@
 .method public b()V
     .locals 2
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->a:Ljava/lang/String;
+    const-string v0, "MemberInfoBaseActivity"
 
     const-string v1, "onCancel"
 
@@ -119,19 +105,25 @@
 .end method
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
-    .locals 2
+    .locals 3
 
-    const/4 v1, -0x1
+    const/4 v2, -0x1
 
     invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onActivityResult(IILandroid/content/Intent;)V
+
+    const-string v0, "MemberInfoBaseActivity"
+
+    const-string v1, "onActivityResult "
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x6
 
     if-ne p1, v0, :cond_0
 
-    if-ne p2, v1, :cond_1
+    if-ne p2, v2, :cond_1
 
-    invoke-virtual {p0, v1, p3}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v2, p3}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->setResult(ILandroid/content/Intent;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->finish()V
 
@@ -181,7 +173,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0701bf
+    .packed-switch 0x7f070209
         :pswitch_1
         :pswitch_0
         :pswitch_2

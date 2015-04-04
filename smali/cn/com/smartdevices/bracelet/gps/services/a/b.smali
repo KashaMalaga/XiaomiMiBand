@@ -3,10 +3,10 @@
 
 
 # virtual methods
-.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/b/u;)V
+.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/services/J;)V
 .end method
 
-.method public abstract a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/u;)V
+.method public abstract a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/services/J;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -14,7 +14,7 @@
             "<",
             "Lcn/com/smartdevices/bracelet/gps/model/c;",
             ">;",
-            "Lcn/com/smartdevices/bracelet/gps/b/u;",
+            "Lcn/com/smartdevices/bracelet/gps/services/J;",
             ")V"
         }
     .end annotation

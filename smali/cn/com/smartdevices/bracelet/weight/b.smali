@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/weight/D;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/A;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/y;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/A;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/y;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/B;->a:Lcn/com/smartdevices/bracelet/weight/A;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/B;->a:Lcn/com/smartdevices/bracelet/weight/y;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,44 +22,26 @@
 
 
 # virtual methods
-.method public a()V
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/a;->a()Lcn/com/smartdevices/bracelet/weight/a;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/B;->a:Lcn/com/smartdevices/bracelet/weight/A;
+    check-cast v0, Ljava/lang/Float;
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/weight/A;->a:Landroid/content/Context;
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/a;->a(Landroid/content/Context;)Z
+    move-result v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/goal/a;->a()Lcn/com/smartdevices/bracelet/weight/goal/a;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/B;->a:Lcn/com/smartdevices/bracelet/weight/y;
 
-    move-result-object v0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/y;->b(Lcn/com/smartdevices/bracelet/weight/y;)Landroid/widget/RelativeLayout;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/B;->a:Lcn/com/smartdevices/bracelet/weight/A;
+    move-result-object v1
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/weight/A;->a:Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/goal/a;->a(Landroid/content/Context;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/o;->a()Lcn/com/smartdevices/bracelet/weight/o;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/B;->a:Lcn/com/smartdevices/bracelet/weight/A;
-
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/weight/A;->a:Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/o;->b(Landroid/content/Context;)Z
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 0
+    invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->setAlpha(F)V
 
     return-void
 .end method

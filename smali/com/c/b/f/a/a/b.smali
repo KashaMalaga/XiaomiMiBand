@@ -35,10 +35,10 @@
     return-void
 .end method
 
-.method constructor <init>(Lcom/c/b/c/b;Lcom/c/b/r;)V
+.method constructor <init>(Lcom/c/b/c/b;Lcom/c/b/v;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/c/b/i/b/e;-><init>(Lcom/c/b/c/b;Lcom/c/b/r;)V
+    invoke-direct {p0, p1, p2}, Lcom/c/b/i/b/e;-><init>(Lcom/c/b/c/b;Lcom/c/b/v;)V
 
     return-void
 .end method
@@ -58,7 +58,7 @@
 
     if-ge v7, v0, :cond_0
 
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -327,7 +327,7 @@
 
     aput-object v2, v9, v10
 
-    invoke-static {v9}, Lcom/c/b/q;->a([Lcom/c/b/q;)V
+    invoke-static {v9}, Lcom/c/b/u;->a([Lcom/c/b/u;)V
 
     new-instance v2, Lcom/c/b/i/b/i;
 
@@ -341,7 +341,7 @@
 
     move-result-object v11
 
-    invoke-static {v10, v11}, Lcom/c/b/q;->a(Lcom/c/b/q;Lcom/c/b/q;)F
+    invoke-static {v10, v11}, Lcom/c/b/u;->a(Lcom/c/b/u;Lcom/c/b/u;)F
 
     move-result v10
 
@@ -353,7 +353,7 @@
 
     move-result-object v12
 
-    invoke-static {v11, v12}, Lcom/c/b/q;->a(Lcom/c/b/q;Lcom/c/b/q;)F
+    invoke-static {v11, v12}, Lcom/c/b/u;->a(Lcom/c/b/u;Lcom/c/b/u;)F
 
     move-result v11
 
@@ -365,7 +365,7 @@
 
     move-result-object v2
 
-    invoke-static {v12, v2}, Lcom/c/b/q;->a(Lcom/c/b/q;Lcom/c/b/q;)F
+    invoke-static {v12, v2}, Lcom/c/b/u;->a(Lcom/c/b/u;Lcom/c/b/u;)F
 
     move-result v2
 
@@ -469,7 +469,7 @@
     goto/16 :goto_0
 
     :cond_b
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -479,7 +479,7 @@
 
 # virtual methods
 .method public a(Ljava/util/Map;)[Lcom/c/b/i/b/i;
-    .locals 14
+    .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -491,17 +491,7 @@
         }
     .end annotation
 
-    const/4 v13, 0x2
-
-    const/4 v12, 0x4
-
-    const/4 v1, 0x1
-
-    const/4 v4, 0x3
-
-    const/4 v2, 0x0
-
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     sget-object v0, Lcom/c/b/e;->d:Lcom/c/b/e;
 
@@ -509,237 +499,316 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    move v0, v1
+    const/4 v0, 0x1
+
+    move v2, v0
 
     :goto_0
+    if-eqz p1, :cond_4
+
+    sget-object v0, Lcom/c/b/e;->b:Lcom/c/b/e;
+
+    invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const/4 v0, 0x1
+
+    :goto_1
     invoke-virtual {p0}, Lcom/c/b/f/a/a/b;->a()Lcom/c/b/c/b;
 
-    move-result-object v7
+    move-result-object v5
 
-    invoke-virtual {v7}, Lcom/c/b/c/b;->f()I
+    invoke-virtual {v5}, Lcom/c/b/c/b;->g()I
 
-    move-result v8
+    move-result v6
 
-    invoke-virtual {v7}, Lcom/c/b/c/b;->e()I
+    invoke-virtual {v5}, Lcom/c/b/c/b;->f()I
+
+    move-result v7
+
+    int-to-float v1, v6
+
+    const/high16 v3, 0x43640000
+
+    div-float/2addr v1, v3
+
+    const/high16 v3, 0x40400000
+
+    mul-float/2addr v1, v3
+
+    float-to-int v1, v1
+
+    const/4 v3, 0x3
+
+    if-lt v1, v3, :cond_0
+
+    if-eqz v2, :cond_1
+
+    :cond_0
+    const/4 v1, 0x3
+
+    :cond_1
+    const/4 v2, 0x5
+
+    new-array v8, v2, [I
+
+    add-int/lit8 v2, v1, -0x1
+
+    move v4, v2
+
+    :goto_2
+    if-ge v4, v6, :cond_b
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    aput v3, v8, v2
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    aput v3, v8, v2
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    aput v3, v8, v2
+
+    const/4 v2, 0x3
+
+    const/4 v3, 0x0
+
+    aput v3, v8, v2
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x0
+
+    aput v3, v8, v2
+
+    const/4 v3, 0x0
+
+    const/4 v2, 0x0
+
+    move v11, v2
+
+    move v2, v3
+
+    move v3, v11
+
+    :goto_3
+    if-ge v3, v7, :cond_9
+
+    invoke-virtual {v5, v3, v4}, Lcom/c/b/c/b;->a(II)Z
 
     move-result v9
 
-    int-to-float v3, v8
+    if-eqz v9, :cond_5
 
-    const/high16 v5, 0x43640000
+    and-int/lit8 v9, v2, 0x1
 
-    div-float/2addr v3, v5
+    const/4 v10, 0x1
 
-    const/high16 v5, 0x40400000
+    if-ne v9, v10, :cond_2
 
-    mul-float/2addr v3, v5
+    add-int/lit8 v2, v2, 0x1
 
-    float-to-int v3, v3
+    :cond_2
+    aget v9, v8, v2
 
-    if-lt v3, v4, :cond_0
+    add-int/lit8 v9, v9, 0x1
 
-    if-eqz v0, :cond_f
-
-    :cond_0
-    move v0, v4
-
-    :goto_1
-    const/4 v3, 0x5
-
-    new-array v10, v3, [I
-
-    add-int/lit8 v3, v0, -0x1
-
-    move v6, v3
-
-    :goto_2
-    if-ge v6, v8, :cond_b
-
-    aput v2, v10, v2
-
-    aput v2, v10, v1
-
-    aput v2, v10, v13
-
-    aput v2, v10, v4
-
-    aput v2, v10, v12
-
-    move v5, v2
-
-    move v3, v2
-
-    :goto_3
-    if-ge v5, v9, :cond_9
-
-    invoke-virtual {v7, v5, v6}, Lcom/c/b/c/b;->a(II)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_3
-
-    and-int/lit8 v11, v3, 0x1
-
-    if-ne v11, v1, :cond_1
-
-    add-int/lit8 v3, v3, 0x1
-
-    :cond_1
-    aget v11, v10, v3
-
-    add-int/lit8 v11, v11, 0x1
-
-    aput v11, v10, v3
+    aput v9, v8, v2
 
     :goto_4
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
 
-    :cond_2
-    move v0, v2
+    :cond_3
+    const/4 v0, 0x0
+
+    move v2, v0
 
     goto :goto_0
 
-    :cond_3
-    and-int/lit8 v11, v3, 0x1
-
-    if-nez v11, :cond_8
-
-    if-ne v3, v12, :cond_7
-
-    invoke-static {v10}, Lcom/c/b/f/a/a/b;->a([I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    invoke-virtual {p0, v10, v6, v5}, Lcom/c/b/f/a/a/b;->a([III)Z
-
-    move-result v3
-
-    if-nez v3, :cond_e
-
     :cond_4
-    add-int/lit8 v5, v5, 0x1
+    const/4 v0, 0x0
 
-    if-ge v5, v9, :cond_5
-
-    invoke-virtual {v7, v5, v6}, Lcom/c/b/c/b;->a(II)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
+    goto :goto_1
 
     :cond_5
-    add-int/lit8 v3, v5, -0x1
+    and-int/lit8 v9, v2, 0x1
 
-    :goto_5
-    aput v2, v10, v2
+    if-nez v9, :cond_8
 
-    aput v2, v10, v1
+    const/4 v9, 0x4
 
-    aput v2, v10, v13
+    if-ne v2, v9, :cond_7
 
-    aput v2, v10, v4
+    invoke-static {v8}, Lcom/c/b/f/a/a/b;->a([I)Z
 
-    aput v2, v10, v12
+    move-result v2
 
-    move v5, v3
+    if-eqz v2, :cond_6
 
-    move v3, v2
+    invoke-virtual {p0, v8, v4, v3, v0}, Lcom/c/b/f/a/a/b;->a([IIIZ)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    const/4 v2, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    aput v10, v8, v9
+
+    const/4 v9, 0x1
+
+    const/4 v10, 0x0
+
+    aput v10, v8, v9
+
+    const/4 v9, 0x2
+
+    const/4 v10, 0x0
+
+    aput v10, v8, v9
+
+    const/4 v9, 0x3
+
+    const/4 v10, 0x0
+
+    aput v10, v8, v9
+
+    const/4 v9, 0x4
+
+    const/4 v10, 0x0
+
+    aput v10, v8, v9
 
     goto :goto_4
 
     :cond_6
-    aget v3, v10, v13
+    const/4 v2, 0x0
 
-    aput v3, v10, v2
+    const/4 v9, 0x2
 
-    aget v3, v10, v4
+    aget v9, v8, v9
 
-    aput v3, v10, v1
+    aput v9, v8, v2
 
-    aget v3, v10, v12
+    const/4 v2, 0x1
 
-    aput v3, v10, v13
+    const/4 v9, 0x3
 
-    aput v1, v10, v4
+    aget v9, v8, v9
 
-    aput v2, v10, v12
+    aput v9, v8, v2
 
-    move v3, v4
+    const/4 v2, 0x2
+
+    const/4 v9, 0x4
+
+    aget v9, v8, v9
+
+    aput v9, v8, v2
+
+    const/4 v2, 0x3
+
+    const/4 v9, 0x1
+
+    aput v9, v8, v2
+
+    const/4 v2, 0x4
+
+    const/4 v9, 0x0
+
+    aput v9, v8, v2
+
+    const/4 v2, 0x3
 
     goto :goto_4
 
     :cond_7
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
-    aget v11, v10, v3
+    aget v9, v8, v2
 
-    add-int/lit8 v11, v11, 0x1
+    add-int/lit8 v9, v9, 0x1
 
-    aput v11, v10, v3
+    aput v9, v8, v2
 
     goto :goto_4
 
     :cond_8
-    aget v11, v10, v3
+    aget v9, v8, v2
 
-    add-int/lit8 v11, v11, 0x1
+    add-int/lit8 v9, v9, 0x1
 
-    aput v11, v10, v3
+    aput v9, v8, v2
 
     goto :goto_4
 
     :cond_9
-    invoke-static {v10}, Lcom/c/b/f/a/a/b;->a([I)Z
+    invoke-static {v8}, Lcom/c/b/f/a/a/b;->a([I)Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_a
+    if-eqz v2, :cond_a
 
-    invoke-virtual {p0, v10, v6, v9}, Lcom/c/b/f/a/a/b;->a([III)Z
+    invoke-virtual {p0, v8, v4, v7, v0}, Lcom/c/b/f/a/a/b;->a([IIIZ)Z
 
     :cond_a
-    add-int v3, v6, v0
+    add-int v2, v4, v1
 
-    move v6, v3
+    move v4, v2
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_b
     invoke-direct {p0}, Lcom/c/b/f/a/a/b;->c()[[Lcom/c/b/i/b/d;
 
-    move-result-object v0
+    move-result-object v1
 
-    new-instance v1, Ljava/util/ArrayList;
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    array-length v3, v0
+    array-length v3, v1
 
-    :goto_6
-    if-ge v2, v3, :cond_c
+    const/4 v0, 0x0
 
-    aget-object v4, v0, v2
+    :goto_5
+    if-ge v0, v3, :cond_c
 
-    invoke-static {v4}, Lcom/c/b/q;->a([Lcom/c/b/q;)V
+    aget-object v4, v1, v0
+
+    invoke-static {v4}, Lcom/c/b/u;->a([Lcom/c/b/u;)V
 
     new-instance v5, Lcom/c/b/i/b/i;
 
     invoke-direct {v5, v4}, Lcom/c/b/i/b/i;-><init>([Lcom/c/b/i/b/d;)V
 
-    invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v2, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v0, v0, 0x1
 
-    goto :goto_6
+    goto :goto_5
 
     :cond_c
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
@@ -747,31 +816,21 @@
 
     sget-object v0, Lcom/c/b/f/a/a/b;->c:[Lcom/c/b/i/b/i;
 
-    :goto_7
+    :goto_6
     return-object v0
 
     :cond_d
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
 
     new-array v0, v0, [Lcom/c/b/i/b/i;
 
-    invoke-interface {v1, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-interface {v2, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Lcom/c/b/i/b/i;
 
-    goto :goto_7
-
-    :cond_e
-    move v3, v5
-
-    goto :goto_5
-
-    :cond_f
-    move v0, v3
-
-    goto/16 :goto_1
+    goto :goto_6
 .end method

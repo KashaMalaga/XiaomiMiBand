@@ -4,5 +4,14 @@
     <integer name="default_title_indicator_line_position">0</integer>
     <integer name="default_circle_indicator_orientation">0</integer>
     <integer name="partner_title_length">15</integer>
+    <integer name="instruction_weight_ripple_cx">730</integer>
+    <integer name="instruction_weight_ripple_cy">865</integer>
     <integer name="middle_animation_time">1000</integer>
+    <integer name="line_pie_mode_normal">0</integer>
+    <integer name="line_pie_mode_battery_normal">1</integer>
+    <integer name="line_pie_mode_battery_loading">2</integer>
+    <integer name="line_pie_mode_weight_normal">3</integer>
+    <integer name="line_pie_mode_weight_loading">4</integer>
+    <integer name="line_pie_mode_weight_progress">5</integer>
+    <integer name="line_pie_mode_normal_progress">6</integer>
 </resources>

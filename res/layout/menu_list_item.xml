@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/main_menu_item_text_size" android:textColor="#ff999999" android:gravity="center_vertical" android:id="@id/menu_name" android:background="@drawable/menu_item_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/main_menu_item_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:text="@string/action_pop_my_bracelet"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

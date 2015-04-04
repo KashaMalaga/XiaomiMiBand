@@ -1,41 +1,152 @@
-.class Landroid/support/v4/app/aM;
-.super Ljava/lang/Object;
+.class public Landroid/support/v4/app/aM;
+.super Landroid/support/v4/app/bq;
 
-# interfaces
-.implements Landroid/support/v4/app/aJ;
+
+# static fields
+.field public static final d:Landroid/support/v4/app/br;
+
+
+# instance fields
+.field public a:I
+
+.field public b:Ljava/lang/CharSequence;
+
+.field public c:Landroid/app/PendingIntent;
+
+.field private final e:Landroid/os/Bundle;
+
+.field private final f:[Landroid/support/v4/app/bR;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/support/v4/app/aN;
+
+    invoke-direct {v0}, Landroid/support/v4/app/aN;-><init>()V
+
+    sput-object v0, Landroid/support/v4/app/aM;->d:Landroid/support/v4/app/br;
 
     return-void
 .end method
 
+.method public constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    .locals 6
 
-# virtual methods
-.method public a(Landroid/content/Context;[Landroid/content/Intent;IILandroid/os/Bundle;)Landroid/app/PendingIntent;
-    .locals 3
+    new-instance v4, Landroid/os/Bundle;
 
-    const/4 v2, 0x0
+    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    new-instance v0, Landroid/content/Intent;
+    const/4 v5, 0x0
 
-    aget-object v1, p2, v2
+    move-object v0, p0
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+    move v1, p1
 
-    const v1, 0x1000c000
+    move-object v2, p2
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    move-object v3, p3
+
+    invoke-direct/range {v0 .. v5}, Landroid/support/v4/app/aM;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/bR;)V
+
+    return-void
+.end method
+
+.method private constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/bR;)V
+    .locals 1
+
+    invoke-direct {p0}, Landroid/support/v4/app/bq;-><init>()V
+
+    iput p1, p0, Landroid/support/v4/app/aM;->a:I
+
+    invoke-static {p2}, Landroid/support/v4/app/aT;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    aput-object v0, p2, v2
+    iput-object v0, p0, Landroid/support/v4/app/aM;->b:Ljava/lang/CharSequence;
 
-    invoke-static {p1, p3, p2, p4, p5}, Landroid/support/v4/app/aO;->a(Landroid/content/Context;I[Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/PendingIntent;
+    iput-object p3, p0, Landroid/support/v4/app/aM;->c:Landroid/app/PendingIntent;
+
+    if-eqz p4, :cond_0
+
+    :goto_0
+    iput-object p4, p0, Landroid/support/v4/app/aM;->e:Landroid/os/Bundle;
+
+    iput-object p5, p0, Landroid/support/v4/app/aM;->f:[Landroid/support/v4/app/bR;
+
+    return-void
+
+    :cond_0
+    new-instance p4, Landroid/os/Bundle;
+
+    invoke-direct {p4}, Landroid/os/Bundle;-><init>()V
+
+    goto :goto_0
+.end method
+
+.method synthetic constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/bR;Landroid/support/v4/app/aL;)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p5}, Landroid/support/v4/app/aM;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/bR;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Landroid/support/v4/app/aM;)Landroid/os/Bundle;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/app/aM;->e:Landroid/os/Bundle;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method protected a()I
+    .locals 1
+
+    iget v0, p0, Landroid/support/v4/app/aM;->a:I
+
+    return v0
+.end method
+
+.method protected b()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/app/aM;->b:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method protected c()Landroid/app/PendingIntent;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/app/aM;->c:Landroid/app/PendingIntent;
+
+    return-object v0
+.end method
+
+.method public d()Landroid/os/Bundle;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/app/aM;->e:Landroid/os/Bundle;
+
+    return-object v0
+.end method
+
+.method public e()[Landroid/support/v4/app/bR;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/app/aM;->f:[Landroid/support/v4/app/bR;
+
+    return-object v0
+.end method
+
+.method public synthetic f()[Landroid/support/v4/app/ca;
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/support/v4/app/aM;->e()[Landroid/support/v4/app/bR;
 
     move-result-object v0
 

@@ -1,61 +1,37 @@
-.class public final Lcn/com/smartdevices/bracelet/gps/services/p;
+.class final Lcn/com/smartdevices/bracelet/gps/services/p;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/gps/services/r;
 
 
 # instance fields
-.field public a:Lcn/com/smartdevices/bracelet/gps/b/v;
-
-.field public b:I
-
-.field public c:I
-
-.field public d:J
-
-.field public e:I
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/m;
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/m;)V
     .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/p;->a:Lcn/com/smartdevices/bracelet/gps/services/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/m;Lcn/com/smartdevices/bracelet/gps/services/n;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/p;-><init>(Lcn/com/smartdevices/bracelet/gps/services/m;)V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public a()Z
-    .locals 4
+.method public a()V
+    .locals 0
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/p;->d:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/p;->a:Lcn/com/smartdevices/bracelet/gps/b/v;
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/p;->b:I
-
-    if-lez v0, :cond_0
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/p;->c:I
-
-    if-gtz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

@@ -4773,7 +4773,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {p0}, Lorg/achartengine/a/v;->e_()Lorg/achartengine/a/s;
+    invoke-virtual {p0}, Lorg/achartengine/a/v;->d_()Lorg/achartengine/a/s;
 
     move-result-object v1
 
@@ -5467,7 +5467,7 @@
 .method public abstract d()Ljava/lang/String;
 .end method
 
-.method public e_()Lorg/achartengine/a/s;
+.method public d_()Lorg/achartengine/a/s;
     .locals 1
 
     const/4 v0, 0x0

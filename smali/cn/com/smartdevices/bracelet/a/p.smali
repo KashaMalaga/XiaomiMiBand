@@ -173,9 +173,9 @@
 
     const/4 v13, -0x1
 
-    const/16 v12, 0x8
-
     const/16 v1, 0x27
+
+    const/16 v12, 0x8
 
     const/16 v4, 0x1f4
 
@@ -232,13 +232,9 @@
 
     if-ne v2, v1, :cond_2
 
-    iget v2, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;->connInt:I
-
-    if-lt v2, v1, :cond_4
-
     iget v0, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;->connInt:I
 
-    const/16 v2, 0x31
+    const/16 v2, 0x3c
 
     if-gt v0, v2, :cond_4
 

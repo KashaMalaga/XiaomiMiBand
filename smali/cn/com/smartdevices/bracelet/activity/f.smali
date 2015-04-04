@@ -42,13 +42,13 @@
     :try_start_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->c()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->b()Ljava/lang/String;
 
     move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->k(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->l(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v2
 
@@ -94,7 +94,7 @@
 .method protected a(Ljava/lang/String;)V
     .locals 5
 
-    const v3, 0x7f080015
+    const v3, 0x7f090029
 
     const/4 v4, 0x1
 
@@ -135,7 +135,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->h(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->i(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)V
 
     const-string v0, "LoginActivity"
 
@@ -161,7 +161,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v0, v3, v4}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
+    invoke-static {v0, v3, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -193,7 +193,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->h(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->i(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)V
 
     const-string v1, "LoginActivity"
 
@@ -219,9 +219,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    const v1, 0x7f0800a9
+    const v1, 0x7f0900bd
 
-    invoke-static {v0, v1, v4}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
+    invoke-static {v0, v1, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -241,7 +241,7 @@
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->i(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->j(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
 
     move-result-object v0
 
@@ -249,7 +249,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->i(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->j(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
 
     move-result-object v0
 
@@ -259,7 +259,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->i(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->j(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
 
     move-result-object v0
 
@@ -280,7 +280,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v0, v3, v4}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
+    invoke-static {v0, v3, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -295,7 +295,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->i(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->j(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
 
     move-result-object v1
 
@@ -307,7 +307,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->i(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->j(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
 
     move-result-object v0
 

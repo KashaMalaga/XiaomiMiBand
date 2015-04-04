@@ -166,7 +166,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
     move-result-object v2
 
@@ -1318,6 +1318,14 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
+    const-string v1, "person_info_weight_unit"
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getWeightUnit()I
+
+    move-result v2
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
     const-string v1, "person_info_height"
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
@@ -1549,23 +1557,18 @@
 
     move-result-object v0
 
-    const-string v1, "weight_bind_info_name"
+    const-string v1, "KEY_WEIGHT_BIND_INFO"
 
-    iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;->name:Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    move-result-object v2
 
-    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;->address:Ljava/lang/String;
+    invoke-virtual {v2, p0}, Lcom/c/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
-    if-eqz v1, :cond_0
-
-    const-string v1, "weight_bind_info_address"
-
-    iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;->address:Ljava/lang/String;
+    move-result-object v2
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    :cond_0
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -1627,7 +1630,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
     move-result-object v0
 
@@ -1829,6 +1832,36 @@
 .method public static ai()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
     .locals 4
 
+    const/4 v1, 0x0
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
+
+    const-string v2, "KEY_WEIGHT_BIND_INFO"
+
+    const-string v3, ""
+
+    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :try_start_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
+
+    move-result-object v2
+
+    const-class v3, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
+
+    invoke-virtual {v2, v0, v3}, Lcom/c/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    if-nez v0, :cond_0
+
     new-instance v0, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
 
     invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;-><init>()V
@@ -1857,26 +1890,26 @@
 
     iput-object v1, v0, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;->address:Ljava/lang/String;
 
+    :cond_0
+    const-string v1, "info"
+
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
     return-object v0
+
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    goto :goto_0
 .end method
 
-.method public static aj()Z
-    .locals 3
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
-
-    const-string v1, "weight_merge_enable"
-
-    const/4 v2, 0x1
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static ak()Ljava/lang/String;
+.method public static aj()Ljava/lang/String;
     .locals 3
 
     sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
@@ -1890,6 +1923,70 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public static ak()Z
+    .locals 3
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
+
+    const-string v1, "KEY_24_HOUR_FORMAT"
+
+    const/4 v2, 0x1
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static al()Ljava/lang/String;
+    .locals 3
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
+
+    const-string v1, "city_code"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static am()Ljava/lang/String;
+    .locals 3
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
+
+    const-string v1, "country_code"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static an()Z
+    .locals 3
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
+
+    const-string v1, "is_loc_uploaded"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public static b()V
@@ -2292,6 +2389,24 @@
     return-wide v0
 .end method
 
+.method public static e(I)V
+    .locals 2
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "WeightUserId"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    return-void
+.end method
+
 .method public static e(J)V
     .locals 2
 
@@ -2344,6 +2459,20 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
+.end method
+
+.method public static f(I)I
+    .locals 2
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
+
+    const-string v1, "WeightUserId"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public static f()Landroid/content/SharedPreferences;
@@ -2423,7 +2552,7 @@
 
     const-string v2, "UPDATE_DATE_REF"
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
     move-result-object v3
 
@@ -2897,7 +3026,7 @@
 
     move-result-object v0
 
-    const-string v1, "ref_UX_config"
+    const-string v1, "behaviorTagEnable"
 
     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
@@ -2949,11 +3078,11 @@
 
     move-result-object v0
 
-    const-string v1, "weight_merge_enable"
+    const-string v1, "KEY_24_HOUR_FORMAT"
 
     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     return-void
 .end method
@@ -3019,11 +3148,11 @@
 
     move-result-object v0
 
-    const-string v1, "behaviorTagEnable"
+    const-string v1, "is_loc_uploaded"
 
     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     return-void
 .end method
@@ -3130,6 +3259,24 @@
     return v0
 .end method
 
+.method public static s(Ljava/lang/String;)V
+    .locals 2
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "city_code"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    return-void
+.end method
+
 .method public static s()Z
     .locals 3
 
@@ -3164,6 +3311,24 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public static t(Ljava/lang/String;)V
+    .locals 2
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "country_code"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    return-void
 .end method
 
 .method public static u()Z
@@ -3217,7 +3382,7 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
     move-result-object v1
 

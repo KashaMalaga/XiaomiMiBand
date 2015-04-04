@@ -22,11 +22,11 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/sina/weibo/sdk/exception/WeiboException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p3}, Lcom/sina/weibo/sdk/exception/WeiboException;-><init>(Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/sina/weibo/sdk/exception/WeiboAuthException;->mErrorType:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/sina/weibo/sdk/exception/WeiboAuthException;->mErrorCode:Ljava/lang/String;
+    iput-object p1, p0, Lcom/sina/weibo/sdk/exception/WeiboAuthException;->mErrorCode:Ljava/lang/String;
 
     return-void
 .end method

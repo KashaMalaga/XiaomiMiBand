@@ -5,35 +5,35 @@
 # static fields
 .field static final a:[[I
 
-.field private static final b:I = 0x40
+.field private static final b:F = 0.25f
 
-.field private static final e:I = 0xb3
+.field private static final c:F = 0.7f
 
-.field private static final f:I = 0x62
+.field private static final d:I = 0x62
 
-.field private static final g:I = 0x63
+.field private static final e:I = 0x63
 
-.field private static final h:I = 0x64
+.field private static final f:I = 0x64
 
-.field private static final i:I = 0x65
+.field private static final g:I = 0x65
 
-.field private static final j:I = 0x66
+.field private static final h:I = 0x66
 
-.field private static final k:I = 0x61
+.field private static final i:I = 0x61
 
-.field private static final l:I = 0x60
+.field private static final j:I = 0x60
 
-.field private static final m:I = 0x65
+.field private static final k:I = 0x65
 
-.field private static final n:I = 0x64
+.field private static final l:I = 0x64
 
-.field private static final o:I = 0x67
+.field private static final m:I = 0x67
 
-.field private static final p:I = 0x68
+.field private static final n:I = 0x68
 
-.field private static final q:I = 0x69
+.field private static final o:I = 0x69
 
-.field private static final r:I = 0x6a
+.field private static final p:I = 0x6a
 
 
 # direct methods
@@ -1989,7 +1989,7 @@
 
     invoke-static {p0, p2, p1}, Lcom/c/b/g/c;->a(Lcom/c/b/c/a;I[I)V
 
-    const/16 v2, 0x40
+    const/high16 v2, 0x3e800000
 
     const/4 v1, -0x1
 
@@ -2006,13 +2006,15 @@
 
     aget-object v3, v3, v0
 
-    const/16 v4, 0xb3
+    const v4, 0x3f333333
 
-    invoke-static {p1, v3, v4}, Lcom/c/b/g/c;->a([I[II)I
+    invoke-static {p1, v3, v4}, Lcom/c/b/g/c;->a([I[IF)F
 
     move-result v3
 
-    if-ge v3, v2, :cond_0
+    cmpg-float v4, v3, v2
+
+    if-gez v4, :cond_0
 
     move v1, v0
 
@@ -2029,7 +2031,7 @@
     return v1
 
     :cond_2
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -2104,7 +2106,7 @@
 
     if-ne v8, v0, :cond_3
 
-    const/16 v3, 0x40
+    const/high16 v3, 0x3e800000
 
     const/4 v0, -0x1
 
@@ -2119,13 +2121,15 @@
 
     aget-object v2, v2, v1
 
-    const/16 v13, 0xb3
+    const v13, 0x3f333333
 
-    invoke-static {v11, v2, v13}, Lcom/c/b/g/c;->a([I[II)I
+    invoke-static {v11, v2, v13}, Lcom/c/b/g/c;->a([I[IF)F
 
     move-result v2
 
-    if-ge v2, v3, :cond_6
+    cmpg-float v13, v2, v3
+
+    if-gez v13, :cond_6
 
     move v0, v1
 
@@ -2217,7 +2221,7 @@
     goto :goto_5
 
     :cond_5
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -2231,8 +2235,8 @@
 
 
 # virtual methods
-.method public a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/o;
-    .locals 22
+.method public a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/s;
+    .locals 25
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -2241,546 +2245,842 @@
             "<",
             "Lcom/c/b/e;",
             "*>;)",
-            "Lcom/c/b/o;"
+            "Lcom/c/b/s;"
         }
     .end annotation
 
+    if-eqz p3, :cond_0
+
+    sget-object v2, Lcom/c/b/e;->h:Lcom/c/b/e;
+
+    move-object/from16 v0, p3
+
+    invoke-interface {v0, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x1
+
+    :goto_0
     invoke-static/range {p2 .. p2}, Lcom/c/b/g/c;->a(Lcom/c/b/c/a;)[I
 
-    move-result-object v14
+    move-result-object v17
 
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    aget v4, v14, v2
+    aget v7, v17, v3
 
-    packed-switch v4, :pswitch_data_0
+    new-instance v18, Ljava/util/ArrayList;
 
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    const/16 v3, 0x14
+
+    move-object/from16 v0, v18
+
+    invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(I)V
+
+    int-to-byte v3, v7
+
+    invoke-static {v3}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object v3
+
+    move-object/from16 v0, v18
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    packed-switch v7, :pswitch_data_0
+
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v2
 
     throw v2
 
+    :cond_0
+    const/4 v2, 0x0
+
+    goto :goto_0
+
     :pswitch_0
-    const/16 v2, 0x65
+    const/16 v3, 0x65
 
-    :goto_0
-    const/4 v9, 0x0
-
-    const/4 v8, 0x0
-
-    new-instance v15, Ljava/lang/StringBuilder;
-
-    const/16 v3, 0x14
-
-    invoke-direct {v15, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    new-instance v16, Ljava/util/ArrayList;
-
-    const/16 v3, 0x14
-
-    move-object/from16 v0, v16
-
-    invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v3, 0x0
-
-    aget v6, v14, v3
-
-    const/4 v3, 0x1
-
-    aget v10, v14, v3
-
-    const/4 v3, 0x6
-
-    new-array v0, v3, [I
-
-    move-object/from16 v17, v0
+    :goto_1
+    const/4 v12, 0x0
 
     const/4 v11, 0x0
 
-    const/4 v5, 0x0
+    new-instance v19, Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
+    const/16 v4, 0x14
 
-    const/4 v7, 0x1
+    move-object/from16 v0, v19
 
-    move v13, v8
-
-    move v8, v6
-
-    move v6, v2
-
-    move v2, v3
-
-    move v3, v4
-
-    move v4, v11
-
-    move v11, v5
-
-    move v5, v9
-
-    :goto_1
-    if-nez v5, :cond_d
+    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const/4 v4, 0x0
 
-    move-object/from16 v0, p2
+    aget v9, v17, v4
 
-    move-object/from16 v1, v17
+    const/4 v4, 0x1
 
-    invoke-static {v0, v1, v10}, Lcom/c/b/g/c;->a(Lcom/c/b/c/a;[II)I
+    aget v13, v17, v4
 
-    move-result v12
+    const/4 v4, 0x6
 
-    int-to-byte v8, v12
+    new-array v0, v4, [I
 
-    invoke-static {v8}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    move-object/from16 v20, v0
 
-    move-result-object v8
-
-    move-object/from16 v0, v16
-
-    invoke-interface {v0, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    const/16 v8, 0x6a
-
-    if-eq v12, v8, :cond_0
-
-    const/4 v7, 0x1
-
-    :cond_0
-    const/16 v8, 0x6a
-
-    if-eq v12, v8, :cond_1
-
-    add-int/lit8 v2, v2, 0x1
-
-    mul-int v8, v2, v12
-
-    add-int/2addr v3, v8
-
-    :cond_1
-    move-object/from16 v0, v17
-
-    array-length v0, v0
-
-    move/from16 v18, v0
+    const/4 v14, 0x0
 
     const/4 v8, 0x0
 
-    move v9, v10
+    const/4 v4, 0x0
+
+    const/4 v10, 0x1
+
+    const/4 v6, 0x0
+
+    const/4 v5, 0x0
+
+    move/from16 v16, v11
+
+    move v11, v9
+
+    move v9, v3
+
+    move v3, v4
+
+    move v4, v7
+
+    move v7, v14
+
+    move v14, v8
+
+    move v8, v12
 
     :goto_2
-    move/from16 v0, v18
+    if-nez v8, :cond_1b
 
-    if-ge v8, v0, :cond_2
+    const/4 v7, 0x0
 
-    aget v19, v17, v8
+    move-object/from16 v0, p2
 
-    add-int v9, v9, v19
+    move-object/from16 v1, v20
 
-    add-int/lit8 v8, v8, 0x1
+    invoke-static {v0, v1, v13}, Lcom/c/b/g/c;->a(Lcom/c/b/c/a;[II)I
 
-    goto :goto_2
+    move-result v15
 
-    :pswitch_1
-    const/16 v2, 0x64
+    int-to-byte v11, v15
 
-    goto :goto_0
+    invoke-static {v11}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    :pswitch_2
-    const/16 v2, 0x63
+    move-result-object v11
 
-    goto :goto_0
+    move-object/from16 v0, v18
+
+    invoke-interface {v0, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const/16 v11, 0x6a
+
+    if-eq v15, v11, :cond_1
+
+    const/4 v10, 0x1
+
+    :cond_1
+    const/16 v11, 0x6a
+
+    if-eq v15, v11, :cond_2
+
+    add-int/lit8 v3, v3, 0x1
+
+    mul-int v11, v3, v15
+
+    add-int/2addr v4, v11
 
     :cond_2
-    packed-switch v12, :pswitch_data_1
+    move-object/from16 v0, v20
 
-    packed-switch v6, :pswitch_data_2
+    array-length v0, v0
+
+    move/from16 v21, v0
+
+    const/4 v11, 0x0
+
+    move v12, v13
 
     :goto_3
-    move/from16 v20, v7
+    move/from16 v0, v21
 
-    move v7, v5
+    if-ge v11, v0, :cond_3
 
-    move/from16 v5, v20
+    aget v22, v20, v11
 
-    move/from16 v21, v4
+    add-int v12, v12, v22
 
-    move v4, v6
+    add-int/lit8 v11, v11, 0x1
 
-    move/from16 v6, v21
+    goto :goto_3
 
-    :goto_4
-    if-eqz v13, :cond_3
-
-    const/16 v8, 0x65
-
-    if-ne v4, v8, :cond_c
-
-    const/16 v4, 0x64
-
-    :cond_3
-    :goto_5
-    move v8, v10
-
-    move v13, v6
-
-    move v10, v9
-
-    move v6, v4
-
-    move v4, v11
-
-    move v11, v12
-
-    move/from16 v20, v7
-
-    move v7, v5
-
-    move/from16 v5, v20
+    :pswitch_1
+    const/16 v3, 0x64
 
     goto :goto_1
 
+    :pswitch_2
+    const/16 v3, 0x63
+
+    goto :goto_1
+
+    :cond_3
+    packed-switch v15, :pswitch_data_1
+
+    packed-switch v9, :pswitch_data_2
+
+    :cond_4
+    :goto_4
+    move/from16 v23, v5
+
+    move v5, v9
+
+    move v9, v7
+
+    move v7, v6
+
+    move/from16 v6, v23
+
+    move/from16 v24, v8
+
+    move v8, v10
+
+    move/from16 v10, v24
+
+    :goto_5
+    if-eqz v16, :cond_5
+
+    const/16 v11, 0x65
+
+    if-ne v5, v11, :cond_1a
+
+    const/16 v5, 0x64
+
+    :cond_5
+    :goto_6
+    move v11, v13
+
+    move/from16 v16, v9
+
+    move v13, v12
+
+    move v9, v5
+
+    move v5, v6
+
+    move v6, v7
+
+    move v7, v14
+
+    move v14, v15
+
+    move/from16 v23, v10
+
+    move v10, v8
+
+    move/from16 v8, v23
+
+    goto :goto_2
+
     :pswitch_3
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v2
 
     throw v2
 
     :pswitch_4
-    const/16 v8, 0x40
+    const/16 v11, 0x40
 
-    if-ge v12, v8, :cond_4
+    if-ge v15, v11, :cond_7
 
-    add-int/lit8 v8, v12, 0x20
+    if-ne v5, v6, :cond_6
 
-    int-to-char v8, v8
+    add-int/lit8 v5, v15, 0x20
 
-    invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    int-to-char v5, v5
 
-    move/from16 v20, v7
+    move-object/from16 v0, v19
 
-    move v7, v5
-
-    move/from16 v5, v20
-
-    move/from16 v21, v4
-
-    move v4, v6
-
-    move/from16 v6, v21
-
-    goto :goto_4
-
-    :cond_4
-    const/16 v8, 0x60
-
-    if-ge v12, v8, :cond_5
-
-    add-int/lit8 v8, v12, -0x40
-
-    int-to-char v8, v8
-
-    invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move/from16 v20, v7
-
-    move v7, v5
-
-    move/from16 v5, v20
-
-    move/from16 v21, v4
-
-    move v4, v6
-
-    move/from16 v6, v21
-
-    goto :goto_4
-
-    :cond_5
-    const/16 v8, 0x6a
-
-    if-eq v12, v8, :cond_6
-
-    const/4 v7, 0x0
-
-    :cond_6
-    packed-switch v12, :pswitch_data_3
-
-    :goto_6
-    :pswitch_5
-    move/from16 v20, v7
-
-    move v7, v5
-
-    move/from16 v5, v20
-
-    move/from16 v21, v4
-
-    move v4, v6
-
-    move/from16 v6, v21
-
-    goto :goto_4
-
-    :pswitch_6
-    const/4 v4, 0x1
-
-    const/16 v6, 0x64
-
-    goto :goto_6
-
-    :pswitch_7
-    const/16 v6, 0x64
-
-    goto :goto_6
-
-    :pswitch_8
-    const/16 v6, 0x63
-
-    goto :goto_6
-
-    :pswitch_9
-    const/4 v5, 0x1
-
-    goto :goto_6
-
-    :pswitch_a
-    const/16 v8, 0x60
-
-    if-ge v12, v8, :cond_7
-
-    add-int/lit8 v8, v12, 0x20
-
-    int-to-char v8, v8
-
-    invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move/from16 v20, v7
-
-    move v7, v5
-
-    move/from16 v5, v20
-
-    move/from16 v21, v4
-
-    move v4, v6
-
-    move/from16 v6, v21
-
-    goto :goto_4
-
-    :cond_7
-    const/16 v8, 0x6a
-
-    if-eq v12, v8, :cond_8
-
-    const/4 v7, 0x0
-
-    :cond_8
-    packed-switch v12, :pswitch_data_4
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :goto_7
-    :pswitch_b
-    move/from16 v20, v7
+    const/4 v5, 0x0
 
-    move v7, v5
+    move/from16 v23, v5
 
-    move/from16 v5, v20
+    move v5, v9
 
-    move/from16 v21, v4
+    move v9, v7
 
-    move v4, v6
+    move v7, v6
 
-    move/from16 v6, v21
+    move/from16 v6, v23
 
-    goto/16 :goto_4
+    move/from16 v24, v8
 
-    :pswitch_c
-    const/4 v4, 0x1
+    move v8, v10
 
-    const/16 v6, 0x65
+    move/from16 v10, v24
 
-    goto :goto_7
+    goto :goto_5
 
-    :pswitch_d
-    const/16 v6, 0x65
+    :cond_6
+    add-int/lit8 v5, v15, 0x20
 
-    goto :goto_7
+    add-int/lit16 v5, v5, 0x80
 
-    :pswitch_e
-    const/16 v6, 0x63
+    int-to-char v5, v5
 
-    goto :goto_7
+    move-object/from16 v0, v19
 
-    :pswitch_f
-    const/4 v5, 0x1
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_7
 
-    :pswitch_10
-    const/16 v8, 0x64
+    :cond_7
+    const/16 v11, 0x60
 
-    if-ge v12, v8, :cond_a
+    if-ge v15, v11, :cond_9
 
-    const/16 v8, 0xa
+    if-ne v5, v6, :cond_8
 
-    if-ge v12, v8, :cond_9
+    add-int/lit8 v5, v15, -0x40
 
-    const/16 v8, 0x30
+    int-to-char v5, v5
 
-    invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :goto_8
+    const/4 v5, 0x0
+
+    move/from16 v23, v5
+
+    move v5, v9
+
+    move v9, v7
+
+    move v7, v6
+
+    move/from16 v6, v23
+
+    move/from16 v24, v8
+
+    move v8, v10
+
+    move/from16 v10, v24
+
+    goto :goto_5
+
+    :cond_8
+    add-int/lit8 v5, v15, 0x40
+
+    int-to-char v5, v5
+
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_8
 
     :cond_9
-    invoke-virtual {v15, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/16 v11, 0x6a
 
-    move/from16 v20, v7
+    if-eq v15, v11, :cond_a
 
-    move v7, v5
-
-    move/from16 v5, v20
-
-    move/from16 v21, v4
-
-    move v4, v6
-
-    move/from16 v6, v21
-
-    goto/16 :goto_4
+    const/4 v10, 0x0
 
     :cond_a
-    const/16 v8, 0x6a
-
-    if-eq v12, v8, :cond_b
-
-    const/4 v7, 0x0
+    packed-switch v15, :pswitch_data_3
 
     :cond_b
-    packed-switch v12, :pswitch_data_5
+    :goto_9
+    :pswitch_5
+    move/from16 v23, v5
 
-    :pswitch_11
-    goto/16 :goto_3
+    move v5, v9
 
-    :pswitch_12
-    const/16 v6, 0x64
+    move v9, v7
 
-    move/from16 v20, v7
+    move v7, v6
 
-    move v7, v5
+    move/from16 v6, v23
 
-    move/from16 v5, v20
+    move/from16 v24, v8
 
-    move/from16 v21, v4
+    move v8, v10
 
-    move v4, v6
+    move/from16 v10, v24
 
-    move/from16 v6, v21
+    goto :goto_5
 
-    goto/16 :goto_4
+    :pswitch_6
+    if-eqz v2, :cond_b
 
-    :pswitch_13
-    move/from16 v20, v7
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/StringBuilder;->length()I
 
-    move v7, v5
+    move-result v11
 
-    move/from16 v5, v20
+    if-nez v11, :cond_c
 
-    move/from16 v21, v4
+    const-string v11, "]C1"
 
-    move v4, v6
+    move-object/from16 v0, v19
 
-    move/from16 v6, v21
+    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_4
-
-    :pswitch_14
-    const/16 v6, 0x65
-
-    move/from16 v20, v7
-
-    move v7, v5
-
-    move/from16 v5, v20
-
-    move/from16 v21, v4
-
-    move v4, v6
-
-    move/from16 v6, v21
-
-    goto/16 :goto_4
-
-    :pswitch_15
-    const/4 v5, 0x1
-
-    move/from16 v20, v7
-
-    move v7, v5
-
-    move/from16 v5, v20
-
-    move/from16 v21, v4
-
-    move v4, v6
-
-    move/from16 v6, v21
-
-    goto/16 :goto_4
+    goto :goto_9
 
     :cond_c
-    const/16 v4, 0x65
+    const/16 v11, 0x1d
+
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_9
+
+    :pswitch_7
+    if-nez v6, :cond_d
+
+    if-eqz v5, :cond_d
+
+    const/4 v6, 0x1
+
+    const/4 v5, 0x0
+
+    goto :goto_9
+
+    :cond_d
+    if-eqz v6, :cond_e
+
+    if-eqz v5, :cond_e
+
+    const/4 v6, 0x0
+
+    const/4 v5, 0x0
+
+    goto :goto_9
+
+    :cond_e
+    const/4 v5, 0x1
+
+    goto :goto_9
+
+    :pswitch_8
+    const/4 v7, 0x1
+
+    const/16 v9, 0x64
+
+    goto :goto_9
+
+    :pswitch_9
+    const/16 v9, 0x64
+
+    goto :goto_9
+
+    :pswitch_a
+    const/16 v9, 0x63
+
+    goto :goto_9
+
+    :pswitch_b
+    const/4 v8, 0x1
+
+    goto :goto_9
+
+    :pswitch_c
+    const/16 v11, 0x60
+
+    if-ge v15, v11, :cond_10
+
+    if-ne v5, v6, :cond_f
+
+    add-int/lit8 v5, v15, 0x20
+
+    int-to-char v5, v5
+
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :goto_a
+    const/4 v5, 0x0
+
+    move/from16 v23, v5
+
+    move v5, v9
+
+    move v9, v7
+
+    move v7, v6
+
+    move/from16 v6, v23
+
+    move/from16 v24, v8
+
+    move v8, v10
+
+    move/from16 v10, v24
 
     goto/16 :goto_5
 
-    :cond_d
+    :cond_f
+    add-int/lit8 v5, v15, 0x20
+
+    add-int/lit16 v5, v5, 0x80
+
+    int-to-char v5, v5
+
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_a
+
+    :cond_10
+    const/16 v11, 0x6a
+
+    if-eq v15, v11, :cond_11
+
+    const/4 v10, 0x0
+
+    :cond_11
+    packed-switch v15, :pswitch_data_4
+
+    :cond_12
+    :goto_b
+    :pswitch_d
+    move/from16 v23, v5
+
+    move v5, v9
+
+    move v9, v7
+
+    move v7, v6
+
+    move/from16 v6, v23
+
+    move/from16 v24, v8
+
+    move v8, v10
+
+    move/from16 v10, v24
+
+    goto/16 :goto_5
+
+    :pswitch_e
+    if-eqz v2, :cond_12
+
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v11
+
+    if-nez v11, :cond_13
+
+    const-string v11, "]C1"
+
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_b
+
+    :cond_13
+    const/16 v11, 0x1d
+
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_b
+
+    :pswitch_f
+    if-nez v6, :cond_14
+
+    if-eqz v5, :cond_14
+
+    const/4 v6, 0x1
+
+    const/4 v5, 0x0
+
+    goto :goto_b
+
+    :cond_14
+    if-eqz v6, :cond_15
+
+    if-eqz v5, :cond_15
+
+    const/4 v6, 0x0
+
+    const/4 v5, 0x0
+
+    goto :goto_b
+
+    :cond_15
+    const/4 v5, 0x1
+
+    goto :goto_b
+
+    :pswitch_10
+    const/4 v7, 0x1
+
+    const/16 v9, 0x65
+
+    goto :goto_b
+
+    :pswitch_11
+    const/16 v9, 0x65
+
+    goto :goto_b
+
+    :pswitch_12
+    const/16 v9, 0x63
+
+    goto :goto_b
+
+    :pswitch_13
+    const/4 v8, 0x1
+
+    goto :goto_b
+
+    :pswitch_14
+    const/16 v11, 0x64
+
+    if-ge v15, v11, :cond_17
+
+    const/16 v11, 0xa
+
+    if-ge v15, v11, :cond_16
+
+    const/16 v11, 0x30
+
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_16
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move/from16 v23, v5
+
+    move v5, v9
+
+    move v9, v7
+
+    move v7, v6
+
+    move/from16 v6, v23
+
+    move/from16 v24, v8
+
+    move v8, v10
+
+    move/from16 v10, v24
+
+    goto/16 :goto_5
+
+    :cond_17
+    const/16 v11, 0x6a
+
+    if-eq v15, v11, :cond_18
+
+    const/4 v10, 0x0
+
+    :cond_18
+    packed-switch v15, :pswitch_data_5
+
+    :pswitch_15
+    goto/16 :goto_4
+
+    :pswitch_16
+    const/16 v9, 0x64
+
+    move/from16 v23, v5
+
+    move v5, v9
+
+    move v9, v7
+
+    move v7, v6
+
+    move/from16 v6, v23
+
+    move/from16 v24, v8
+
+    move v8, v10
+
+    move/from16 v10, v24
+
+    goto/16 :goto_5
+
+    :pswitch_17
+    if-eqz v2, :cond_4
+
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v11
+
+    if-nez v11, :cond_19
+
+    const-string v11, "]C1"
+
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move/from16 v23, v5
+
+    move v5, v9
+
+    move v9, v7
+
+    move v7, v6
+
+    move/from16 v6, v23
+
+    move/from16 v24, v8
+
+    move v8, v10
+
+    move/from16 v10, v24
+
+    goto/16 :goto_5
+
+    :cond_19
+    const/16 v11, 0x1d
+
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move/from16 v23, v5
+
+    move v5, v9
+
+    move v9, v7
+
+    move v7, v6
+
+    move/from16 v6, v23
+
+    move/from16 v24, v8
+
+    move v8, v10
+
+    move/from16 v10, v24
+
+    goto/16 :goto_5
+
+    :pswitch_18
+    const/16 v9, 0x65
+
+    move/from16 v23, v5
+
+    move v5, v9
+
+    move v9, v7
+
+    move v7, v6
+
+    move/from16 v6, v23
+
+    move/from16 v24, v8
+
+    move v8, v10
+
+    move/from16 v10, v24
+
+    goto/16 :goto_5
+
+    :pswitch_19
+    const/4 v8, 0x1
+
+    move/from16 v23, v5
+
+    move v5, v9
+
+    move v9, v7
+
+    move v7, v6
+
+    move/from16 v6, v23
+
+    move/from16 v24, v8
+
+    move v8, v10
+
+    move/from16 v10, v24
+
+    goto/16 :goto_5
+
+    :cond_1a
+    const/16 v5, 0x65
+
+    goto/16 :goto_6
+
+    :cond_1b
+    sub-int v2, v13, v11
+
     move-object/from16 v0, p2
 
-    invoke-virtual {v0, v10}, Lcom/c/b/c/a;->e(I)I
+    invoke-virtual {v0, v13}, Lcom/c/b/c/a;->e(I)I
 
     move-result v5
 
     invoke-virtual/range {p2 .. p2}, Lcom/c/b/c/a;->a()I
 
-    move-result v9
+    move-result v6
 
-    sub-int v10, v5, v8
+    sub-int v8, v5, v11
 
-    div-int/lit8 v10, v10, 0x2
+    div-int/lit8 v8, v8, 0x2
 
-    add-int/2addr v10, v5
+    add-int/2addr v8, v5
 
-    invoke-static {v9, v10}, Ljava/lang/Math;->min(II)I
+    invoke-static {v6, v8}, Ljava/lang/Math;->min(II)I
 
-    move-result v9
+    move-result v6
 
-    const/4 v10, 0x0
+    const/4 v8, 0x0
 
     move-object/from16 v0, p2
 
-    invoke-virtual {v0, v5, v9, v10}, Lcom/c/b/c/a;->a(IIZ)Z
+    invoke-virtual {v0, v5, v6, v8}, Lcom/c/b/c/a;->a(IIZ)Z
 
-    move-result v9
+    move-result v5
 
-    if-nez v9, :cond_e
+    if-nez v5, :cond_1c
 
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v2
 
     throw v2
 
-    :cond_e
-    mul-int/2addr v2, v4
+    :cond_1c
+    mul-int/2addr v3, v7
 
-    sub-int v2, v3, v2
+    sub-int v3, v4, v3
 
-    rem-int/lit8 v2, v2, 0x67
+    rem-int/lit8 v3, v3, 0x67
 
-    if-eq v2, v4, :cond_f
+    if-eq v3, v7, :cond_1d
 
     invoke-static {}, Lcom/c/b/d;->a()Lcom/c/b/d;
 
@@ -2788,59 +3088,63 @@
 
     throw v2
 
-    :cond_f
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->length()I
+    :cond_1d
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_10
+    if-nez v3, :cond_1e
 
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v2
 
     throw v2
 
-    :cond_10
-    if-lez v2, :cond_11
+    :cond_1e
+    if-lez v3, :cond_1f
 
-    if-eqz v7, :cond_11
+    if-eqz v10, :cond_1f
 
-    const/16 v3, 0x63
+    const/16 v4, 0x63
 
-    if-ne v6, v3, :cond_12
+    if-ne v9, v4, :cond_20
 
-    add-int/lit8 v3, v2, -0x2
+    add-int/lit8 v4, v3, -0x2
 
-    invoke-virtual {v15, v3, v2}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+    move-object/from16 v0, v19
 
-    :cond_11
-    :goto_8
-    const/4 v2, 0x1
+    invoke-virtual {v0, v4, v3}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    aget v2, v14, v2
+    :cond_1f
+    :goto_c
+    const/4 v3, 0x1
 
-    const/4 v3, 0x0
+    aget v3, v17, v3
 
-    aget v3, v14, v3
+    const/4 v4, 0x0
 
-    add-int/2addr v2, v3
+    aget v4, v17, v4
+
+    add-int/2addr v3, v4
+
+    int-to-float v3, v3
+
+    const/high16 v4, 0x40000000
+
+    div-float v4, v3, v4
+
+    int-to-float v3, v11
 
     int-to-float v2, v2
 
-    const/high16 v3, 0x40000000
+    const/high16 v5, 0x40000000
 
-    div-float v4, v2, v3
+    div-float/2addr v2, v5
 
-    add-int v2, v5, v8
+    add-float v5, v3, v2
 
-    int-to-float v2, v2
-
-    const/high16 v3, 0x40000000
-
-    div-float v5, v2, v3
-
-    invoke-interface/range {v16 .. v16}, Ljava/util/List;->size()I
+    invoke-interface/range {v18 .. v18}, Ljava/util/List;->size()I
 
     move-result v6
 
@@ -2850,10 +3154,10 @@
 
     move v3, v2
 
-    :goto_9
-    if-ge v3, v6, :cond_13
+    :goto_d
+    if-ge v3, v6, :cond_21
 
-    move-object/from16 v0, v16
+    move-object/from16 v0, v18
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2871,53 +3175,55 @@
 
     move v3, v2
 
-    goto :goto_9
+    goto :goto_d
 
-    :cond_12
-    add-int/lit8 v3, v2, -0x1
+    :cond_20
+    add-int/lit8 v4, v3, -0x1
 
-    invoke-virtual {v15, v3, v2}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+    move-object/from16 v0, v19
 
-    goto :goto_8
+    invoke-virtual {v0, v4, v3}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    :cond_13
-    new-instance v2, Lcom/c/b/o;
+    goto :goto_c
 
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_21
+    new-instance v2, Lcom/c/b/s;
+
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
     const/4 v6, 0x2
 
-    new-array v6, v6, [Lcom/c/b/q;
+    new-array v6, v6, [Lcom/c/b/u;
 
     const/4 v8, 0x0
 
-    new-instance v9, Lcom/c/b/q;
+    new-instance v9, Lcom/c/b/u;
 
     move/from16 v0, p1
 
     int-to-float v10, v0
 
-    invoke-direct {v9, v4, v10}, Lcom/c/b/q;-><init>(FF)V
+    invoke-direct {v9, v4, v10}, Lcom/c/b/u;-><init>(FF)V
 
     aput-object v9, v6, v8
 
     const/4 v4, 0x1
 
-    new-instance v8, Lcom/c/b/q;
+    new-instance v8, Lcom/c/b/u;
 
     move/from16 v0, p1
 
     int-to-float v9, v0
 
-    invoke-direct {v8, v5, v9}, Lcom/c/b/q;-><init>(FF)V
+    invoke-direct {v8, v5, v9}, Lcom/c/b/u;-><init>(FF)V
 
     aput-object v8, v6, v4
 
     sget-object v4, Lcom/c/b/a;->e:Lcom/c/b/a;
 
-    invoke-direct {v2, v3, v7, v6, v4}, Lcom/c/b/o;-><init>(Ljava/lang/String;[B[Lcom/c/b/q;Lcom/c/b/a;)V
+    invoke-direct {v2, v3, v7, v6, v4}, Lcom/c/b/s;-><init>(Ljava/lang/String;[B[Lcom/c/b/u;Lcom/c/b/a;)V
 
     return-object v2
 
@@ -2937,8 +3243,8 @@
 
     :pswitch_data_2
     .packed-switch 0x63
-        :pswitch_10
-        :pswitch_a
+        :pswitch_14
+        :pswitch_c
         :pswitch_4
     .end packed-switch
 
@@ -2946,40 +3252,40 @@
     .packed-switch 0x60
         :pswitch_5
         :pswitch_5
-        :pswitch_6
         :pswitch_8
-        :pswitch_7
-        :pswitch_5
-        :pswitch_5
-        :pswitch_5
-        :pswitch_5
-        :pswitch_5
+        :pswitch_a
         :pswitch_9
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_5
+        :pswitch_5
+        :pswitch_b
     .end packed-switch
 
     :pswitch_data_4
     .packed-switch 0x60
-        :pswitch_b
-        :pswitch_b
-        :pswitch_c
-        :pswitch_e
-        :pswitch_b
         :pswitch_d
-        :pswitch_b
-        :pswitch_b
-        :pswitch_b
-        :pswitch_b
+        :pswitch_d
+        :pswitch_10
+        :pswitch_12
         :pswitch_f
+        :pswitch_11
+        :pswitch_e
+        :pswitch_d
+        :pswitch_d
+        :pswitch_d
+        :pswitch_13
     .end packed-switch
 
     :pswitch_data_5
     .packed-switch 0x64
-        :pswitch_12
-        :pswitch_14
-        :pswitch_13
-        :pswitch_11
-        :pswitch_11
-        :pswitch_11
+        :pswitch_16
+        :pswitch_18
+        :pswitch_17
         :pswitch_15
+        :pswitch_15
+        :pswitch_15
+        :pswitch_19
     .end packed-switch
 .end method

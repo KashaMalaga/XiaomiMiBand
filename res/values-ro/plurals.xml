@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="numberOfPullUpdateReport">
+        <item quantity="other">%d articole actualizate</item>
+        <item quantity="one">%d articole actualizate</item>
+        <item quantity="few">%d articole actualizate</item>
+    </plurals>
+    <plurals name="numberFoot">
+        <item quantity="other">%s ft</item>
+        <item quantity="one">%s ft</item>
+        <item quantity="few">%s ft</item>
+    </plurals>
+    <plurals name="numberInch">
+        <item quantity="other">%s inch</item>
+        <item quantity="one">%s inch</item>
+        <item quantity="few">%s inch</item>
+    </plurals>
+</resources>

@@ -20,7 +20,7 @@
 
 .field private f:Landroid/support/v4/view/ViewPager;
 
-.field private g:Landroid/support/v4/view/ba;
+.field private g:Landroid/support/v4/view/bz;
 
 .field private h:I
 
@@ -61,7 +61,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    const v0, 0x7f01001a
+    const v0, 0x7f01002d
 
     invoke-direct {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -117,55 +117,55 @@
 
     move-result-object v0
 
-    const v1, 0x7f090085
+    const v1, 0x7f0a009d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
-    const v2, 0x7f090084
+    const v2, 0x7f0a009c
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
-    const v3, 0x7f0b0002
+    const v3, 0x7f0e0002
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v3
 
-    const v4, 0x7f090086
+    const v4, 0x7f0a009e
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v4
 
-    const v5, 0x7f0a0009
+    const v5, 0x7f080027
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v5
 
-    const v6, 0x7f0a0008
+    const v6, 0x7f080026
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v6
 
-    const v7, 0x7f0c0001
+    const v7, 0x7f0c0002
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v7
 
-    const v8, 0x7f0c0002
+    const v8, 0x7f0c0003
 
     invoke-virtual {v0, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
-    sget-object v8, Lcom/xiaomi/hm/a/t;->CirclePageIndicator:[I
+    sget-object v8, Lcom/xiaomi/hm/health/t;->CirclePageIndicator:[I
 
     invoke-virtual {p1, p2, v8, p3, v11}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -284,7 +284,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/support/v4/view/aH;->a(Landroid/view/ViewConfiguration;)I
+    invoke-static {v0}, Landroid/support/v4/view/aZ;->a(Landroid/view/ViewConfiguration;)I
 
     move-result v0
 
@@ -481,13 +481,13 @@
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/bz;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/bz;
 
-    invoke-interface {v0, p1}, Landroid/support/v4/view/ba;->a(I)V
+    invoke-interface {v0, p1}, Landroid/support/v4/view/bz;->a(I)V
 
     :cond_2
     return-void
@@ -508,13 +508,13 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/bz;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/bz;
 
-    invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/view/ba;->a(IFI)V
+    invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/view/bz;->a(IFI)V
 
     :cond_0
     return-void
@@ -539,10 +539,10 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ba;)V
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/bz;)V
 
     :cond_1
-    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ae;
 
     move-result-object v0
 
@@ -561,7 +561,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ba;)V
+    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/bz;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
 
@@ -578,10 +578,10 @@
     return-void
 .end method
 
-.method public a(Landroid/support/v4/view/ba;)V
+.method public a(Landroid/support/v4/view/bz;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/bz;
 
     return-void
 .end method
@@ -631,13 +631,13 @@
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->k:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/bz;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/bz;
 
-    invoke-interface {v0, p1}, Landroid/support/v4/view/ba;->b(I)V
+    invoke-interface {v0, p1}, Landroid/support/v4/view/bz;->b(I)V
 
     :cond_0
     return-void
@@ -842,11 +842,11 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ae;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ad;->b()I
+    invoke-virtual {v0}, Landroid/support/v4/view/ae;->b()I
 
     move-result v0
 

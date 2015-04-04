@@ -52,7 +52,7 @@
 
     new-instance v0, Ljava/io/File;
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/E;->k(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/G;->j(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -247,6 +247,36 @@
     return-void
 .end method
 
+.method public b(Ljava/lang/String;Lcom/f/a/b/a/f;)Landroid/graphics/Bitmap;
+    .locals 2
+
+    const/4 v1, 0x1
+
+    new-instance v0, Lcom/f/a/b/f;
+
+    invoke-direct {v0}, Lcom/f/a/b/f;-><init>()V
+
+    invoke-virtual {v0, v1}, Lcom/f/a/b/f;->b(Z)Lcom/f/a/b/f;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/f/a/b/f;->d(Z)Lcom/f/a/b/f;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/f/a/b/f;->d()Lcom/f/a/b/d;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
+
+    invoke-virtual {v1, p1, p2, v0}, Lcom/f/a/b/g;->a(Ljava/lang/String;Lcom/f/a/b/a/f;Lcom/f/a/b/d;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public b(Ljava/lang/String;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -306,6 +336,42 @@
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
     invoke-virtual {v1, p1, p2, v0}, Lcom/f/a/b/g;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/f/a/b/d;)V
+
+    return-void
+.end method
+
+.method public b(Ljava/lang/String;Landroid/widget/ImageView;Lcom/f/a/b/f/a;)V
+    .locals 2
+
+    const/4 v1, 0x1
+
+    new-instance v0, Lcom/f/a/b/f;
+
+    invoke-direct {v0}, Lcom/f/a/b/f;-><init>()V
+
+    invoke-virtual {v0, v1}, Lcom/f/a/b/f;->b(Z)Lcom/f/a/b/f;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/f/a/b/f;->d(Z)Lcom/f/a/b/f;
+
+    move-result-object v0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/m;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/m;-><init>(Lcn/com/smartdevices/bracelet/l;)V
+
+    invoke-virtual {v0, v1}, Lcom/f/a/b/f;->a(Lcom/f/a/b/c/a;)Lcom/f/a/b/f;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/f/a/b/f;->d()Lcom/f/a/b/d;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
+
+    invoke-virtual {v1, p1, p2, v0, p3}, Lcom/f/a/b/g;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/f/a/b/d;Lcom/f/a/b/f/a;)V
 
     return-void
 .end method

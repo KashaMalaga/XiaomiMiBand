@@ -1,24 +1,33 @@
 .class Landroid/support/v4/widget/B;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/widget/A;
+
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/widget/A;)V
     .locals 0
+
+    iput-object p1, p0, Landroid/support/v4/widget/B;->a:Landroid/support/v4/widget/A;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Object;)F
+
+# virtual methods
+.method public run()V
     .locals 1
 
-    check-cast p0, Landroid/widget/OverScroller;
+    iget-object v0, p0, Landroid/support/v4/widget/B;->a:Landroid/support/v4/widget/A;
 
-    invoke-virtual {p0}, Landroid/widget/OverScroller;->getCurrVelocity()F
+    invoke-static {v0}, Landroid/support/v4/widget/A;->a(Landroid/support/v4/widget/A;)V
 
-    move-result v0
-
-    return v0
+    return-void
 .end method

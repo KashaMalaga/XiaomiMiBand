@@ -311,7 +311,7 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/ui/dg;->d:Landroid/os/Handler;
+    sget-object v1, Lcn/com/smartdevices/bracelet/ui/dG;->d:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
@@ -325,7 +325,7 @@
 
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/ui/dg;->d:Landroid/os/Handler;
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/dG;->d:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 

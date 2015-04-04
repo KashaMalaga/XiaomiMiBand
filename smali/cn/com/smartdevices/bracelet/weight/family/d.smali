@@ -25,7 +25,7 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .locals 2
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->a:Ljava/lang/String;
+    const-string v0, "MemberInfoBaseActivity"
 
     const-string v1, "afterTextChanged"
 
@@ -61,7 +61,7 @@
 .method public onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 3
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->a:Ljava/lang/String;
+    const-string v0, "MemberInfoBaseActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
 

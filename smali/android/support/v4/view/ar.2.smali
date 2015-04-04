@@ -1,9 +1,12 @@
 .class Landroid/support/v4/view/ar;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/support/v4/view/as;
+
 
 # direct methods
-.method constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -11,20 +14,28 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/VelocityTracker;I)F
-    .locals 1
+.method synthetic constructor <init>(Landroid/support/v4/view/ap;)V
+    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->getXVelocity(I)F
+    invoke-direct {p0}, Landroid/support/v4/view/ar;-><init>()V
 
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method public static b(Landroid/view/VelocityTracker;I)F
+
+# virtual methods
+.method public a(Ljava/lang/Object;Z)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/at;->a(Ljava/lang/Object;Z)V
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/Object;)Z
     .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->getYVelocity(I)F
+    invoke-static {p1}, Landroid/support/v4/view/at;->a(Ljava/lang/Object;)Z
 
     move-result v0
 

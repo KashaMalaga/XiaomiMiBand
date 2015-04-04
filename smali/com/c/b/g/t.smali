@@ -1,8 +1,8 @@
-.class public Lcom/c/b/g/t;
+.class public final Lcom/c/b/g/t;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/c/b/s;
+.implements Lcom/c/b/w;
 
 
 # instance fields
@@ -182,7 +182,7 @@
             "II",
             "Ljava/util/Map",
             "<",
-            "Lcom/c/b/f;",
+            "Lcom/c/b/g;",
             "*>;)",
             "Lcom/c/b/c/b;"
         }

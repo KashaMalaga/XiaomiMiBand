@@ -43,7 +43,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Lcom/d/a/a/z;->a([BLjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Lcom/d/a/a/z;->getResponseString([BLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -101,18 +101,6 @@
     goto :goto_1
 .end method
 
-.method public a(I[Lorg/apache/http/Header;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    return-void
-.end method
-
 .method public a(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Lorg/json/JSONArray;)V
     .locals 0
 
@@ -132,6 +120,12 @@
 .end method
 
 .method public a(I[Lorg/apache/http/Header;Lorg/json/JSONObject;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onFailure(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
     return-void
@@ -190,6 +184,12 @@
     invoke-virtual {p0, p1, p2, p4, v0}, Lcom/d/a/a/z;->a(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Lorg/json/JSONObject;)V
 
     goto :goto_0
+.end method
+
+.method public onSuccess(I[Lorg/apache/http/Header;Ljava/lang/String;)V
+    .locals 0
+
+    return-void
 .end method
 
 .method public final onSuccess(I[Lorg/apache/http/Header;[B)V

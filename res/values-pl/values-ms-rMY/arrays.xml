@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>Isn.</item>
+        <item>Sel.</item>
+        <item>Rab.</item>
+        <item>Kham.</item>
+        <item>Jum.</item>
+        <item>Sab.</item>
+        <item>Ah.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Isn.</item>
+        <item>Sel.</item>
+        <item>Rab.</item>
+        <item>Kham.</item>
+        <item>Jum.</item>
+        <item>Sab.</item>
+        <item>Ah.</item>
+    </string-array>
+    <string-array name="months">
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Mac</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Jun</item>
+        <item>Julai</item>
+        <item>Ogos</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Disember</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>Sekali</item>
+        <item>Setiap hari</item>
+        <item>Hari Minggu</item>
+        <item>Sesuaikan</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>Tiada pengganti untuk konsistensi.</item>
+        <item>Berusaha untuk kemajuan, bukan kesempurnaan.</item>
+        <item>Pengulangan adalah bapa pada kejayaan.</item>
+        <item>Tenaga dan pengekalan menakluk semua perkara.</item>
+        <item>Tetapkan gol dan bina berdasarkannya.</item>
+        <item>Setiap perjalanan bermula dengan satu langkah.</item>
+        <item>Capai satu matlamat dalam sehari.</item>
+        <item>Tidak kira bagaimana perlahan anda berlari, anda masih tetap melepasi orang yang hanya duduk di sofa.</item>
+        <item>Berlari bila mampu. Berjalan jika perlu. Merangkak jika terpaksa. Cuma jangan putus asa.</item>
+        <item>Ingat, perasaan yang anda dapat daripada senaman yang baik adalah jauh lebih baik daripada perasaan yang anda dapat ketika duduk sahaja mengharap anda telah bersenam.</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>Hebat</item>
+        <item>Bagus</item>
+        <item>Sederhana</item>
+        <item>Amaran</item>
+        <item>Tidak sihat</item>
+        <item>Sangat tidak sihat</item>
+    </string-array>
+    <string-array name="weight_unit">
+        <item>kg</item>
+        <item>jin</item>
+        <item>lb</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>Berat kurang</item>
+        <item>Berat normal</item>
+        <item>Berat Berlebihan</item>
+        <item>Obesiti</item>
+        <item>Obesiti</item>
+    </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>Kategori BMI : Kurang berat</item>
+        <item>Kategori BMI : Berat normal</item>
+        <item>Kategori BMI : Terlebih berat</item>
+        <item>Kategori BMI : Obesiti</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>Set a goal to help manage your weight.</item>
+        <item>"Congratulations! You're at your at your target weight."</item>
+        <item>"You're under your target weight"</item>
+        <item>"You're over your target weight"</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>Set a goal to help manage your weight.</item>
+        <item>"Congratulations! You're at your at your target weight."</item>
+        <item>"You're under your target weight"</item>
+        <item>"You're over your target weight"</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>Melepasi gol</item>
+        <item>Tidak dapat mencapai gol anda</item>
+        <item>Telah mencapai gol anda!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>Masih belum mencapai gol anda</item>
+        <item>Masih belum mencapai gol anda</item>
+        <item>Masih belum mencapai gol anda</item>
+        <item>Anda telah mencapai gol anda (%1$s%2$s)!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>Masih belum mencapai gol anda</item>
+        <item>Masih belum mencapai gol anda</item>
+        <item>Masih belum mencapai gol anda</item>
+        <item>Anda telah mencapai gol anda (%1$s%2$s)!</item>
+    </string-array>
+</resources>

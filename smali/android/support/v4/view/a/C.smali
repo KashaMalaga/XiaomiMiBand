@@ -11,12 +11,26 @@
     return-void
 .end method
 
-.method public static a(Landroid/support/v4/view/a/E;)Ljava/lang/Object;
+.method static a(Ljava/lang/Object;)I
     .locals 1
 
-    new-instance v0, Landroid/support/v4/view/a/D;
+    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
-    invoke-direct {v0, p0}, Landroid/support/v4/view/a/D;-><init>(Landroid/support/v4/view/a/E;)V
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getId()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static b(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getLabel()Ljava/lang/CharSequence;
+
+    move-result-object v0
 
     return-object v0
 .end method

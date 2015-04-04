@@ -2,11 +2,11 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/c/b/m;
+.implements Lcom/c/b/q;
 
 
 # static fields
-.field private static final a:[Lcom/c/b/q;
+.field private static final a:[Lcom/c/b/u;
 
 .field private static final b:I = 0x1e
 
@@ -23,9 +23,9 @@
 
     const/4 v0, 0x0
 
-    new-array v0, v0, [Lcom/c/b/q;
+    new-array v0, v0, [Lcom/c/b/u;
 
-    sput-object v0, Lcom/c/b/e/a;->a:[Lcom/c/b/q;
+    sput-object v0, Lcom/c/b/e/a;->a:[Lcom/c/b/u;
 
     return-void
 .end method
@@ -53,13 +53,13 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0}, Lcom/c/b/c/b;->b()[I
+    invoke-virtual {p0}, Lcom/c/b/c/b;->c()[I
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -148,19 +148,19 @@
 
 
 # virtual methods
-.method public a(Lcom/c/b/c;)Lcom/c/b/o;
+.method public a(Lcom/c/b/c;)Lcom/c/b/s;
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Lcom/c/b/e/a;->a(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/o;
+    invoke-virtual {p0, p1, v0}, Lcom/c/b/e/a;->a(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/s;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public a(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/o;
+.method public a(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/s;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -170,7 +170,7 @@
             "<",
             "Lcom/c/b/e;",
             "*>;)",
-            "Lcom/c/b/o;"
+            "Lcom/c/b/s;"
         }
     .end annotation
 
@@ -198,9 +198,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/c/b/e/a;->a:[Lcom/c/b/q;
+    sget-object v1, Lcom/c/b/e/a;->a:[Lcom/c/b/u;
 
-    new-instance v2, Lcom/c/b/o;
+    new-instance v2, Lcom/c/b/s;
 
     invoke-virtual {v0}, Lcom/c/b/c/e;->b()Ljava/lang/String;
 
@@ -212,7 +212,7 @@
 
     sget-object v5, Lcom/c/b/a;->j:Lcom/c/b/a;
 
-    invoke-direct {v2, v3, v4, v1, v5}, Lcom/c/b/o;-><init>(Ljava/lang/String;[B[Lcom/c/b/q;Lcom/c/b/a;)V
+    invoke-direct {v2, v3, v4, v1, v5}, Lcom/c/b/s;-><init>(Ljava/lang/String;[B[Lcom/c/b/u;Lcom/c/b/a;)V
 
     invoke-virtual {v0}, Lcom/c/b/c/e;->d()Ljava/lang/String;
 
@@ -220,15 +220,15 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/c/b/p;->d:Lcom/c/b/p;
+    sget-object v1, Lcom/c/b/t;->d:Lcom/c/b/t;
 
-    invoke-virtual {v2, v1, v0}, Lcom/c/b/o;->a(Lcom/c/b/p;Ljava/lang/Object;)V
+    invoke-virtual {v2, v1, v0}, Lcom/c/b/s;->a(Lcom/c/b/t;Ljava/lang/Object;)V
 
     :cond_0
     return-object v2
 
     :cond_1
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -239,12 +239,4 @@
     .locals 0
 
     return-void
-.end method
-
-.method b()Lcom/c/b/e/a/c;
-    .locals 1
-
-    iget-object v0, p0, Lcom/c/b/e/a;->d:Lcom/c/b/e/a/c;
-
-    return-object v0
 .end method

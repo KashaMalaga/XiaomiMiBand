@@ -40,7 +40,7 @@
 
     const-string v2, "DynamicListItemClick"
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -75,6 +75,26 @@
     return-void
 
     :cond_1
+    const-string v1, "weight_history_result"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+
+    # getter for: Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->access$000(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string v2, "Click_Sync_Weight_History_LuaItem"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    :cond_2
     :try_start_0
     const-string v1, "service"
 
@@ -88,7 +108,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/c;->a:Lde/greenrobot/daobracelet/LuaList;
 
@@ -98,16 +118,16 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mServiceManager:Lcn/com/smartdevices/bracelet/partner/d;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->access$100(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Lcn/com/smartdevices/bracelet/partner/d;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mServiceManager:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->access$100(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/partner/d;->a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/partner/c;
+    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->getServiceById(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/partner/Partner;
 
     move-result-object v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
 
@@ -116,7 +136,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/partner/c;)Landroid/content/Intent;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->buildIntent(Landroid/content/Context;Lcn/com/smartdevices/bracelet/partner/Partner;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -146,7 +166,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     :try_start_1
     const-string v1, "http://"
 
@@ -154,7 +174,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     const-string v1, "chenee"
 
@@ -186,14 +206,14 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     const-string v1, "file://"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     const-string v1, "chenee"
 
@@ -225,7 +245,7 @@
 
     goto/16 :goto_0
 
-    :cond_4
+    :cond_5
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
 
     # getter for: Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;

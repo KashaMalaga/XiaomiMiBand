@@ -5,11 +5,11 @@
 # instance fields
 .field private a:Z
 
-.field private b:Lcn/com/smartdevices/bracelet/f/c;
+.field private b:Lcn/com/smartdevices/bracelet/e/c;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;ZLcn/com/smartdevices/bracelet/f/c;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;ZLcn/com/smartdevices/bracelet/e/c;)V
     .locals 1
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/x;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
@@ -20,11 +20,11 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/f/c;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/e/c;
 
     iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Z
 
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/f/c;
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/e/c;
 
     return-void
 .end method
@@ -53,9 +53,9 @@
 
     if-eq v0, v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/f/c;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/e/c;
 
-    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/f/c;->a(I)V
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/e/c;->a(I)V
 
     :cond_1
     sget-object v1, Lcn/com/smartdevices/bracelet/a/k;->l:Ljava/lang/String;
@@ -85,9 +85,9 @@
 
     iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Z
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/f/c;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/e/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableRealtimeStepNotification(ZLcn/com/smartdevices/bracelet/f/c;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableRealtimeStepNotification(ZLcn/com/smartdevices/bracelet/e/c;)Z
 
     move-result v0
 

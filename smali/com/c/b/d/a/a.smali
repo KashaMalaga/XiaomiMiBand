@@ -16,7 +16,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Lcom/c/b/c/b;->f()I
+    invoke-virtual {p1}, Lcom/c/b/c/b;->g()I
 
     move-result v0
 
@@ -33,7 +33,7 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -56,13 +56,13 @@
 
     iget-object v1, p0, Lcom/c/b/d/a/a;->a:Lcom/c/b/c/b;
 
-    invoke-virtual {v1}, Lcom/c/b/c/b;->e()I
+    invoke-virtual {v1}, Lcom/c/b/c/b;->f()I
 
     move-result v1
 
     iget-object v2, p0, Lcom/c/b/d/a/a;->a:Lcom/c/b/c/b;
 
-    invoke-virtual {v2}, Lcom/c/b/c/b;->f()I
+    invoke-virtual {v2}, Lcom/c/b/c/b;->g()I
 
     move-result v2
 
@@ -76,11 +76,11 @@
 .method private static b(Lcom/c/b/c/b;)Lcom/c/b/d/a/g;
     .locals 2
 
-    invoke-virtual {p0}, Lcom/c/b/c/b;->f()I
+    invoke-virtual {p0}, Lcom/c/b/c/b;->g()I
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/c/b/c/b;->e()I
+    invoke-virtual {p0}, Lcom/c/b/c/b;->f()I
 
     move-result v1
 
@@ -229,7 +229,7 @@
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/c/b/c/b;->f()I
+    invoke-virtual {p1}, Lcom/c/b/c/b;->g()I
 
     move-result v2
 
@@ -665,13 +665,13 @@
 
     iget-object v2, p0, Lcom/c/b/d/a/a;->a:Lcom/c/b/c/b;
 
-    invoke-virtual {v2}, Lcom/c/b/c/b;->f()I
+    invoke-virtual {v2}, Lcom/c/b/c/b;->g()I
 
     move-result v11
 
     iget-object v2, p0, Lcom/c/b/d/a/a;->a:Lcom/c/b/c/b;
 
-    invoke-virtual {v2}, Lcom/c/b/c/b;->e()I
+    invoke-virtual {v2}, Lcom/c/b/c/b;->f()I
 
     move-result v12
 
@@ -729,7 +729,7 @@
 
     if-eq v7, v0, :cond_6
 
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 

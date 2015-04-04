@@ -3,11 +3,8 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/content/ComponentName;)Landroid/content/Intent;
+.method public abstract a(Ljava/io/File;)Landroid/net/Uri;
 .end method
 
-.method public abstract a(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-.end method
-
-.method public abstract b(Landroid/content/ComponentName;)Landroid/content/Intent;
+.method public abstract a(Landroid/net/Uri;)Ljava/io/File;
 .end method

@@ -1,184 +1,76 @@
-.class public abstract Lcom/c/b/h;
-.super Ljava/lang/Object;
+.class public final Lcom/c/b/h;
+.super Lcom/c/b/r;
 
 
-# instance fields
-.field private final a:I
-
-.field private final b:I
+# static fields
+.field private static final b:Lcom/c/b/h;
 
 
 # direct methods
-.method protected constructor <init>(II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lcom/c/b/h;
 
-    iput p1, p0, Lcom/c/b/h;->a:I
+    invoke-direct {v0}, Lcom/c/b/h;-><init>()V
 
-    iput p2, p0, Lcom/c/b/h;->b:I
+    sput-object v0, Lcom/c/b/h;->b:Lcom/c/b/h;
 
     return-void
 .end method
 
+.method private constructor <init>()V
+    .locals 0
 
-# virtual methods
-.method public a(IIII)Lcom/c/b/h;
-    .locals 2
+    invoke-direct {p0}, Lcom/c/b/r;-><init>()V
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "This luminance source does not support cropping."
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method
 
-.method public abstract a()[B
+.method private constructor <init>(Ljava/lang/Throwable;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/c/b/r;-><init>(Ljava/lang/Throwable;)V
+
+    return-void
 .end method
 
-.method public abstract a(I[B)[B
-.end method
-
-.method public final b()I
+.method public static a()Lcom/c/b/h;
     .locals 1
 
-    iget v0, p0, Lcom/c/b/h;->a:I
+    sget-boolean v0, Lcom/c/b/h;->a:Z
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final c()I
-    .locals 1
+    new-instance v0, Lcom/c/b/h;
 
-    iget v0, p0, Lcom/c/b/h;->b:I
-
-    return v0
-.end method
-
-.method public d()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public e()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public f()Lcom/c/b/h;
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "This luminance source does not support rotation."
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 7
-
-    const/4 v1, 0x0
-
-    iget v0, p0, Lcom/c/b/h;->a:I
-
-    new-array v0, v0, [B
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lcom/c/b/h;->b:I
-
-    iget v3, p0, Lcom/c/b/h;->a:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    mul-int/2addr v2, v3
-
-    invoke-direct {v5, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    move-object v2, v0
-
-    move v0, v1
+    invoke-direct {v0}, Lcom/c/b/h;-><init>()V
 
     :goto_0
-    iget v3, p0, Lcom/c/b/h;->b:I
-
-    if-ge v0, v3, :cond_4
-
-    invoke-virtual {p0, v0, v2}, Lcom/c/b/h;->a(I[B)[B
-
-    move-result-object v2
-
-    move v3, v1
-
-    :goto_1
-    iget v4, p0, Lcom/c/b/h;->a:I
-
-    if-ge v3, v4, :cond_3
-
-    aget-byte v4, v2, v3
-
-    and-int/lit16 v4, v4, 0xff
-
-    const/16 v6, 0x40
-
-    if-ge v4, v6, :cond_0
-
-    const/16 v4, 0x23
-
-    :goto_2
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
+    return-object v0
 
     :cond_0
-    const/16 v6, 0x80
-
-    if-ge v4, v6, :cond_1
-
-    const/16 v4, 0x2b
-
-    goto :goto_2
-
-    :cond_1
-    const/16 v6, 0xc0
-
-    if-ge v4, v6, :cond_2
-
-    const/16 v4, 0x2e
-
-    goto :goto_2
-
-    :cond_2
-    const/16 v4, 0x20
-
-    goto :goto_2
-
-    :cond_3
-    const/16 v3, 0xa
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0x1
+    sget-object v0, Lcom/c/b/h;->b:Lcom/c/b/h;
 
     goto :goto_0
+.end method
 
-    :cond_4
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public static a(Ljava/lang/Throwable;)Lcom/c/b/h;
+    .locals 1
 
-    move-result-object v0
+    sget-boolean v0, Lcom/c/b/h;->a:Z
 
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lcom/c/b/h;
+
+    invoke-direct {v0, p0}, Lcom/c/b/h;-><init>(Ljava/lang/Throwable;)V
+
+    :goto_0
     return-object v0
+
+    :cond_0
+    sget-object v0, Lcom/c/b/h;->b:Lcom/c/b/h;
+
+    goto :goto_0
 .end method

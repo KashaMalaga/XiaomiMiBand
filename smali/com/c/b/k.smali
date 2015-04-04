@@ -1,213 +1,478 @@
-.class synthetic Lcom/c/b/k;
+.class public final Lcom/c/b/k;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lcom/c/b/q;
 
-# static fields
-.field static final synthetic a:[I
+
+# instance fields
+.field private a:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Lcom/c/b/e;",
+            "*>;"
+        }
+    .end annotation
+.end field
+
+.field private b:[Lcom/c/b/q;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 0
 
-    invoke-static {}, Lcom/c/b/a;->values()[Lcom/c/b/a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private c(Lcom/c/b/c;)Lcom/c/b/s;
+    .locals 5
+
+    iget-object v0, p0, Lcom/c/b/k;->b:[Lcom/c/b/q;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/c/b/k;->b:[Lcom/c/b/q;
+
+    array-length v2, v1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, v2, :cond_0
+
+    aget-object v3, v1, v0
+
+    :try_start_0
+    iget-object v4, p0, Lcom/c/b/k;->a:Ljava/util/Map;
+
+    invoke-interface {v3, p1, v4}, Lcom/c/b/q;->a(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/s;
+    :try_end_0
+    .catch Lcom/c/b/r; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    array-length v0, v0
+    return-object v0
 
-    new-array v0, v0, [I
+    :catch_0
+    move-exception v3
 
-    sput-object v0, Lcom/c/b/k;->a:[I
+    add-int/lit8 v0, v0, 0x1
 
-    :try_start_0
-    sget-object v0, Lcom/c/b/k;->a:[I
+    goto :goto_0
 
-    sget-object v1, Lcom/c/b/a;->g:Lcom/c/b/a;
+    :cond_0
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
-    invoke-virtual {v1}, Lcom/c/b/a;->ordinal()I
+    move-result-object v0
 
-    move-result v1
+    throw v0
+.end method
+
+
+# virtual methods
+.method public a(Lcom/c/b/c;)Lcom/c/b/s;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/c/b/k;->a(Ljava/util/Map;)V
+
+    invoke-direct {p0, p1}, Lcom/c/b/k;->c(Lcom/c/b/c;)Lcom/c/b/s;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/s;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/c/b/c;",
+            "Ljava/util/Map",
+            "<",
+            "Lcom/c/b/e;",
+            "*>;)",
+            "Lcom/c/b/s;"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p2}, Lcom/c/b/k;->a(Ljava/util/Map;)V
+
+    invoke-direct {p0, p1}, Lcom/c/b/k;->c(Lcom/c/b/c;)Lcom/c/b/s;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/c/b/k;->b:[Lcom/c/b/q;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/c/b/k;->b:[Lcom/c/b/q;
+
+    array-length v2, v1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, v2, :cond_0
+
+    aget-object v3, v1, v0
+
+    invoke-interface {v3}, Lcom/c/b/q;->a()V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(Ljava/util/Map;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map",
+            "<",
+            "Lcom/c/b/e;",
+            "*>;)V"
+        }
+    .end annotation
 
     const/4 v2, 0x1
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_8
+    const/4 v1, 0x0
+
+    iput-object p1, p0, Lcom/c/b/k;->a:Ljava/util/Map;
+
+    if-eqz p1, :cond_b
+
+    sget-object v0, Lcom/c/b/e;->d:Lcom/c/b/e;
+
+    invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    move v3, v2
 
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/c/b/k;->a:[I
+    if-nez p1, :cond_c
 
-    sget-object v1, Lcom/c/b/a;->h:Lcom/c/b/a;
-
-    invoke-virtual {v1}, Lcom/c/b/a;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_7
+    const/4 v0, 0x0
 
     :goto_1
-    :try_start_2
-    sget-object v0, Lcom/c/b/k;->a:[I
+    new-instance v4, Ljava/util/ArrayList;
 
-    sget-object v1, Lcom/c/b/a;->o:Lcom/c/b/a;
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v1}, Lcom/c/b/a;->ordinal()I
+    if-eqz v0, :cond_8
 
-    move-result v1
+    sget-object v5, Lcom/c/b/a;->o:Lcom/c/b/a;
 
-    const/4 v2, 0x3
+    invoke-interface {v0, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_6
+    move-result v5
 
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/c/b/k;->a:[I
+    if-nez v5, :cond_0
 
-    sget-object v1, Lcom/c/b/a;->l:Lcom/c/b/a;
+    sget-object v5, Lcom/c/b/a;->p:Lcom/c/b/a;
 
-    invoke-virtual {v1}, Lcom/c/b/a;->ordinal()I
+    invoke-interface {v0, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v5
 
-    const/4 v2, 0x4
+    if-nez v5, :cond_0
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_5
+    sget-object v5, Lcom/c/b/a;->h:Lcom/c/b/a;
 
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/c/b/k;->a:[I
+    invoke-interface {v0, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    sget-object v1, Lcom/c/b/a;->c:Lcom/c/b/a;
+    move-result v5
 
-    invoke-virtual {v1}, Lcom/c/b/a;->ordinal()I
+    if-nez v5, :cond_0
 
-    move-result v1
+    sget-object v5, Lcom/c/b/a;->g:Lcom/c/b/a;
 
-    const/4 v2, 0x5
+    invoke-interface {v0, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    move-result v5
 
-    :goto_4
-    :try_start_5
-    sget-object v0, Lcom/c/b/k;->a:[I
+    if-nez v5, :cond_0
 
-    sget-object v1, Lcom/c/b/a;->e:Lcom/c/b/a;
+    sget-object v5, Lcom/c/b/a;->b:Lcom/c/b/a;
 
-    invoke-virtual {v1}, Lcom/c/b/a;->ordinal()I
+    invoke-interface {v0, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v5
 
-    const/4 v2, 0x6
+    if-nez v5, :cond_0
 
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_3
+    sget-object v5, Lcom/c/b/a;->c:Lcom/c/b/a;
 
-    :goto_5
-    :try_start_6
-    sget-object v0, Lcom/c/b/k;->a:[I
+    invoke-interface {v0, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    sget-object v1, Lcom/c/b/a;->i:Lcom/c/b/a;
+    move-result v5
 
-    invoke-virtual {v1}, Lcom/c/b/a;->ordinal()I
+    if-nez v5, :cond_0
 
-    move-result v1
+    sget-object v5, Lcom/c/b/a;->d:Lcom/c/b/a;
 
-    const/4 v2, 0x7
+    invoke-interface {v0, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_2
+    move-result v5
 
-    :goto_6
-    :try_start_7
-    sget-object v0, Lcom/c/b/k;->a:[I
+    if-nez v5, :cond_0
 
-    sget-object v1, Lcom/c/b/a;->k:Lcom/c/b/a;
+    sget-object v5, Lcom/c/b/a;->e:Lcom/c/b/a;
 
-    invoke-virtual {v1}, Lcom/c/b/a;->ordinal()I
+    invoke-interface {v0, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v5
 
-    const/16 v2, 0x8
+    if-nez v5, :cond_0
 
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_1
+    sget-object v5, Lcom/c/b/a;->i:Lcom/c/b/a;
 
-    :goto_7
-    :try_start_8
-    sget-object v0, Lcom/c/b/k;->a:[I
+    invoke-interface {v0, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    sget-object v1, Lcom/c/b/a;->b:Lcom/c/b/a;
+    move-result v5
 
-    invoke-virtual {v1}, Lcom/c/b/a;->ordinal()I
+    if-nez v5, :cond_0
 
-    move-result v1
+    sget-object v5, Lcom/c/b/a;->m:Lcom/c/b/a;
 
-    const/16 v2, 0x9
+    invoke-interface {v0, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    aput v2, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_0
+    move-result v5
 
-    :goto_8
+    if-nez v5, :cond_0
+
+    sget-object v5, Lcom/c/b/a;->n:Lcom/c/b/a;
+
+    invoke-interface {v0, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    :cond_0
+    move v1, v2
+
+    :cond_1
+    if-eqz v1, :cond_2
+
+    if-nez v3, :cond_2
+
+    new-instance v2, Lcom/c/b/g/o;
+
+    invoke-direct {v2, p1}, Lcom/c/b/g/o;-><init>(Ljava/util/Map;)V
+
+    invoke-interface {v4, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    sget-object v2, Lcom/c/b/a;->l:Lcom/c/b/a;
+
+    invoke-interface {v0, v2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    new-instance v2, Lcom/c/b/i/a;
+
+    invoke-direct {v2}, Lcom/c/b/i/a;-><init>()V
+
+    invoke-interface {v4, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    sget-object v2, Lcom/c/b/a;->f:Lcom/c/b/a;
+
+    invoke-interface {v0, v2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    new-instance v2, Lcom/c/b/d/a;
+
+    invoke-direct {v2}, Lcom/c/b/d/a;-><init>()V
+
+    invoke-interface {v4, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_4
+    sget-object v2, Lcom/c/b/a;->a:Lcom/c/b/a;
+
+    invoke-interface {v0, v2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    new-instance v2, Lcom/c/b/a/b;
+
+    invoke-direct {v2}, Lcom/c/b/a/b;-><init>()V
+
+    invoke-interface {v4, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_5
+    sget-object v2, Lcom/c/b/a;->k:Lcom/c/b/a;
+
+    invoke-interface {v0, v2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    new-instance v2, Lcom/c/b/h/b;
+
+    invoke-direct {v2}, Lcom/c/b/h/b;-><init>()V
+
+    invoke-interface {v4, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_6
+    sget-object v2, Lcom/c/b/a;->j:Lcom/c/b/a;
+
+    invoke-interface {v0, v2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    new-instance v0, Lcom/c/b/e/a;
+
+    invoke-direct {v0}, Lcom/c/b/e/a;-><init>()V
+
+    invoke-interface {v4, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_7
+    if-eqz v1, :cond_8
+
+    if-eqz v3, :cond_8
+
+    new-instance v0, Lcom/c/b/g/o;
+
+    invoke-direct {v0, p1}, Lcom/c/b/g/o;-><init>(Ljava/util/Map;)V
+
+    invoke-interface {v4, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_8
+    invoke-interface {v4}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    if-nez v3, :cond_9
+
+    new-instance v0, Lcom/c/b/g/o;
+
+    invoke-direct {v0, p1}, Lcom/c/b/g/o;-><init>(Ljava/util/Map;)V
+
+    invoke-interface {v4, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_9
+    new-instance v0, Lcom/c/b/i/a;
+
+    invoke-direct {v0}, Lcom/c/b/i/a;-><init>()V
+
+    invoke-interface {v4, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Lcom/c/b/d/a;
+
+    invoke-direct {v0}, Lcom/c/b/d/a;-><init>()V
+
+    invoke-interface {v4, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Lcom/c/b/a/b;
+
+    invoke-direct {v0}, Lcom/c/b/a/b;-><init>()V
+
+    invoke-interface {v4, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Lcom/c/b/h/b;
+
+    invoke-direct {v0}, Lcom/c/b/h/b;-><init>()V
+
+    invoke-interface {v4, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Lcom/c/b/e/a;
+
+    invoke-direct {v0}, Lcom/c/b/e/a;-><init>()V
+
+    invoke-interface {v4, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    if-eqz v3, :cond_a
+
+    new-instance v0, Lcom/c/b/g/o;
+
+    invoke-direct {v0, p1}, Lcom/c/b/g/o;-><init>(Ljava/util/Map;)V
+
+    invoke-interface {v4, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_a
+    invoke-interface {v4}, Ljava/util/Collection;->size()I
+
+    move-result v0
+
+    new-array v0, v0, [Lcom/c/b/q;
+
+    invoke-interface {v4, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/c/b/q;
+
+    iput-object v0, p0, Lcom/c/b/k;->b:[Lcom/c/b/q;
+
     return-void
 
-    :catch_0
-    move-exception v0
+    :cond_b
+    move v3, v1
 
-    goto :goto_8
+    goto/16 :goto_0
 
-    :catch_1
-    move-exception v0
+    :cond_c
+    sget-object v0, Lcom/c/b/e;->c:Lcom/c/b/e;
 
-    goto :goto_7
+    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :catch_2
-    move-exception v0
+    move-result-object v0
 
-    goto :goto_6
+    check-cast v0, Ljava/util/Collection;
 
-    :catch_3
-    move-exception v0
+    goto/16 :goto_1
+.end method
 
-    goto :goto_5
+.method public b(Lcom/c/b/c;)Lcom/c/b/s;
+    .locals 1
 
-    :catch_4
-    move-exception v0
+    iget-object v0, p0, Lcom/c/b/k;->b:[Lcom/c/b/q;
 
-    goto :goto_4
+    if-nez v0, :cond_0
 
-    :catch_5
-    move-exception v0
+    const/4 v0, 0x0
 
-    goto :goto_3
+    invoke-virtual {p0, v0}, Lcom/c/b/k;->a(Ljava/util/Map;)V
 
-    :catch_6
-    move-exception v0
+    :cond_0
+    invoke-direct {p0, p1}, Lcom/c/b/k;->c(Lcom/c/b/c;)Lcom/c/b/s;
 
-    goto :goto_2
+    move-result-object v0
 
-    :catch_7
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_8
-    move-exception v0
-
-    goto :goto_0
+    return-object v0
 .end method

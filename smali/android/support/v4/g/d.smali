@@ -1,9 +1,6 @@
 .class Landroid/support/v4/g/d;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/support/v4/g/c;
-
 
 # direct methods
 .method constructor <init>()V
@@ -14,14 +11,12 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public a(Landroid/net/ConnectivityManager;)Z
+.method public static a(Ljava/io/File;)Ljava/lang/String;
     .locals 1
 
-    invoke-static {p1}, Landroid/support/v4/g/g;->a(Landroid/net/ConnectivityManager;)Z
+    invoke-static {p0}, Landroid/os/Environment;->getStorageState(Ljava/io/File;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
+    return-object v0
 .end method

@@ -6,7 +6,7 @@
 
 
 # instance fields
-.field private a:Lcn/com/smartdevices/bracelet/lab/ui/S;
+.field private a:Lcn/com/smartdevices/bracelet/lab/ui/E;
 
 .field private b:Landroid/widget/GridView;
 
@@ -33,7 +33,7 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/S;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/E;
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->b:Landroid/widget/GridView;
 
@@ -49,9 +49,9 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->h:Landroid/widget/TextView;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/O;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/A;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/lab/ui/O;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/lab/ui/A;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->i:Landroid/widget/AdapterView$OnItemClickListener;
 
@@ -73,7 +73,7 @@
 
     invoke-direct {v1, p0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0802ed
+    const v0, 0x7f090385
 
     invoke-virtual {v1, v0}, Landroid/app/Dialog;->setTitle(I)V
 
@@ -81,7 +81,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f03004b
+    const v2, 0x7f03005a
 
     const/4 v3, 0x0
 
@@ -91,7 +91,7 @@
 
     invoke-virtual {v1, v2}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
 
-    const v0, 0x7f07009c
+    const v0, 0x7f0700e2
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -99,27 +99,27 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    const v3, 0x7f0701bf
+    const v3, 0x7f070209
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/lab/ui/P;
+    new-instance v4, Lcn/com/smartdevices/bracelet/lab/ui/B;
 
-    invoke-direct {v4, p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/P;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;Landroid/app/Dialog;)V
+    invoke-direct {v4, p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/B;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;Landroid/app/Dialog;)V
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v3, 0x7f0701c1
+    const v3, 0x7f07020b
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/lab/ui/Q;
+    new-instance v3, Lcn/com/smartdevices/bracelet/lab/ui/C;
 
-    invoke-direct {v3, p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/Q;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;Landroid/widget/EditText;Landroid/app/Dialog;)V
+    invoke-direct {v3, p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/C;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;Landroid/widget/EditText;Landroid/app/Dialog;)V
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -135,7 +135,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f070064
+    const v0, 0x7f0700aa
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -150,7 +150,7 @@
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f070065
+    const v0, 0x7f0700ab
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -165,7 +165,7 @@
 
     if-nez v0, :cond_2
 
-    const v0, 0x7f070067
+    const v0, 0x7f0700ad
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -180,7 +180,7 @@
 
     if-nez v0, :cond_3
 
-    const v0, 0x7f070068
+    const v0, 0x7f0700ae
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -195,7 +195,7 @@
 
     if-nez v0, :cond_4
 
-    const v0, 0x7f070069
+    const v0, 0x7f0700af
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -226,7 +226,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->c:Landroid/widget/TextView;
 
-    const v2, 0x7f080306
+    const v2, 0x7f09039e
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -236,7 +236,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->d:Landroid/widget/TextView;
 
-    const v2, 0x7f080307
+    const v2, 0x7f09039f
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -261,10 +261,10 @@
     return-void
 .end method
 
-.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;)Lcn/com/smartdevices/bracelet/lab/ui/S;
+.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;)Lcn/com/smartdevices/bracelet/lab/ui/E;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/S;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/E;
 
     return-object v0
 .end method
@@ -272,7 +272,7 @@
 .method private b()V
     .locals 1
 
-    const v0, 0x7f070035
+    const v0, 0x7f07003d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -315,7 +315,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f0200e8
+    const v1, 0x7f02011b
 
     invoke-direct {p0, v1, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a(ILjava/lang/String;)V
 
@@ -323,7 +323,7 @@
 
     const-string v2, "Others"
 
-    invoke-static {p0, v1, v2, v0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v1, v2, v0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -346,7 +346,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070035
+    .packed-switch 0x7f07003d
         :pswitch_0
     .end packed-switch
 .end method
@@ -356,13 +356,13 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030013
+    const v0, 0x7f03001b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->setContentView(I)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->b()V
 
-    const v0, 0x7f070066
+    const v0, 0x7f0700ac
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -372,15 +372,15 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->b:Landroid/widget/GridView;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/S;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/E;
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/lab/ui/d;->a()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/S;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;Landroid/content/Context;Ljava/util/List;)V
+    invoke-direct {v0, p0, p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/E;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;Landroid/content/Context;Ljava/util/List;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/S;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/E;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->b:Landroid/widget/GridView;
 
@@ -396,7 +396,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->b:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/S;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/E;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
@@ -406,13 +406,13 @@
 .method public onDestroy()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/S;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/E;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/S;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/E;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/S;->a()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/E;->a()V
 
     :cond_0
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onDestroy()V
@@ -427,9 +427,9 @@
 
     const-string v0, "PageLabSportVote"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -441,9 +441,9 @@
 
     const-string v0, "PageLabSportVote"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
 
     return-void
 .end method

@@ -1,224 +1,140 @@
 .class Landroid/support/v4/widget/g;
-.super Landroid/support/v4/view/a;
+.super Landroid/graphics/drawable/shapes/OvalShape;
 
 
 # instance fields
-.field final synthetic b:Landroid/support/v4/widget/DrawerLayout;
+.field final synthetic a:Landroid/support/v4/widget/f;
 
-.field private final c:Landroid/graphics/Rect;
+.field private b:Landroid/graphics/RadialGradient;
+
+.field private c:I
+
+.field private d:Landroid/graphics/Paint;
+
+.field private e:I
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/DrawerLayout;)V
-    .locals 1
+.method public constructor <init>(Landroid/support/v4/widget/f;II)V
+    .locals 7
 
-    iput-object p1, p0, Landroid/support/v4/widget/g;->b:Landroid/support/v4/widget/DrawerLayout;
+    iput-object p1, p0, Landroid/support/v4/widget/g;->a:Landroid/support/v4/widget/f;
 
-    invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
+    invoke-direct {p0}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
 
-    new-instance v0, Landroid/graphics/Rect;
+    new-instance v0, Landroid/graphics/Paint;
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v4/widget/g;->c:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/v4/widget/g;->d:Landroid/graphics/Paint;
 
-    return-void
-.end method
+    iput p2, p0, Landroid/support/v4/widget/g;->c:I
 
-.method private a(Landroid/support/v4/view/a/o;Landroid/support/v4/view/a/o;)V
-    .locals 1
+    iput p3, p0, Landroid/support/v4/widget/g;->e:I
 
-    iget-object v0, p0, Landroid/support/v4/widget/g;->c:Landroid/graphics/Rect;
+    new-instance v0, Landroid/graphics/RadialGradient;
 
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/o;->a(Landroid/graphics/Rect;)V
+    iget v1, p0, Landroid/support/v4/widget/g;->e:I
 
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->b(Landroid/graphics/Rect;)V
+    div-int/lit8 v1, v1, 0x2
 
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/o;->c(Landroid/graphics/Rect;)V
+    int-to-float v1, v1
 
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->d(Landroid/graphics/Rect;)V
+    iget v2, p0, Landroid/support/v4/widget/g;->e:I
 
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->l()Z
+    div-int/lit8 v2, v2, 0x2
 
-    move-result v0
+    int-to-float v2, v2
 
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->e(Z)V
+    iget v3, p0, Landroid/support/v4/widget/g;->c:I
 
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->t()Ljava/lang/CharSequence;
+    int-to-float v3, v3
 
-    move-result-object v0
+    const/4 v4, 0x2
 
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->a(Ljava/lang/CharSequence;)V
+    new-array v4, v4, [I
 
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->u()Ljava/lang/CharSequence;
+    fill-array-data v4, :array_0
 
-    move-result-object v0
+    const/4 v5, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->b(Ljava/lang/CharSequence;)V
+    sget-object v6, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->w()Ljava/lang/CharSequence;
+    invoke-direct/range {v0 .. v6}, Landroid/graphics/RadialGradient;-><init>(FFF[I[FLandroid/graphics/Shader$TileMode;)V
 
-    move-result-object v0
+    iput-object v0, p0, Landroid/support/v4/widget/g;->b:Landroid/graphics/RadialGradient;
 
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->d(Ljava/lang/CharSequence;)V
+    iget-object v0, p0, Landroid/support/v4/widget/g;->d:Landroid/graphics/Paint;
 
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->q()Z
+    iget-object v1, p0, Landroid/support/v4/widget/g;->b:Landroid/graphics/RadialGradient;
 
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->j(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->o()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->h(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->j()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->c(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->k()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->d(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->m()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->f(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->n()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->g(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->p()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->i(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->e()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->d(I)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x3d000000
+        0x0
+    .end array-data
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroid/support/v4/view/a/o;)V
-    .locals 4
+.method public draw(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V
+    .locals 6
 
-    invoke-static {p2}, Landroid/support/v4/view/a/o;->a(Landroid/support/v4/view/a/o;)Landroid/support/v4/view/a/o;
+    iget-object v0, p0, Landroid/support/v4/widget/g;->a:Landroid/support/v4/widget/f;
 
-    move-result-object v1
+    invoke-virtual {v0}, Landroid/support/v4/widget/f;->getWidth()I
 
-    invoke-super {p0, p1, v1}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/o;)V
+    move-result v0
 
-    invoke-virtual {p2, p1}, Landroid/support/v4/view/a/o;->b(Landroid/view/View;)V
+    iget-object v1, p0, Landroid/support/v4/widget/g;->a:Landroid/support/v4/widget/f;
 
-    invoke-static {p1}, Landroid/support/v4/view/as;->j(Landroid/view/View;)Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    instance-of v2, v0, Landroid/view/View;
-
-    if-eqz v2, :cond_0
-
-    check-cast v0, Landroid/view/View;
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/o;->d(Landroid/view/View;)V
-
-    :cond_0
-    invoke-direct {p0, p2, v1}, Landroid/support/v4/widget/g;->a(Landroid/support/v4/view/a/o;Landroid/support/v4/view/a/o;)V
-
-    invoke-virtual {v1}, Landroid/support/v4/view/a/o;->x()V
-
-    iget-object v0, p0, Landroid/support/v4/widget/g;->b:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
+    invoke-virtual {v1}, Landroid/support/v4/widget/f;->getHeight()I
 
     move-result v1
 
-    const/4 v0, 0x0
+    div-int/lit8 v2, v0, 0x2
 
-    :goto_0
-    if-ge v0, v1, :cond_2
+    int-to-float v2, v2
 
-    iget-object v2, p0, Landroid/support/v4/widget/g;->b:Landroid/support/v4/widget/DrawerLayout;
+    div-int/lit8 v3, v1, 0x2
 
-    invoke-virtual {v2, v0}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
+    int-to-float v3, v3
 
-    move-result-object v2
+    iget v4, p0, Landroid/support/v4/widget/g;->e:I
 
-    invoke-virtual {p0, v2}, Landroid/support/v4/widget/g;->b(Landroid/view/View;)Z
+    div-int/lit8 v4, v4, 0x2
 
-    move-result v3
+    iget v5, p0, Landroid/support/v4/widget/g;->c:I
 
-    if-nez v3, :cond_1
+    add-int/2addr v4, v5
 
-    invoke-virtual {p2, v2}, Landroid/support/v4/view/a/o;->c(Landroid/view/View;)V
+    int-to-float v4, v4
 
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
+    iget-object v5, p0, Landroid/support/v4/widget/g;->d:Landroid/graphics/Paint;
 
-    goto :goto_0
+    invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    :cond_2
+    div-int/lit8 v0, v0, 0x2
+
+    int-to-float v0, v0
+
+    div-int/lit8 v1, v1, 0x2
+
+    int-to-float v1, v1
+
+    iget v2, p0, Landroid/support/v4/widget/g;->e:I
+
+    div-int/lit8 v2, v2, 0x2
+
+    int-to-float v2, v2
+
+    invoke-virtual {p1, v0, v1, v2, p2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
     return-void
-.end method
-
-.method public a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-    .locals 1
-
-    invoke-virtual {p0, p2}, Landroid/support/v4/widget/g;->b(Landroid/view/View;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/view/a;->a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public b(Landroid/view/View;)Z
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/widget/g;->b:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/DrawerLayout;->a()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    if-eq v0, p1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

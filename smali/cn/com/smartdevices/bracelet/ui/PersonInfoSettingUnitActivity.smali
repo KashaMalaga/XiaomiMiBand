@@ -85,15 +85,15 @@
 .method private a(I)V
     .locals 5
 
-    const v4, 0x7f090010
+    const v4, 0x7f0a002c
 
-    const v3, 0x7f09000c
+    const v3, 0x7f0a0001
 
     const/4 v2, 0x4
 
     const/4 v1, 0x0
 
-    const v0, 0x7f0700e0
+    const v0, 0x7f070128
 
     if-ne p1, v0, :cond_1
 
@@ -111,7 +111,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
@@ -123,7 +123,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
@@ -134,7 +134,7 @@
     return-void
 
     :cond_1
-    const v0, 0x7f0700e3
+    const v0, 0x7f07012b
 
     if-ne p1, v0, :cond_0
 
@@ -152,7 +152,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
@@ -164,7 +164,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
@@ -176,7 +176,7 @@
 .method private b()V
     .locals 2
 
-    const v0, 0x7f0700e0
+    const v0, 0x7f070128
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -188,7 +188,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700e3
+    const v0, 0x7f07012b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -200,7 +200,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700ea
+    const v0, 0x7f070132
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -212,7 +212,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700e7
+    const v0, 0x7f07012f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -224,7 +224,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700ed
+    const v0, 0x7f070136
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -236,7 +236,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700f0
+    const v0, 0x7f070139
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -250,7 +250,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
 
-    const v0, 0x7f0700e1
+    const v0, 0x7f070129
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -258,7 +258,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->h:Landroid/view/View;
 
-    const v0, 0x7f0700e4
+    const v0, 0x7f07012c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -266,7 +266,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->i:Landroid/view/View;
 
-    const v0, 0x7f0700e8
+    const v0, 0x7f070130
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -274,7 +274,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->j:Landroid/view/View;
 
-    const v0, 0x7f0700eb
+    const v0, 0x7f070133
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -282,7 +282,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->k:Landroid/view/View;
 
-    const v0, 0x7f0700ee
+    const v0, 0x7f070137
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -290,7 +290,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->l:Landroid/view/View;
 
-    const v0, 0x7f0700e2
+    const v0, 0x7f07012a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -300,7 +300,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->m:Landroid/widget/TextView;
 
-    const v0, 0x7f0700e5
+    const v0, 0x7f07012d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -310,7 +310,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->n:Landroid/widget/TextView;
 
-    const v0, 0x7f0700e9
+    const v0, 0x7f070131
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -320,7 +320,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->o:Landroid/widget/TextView;
 
-    const v0, 0x7f0700ec
+    const v0, 0x7f070134
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -330,7 +330,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->p:Landroid/widget/TextView;
 
-    const v0, 0x7f0700ef
+    const v0, 0x7f070138
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -340,7 +340,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->q:Landroid/widget/TextView;
 
-    const v0, 0x7f0700f2
+    const v0, 0x7f07013b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -356,15 +356,15 @@
 .method private b(I)V
     .locals 6
 
-    const v5, 0x7f09000c
+    const v5, 0x7f0a002c
 
     const/4 v4, 0x0
 
-    const v3, 0x7f090010
+    const v3, 0x7f0a0001
 
     const/4 v2, 0x4
 
-    const v0, 0x7f0700ea
+    const v0, 0x7f070132
 
     if-ne p1, v0, :cond_1
 
@@ -421,7 +421,7 @@
     return-void
 
     :cond_1
-    const v0, 0x7f0700e7
+    const v0, 0x7f07012f
 
     if-ne p1, v0, :cond_2
 
@@ -476,7 +476,7 @@
     goto :goto_0
 
     :cond_2
-    const v0, 0x7f0700ed
+    const v0, 0x7f070136
 
     if-ne p1, v0, :cond_0
 
@@ -538,9 +538,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->s:Lcn/com/smartdevices/bracelet/config/b;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->l:Lcn/com/smartdevices/bracelet/config/o;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->l:Lcn/com/smartdevices/bracelet/config/p;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/o;->a:Ljava/lang/Boolean;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/p;->a:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -548,7 +548,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0700e6
+    const v0, 0x7f070135
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->findViewById(I)Landroid/view/View;
 
@@ -563,7 +563,7 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->a(I)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->c()Z
 
     move-result v0
 
@@ -601,21 +601,23 @@
 .method private c(I)V
     .locals 6
 
-    const v5, 0x7f09000c
+    const v5, 0x7f0a002c
 
-    const v4, 0x7f090050
+    const/4 v4, 0x0
 
-    const/4 v3, 0x4
+    const v3, 0x7f0a0067
 
-    const/4 v2, 0x0
+    const/4 v2, 0x4
 
-    const v0, 0x7f0700ea
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->f()V
+
+    const v0, 0x7f070132
 
     if-ne p1, v0, :cond_1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->k:Landroid/view/View;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->p:Landroid/widget/TextView;
 
@@ -629,13 +631,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->e:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->j:Landroid/view/View;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->o:Landroid/widget/TextView;
 
@@ -643,19 +641,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->d:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->l:Landroid/view/View;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->q:Landroid/widget/TextView;
 
@@ -663,28 +657,24 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->f:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    const v0, 0x7f0700e7
+    const v0, 0x7f07012f
 
     if-ne p1, v0, :cond_2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->k:Landroid/view/View;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->p:Landroid/widget/TextView;
 
@@ -692,19 +682,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->e:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->j:Landroid/view/View;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->o:Landroid/widget/TextView;
 
@@ -718,13 +704,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->d:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->l:Landroid/view/View;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->q:Landroid/widget/TextView;
 
@@ -732,26 +714,22 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->f:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
-
     goto :goto_0
 
     :cond_2
-    const v0, 0x7f0700ed
+    const v0, 0x7f070136
 
     if-ne p1, v0, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->k:Landroid/view/View;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->p:Landroid/widget/TextView;
 
@@ -759,19 +737,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->e:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->j:Landroid/view/View;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->o:Landroid/widget/TextView;
 
@@ -779,19 +753,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->d:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->l:Landroid/view/View;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->q:Landroid/widget/TextView;
 
@@ -805,17 +775,13 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->f:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
-
-    goto/16 :goto_0
+    goto :goto_0
 .end method
 
 .method private d()I
     .locals 3
 
-    const v0, 0x7f0700e0
+    const v0, 0x7f070128
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -827,7 +793,7 @@
 
     if-ne v1, v2, :cond_1
 
-    const v0, 0x7f0700e3
+    const v0, 0x7f07012b
 
     :cond_0
     :goto_0
@@ -842,7 +808,7 @@
 .method private e()I
     .locals 5
 
-    const v0, 0x7f0700e7
+    const v0, 0x7f07012f
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -882,7 +848,7 @@
 
     if-ne v1, v2, :cond_1
 
-    const v0, 0x7f0700ed
+    const v0, 0x7f070136
 
     :cond_0
     :goto_0
@@ -893,7 +859,7 @@
 
     if-ne v1, v2, :cond_2
 
-    const v0, 0x7f0700ea
+    const v0, 0x7f070132
 
     goto :goto_0
 
@@ -901,6 +867,26 @@
     if-nez v1, :cond_0
 
     goto :goto_0
+.end method
+
+.method private f()V
+    .locals 2
+
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->e:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->d:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->f:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
+
+    return-void
 .end method
 
 
@@ -1030,11 +1016,11 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0700e0 -> :sswitch_1
-        0x7f0700e3 -> :sswitch_0
-        0x7f0700e7 -> :sswitch_3
-        0x7f0700ea -> :sswitch_2
-        0x7f0700ed -> :sswitch_4
+        0x7f070128 -> :sswitch_1
+        0x7f07012b -> :sswitch_0
+        0x7f07012f -> :sswitch_3
+        0x7f070132 -> :sswitch_2
+        0x7f070136 -> :sswitch_4
     .end sparse-switch
 .end method
 
@@ -1043,7 +1029,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030028
+    const v0, 0x7f030031
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingUnitActivity;->setContentView(I)V
 
@@ -1095,7 +1081,7 @@
 
     const-string v0, "PagePersonInfoUnit"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1107,7 +1093,7 @@
 
     const-string v0, "PagePersonInfoUnit"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
 
     return-void
 .end method

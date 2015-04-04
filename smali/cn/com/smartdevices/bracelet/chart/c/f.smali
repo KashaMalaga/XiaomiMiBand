@@ -26,7 +26,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setRotationX(F)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setRotationY(F)V
 
     return-void
 .end method

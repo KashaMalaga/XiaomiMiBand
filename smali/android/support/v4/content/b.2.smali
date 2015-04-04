@@ -1,5 +1,5 @@
 .class final Landroid/support/v4/content/b;
-.super Landroid/support/v4/content/w;
+.super Landroid/support/v4/content/z;
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -8,7 +8,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Landroid/support/v4/content/w",
+        "Landroid/support/v4/content/z",
         "<",
         "Ljava/lang/Void;",
         "Ljava/lang/Void;",
@@ -40,7 +40,7 @@
 
     iput-object p1, p0, Landroid/support/v4/content/b;->c:Landroid/support/v4/content/a;
 
-    invoke-direct {p0}, Landroid/support/v4/content/w;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/content/z;-><init>()V
 
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 

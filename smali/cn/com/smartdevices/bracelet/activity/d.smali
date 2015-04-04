@@ -38,7 +38,7 @@
 
     const-string v2, "login"
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -54,7 +54,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090005
+    const v1, 0x7f0a0009
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 

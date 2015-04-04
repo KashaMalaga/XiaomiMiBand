@@ -3,11 +3,11 @@
 
 
 # static fields
-.field public static final wheel_custom_val_dark_0:I = 0x7f020179
+.field public static final wheel_custom_val_dark_0:I = 0x7f0201bd
 
-.field public static final wheel_custom_val_default:I = 0x7f02017a
+.field public static final wheel_custom_val_default:I = 0x7f0201be
 
-.field public static final wheel_custom_val_white_1:I = 0x7f02017b
+.field public static final wheel_custom_val_white_1:I = 0x7f0201bf
 
 
 # direct methods

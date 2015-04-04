@@ -1,26 +1,99 @@
 .class final Lcn/com/smartdevices/bracelet/L;
-.super Lcom/d/a/a/h;
+.super Lcom/d/a/a/p;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/d/a/a/p",
+        "<",
+        "Ljava/lang/Double;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/i/d;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:I
+
+.field final synthetic d:I
+
+.field final synthetic e:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/i/d;Ljava/lang/String;IILandroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/L;->a:Landroid/content/Context;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/L;->a:Lcn/com/smartdevices/bracelet/i/d;
 
-    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/L;->b:Ljava/lang/String;
+
+    iput p3, p0, Lcn/com/smartdevices/bracelet/L;->c:I
+
+    iput p4, p0, Lcn/com/smartdevices/bracelet/L;->d:I
+
+    iput-object p5, p0, Lcn/com/smartdevices/bracelet/L;->e:Landroid/content/Context;
+
+    invoke-direct {p0}, Lcom/d/a/a/p;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 3
+.method protected a(Ljava/lang/String;Z)Ljava/lang/Double;
+    .locals 4
+
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "code"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const-string v1, "data"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "beat_percentage"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
+
+    move-result-wide v0
+
+    const-wide/high16 v2, 0x4059000000000000L
+
+    mul-double/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Double;)V
+    .locals 4
 
     const-string v0, "Utils"
 
@@ -28,13 +101,13 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "onFail status: "
+    const-string v2, "get ranking response : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -44,263 +117,135 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/L;->a:Lcn/com/smartdevices/bracelet/i/d;
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 6
+    invoke-virtual {p4}, Ljava/lang/Double;->doubleValue()D
 
-    new-instance v0, Ljava/lang/String;
+    move-result-wide v1
 
-    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
-
-    const-string v1, "Utils"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "result = "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    new-instance v3, Lorg/json/JSONObject;
-
-    invoke-direct {v3, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "data"
-
-    invoke-virtual {v3, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    const-string v1, "detail"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Utils"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "details Str : "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v1, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v1, Lorg/json/JSONObject;
-
-    invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :try_start_1
-    const-string v0, "code"
-
-    invoke-virtual {v3, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    const/4 v2, 0x1
-
-    if-eq v0, v2, :cond_0
-
-    const-string v2, "Utils"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "getLazyDaysFromServer code = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_2
-
-    :cond_0
-    move-object v0, v1
-
-    :goto_0
-    if-nez v0, :cond_1
+    invoke-interface {v0, v1, v2}, Lcn/com/smartdevices/bracelet/i/d;->a(D)V
 
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    :cond_1
-    const-string v1, "algo_start_date"
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/L;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-nez v1, :cond_0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/model/SportDay;
+    :try_start_0
+    const-string v1, "date"
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    :try_start_2
-    const-string v1, "algo_start_date"
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/L;->b:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    :try_end_2
-    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
 
-    :goto_1
-    const-string v1, "Utils"
+    const-string v1, "record"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    iget v2, p0, Lcn/com/smartdevices/bracelet/L;->c:I
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    const-string v4, "after add lazy date: "
+    const-string v1, "time_type"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, p0, Lcn/com/smartdevices/bracelet/L;->d:I
 
-    move-result-object v3
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    const-string v1, "value"
 
-    move-result-object v4
+    invoke-virtual {p4}, Ljava/lang/Double;->doubleValue()D
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-wide v2
 
-    move-result-object v3
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/L;->e:Landroid/content/Context;
 
-    move-result-object v3
-
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->i(Ljava/lang/String;)Ljava/lang/String;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->k(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/L;->a:Landroid/content/Context;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/E;->u(Landroid/content/Context;)V
-
-    :cond_2
-    const-string v1, "algo_start_date"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->k(Ljava/lang/String;)V
+    const-string v2, "step_daily_ranking"
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;)Ljava/lang/String;
+    sget-object v3, Lcn/com/smartdevices/bracelet/h/c;->a:Lcn/com/smartdevices/bracelet/h/c;
 
-    move-result-object v0
+    invoke-virtual {v1, v2, v0, v3}, Lcn/com/smartdevices/bracelet/f/x;->a(Ljava/lang/String;Ljava/lang/String;Lcn/com/smartdevices/bracelet/h/c;)Z
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->i(Ljava/lang/String;)Ljava/lang/String;
-
+    :cond_0
+    :goto_0
     return-void
 
     :catch_0
     move-exception v0
 
-    move-object v1, v2
-
-    :goto_2
-    const-string v2, "Utils"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "error: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lorg/json/JSONException;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    move-object v0, v1
-
     goto :goto_0
+.end method
 
-    :catch_1
-    move-exception v1
+.method public a(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Double;)V
+    .locals 3
 
-    invoke-virtual {v1}, Lorg/json/JSONException;->printStackTrace()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/L;->a:Lcn/com/smartdevices/bracelet/i/d;
 
-    goto :goto_1
+    const-wide/high16 v1, -0x4010000000000000L
 
-    :catch_2
-    move-exception v0
+    invoke-interface {v0, v1, v2}, Lcn/com/smartdevices/bracelet/i/d;->a(D)V
 
-    goto :goto_2
+    return-void
+.end method
+
+.method public synthetic onFailure(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 6
+
+    move-object v5, p5
+
+    check-cast v5, Ljava/lang/Double;
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/L;->a(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Double;)V
+
+    return-void
+.end method
+
+.method public synthetic onSuccess(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p4, Ljava/lang/Double;
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcn/com/smartdevices/bracelet/L;->a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Double;)V
+
+    return-void
+.end method
+
+.method protected synthetic parseResponse(Ljava/lang/String;Z)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/L;->a(Ljava/lang/String;Z)Ljava/lang/Double;
+
+    move-result-object v0
+
+    return-object v0
 .end method

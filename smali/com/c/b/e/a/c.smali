@@ -191,7 +191,7 @@
 
     packed-switch v10, :pswitch_data_0
 
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 

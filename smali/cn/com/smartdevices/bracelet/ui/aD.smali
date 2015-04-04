@@ -1,118 +1,113 @@
-.class Lcn/com/smartdevices/bracelet/ui/aD;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/xiaomi/hm/bleservice/profile/IFirmwareUpgradeCb;
+.class public Lcn/com/smartdevices/bracelet/ui/aD;
+.super Lcn/com/smartdevices/bracelet/ui/aa;
 
 
 # instance fields
-.field final synthetic a:Ljava/io/File;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+.field private a:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;Ljava/io/File;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Ljava/io/File;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aa;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onStart()V
-    .locals 0
+.method protected inflateLayout()I
+    .locals 1
 
-    return-void
+    const v0, 0x7f03006e
+
+    return v0
 .end method
 
-.method public onStop(I)V
+.method public onCreate(Landroid/os/Bundle;)V
     .locals 2
 
-    new-instance v0, Landroid/os/Message;
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/aa;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aD;->getArguments()Landroid/os/Bundle;
 
-    const/4 v1, 0x4
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    iput p1, v0, Landroid/os/Message;->arg1:I
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Ljava/io/File;
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Ljava/io/File;
+    const-string v1, "KEY_WEIGHT_VALUE"
 
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Ljava/lang/String;
 
     :cond_0
     return-void
 .end method
 
-.method public report(I)V
-    .locals 2
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/aa;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;I)I
+    move-result-object v1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    const v0, 0x7f070251
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-object v1
+.end method
+
+.method protected onLeftButtonClicked()V
+    .locals 2
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aD;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->b(Z)V
+
+    :cond_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aD;->dismiss()V
 
     return-void
 .end method
 
-.method public setMax(I)V
+.method protected onRightButtonClicked()V
     .locals 2
 
-    new-instance v0, Landroid/os/Message;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aD;->getActivity()Landroid/app/Activity;
 
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
+    move-result-object v0
 
-    const/4 v1, 0x3
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
 
-    iput v1, v0, Landroid/os/Message;->what:I
+    if-eqz v0, :cond_0
 
-    iput p1, v0, Landroid/os/Message;->arg1:I
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->b(Z)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    :cond_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aD;->dismiss()V
 
     return-void
 .end method

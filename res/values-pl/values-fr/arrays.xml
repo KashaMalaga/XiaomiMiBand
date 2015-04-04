@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>Lun.</item>
+        <item>Mar.</item>
+        <item>Mer.</item>
+        <item>Jeu.</item>
+        <item>Ven.</item>
+        <item>Sam.</item>
+        <item>Dim.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Lun.</item>
+        <item>Mar.</item>
+        <item>Mer.</item>
+        <item>Jeu.</item>
+        <item>Ven.</item>
+        <item>Sam.</item>
+        <item>Dim.</item>
+    </string-array>
+    <string-array name="months">
+        <item>Janvier</item>
+        <item>Février</item>
+        <item>Mars</item>
+        <item>Avril</item>
+        <item>Mai</item>
+        <item>Juin</item>
+        <item>Juillet</item>
+        <item>Août</item>
+        <item>Septembre</item>
+        <item>Octobre</item>
+        <item>Novembre</item>
+        <item>Décembre</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>Une fois</item>
+        <item>Quotidien</item>
+        <item>Semaines</item>
+        <item>Personnaliser</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>Rien ne peut remplacer la cohérence.</item>
+        <item>Ambitionnez votre progrès, pas la perfection.</item>
+        <item>La répétition est le père du succès.</item>
+        <item>Énergie et persistance conquièrent toutes choses.</item>
+        <item>Définissez des petits objectifs et concentrez-vous dessus.</item>
+        <item>Chaque trajet commence par un premier pas.</item>
+        <item>Atteindre un objectif par jour.</item>
+        <item>Peu importe que vous soyez lent, vous êtes mieux ici que sur votre canapé.</item>
+        <item>"Courez quand vous le pouvez. Marcher si c'est possible. Rampez si vous le devez. N'abandonnez jamais."</item>
+        <item>"N'oubliez pas, la sensation d'un bon entraînement est bien mieux que la sensation que vous aurez en restant assis."</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>Super</item>
+        <item>Bien</item>
+        <item>Modérée</item>
+        <item>Mise en garde</item>
+        <item>Malsain</item>
+        <item>Très malsain</item>
+    </string-array>
+    <string-array name="weight_unit">
+        <item>kg</item>
+        <item>Catty</item>
+        <item>lb</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>Sous-poids</item>
+        <item>Poids normal</item>
+        <item>Excès de poids</item>
+        <item>Obèse</item>
+        <item>Obèse</item>
+    </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>"Catégorie de l'IMC: Sous-poids"</item>
+        <item>"Catégorie de l'IMC: Normal"</item>
+        <item>"Catégorie de l'IMC: Surpoids"</item>
+        <item>"Catégorie de l'IMC: Obèse"</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>Définissez un objectif à atteindre pour gérer votre poids.</item>
+        <item>Félicitations ! Vous avez atteint votre objectif de poids.</item>
+        <item>Vous êtes en dessous de votre objectif de poids</item>
+        <item>Vous êtes au dessus de votre objectif de poids</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>Définissez un objectif à atteindre pour gérer votre poids.</item>
+        <item>Félicitations ! Vous avez atteint votre objectif de poids.</item>
+        <item>Vous êtes en dessous de votre objectif de poids</item>
+        <item>Vous êtes au dessus de votre objectif de poids</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>Objectif dépassé</item>
+        <item>Objectif non atteint</item>
+        <item>Vous avez atteint votre objectif !</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>"Vous n'avez pas atteint votre objectif"</item>
+        <item>"Vous n'avez pas atteint votre objectif"</item>
+        <item>"Vous n'avez pas atteint votre objectif"</item>
+        <item>Vous avez atteint votre objectif (%1$s%2$s) !</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>"Vous n'avez pas atteint votre objectif"</item>
+        <item>"Vous n'avez pas atteint votre objectif"</item>
+        <item>"Vous n'avez pas atteint votre objectif"</item>
+        <item>Vous avez atteint votre objectif (%1$s%2$s) !</item>
+    </string-array>
+</resources>

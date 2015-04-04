@@ -192,7 +192,7 @@
 
     iget v1, p0, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->type:I
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/y;->a(FI)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/G;->a(FI)F
 
     move-result v0
 
@@ -200,7 +200,7 @@
 
     iget v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->type:I
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/y;->a(I)F
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/G;->a(I)F
 
     move-result v0
 

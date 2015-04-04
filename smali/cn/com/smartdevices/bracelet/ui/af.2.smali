@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/chart/c/o;
+.implements Landroid/view/GestureDetector$OnGestureListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/Z;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ad;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/Z;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ad;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/af;->a:Lcn/com/smartdevices/bracelet/ui/Z;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/af;->a:Lcn/com/smartdevices/bracelet/ui/ad;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,21 +22,46 @@
 
 
 # virtual methods
-.method public a(I)V
+.method public onDown(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/af;->a:Lcn/com/smartdevices/bracelet/ui/Z;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->getActivity()Landroid/app/Activity;
+    return v0
+.end method
 
-    move-result-object v0
+.method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    .locals 1
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x1
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    return v0
+.end method
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
+.method public onLongPress(Landroid/view/MotionEvent;)V
+    .locals 0
 
-    :cond_0
     return-void
+.end method
+
+.method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public onShowPress(Landroid/view/MotionEvent;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onSingleTapUp(Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

@@ -11,7 +11,7 @@
 # instance fields
 .field public extMsg:Ljava/lang/String;
 
-.field private scene:I
+.field public scene:I
 
 .field public toUserName:Ljava/lang/String;
 
@@ -84,19 +84,6 @@
     goto :goto_0
 
     :cond_2
-    iget v1, p0, Lcom/tencent/mm/sdk/modelbiz/JumpToBizWebview$Req;->webType:I
-
-    if-eqz v1, :cond_3
-
-    const-string v1, "MicroMsg.SDK.JumpToBizWebview.Req"
-
-    const-string v2, "now only support the webtype is 0"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/b/a;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_3
     const/4 v0, 0x1
 
     goto :goto_0

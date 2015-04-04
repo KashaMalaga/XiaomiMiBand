@@ -1,5 +1,5 @@
 .class public final Lcom/c/b/i/b/a;
-.super Lcom/c/b/q;
+.super Lcom/c/b/u;
 
 
 # instance fields
@@ -10,7 +10,7 @@
 .method constructor <init>(FFF)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/c/b/q;-><init>(FF)V
+    invoke-direct {p0, p1, p2}, Lcom/c/b/u;-><init>(FF)V
 
     iput p3, p0, Lcom/c/b/i/b/a;->a:F
 

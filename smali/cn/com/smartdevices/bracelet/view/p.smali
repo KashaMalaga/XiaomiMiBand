@@ -2,16 +2,16 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Ljava/util/Comparator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
+        "Ljava/util/Comparator",
         "<",
-        "Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;",
+        "Lcn/com/smartdevices/bracelet/view/S;",
         ">;"
     }
 .end annotation
@@ -28,42 +28,28 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
+.method public a(Lcn/com/smartdevices/bracelet/view/S;Lcn/com/smartdevices/bracelet/view/S;)I
     .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
+    iget v0, p1, Lcn/com/smartdevices/bracelet/view/S;->b:I
 
-    const/4 v1, 0x0
+    iget v1, p2, Lcn/com/smartdevices/bracelet/view/S;->b:I
 
-    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;-><init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/view/M;)V
+    sub-int/2addr v0, v1
 
-    return-object v0
+    return v0
 .end method
 
-.method public a(I)[Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
+.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    new-array v0, p1, [Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
+    check-cast p1, Lcn/com/smartdevices/bracelet/view/S;
 
-    return-object v0
-.end method
+    check-cast p2, Lcn/com/smartdevices/bracelet/view/S;
 
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/view/P;->a(Lcn/com/smartdevices/bracelet/view/S;Lcn/com/smartdevices/bracelet/view/S;)I
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/P;->a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
+    move-result v0
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/P;->a(I)[Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

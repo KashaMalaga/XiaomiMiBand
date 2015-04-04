@@ -74,9 +74,9 @@
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->p:I
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/C;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/A;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/view/C;-><init>(Lcn/com/smartdevices/bracelet/view/RulerScrollView;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/view/A;-><init>(Lcn/com/smartdevices/bracelet/view/RulerScrollView;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->r:Landroid/view/GestureDetector$SimpleOnGestureListener;
 
@@ -96,11 +96,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->d:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0300ac
+    const v1, 0x7f0300c2
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f070323
+    const v0, 0x7f07037e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->findViewById(I)Landroid/view/View;
 
@@ -132,9 +132,9 @@
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->p:I
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/C;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/A;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/view/C;-><init>(Lcn/com/smartdevices/bracelet/view/RulerScrollView;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/view/A;-><init>(Lcn/com/smartdevices/bracelet/view/RulerScrollView;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->r:Landroid/view/GestureDetector$SimpleOnGestureListener;
 
@@ -298,7 +298,7 @@
 .method private c(I)V
     .locals 4
 
-    const v3, 0x7f070322
+    const v3, 0x7f07037d
 
     int-to-float v0, p1
 
@@ -541,7 +541,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->l:Landroid/view/View;
 
-    const v1, 0x7f07031f
+    const v1, 0x7f07037a
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -553,7 +553,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->l:Landroid/view/View;
 
-    const v1, 0x7f070320
+    const v1, 0x7f07037b
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

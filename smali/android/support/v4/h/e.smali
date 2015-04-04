@@ -1,33 +1,37 @@
 .class Landroid/support/v4/h/e;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/support/v4/h/n;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/h/c;
+
+.field final synthetic b:Landroid/support/v4/h/d;
+
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/h/d;Landroid/support/v4/h/c;)V
     .locals 0
+
+    iput-object p1, p0, Landroid/support/v4/h/e;->b:Landroid/support/v4/h/d;
+
+    iput-object p2, p0, Landroid/support/v4/h/e;->a:Landroid/support/v4/h/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static a(Landroid/support/v4/h/c;)Landroid/os/Parcelable$Creator;
+
+# virtual methods
+.method public a()V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/support/v4/h/c",
-            "<TT;>;)",
-            "Landroid/os/Parcelable$Creator",
-            "<TT;>;"
-        }
-    .end annotation
 
-    new-instance v0, Landroid/support/v4/h/d;
+    iget-object v0, p0, Landroid/support/v4/h/e;->a:Landroid/support/v4/h/c;
 
-    invoke-direct {v0, p0}, Landroid/support/v4/h/d;-><init>(Landroid/support/v4/h/c;)V
+    invoke-interface {v0}, Landroid/support/v4/h/c;->a()V
 
-    return-object v0
+    return-void
 .end method

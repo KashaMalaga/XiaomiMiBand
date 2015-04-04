@@ -1,5 +1,5 @@
 version: 2.0.0-RC3
-apkFileName: 小米运动_1.3.312_375.apk
+apkFileName: 小米运动_1.4.152_1025.apk
 isFrameworkApk: false
 usesFramework:
   ids:
@@ -10,12 +10,13 @@ sdkInfo:
 packageInfo:
   forced-package-id: '127'
 versionInfo:
-  versionCode: '375'
-  versionName: 1.3.312
+  versionCode: '1025'
+  versionName: 1.4.152
 compressionType: false
 unknownFiles:
-  push_version: '8'
-  com/robotium/solo/RobotiumWeb.js: '8'
+  push_version: '0'
   org/achartengine/image/zoom-1.png: '8'
   org/achartengine/image/zoom_in.png: '8'
   org/achartengine/image/zoom_out.png: '8'
+  com/sina/weibo/sdk/net/cacert_cn.cer: '8'
+  com/sina/weibo/sdk/net/cacert_com.cer: '8'

@@ -16,7 +16,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/x;
+.method public a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/L;
     .locals 1
 
     const/4 v0, 0x0

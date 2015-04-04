@@ -2,13 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/c/b/m;
-
-
-# static fields
-.field protected static final c:I = 0x8
-
-.field protected static final d:I = 0x100
+.implements Lcom/c/b/q;
 
 
 # direct methods
@@ -20,10 +14,10 @@
     return-void
 .end method
 
-.method protected static a([I[II)I
-    .locals 9
+.method protected static a([I[IF)F
+    .locals 10
 
-    const v0, 0x7fffffff
+    const/high16 v0, 0x7f800000
 
     const/4 v1, 0x0
 
@@ -58,37 +52,47 @@
     return v0
 
     :cond_2
-    shl-int/lit8 v2, v4, 0x8
+    int-to-float v2, v4
 
-    div-int v6, v2, v3
+    int-to-float v3, v3
 
-    mul-int v2, p2, v6
+    div-float v6, v2, v3
 
-    shr-int/lit8 v7, v2, 0x8
+    mul-float v7, p2, v6
+
+    const/4 v2, 0x0
+
+    move v3, v2
 
     move v2, v1
-
-    move v3, v1
 
     :goto_2
     if-ge v2, v5, :cond_4
 
     aget v1, p0, v2
 
-    shl-int/lit8 v1, v1, 0x8
-
     aget v8, p1, v2
 
-    mul-int/2addr v8, v6
+    int-to-float v8, v8
 
-    if-le v1, v8, :cond_3
+    mul-float/2addr v8, v6
 
-    sub-int/2addr v1, v8
+    int-to-float v9, v1
+
+    cmpl-float v9, v9, v8
+
+    if-lez v9, :cond_3
+
+    int-to-float v1, v1
+
+    sub-float/2addr v1, v8
 
     :goto_3
-    if-gt v1, v7, :cond_1
+    cmpl-float v8, v1, v7
 
-    add-int/2addr v3, v1
+    if-gtz v8, :cond_1
+
+    add-float/2addr v3, v1
 
     add-int/lit8 v1, v2, 0x1
 
@@ -97,12 +101,16 @@
     goto :goto_2
 
     :cond_3
-    sub-int v1, v8, v1
+    int-to-float v1, v1
+
+    sub-float v1, v8, v1
 
     goto :goto_3
 
     :cond_4
-    div-int v0, v3, v4
+    int-to-float v0, v4
+
+    div-float v0, v3, v0
 
     goto :goto_1
 .end method
@@ -124,7 +132,7 @@
 
     if-lt p1, v6, :cond_0
 
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -190,7 +198,7 @@
     if-eq p1, v6, :cond_6
 
     :cond_3
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -226,7 +234,7 @@
     goto :goto_3
 .end method
 
-.method private b(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/o;
+.method private b(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/s;
     .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -236,7 +244,7 @@
             "<",
             "Lcom/c/b/e;",
             "*>;)",
-            "Lcom/c/b/o;"
+            "Lcom/c/b/s;"
         }
     .end annotation
 
@@ -302,7 +310,7 @@
 
     add-int/lit8 v5, v7, 0x1
 
-    shr-int/lit8 v5, v5, 0x1
+    div-int/lit8 v5, v5, 0x2
 
     and-int/lit8 v6, v7, 0x1
 
@@ -323,7 +331,7 @@
     if-lt v11, v2, :cond_6
 
     :cond_0
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v1
 
@@ -362,7 +370,7 @@
 
     invoke-virtual {v0, v11, v3}, Lcom/c/b/c;->a(ILcom/c/b/c/a;)Lcom/c/b/c/a;
     :try_end_0
-    .catch Lcom/c/b/l; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Lcom/c/b/n; {:try_start_0 .. :try_end_0} :catch_1
 
     move-result-object v3
 
@@ -381,7 +389,7 @@
 
     if-eqz v4, :cond_9
 
-    sget-object v6, Lcom/c/b/e;->h:Lcom/c/b/e;
+    sget-object v6, Lcom/c/b/e;->j:Lcom/c/b/e;
 
     invoke-interface {v4, v6}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -397,7 +405,7 @@
 
     invoke-interface {v6, v4}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    sget-object v4, Lcom/c/b/e;->h:Lcom/c/b/e;
+    sget-object v4, Lcom/c/b/e;->j:Lcom/c/b/e;
 
     invoke-interface {v6, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -405,7 +413,7 @@
     :try_start_1
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v11, v3, v6}, Lcom/c/b/g/q;->a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/o;
+    invoke-virtual {v0, v11, v3, v6}, Lcom/c/b/g/q;->a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/s;
 
     move-result-object v4
 
@@ -413,7 +421,7 @@
 
     if-ne v5, v12, :cond_7
 
-    sget-object v12, Lcom/c/b/p;->b:Lcom/c/b/p;
+    sget-object v12, Lcom/c/b/t;->b:Lcom/c/b/t;
 
     const/16 v13, 0xb4
 
@@ -421,9 +429,9 @@
 
     move-result-object v13
 
-    invoke-virtual {v4, v12, v13}, Lcom/c/b/o;->a(Lcom/c/b/p;Ljava/lang/Object;)V
+    invoke-virtual {v4, v12, v13}, Lcom/c/b/s;->a(Lcom/c/b/t;Ljava/lang/Object;)V
 
-    invoke-virtual {v4}, Lcom/c/b/o;->c()[Lcom/c/b/q;
+    invoke-virtual {v4}, Lcom/c/b/s;->c()[Lcom/c/b/u;
 
     move-result-object v12
 
@@ -431,7 +439,7 @@
 
     const/4 v13, 0x0
 
-    new-instance v14, Lcom/c/b/q;
+    new-instance v14, Lcom/c/b/u;
 
     int-to-float v15, v8
 
@@ -439,7 +447,7 @@
 
     aget-object v16, v12, v16
 
-    invoke-virtual/range {v16 .. v16}, Lcom/c/b/q;->a()F
+    invoke-virtual/range {v16 .. v16}, Lcom/c/b/u;->a()F
 
     move-result v16
 
@@ -453,17 +461,17 @@
 
     aget-object v16, v12, v16
 
-    invoke-virtual/range {v16 .. v16}, Lcom/c/b/q;->b()F
+    invoke-virtual/range {v16 .. v16}, Lcom/c/b/u;->b()F
 
     move-result v16
 
-    invoke-direct/range {v14 .. v16}, Lcom/c/b/q;-><init>(FF)V
+    invoke-direct/range {v14 .. v16}, Lcom/c/b/u;-><init>(FF)V
 
     aput-object v14, v12, v13
 
     const/4 v13, 0x1
 
-    new-instance v14, Lcom/c/b/q;
+    new-instance v14, Lcom/c/b/u;
 
     int-to-float v15, v8
 
@@ -471,7 +479,7 @@
 
     aget-object v16, v12, v16
 
-    invoke-virtual/range {v16 .. v16}, Lcom/c/b/q;->a()F
+    invoke-virtual/range {v16 .. v16}, Lcom/c/b/u;->a()F
 
     move-result v16
 
@@ -485,15 +493,15 @@
 
     aget-object v16, v12, v16
 
-    invoke-virtual/range {v16 .. v16}, Lcom/c/b/q;->b()F
+    invoke-virtual/range {v16 .. v16}, Lcom/c/b/u;->b()F
 
     move-result v16
 
-    invoke-direct/range {v14 .. v16}, Lcom/c/b/q;-><init>(FF)V
+    invoke-direct/range {v14 .. v16}, Lcom/c/b/u;-><init>(FF)V
 
     aput-object v14, v12, v13
     :try_end_1
-    .catch Lcom/c/b/n; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Lcom/c/b/r; {:try_start_1 .. :try_end_1} :catch_0
 
     :cond_7
     return-object v4
@@ -564,7 +572,7 @@
     :cond_2
     if-ltz v1, :cond_3
 
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -580,7 +588,7 @@
 
 
 # virtual methods
-.method public abstract a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/o;
+.method public abstract a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/s;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -589,24 +597,24 @@
             "<",
             "Lcom/c/b/e;",
             "*>;)",
-            "Lcom/c/b/o;"
+            "Lcom/c/b/s;"
         }
     .end annotation
 .end method
 
-.method public a(Lcom/c/b/c;)Lcom/c/b/o;
+.method public a(Lcom/c/b/c;)Lcom/c/b/s;
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Lcom/c/b/g/q;->a(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/o;
+    invoke-virtual {p0, p1, v0}, Lcom/c/b/g/q;->a(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/s;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public a(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/o;
+.method public a(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/s;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -616,16 +624,16 @@
             "<",
             "Lcom/c/b/e;",
             "*>;)",
-            "Lcom/c/b/o;"
+            "Lcom/c/b/s;"
         }
     .end annotation
 
     const/4 v2, 0x0
 
     :try_start_0
-    invoke-direct {p0, p1, p2}, Lcom/c/b/g/q;->b(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/o;
+    invoke-direct {p0, p1, p2}, Lcom/c/b/g/q;->b(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/s;
     :try_end_0
-    .catch Lcom/c/b/l; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/c/b/n; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
@@ -660,11 +668,11 @@
 
     move-result-object v4
 
-    invoke-direct {p0, v4, p2}, Lcom/c/b/g/q;->b(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/o;
+    invoke-direct {p0, v4, p2}, Lcom/c/b/g/q;->b(Lcom/c/b/c;Ljava/util/Map;)Lcom/c/b/s;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/c/b/o;->e()Ljava/util/Map;
+    invoke-virtual {v3}, Lcom/c/b/s;->e()Ljava/util/Map;
 
     move-result-object v0
 
@@ -672,7 +680,7 @@
 
     if-eqz v0, :cond_3
 
-    sget-object v5, Lcom/c/b/p;->b:Lcom/c/b/p;
+    sget-object v5, Lcom/c/b/t;->b:Lcom/c/b/t;
 
     invoke-interface {v0, v5}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -680,7 +688,7 @@
 
     if-eqz v5, :cond_3
 
-    sget-object v5, Lcom/c/b/p;->b:Lcom/c/b/p;
+    sget-object v5, Lcom/c/b/t;->b:Lcom/c/b/t;
 
     invoke-interface {v0, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -697,15 +705,15 @@
     rem-int/lit16 v0, v0, 0x168
 
     :goto_2
-    sget-object v1, Lcom/c/b/p;->b:Lcom/c/b/p;
+    sget-object v1, Lcom/c/b/t;->b:Lcom/c/b/t;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-virtual {v3, v1, v0}, Lcom/c/b/o;->a(Lcom/c/b/p;Ljava/lang/Object;)V
+    invoke-virtual {v3, v1, v0}, Lcom/c/b/s;->a(Lcom/c/b/t;Ljava/lang/Object;)V
 
-    invoke-virtual {v3}, Lcom/c/b/o;->c()[Lcom/c/b/q;
+    invoke-virtual {v3}, Lcom/c/b/s;->c()[Lcom/c/b/u;
 
     move-result-object v1
 
@@ -722,13 +730,13 @@
 
     if-ge v0, v2, :cond_1
 
-    new-instance v2, Lcom/c/b/q;
+    new-instance v2, Lcom/c/b/u;
 
     int-to-float v5, v4
 
     aget-object v6, v1, v0
 
-    invoke-virtual {v6}, Lcom/c/b/q;->b()F
+    invoke-virtual {v6}, Lcom/c/b/u;->b()F
 
     move-result v6
 
@@ -740,11 +748,11 @@
 
     aget-object v6, v1, v0
 
-    invoke-virtual {v6}, Lcom/c/b/q;->a()F
+    invoke-virtual {v6}, Lcom/c/b/u;->a()F
 
     move-result v6
 
-    invoke-direct {v2, v5, v6}, Lcom/c/b/q;-><init>(FF)V
+    invoke-direct {v2, v5, v6}, Lcom/c/b/u;-><init>(FF)V
 
     aput-object v2, v1, v0
 

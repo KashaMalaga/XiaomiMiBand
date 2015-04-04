@@ -177,12 +177,23 @@
 
     const/4 v0, 0x0
 
+    array-length v1, p1
+
+    if-nez v1, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v0
+
+    :cond_0
     move v1, v0
 
     :goto_0
     array-length v2, p1
 
-    if-ge v0, v2, :cond_0
+    if-ge v0, v2, :cond_1
 
     aget-byte v2, p1, v0
 
@@ -204,7 +215,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     return v1
 .end method
 

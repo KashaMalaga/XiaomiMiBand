@@ -29,7 +29,7 @@
 
 .field public static final TYPE_PRODUCT:I = 0xa
 
-.field public static final TYPE_RECODE:I = 0x13
+.field public static final TYPE_RECORD:I = 0x13
 
 .field public static final TYPE_TEXT:I = 0x1
 

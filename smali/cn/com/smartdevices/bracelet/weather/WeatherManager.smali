@@ -115,7 +115,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/location/Location$Address;->h()Ljava/lang/String;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/location/Location$Address;->j()Ljava/lang/String;
 
     move-result-object v0
 
@@ -413,7 +413,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Landroid/support/v4/content/s;->a(Landroid/content/Context;)Landroid/support/v4/content/s;
+    invoke-static {v1}, Landroid/support/v4/content/v;->a(Landroid/content/Context;)Landroid/support/v4/content/v;
 
     move-result-object v1
 
@@ -421,7 +421,7 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/weather/WeatherManager$1;-><init>(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)V
 
-    invoke-virtual {v1, v2, v0}, Landroid/support/v4/content/s;->a(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
+    invoke-virtual {v1, v2, v0}, Landroid/support/v4/content/v;->a(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
     return-void
 .end method
@@ -749,7 +749,7 @@
 
     const-string v2, "WeatherRequestCity"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     sget-object v1, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
 
@@ -1054,7 +1054,7 @@
 
     const-string v2, "WeatherRequestCityCode"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1092,7 +1092,7 @@
 
     const-string v2, "WeatherRequestWeather"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     sget-object v1, Lcn/com/smartdevices/bracelet/k/a;->a:Lcom/d/a/a/a;
 

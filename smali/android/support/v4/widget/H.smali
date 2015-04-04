@@ -2,22 +2,12 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/widget/O;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/widget/D;
-
-.field final synthetic b:Landroid/support/v4/widget/F;
+.implements Landroid/support/v4/widget/I;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/F;Landroid/support/v4/widget/D;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Landroid/support/v4/widget/H;->b:Landroid/support/v4/widget/F;
-
-    iput-object p2, p0, Landroid/support/v4/widget/H;->a:Landroid/support/v4/widget/D;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,12 +16,76 @@
 
 
 # virtual methods
-.method public a()Z
+.method public a(Landroid/content/Context;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/widget/H;->a:Landroid/support/v4/widget/D;
+    invoke-static {p1}, Landroid/support/v4/widget/J;->a(Landroid/content/Context;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/D;->a()Z
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a(Ljava/lang/Object;II)V
+    .locals 0
+
+    invoke-static {p1, p2, p3}, Landroid/support/v4/widget/J;->a(Ljava/lang/Object;II)V
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/widget/J;->a(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public a(Ljava/lang/Object;F)Z
+    .locals 1
+
+    invoke-static {p1, p2}, Landroid/support/v4/widget/J;->a(Ljava/lang/Object;F)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public a(Ljava/lang/Object;I)Z
+    .locals 1
+
+    invoke-static {p1, p2}, Landroid/support/v4/widget/J;->a(Ljava/lang/Object;I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
+    .locals 1
+
+    invoke-static {p1, p2}, Landroid/support/v4/widget/J;->a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public b(Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Landroid/support/v4/widget/J;->b(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public c(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/widget/J;->c(Ljava/lang/Object;)Z
 
     move-result v0
 

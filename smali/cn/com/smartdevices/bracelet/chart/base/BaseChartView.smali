@@ -183,14 +183,6 @@
     goto :goto_0
 .end method
 
-.method public b(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->l:Z
-
-    return-void
-.end method
-
 .method public c()V
     .locals 2
 
@@ -206,7 +198,7 @@
 .method public c(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->g:Z
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->l:Z
 
     return-void
 .end method
@@ -243,6 +235,14 @@
     return-object v0
 .end method
 
+.method public d(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->g:Z
+
+    return-void
+.end method
+
 .method public e(F)V
     .locals 1
 
@@ -253,7 +253,7 @@
     return-void
 .end method
 
-.method public g()V
+.method public h()V
     .locals 1
 
     const/4 v0, 0x1
@@ -263,7 +263,7 @@
     return-void
 .end method
 
-.method public h()V
+.method public i()V
     .locals 1
 
     const/4 v0, 0x0
@@ -273,7 +273,7 @@
     return-void
 .end method
 
-.method public i()Z
+.method public j()Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:Z
@@ -281,7 +281,7 @@
     return v0
 .end method
 
-.method public j()Z
+.method public k()Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->l:Z
@@ -289,7 +289,15 @@
     return v0
 .end method
 
-.method public k()Lcn/com/smartdevices/bracelet/chart/b/d;
+.method public l()J
+    .locals 2
+
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->n:J
+
+    return-wide v0
+.end method
+
+.method public m()Lcn/com/smartdevices/bracelet/chart/b/d;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->f:Lcn/com/smartdevices/bracelet/chart/b/d;

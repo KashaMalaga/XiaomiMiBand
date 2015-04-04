@@ -13,6 +13,8 @@
 
 .field public static final CHECK_SUM:Ljava/lang/String; = "_mmessage_checksum"
 
+.field public static final COMMAND_ADD_CARD_TO_EX_CARD_PACKAGE:I = 0x9
+
 .field public static final COMMAND_GETMESSAGE_FROM_WX:I = 0x3
 
 .field public static final COMMAND_JUMP_BIZ_WEBVIEW:I = 0x8

@@ -1,94 +1,124 @@
-.class public Landroid/support/v4/app/k;
-.super Landroid/support/v4/content/c;
+.class Landroid/support/v4/app/k;
+.super Ljava/lang/Object;
+
+
+# instance fields
+.field public a:Ljava/lang/reflect/Method;
+
+.field public b:Ljava/lang/reflect/Method;
+
+.field public c:Landroid/widget/ImageView;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method constructor <init>(Landroid/app/Activity;)V
+    .locals 8
 
-    invoke-direct {p0}, Landroid/support/v4/content/c;-><init>()V
+    const v7, 0x102002c
 
-    return-void
-.end method
+    const/4 v6, 0x1
 
-.method public static a(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V
-    .locals 2
+    const/4 v5, 0x0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x10
+    :try_start_0
+    const-class v0, Landroid/app/ActionBar;
 
-    if-lt v0, v1, :cond_0
+    const-string v1, "setHomeAsUpIndicator"
 
-    invoke-static {p0, p1, p2, p3}, Landroid/support/v4/app/m;->a(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V
+    const/4 v2, 0x1
 
+    new-array v2, v2, [Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    const-class v4, Landroid/graphics/drawable/Drawable;
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v4/app/k;->a:Ljava/lang/reflect/Method;
+
+    const-class v0, Landroid/app/ActionBar;
+
+    const-string v1, "setHomeActionContentDescription"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v4/app/k;->b:Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
-    invoke-virtual {p0, p1, p2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p1, v7}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    if-ne v1, v2, :cond_0
+
+    invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v6}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Landroid/view/View;->getId()I
+
+    move-result v2
+
+    if-ne v2, v7, :cond_1
+
+    :goto_1
+    instance-of v1, v0, Landroid/widget/ImageView;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Landroid/support/v4/app/k;->c:Landroid/widget/ImageView;
 
     goto :goto_0
-.end method
 
-.method public static a(Landroid/app/Activity;Landroid/content/Intent;Landroid/os/Bundle;)V
-    .locals 2
+    :cond_1
+    move-object v0, v1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_0
-
-    invoke-static {p0, p1, p2}, Landroid/support/v4/app/m;->a(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/app/Activity;)Z
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_0
-
-    invoke-static {p0}, Landroid/support/v4/app/l;->a(Landroid/app/Activity;)V
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static b(Landroid/app/Activity;)V
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_0
-
-    invoke-static {p0}, Landroid/support/v4/app/m;->a(Landroid/app/Activity;)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
-
-    goto :goto_0
+    goto :goto_1
 .end method

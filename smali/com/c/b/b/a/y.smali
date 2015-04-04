@@ -13,115 +13,117 @@
 
 
 # virtual methods
-.method public a(Lcom/c/b/o;)Lcom/c/b/b/a/h;
-    .locals 6
+.method public a(Lcom/c/b/s;)Lcom/c/b/b/a/h;
+    .locals 7
 
     const/16 v5, 0x3a
 
-    const/4 v4, 0x0
+    const/4 v6, 0x0
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Lcom/c/b/o;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "smtp:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "SMTP:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v2, 0x5
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v5}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v3
-
-    if-ltz v3, :cond_2
-
-    add-int/lit8 v1, v3, 0x1
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v4, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v5}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v3
-
-    if-ltz v3, :cond_1
-
-    add-int/lit8 v0, v3, 0x1
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/c/b/b/a/y;->c(Lcom/c/b/s;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v4, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    const-string v1, "smtp:"
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    :cond_1
-    :goto_1
-    new-instance v3, Ljava/lang/StringBuilder;
+    move-result v1
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    if-nez v1, :cond_0
 
-    const-string v4, "mailto:"
+    const-string v1, "SMTP:"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result-object v3
+    move-result v1
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_0
 
-    move-result-object v3
+    :goto_0
+    return-object v2
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    const/4 v1, 0x5
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v1
+
+    if-ltz v1, :cond_2
+
+    add-int/lit8 v3, v1, 0x1
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v4
 
-    new-instance v3, Lcom/c/b/b/a/h;
+    invoke-virtual {v0, v6, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    invoke-direct {v3, v2, v1, v0, v4}, Lcom/c/b/b/a/h;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    move-object v0, v3
+    invoke-virtual {v4, v5}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v1
+
+    if-ltz v1, :cond_1
+
+    add-int/lit8 v3, v1, 0x1
+
+    invoke-virtual {v4, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v6, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    move-object v3, v0
+
+    :goto_1
+    new-instance v0, Lcom/c/b/b/a/h;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    aput-object v3, v1, v6
+
+    move-object v3, v2
+
+    invoke-direct/range {v0 .. v5}, Lcom/c/b/b/a/h;-><init>([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object v2, v0
 
     goto :goto_0
 
+    :cond_1
+    move-object v5, v2
+
+    move-object v3, v0
+
+    goto :goto_1
+
     :cond_2
-    move-object v1, v0
+    move-object v5, v2
+
+    move-object v4, v2
+
+    move-object v3, v0
 
     goto :goto_1
 .end method
 
-.method public synthetic b(Lcom/c/b/o;)Lcom/c/b/b/a/q;
+.method public synthetic b(Lcom/c/b/s;)Lcom/c/b/b/a/q;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/c/b/b/a/y;->a(Lcom/c/b/o;)Lcom/c/b/b/a/h;
+    invoke-virtual {p0, p1}, Lcom/c/b/b/a/y;->a(Lcom/c/b/s;)Lcom/c/b/b/a/h;
 
     move-result-object v0
 

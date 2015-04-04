@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="numberOfPullUpdateReport">
+        <item quantity="other">%d అంశాలు అప్‌డేట్ అయ్యాయి.</item>
+        <item quantity="one">%d అంశం అప్‌డేట్ అయింది.</item>
+    </plurals>
+    <plurals name="numberFoot">
+        <item quantity="other">%s అడుగులు</item>
+        <item quantity="one">%s అడుగు</item>
+    </plurals>
+    <plurals name="numberInch">
+        <item quantity="other">%s అంగుళాలు</item>
+        <item quantity="one">%s అంగుళం</item>
+    </plurals>
+</resources>

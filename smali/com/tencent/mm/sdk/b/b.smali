@@ -16,20 +16,10 @@
 
 
 # virtual methods
-.method public final b()I
-    .locals 1
-
-    invoke-static {}, Lcom/tencent/mm/sdk/b/a;->a()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final d(Ljava/lang/String;Ljava/lang/String;)V
+.method public final e(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/b/a;->a()I
+    invoke-static {}, Lcom/tencent/mm/sdk/b/a;->g()I
 
     move-result v0
 
@@ -43,10 +33,10 @@
     return-void
 .end method
 
-.method public final e(Ljava/lang/String;Ljava/lang/String;)V
+.method public final f(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/b/a;->a()I
+    invoke-static {}, Lcom/tencent/mm/sdk/b/a;->g()I
 
     move-result v0
 
@@ -60,10 +50,37 @@
     return-void
 .end method
 
-.method public final f(Ljava/lang/String;Ljava/lang/String;)V
+.method public final g(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/b/a;->a()I
+    invoke-static {}, Lcom/tencent/mm/sdk/b/a;->g()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-gt v0, v1, :cond_0
+
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h()I
+    .locals 1
+
+    invoke-static {}, Lcom/tencent/mm/sdk/b/a;->g()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final h(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    invoke-static {}, Lcom/tencent/mm/sdk/b/a;->g()I
 
     move-result v0
 

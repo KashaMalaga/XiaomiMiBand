@@ -1,22 +1,19 @@
-.class Landroid/support/v4/view/aL;
+.class interface abstract annotation Landroid/support/v4/view/aL;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# annotations
+.annotation build Landroid/support/a/l;
+    a = {
+        0x0L,
+        0x1L,
+        0x2L
+    }
+.end annotation
 
-    return-void
-.end method
-
-.method public static a(Landroid/view/ViewConfiguration;)I
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->getScaledPagingTouchSlop()I
-
-    move-result v0
-
-    return v0
-.end method
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
+.end annotation

@@ -3,26 +3,12 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String;
+.field private static final a:Ljava/lang/String; = "WeightGoalManager"
 
 .field private static b:Lcn/com/smartdevices/bracelet/weight/goal/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Lcn/com/smartdevices/bracelet/weight/goal/a;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 0
 
@@ -57,23 +43,15 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/weight/goal/b;-><init>(Lcn/com/smartdevices/bracelet/weight/goal/a;)V
 
-    invoke-static {p1, p2, v0}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;Lcn/com/smartdevices/bracelet/T;)V
+    invoke-static {p1, p2, v0}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;Lcn/com/smartdevices/bracelet/W;)V
 
     return-void
-.end method
-
-.method static synthetic b()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
-
-    return-object v0
 .end method
 
 .method private b(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;)V
     .locals 4
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v0, "WeightGoalManager"
 
     const-string v1, " local doesnt found data and can not del"
 
@@ -105,7 +83,7 @@
 
     invoke-direct {v3, p0, p2}, Lcn/com/smartdevices/bracelet/weight/goal/c;-><init>(Lcn/com/smartdevices/bracelet/weight/goal/a;Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;)V
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Ljava/lang/String;JLcn/com/smartdevices/bracelet/R;)V
+    invoke-static {p1, v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;Ljava/lang/String;JLcn/com/smartdevices/bracelet/U;)V
 
     return-void
 .end method
@@ -191,7 +169,7 @@
 
     if-lez v1, :cond_0
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v1, "WeightGoalManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -227,7 +205,7 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v0, "WeightGoalManager"
 
     const-string v1, "size null"
 
@@ -254,7 +232,7 @@
 
     const/4 v4, 0x0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v0, "WeightGoalManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -334,7 +312,7 @@
 .method public a(Landroid/content/Context;)V
     .locals 6
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v0, "WeightGoalManager"
 
     const-string v1, "syncLocalToServer..."
 
@@ -344,9 +322,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/a;->a(Z)Ljava/util/List;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weight/a;->d()Ljava/util/List;
 
     move-result-object v0
 
@@ -375,7 +351,7 @@
 
     move-result-object v3
 
-    sget-object v4, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v4, "WeightGoalManager"
 
     if-nez v3, :cond_1
 
@@ -401,7 +377,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;
 
-    sget-object v4, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v4, "WeightGoalManager"
 
     const-string v5, "dele goal"
 
@@ -449,7 +425,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v3, "WeightGoalManager"
 
     if-nez v2, :cond_3
 
@@ -475,7 +451,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v3, "WeightGoalManager"
 
     const-string v4, "udpate goal"
 
@@ -533,7 +509,7 @@
         }
     .end annotation
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v0, "WeightGoalManager"
 
     const-string v1, "syncFromServer..."
 
@@ -584,7 +560,7 @@
 
     invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/weight/goal/d;-><init>(Lcn/com/smartdevices/bracelet/weight/goal/a;)V
 
-    invoke-static {p1, v0, v2, v3, v4}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/com/smartdevices/bracelet/U;)V
+    invoke-static {p1, v0, v2, v3, v4}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/com/smartdevices/bracelet/X;)V
 
     goto :goto_0
 
@@ -664,7 +640,7 @@
     if-nez v3, :cond_1
 
     :cond_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v0, "WeightGoalManager"
 
     const-string v2, "the user fuid is first time to set weight goal"
 
@@ -676,7 +652,7 @@
     return v0
 
     :cond_1
-    sget-object v1, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v1, "WeightGoalManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -705,10 +681,34 @@
     goto :goto_0
 .end method
 
+.method public b()V
+    .locals 2
+
+    const-string v0, "WeightGoalManager"
+
+    const-string v1, "Delete All Infos!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/activeandroid/b/a;
+
+    invoke-direct {v0}, Lcom/activeandroid/b/a;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;
+
+    invoke-virtual {v0, v1}, Lcom/activeandroid/b/a;->a(Ljava/lang/Class;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/activeandroid/b/b;->d()Ljava/util/List;
+
+    return-void
+.end method
+
 .method public b(I)V
     .locals 5
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v0, "WeightGoalManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -777,7 +777,7 @@
     if-nez v1, :cond_1
 
     :cond_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v0, "WeightGoalManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -868,7 +868,7 @@
 .method public b(Landroid/content/Context;)V
     .locals 6
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v0, "WeightGoalManager"
 
     const-string v1, "clear all"
 
@@ -905,7 +905,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;
 
-    sget-object v2, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v2, "WeightGoalManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1007,7 +1007,7 @@
     if-nez v3, :cond_1
 
     :cond_0
-    sget-object v2, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v2, "WeightGoalManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1039,7 +1039,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/weight/goal/a;->a:Ljava/lang/String;
+    const-string v1, "WeightGoalManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 

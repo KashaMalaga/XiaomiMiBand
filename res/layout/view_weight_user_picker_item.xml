@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.com.smartdevices.bracelet.view.WeightUserAvatar android:id="@id/user_avatar" android:layout_width="37.0dip" android:layout_height="37.0dip" android:src="@drawable/choose_user_src_selector" android:scaleType="fitCenter"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

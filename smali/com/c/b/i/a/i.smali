@@ -1,4 +1,4 @@
-.class Lcom/c/b/i/a/i;
+.class final Lcom/c/b/i/a/i;
 .super Lcom/c/b/i/a/c;
 
 
@@ -26,7 +26,7 @@
 .method a(II)Z
     .locals 2
 
-    ushr-int/lit8 v0, p1, 0x1
+    div-int/lit8 v0, p1, 0x2
 
     div-int/lit8 v1, p2, 0x3
 

@@ -44,11 +44,11 @@
 
     const v1, 0x1020002
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/dx;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/dX;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/ui/dx;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/ui/dX;-><init>()V
 
-    const-class v3, Lcn/com/smartdevices/bracelet/ui/dx;
+    const-class v3, Lcn/com/smartdevices/bracelet/ui/dX;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -66,7 +66,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onPause()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -76,7 +76,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
 
     return-void
 .end method

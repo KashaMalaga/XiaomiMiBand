@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>จ</item>
+        <item>อ</item>
+        <item>พ</item>
+        <item>พฤ</item>
+        <item>ศ</item>
+        <item>ส</item>
+        <item>อา</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>จ.</item>
+        <item>อ.</item>
+        <item>พ.</item>
+        <item>พฤ.</item>
+        <item>ศ.</item>
+        <item>ส.</item>
+        <item>อา.</item>
+    </string-array>
+    <string-array name="months">
+        <item>มกราคม</item>
+        <item>กุมภาพันธ์</item>
+        <item>มีนาคม</item>
+        <item>เมษายน</item>
+        <item>พฤษภาคม</item>
+        <item>มิถุนายน</item>
+        <item>กรกฏาคม</item>
+        <item>สิงหาคม</item>
+        <item>กันยายน</item>
+        <item>ตุลาคม</item>
+        <item>พฤศจิกายน</item>
+        <item>ธันวาคม</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>ครั้งเดียว</item>
+        <item>ทุกวัน</item>
+        <item>ทุกวันธรรมดา</item>
+        <item>เลือกเอง</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>ความสม่ำเสมอนำมาซึ่งความสำเร็จ</item>
+        <item>แข่งกับใครไม่สู้เท่าแข่งกับตนเอง</item>
+        <item>ผลลัพท์ของการฝึกฝนคือความสำเร็จ</item>
+        <item>ความมุ่งมั่นไม่ย่อท้อและความขยันหมั่นเพียรย่อมชนะอุปสรรคทั้งปวง</item>
+        <item>ชนะตัวเองไม่ได้แล้วจะไปชนะใคร</item>
+        <item>การเดินทางทุกอย่างย่อมเริ่มต้นจากก้าวเล็กๆก้าวแรกเสมอ</item>
+        <item>ขอแค่บรรลุเป้าหมายประจำวัน</item>
+        <item>ถึงคุณเดินช้าเพียงใด แต่การได้เริ่มต้นย่อมไปไกลกว่าคนอื่นที่หยุดนิ่ง</item>
+        <item>ไม่ต้องบินให้สูงอย่างใครเขา จงบินเอาเท่าที่เราจะบินไหว จะบินช้าบินเร็วไม่เป็นไร แค่บินไปไม่ท้อก็พอดี</item>
+        <item>คุณบอกความแตกต่างระหว่างความรู้สึกที่ได้หลังจากออกกำลังกายเสร็จใหม่ๆ เทียบกับความรู้สึกที่นั่งอยู่เฉยๆแล้วเสียดายที่ไม่ได้ออกกำลังกายได้ไหม</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>ดีเยี่ยม</item>
+        <item>ดี</item>
+        <item>ปานกลาง</item>
+        <item>เฝ้าระวัง</item>
+        <item>ไม่ดีต่อสุขภาพ</item>
+        <item>เป็นอันตรายมาก</item>
+    </string-array>
+    <string-array name="weight_unit">
+        <item>กก.</item>
+        <item>jin</item>
+        <item>ปอนด์</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>ผอม</item>
+        <item>สันทัด</item>
+        <item>น้ำหนักเกิน</item>
+        <item>อ้วน</item>
+        <item>อ้วน</item>
+    </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>ดัชนีมวลกาย: ผอม</item>
+        <item>ดัชนีมวลกาย: สันทัด</item>
+        <item>ดัชนีมวลกาย: น้ำหนักเกิน</item>
+        <item>ดัชนีมวลกาย: อ้วน</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>การตั้งเป้าหมายเพื่อช่วยในการควบคุมน้ำหนักตัว</item>
+        <item>ยินดีด้วย! คุณมีน้ำหนักตัวตามที่ตั้งเป้าหมายไว้แล้ว</item>
+        <item>คุณมีน้ำหนักตัวต่ำกว่าเป้าหมายที่ตั้งไว้</item>
+        <item>คุณมีน้ำหนักตัวเกินเป้าหมายที่ตั้งไว้</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>การตั้งเป้าหมายเพื่อช่วยในการควบคุมน้ำหนักตัว</item>
+        <item>ยินดีด้วย! คุณมีน้ำหนักตัวตามที่ตั้งเป้าหมายไว้แล้ว</item>
+        <item>คุณมีน้ำหนักตัวต่ำกว่าเป้าหมายที่ตั้งไว้</item>
+        <item>คุณมีน้ำหนักตัวเกินเป้าหมายที่ตั้งไว้</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>บรรลุเป้าหมาย</item>
+        <item>คุณได้บรรลุสำเร็จตามเป้าหมายแล้ว</item>
+        <item>คุณทำเร็จตามเป้าหมายแล้ว!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>คุณยังไม่ถึงเป้าหมายที่กำหนดไว้</item>
+        <item>คุณยังไม่ถึงเป้าหมายที่กำหนดไว้</item>
+        <item>คุณยังไม่ถึงเป้าหมายที่กำหนดไว้</item>
+        <item>คุณทำได้ตามเป้าหมายที่กำหนดไว้แล้ว(%1$s%2$s)!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>คุณยังไม่ถึงเป้าหมายที่กำหนดไว้</item>
+        <item>คุณยังไม่ถึงเป้าหมายที่กำหนดไว้</item>
+        <item>คุณยังไม่ถึงเป้าหมายที่กำหนดไว้</item>
+        <item>คุณทำได้ตามเป้าหมายที่กำหนดไว้แล้ว(%1$s%2$s)!</item>
+    </string-array>
+</resources>

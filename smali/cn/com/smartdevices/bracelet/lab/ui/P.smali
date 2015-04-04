@@ -1,37 +1,220 @@
-.class Lcn/com/smartdevices/bracelet/lab/ui/P;
+.class public final Lcn/com/smartdevices/bracelet/lab/ui/P;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field public static final a:Ljava/lang/String;
 
-# instance fields
-.field final synthetic a:Landroid/app/Dialog;
+.field public static final b:Ljava/lang/String;
 
-.field final synthetic b:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
+.field public static final c:Ljava/lang/String;
+
+.field public static final d:Ljava/lang/String;
+
+.field public static final e:Ljava/lang/String;
+
+.field public static final f:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;Landroid/app/Dialog;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/P;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ".extra.SHARED_SUB_TITLE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/P;->a:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/P;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ".extra.SHARED_SPORT_COUNT"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/P;->b:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/P;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ".extra.SHARED_GROUP_DES"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/P;->c:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/P;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ".extra.SHARED_HISTORY_BEST_RECORD"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/P;->d:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/P;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ".extra.SHARED_ACCUMULATED_TIME"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/P;->e:Ljava/lang/String;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/lab/p;->g:Ljava/lang/String;
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/P;->f:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/P;->b:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/ui/P;->a:Landroid/app/Dialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;JI)Landroid/os/Bundle;
+    .locals 2
 
-# virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+    new-instance v0, Landroid/os/Bundle;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/P;->a:Landroid/app/Dialog;
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/P;->a:Ljava/lang/String;
 
-    return-void
+    invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/P;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/P;->f:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/P;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/P;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/P;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p4, p5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+
+    return-object v0
 .end method

@@ -232,7 +232,7 @@
 .method public abstract authenticate(Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$UserInfo;)Z
 .end method
 
-.method public abstract enableRealtimeStepNotification(ZLcn/com/smartdevices/bracelet/f/c;)Z
+.method public abstract enableRealtimeStepNotification(ZLcn/com/smartdevices/bracelet/e/c;)Z
 .end method
 
 .method public abstract getDeviceInfo()Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;

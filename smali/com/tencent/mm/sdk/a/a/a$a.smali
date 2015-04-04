@@ -3,13 +3,13 @@
 
 
 # instance fields
-.field public d:Ljava/lang/String;
+.field public m:Ljava/lang/String;
 
-.field public e:Landroid/os/Bundle;
+.field public n:Landroid/os/Bundle;
 
-.field public f:Ljava/lang/String;
+.field public o:Ljava/lang/String;
 
-.field public g:Ljava/lang/String;
+.field public p:Ljava/lang/String;
 
 
 # direct methods

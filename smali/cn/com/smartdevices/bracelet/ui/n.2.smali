@@ -18,7 +18,7 @@
 .method private a(Landroid/view/View;)V
     .locals 2
 
-    const v0, 0x7f070035
+    const v0, 0x7f07003d
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -40,7 +40,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/t;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/u;->a()Z
 
     move-result v0
 

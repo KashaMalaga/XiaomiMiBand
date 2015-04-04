@@ -8,6 +8,8 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXApiImplV10"
 
+.field private static activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
 .field private static wxappPayEntryClassname:Ljava/lang/String;
 
 
@@ -26,6 +28,8 @@
     .locals 1
 
     const/4 v0, 0x0
+
+    sput-object v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
 
     sput-object v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->wxappPayEntryClassname:Ljava/lang/String;
 
@@ -69,7 +73,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
 
@@ -78,6 +82,14 @@
     iput-boolean p3, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->checkSignature:Z
 
     return-void
+.end method
+
+.method static synthetic access$100()Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+    .locals 1
+
+    sget-object v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    return-object v0
 .end method
 
 .method private checkSumConsistent([B[B)Z
@@ -145,6 +157,116 @@
     const/4 v1, 0x1
 
     goto :goto_0
+.end method
+
+.method private initMta(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AWXOP"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/tencent/wxop/stat/c;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/tencent/wxop/stat/c;->w()V
+
+    sget-object v1, Lcom/tencent/wxop/stat/d;->aG:Lcom/tencent/wxop/stat/d;
+
+    invoke-static {v1}, Lcom/tencent/wxop/stat/c;->a(Lcom/tencent/wxop/stat/d;)V
+
+    invoke-static {}, Lcom/tencent/wxop/stat/c;->t()V
+
+    const-string v1, "Wechat_Sdk"
+
+    invoke-static {p1, v1}, Lcom/tencent/wxop/stat/c;->c(Landroid/content/Context;Ljava/lang/String;)V
+
+    :try_start_0
+    const-string v1, "2.0.3"
+
+    invoke-static {p1, v0, v1}, Lcom/tencent/wxop/stat/e;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
+    :try_end_0
+    .catch Lcom/tencent/wxop/stat/a; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Lcom/tencent/wxop/stat/a;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method private sendAddCardToWX(Landroid/content/Context;Landroid/os/Bundle;)Z
+    .locals 7
+
+    const/4 v6, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "content://com.tencent.mm.sdk.comm.provider/addCardToWX"
+
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    const/4 v3, 0x3
+
+    new-array v4, v3, [Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    iget-object v5, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->appId:Ljava/lang/String;
+
+    aput-object v5, v4, v3
+
+    const-string v3, "_wxapi_add_card_to_wx_card_list"
+
+    invoke-virtual {p2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v4, v6
+
+    const/4 v3, 0x2
+
+    const-string v5, "_wxapi_basereq_transaction"
+
+    invoke-virtual {p2, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v4, v3
+
+    move-object v3, v2
+
+    move-object v5, v2
+
+    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    :cond_0
+    return v6
 .end method
 
 .method private sendJumpToBizProfileReq(Landroid/content/Context;Landroid/os/Bundle;)Z
@@ -242,6 +364,13 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    :cond_0
     return v7
 .end method
 
@@ -318,6 +447,13 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    :cond_0
     return v7
 .end method
 
@@ -360,7 +496,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->wxappPayEntryClassname:Ljava/lang/String;
 
@@ -382,15 +518,15 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/sdk/a/a$a;-><init>()V
 
-    iput-object p2, v0, Lcom/tencent/mm/sdk/a/a$a;->e:Landroid/os/Bundle;
+    iput-object p2, v0, Lcom/tencent/mm/sdk/a/a$a;->n:Landroid/os/Bundle;
 
     const-string v1, "com.tencent.mm"
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a$a;->b:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a$a;->k:Ljava/lang/String;
 
     sget-object v1, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->wxappPayEntryClassname:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a$a;->c:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a$a;->l:Ljava/lang/String;
 
     invoke-static {p1, v0}, Lcom/tencent/mm/sdk/a/a;->a(Landroid/content/Context;Lcom/tencent/mm/sdk/a/a$a;)Z
 
@@ -408,17 +544,73 @@
 
     const-string v1, "detach"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->detached:Z
 
+    sget-object v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    if-eqz v0, :cond_1
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0xe
+
+    if-lt v0, v1, :cond_1
+
+    iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    instance-of v0, v0, Landroid/app/Activity;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    check-cast v0, Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    invoke-virtual {v0, v1}, Landroid/app/Application;->unregisterActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+
+    :cond_0
+    :goto_0
+    sget-object v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;->detach()V
+
+    :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
 
     return-void
+
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    instance-of v0, v0, Landroid/app/Service;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    check-cast v0, Landroid/app/Service;
+
+    invoke-virtual {v0}, Landroid/app/Service;->getApplication()Landroid/app/Application;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    invoke-virtual {v0, v1}, Landroid/app/Application;->unregisterActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+
+    goto :goto_0
 .end method
 
 .method public final getWXAppSupportAPI()I
@@ -473,9 +665,9 @@
 .method public final handleIntent(Landroid/content/Intent;Lcom/tencent/mm/sdk/openapi/IWXAPIEventHandler;)Z
     .locals 6
 
-    const/4 v1, 0x1
-
     const/4 v0, 0x0
+
+    const/4 v1, 0x1
 
     const-string v2, "com.tencent.mm.openapi.token"
 
@@ -489,7 +681,7 @@
 
     const-string v2, "handleIntent fail, intent not from weixin msg"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/b/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/b/a;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return v0
@@ -577,6 +769,7 @@
 
     packed-switch v2, :pswitch_data_0
 
+    :pswitch_0
     const-string v1, "MicroMsg.SDK.WXApiImplV10"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -597,7 +790,7 @@
 
     goto :goto_0
 
-    :pswitch_0
+    :pswitch_1
     new-instance v0, Lcom/tencent/mm/sdk/modelmsg/SendAuth$Resp;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -612,7 +805,7 @@
 
     goto :goto_0
 
-    :pswitch_1
+    :pswitch_2
     new-instance v0, Lcom/tencent/mm/sdk/modelmsg/SendMessageToWX$Resp;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -627,7 +820,7 @@
 
     goto :goto_0
 
-    :pswitch_2
+    :pswitch_3
     new-instance v0, Lcom/tencent/mm/sdk/modelmsg/GetMessageFromWX$Req;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -642,7 +835,7 @@
 
     goto/16 :goto_0
 
-    :pswitch_3
+    :pswitch_4
     new-instance v0, Lcom/tencent/mm/sdk/modelmsg/ShowMessageFromWX$Req;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -657,7 +850,7 @@
 
     goto/16 :goto_0
 
-    :pswitch_4
+    :pswitch_5
     new-instance v0, Lcom/tencent/mm/sdk/modelpay/PayResp;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -672,7 +865,7 @@
 
     goto/16 :goto_0
 
-    :pswitch_5
+    :pswitch_6
     new-instance v0, Lcom/tencent/mm/sdk/modelmsg/LaunchFromWX$Req;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -687,14 +880,34 @@
 
     goto/16 :goto_0
 
+    :pswitch_7
+    new-instance v0, Lcom/tencent/mm/sdk/modelbiz/AddCardToWXCardPackage$Resp;
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Lcom/tencent/mm/sdk/modelbiz/AddCardToWXCardPackage$Resp;-><init>(Landroid/os/Bundle;)V
+
+    invoke-interface {p2, v0}, Lcom/tencent/mm/sdk/openapi/IWXAPIEventHandler;->onResp(Lcom/tencent/mm/sdk/modelbase/BaseResp;)V
+
+    move v0, v1
+
+    goto/16 :goto_0
+
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_0
         :pswitch_1
         :pswitch_2
         :pswitch_3
         :pswitch_4
         :pswitch_5
+        :pswitch_6
+        :pswitch_0
+        :pswitch_0
+        :pswitch_7
     .end packed-switch
 .end method
 
@@ -878,7 +1091,9 @@
 .end method
 
 .method public final registerApp(Ljava/lang/String;)Z
-    .locals 3
+    .locals 4
+
+    const/4 v3, 0x0
 
     iget-boolean v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->detached:Z
 
@@ -917,6 +1132,48 @@
     return v0
 
     :cond_1
+    sget-object v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    if-nez v0, :cond_2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0xe
+
+    if-lt v0, v1, :cond_2
+
+    iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    instance-of v0, v0, Landroid/app/Activity;
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->initMta(Landroid/content/Context;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    iget-object v1, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    invoke-direct {v0, v1, v3}, Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;-><init>(Landroid/content/Context;Lcom/tencent/mm/sdk/openapi/WXApiImplV10$1;)V
+
+    sput-object v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    check-cast v0, Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    invoke-virtual {v0, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+
+    :cond_2
+    :goto_1
     const-string v0, "MicroMsg.SDK.WXApiImplV10"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -933,13 +1190,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     iput-object p1, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->appId:Ljava/lang/String;
 
-    :cond_2
+    :cond_3
     const-string v0, "MicroMsg.SDK.WXApiImplV10"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -962,7 +1219,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcom/tencent/mm/sdk/a/a/a$a;
 
@@ -970,11 +1227,11 @@
 
     const-string v1, "com.tencent.mm"
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->f:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->o:Ljava/lang/String;
 
     const-string v1, "com.tencent.mm.plugin.openapi.Intent.ACTION_HANDLE_APP_REGISTER"
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->g:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->p:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -992,7 +1249,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->d:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->m:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
 
@@ -1000,7 +1257,49 @@
 
     move-result v0
 
-    goto :goto_0
+    goto/16 :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    instance-of v0, v0, Landroid/app/Service;
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->initMta(Landroid/content/Context;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    iget-object v1, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    invoke-direct {v0, v1, v3}, Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;-><init>(Landroid/content/Context;Lcom/tencent/mm/sdk/openapi/WXApiImplV10$1;)V
+
+    sput-object v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    check-cast v0, Landroid/app/Service;
+
+    invoke-virtual {v0}, Landroid/app/Service;->getApplication()Landroid/app/Application;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->activityCb:Lcom/tencent/mm/sdk/openapi/WXApiImplV10$ActivityLifecycleCb;
+
+    invoke-virtual {v0, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+
+    goto :goto_1
+
+    :cond_5
+    const-string v0, "MicroMsg.SDK.WXApiImplV10"
+
+    const-string v1, "context is not instanceof Activity or Service, disable WXStat"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_1
 .end method
 
 .method public final sendReq(Lcom/tencent/mm/sdk/modelbase/BaseReq;)Z
@@ -1078,7 +1377,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Landroid/os/Bundle;
 
@@ -1137,11 +1436,28 @@
     goto :goto_0
 
     :cond_5
+    invoke-virtual {p1}, Lcom/tencent/mm/sdk/modelbase/BaseReq;->getType()I
+
+    move-result v1
+
+    const/16 v2, 0x9
+
+    if-ne v1, v2, :cond_6
+
+    iget-object v1, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
+
+    invoke-direct {p0, v1, v0}, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->sendAddCardToWX(Landroid/content/Context;Landroid/os/Bundle;)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_6
     new-instance v1, Lcom/tencent/mm/sdk/a/a$a;
 
     invoke-direct {v1}, Lcom/tencent/mm/sdk/a/a$a;-><init>()V
 
-    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->e:Landroid/os/Bundle;
+    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->n:Landroid/os/Bundle;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1159,15 +1475,15 @@
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->d:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->m:Ljava/lang/String;
 
     const-string v0, "com.tencent.mm"
 
-    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->b:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->k:Ljava/lang/String;
 
     const-string v0, "com.tencent.mm.plugin.base.stub.WXEntryActivity"
 
-    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->c:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->l:Ljava/lang/String;
 
     iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
 
@@ -1243,7 +1559,7 @@
 
     invoke-direct {v1}, Lcom/tencent/mm/sdk/a/a$a;-><init>()V
 
-    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->e:Landroid/os/Bundle;
+    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->n:Landroid/os/Bundle;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1261,15 +1577,15 @@
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->d:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->m:Ljava/lang/String;
 
     const-string v0, "com.tencent.mm"
 
-    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->b:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->k:Ljava/lang/String;
 
     const-string v0, "com.tencent.mm.plugin.base.stub.WXEntryActivity"
 
-    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->c:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/sdk/a/a$a;->l:Ljava/lang/String;
 
     iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
 
@@ -1336,7 +1652,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->appId:Ljava/lang/String;
 
@@ -1382,7 +1698,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcom/tencent/mm/sdk/a/a/a$a;
 
@@ -1390,11 +1706,11 @@
 
     const-string v1, "com.tencent.mm"
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->f:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->o:Ljava/lang/String;
 
     const-string v1, "com.tencent.mm.plugin.openapi.Intent.ACTION_HANDLE_APP_UNREGISTER"
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->g:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->p:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1412,7 +1728,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->d:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a/a$a;->m:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;->context:Landroid/content/Context;
 

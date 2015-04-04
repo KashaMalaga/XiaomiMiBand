@@ -1,36 +1,45 @@
-.class public abstract Landroid/support/v4/widget/D;
+.class Landroid/support/v4/widget/D;
 .super Ljava/lang/Object;
 
-
-# instance fields
-.field final a:Ljava/lang/Object;
+# interfaces
+.implements Landroid/view/View$OnApplyWindowInsetsListener;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {}, Landroid/support/v4/widget/C;->a()Landroid/support/v4/widget/J;
-
-    move-result-object v0
-
-    invoke-interface {v0, p0}, Landroid/support/v4/widget/J;->a(Landroid/support/v4/widget/D;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v4/widget/D;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Z
+.method public onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
     .locals 1
 
+    check-cast p1, Landroid/support/v4/widget/E;
+
+    invoke-virtual {p2}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-interface {p1, p2, v0}, Landroid/support/v4/widget/E;->a(Ljava/lang/Object;Z)V
+
+    invoke-virtual {p2}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
     const/4 v0, 0x0
 
-    return v0
+    goto :goto_0
 .end method

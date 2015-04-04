@@ -1,4 +1,4 @@
-.class Lcom/c/b/f/a/a/d;
+.class final Lcom/c/b/f/a/a/d;
 .super Ljava/lang/Object;
 
 # interfaces

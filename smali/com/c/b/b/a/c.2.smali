@@ -62,10 +62,10 @@
 
 
 # virtual methods
-.method public a(Lcom/c/b/o;)Lcom/c/b/b/a/d;
-    .locals 15
+.method public a(Lcom/c/b/s;)Lcom/c/b/b/a/d;
+    .locals 17
 
-    invoke-virtual/range {p1 .. p1}, Lcom/c/b/o;->a()Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/c/b/b/a/c;->c(Lcom/c/b/s;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -112,76 +112,74 @@
 
     invoke-static {v2, v0, v3}, Lcom/c/b/b/a/c;->b(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string v3, "TEL:"
+    const-string v2, "TEL:"
 
     const/4 v4, 0x1
 
-    invoke-static {v3, v0, v4}, Lcom/c/b/b/a/c;->a(Ljava/lang/String;Ljava/lang/String;Z)[Ljava/lang/String;
+    invoke-static {v2, v0, v4}, Lcom/c/b/b/a/c;->a(Ljava/lang/String;Ljava/lang/String;Z)[Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    const-string v4, "EMAIL:"
+    const-string v2, "EMAIL:"
 
     const/4 v5, 0x1
 
-    invoke-static {v4, v0, v5}, Lcom/c/b/b/a/c;->a(Ljava/lang/String;Ljava/lang/String;Z)[Ljava/lang/String;
+    invoke-static {v2, v0, v5}, Lcom/c/b/b/a/c;->a(Ljava/lang/String;Ljava/lang/String;Z)[Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v6
 
-    const-string v4, "NOTE:"
+    const-string v2, "NOTE:"
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    invoke-static {v4, v0, v6}, Lcom/c/b/b/a/c;->b(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v8
-
-    const-string v4, "ADR:"
-
-    const/4 v6, 0x1
-
-    invoke-static {v4, v0, v6}, Lcom/c/b/b/a/c;->a(Ljava/lang/String;Ljava/lang/String;Z)[Ljava/lang/String;
+    invoke-static {v2, v0, v5}, Lcom/c/b/b/a/c;->b(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v9
 
-    const-string v4, "BDAY:"
+    const-string v2, "ADR:"
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
-    invoke-static {v4, v0, v6}, Lcom/c/b/b/a/c;->b(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v2, v0, v5}, Lcom/c/b/b/a/c;->a(Ljava/lang/String;Ljava/lang/String;Z)[Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v10
 
-    if-eqz v12, :cond_2
+    const-string v2, "BDAY:"
 
-    const/16 v4, 0x8
+    const/4 v5, 0x1
 
-    invoke-static {v12, v4}, Lcom/c/b/b/a/c;->a(Ljava/lang/CharSequence;I)Z
+    invoke-static {v2, v0, v5}, Lcom/c/b/b/a/c;->b(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    move-result v4
+    move-result-object v13
 
-    if-nez v4, :cond_2
+    const/16 v2, 0x8
 
-    const/4 v12, 0x0
+    invoke-static {v13, v2}, Lcom/c/b/b/a/c;->a(Ljava/lang/CharSequence;I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    const/4 v13, 0x0
 
     :cond_2
-    const-string v4, "URL:"
+    const-string v2, "URL:"
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
-    invoke-static {v4, v0, v6}, Lcom/c/b/b/a/c;->b(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v2, v0, v5}, Lcom/c/b/b/a/c;->a(Ljava/lang/String;Ljava/lang/String;Z)[Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v15
 
-    const-string v4, "ORG:"
+    const-string v2, "ORG:"
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
-    invoke-static {v4, v0, v6}, Lcom/c/b/b/a/c;->b(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v2, v0, v5}, Lcom/c/b/b/a/c;->b(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v12
 
     new-instance v0, Lcom/c/b/b/a/d;
 
@@ -189,25 +187,29 @@
 
     move-result-object v1
 
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
     const/4 v7, 0x0
 
-    const/4 v10, 0x0
+    const/4 v8, 0x0
 
-    const/4 v13, 0x0
+    const/4 v11, 0x0
 
-    invoke-direct/range {v0 .. v14}, Lcom/c/b/b/a/d;-><init>([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v14, 0x0
+
+    const/16 v16, 0x0
+
+    invoke-direct/range {v0 .. v16}, Lcom/c/b/b/a/d;-><init>([Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public synthetic b(Lcom/c/b/o;)Lcom/c/b/b/a/q;
+.method public synthetic b(Lcom/c/b/s;)Lcom/c/b/b/a/q;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/c/b/b/a/c;->a(Lcom/c/b/o;)Lcom/c/b/b/a/d;
+    invoke-virtual {p0, p1}, Lcom/c/b/b/a/c;->a(Lcom/c/b/s;)Lcom/c/b/b/a/d;
 
     move-result-object v0
 

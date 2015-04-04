@@ -185,9 +185,9 @@
 
     if-eqz v0, :cond_8
 
-    new-instance v0, Lcom/c/b/g/a/a/c;
+    new-instance v0, Lcom/c/b/g/a/a/d;
 
-    invoke-direct {v0}, Lcom/c/b/g/a/a/c;-><init>()V
+    invoke-direct {v0}, Lcom/c/b/g/a/a/d;-><init>()V
 
     invoke-interface {v2, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -207,6 +207,12 @@
     new-instance v0, Lcom/c/b/g/e;
 
     invoke-direct {v0}, Lcom/c/b/g/e;-><init>()V
+
+    invoke-interface {v2, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Lcom/c/b/g/a;
+
+    invoke-direct {v0}, Lcom/c/b/g/a;-><init>()V
 
     invoke-interface {v2, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -234,9 +240,9 @@
 
     invoke-interface {v2, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    new-instance v0, Lcom/c/b/g/a/a/c;
+    new-instance v0, Lcom/c/b/g/a/a/d;
 
-    invoke-direct {v0}, Lcom/c/b/g/a/a/c;-><init>()V
+    invoke-direct {v0}, Lcom/c/b/g/a/a/d;-><init>()V
 
     invoke-interface {v2, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -278,7 +284,7 @@
 
 
 # virtual methods
-.method public a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/o;
+.method public a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/s;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -288,7 +294,7 @@
             "<",
             "Lcom/c/b/e;",
             "*>;)",
-            "Lcom/c/b/o;"
+            "Lcom/c/b/s;"
         }
     .end annotation
 
@@ -304,9 +310,9 @@
     aget-object v3, v1, v0
 
     :try_start_0
-    invoke-virtual {v3, p1, p2, p3}, Lcom/c/b/g/q;->a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/o;
+    invoke-virtual {v3, p1, p2, p3}, Lcom/c/b/g/q;->a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/s;
     :try_end_0
-    .catch Lcom/c/b/n; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/c/b/r; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
@@ -320,7 +326,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -341,7 +347,7 @@
 
     aget-object v3, v1, v0
 
-    invoke-interface {v3}, Lcom/c/b/m;->a()V
+    invoke-interface {v3}, Lcom/c/b/q;->a()V
 
     add-int/lit8 v0, v0, 0x1
 

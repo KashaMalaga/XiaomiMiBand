@@ -1,65 +1,77 @@
-.class Lcn/com/smartdevices/bracelet/ui/eb;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/Y;
+.class Lcn/com/smartdevices/bracelet/ui/eB;
+.super Lcn/com/smartdevices/bracelet/ui/aa;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/W;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;Lcn/com/smartdevices/bracelet/ui/W;)V
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/eb;->b:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/eB;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/eb;->a:Lcn/com/smartdevices/bracelet/ui/W;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aa;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;Lcn/com/smartdevices/bracelet/ui/em;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/eB;-><init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/app/DialogFragment;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b(Landroid/app/DialogFragment;)V
+.method protected inflateLayout()I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eb;->a:Lcn/com/smartdevices/bracelet/ui/W;
+    const v0, 0x7f03005d
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/W;->dismiss()V
-
-    return-void
+    return v0
 .end method
 
-.method public c(Landroid/app/DialogFragment;)V
-    .locals 1
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eb;->a:Lcn/com/smartdevices/bracelet/ui/W;
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/aa;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/W;->dismiss()V
+    move-result-object v1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eb;->b:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/eB;->getArguments()Landroid/os/Bundle;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->q(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    const-string v0, "Msg"
+
+    invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/y;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eb;->b:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    const v0, 0x7f070207
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->r(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)V
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    return-void
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    const-string v3, "Msg"
+
+    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-object v1
 .end method

@@ -326,11 +326,9 @@
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/v;->l:Ljava/lang/String;
 
-    const-string v1, "the synced data Calendar is wrong,drop!!!"
+    const-string v6, "the synced data Calendar is wrong,drop!!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
+    invoke-static {v0, v6}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -384,30 +382,46 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v7, v8, v9}, Lcn/com/smartdevices/bracelet/s;->a(III)Lcn/com/smartdevices/bracelet/model/DaySportData;
+    invoke-virtual {v1, v7, v8, v9}, Lcn/com/smartdevices/bracelet/s;->a(III)Lcom/xiaomi/hm/health/dataprocess/DaySportData;
 
     move-result-object v1
 
     if-nez v1, :cond_4
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/model/DaySportData;
+    new-instance v1, Lcom/xiaomi/hm/health/dataprocess/DaySportData;
 
-    invoke-direct {v1, v7, v8, v9}, Lcn/com/smartdevices/bracelet/model/DaySportData;-><init>(III)V
+    invoke-direct {v1, v7, v8, v9}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;-><init>(III)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
     move-result-object v7
 
-    invoke-virtual {v7, v1}, Lcn/com/smartdevices/bracelet/s;->a(Lcn/com/smartdevices/bracelet/model/DaySportData;)V
+    invoke-virtual {v7, v1}, Lcn/com/smartdevices/bracelet/s;->a(Lcom/xiaomi/hm/health/dataprocess/DaySportData;)V
 
     :cond_4
-    invoke-virtual {v1, v11}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedSync(Z)V
+    invoke-virtual {v1, v11}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->setNeedSync(Z)V
 
-    invoke-virtual {v1, v11}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedPostProcess(Z)V
+    invoke-virtual {v1, v11}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->setNeedPostProcess(Z)V
 
-    invoke-virtual {v1, v10, v0}, Lcn/com/smartdevices/bracelet/model/DaySportData;->add(ILcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;)V
+    new-instance v7, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getSportDay()Lcn/com/smartdevices/bracelet/model/SportDay;
+    iget v8, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;->category:I
+
+    and-int/lit16 v8, v8, 0xff
+
+    iget v9, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;->intensity:I
+
+    and-int/lit16 v9, v9, 0xff
+
+    iget v0, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;->steps:I
+
+    and-int/lit16 v0, v0, 0xff
+
+    invoke-direct {v7, v10, v8, v9, v0}, Lcom/xiaomi/hm/health/dataprocess/SportData;-><init>(IIII)V
+
+    invoke-virtual {v1, v7}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->add(Lcom/xiaomi/hm/health/dataprocess/SportData;)V
+
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->getSportDay()Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     move-result-object v0
 

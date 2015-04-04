@@ -36,7 +36,9 @@
 
 .field public static final enum k:Lcom/c/b/b/a/r;
 
-.field private static final synthetic l:[Lcom/c/b/b/a/r;
+.field public static final enum l:Lcom/c/b/b/a/r;
+
+.field private static final synthetic m:[Lcom/c/b/b/a/r;
 
 
 # direct methods
@@ -153,7 +155,17 @@
 
     sput-object v0, Lcom/c/b/b/a/r;->k:Lcom/c/b/b/a/r;
 
-    const/16 v0, 0xb
+    new-instance v0, Lcom/c/b/b/a/r;
+
+    const-string v1, "VIN"
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v1, v2}, Lcom/c/b/b/a/r;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/c/b/b/a/r;->l:Lcom/c/b/b/a/r;
+
+    const/16 v0, 0xc
 
     new-array v0, v0, [Lcom/c/b/b/a/r;
 
@@ -213,7 +225,13 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/c/b/b/a/r;->l:[Lcom/c/b/b/a/r;
+    const/16 v1, 0xb
+
+    sget-object v2, Lcom/c/b/b/a/r;->l:Lcom/c/b/b/a/r;
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/c/b/b/a/r;->m:[Lcom/c/b/b/a/r;
 
     return-void
 .end method
@@ -248,7 +266,7 @@
 .method public static values()[Lcom/c/b/b/a/r;
     .locals 1
 
-    sget-object v0, Lcom/c/b/b/a/r;->l:[Lcom/c/b/b/a/r;
+    sget-object v0, Lcom/c/b/b/a/r;->m:[Lcom/c/b/b/a/r;
 
     invoke-virtual {v0}, [Lcom/c/b/b/a/r;->clone()Ljava/lang/Object;
 

@@ -1,28 +1,66 @@
-.class final Lcn/com/smartdevices/bracelet/gps/ui/X;
+.class synthetic Lcn/com/smartdevices/bracelet/gps/ui/X;
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field a:Landroid/widget/TextView;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/gps/ui/U;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/U;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/X;->b:Lcn/com/smartdevices/bracelet/gps/ui/U;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/ui/aa;->values()[Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/gps/ui/X;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/X;->a:[I
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/aa;->c:Lcn/com/smartdevices/bracelet/gps/ui/aa;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/aa;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/X;->a:[I
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/aa;->a:Lcn/com/smartdevices/bracelet/gps/ui/aa;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/aa;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_1
     return-void
-.end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/U;Lcn/com/smartdevices/bracelet/gps/ui/V;)V
-    .locals 0
+    :catch_0
+    move-exception v0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/X;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/U;)V
+    goto :goto_1
 
-    return-void
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
 .end method

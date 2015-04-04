@@ -1,5 +1,5 @@
-.class Landroid/support/v4/content/t;
-.super Landroid/os/Handler;
+.class public final Landroid/support/v4/content/t;
+.super Landroid/database/ContentObserver;
 
 
 # instance fields
@@ -7,41 +7,36 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/content/s;Landroid/os/Looper;)V
-    .locals 0
+.method public constructor <init>(Landroid/support/v4/content/s;)V
+    .locals 1
 
     iput-object p1, p0, Landroid/support/v4/content/t;->a:Landroid/support/v4/content/s;
 
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
+.method public deliverSelfNotifications()Z
     .locals 1
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
+.method public onChange(Z)V
+    .locals 1
 
-    :goto_0
-    return-void
-
-    :pswitch_0
     iget-object v0, p0, Landroid/support/v4/content/t;->a:Landroid/support/v4/content/s;
 
-    invoke-static {v0}, Landroid/support/v4/content/s;->a(Landroid/support/v4/content/s;)V
+    invoke-virtual {v0}, Landroid/support/v4/content/s;->D()V
 
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

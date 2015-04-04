@@ -2,69 +2,7 @@
 .super Ljava/lang/Object;
 
 
-# static fields
-.field private static final a:Landroid/support/v4/g/c;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Landroid/support/v4/g/f;
-
-    invoke-direct {v0}, Landroid/support/v4/g/f;-><init>()V
-
-    sput-object v0, Landroid/support/v4/g/a;->a:Landroid/support/v4/g/c;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xd
-
-    if-lt v0, v1, :cond_1
-
-    new-instance v0, Landroid/support/v4/g/e;
-
-    invoke-direct {v0}, Landroid/support/v4/g/e;-><init>()V
-
-    sput-object v0, Landroid/support/v4/g/a;->a:Landroid/support/v4/g/c;
-
-    goto :goto_0
-
-    :cond_1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x8
-
-    if-lt v0, v1, :cond_2
-
-    new-instance v0, Landroid/support/v4/g/d;
-
-    invoke-direct {v0}, Landroid/support/v4/g/d;-><init>()V
-
-    sput-object v0, Landroid/support/v4/g/a;->a:Landroid/support/v4/g/c;
-
-    goto :goto_0
-
-    :cond_2
-    new-instance v0, Landroid/support/v4/g/b;
-
-    invoke-direct {v0}, Landroid/support/v4/g/b;-><init>()V
-
-    sput-object v0, Landroid/support/v4/g/a;->a:Landroid/support/v4/g/c;
-
-    goto :goto_0
-.end method
-
 .method public constructor <init>()V
     .locals 0
 
@@ -73,36 +11,48 @@
     return-void
 .end method
 
-.method public static a(Landroid/net/ConnectivityManager;Landroid/content/Intent;)Landroid/net/NetworkInfo;
-    .locals 1
+.method public static varargs a(Landroid/os/AsyncTask;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<Params:",
+            "Ljava/lang/Object;",
+            "Progress:",
+            "Ljava/lang/Object;",
+            "Result:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/AsyncTask",
+            "<TParams;TProgress;TResult;>;[TParams;)",
+            "Landroid/os/AsyncTask",
+            "<TParams;TProgress;TResult;>;"
+        }
+    .end annotation
 
-    const-string v0, "networkInfo"
+    if-nez p0, :cond_0
 
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    move-result-object v0
+    const-string v1, "task can not be null"
 
-    check-cast v0, Landroid/net/NetworkInfo;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
+    throw v0
 
-    move-result v0
+    :cond_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual {p0, v0}, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
+    const/16 v1, 0xb
 
-    move-result-object v0
+    if-lt v0, v1, :cond_1
 
-    return-object v0
-.end method
+    invoke-static {p0, p1}, Landroid/support/v4/g/b;->a(Landroid/os/AsyncTask;[Ljava/lang/Object;)V
 
-.method public static a(Landroid/net/ConnectivityManager;)Z
-    .locals 1
+    :goto_0
+    return-object p0
 
-    sget-object v0, Landroid/support/v4/g/a;->a:Landroid/support/v4/g/c;
+    :cond_1
+    invoke-virtual {p0, p1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/g/c;->a(Landroid/net/ConnectivityManager;)Z
-
-    move-result v0
-
-    return v0
+    goto :goto_0
 .end method

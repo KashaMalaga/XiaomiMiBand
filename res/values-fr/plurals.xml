@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="numberOfPullUpdateReport">
+        <item quantity="other">%d éléments mis à jour.</item>
+        <item quantity="one">%d élément mis à jour.</item>
+    </plurals>
+    <plurals name="numberFoot">
+        <item quantity="other">%s pieds</item>
+        <item quantity="one">%s pied</item>
+    </plurals>
+    <plurals name="numberInch">
+        <item quantity="other">%s pouces</item>
+        <item quantity="one">%s pouce</item>
+    </plurals>
+</resources>

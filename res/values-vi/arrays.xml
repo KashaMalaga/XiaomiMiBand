@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>Th 2.</item>
+        <item>Th 3.</item>
+        <item>Th 4.</item>
+        <item>Th 5.</item>
+        <item>Th 6.</item>
+        <item>Th 7.</item>
+        <item>Cn.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Th 2.</item>
+        <item>Th 3.</item>
+        <item>Th 4.</item>
+        <item>Th 5.</item>
+        <item>Th 6.</item>
+        <item>Th 7.</item>
+        <item>Cn.</item>
+    </string-array>
+    <string-array name="months">
+        <item>Tháng 1</item>
+        <item>Tháng 2</item>
+        <item>Tháng 3</item>
+        <item>Tháng 4</item>
+        <item>Tháng 5</item>
+        <item>Tháng 6</item>
+        <item>Tháng 7</item>
+        <item>Tháng 8</item>
+        <item>Tháng 9</item>
+        <item>Tháng 10</item>
+        <item>Tháng 11</item>
+        <item>Tháng 12</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>Một lần</item>
+        <item>Hàng ngày</item>
+        <item>Các ngày trong tuần</item>
+        <item>Tùy chỉnh</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>Không có gì có thể thay thế được tính kiên định.</item>
+        <item>Phấn đấu cho sự tiến bộ, không phải cho sự hoàn mỹ.</item>
+        <item>Kiên trì là cha đẻ của thành công.</item>
+        <item>Nghị lực và bền bỉ có thể chinh phục mọi thứ.</item>
+        <item>Đặt mục tiêu nhỏ và tăng dần nó.</item>
+        <item>Hành trình ngàn dặm bắt đầu từ một bước đi.</item>
+        <item>Mỗi ngày hoàn thành một mục tiêu.</item>
+        <item>Cho dù bạn đi có chậm đến đâu đi nữa thì bạn vẫn nhanh hơn những kẻ đang ngồi bất động.</item>
+        <item>Chạy khi bạn có thể. Hãy đi nếu được. Bò nếu phải. Chỉ cần đừng bao giờ bỏ cuộc.</item>
+        <item>Hãy nhớ rằng, cảm giác bạn nhận được khi tập luyện tốt hơn nhiều so với cảm giác bạn nhận được khi chỉ ngồi và ước.</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>Tuyệt</item>
+        <item>Tốt</item>
+        <item>Trung bình</item>
+        <item>Ô nhiễm nhẹ</item>
+        <item>Không trong lành</item>
+        <item>Rất ô nhiễm</item>
+    </string-array>
+    <string-array name="weight_unit">
+        <item>kg</item>
+        <item>0.5 kg</item>
+        <item>pao</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>Ốm</item>
+        <item>Cân nặng bình thường</item>
+        <item>Thừa cân</item>
+        <item>Béo phì</item>
+        <item>Béo phì</item>
+    </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>Chỉ số BMI: Thiếu cân</item>
+        <item>Chỉ số BMI: Cân nặng bình thường</item>
+        <item>Chỉ số BMI: Thừa cân</item>
+        <item>Chỉ số BMI: Béo phì</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>Đặt ra mục tiêu giúp bạn kiểm soát cân nặng.</item>
+        <item>Chúc mừng! Bạn đang đạt mức cân nặng mục tiêu.</item>
+        <item>Bạn nhẹ cân so với mục tiêu</item>
+        <item>Bạn thừa cân so với mục tiêu</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>Đặt ra mục tiêu giúp bạn kiểm soát cân nặng.</item>
+        <item>Chúc mừng! Bạn đang đạt mức cân nặng mục tiêu.</item>
+        <item>Bạn nhẹ cân so với mục tiêu</item>
+        <item>Bạn thừa cân so với mục tiêu</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>Đã vượt mục tiêu</item>
+        <item>Bạn chưa đạt được mục tiêu</item>
+        <item>Bạn đã đạt được mục tiêu!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>Bạn chưa đạt được mục tiêu</item>
+        <item>Bạn chưa đạt được mục tiêu</item>
+        <item>Bạn chưa đạt được mục tiêu</item>
+        <item>Bạn đã đạt được mục tiêu (%1$s%2$s)!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>Bạn chưa đạt được mục tiêu</item>
+        <item>Bạn chưa đạt được mục tiêu</item>
+        <item>Bạn chưa đạt được mục tiêu</item>
+        <item>Bạn đã đạt được mục tiêu (%1$s%2$s)!</item>
+    </string-array>
+</resources>

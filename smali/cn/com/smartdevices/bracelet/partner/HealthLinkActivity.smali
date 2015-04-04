@@ -6,7 +6,7 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "4008989580"
+.field private static final NUMBER:Ljava/lang/String; = "4008989580"
 
 
 # direct methods
@@ -58,14 +58,14 @@
 
     const-string v1, "DialHealthService"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070035 -> :sswitch_0
-        0x7f070057 -> :sswitch_1
+        0x7f07003d -> :sswitch_0
+        0x7f07007c -> :sswitch_1
     .end sparse-switch
 .end method
 
@@ -76,11 +76,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030009
+    const v0, 0x7f03000e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->setContentView(I)V
 
-    const v0, 0x7f070035
+    const v0, 0x7f07003d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->findViewById(I)Landroid/view/View;
 
@@ -88,13 +88,13 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f08026f
+    const v2, 0x7f090294
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070057
+    const v0, 0x7f07007c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->findViewById(I)Landroid/view/View;
 
@@ -114,7 +114,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f070056
+    const v0, 0x7f07007b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     move-result-object v2
 
-    const/high16 v3, 0x7f0d0000
+    const/high16 v3, 0x7f0f0000
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -136,7 +136,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0d0001
+    const v3, 0x7f0f0001
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -153,7 +153,7 @@
 
     if-ge v3, v1, :cond_0
 
-    const v1, 0x7f0300c7
+    const v1, 0x7f0300e5
 
     const/4 v2, 0x0
 
@@ -161,7 +161,7 @@
 
     move-result-object v7
 
-    const v1, 0x7f070204
+    const v1, 0x7f070206
 
     invoke-virtual {v7, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -169,7 +169,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f070003
+    const v2, 0x7f07000f
 
     invoke-virtual {v7, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -196,7 +196,7 @@
     :cond_0
     const-string v0, "PartnerHealthIn"
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -208,9 +208,9 @@
 
     const-string v0, "PageHealthLink"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -222,9 +222,9 @@
 
     const-string v0, "PageHealthLink"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
 
     return-void
 .end method

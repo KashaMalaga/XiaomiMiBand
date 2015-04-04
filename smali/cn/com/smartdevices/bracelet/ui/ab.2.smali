@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/GestureDetector$OnGestureListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/Z;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aa;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/Z;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aa;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/ui/Z;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/ui/aa;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,46 +22,12 @@
 
 
 # virtual methods
-.method public onDown(Landroid/view/MotionEvent;)Z
+.method public onClick(Landroid/view/View;)V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/ui/aa;
 
-    return v0
-.end method
-
-.method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public onLongPress(Landroid/view/MotionEvent;)V
-    .locals 0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/aa;->onEmptyAreaClicked()V
 
     return-void
-.end method
-
-.method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public onShowPress(Landroid/view/MotionEvent;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onSingleTapUp(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

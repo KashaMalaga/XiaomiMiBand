@@ -1,25 +1,22 @@
-.class public interface abstract Landroid/support/v4/content/r;
+.class Landroid/support/v4/content/r;
 .super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<D:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+# direct methods
+.method constructor <init>()V
+    .locals 0
 
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-# virtual methods
-.method public abstract a(Landroid/support/v4/content/p;Ljava/lang/Object;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/v4/content/p",
-            "<TD;>;TD;)V"
-        }
-    .end annotation
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    .locals 1
+
+    invoke-static {p0, p1}, Landroid/content/Intent;->makeMainSelectorActivity(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/R;
+.implements Lcn/com/smartdevices/bracelet/U;
 
 
 # instance fields
@@ -29,9 +29,7 @@
 .method public a()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/goal/a;->b()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "WeightGoalManager"
 
     const-string v1, "\u670d\u52a1\u5668\u5220\u9664\u6210\u529f\u672c\u5730\u5220\u9664"
 
@@ -47,9 +45,7 @@
 .method public b()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/goal/a;->b()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "WeightGoalManager"
 
     const-string v1, "\u670d\u52a1\u5668\u5220\u9664\u5931\u8d25"
 

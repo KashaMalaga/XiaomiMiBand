@@ -1,69 +1,18 @@
-.class final Landroid/support/v4/widget/Y;
+.class public interface abstract annotation Landroid/support/v4/widget/Y;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Ljava/lang/annotation/Annotation;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/widget/SlidingPaneLayout$SavedState;",
-        ">;"
+.annotation build Landroid/support/a/l;
+    a = {
+        0x0L,
+        0x1L
     }
 .end annotation
 
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a(Landroid/os/Parcel;)Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-    .locals 2
-
-    new-instance v0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;-><init>(Landroid/os/Parcel;Landroid/support/v4/widget/T;)V
-
-    return-object v0
-.end method
-
-.method public a(I)[Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-    .locals 1
-
-    new-array v0, p1, [Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-
-    return-object v0
-.end method
-
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Landroid/support/v4/widget/Y;->a(Landroid/os/Parcel;)Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Landroid/support/v4/widget/Y;->a(I)[Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
+.end annotation

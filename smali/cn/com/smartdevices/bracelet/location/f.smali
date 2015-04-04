@@ -55,7 +55,7 @@
 
     const-string v1, "LocationOK"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -73,11 +73,11 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Landroid/support/v4/content/s;->a(Landroid/content/Context;)Landroid/support/v4/content/s;
+    invoke-static {v1}, Landroid/support/v4/content/v;->a(Landroid/content/Context;)Landroid/support/v4/content/v;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/support/v4/content/s;->a(Landroid/content/Intent;)Z
+    invoke-virtual {v1, v0}, Landroid/support/v4/content/v;->a(Landroid/content/Intent;)Z
 
     return-void
 .end method

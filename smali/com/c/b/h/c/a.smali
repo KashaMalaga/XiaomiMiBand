@@ -1,4 +1,4 @@
-.class final Lcom/c/b/h/c/a;
+.class public final Lcom/c/b/h/c/a;
 .super Ljava/lang/Object;
 
 
@@ -14,40 +14,36 @@
 
 # direct methods
 .method constructor <init>(II)V
-    .locals 6
-
-    const/4 v1, 0x0
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    add-int/lit8 v0, p1, 0x2
-
-    new-array v0, v0, [Lcom/c/b/h/c/b;
+    new-array v0, p1, [Lcom/c/b/h/c/b;
 
     iput-object v0, p0, Lcom/c/b/h/c/a;->a:[Lcom/c/b/h/c/b;
 
-    iget-object v0, p0, Lcom/c/b/h/c/a;->a:[Lcom/c/b/h/c/b;
+    const/4 v0, 0x0
 
-    array-length v2, v0
+    iget-object v1, p0, Lcom/c/b/h/c/a;->a:[Lcom/c/b/h/c/b;
 
-    move v0, v1
+    array-length v1, v1
 
     :goto_0
-    if-ge v0, v2, :cond_0
+    if-ge v0, v1, :cond_0
 
-    iget-object v3, p0, Lcom/c/b/h/c/a;->a:[Lcom/c/b/h/c/b;
+    iget-object v2, p0, Lcom/c/b/h/c/a;->a:[Lcom/c/b/h/c/b;
 
-    new-instance v4, Lcom/c/b/h/c/b;
+    new-instance v3, Lcom/c/b/h/c/b;
 
-    add-int/lit8 v5, p2, 0x4
+    add-int/lit8 v4, p2, 0x4
 
-    mul-int/lit8 v5, v5, 0x11
+    mul-int/lit8 v4, v4, 0x11
 
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v4, v4, 0x1
 
-    invoke-direct {v4, v5}, Lcom/c/b/h/c/b;-><init>(I)V
+    invoke-direct {v3, v4}, Lcom/c/b/h/c/b;-><init>(I)V
 
-    aput-object v4, v3, v0
+    aput-object v3, v2, v0
 
     add-int/lit8 v0, v0, 0x1
 
@@ -58,11 +54,11 @@
 
     iput v0, p0, Lcom/c/b/h/c/a;->d:I
 
-    add-int/lit8 v0, p1, 0x2
+    iput p1, p0, Lcom/c/b/h/c/a;->c:I
 
-    iput v0, p0, Lcom/c/b/h/c/a;->c:I
+    const/4 v0, -0x1
 
-    iput v1, p0, Lcom/c/b/h/c/a;->b:I
+    iput v0, p0, Lcom/c/b/h/c/a;->b:I
 
     return-void
 .end method
@@ -93,37 +89,7 @@
     return-void
 .end method
 
-.method a(IIZ)V
-    .locals 1
-
-    if-eqz p3, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    int-to-byte v0, v0
-
-    invoke-virtual {p0, p1, p2, v0}, Lcom/c/b/h/c/a;->a(IIB)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method a(I)[[B
-    .locals 1
-
-    invoke-virtual {p0, p1, p1}, Lcom/c/b/h/c/a;->a(II)[[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method a(II)[[B
+.method public a(II)[[B
     .locals 6
 
     iget v0, p0, Lcom/c/b/h/c/a;->c:I
@@ -191,7 +157,7 @@
     return-object v0
 .end method
 
-.method c()[[B
+.method public c()[[B
     .locals 1
 
     const/4 v0, 0x1

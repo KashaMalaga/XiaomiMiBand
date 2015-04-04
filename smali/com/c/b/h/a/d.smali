@@ -1,170 +1,192 @@
-.class final enum Lcom/c/b/h/a/d;
-.super Ljava/lang/Enum;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/c/b/h/a/d;",
-        ">;"
-    }
-.end annotation
+.class final Lcom/c/b/h/a/d;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final enum a:Lcom/c/b/h/a/d;
+.field private static final a:I = -0x1
 
-.field public static final enum b:Lcom/c/b/h/a/d;
 
-.field public static final enum c:Lcom/c/b/h/a/d;
+# instance fields
+.field private final b:I
 
-.field public static final enum d:Lcom/c/b/h/a/d;
+.field private final c:I
 
-.field public static final enum e:Lcom/c/b/h/a/d;
+.field private final d:I
 
-.field public static final enum f:Lcom/c/b/h/a/d;
+.field private final e:I
 
-.field private static final synthetic g:[Lcom/c/b/h/a/d;
+.field private f:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method constructor <init>(IIII)V
+    .locals 1
 
-    const/4 v7, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v6, 0x3
+    const/4 v0, -0x1
 
-    const/4 v5, 0x2
+    iput v0, p0, Lcom/c/b/h/a/d;->f:I
 
-    const/4 v4, 0x1
+    iput p1, p0, Lcom/c/b/h/a/d;->b:I
 
-    const/4 v3, 0x0
+    iput p2, p0, Lcom/c/b/h/a/d;->c:I
 
-    new-instance v0, Lcom/c/b/h/a/d;
+    iput p3, p0, Lcom/c/b/h/a/d;->d:I
 
-    const-string v1, "ALPHA"
-
-    invoke-direct {v0, v1, v3}, Lcom/c/b/h/a/d;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/c/b/h/a/d;->a:Lcom/c/b/h/a/d;
-
-    new-instance v0, Lcom/c/b/h/a/d;
-
-    const-string v1, "LOWER"
-
-    invoke-direct {v0, v1, v4}, Lcom/c/b/h/a/d;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/c/b/h/a/d;->b:Lcom/c/b/h/a/d;
-
-    new-instance v0, Lcom/c/b/h/a/d;
-
-    const-string v1, "MIXED"
-
-    invoke-direct {v0, v1, v5}, Lcom/c/b/h/a/d;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/c/b/h/a/d;->c:Lcom/c/b/h/a/d;
-
-    new-instance v0, Lcom/c/b/h/a/d;
-
-    const-string v1, "PUNCT"
-
-    invoke-direct {v0, v1, v6}, Lcom/c/b/h/a/d;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/c/b/h/a/d;->d:Lcom/c/b/h/a/d;
-
-    new-instance v0, Lcom/c/b/h/a/d;
-
-    const-string v1, "ALPHA_SHIFT"
-
-    invoke-direct {v0, v1, v7}, Lcom/c/b/h/a/d;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/c/b/h/a/d;->e:Lcom/c/b/h/a/d;
-
-    new-instance v0, Lcom/c/b/h/a/d;
-
-    const-string v1, "PUNCT_SHIFT"
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v1, v2}, Lcom/c/b/h/a/d;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/c/b/h/a/d;->f:Lcom/c/b/h/a/d;
-
-    const/4 v0, 0x6
-
-    new-array v0, v0, [Lcom/c/b/h/a/d;
-
-    sget-object v1, Lcom/c/b/h/a/d;->a:Lcom/c/b/h/a/d;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/c/b/h/a/d;->b:Lcom/c/b/h/a/d;
-
-    aput-object v1, v0, v4
-
-    sget-object v1, Lcom/c/b/h/a/d;->c:Lcom/c/b/h/a/d;
-
-    aput-object v1, v0, v5
-
-    sget-object v1, Lcom/c/b/h/a/d;->d:Lcom/c/b/h/a/d;
-
-    aput-object v1, v0, v6
-
-    sget-object v1, Lcom/c/b/h/a/d;->e:Lcom/c/b/h/a/d;
-
-    aput-object v1, v0, v7
-
-    const/4 v1, 0x5
-
-    sget-object v2, Lcom/c/b/h/a/d;->f:Lcom/c/b/h/a/d;
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/c/b/h/a/d;->g:[Lcom/c/b/h/a/d;
+    iput p4, p0, Lcom/c/b/h/a/d;->e:I
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+
+# virtual methods
+.method a()Z
+    .locals 1
+
+    iget v0, p0, Lcom/c/b/h/a/d;->f:I
+
+    invoke-virtual {p0, v0}, Lcom/c/b/h/a/d;->a(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method a(I)Z
+    .locals 2
+
+    const/4 v0, -0x1
+
+    if-eq p1, v0, :cond_0
+
+    iget v0, p0, Lcom/c/b/h/a/d;->d:I
+
+    rem-int/lit8 v1, p1, 0x3
+
+    mul-int/lit8 v1, v1, 0x3
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method b()V
+    .locals 2
+
+    iget v0, p0, Lcom/c/b/h/a/d;->e:I
+
+    div-int/lit8 v0, v0, 0x1e
+
+    mul-int/lit8 v0, v0, 0x3
+
+    iget v1, p0, Lcom/c/b/h/a/d;->d:I
+
+    div-int/lit8 v1, v1, 0x3
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lcom/c/b/h/a/d;->f:I
+
+    return-void
+.end method
+
+.method b(I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p1, p0, Lcom/c/b/h/a/d;->f:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/c/b/h/a/d;
-    .locals 1
+.method c()I
+    .locals 2
 
-    const-class v0, Lcom/c/b/h/a/d;
+    iget v0, p0, Lcom/c/b/h/a/d;->c:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v1, p0, Lcom/c/b/h/a/d;->b:I
 
-    move-result-object v0
+    sub-int/2addr v0, v1
 
-    check-cast v0, Lcom/c/b/h/a/d;
-
-    return-object v0
+    return v0
 .end method
 
-.method public static values()[Lcom/c/b/h/a/d;
+.method d()I
     .locals 1
 
-    sget-object v0, Lcom/c/b/h/a/d;->g:[Lcom/c/b/h/a/d;
+    iget v0, p0, Lcom/c/b/h/a/d;->b:I
 
-    invoke-virtual {v0}, [Lcom/c/b/h/a/d;->clone()Ljava/lang/Object;
+    return v0
+.end method
+
+.method e()I
+    .locals 1
+
+    iget v0, p0, Lcom/c/b/h/a/d;->c:I
+
+    return v0
+.end method
+
+.method f()I
+    .locals 1
+
+    iget v0, p0, Lcom/c/b/h/a/d;->d:I
+
+    return v0
+.end method
+
+.method g()I
+    .locals 1
+
+    iget v0, p0, Lcom/c/b/h/a/d;->e:I
+
+    return v0
+.end method
+
+.method h()I
+    .locals 1
+
+    iget v0, p0, Lcom/c/b/h/a/d;->f:I
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v1, p0, Lcom/c/b/h/a/d;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/c/b/h/a/d;
+    const-string v1, "|"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/c/b/h/a/d;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

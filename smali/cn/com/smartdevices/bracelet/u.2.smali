@@ -26,7 +26,7 @@
 .method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 3
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/E;->b([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/G;->b([B)Ljava/lang/String;
 
     const-string v0, "DataManager"
 
@@ -103,7 +103,7 @@
 
     move-result-object v2
 
-    iget v1, v1, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iget v1, v1, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

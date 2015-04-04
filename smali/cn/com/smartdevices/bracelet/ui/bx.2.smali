@@ -1,51 +1,54 @@
-.class Lcn/com/smartdevices/bracelet/ui/bx;
+.class public Lcn/com/smartdevices/bracelet/ui/bx;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+.field a:Ljava/lang/String;
+
+.field b:Ljava/lang/String;
+
+.field c:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bx;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+.method public constructor <init>(Landroid/content/Context;III)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public run()V
-    .locals 3
-
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/v;->a()Lcom/xiaomi/hm/bleservice/v;
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bx;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bx;->a:Ljava/lang/String;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->g(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/content/Context;
+    if-nez p3, :cond_0
 
-    move-result-object v1
+    const-string v0, ""
 
-    const/4 v2, 0x1
+    :goto_0
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bx;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/v;->a(Landroid/content/Context;Z)V
+    if-nez p4, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bx;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    const-string v0, ""
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/by;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/by;-><init>(Lcn/com/smartdevices/bracelet/ui/bx;)V
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->runOnUiThread(Ljava/lang/Runnable;)V
+    :goto_1
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bx;->c:Ljava/lang/String;
 
     return-void
+
+    :cond_0
+    invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1, p4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
 .end method

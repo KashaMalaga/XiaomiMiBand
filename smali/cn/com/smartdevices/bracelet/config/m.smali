@@ -5,7 +5,7 @@
 # instance fields
 .field public final a:Ljava/lang/Boolean;
     .annotation runtime Lcom/c/a/a/b;
-        a = "miUpgrade"
+        a = "enable"
     .end annotation
 .end field
 
@@ -16,7 +16,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 

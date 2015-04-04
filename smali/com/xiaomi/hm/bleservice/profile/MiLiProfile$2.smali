@@ -71,7 +71,7 @@
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$2;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # invokes: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->onRealtimeStepsChanged(I)V
-    invoke-static {v1, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)V
+    invoke-static {v1, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$100(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)V
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$2;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -133,10 +133,7 @@
     goto :goto_0
 
     :cond_2
-    # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$100()Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "MiLiProfile"
 
     new-instance v2, Ljava/lang/StringBuilder;
 

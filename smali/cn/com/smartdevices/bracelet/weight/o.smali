@@ -159,44 +159,6 @@
     return-object v0
 .end method
 
-.method public static varargs a([I)V
-    .locals 5
-
-    if-eqz p0, :cond_0
-
-    array-length v0, p0
-
-    if-lez v0, :cond_0
-
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
-
-    move-result-object v1
-
-    array-length v2, p0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, v2, :cond_0
-
-    aget v3, p0, v0
-
-    new-instance v4, Lcn/com/smartdevices/bracelet/eventbus/EventWeightChanged;
-
-    invoke-direct {v4}, Lcn/com/smartdevices/bracelet/eventbus/EventWeightChanged;-><init>()V
-
-    iput v3, v4, Lcn/com/smartdevices/bracelet/eventbus/EventWeightChanged;->uid:I
-
-    invoke-virtual {v1, v4}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
 .method private b(Ljava/util/Calendar;)[J
     .locals 9
 
@@ -251,7 +213,104 @@
     return-object v1
 .end method
 
-.method private e(Ljava/util/List;)Ljava/lang/String;
+.method private e(Ljava/util/List;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/weight/WeightInfo;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "WeightInfoManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Delete Infos Mark : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/activeandroid/a;->d()V
+
+    :try_start_0
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->i(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {}, Lcom/activeandroid/a;->e()V
+
+    :goto_1
+    return-void
+
+    :cond_0
+    :try_start_2
+    invoke-static {}, Lcom/activeandroid/a;->f()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-static {}, Lcom/activeandroid/a;->e()V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {}, Lcom/activeandroid/a;->e()V
+
+    throw v0
+.end method
+
+.method private f(Ljava/util/List;)Ljava/lang/String;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -367,7 +426,27 @@
     goto :goto_1
 .end method
 
-.method private f(Ljava/util/List;)Ljava/lang/String;
+.method public static f(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)Z
+    .locals 2
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method private g(Ljava/util/List;)Ljava/lang/String;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -473,6 +552,145 @@
     goto :goto_1
 .end method
 
+.method private g(I)V
+    .locals 3
+
+    const-string v0, "WeightInfoManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Delete Infos Mark UID : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/weight/o;->a(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->e(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public static g(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)Z
+    .locals 2
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    const/4 v1, -0x2
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static h(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)Z
+    .locals 2
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    const/4 v1, -0x2
+
+    if-ne v0, v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method private i(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    .locals 3
+
+    const-string v0, "WeightInfoManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Delete Info Mark : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v0, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, -0x2
+
+    iput v0, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    :goto_0
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/weight/o;->j(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, -0x1
+
+    iput v0, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    goto :goto_0
+.end method
+
+.method private j(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/weight/o;->b(Lcn/com/smartdevices/bracelet/weight/WeightInfo;Z)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public a(II)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
@@ -492,7 +710,7 @@
 
     move-result-object v0
 
-    const-string v1, "Synced!=?"
+    const-string v1, "Synced>?"
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -600,7 +818,7 @@
 
     move-result-object v0
 
-    const-string v1, "Synced!=?"
+    const-string v1, "Synced>?"
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -763,6 +981,153 @@
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
+.end method
+
+.method public a(I)Ljava/util/List;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/weight/WeightInfo;",
+            ">;"
+        }
+    .end annotation
+
+    const/4 v5, 0x1
+
+    const/4 v4, 0x0
+
+    new-instance v0, Lcom/activeandroid/b/e;
+
+    invoke-direct {v0}, Lcom/activeandroid/b/e;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    invoke-virtual {v0, v1}, Lcom/activeandroid/b/e;->a(Ljava/lang/Class;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    const-string v1, "Synced>?"
+
+    new-array v2, v5, [Ljava/lang/Object;
+
+    const/4 v3, -0x1
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    invoke-virtual {v0, v1, v2}, Lcom/activeandroid/b/b;->a(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    const-string v1, "UserId=?"
+
+    new-array v2, v5, [Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    invoke-virtual {v0, v1, v2}, Lcom/activeandroid/b/b;->b(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    const-string v1, "Timestamp DESC"
+
+    invoke-virtual {v0, v1}, Lcom/activeandroid/b/b;->g(Ljava/lang/String;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/activeandroid/b/b;->d()Ljava/util/List;
+
+    move-result-object v1
+
+    const-string v0, "WeightInfoManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Get Infos : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ", "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    const-string v3, "WeightInfoManager"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Get Info : "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-object v1
 .end method
 
 .method public a(ILjava/util/Calendar;)Ljava/util/List;
@@ -1131,40 +1496,6 @@
     return-object v1
 .end method
 
-.method public a(I)V
-    .locals 3
-
-    const-string v0, "WeightInfoManager"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Delete Infos Mark UID : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/weight/o;->b(I)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->b(Ljava/util/List;)V
-
-    return-void
-.end method
-
 .method public a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
     .locals 3
 
@@ -1174,7 +1505,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Delete Info Local : "
+    const-string v2, "Add Info : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1190,13 +1521,15 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->delete()V
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->save()Ljava/lang/Long;
 
     return-void
 .end method
 
 .method public a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;I)V
-    .locals 3
+    .locals 4
+
+    const/4 v3, 0x1
 
     const-string v0, "WeightInfoManager"
 
@@ -1236,24 +1569,34 @@
 
     iput p2, v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->uid:I
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->c(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    iget v1, v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/weight/o;->b(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    if-ne v1, v3, :cond_0
 
+    const/4 v1, 0x0
+
+    iput v1, v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    :cond_0
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+
+    iget v0, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    if-ne v0, v3, :cond_1
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/weight/o;->i(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+
+    :goto_0
     return-void
+
+    :cond_1
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/weight/o;->d(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+
+    goto :goto_0
 .end method
 
-.method public a(Ljava/util/List;)V
+.method public a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;Z)V
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/weight/WeightInfo;",
-            ">;)V"
-        }
-    .end annotation
 
     const-string v0, "WeightInfoManager"
 
@@ -1261,17 +1604,23 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Delete Infos Local : "
+    const-string v2, "Add Info : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result v2
+    move-result-object v1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v2, ", Uncertain : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1281,200 +1630,79 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/activeandroid/a;->d()V
+    if-eqz p2, :cond_0
 
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    const/4 v0, 0x2
 
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    :try_start_1
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-static {}, Lcom/activeandroid/a;->e()V
-
-    :goto_1
-    return-void
+    iput v0, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
 
     :cond_0
-    :try_start_2
-    invoke-static {}, Lcom/activeandroid/a;->f()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->save()Ljava/lang/Long;
 
-    invoke-static {}, Lcom/activeandroid/a;->e()V
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {}, Lcom/activeandroid/a;->e()V
-
-    throw v0
+    return-void
 .end method
 
 .method public a(Landroid/content/Context;)Z
-    .locals 6
+    .locals 4
 
-    const/16 v1, 0xa
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->S()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    :cond_0
-    const/16 v2, 0x64
+    :goto_0
+    const-string v1, "WeightInfoManager"
 
-    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/weight/o;->e(I)Ljava/util/List;
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Sync with Server 1, from server : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    const-string v3, "WeightInfoManager"
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v5, "Sync with Server 2, to server : "
+    move-result-object v2
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v4
+    if-eqz v0, :cond_1
 
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    new-instance v0, Lcn/com/smartdevices/bracelet/weight/s;
 
-    move-result v5
+    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/weight/s;-><init>(Lcn/com/smartdevices/bracelet/weight/o;Landroid/content/Context;)V
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/weight/o;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/L;)Z
 
-    move-result-object v4
+    move-result v0
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_1
+    return v0
 
-    move-result-object v4
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    invoke-virtual {p0, p1, v2}, Lcn/com/smartdevices/bracelet/weight/o;->b(Landroid/content/Context;Ljava/util/List;)Z
-
-    move-result v3
-
-    and-int/2addr v0, v3
+    goto :goto_0
 
     :cond_1
-    add-int/lit8 v1, v1, -0x1
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/weight/o;->b(Landroid/content/Context;)Z
 
-    if-eqz v2, :cond_2
+    move-result v0
 
-    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    if-gtz v1, :cond_0
-
-    :cond_2
-    const/4 v1, 0x3
-
-    :cond_3
-    const/16 v2, 0x1f4
-
-    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/weight/o;->d(I)Ljava/util/List;
-
-    move-result-object v2
-
-    const-string v3, "WeightInfoManager"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Sync with Server 3, delete from server : "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz v2, :cond_4
-
-    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_4
-
-    invoke-virtual {p0, p1, v2}, Lcn/com/smartdevices/bracelet/weight/o;->a(Landroid/content/Context;Ljava/util/List;)Z
-
-    move-result v3
-
-    and-int/2addr v0, v3
-
-    :cond_4
-    add-int/lit8 v1, v1, -0x1
-
-    if-eqz v2, :cond_5
-
-    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_5
-
-    if-gtz v1, :cond_3
-
-    :cond_5
-    return v0
+    goto :goto_1
 .end method
 
-.method public a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/D;)Z
+.method public a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/L;)Z
     .locals 9
 
     const-wide/16 v1, -0x1
@@ -1497,9 +1725,9 @@
 
     const/4 v6, 0x1
 
-    new-instance v7, Lcn/com/smartdevices/bracelet/weight/q;
+    new-instance v7, Lcn/com/smartdevices/bracelet/weight/p;
 
-    invoke-direct {v7, p0, v8, p1, p2}, Lcn/com/smartdevices/bracelet/weight/q;-><init>(Lcn/com/smartdevices/bracelet/weight/o;Lcn/com/smartdevices/bracelet/model/SyncResult;Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/D;)V
+    invoke-direct {v7, p0, v8, p1, p2}, Lcn/com/smartdevices/bracelet/weight/p;-><init>(Lcn/com/smartdevices/bracelet/weight/o;Lcn/com/smartdevices/bracelet/model/SyncResult;Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/L;)V
 
     move-wide v3, v1
 
@@ -1525,7 +1753,7 @@
 
     const-string v0, "WeightInfoManager"
 
-    const-string v1, "Sync Deleted WeightInfos To Server!!"
+    const-string v1, "Sync WeightInfos To Server!!"
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1556,15 +1784,207 @@
 
     move-result-object v2
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/weight/p;
+    new-instance v3, Lcn/com/smartdevices/bracelet/weight/q;
 
-    invoke-direct {v3, p0, p1, v1, p2}, Lcn/com/smartdevices/bracelet/weight/p;-><init>(Lcn/com/smartdevices/bracelet/weight/o;Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/SyncResult;Ljava/util/List;)V
+    invoke-direct {v3, p0, p1, v1, p2}, Lcn/com/smartdevices/bracelet/weight/q;-><init>(Lcn/com/smartdevices/bracelet/weight/o;Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/SyncResult;Ljava/util/List;)V
 
-    invoke-static {v2, v0, v3}, Lcn/com/smartdevices/bracelet/k/g;->d(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
+    invoke-static {v2, v0, v3}, Lcn/com/smartdevices/bracelet/k/g;->f(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
 
     iget-boolean v0, v1, Lcn/com/smartdevices/bracelet/model/SyncResult;->result:Z
 
     goto :goto_0
+.end method
+
+.method public a(Ljava/util/List;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/weight/WeightInfo;",
+            ">;)Z"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/weight/o;->a(Ljava/util/List;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public a(Ljava/util/List;Z)Z
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/weight/WeightInfo;",
+            ">;Z)Z"
+        }
+    .end annotation
+
+    const-string v0, "WeightInfoManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Add Infos : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", Uncertain : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/activeandroid/a;->d()V
+
+    :try_start_0
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    invoke-virtual {p0, v0, p2}, Lcn/com/smartdevices/bracelet/weight/o;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;Z)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    const/4 v0, 0x0
+
+    invoke-static {}, Lcom/activeandroid/a;->e()V
+
+    :goto_1
+    return v0
+
+    :cond_0
+    :try_start_2
+    invoke-static {}, Lcom/activeandroid/a;->f()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    const/4 v0, 0x1
+
+    invoke-static {}, Lcom/activeandroid/a;->e()V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {}, Lcom/activeandroid/a;->e()V
+
+    throw v0
+.end method
+
+.method public b(I)I
+    .locals 6
+
+    const/4 v5, 0x1
+
+    const/4 v4, 0x0
+
+    new-instance v0, Lcom/activeandroid/b/e;
+
+    new-array v1, v5, [Ljava/lang/String;
+
+    const-string v2, "Id"
+
+    aput-object v2, v1, v4
+
+    invoke-direct {v0, v1}, Lcom/activeandroid/b/e;-><init>([Ljava/lang/String;)V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    invoke-virtual {v0, v1}, Lcom/activeandroid/b/e;->a(Ljava/lang/Class;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    const-string v1, "Synced>?"
+
+    new-array v2, v5, [Ljava/lang/Object;
+
+    const/4 v3, -0x1
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    invoke-virtual {v0, v1, v2}, Lcom/activeandroid/b/b;->a(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    const-string v1, "UserId=?"
+
+    new-array v2, v5, [Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    invoke-virtual {v0, v1, v2}, Lcom/activeandroid/b/b;->b(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/activeandroid/b/b;->g()I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public b(ILjava/util/Calendar;)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
@@ -1707,153 +2127,6 @@
     return-object v0
 .end method
 
-.method public b(I)Ljava/util/List;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)",
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/weight/WeightInfo;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 v5, 0x1
-
-    const/4 v4, 0x0
-
-    new-instance v0, Lcom/activeandroid/b/e;
-
-    invoke-direct {v0}, Lcom/activeandroid/b/e;-><init>()V
-
-    const-class v1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    invoke-virtual {v0, v1}, Lcom/activeandroid/b/e;->a(Ljava/lang/Class;)Lcom/activeandroid/b/b;
-
-    move-result-object v0
-
-    const-string v1, "Synced>?"
-
-    new-array v2, v5, [Ljava/lang/Object;
-
-    const/4 v3, -0x1
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v4
-
-    invoke-virtual {v0, v1, v2}, Lcom/activeandroid/b/b;->a(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
-
-    move-result-object v0
-
-    const-string v1, "UserId=?"
-
-    new-array v2, v5, [Ljava/lang/Object;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v4
-
-    invoke-virtual {v0, v1, v2}, Lcom/activeandroid/b/b;->b(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
-
-    move-result-object v0
-
-    const-string v1, "Timestamp DESC"
-
-    invoke-virtual {v0, v1}, Lcom/activeandroid/b/b;->g(Ljava/lang/String;)Lcom/activeandroid/b/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/activeandroid/b/b;->d()Ljava/util/List;
-
-    move-result-object v1
-
-    const-string v0, "WeightInfoManager"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Get Infos : "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ", "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    const-string v3, "WeightInfoManager"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Get Info : "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-object v1
-.end method
-
 .method public b()V
     .locals 2
 
@@ -1879,6 +2152,16 @@
 .end method
 
 .method public b(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/weight/o;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;Z)V
+
+    return-void
+.end method
+
+.method public b(Lcn/com/smartdevices/bracelet/weight/WeightInfo;Z)V
     .locals 3
 
     const-string v0, "WeightInfoManager"
@@ -1887,7 +2170,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Delete Info Mark : "
+    const-string v2, "Update Info : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1897,23 +2180,42 @@
 
     move-result-object v1
 
+    const-string v2, ", markUpdated : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v0, -0x1
+    if-eqz p2, :cond_0
+
+    iget v0, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x0
 
     iput v0, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/weight/o;->d(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    :cond_0
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->save()Ljava/lang/Long;
 
     return-void
 .end method
 
 .method public b(Ljava/util/List;)V
-    .locals 3
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1924,149 +2226,144 @@
         }
     .end annotation
 
-    const-string v0, "WeightInfoManager"
+    const/4 v0, 0x1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/weight/o;->a(Ljava/util/List;Z)Z
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Delete Infos Mark : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/activeandroid/a;->d()V
-
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->b(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    :try_start_1
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-static {}, Lcom/activeandroid/a;->e()V
-
-    :goto_1
     return-void
-
-    :cond_0
-    :try_start_2
-    invoke-static {}, Lcom/activeandroid/a;->f()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-static {}, Lcom/activeandroid/a;->e()V
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {}, Lcom/activeandroid/a;->e()V
-
-    throw v0
 .end method
 
 .method public b(Landroid/content/Context;)Z
-    .locals 4
+    .locals 7
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->S()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
+    const/4 v2, 0x3
 
     const/4 v0, 0x1
 
-    :goto_0
-    const-string v1, "WeightInfoManager"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Sync with Server 1, from server : "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/weight/s;
-
-    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/weight/s;-><init>(Lcn/com/smartdevices/bracelet/weight/o;Landroid/content/Context;)V
-
-    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/weight/o;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/D;)Z
-
-    move-result v0
-
-    :goto_1
-    return v0
+    move v1, v2
 
     :cond_0
-    const/4 v0, 0x0
+    const/16 v3, 0x64
 
-    goto :goto_0
+    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/weight/o;->d(I)Ljava/util/List;
+
+    move-result-object v3
+
+    const-string v4, "WeightInfoManager"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Sync with Server 2, to server : "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    invoke-virtual {p0, p1, v3}, Lcn/com/smartdevices/bracelet/weight/o;->a(Landroid/content/Context;Ljava/util/List;)Z
+
+    move-result v4
+
+    and-int/2addr v0, v4
 
     :cond_1
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/weight/o;->a(Landroid/content/Context;)Z
+    add-int/lit8 v1, v1, -0x1
 
-    move-result v0
+    if-eqz v3, :cond_2
 
-    goto :goto_1
+    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    if-gtz v1, :cond_0
+
+    :cond_2
+    const/16 v1, 0x1f4
+
+    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weight/o;->c(I)Ljava/util/List;
+
+    move-result-object v1
+
+    const-string v3, "WeightInfoManager"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Sync with Server 3, delete from server : "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    invoke-virtual {p0, p1, v1}, Lcn/com/smartdevices/bracelet/weight/o;->b(Landroid/content/Context;Ljava/util/List;)Z
+
+    move-result v3
+
+    and-int/2addr v0, v3
+
+    :cond_3
+    add-int/lit8 v2, v2, -0x1
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    if-gtz v2, :cond_2
+
+    :cond_4
+    return v0
 .end method
 
 .method public b(Landroid/content/Context;Ljava/util/List;)Z
@@ -2084,7 +2381,7 @@
 
     const-string v0, "WeightInfoManager"
 
-    const-string v1, "Sync WeightInfos To Server!!"
+    const-string v1, "Sync Deleted WeightInfos To Server!!"
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2103,7 +2400,7 @@
     return v0
 
     :cond_1
-    invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/weight/o;->e(Ljava/util/List;)Ljava/lang/String;
+    invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/weight/o;->g(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2124,66 +2421,6 @@
     iget-boolean v0, v1, Lcn/com/smartdevices/bracelet/model/SyncResult;->result:Z
 
     goto :goto_0
-.end method
-
-.method public c(I)I
-    .locals 6
-
-    const/4 v5, 0x1
-
-    const/4 v4, 0x0
-
-    new-instance v0, Lcom/activeandroid/b/e;
-
-    new-array v1, v5, [Ljava/lang/String;
-
-    const-string v2, "Id"
-
-    aput-object v2, v1, v4
-
-    invoke-direct {v0, v1}, Lcom/activeandroid/b/e;-><init>([Ljava/lang/String;)V
-
-    const-class v1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    invoke-virtual {v0, v1}, Lcom/activeandroid/b/e;->a(Ljava/lang/Class;)Lcom/activeandroid/b/b;
-
-    move-result-object v0
-
-    const-string v1, "Synced!=?"
-
-    new-array v2, v5, [Ljava/lang/Object;
-
-    const/4 v3, -0x1
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v4
-
-    invoke-virtual {v0, v1, v2}, Lcom/activeandroid/b/b;->a(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
-
-    move-result-object v0
-
-    const-string v1, "UserId=?"
-
-    new-array v2, v5, [Ljava/lang/Object;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v4
-
-    invoke-virtual {v0, v1, v2}, Lcom/activeandroid/b/b;->b(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/activeandroid/b/b;->g()I
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public c()Ljava/util/List;
@@ -2289,159 +2526,7 @@
     return-object v1
 .end method
 
-.method public c(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
-    .locals 3
-
-    const-string v0, "WeightInfoManager"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Save Info : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->save()Ljava/lang/Long;
-
-    return-void
-.end method
-
-.method public c(Ljava/util/List;)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/weight/WeightInfo;",
-            ">;)Z"
-        }
-    .end annotation
-
-    const-string v0, "WeightInfoManager"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Save Infos : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/activeandroid/a;->d()V
-
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->c(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    :try_start_1
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    const/4 v0, 0x0
-
-    invoke-static {}, Lcom/activeandroid/a;->e()V
-
-    :goto_1
-    return v0
-
-    :cond_0
-    :try_start_2
-    invoke-static {}, Lcom/activeandroid/a;->f()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    const/4 v0, 0x1
-
-    invoke-static {}, Lcom/activeandroid/a;->e()V
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {}, Lcom/activeandroid/a;->e()V
-
-    throw v0
-.end method
-
-.method public d()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/weight/WeightInfo;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->d(I)Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public d(I)Ljava/util/List;
+.method public c(I)Ljava/util/List;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2523,48 +2608,25 @@
     return-object v0
 .end method
 
-.method public d(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
-    .locals 3
-
-    const-string v0, "WeightInfoManager"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Update Info : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+.method public c(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    .locals 1
 
     iget v0, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
 
-    const/4 v1, 0x1
+    if-nez v0, :cond_0
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/weight/o;->d(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
 
-    const/4 v0, 0x0
-
-    iput v0, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+    :goto_0
+    return-void
 
     :cond_0
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->save()Ljava/lang/Long;
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/weight/o;->i(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
 
-    return-void
+    goto :goto_0
 .end method
 
-.method public d(Ljava/util/List;)V
+.method public c(Ljava/util/List;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2582,7 +2644,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Update Infos : "
+    const-string v2, "Delete Infos Local : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2661,7 +2723,7 @@
     throw v0
 .end method
 
-.method public e()Ljava/util/List;
+.method public d()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2675,14 +2737,14 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->e(I)Ljava/util/List;
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->c(I)Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public e(I)Ljava/util/List;
+.method public d(I)Ljava/util/List;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2776,101 +2838,134 @@
     return-object v0
 .end method
 
-.method public f()Lcn/com/smartdevices/bracelet/model/SportDay;
-    .locals 6
+.method public d(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    .locals 3
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/model/SportDay;
+    const-string v0, "WeightInfoManager"
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v0, Lcom/activeandroid/b/e;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v0}, Lcom/activeandroid/b/e;-><init>()V
+    const-string v2, "Delete Info Local : "
 
-    const-class v2, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2}, Lcom/activeandroid/b/e;->a(Ljava/lang/Class;)Lcom/activeandroid/b/b;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v2, "Synced>?"
+    move-result-object v1
 
-    const/4 v3, 0x1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    move-result-object v1
 
-    const/4 v4, 0x0
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v5, -0x1
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->delete()V
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-void
+.end method
 
-    move-result-object v5
+.method public d(Ljava/util/List;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/weight/WeightInfo;",
+            ">;)V"
+        }
+    .end annotation
 
-    aput-object v5, v3, v4
+    const-string v0, "WeightInfoManager"
 
-    invoke-virtual {v0, v2, v3}, Lcom/activeandroid/b/b;->a(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Timestamp ASC"
+    const-string v2, "Update Infos : "
 
-    invoke-virtual {v0, v2}, Lcom/activeandroid/b/b;->g(Ljava/lang/String;)Lcom/activeandroid/b/b;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/activeandroid/b/b;->e()Lcom/activeandroid/g;
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/activeandroid/a;->d()V
+
+    :try_start_0
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
 
-    const-string v2, "WeightInfoManager"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Get Oldest Info : "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v1
-
-    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    move-object v0, v1
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->j(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {}, Lcom/activeandroid/a;->e()V
+
+    :goto_1
+    return-void
+
+    :cond_0
+    :try_start_2
+    invoke-static {}, Lcom/activeandroid/a;->f()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-static {}, Lcom/activeandroid/a;->e()V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {}, Lcom/activeandroid/a;->e()V
+
+    throw v0
 .end method
 
-.method public f(I)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+.method public e(I)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
     .locals 6
 
     const/4 v5, 0x1
@@ -2964,101 +3059,38 @@
     return-object v0
 .end method
 
-.method public g()Lcn/com/smartdevices/bracelet/model/SportDay;
-    .locals 6
+.method public e()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/weight/WeightInfo;",
+            ">;"
+        }
+    .end annotation
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/model/SportDay;
+    const/4 v0, 0x0
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
-
-    new-instance v0, Lcom/activeandroid/b/e;
-
-    invoke-direct {v0}, Lcom/activeandroid/b/e;-><init>()V
-
-    const-class v2, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    invoke-virtual {v0, v2}, Lcom/activeandroid/b/e;->a(Ljava/lang/Class;)Lcom/activeandroid/b/b;
-
-    move-result-object v0
-
-    const-string v2, "Synced>?"
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    const/4 v5, -0x1
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    invoke-virtual {v0, v2, v3}, Lcom/activeandroid/b/b;->a(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/o;->d(I)Ljava/util/List;
 
     move-result-object v0
 
-    const-string v2, "Timestamp DESC"
-
-    invoke-virtual {v0, v2}, Lcom/activeandroid/b/b;->g(Ljava/lang/String;)Lcom/activeandroid/b/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/activeandroid/b/b;->e()Lcom/activeandroid/g;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    const-string v2, "WeightInfoManager"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Get Latest Info : "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v1
-
-    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
-
-    :goto_0
     return-object v0
-
-    :cond_0
-    move-object v0, v1
-
-    goto :goto_0
 .end method
 
-.method public g(I)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+.method public e(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/weight/o;->b(Lcn/com/smartdevices/bracelet/weight/WeightInfo;Z)V
+
+    return-void
+.end method
+
+.method public f(I)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
     .locals 6
 
     const/4 v5, 0x1
@@ -3150,4 +3182,192 @@
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
+.end method
+
+.method public f()Lcom/xiaomi/hm/health/dataprocess/SportDay;
+    .locals 6
+
+    new-instance v1, Lcom/xiaomi/hm/health/dataprocess/SportDay;
+
+    invoke-direct {v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
+
+    new-instance v0, Lcom/activeandroid/b/e;
+
+    invoke-direct {v0}, Lcom/activeandroid/b/e;-><init>()V
+
+    const-class v2, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    invoke-virtual {v0, v2}, Lcom/activeandroid/b/e;->a(Ljava/lang/Class;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    const-string v2, "Synced>?"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    const/4 v5, -0x1
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v0, v2, v3}, Lcom/activeandroid/b/b;->a(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    const-string v2, "Timestamp ASC"
+
+    invoke-virtual {v0, v2}, Lcom/activeandroid/b/b;->g(Ljava/lang/String;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/activeandroid/b/b;->e()Lcom/activeandroid/g;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    const-string v2, "WeightInfoManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Get Oldest Info : "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v1
+
+    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    new-instance v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
+
+    invoke-direct {v0, v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    move-object v0, v1
+
+    goto :goto_0
+.end method
+
+.method public g()Lcom/xiaomi/hm/health/dataprocess/SportDay;
+    .locals 6
+
+    new-instance v1, Lcom/xiaomi/hm/health/dataprocess/SportDay;
+
+    invoke-direct {v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
+
+    new-instance v0, Lcom/activeandroid/b/e;
+
+    invoke-direct {v0}, Lcom/activeandroid/b/e;-><init>()V
+
+    const-class v2, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    invoke-virtual {v0, v2}, Lcom/activeandroid/b/e;->a(Ljava/lang/Class;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    const-string v2, "Synced>?"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    const/4 v5, -0x1
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v0, v2, v3}, Lcom/activeandroid/b/b;->a(Ljava/lang/String;[Ljava/lang/Object;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    const-string v2, "Timestamp DESC"
+
+    invoke-virtual {v0, v2}, Lcom/activeandroid/b/b;->g(Ljava/lang/String;)Lcom/activeandroid/b/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/activeandroid/b/b;->e()Lcom/activeandroid/g;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    const-string v2, "WeightInfoManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Get Latest Info : "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v1
+
+    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    new-instance v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
+
+    invoke-direct {v0, v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    move-object v0, v1
+
+    goto :goto_0
 .end method

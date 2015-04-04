@@ -19,16 +19,16 @@
 
 
 # virtual methods
-.method protected c()V
+.method public onCancel(Landroid/content/DialogInterface;)V
     .locals 0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/l;->dismiss()V
 
     return-void
 .end method
 
-.method public onCancel(Landroid/content/DialogInterface;)V
+.method protected onRightButtonClicked()V
     .locals 0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/l;->dismiss()V
 
     return-void
 .end method

@@ -1432,13 +1432,13 @@
 
     iget-object v0, p0, Lcom/c/b/e/a/a;->b:Lcom/c/b/c/b;
 
-    invoke-virtual {v0}, Lcom/c/b/c/b;->f()I
+    invoke-virtual {v0}, Lcom/c/b/c/b;->g()I
 
     move-result v4
 
     iget-object v0, p0, Lcom/c/b/e/a/a;->b:Lcom/c/b/c/b;
 
-    invoke-virtual {v0}, Lcom/c/b/c/b;->e()I
+    invoke-virtual {v0}, Lcom/c/b/c/b;->f()I
 
     move-result v5
 

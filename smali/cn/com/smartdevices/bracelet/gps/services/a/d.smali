@@ -6,6 +6,9 @@
 .method public abstract a(I)I
 .end method
 
+.method public abstract a(J)I
+.end method
+
 .method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/c;Ljava/util/ArrayList;)I
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -19,13 +22,10 @@
     .end annotation
 .end method
 
-.method public abstract a(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)I
+.method public abstract a(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)J
 .end method
 
 .method public abstract a()Landroid/location/Location;
-.end method
-
-.method public abstract a(J)Lcn/com/smartdevices/bracelet/gps/services/A;
 .end method
 
 .method public abstract a(Lcn/com/smartdevices/bracelet/gps/services/a/a;)V
@@ -37,40 +37,46 @@
 .method public abstract b()I
 .end method
 
+.method public abstract b(J)Lcn/com/smartdevices/bracelet/gps/services/ai;
+.end method
+
 .method public abstract b(Lcn/com/smartdevices/bracelet/gps/services/a/a;)V
 .end method
 
 .method public abstract b(Lcn/com/smartdevices/bracelet/gps/services/a/b;)V
 .end method
 
-.method public abstract b(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)V
+.method public abstract c(J)I
 .end method
 
-.method public abstract c()J
+.method public abstract c()Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
 .end method
 
 .method public abstract c(Lcn/com/smartdevices/bracelet/gps/services/a/b;)V
 .end method
 
-.method public abstract c(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)V
-.end method
-
 .method public abstract d()J
 .end method
 
-.method public abstract d(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)J
+.method public abstract d(J)V
 .end method
 
 .method public abstract d(Lcn/com/smartdevices/bracelet/gps/services/a/b;)V
 .end method
 
-.method public abstract e()V
+.method public abstract e()J
 .end method
 
-.method public abstract e(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)V
+.method public abstract e(J)V
 .end method
 
-.method public abstract f()Ljava/util/ArrayList;
+.method public abstract f()V
+.end method
+
+.method public abstract f(J)V
+.end method
+
+.method public abstract g()Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -82,20 +88,20 @@
     .end annotation
 .end method
 
-.method public abstract g()Ljava/io/File;
+.method public abstract h()Ljava/io/File;
 .end method
 
-.method public abstract h()F
+.method public abstract i()F
 .end method
 
-.method public abstract i()I
+.method public abstract j()I
 .end method
 
-.method public abstract j()Ljava/io/File;
+.method public abstract k()Ljava/io/File;
 .end method
 
-.method public abstract k()V
+.method public abstract l()V
 .end method
 
-.method public abstract l()I
+.method public abstract m()I
 .end method

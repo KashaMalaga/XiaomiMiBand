@@ -25,9 +25,9 @@
     return v0
 
     :cond_1
-    iget-object v1, p1, Lcom/tencent/mm/sdk/a/a/a$a;->g:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/sdk/a/a/a$a;->p:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/b/e;->c(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/b/e;->j(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -44,9 +44,9 @@
     :cond_2
     const/4 v0, 0x0
 
-    iget-object v1, p1, Lcom/tencent/mm/sdk/a/a/a$a;->f:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/sdk/a/a/a$a;->o:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/b/e;->c(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/b/e;->j(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -56,7 +56,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p1, Lcom/tencent/mm/sdk/a/a/a$a;->f:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/sdk/a/a/a$a;->o:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -75,15 +75,15 @@
     :cond_3
     new-instance v1, Landroid/content/Intent;
 
-    iget-object v2, p1, Lcom/tencent/mm/sdk/a/a/a$a;->g:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/sdk/a/a/a$a;->p:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p1, Lcom/tencent/mm/sdk/a/a/a$a;->e:Landroid/os/Bundle;
+    iget-object v2, p1, Lcom/tencent/mm/sdk/a/a/a$a;->n:Landroid/os/Bundle;
 
     if-eqz v2, :cond_4
 
-    iget-object v2, p1, Lcom/tencent/mm/sdk/a/a/a$a;->e:Landroid/os/Bundle;
+    iget-object v2, p1, Lcom/tencent/mm/sdk/a/a/a$a;->n:Landroid/os/Bundle;
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
@@ -102,13 +102,13 @@
 
     const-string v3, "_mmessage_content"
 
-    iget-object v4, p1, Lcom/tencent/mm/sdk/a/a/a$a;->d:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/sdk/a/a/a$a;->m:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v3, "_mmessage_checksum"
 
-    iget-object v4, p1, Lcom/tencent/mm/sdk/a/a/a$a;->d:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/sdk/a/a/a$a;->m:Ljava/lang/String;
 
     invoke-static {v4, v5, v2}, Lcom/tencent/mm/sdk/a/a/b;->a(Ljava/lang/String;ILjava/lang/String;)[B
 
@@ -144,7 +144,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/b/a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/b/a;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 

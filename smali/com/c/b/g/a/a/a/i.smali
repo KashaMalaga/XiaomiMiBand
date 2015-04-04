@@ -19,7 +19,7 @@
 .method protected abstract a(Ljava/lang/StringBuilder;I)V
 .end method
 
-.method protected b(Ljava/lang/StringBuilder;II)V
+.method protected final b(Ljava/lang/StringBuilder;II)V
     .locals 4
 
     invoke-virtual {p0}, Lcom/c/b/g/a/a/a/i;->c()Lcom/c/b/g/a/a/a/t;

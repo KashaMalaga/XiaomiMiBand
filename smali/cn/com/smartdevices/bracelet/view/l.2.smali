@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
@@ -22,42 +22,44 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    const/high16 v3, 0x42c80000
+    return-void
+.end method
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    move-result-object v0
+    return-void
+.end method
 
-    check-cast v0, Ljava/lang/Float;
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+    return-void
+.end method
 
-    move-result v1
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/l;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->b(Lcn/com/smartdevices/bracelet/view/DynamicView;)Landroid/view/View;
-
-    move-result-object v0
-
-    div-float v2, v1, v3
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
+    const/high16 v1, 0x3f800000
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/l;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->c(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/ui/widget/c;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->d(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/View;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setScaleX(F)V
 
-    div-float/2addr v1, v3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/l;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->d(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setScaleY(F)V
 
     return-void
 .end method

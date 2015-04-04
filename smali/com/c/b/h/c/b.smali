@@ -83,14 +83,6 @@
     return-void
 .end method
 
-.method a()[B
-    .locals 1
-
-    iget-object v0, p0, Lcom/c/b/h/c/b;->a:[B
-
-    return-object v0
-.end method
-
 .method a(I)[B
     .locals 4
 

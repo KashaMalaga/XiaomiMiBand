@@ -47,7 +47,7 @@
 
     iget-object v4, p0, Lcom/d/a/a/r;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/d/a/a/p;->a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/d/a/a/p;->onSuccess(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method

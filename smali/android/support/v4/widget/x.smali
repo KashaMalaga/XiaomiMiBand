@@ -1,13 +1,46 @@
-.class public interface abstract Landroid/support/v4/widget/X;
-.super Ljava/lang/Object;
+.class Landroid/support/v4/widget/X;
+.super Landroid/view/animation/AccelerateDecelerateInterpolator;
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/support/v4/widget/U;)V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/support/v4/widget/X;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Landroid/view/View;)V
-.end method
+.method public getInterpolation(F)F
+    .locals 3
 
-.method public abstract a(Landroid/view/View;F)V
-.end method
+    const/4 v0, 0x0
 
-.method public abstract b(Landroid/view/View;)V
+    const/high16 v1, 0x3f000000
+
+    sub-float v1, p1, v1
+
+    const/high16 v2, 0x40000000
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
+
+    move-result v0
+
+    invoke-super {p0, v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;->getInterpolation(F)F
+
+    move-result v0
+
+    return v0
 .end method

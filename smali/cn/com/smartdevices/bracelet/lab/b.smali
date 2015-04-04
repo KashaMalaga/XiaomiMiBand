@@ -1,12 +1,12 @@
 .class public Lcn/com/smartdevices/bracelet/lab/b;
-.super Lcn/com/smartdevices/bracelet/db/a;
+.super Lcn/com/smartdevices/bracelet/f/a;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/db/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/f/a;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -178,13 +178,13 @@
 
     :goto_0
     :try_start_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/v;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/v;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/db/v;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/x;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 

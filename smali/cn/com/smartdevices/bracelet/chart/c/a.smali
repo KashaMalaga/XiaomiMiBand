@@ -93,6 +93,34 @@
     goto :goto_1
 .end method
 
+.method public static a(FFILandroid/widget/TextView;)Landroid/animation/Animator;
+    .locals 2
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [F
+
+    const/4 v1, 0x0
+
+    aput p0, v0, v1
+
+    const/4 v1, 0x1
+
+    aput p1, v0, v1
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/n;
+
+    invoke-direct {v1, p3, p2}, Lcn/com/smartdevices/bracelet/chart/c/n;-><init>(Landroid/widget/TextView;I)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    return-object v0
+.end method
+
 .method public static a(IILandroid/widget/TextView;)Landroid/animation/Animator;
     .locals 10
 
@@ -287,15 +315,15 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/h;
+    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/i;
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/chart/c/h;-><init>()V
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/chart/c/i;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setEvaluator(Landroid/animation/TypeEvaluator;)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/i;
+    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/j;
 
-    invoke-direct {v1, p2}, Lcn/com/smartdevices/bracelet/chart/c/i;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {v1, p2}, Lcn/com/smartdevices/bracelet/chart/c/j;-><init>(Landroid/widget/TextView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -310,7 +338,7 @@
     return-object v0
 .end method
 
-.method public static varargs a(IILcn/com/smartdevices/bracelet/chart/c/o;[Landroid/view/View;)Landroid/animation/Animator;
+.method public static varargs a(IILcn/com/smartdevices/bracelet/chart/c/p;[Landroid/view/View;)Landroid/animation/Animator;
     .locals 10
 
     const/4 v0, 0x2
@@ -347,13 +375,13 @@
 
     move-result v6
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/chart/c/m;
+    new-instance v0, Lcn/com/smartdevices/bracelet/chart/c/o;
 
     move-object v7, p3
 
     move-object v8, p2
 
-    invoke-direct/range {v0 .. v8}, Lcn/com/smartdevices/bracelet/chart/c/m;-><init>(IIIIII[Landroid/view/View;Lcn/com/smartdevices/bracelet/chart/c/o;)V
+    invoke-direct/range {v0 .. v8}, Lcn/com/smartdevices/bracelet/chart/c/o;-><init>(IIIIII[Landroid/view/View;Lcn/com/smartdevices/bracelet/chart/c/p;)V
 
     invoke-virtual {v9, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -381,7 +409,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, v0, p2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(IILcn/com/smartdevices/bracelet/chart/c/o;[Landroid/view/View;)Landroid/animation/Animator;
+    invoke-static {p0, p1, v0, p2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(IILcn/com/smartdevices/bracelet/chart/c/p;[Landroid/view/View;)Landroid/animation/Animator;
 
     move-result-object v0
 
@@ -549,9 +577,9 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/g;
+    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/h;
 
-    invoke-direct {v1, p2, p3}, Lcn/com/smartdevices/bracelet/chart/c/g;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;)V
+    invoke-direct {v1, p2, p3}, Lcn/com/smartdevices/bracelet/chart/c/h;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -617,9 +645,9 @@
 
     invoke-virtual {v0, v4, v1}, Landroid/animation/LayoutTransition;->setAnimator(ILandroid/animation/Animator;)V
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/chart/c/e;
+    new-instance v2, Lcn/com/smartdevices/bracelet/chart/c/f;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/chart/c/e;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/chart/c/f;-><init>()V
 
     invoke-virtual {v1, v2}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -643,9 +671,9 @@
 
     invoke-virtual {v0, v5, v1}, Landroid/animation/LayoutTransition;->setAnimator(ILandroid/animation/Animator;)V
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/chart/c/f;
+    new-instance v2, Lcn/com/smartdevices/bracelet/chart/c/g;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/chart/c/f;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/chart/c/g;-><init>()V
 
     invoke-virtual {v1, v2}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -1459,15 +1487,15 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/j;
+    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/k;
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/chart/c/j;-><init>()V
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/chart/c/k;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setEvaluator(Landroid/animation/TypeEvaluator;)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/k;
+    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/l;
 
-    invoke-direct {v1, p2}, Lcn/com/smartdevices/bracelet/chart/c/k;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {v1, p2}, Lcn/com/smartdevices/bracelet/chart/c/l;-><init>(Landroid/widget/TextView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -1561,7 +1589,7 @@
 .method public static b(I)Ljava/lang/CharSequence;
     .locals 7
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->j()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->k()Z
 
     move-result v0
 
@@ -1772,9 +1800,9 @@
     mul-int/2addr v0, v2
 
     :cond_2
-    new-instance v5, Lcn/com/smartdevices/bracelet/chart/c/n;
+    new-instance v5, Lcn/com/smartdevices/bracelet/chart/c/c;
 
-    invoke-direct {v5, v4}, Lcn/com/smartdevices/bracelet/chart/c/n;-><init>(Landroid/view/View;)V
+    invoke-direct {v5, v4}, Lcn/com/smartdevices/bracelet/chart/c/c;-><init>(Landroid/view/View;)V
 
     int-to-long v6, v0
 
@@ -1784,9 +1812,9 @@
 
     if-ne v2, v4, :cond_3
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/chart/c/c;
+    new-instance v4, Lcn/com/smartdevices/bracelet/chart/c/d;
 
-    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/chart/c/c;-><init>(Landroid/view/View;)V
+    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/chart/c/d;-><init>(Landroid/view/View;)V
 
     add-int/lit8 v5, v0, 0x5a
 
@@ -1828,9 +1856,9 @@
     mul-int/2addr v0, v1
 
     :cond_5
-    new-instance v4, Lcn/com/smartdevices/bracelet/chart/c/d;
+    new-instance v4, Lcn/com/smartdevices/bracelet/chart/c/e;
 
-    invoke-direct {v4, v3}, Lcn/com/smartdevices/bracelet/chart/c/d;-><init>(Landroid/view/View;)V
+    invoke-direct {v4, v3}, Lcn/com/smartdevices/bracelet/chart/c/e;-><init>(Landroid/view/View;)V
 
     int-to-long v5, v0
 
@@ -1863,9 +1891,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/l;
+    new-instance v1, Lcn/com/smartdevices/bracelet/chart/c/m;
 
-    invoke-direct {v1, p2}, Lcn/com/smartdevices/bracelet/chart/c/l;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {v1, p2}, Lcn/com/smartdevices/bracelet/chart/c/m;-><init>(Landroid/widget/TextView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 

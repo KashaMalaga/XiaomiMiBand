@@ -287,40 +287,18 @@
     return-void
 .end method
 
-.method private a(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method private a(Landroid/content/Context;)V
     .locals 7
 
-    const v3, 0x1020013
-
-    const/4 v2, 0x1
+    const v2, 0x1020013
 
     const/4 v6, 0x0
 
-    const/4 v5, -0x1
+    const/4 v5, 0x0
 
-    const/4 v4, 0x0
+    const/4 v4, -0x1
 
-    new-array v0, v2, [I
-
-    const v1, 0x10100f3
-
-    aput v1, v0, v4
-
-    invoke-virtual {p1, p2, v0, v4, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v1
-
-    iput v1, p0, Landroid/support/v13/app/FragmentTabHost;->e:I
-
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    invoke-super {p0, p0}, Landroid/widget/TabHost;->setOnTabChangedListener(Landroid/widget/TabHost$OnTabChangeListener;)V
-
-    invoke-virtual {p0, v3}, Landroid/support/v13/app/FragmentTabHost;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/support/v13/app/FragmentTabHost;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -330,11 +308,13 @@
 
     invoke-direct {v0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setOrientation(I)V
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-direct {v1, v5, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v1, v4, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     invoke-virtual {p0, v0, v1}, Landroid/support/v13/app/FragmentTabHost;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -342,15 +322,15 @@
 
     invoke-direct {v1, p1}, Landroid/widget/TabWidget;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v1, v3}, Landroid/widget/TabWidget;->setId(I)V
+    invoke-virtual {v1, v2}, Landroid/widget/TabWidget;->setId(I)V
 
-    invoke-virtual {v1, v4}, Landroid/widget/TabWidget;->setOrientation(I)V
+    invoke-virtual {v1, v5}, Landroid/widget/TabWidget;->setOrientation(I)V
 
     new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v3, -0x2
 
-    invoke-direct {v2, v5, v3, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
+    invoke-direct {v2, v4, v3, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -364,7 +344,7 @@
 
     new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-direct {v2, v4, v4, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
+    invoke-direct {v2, v5, v5, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -384,7 +364,7 @@
 
     const/high16 v3, 0x3f800000
 
-    invoke-direct {v2, v5, v4, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
+    invoke-direct {v2, v4, v5, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -392,10 +372,42 @@
     return-void
 .end method
 
+.method private a(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 3
+
+    const/4 v2, 0x0
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [I
+
+    const v1, 0x10100f3
+
+    aput v1, v0, v2
+
+    invoke-virtual {p1, p2, v0, v2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v1
+
+    iput v1, p0, Landroid/support/v13/app/FragmentTabHost;->e:I
+
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    invoke-super {p0, p0}, Landroid/widget/TabHost;->setOnTabChangedListener(Landroid/widget/TabHost$OnTabChangeListener;)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public a(Landroid/content/Context;Landroid/app/FragmentManager;)V
     .locals 0
+
+    invoke-direct {p0, p1}, Landroid/support/v13/app/FragmentTabHost;->a(Landroid/content/Context;)V
 
     invoke-super {p0}, Landroid/widget/TabHost;->setup()V
 
@@ -410,6 +422,8 @@
 
 .method public a(Landroid/content/Context;Landroid/app/FragmentManager;I)V
     .locals 2
+
+    invoke-direct {p0, p1}, Landroid/support/v13/app/FragmentTabHost;->a(Landroid/content/Context;)V
 
     invoke-super {p0}, Landroid/widget/TabHost;->setup()V
 

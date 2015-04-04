@@ -1,112 +1,141 @@
-.class public Landroid/support/v4/app/n;
-.super Ljava/lang/Object;
+.class Landroid/support/v4/app/n;
+.super Landroid/support/v4/app/p;
+
+
+# instance fields
+.field private a:Landroid/support/v4/app/cn;
 
 
 # direct methods
-.method protected constructor <init>()V
+.method public constructor <init>(Landroid/support/v4/app/cn;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/app/p;-><init>()V
+
+    iput-object p1, p0, Landroid/support/v4/app/n;->a:Landroid/support/v4/app/cn;
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;II)Landroid/support/v4/app/n;
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Landroid/support/v4/app/o;
-
-    invoke-static {p0, p1, p2}, Landroid/support/v4/app/p;->a(Landroid/content/Context;II)Landroid/support/v4/app/p;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/support/v4/app/o;-><init>(Landroid/support/v4/app/p;)V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    new-instance v0, Landroid/support/v4/app/n;
-
-    invoke-direct {v0}, Landroid/support/v4/app/n;-><init>()V
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/view/View;IIII)Landroid/support/v4/app/n;
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Landroid/support/v4/app/o;
-
-    invoke-static {p0, p1, p2, p3, p4}, Landroid/support/v4/app/p;->a(Landroid/view/View;IIII)Landroid/support/v4/app/p;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/support/v4/app/o;-><init>(Landroid/support/v4/app/p;)V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    new-instance v0, Landroid/support/v4/app/n;
-
-    invoke-direct {v0}, Landroid/support/v4/app/n;-><init>()V
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/n;
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Landroid/support/v4/app/o;
-
-    invoke-static {p0, p1, p2, p3}, Landroid/support/v4/app/p;->a(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/p;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/support/v4/app/o;-><init>(Landroid/support/v4/app/p;)V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    new-instance v0, Landroid/support/v4/app/n;
-
-    invoke-direct {v0}, Landroid/support/v4/app/n;-><init>()V
-
-    goto :goto_0
-.end method
-
 
 # virtual methods
-.method public a()Landroid/os/Bundle;
+.method public a(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Landroid/support/v4/app/n;->a:Landroid/support/v4/app/cn;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/app/cn;->a(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public a(Landroid/support/v4/app/n;)V
-    .locals 0
+.method public a(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/app/n;->a:Landroid/support/v4/app/cn;
+
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/app/cn;->a(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a(Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v4/app/n;->a:Landroid/support/v4/app/cn;
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/app/cn;->a(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public a(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v4/app/n;->a:Landroid/support/v4/app/cn;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/app/cn;->a(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public a(Ljava/util/List;Ljava/util/Map;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v4/app/n;->a:Landroid/support/v4/app/cn;
+
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/app/cn;->a(Ljava/util/List;Ljava/util/Map;)V
+
+    return-void
+.end method
+
+.method public b(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v4/app/n;->a:Landroid/support/v4/app/cn;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/app/cn;->b(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
 
     return-void
 .end method

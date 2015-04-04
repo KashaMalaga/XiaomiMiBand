@@ -1,78 +1,75 @@
 .class Lcn/com/smartdevices/bracelet/ui/K;
-.super Lcn/com/smartdevices/bracelet/a/b;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/K;->b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/K;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
-    .locals 1
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 3
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/K;->b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->f(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
-
+    :goto_0
+    :pswitch_0
     return-void
-.end method
 
-.method public c(Ljava/lang/Object;)V
-    .locals 2
+    :pswitch_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/K;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->a(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
 
-    check-cast p1, Ljava/lang/Boolean;
+    goto :goto_0
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    :pswitch_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/K;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    move-result v0
+    const v1, 0x7f0901b5
 
-    if-eqz v0, :cond_0
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/K;->b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->g(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)Landroid/os/Handler;
+    invoke-static {v0, v1, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/K;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/K;->b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->c(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->b(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
 
     goto :goto_0
-.end method
 
-.method public d(Ljava/lang/Object;)V
-    .locals 1
+    :pswitch_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/K;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->b(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/K;->b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
+    goto :goto_0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->c(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
+    nop
 
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
 .end method

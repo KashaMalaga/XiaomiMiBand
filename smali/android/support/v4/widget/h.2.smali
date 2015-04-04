@@ -1,16 +1,47 @@
-.class public interface abstract Landroid/support/v4/widget/h;
+.class Landroid/support/v4/widget/h;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/widget/ContentLoadingProgressBar;
+
+
+# direct methods
+.method constructor <init>(Landroid/support/v4/widget/ContentLoadingProgressBar;)V
+    .locals 0
+
+    iput-object p1, p0, Landroid/support/v4/widget/h;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(I)V
-.end method
+.method public run()V
+    .locals 3
 
-.method public abstract a(Landroid/view/View;)V
-.end method
+    iget-object v0, p0, Landroid/support/v4/widget/h;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-.method public abstract a(Landroid/view/View;F)V
-.end method
+    const/4 v1, 0x0
 
-.method public abstract b(Landroid/view/View;)V
+    invoke-static {v0, v1}, Landroid/support/v4/widget/ContentLoadingProgressBar;->a(Landroid/support/v4/widget/ContentLoadingProgressBar;Z)Z
+
+    iget-object v0, p0, Landroid/support/v4/widget/h;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
+
+    const-wide/16 v1, -0x1
+
+    invoke-static {v0, v1, v2}, Landroid/support/v4/widget/ContentLoadingProgressBar;->a(Landroid/support/v4/widget/ContentLoadingProgressBar;J)J
+
+    iget-object v0, p0, Landroid/support/v4/widget/h;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ContentLoadingProgressBar;->setVisibility(I)V
+
+    return-void
 .end method

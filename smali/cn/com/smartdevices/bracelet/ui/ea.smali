@@ -1,19 +1,19 @@
-.class Lcn/com/smartdevices/bracelet/ui/ea;
+.class Lcn/com/smartdevices/bracelet/ui/eA;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Lcn/com/smartdevices/bracelet/chart/c/p;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dZ;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dZ;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ea;->a:Lcn/com/smartdevices/bracelet/ui/dZ;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/eA;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,48 +22,21 @@
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public a(I)V
+    .locals 1
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eA;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ea;->a:Lcn/com/smartdevices/bracelet/ui/dZ;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/dZ;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->p(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Landroid/animation/Animator;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    const-wide/16 v1, 0x0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/Animator;->setStartDelay(J)V
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
 
-    return-void
-.end method
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ea;->a:Lcn/com/smartdevices/bracelet/ui/dZ;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/dZ;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->b(Z)V
-
+    :cond_0
     return-void
 .end method

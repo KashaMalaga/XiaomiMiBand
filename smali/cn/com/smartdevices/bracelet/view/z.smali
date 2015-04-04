@@ -1,13 +1,19 @@
-.class public Lcn/com/smartdevices/bracelet/view/Z;
+.class Lcn/com/smartdevices/bracelet/view/Z;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/view/W;
+.implements Landroid/view/View$OnLayoutChangeListener;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;)V
     .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/Z;->a:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -16,20 +22,21 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 0
+.method public onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 1
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/Z;->a:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
-.method public a(IFI)V
-    .locals 0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->a(Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;)Z
 
-    return-void
-.end method
+    move-result v0
 
-.method public b(I)V
-    .locals 0
+    if-eqz v0, :cond_0
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/Z;->a:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->b(Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;)V
+
+    :cond_0
     return-void
 .end method

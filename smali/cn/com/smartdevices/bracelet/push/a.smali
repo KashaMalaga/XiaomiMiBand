@@ -1,207 +1,156 @@
-.class public Lcn/com/smartdevices/bracelet/push/a;
+.class public abstract Lcn/com/smartdevices/bracelet/push/a;
 .super Ljava/lang/Object;
 
 
-# static fields
-.field private static final a:Ljava/lang/String; = "MiPush"
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:I
+
+.field protected d:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;JJLorg/json/JSONObject;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-wide p4, p0, Lcn/com/smartdevices/bracelet/push/a;->a:J
 
-.method public static a(Landroid/content/Context;)V
-    .locals 2
+    iput-wide p2, p0, Lcn/com/smartdevices/bracelet/push/a;->b:J
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/push/a;->d(Landroid/content/Context;)Z
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/push/a;->d:Landroid/content/Context;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
-
-    move-result-object v0
-
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/config/b;->d:Lcn/com/smartdevices/bracelet/config/l;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v1, "2882303761517163841"
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->d:Lcn/com/smartdevices/bracelet/config/l;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "5171716313841"
-
-    invoke-static {p0, v1, v0}, Lcom/xiaomi/mipush/sdk/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->a()Z
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/push/a;->a()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/push/b;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/push/b;-><init>()V
-
-    invoke-static {p0, v0}, Lcom/xiaomi/mipush/sdk/c;->a(Landroid/content/Context;Lcom/xiaomi/b/a/b/a;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public static b(Landroid/content/Context;)V
-    .locals 4
-
-    const/4 v3, 0x0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
-
-    move-result-object v1
-
-    iget-wide v1, v1, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->c()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Locale;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    iput v0, p0, Lcn/com/smartdevices/bracelet/push/a;->c:I
 
     return-void
 .end method
 
-.method public static c(Landroid/content/Context;)V
-    .locals 0
 
-    invoke-static {p0}, Lcom/xiaomi/mipush/sdk/f;->f(Landroid/content/Context;)V
-
-    return-void
+# virtual methods
+.method public abstract a()I
 .end method
 
-.method private static d(Landroid/content/Context;)Z
-    .locals 5
+.method public a(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
+    .locals 6
 
-    const-string v0, "activity"
+    const/16 v5, 0x64
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    const/4 v4, 0x1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/push/a;->d:Landroid/content/Context;
+
+    const-string v1, "notification"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/app/ActivityManager;
+    check-cast v0, Landroid/app/NotificationManager;
 
-    invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
+    new-instance v1, Landroid/support/v4/app/aT;
 
-    move-result-object v0
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/a;->d:Landroid/content/Context;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-direct {v1, v2}, Landroid/support/v4/app/aT;-><init>(Landroid/content/Context;)V
 
-    move-result-object v1
+    invoke-virtual {v1, p1}, Landroid/support/v4/app/aT;->a(Ljava/lang/CharSequence;)Landroid/support/v4/app/aT;
 
-    invoke-static {}, Landroid/os/Process;->myPid()I
+    invoke-virtual {v1, p2}, Landroid/support/v4/app/aT;->b(Ljava/lang/CharSequence;)Landroid/support/v4/app/aT;
+
+    invoke-virtual {v1, p2}, Landroid/support/v4/app/aT;->e(Ljava/lang/CharSequence;)Landroid/support/v4/app/aT;
+
+    invoke-virtual {v1, p3}, Landroid/support/v4/app/aT;->a(Landroid/app/PendingIntent;)Landroid/support/v4/app/aT;
+
+    const v2, 0x7f020006
+
+    invoke-virtual {v1, v2}, Landroid/support/v4/app/aT;->a(I)Landroid/support/v4/app/aT;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/a;->d:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0a000c
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1, v2, v5, v5}, Landroid/support/v4/app/aT;->a(III)Landroid/support/v4/app/aT;
 
-    move-result-object v3
+    invoke-virtual {v1, v4}, Landroid/support/v4/app/aT;->e(Z)Landroid/support/v4/app/aT;
 
-    :cond_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1, v4}, Landroid/support/v4/app/aT;->c(I)Landroid/support/v4/app/aT;
 
-    move-result v0
+    invoke-virtual {v1}, Landroid/support/v4/app/aT;->c()Landroid/app/Notification;
 
-    if-eqz v0, :cond_1
+    move-result-object v1
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget v2, p0, Lcn/com/smartdevices/bracelet/push/a;->c:I
 
-    move-result-object v0
+    invoke-virtual {v0, v2, v1}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    check-cast v0, Landroid/app/ActivityManager$RunningAppProcessInfo;
+    return-void
+.end method
 
-    iget v4, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
+.method public a(Landroid/net/Uri;)Z
+    .locals 3
 
-    if-ne v4, v2, :cond_0
+    const/4 v0, 0x0
 
-    iget-object v0, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
+    new-instance v1, Landroid/content/Intent;
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v2, "android.intent.action.VIEW"
 
-    move-result v0
+    invoke-direct {v1, v2, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    if-eqz v0, :cond_0
+    const-string v2, "android.intent.category.DEFAULT"
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/a;->d:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/a;->d:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1, v0}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
 
     const/4 v0, 0x1
 
-    :goto_0
+    :cond_0
     return v0
+.end method
 
-    :cond_1
-    const/4 v0, 0x0
+.method public abstract b()V
+.end method
 
-    goto :goto_0
+.method public abstract c()V
 .end method

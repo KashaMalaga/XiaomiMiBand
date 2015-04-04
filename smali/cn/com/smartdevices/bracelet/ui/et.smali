@@ -1,50 +1,81 @@
 .class Lcn/com/smartdevices/bracelet/ui/et;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/view/ab;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/es;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/es;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/et;->a:Lcn/com/smartdevices/bracelet/ui/es;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/et;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+.method public a(Landroid/view/View;Lcn/com/smartdevices/bracelet/weight/UserInfo;I)V
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/et;->a:Lcn/com/smartdevices/bracelet/ui/es;
+    const/4 v2, 0x1
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/es;->getActivity()Landroid/app/Activity;
+    if-eqz p2, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/et;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->a(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)I
+
+    move-result v0
+
+    iget v1, p2, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/et;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->b(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/et;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->a(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;Z)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/et;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->c(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->t(Landroid/content/Context;)V
+    invoke-virtual {v0, p3}, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->a(I)V
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/et;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-.method public updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+    iget v1, p2, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
 
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->a(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;I)V
 
-    const/high16 v0, -0x1000000
+    goto :goto_0
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/et;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    const/4 v0, 0x1
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->b(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;I)V
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
-
-    return-void
+    goto :goto_0
 .end method

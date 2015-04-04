@@ -33,6 +33,12 @@
     .end annotation
 .end field
 
+.field public final f:Ljava/lang/Boolean;
+    .annotation runtime Lcom/c/a/a/b;
+        a = "WeiboHealthEnable"
+    .end annotation
+.end field
+
 
 # direct methods
 .method public constructor <init>()V
@@ -42,7 +48,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0x5265c00
+    const v0, 0xdbba00
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -73,6 +79,14 @@
     move-result-object v0
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/k;->e:Ljava/lang/Boolean;
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/k;->f:Ljava/lang/Boolean;
 
     return-void
 .end method

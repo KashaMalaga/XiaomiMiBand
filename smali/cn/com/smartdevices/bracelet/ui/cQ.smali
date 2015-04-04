@@ -1,5 +1,8 @@
 .class Lcn/com/smartdevices/bracelet/ui/cQ;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lkankan/wheel/widget/e;
 
 
 # instance fields
@@ -12,191 +15,37 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 4
+.method public a(Lkankan/wheel/widget/WheelView;)V
+    .locals 0
 
-    const/4 v2, 0x0
-
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :cond_0
-    :goto_0
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
+.method public b(Lkankan/wheel/widget/WheelView;)V
+    .locals 3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/cP;->getActivity()Landroid/app/Activity;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;)Lkankan/wheel/widget/WheelView;
 
     move-result-object v1
 
-    const-string v2, "\u4e0a\u4f20\u65e5\u5fd7\u6587\u4ef6"
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
 
-    const-string v3, "\u51c6\u5907\u4e0a\u4f20\u65e5\u5fd7\u6587\u4ef6"
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/cP;->b(Lcn/com/smartdevices/bracelet/ui/cP;)I
 
-    invoke-static {v1, v2, v3}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/app/ProgressDialog;
+    move-result v2
 
-    move-result-object v1
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;Lkankan/wheel/widget/WheelView;I)V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setCancelable(Z)V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "\u5df2\u4e0a\u4f20\uff1a"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "%"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    :pswitch_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/cP;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/cP;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const-string v1, "\u4e0a\u4f20\u6210\u529f\uff0c\u611f\u8c22\u60a8\u7684\u652f\u6301\uff01"
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    goto/16 :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/cP;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/cP;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const-string v1, "\u4e0a\u4f20\u5931\u8d25\uff0c\u60a8\u53ef\u4ee5\u91cd\u65b0\u4e0a\u4f20\uff0c\u611f\u8c22\u60a8\u7684\u652f\u6301\uff01"
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    goto/16 :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
+    return-void
 .end method

@@ -22,7 +22,7 @@
 .method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 4
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->r:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->s:Z
 
     if-eqz v0, :cond_1
 
@@ -148,7 +148,7 @@
     :catch_0
     move-exception v0
 
-    sget-boolean v1, Lcn/com/smartdevices/bracelet/config/b;->r:Z
+    sget-boolean v1, Lcn/com/smartdevices/bracelet/config/b;->s:Z
 
     if-eqz v1, :cond_0
 

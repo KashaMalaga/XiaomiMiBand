@@ -96,7 +96,7 @@
 .end method
 
 .method public static a(II)Lcom/c/b/d/a/g;
-    .locals 4
+    .locals 5
 
     and-int/lit8 v0, p0, 0x1
 
@@ -107,35 +107,33 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
     throw v0
 
     :cond_1
-    sget-object v0, Lcom/c/b/d/a/g;->a:[Lcom/c/b/d/a/g;
+    sget-object v1, Lcom/c/b/d/a/g;->a:[Lcom/c/b/d/a/g;
 
-    array-length v1, v0
+    array-length v2, v1
 
     const/4 v0, 0x0
 
     :goto_0
-    if-ge v0, v1, :cond_3
+    if-ge v0, v2, :cond_3
 
-    sget-object v2, Lcom/c/b/d/a/g;->a:[Lcom/c/b/d/a/g;
+    aget-object v3, v1, v0
 
-    aget-object v2, v2, v0
+    iget v4, v3, Lcom/c/b/d/a/g;->c:I
 
-    iget v3, v2, Lcom/c/b/d/a/g;->c:I
+    if-ne v4, p0, :cond_2
 
-    if-ne v3, p0, :cond_2
+    iget v4, v3, Lcom/c/b/d/a/g;->d:I
 
-    iget v3, v2, Lcom/c/b/d/a/g;->d:I
+    if-ne v4, p1, :cond_2
 
-    if-ne v3, p1, :cond_2
-
-    return-object v2
+    return-object v3
 
     :cond_2
     add-int/lit8 v0, v0, 0x1
@@ -143,7 +141,7 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 

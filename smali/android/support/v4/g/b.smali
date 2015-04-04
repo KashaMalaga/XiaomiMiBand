@@ -1,9 +1,6 @@
 .class Landroid/support/v4/g/b;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/support/v4/g/c;
-
 
 # direct methods
 .method constructor <init>()V
@@ -14,40 +11,25 @@
     return-void
 .end method
 
+.method static varargs a(Landroid/os/AsyncTask;[Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<Params:",
+            "Ljava/lang/Object;",
+            "Progress:",
+            "Ljava/lang/Object;",
+            "Result:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/AsyncTask",
+            "<TParams;TProgress;TResult;>;[TParams;)V"
+        }
+    .end annotation
 
-# virtual methods
-.method public a(Landroid/net/ConnectivityManager;)Z
-    .locals 2
+    sget-object v0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    const/4 v0, 0x1
+    invoke-virtual {p0, v0, p1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    invoke-virtual {p1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    :goto_0
-    :pswitch_0
-    return v0
-
-    :cond_0
-    invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
-
-    move-result v1
-
-    packed-switch v1, :pswitch_data_0
-
-    goto :goto_0
-
-    :pswitch_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    return-void
 .end method

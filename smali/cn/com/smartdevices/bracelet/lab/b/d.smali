@@ -11,6 +11,30 @@
     return-void
 .end method
 
+.method public static a(Lcn/com/smartdevices/bracelet/c/c;)F
+    .locals 4
+
+    if-nez p0, :cond_0
+
+    const/high16 v0, -0x40800000
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    const-wide/16 v1, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-interface {p0, v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/c/c;->a(IJF)F
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
 .method public static a(IJ)I
     .locals 4
 
@@ -45,30 +69,6 @@
     mul-double/2addr v0, v2
 
     double-to-int v0, v0
-
-    goto :goto_0
-.end method
-
-.method public static a(Lcn/com/smartdevices/bracelet/d/c;)I
-    .locals 4
-
-    if-nez p0, :cond_0
-
-    const/4 v0, -0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    const-wide/16 v1, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-interface {p0, v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/d/c;->a(IJF)I
-
-    move-result v0
 
     goto :goto_0
 .end method

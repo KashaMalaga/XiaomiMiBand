@@ -1,107 +1,78 @@
 .class Lcn/com/smartdevices/bracelet/ui/M;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/i/d;
+.super Lcn/com/smartdevices/bracelet/a/b;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/M;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/M;->b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(D)V
-    .locals 3
+.method public b()V
+    .locals 1
 
-    const/4 v2, 0x1
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
 
-    const-wide/16 v0, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/M;->b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    cmpl-double v0, p1, v0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->f(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
 
-    if-ltz v0, :cond_1
+    return-void
+.end method
 
-    const-wide v0, 0x4058c00000000000L
+.method public c(Ljava/lang/Object;)V
+    .locals 2
 
-    cmpg-double v0, p1, v0
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
 
-    if-gtz v0, :cond_0
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {p1, p2, v2}, Lcn/com/smartdevices/bracelet/gps/d/e;->b(DI)Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/M;->b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->g(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)Landroid/os/Handler;
 
     move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "%"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/M;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->a(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :goto_1
     return-void
 
     :cond_0
-    const/4 v0, 0x2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/M;->b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    invoke-static {p1, p2, v0}, Lcn/com/smartdevices/bracelet/gps/d/e;->b(DI)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->c(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
 
     goto :goto_0
+.end method
 
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/M;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
+.method public d(Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->a(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Landroid/widget/TextView;
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/M;->b:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    const/high16 v1, 0x41500000
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->c(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
 
-    invoke-virtual {v0, v2, v1}, Landroid/widget/TextView;->setTextSize(IF)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/M;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->a(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    const v1, 0x7f0802b3
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    goto :goto_1
+    return-void
 .end method

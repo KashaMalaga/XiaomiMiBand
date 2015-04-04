@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/share_to_miliao_target_feeds_fl" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/mili_normal_txt_size" android:textColor="@color/main_ui_title_color" android:gravity="center_vertical" android:id="@id/label" android:layout_width="wrap_content" android:layout_height="50.0dip" />
+</FrameLayout>

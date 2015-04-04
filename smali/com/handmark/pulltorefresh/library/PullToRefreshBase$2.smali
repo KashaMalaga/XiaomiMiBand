@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnSmoothScrollFinishedListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,13 +22,12 @@
 
 
 # virtual methods
-.method public onSmoothScrollFinished()V
+.method public run()V
     .locals 1
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$2;->this$0:Lcom/handmark/pulltorefresh/library/PullToRefreshBase;
 
-    # invokes: Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->callRefreshListener()V
-    invoke-static {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->access$200(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
+    invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->requestLayout()V
 
     return-void
 .end method

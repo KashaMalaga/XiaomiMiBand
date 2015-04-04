@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+.implements Lcom/xiaomi/hm/bleservice/profile/IFirmwareUpgradeCb;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+.field final synthetic a:Ljava/io/File;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;Ljava/io/File;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Ljava/io/File;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,86 +26,93 @@
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 3
+.method public onStart()V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    return-void
+.end method
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->i(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/widget/TextView;
+.method public onStop(I)V
+    .locals 2
 
-    move-result-object v0
+    new-instance v0, Landroid/os/Message;
+
+    invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
     const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    iput v1, v0, Landroid/os/Message;->what:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    iput p1, v0, Landroid/os/Message;->arg1:I
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->j(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)I
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Ljava/io/File;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_0
 
-    if-eq v0, v1, :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Ljava/io/File;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->c(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/content/Context;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    const v2, 0x7f0800de
-
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    return-void
+.end method
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->k(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/bluetooth/BluetoothDevice;
+.method public report(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;I)I
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    const/4 v1, 0x1
 
-    const-class v0, Landroid/bluetooth/BluetoothDevice;
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    return-void
+.end method
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->k(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/bluetooth/BluetoothDevice;
+.method public setMax(I)V
+    .locals 2
+
+    new-instance v0, Landroid/os/Message;
+
+    invoke-direct {v0}, Landroid/os/Message;-><init>()V
+
+    const/4 v1, 0x3
+
+    iput v1, v0, Landroid/os/Message;->what:I
+
+    iput p1, v0, Landroid/os/Message;->arg1:I
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/lang/Class;Landroid/bluetooth/BluetoothDevice;)Z
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->finish()V
-
-    return-void
-.end method
-
-.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
 .end method

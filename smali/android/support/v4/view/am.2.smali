@@ -1,62 +1,28 @@
 .class Landroid/support/v4/view/am;
-.super Landroid/text/method/SingleLineTransformationMethod;
-
-
-# static fields
-.field private static final a:Ljava/lang/String; = "SingleLineAllCapsTransform"
-
-
-# instance fields
-.field private b:Ljava/util/Locale;
+.super Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method constructor <init>()V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/text/method/SingleLineTransformationMethod;-><init>()V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
-
-    iput-object v0, p0, Landroid/support/v4/view/am;->b:Ljava/util/Locale;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+.method public static a(Landroid/widget/TextView;)V
     .locals 2
 
-    invoke-super {p0, p1, p2}, Landroid/text/method/SingleLineTransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    new-instance v0, Landroid/support/v4/view/an;
 
-    move-result-object v0
+    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-direct {v0, v1}, Landroid/support/v4/view/an;-><init>(Landroid/content/Context;)V
 
-    move-result-object v0
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
 
-    iget-object v1, p0, Landroid/support/v4/view/am;->b:Ljava/util/Locale;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

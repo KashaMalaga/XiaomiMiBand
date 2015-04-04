@@ -52,7 +52,7 @@
 
 .field protected mSavedRoundCountOfPB:I
 
-.field protected mSportDay:Lcn/com/smartdevices/bracelet/model/SportDay;
+.field protected mSportDay:Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
 .field protected mSportDayStartMilis:J
 
@@ -125,11 +125,11 @@
 
     iput-wide v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportDayStartMilis:J
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v1, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v1, v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportDay:Lcn/com/smartdevices/bracelet/model/SportDay;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportDay:Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -556,10 +556,10 @@
     goto :goto_1
 .end method
 
-.method public getDay()Lcn/com/smartdevices/bracelet/model/SportDay;
+.method public getDay()Lcom/xiaomi/hm/health/dataprocess/SportDay;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportDay:Lcn/com/smartdevices/bracelet/model/SportDay;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportDay:Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     return-object v0
 .end method

@@ -28,7 +28,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/model/SportDay;",
+            "Lcom/xiaomi/hm/health/dataprocess/SportDay;",
             ">;"
         }
     .end annotation
@@ -82,33 +82,33 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)Z
+.method static synthetic access$000(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcom/xiaomi/hm/health/dataprocess/SportDay;Ljava/lang/String;)Z
     .locals 1
 
-    invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->checkPostResult(Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)Z
+    invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->checkPostResult(Lcom/xiaomi/hm/health/dataprocess/SportDay;Ljava/lang/String;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$100(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)V
+.method static synthetic access$100(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcom/xiaomi/hm/health/dataprocess/SportDay;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->saveSyncedSleepData(Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->saveSyncedSleepData(Lcom/xiaomi/hm/health/dataprocess/SportDay;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;)V
+.method static synthetic access$300(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->syncData(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->syncData(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
 
     return-void
 .end method
 
-.method private checkPostResult(Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)Z
+.method private checkPostResult(Lcom/xiaomi/hm/health/dataprocess/SportDay;Ljava/lang/String;)Z
     .locals 5
 
     const/4 v0, 0x0
@@ -134,7 +134,7 @@
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->removeNeedSyncDay(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->removeNeedSyncDay(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
 
     const/4 v0, 0x1
 
@@ -142,7 +142,7 @@
 
     const-string v2, "QQ_Health_SyncData_Success"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -198,7 +198,7 @@
 
     const-string v2, "QQ_Health_SyncData_Fail"
 
-    invoke-static {v1, v2, p2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, p2}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -211,7 +211,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_0
 .end method
@@ -283,7 +283,7 @@
             "()",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/model/SportDay;",
+            "Lcom/xiaomi/hm/health/dataprocess/SportDay;",
             ">;"
         }
     .end annotation
@@ -373,7 +373,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/model/SportDay;->fromString(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v3}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->fromString(Ljava/lang/String;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     move-result-object v3
 
@@ -392,7 +392,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     :cond_1
     const-string v0, "QQ.Health"
@@ -461,7 +461,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/model/SportDay;",
+            "Lcom/xiaomi/hm/health/dataprocess/SportDay;",
             ">;)V"
         }
     .end annotation
@@ -521,9 +521,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    check-cast v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -620,7 +620,7 @@
     goto :goto_1
 .end method
 
-.method private saveSyncedSleepData(Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)V
+.method private saveSyncedSleepData(Lcom/xiaomi/hm/health/dataprocess/SportDay;Ljava/lang/String;)V
     .locals 4
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mPrefs:Landroid/content/SharedPreferences;
@@ -633,7 +633,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -682,7 +682,7 @@
     return-void
 .end method
 
-.method private syncData(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+.method private syncData(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
     .locals 5
 
     const/4 v0, 0x0
@@ -693,32 +693,32 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, p1}, Lcn/com/smartdevices/bracelet/s;->h(Lcn/com/smartdevices/bracelet/model/SportDay;)I
+    invoke-virtual {v2, p1}, Lcn/com/smartdevices/bracelet/s;->h(Lcom/xiaomi/hm/health/dataprocess/SportDay;)I
 
-    invoke-virtual {v2, p1}, Lcn/com/smartdevices/bracelet/s;->f(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
+    invoke-virtual {v2, p1}, Lcn/com/smartdevices/bracelet/s;->f(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Lcom/xiaomi/hm/health/dataprocess/DaySportData;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getStepsInfo()Lcn/com/smartdevices/bracelet/analysis/StepsInfo;
+    invoke-virtual {v3}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->getStepsInfo()Lcom/xiaomi/hm/health/dataprocess/StepsInfo;
 
     move-result-object v1
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getSleepInfo()Lcn/com/smartdevices/bracelet/analysis/SleepInfo;
+    invoke-virtual {v3}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->getSleepInfo()Lcom/xiaomi/hm/health/dataprocess/SleepInfo;
 
     move-result-object v0
 
     :goto_0
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getStepsCount()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->getStepsCount()I
 
     move-result v3
 
     if-lez v3, :cond_0
 
-    invoke-direct {p0, p1, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->wrapStepInfoToHealth(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/analysis/StepsInfo;)Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;
+    invoke-direct {p0, p1, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->wrapStepInfoToHealth(Lcom/xiaomi/hm/health/dataprocess/SportDay;Lcom/xiaomi/hm/health/dataprocess/StepsInfo;)Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;
 
     move-result-object v1
 
@@ -730,24 +730,24 @@
 
     invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->postStep(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;)V
+    invoke-virtual {p0, p1, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->postStep(Lcom/xiaomi/hm/health/dataprocess/SportDay;Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;)V
 
     :cond_0
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->getSleepCount()I
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/dataprocess/SleepInfo;->getSleepCount()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->wrapSleepInfoToHealth(Lcn/com/smartdevices/bracelet/analysis/SleepInfo;)Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->wrapSleepInfoToHealth(Lcom/xiaomi/hm/health/dataprocess/SleepInfo;)Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;
 
     move-result-object v0
 
     const/16 v1, 0x10
 
-    invoke-static {v2, p1, v1}, Lcn/com/smartdevices/bracelet/ui/Z;->a(Lcn/com/smartdevices/bracelet/f/b;Lcn/com/smartdevices/bracelet/model/SportDay;I)Lcn/com/smartdevices/bracelet/chart/k;
+    invoke-static {v2, p1, v1}, Lcn/com/smartdevices/bracelet/ui/ad;->a(Lcn/com/smartdevices/bracelet/e/b;Lcom/xiaomi/hm/health/dataprocess/SportDay;I)Lcn/com/smartdevices/bracelet/chart/j;
 
     move-result-object v1
 
@@ -755,7 +755,7 @@
 
     move-result v2
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->wrapSleepDetailInfoToHealth(ILcn/com/smartdevices/bracelet/chart/k;)Ljava/util/ArrayList;
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->wrapSleepDetailInfoToHealth(ILcn/com/smartdevices/bracelet/chart/j;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -769,25 +769,25 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->postSleep(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;)V
+    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->postSleep(Lcom/xiaomi/hm/health/dataprocess/SportDay;Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;)V
 
     :cond_1
     return-void
 
     :cond_2
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->removeNeedSyncDay(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->removeNeedSyncDay(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
 
     move-object v1, v0
 
     goto :goto_0
 .end method
 
-.method public static wrapSleepDetailInfoToHealth(ILcn/com/smartdevices/bracelet/chart/k;)Ljava/util/ArrayList;
+.method public static wrapSleepDetailInfoToHealth(ILcn/com/smartdevices/bracelet/chart/j;)Ljava/util/ArrayList;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcn/com/smartdevices/bracelet/chart/k;",
+            "Lcn/com/smartdevices/bracelet/chart/j;",
             ")",
             "Ljava/util/ArrayList",
             "<",
@@ -804,7 +804,7 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p1, Lcn/com/smartdevices/bracelet/chart/k;->c:Ljava/util/List;
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/chart/j;->c:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -826,11 +826,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/m;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/l;
 
     if-eq v2, v3, :cond_1
 
-    iget-object v6, p1, Lcn/com/smartdevices/bracelet/chart/k;->c:Ljava/util/List;
+    iget-object v6, p1, Lcn/com/smartdevices/bracelet/chart/j;->c:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->size()I
 
@@ -839,7 +839,7 @@
     if-ne v2, v6, :cond_2
 
     :cond_1
-    iget v6, v0, Lcn/com/smartdevices/bracelet/chart/m;->e:I
+    iget v6, v0, Lcn/com/smartdevices/bracelet/chart/l;->e:I
 
     if-eq v6, v3, :cond_0
 
@@ -854,11 +854,11 @@
 
     invoke-virtual {v6, v7}, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep$SleepDetail;->setTime(I)V
 
-    iget v7, v0, Lcn/com/smartdevices/bracelet/chart/m;->g:I
+    iget v7, v0, Lcn/com/smartdevices/bracelet/chart/l;->g:I
 
     add-int/2addr v1, v7
 
-    iget v0, v0, Lcn/com/smartdevices/bracelet/chart/m;->e:I
+    iget v0, v0, Lcn/com/smartdevices/bracelet/chart/l;->e:I
 
     packed-switch v0, :pswitch_data_0
 
@@ -902,7 +902,7 @@
     .end packed-switch
 .end method
 
-.method private wrapSleepInfoToHealth(Lcn/com/smartdevices/bracelet/analysis/SleepInfo;)Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;
+.method private wrapSleepInfoToHealth(Lcom/xiaomi/hm/health/dataprocess/SleepInfo;)Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;
     .locals 7
 
     new-instance v0, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;
@@ -910,11 +910,11 @@
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;-><init>()V
 
     :try_start_0
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->getStartDate()Ljava/util/Date;
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/SleepInfo;->getStartDate()Ljava/util/Date;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->getStopDate()Ljava/util/Date;
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/SleepInfo;->getStopDate()Ljava/util/Date;
 
     move-result-object v2
 
@@ -942,25 +942,25 @@
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;->setEndTime(I)V
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->getSleepCount()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/SleepInfo;->getSleepCount()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;->setTotalTime(I)V
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->getNonRemCount()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/SleepInfo;->getNonRemCount()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;->setDeepTime(I)V
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->getRemCount()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/SleepInfo;->getRemCount()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;->setLightTime(I)V
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->getAwakeCount()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/SleepInfo;->getAwakeCount()I
 
     move-result v1
 
@@ -986,12 +986,12 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_0
 .end method
 
-.method private wrapStepInfoToHealth(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/analysis/StepsInfo;)Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;
+.method private wrapStepInfoToHealth(Lcom/xiaomi/hm/health/dataprocess/SportDay;Lcom/xiaomi/hm/health/dataprocess/StepsInfo;)Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;
     .locals 5
 
     new-instance v0, Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;
@@ -1003,7 +1003,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Ljava/util/Calendar;)Z
+    invoke-virtual {p1, v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->equals(Ljava/util/Calendar;)Z
 
     move-result v1
 
@@ -1022,25 +1022,25 @@
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;->setTime(I)V
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getStepsCount()I
+    invoke-virtual {p2}, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->getStepsCount()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;->setSteps(I)V
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getDistance()I
+    invoke-virtual {p2}, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->getDistance()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;->setDistance(I)V
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getCalories()I
+    invoke-virtual {p2}, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->getCalories()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;->setCalories(I)V
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getActMinutes()I
+    invoke-virtual {p2}, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->getActMinutes()I
 
     move-result v1
 
@@ -1056,7 +1056,7 @@
 
     move-result v1
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getStepsCount()I
+    invoke-virtual {p2}, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->getStepsCount()I
 
     move-result v2
 
@@ -1072,7 +1072,7 @@
     return-object v0
 
     :cond_0
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->getCalendar()Ljava/util/Calendar;
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getCalendar()Ljava/util/Calendar;
 
     move-result-object v1
 
@@ -1113,14 +1113,14 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_1
 .end method
 
 
 # virtual methods
-.method public addNeedSyncDay(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+.method public addNeedSyncDay(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
     .locals 3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mNeedSyncDays:Ljava/util/List;
@@ -1140,9 +1140,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    check-cast v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
+    invoke-virtual {p1, v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->equals(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Z
 
     move-result v0
 
@@ -1194,7 +1194,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/model/SportDay;",
+            "Lcom/xiaomi/hm/health/dataprocess/SportDay;",
             ">;)V"
         }
     .end annotation
@@ -1214,7 +1214,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    check-cast v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mNeedSyncDays:Ljava/util/List;
 
@@ -1233,9 +1233,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcn/com/smartdevices/bracelet/model/SportDay;
+    check-cast v1, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->equals(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Z
 
     move-result v1
 
@@ -1358,7 +1358,7 @@
     goto :goto_0
 .end method
 
-.method public postSleep(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;)V
+.method public postSleep(Lcom/xiaomi/hm/health/dataprocess/SportDay;Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;)V
     .locals 6
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mQQLogin:Lcn/com/smartdevices/bracelet/tencent/QQLogin;
@@ -1410,7 +1410,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1513,20 +1513,20 @@
 
     const-string v4, "QQ_Health_SyncData"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     sget-object v3, Lcn/com/smartdevices/bracelet/k/a;->b:Lcom/d/a/a/X;
 
     new-instance v4, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$2;
 
-    invoke-direct {v4, p0, p1, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$2;-><init>(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)V
+    invoke-direct {v4, p0, p1, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$2;-><init>(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcom/xiaomi/hm/health/dataprocess/SportDay;Ljava/lang/String;)V
 
     invoke-virtual {v3, v0, v2, v4}, Lcom/d/a/a/X;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
 
     goto/16 :goto_0
 .end method
 
-.method public postStep(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;)V
+.method public postStep(Lcom/xiaomi/hm/health/dataprocess/SportDay;Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;)V
     .locals 5
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mQQLogin:Lcn/com/smartdevices/bracelet/tencent/QQLogin;
@@ -1606,20 +1606,20 @@
 
     const-string v3, "QQ_Health_SyncData"
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     sget-object v1, Lcn/com/smartdevices/bracelet/k/a;->b:Lcom/d/a/a/X;
 
     new-instance v3, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;
 
-    invoke-direct {v3, p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;-><init>(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;)V
+    invoke-direct {v3, p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;-><init>(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/d/a/a/X;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
 
     goto :goto_0
 .end method
 
-.method public removeNeedSyncDay(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+.method public removeNeedSyncDay(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
     .locals 3
 
     const/4 v1, 0x0
@@ -1641,9 +1641,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    check-cast v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
+    invoke-virtual {p1, v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->equals(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Z
 
     move-result v0
 
@@ -1701,7 +1701,7 @@
     return-void
 .end method
 
-.method public syncDataAsync(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+.method public syncDataAsync(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
     .locals 3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mQQLogin:Lcn/com/smartdevices/bracelet/tencent/QQLogin;
@@ -1735,7 +1735,7 @@
 
     const/4 v1, 0x1
 
-    new-array v1, v1, [Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-array v1, v1, [Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     const/4 v2, 0x0
 
@@ -1753,7 +1753,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/model/SportDay;",
+            "Lcom/xiaomi/hm/health/dataprocess/SportDay;",
             ">;)V"
         }
     .end annotation
@@ -1794,7 +1794,7 @@
 
     move-result v0
 
-    new-array v2, v0, [Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-array v2, v0, [Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     const/4 v0, 0x0
 
@@ -1811,7 +1811,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    check-cast v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     aput-object v0, v2, v1
 

@@ -42,7 +42,7 @@
 
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lcom/xiaomi/hm/a/t;->SlideMenu_Layout:[I
+    sget-object v0, Lcom/xiaomi/hm/health/t;->SlideMenu_Layout:[I
 
     invoke-virtual {p1, p2, v0, v1, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

@@ -42,7 +42,7 @@
     const/4 v3, 0x0
 
     :try_start_0
-    invoke-static/range {p1 .. p1}, Lcn/com/smartdevices/bracelet/d/b;->a(I)Lcn/com/smartdevices/bracelet/d/a;
+    invoke-static/range {p1 .. p1}, Lcn/com/smartdevices/bracelet/c/b;->a(I)Lcn/com/smartdevices/bracelet/c/a;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -79,13 +79,13 @@
 
     if-eqz p2, :cond_10
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/lab/ui/A;
+    new-instance v3, Lcn/com/smartdevices/bracelet/lab/ui/m;
 
     move-object/from16 v0, p0
 
     move/from16 v1, p1
 
-    invoke-direct {v3, v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/A;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v3, v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/m;-><init>(Landroid/content/Context;I)V
 
     move-object/from16 v27, v3
 
@@ -421,6 +421,8 @@
     const/4 v5, 0x0
 
     :goto_9
+    float-to-int v5, v5
+
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v5}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setCalOfDay(I)V
@@ -503,7 +505,11 @@
     const/4 v3, 0x0
 
     :goto_b
-    if-gtz v3, :cond_7
+    const/16 v19, 0x0
+
+    cmpg-float v19, v3, v19
+
+    if-gtz v19, :cond_7
 
     move-object/from16 v19, v4
 
@@ -525,7 +531,7 @@
     :try_start_6
     move-wide/from16 v0, v19
 
-    invoke-interface {v5, v9, v0, v1}, Lcn/com/smartdevices/bracelet/d/c;->b(IJ)I
+    invoke-interface {v5, v9, v0, v1}, Lcn/com/smartdevices/bracelet/c/c;->a(IJ)F
 
     move-result v3
 
@@ -566,6 +572,8 @@
 
     invoke-virtual {v0, v10}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setStop(I)V
 
+    float-to-int v3, v3
+
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setCalories(I)V
@@ -574,7 +582,7 @@
 
     move-object/from16 v0, v27
 
-    invoke-virtual {v0, v9, v10, v11}, Lcn/com/smartdevices/bracelet/lab/ui/A;->a(IJ)Ljava/lang/String;
+    invoke-virtual {v0, v9, v10, v11}, Lcn/com/smartdevices/bracelet/lab/ui/m;->a(IJ)Ljava/lang/String;
 
     move-result-object v3
 
@@ -584,7 +592,7 @@
 
     move-object/from16 v2, v30
 
-    invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/lab/ui/A;->a(ILjava/util/List;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/ShareData;
+    invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/lab/ui/m;->a(ILjava/util/List;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/ShareData;
 
     move-result-object v3
 
@@ -727,7 +735,7 @@
     goto/16 :goto_8
 
     :cond_e
-    invoke-interface {v5, v11, v6, v7}, Lcn/com/smartdevices/bracelet/d/c;->b(IJ)I
+    invoke-interface {v5, v11, v6, v7}, Lcn/com/smartdevices/bracelet/c/c;->a(IJ)F
 
     move-result v5
 
@@ -802,7 +810,7 @@
 .method private static a(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 22
 
-    invoke-static/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/db/v;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/v;
+    invoke-static/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
 
     move-result-object v1
 
@@ -814,7 +822,7 @@
 
     move-object/from16 v0, p2
 
-    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/db/v;->c(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/f/x;->c(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
 
     move-result-object v1
 
@@ -1110,7 +1118,7 @@
 .method private static a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;Ljava/lang/String;I)Lorg/json/JSONObject;
     .locals 3
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/v;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/v;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
 
     move-result-object v0
 
@@ -1118,7 +1126,7 @@
 
     invoke-direct {v1, p3}, Lcn/com/smartdevices/bracelet/w;-><init>(I)V
 
-    invoke-virtual {v0, p2, v1}, Lcn/com/smartdevices/bracelet/db/v;->b(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
+    invoke-virtual {v0, p2, v1}, Lcn/com/smartdevices/bracelet/f/x;->b(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
 
     move-result-object v1
 
@@ -1253,6 +1261,8 @@
 
     const/4 v6, 0x0
 
+    const/4 v0, 0x0
+
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -1267,74 +1277,68 @@
     throw v0
 
     :cond_1
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getDay()Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getDay()Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getSportType()I
 
-    move-result v1
+    move-result v2
 
-    invoke-static {p0, p1, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sync/g;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;Ljava/lang/String;I)Lorg/json/JSONObject;
+    invoke-static {p0, p1, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sync/g;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;Ljava/lang/String;I)Lorg/json/JSONObject;
 
     move-result-object v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_3
 
-    move v0, v6
-
+    :cond_2
     :goto_0
     return v0
 
-    :cond_2
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getDay()Lcn/com/smartdevices/bracelet/model/SportDay;
+    :cond_3
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getDay()Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
 
-    move-result-object v0
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getSportType()I
-
-    move-result v1
-
-    invoke-static {p0, p1, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sync/g;->b(Landroid/content/Context;Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    move-result-object v0
+    move-result-object v1
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getSportType()I
 
-    move-result v1
+    move-result v3
 
-    invoke-static {p0, v1, v6, v2, v0}, Lcn/com/smartdevices/bracelet/lab/sync/g;->a(Landroid/content/Context;IZLorg/json/JSONObject;Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;
+    invoke-static {p0, p1, v1, v3}, Lcn/com/smartdevices/bracelet/lab/sync/g;->b(Landroid/content/Context;Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getSportType()I
+
+    move-result v3
+
+    invoke-static {p0, v3, v0, v2, v1}, Lcn/com/smartdevices/bracelet/lab/sync/g;->a(Landroid/content/Context;IZLorg/json/JSONObject;Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;
 
     move-result-object v7
 
-    if-nez v7, :cond_3
+    if-eqz v7, :cond_2
 
-    move v0, v6
-
-    goto :goto_0
-
-    :cond_3
     invoke-virtual {v7}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->getSummeryJson()Lorg/json/JSONObject;
 
     move-result-object v3
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/v;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/v;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getDay()Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getDay()Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1360,14 +1364,14 @@
 
     invoke-direct {v5, v8}, Lcn/com/smartdevices/bracelet/w;-><init>(I)V
 
-    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/db/v;->a(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)Z
+    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/f/x;->a(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)Z
 
     :try_start_0
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getSportType()I
 
     move-result v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/b;->a(I)Lcn/com/smartdevices/bracelet/d/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/b;->a(I)Lcn/com/smartdevices/bracelet/c/a;
 
     move-result-object v0
 
@@ -1381,62 +1385,66 @@
 
     int-to-long v2, v2
 
-    invoke-interface {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/d/c;->b(IJ)I
+    invoke-interface {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/c/c;->a(IJ)F
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result v6
+    move-result v0
 
     :goto_1
-    if-lez v6, :cond_4
+    cmpl-float v1, v0, v6
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;
+    if-lez v1, :cond_4
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;
 
     invoke-virtual {v7}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->getSportType()I
 
-    move-result v1
+    move-result v2
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;-><init>(I)V
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;-><init>(I)V
 
-    invoke-virtual {v0, v6}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setCalories(I)V
+    float-to-int v0, v0
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setCalories(I)V
 
     invoke-virtual {v7}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->getCountOfLatestGroup()I
 
-    move-result v1
+    move-result v0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setCount(I)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setCount(I)V
 
     invoke-virtual {v7}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->getStartTimeOfLatestGroup()I
 
-    move-result v1
+    move-result v0
 
-    int-to-long v1, v1
+    int-to-long v2, v0
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/lab/b/f;->b(J)I
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/lab/b/f;->b(J)I
 
-    move-result v1
+    move-result v0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setStart(I)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setStart(I)V
 
     invoke-virtual {v7}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->getEndTimeOfLatestGroup()I
 
-    move-result v1
+    move-result v0
 
-    int-to-long v1, v1
+    int-to-long v2, v0
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/lab/b/f;->b(J)I
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/lab/b/f;->b(J)I
 
-    move-result v1
+    move-result v0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setStop(I)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setStop(I)V
 
-    invoke-virtual {v0, p2}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setShareData(Lcn/com/smartdevices/bracelet/model/ShareData;)V
+    invoke-virtual {v1, p2}, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->setShareData(Lcn/com/smartdevices/bracelet/model/ShareData;)V
 
     invoke-static {}, Lcom/xiaomi/hm/bleservice/v;->a()Lcom/xiaomi/hm/bleservice/v;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1, p0, v0}, Lcom/xiaomi/hm/bleservice/v;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;)V
+    invoke-virtual {v0, p0, v1}, Lcom/xiaomi/hm/bleservice/v;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;)V
 
     :cond_4
     const/4 v0, 0x1
@@ -1453,6 +1461,8 @@
     move-result-object v0
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    move v0, v6
 
     goto :goto_1
 .end method
@@ -1625,15 +1635,15 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v0, v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1736,7 +1746,7 @@
 
     if-nez v7, :cond_3
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/v;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/v;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
 
     move-result-object v0
 
@@ -1744,7 +1754,7 @@
 
     invoke-direct {v3, p2}, Lcn/com/smartdevices/bracelet/w;-><init>(I)V
 
-    invoke-virtual {v0, v8, p3, v3}, Lcn/com/smartdevices/bracelet/db/v;->a(Lcn/com/smartdevices/bracelet/model/UploadData;ILcn/com/smartdevices/bracelet/w;)Z
+    invoke-virtual {v0, v8, p3, v3}, Lcn/com/smartdevices/bracelet/f/x;->a(Lcn/com/smartdevices/bracelet/model/UploadData;ILcn/com/smartdevices/bracelet/w;)Z
 
     move-result v0
 
@@ -1755,7 +1765,7 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/v;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/v;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
 
     move-result-object v0
 
@@ -1765,7 +1775,7 @@
 
     invoke-direct {v7, p2}, Lcn/com/smartdevices/bracelet/w;-><init>(I)V
 
-    invoke-virtual {v0, v3, v7}, Lcn/com/smartdevices/bracelet/db/v;->b(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
+    invoke-virtual {v0, v3, v7}, Lcn/com/smartdevices/bracelet/f/x;->b(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
 
     move-result-object v0
 
@@ -1872,7 +1882,7 @@
 
     invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/v;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/v;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
 
     move-result-object v0
 
@@ -1880,7 +1890,7 @@
 
     invoke-direct {v3, p2}, Lcn/com/smartdevices/bracelet/w;-><init>(I)V
 
-    invoke-virtual {v0, v8, p3, v3}, Lcn/com/smartdevices/bracelet/db/v;->a(Lcn/com/smartdevices/bracelet/model/UploadData;ILcn/com/smartdevices/bracelet/w;)Z
+    invoke-virtual {v0, v8, p3, v3}, Lcn/com/smartdevices/bracelet/f/x;->a(Lcn/com/smartdevices/bracelet/model/UploadData;ILcn/com/smartdevices/bracelet/w;)Z
 
     move-result v0
 
@@ -1903,7 +1913,7 @@
 
     iput-object v0, v8, Lcn/com/smartdevices/bracelet/model/UploadData;->summary:Ljava/lang/String;
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/v;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/v;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
 
     move-result-object v0
 
@@ -1911,7 +1921,7 @@
 
     invoke-direct {v3, p2}, Lcn/com/smartdevices/bracelet/w;-><init>(I)V
 
-    invoke-virtual {v0, v8, p3, v3}, Lcn/com/smartdevices/bracelet/db/v;->a(Lcn/com/smartdevices/bracelet/model/UploadData;ILcn/com/smartdevices/bracelet/w;)Z
+    invoke-virtual {v0, v8, p3, v3}, Lcn/com/smartdevices/bracelet/f/x;->a(Lcn/com/smartdevices/bracelet/model/UploadData;ILcn/com/smartdevices/bracelet/w;)Z
 
     move-result v0
 

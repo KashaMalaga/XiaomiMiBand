@@ -28,7 +28,7 @@
 
 .field private mContext:Landroid/content/Context;
 
-.field private mServiceManager:Lcn/com/smartdevices/bracelet/partner/d;
+.field private mServiceManager:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
 .field private newItemCount:I
 
@@ -93,11 +93,11 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->isFirstTimeBoolean:Ljava/lang/Boolean;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/partner/d;
+    new-instance v0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
-    invoke-direct {v0, p1}, Lcn/com/smartdevices/bracelet/partner/d;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mServiceManager:Lcn/com/smartdevices/bracelet/partner/d;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mServiceManager:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
     invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->getNewList(Ljava/util/List;)V
 
@@ -223,7 +223,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f04000c
+    const v1, 0x7f040014
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -242,10 +242,10 @@
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Lcn/com/smartdevices/bracelet/partner/d;
+.method static synthetic access$100(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mServiceManager:Lcn/com/smartdevices/bracelet/partner/d;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mServiceManager:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
     return-object v0
 .end method
@@ -592,7 +592,7 @@
 
     const/4 v3, 0x0
 
-    const v10, 0x7f0702e3
+    const v10, 0x7f070333
 
     const/16 v9, 0x8
 
@@ -612,13 +612,13 @@
 
     move-result-object v0
 
-    const v2, 0x7f0300a0
+    const v2, 0x7f0300b4
 
     invoke-virtual {v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    const v0, 0x7f0702e4
+    const v0, 0x7f070334
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -628,7 +628,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/e;->a:Landroid/widget/TextView;
 
-    const v0, 0x7f0702e5
+    const v0, 0x7f070335
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -638,7 +638,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/e;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0702e2
+    const v0, 0x7f070332
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -648,7 +648,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/e;->c:Landroid/widget/ImageView;
 
-    const v0, 0x7f0700a9
+    const v0, 0x7f0700ef
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -660,7 +660,7 @@
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/t;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/u;->a()Z
 
     move-result v0
 
@@ -674,9 +674,11 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    const/high16 v2, 0x40800000
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(F)F
+    const/high16 v4, 0x40800000
+
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(Landroid/content/Context;F)F
 
     move-result v2
 
@@ -763,7 +765,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f090010
+    const v6, 0x7f0a0001
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -990,7 +992,7 @@
 
     move-result-object v3
 
-    const v6, 0x7f0a0038
+    const v6, 0x7f08000d
 
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getDimension(I)F
 

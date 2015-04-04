@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="22.0sp" android:textColor="#ccffffff" android:id="@id/float_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
-    <View android:background="#33ffffff" android:layout_width="1.0dip" android:layout_height="16.5dip" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" />
-    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="22.0sp" android:textColor="#ccffffff" android:id="@id/float_step" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#80ffffff" android:id="@id/info_step_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-2.0dip" android:text="@string/unit_step" />
+    <TextView android:textSize="@dimen/float_info_time_size" android:textColor="#ccffffff" android:gravity="center" android:id="@id/float_time" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="--" android:layout_weight="1.0" android:fontFamily="miui" />
+    <View android:background="#33ffffff" android:layout_width="1.0dip" android:layout_height="16.5dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/float_info_time_size" android:textColor="#ccffffff" android:id="@id/float_step" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
+        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#80ffffff" android:id="@id/info_step_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="@dimen/sub_txt_margin_top" android:text="@string/unit_step" />
     </LinearLayout>
-    <View android:background="#33ffffff" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="16.5dip" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" />
-    <LinearLayout android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="22.0sp" android:textColor="#ccffffff" android:id="@id/float_step_time_hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#80ffffff" android:id="@id/info_step_time_unit_hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-1.5dip" android:layout_marginRight="2.0dip" android:text="@string/unit_hour" />
-        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="22.0sp" android:textColor="#ccffffff" android:id="@id/float_step_time_min" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#80ffffff" android:id="@id/info_step_time_unit_min" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-1.5dip" android:text="@string/unit_min" />
+    <View android:background="#33ffffff" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="16.5dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+    <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+        <TextView android:textSize="@dimen/float_info_time_size" android:textColor="#ccffffff" android:id="@id/float_step_time_hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
+        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#80ffffff" android:id="@id/info_step_time_unit_hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="@dimen/sub_txt_margin_top" android:layout_marginRight="2.0dip" android:text="@string/unit_hour" />
+        <TextView android:textSize="@dimen/float_info_time_size" android:textColor="#ccffffff" android:id="@id/float_step_time_min" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
+        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#80ffffff" android:id="@id/info_step_time_unit_min" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="@dimen/sub_txt_margin_top" android:text="@string/unit_min" />
     </LinearLayout>
-    <View android:background="#33ffffff" android:layout_width="1.0dip" android:layout_height="16.5dip" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" />
-    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="22.0sp" android:textColor="#ccffffff" android:id="@id/float_step_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#80ffffff" android:id="@id/info_step_distance_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-1.5dip" android:text="@string/unit_meter" />
+    <View android:background="#33ffffff" android:layout_width="1.0dip" android:layout_height="16.5dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/float_info_time_size" android:textColor="#ccffffff" android:id="@id/float_step_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
+        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#80ffffff" android:id="@id/info_step_distance_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="@dimen/sub_txt_margin_top" android:text="@string/unit_meter" />
     </LinearLayout>
 </LinearLayout>

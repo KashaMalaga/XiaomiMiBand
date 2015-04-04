@@ -34,7 +34,7 @@
 
     move-result v0
 
-    shl-int/lit8 v0, v0, 0x1
+    mul-int/lit8 v0, v0, 0x2
 
     add-int/lit8 v1, v0, -0x1
 

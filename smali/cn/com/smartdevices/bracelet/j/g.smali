@@ -101,7 +101,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/j/g;->a:Lcn/com/smartdevices/bracelet/j/a;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/f/c;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/e/c;
 
     move-result-object v0
 
@@ -109,7 +109,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/j/g;->a:Lcn/com/smartdevices/bracelet/j/a;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/f/c;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/e/c;
 
     move-result-object v0
 
@@ -119,7 +119,7 @@
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/f/c;->a(I)V
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/e/c;->a(I)V
 
     :cond_0
     return-void

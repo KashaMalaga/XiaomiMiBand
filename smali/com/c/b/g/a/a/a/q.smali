@@ -14,84 +14,32 @@
 
 # direct methods
 .method constructor <init>(III)V
-    .locals 3
+    .locals 1
 
-    const/16 v1, 0xa
+    const/16 v0, 0xa
 
     invoke-direct {p0, p1}, Lcom/c/b/g/a/a/a/r;-><init>(I)V
 
-    iput p2, p0, Lcom/c/b/g/a/a/a/q;->b:I
+    if-ltz p2, :cond_0
 
-    iput p3, p0, Lcom/c/b/g/a/a/a/q;->c:I
+    if-gt p2, v0, :cond_0
 
-    iget v0, p0, Lcom/c/b/g/a/a/a/q;->b:I
+    if-ltz p3, :cond_0
 
-    if-ltz v0, :cond_0
-
-    iget v0, p0, Lcom/c/b/g/a/a/a/q;->b:I
-
-    if-le v0, v1, :cond_1
+    if-le p3, v0, :cond_1
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Invalid firstDigit: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     throw v0
 
     :cond_1
-    iget v0, p0, Lcom/c/b/g/a/a/a/q;->c:I
+    iput p2, p0, Lcom/c/b/g/a/a/a/q;->b:I
 
-    if-ltz v0, :cond_2
+    iput p3, p0, Lcom/c/b/g/a/a/a/q;->c:I
 
-    iget v0, p0, Lcom/c/b/g/a/a/a/q;->c:I
-
-    if-le v0, v1, :cond_3
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Invalid secondDigit: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3
     return-void
 .end method
 

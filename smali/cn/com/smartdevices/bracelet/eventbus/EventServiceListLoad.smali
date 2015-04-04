@@ -14,7 +14,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/partner/c;",
+            "Lcn/com/smartdevices/bracelet/partner/Partner;",
             ">;"
         }
     .end annotation

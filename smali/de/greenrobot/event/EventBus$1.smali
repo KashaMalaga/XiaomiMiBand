@@ -7,10 +7,8 @@
     value = {
         "Ljava/lang/ThreadLocal",
         "<",
-        "Ljava/util/List",
-        "<",
-        "Ljava/lang/Object;",
-        ">;>;"
+        "Lde/greenrobot/event/EventBus$PostingThreadState;",
+        ">;"
     }
 .end annotation
 
@@ -32,31 +30,22 @@
 
 
 # virtual methods
-.method protected bridge synthetic initialValue()Ljava/lang/Object;
+.method protected initialValue()Lde/greenrobot/event/EventBus$PostingThreadState;
     .locals 1
 
-    invoke-virtual {p0}, Lde/greenrobot/event/EventBus$1;->initialValue()Ljava/util/List;
+    new-instance v0, Lde/greenrobot/event/EventBus$PostingThreadState;
 
-    move-result-object v0
+    invoke-direct {v0}, Lde/greenrobot/event/EventBus$PostingThreadState;-><init>()V
 
     return-object v0
 .end method
 
-.method protected initialValue()Ljava/util/List;
+.method protected bridge synthetic initialValue()Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-virtual {p0}, Lde/greenrobot/event/EventBus$1;->initialValue()Lde/greenrobot/event/EventBus$PostingThreadState;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    move-result-object v0
 
     return-object v0
 .end method

@@ -3,15 +3,15 @@
 
 
 # static fields
-.field public static final aspectRatioX:I = 0x7f010002
+.field public static final aspectRatioX:I = 0x7f010015
 
-.field public static final aspectRatioY:I = 0x7f010003
+.field public static final aspectRatioY:I = 0x7f010016
 
-.field public static final fixAspectRatio:I = 0x7f010001
+.field public static final fixAspectRatio:I = 0x7f010014
 
-.field public static final guidelines:I = 0x7f010000
+.field public static final guidelines:I = 0x7f010013
 
-.field public static final imageResource:I = 0x7f010004
+.field public static final imageResource:I = 0x7f010017
 
 
 # direct methods

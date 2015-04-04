@@ -1,383 +1,177 @@
-.class public Lcn/com/smartdevices/bracelet/ui/aq;
-.super Landroid/app/Fragment;
+.class Lcn/com/smartdevices/bracelet/ui/aq;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v4/view/bz;
 
 
 # instance fields
-.field private a:Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-.field private b:Lcn/com/smartdevices/bracelet/chart/c/r;
-
-.field private c:I
-
-.field private d:Lcn/com/smartdevices/bracelet/ui/widget/c;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ap;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ap;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/aq;)I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->c:I
-
-    return v0
-.end method
-
-.method private a(Lcn/com/smartdevices/bracelet/view/DynamicView;Lcn/com/smartdevices/bracelet/chart/c/r;)V
-    .locals 3
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->c:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->J()Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getDaySportGoalSteps()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(I)V
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->c()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->b(I)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aq;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->d()I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/chart/c/q;->c(Landroid/content/Context;I)[Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a([Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->e()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->c(I)V
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->f()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Ljava/lang/String;)V
-
-    :cond_0
-    :goto_0
-    const-string v0, "DynamicFragment"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "BindData : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " , Mode : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/ui/aq;->c:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->c:I
-
-    const/16 v1, 0x10
-
-    if-ne v0, v1, :cond_2
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->g()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->d(I)V
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->h()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->e(I)V
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->k()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->b(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->c:I
-
-    const/16 v1, 0x100
-
-    if-ne v0, v1, :cond_0
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->m()F
-
-    move-result v0
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->n()F
-
-    move-result v1
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->o()F
-
-    move-result v2
-
-    invoke-virtual {p1, v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(FFF)V
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->p()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->c(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->q()F
-
-    move-result v0
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->t()I
-
-    move-result v1
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->u()I
-
-    move-result v2
-
-    invoke-virtual {p1, v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(FII)V
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->r()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->d(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->b()Lcn/com/smartdevices/bracelet/weight/k;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/weight/k;)V
-
-    goto :goto_0
-.end method
-
-.method static synthetic b(Lcn/com/smartdevices/bracelet/ui/aq;)Lcn/com/smartdevices/bracelet/view/DynamicView;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public a(F)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(F)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
+.method public a(I)V
     .locals 2
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aq;->d:Lcn/com/smartdevices/bracelet/ui/widget/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ap;->a(Lcn/com/smartdevices/bracelet/ui/ap;)I
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aq;->d:Lcn/com/smartdevices/bracelet/ui/widget/c;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
+    :goto_0
+    return-void
 
     :cond_0
-    return-void
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ap;->b(Lcn/com/smartdevices/bracelet/ui/ap;)Lcn/com/smartdevices/bracelet/ui/av;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/av;->a(I)Landroid/app/Fragment;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/aw;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aw;->a(Lcn/com/smartdevices/bracelet/ui/aw;)I
+
+    move-result v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/ap;->a(Lcn/com/smartdevices/bracelet/ui/ap;I)V
+
+    goto :goto_0
 .end method
 
-.method public a(Ljava/lang/Boolean;)V
-    .locals 1
+.method public a(IFI)V
+    .locals 4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    const/4 v3, 0x1
 
-    if-eqz v0, :cond_0
+    const/high16 v2, 0x3f800000
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Ljava/lang/Boolean;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
 
-    :cond_0
-    return-void
-.end method
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ap;->c(Lcn/com/smartdevices/bracelet/ui/ap;)Landroid/animation/ValueAnimator;
 
-.method public a(Z)V
-    .locals 2
+    move-result-object v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    if-eqz v0, :cond_3
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ap;->d(Lcn/com/smartdevices/bracelet/ui/ap;)Landroid/animation/ValueAnimator;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aq;->b:Lcn/com/smartdevices/bracelet/chart/c/r;
+    move-result-object v0
 
-    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/aq;->a(Lcn/com/smartdevices/bracelet/view/DynamicView;Lcn/com/smartdevices/bracelet/chart/c/r;)V
+    if-eqz v0, :cond_3
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->c:I
+    if-nez p1, :cond_1
 
-    const/16 v1, 0x100
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
 
-    if-ne v0, v1, :cond_1
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ap;->c(Lcn/com/smartdevices/bracelet/ui/ap;)Landroid/animation/ValueAnimator;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    move-result-object v0
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->b(Z)V
+    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    if-ne p1, v3, :cond_2
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->b(Z)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ap;->d(Lcn/com/smartdevices/bracelet/ui/ap;)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
 
     goto :goto_0
-.end method
 
-.method public onActivityCreated(Landroid/os/Bundle;)V
-    .locals 2
+    :cond_2
+    const/4 v0, 0x2
 
-    invoke-super {p0, p1}, Landroid/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
+    if-ne p1, v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    cmpl-float v0, p2, v1
 
-    const/4 v1, 0x1
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->b(Z)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
 
-    return-void
-.end method
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ap;->d(Lcn/com/smartdevices/bracelet/ui/ap;)Landroid/animation/ValueAnimator;
 
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
+    move-result-object v0
 
-    invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aq;->getArguments()Landroid/os/Bundle;
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ap;->c(Lcn/com/smartdevices/bracelet/ui/ap;)Landroid/animation/ValueAnimator;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    const-string v1, "Mode"
+    if-nez p1, :cond_4
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
 
-    move-result v0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ap;->c(Lcn/com/smartdevices/bracelet/ui/ap;)Landroid/animation/ValueAnimator;
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->c:I
+    move-result-object v0
 
-    :cond_0
-    return-void
+    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
+
+    goto :goto_0
+
+    :cond_4
+    if-ne p1, v3, :cond_0
+
+    cmpl-float v0, p2, v1
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/ap;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ap;->c(Lcn/com/smartdevices/bracelet/ui/ap;)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
+
+    goto :goto_0
 .end method
 
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 3
+.method public b(I)V
+    .locals 0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aq;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;-><init>(Landroid/content/Context;)V
-
-    move-object v0, v1
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/ui/aq;->c:I
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->f(I)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/q;->a()Lcn/com/smartdevices/bracelet/chart/c/r;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->b:Lcn/com/smartdevices/bracelet/chart/c/r;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aq;->b:Lcn/com/smartdevices/bracelet/chart/c/r;
-
-    invoke-direct {p0, v0, v2}, Lcn/com/smartdevices/bracelet/ui/aq;->a(Lcn/com/smartdevices/bracelet/view/DynamicView;Lcn/com/smartdevices/bracelet/chart/c/r;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aq;->d:Lcn/com/smartdevices/bracelet/ui/widget/c;
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
-
-    return-object v1
+    return-void
 .end method

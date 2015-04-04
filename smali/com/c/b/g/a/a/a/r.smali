@@ -19,7 +19,7 @@
 
 
 # virtual methods
-.method g()I
+.method final g()I
     .locals 1
 
     iget v0, p0, Lcom/c/b/g/a/a/a/r;->a:I

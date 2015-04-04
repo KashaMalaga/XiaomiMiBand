@@ -1,12 +1,57 @@
 .class public final Lcom/c/b/g/n;
-.super Lcom/c/b/g/w;
+.super Lcom/c/b/g/r;
+
+
+# static fields
+.field private static final a:[I
+
+.field private static final b:[I
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x4
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lcom/c/b/g/n;->a:[I
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lcom/c/b/g/n;->b:[I
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x1
+        0x1
+        0x1
+        0x1
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3
+        0x1
+        0x1
+    .end array-data
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/c/b/g/w;-><init>()V
+    invoke-direct {p0}, Lcom/c/b/g/r;-><init>()V
 
     return-void
 .end method
@@ -23,7 +68,7 @@
             "II",
             "Ljava/util/Map",
             "<",
-            "Lcom/c/b/f;",
+            "Lcom/c/b/g;",
             "*>;)",
             "Lcom/c/b/c/b;"
         }
@@ -58,14 +103,14 @@
     throw v0
 
     :cond_0
-    invoke-super/range {p0 .. p5}, Lcom/c/b/g/w;->a(Ljava/lang/String;Lcom/c/b/a;IILjava/util/Map;)Lcom/c/b/c/b;
+    invoke-super/range {p0 .. p5}, Lcom/c/b/g/r;->a(Ljava/lang/String;Lcom/c/b/a;IILjava/util/Map;)Lcom/c/b/c/b;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public a(Ljava/lang/String;)[B
+.method public a(Ljava/lang/String;)[Z
     .locals 13
 
     const/16 v12, 0xa
@@ -124,15 +169,11 @@
 
     add-int/lit8 v0, v0, 0x9
 
-    new-array v5, v0, [B
+    new-array v5, v0, [Z
 
-    const/4 v0, 0x4
+    sget-object v0, Lcom/c/b/g/n;->a:[I
 
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    invoke-static {v5, v1, v0, v11}, Lcom/c/b/g/n;->a([BI[II)I
+    invoke-static {v5, v1, v0, v11}, Lcom/c/b/g/n;->a([ZI[IZ)I
 
     move-result v0
 
@@ -172,7 +213,7 @@
 
     if-ge v0, v9, :cond_2
 
-    shl-int/lit8 v9, v0, 0x1
+    mul-int/lit8 v9, v0, 0x2
 
     sget-object v10, Lcom/c/b/g/m;->a:[[I
 
@@ -182,7 +223,7 @@
 
     aput v10, v8, v9
 
-    shl-int/lit8 v9, v0, 0x1
+    mul-int/lit8 v9, v0, 0x2
 
     add-int/lit8 v9, v9, 0x1
 
@@ -199,7 +240,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {v5, v3, v8, v11}, Lcom/c/b/g/n;->a([BI[II)I
+    invoke-static {v5, v3, v8, v11}, Lcom/c/b/g/n;->a([ZI[IZ)I
 
     move-result v0
 
@@ -212,34 +253,9 @@
     goto :goto_0
 
     :cond_3
-    const/4 v0, 0x3
+    sget-object v0, Lcom/c/b/g/n;->b:[I
 
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_1
-
-    invoke-static {v5, v3, v0, v11}, Lcom/c/b/g/n;->a([BI[II)I
-
-    move-result v0
-
-    add-int/2addr v0, v3
+    invoke-static {v5, v3, v0, v11}, Lcom/c/b/g/n;->a([ZI[IZ)I
 
     return-object v5
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x1
-        0x1
-        0x1
-        0x1
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x3
-        0x1
-        0x1
-    .end array-data
 .end method

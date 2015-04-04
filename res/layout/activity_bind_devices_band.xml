@@ -2,7 +2,7 @@
 <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <cn.com.smartdevices.bracelet.lua.SlidingUpPanelLayout android:gravity="bottom" android:id="@id/fragment_setting_sliding_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" sothree:panelHeight="@dimen/main_ui_panel_height" sothree:shadowHeight="0.0dip" sothree:paralaxOffset="0.0dip" sothree:dragView="@id/dragView" sothree:overlay="true" sothree:touchEvent="true" xmlns:sothree="http://schemas.android.com/apk/res-auto">
-        <RelativeLayout android:id="@id/bind_band" android:layout_width="fill_parent" android:layout_height="@dimen/top_area_h">
+        <RelativeLayout android:id="@id/bind_band" android:layout_width="fill_parent" android:layout_height="@dimen/common_sliding_panel_top_height">
             <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_devices_bind_band" android:layout_centerInParent="true" />
         </RelativeLayout>
         <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="@dimen/main_ui_panel_height">

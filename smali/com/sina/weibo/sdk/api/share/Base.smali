@@ -17,9 +17,6 @@
 
 
 # virtual methods
-.method abstract check(Landroid/content/Context;Lcom/sina/weibo/sdk/api/share/VersionCheckHandler;)Z
-.end method
-
 .method public abstract fromBundle(Landroid/os/Bundle;)V
 .end method
 

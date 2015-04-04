@@ -2,22 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/av;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
 .field final synthetic b:Lcn/com/smartdevices/bracelet/ui/at;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/at;Lcn/com/smartdevices/bracelet/ui/av;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/at;Lcn/com/smartdevices/bracelet/view/DynamicView;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/au;->b:Lcn/com/smartdevices/bracelet/ui/at;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/au;->a:Lcn/com/smartdevices/bracelet/ui/av;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/au;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,21 +26,20 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/au;->a:Lcn/com/smartdevices/bracelet/ui/av;
+    const/4 v1, 0x0
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/av;->d:Landroid/net/Uri;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/au;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/au;->b:Lcn/com/smartdevices/bracelet/ui/at;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/au;->a:Lcn/com/smartdevices/bracelet/ui/av;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/at;->a:Lcn/com/smartdevices/bracelet/ui/ap;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/at;->a(Lcn/com/smartdevices/bracelet/ui/at;Lcn/com/smartdevices/bracelet/ui/av;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ap;->b(Lcn/com/smartdevices/bracelet/ui/ap;Z)Z
 
-    :cond_0
     return-void
 .end method

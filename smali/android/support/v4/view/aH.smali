@@ -1,56 +1,20 @@
-.class public Landroid/support/v4/view/aH;
+.class interface abstract annotation Landroid/support/v4/view/aH;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
-# static fields
-.field static final a:Landroid/support/v4/view/aK;
 
+# annotations
+.annotation build Landroid/support/a/l;
+    a = {
+        0x0L,
+        0x1L,
+        0x2L,
+        0x4L
+    }
+.end annotation
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Landroid/support/v4/view/aJ;
-
-    invoke-direct {v0}, Landroid/support/v4/view/aJ;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/aH;->a:Landroid/support/v4/view/aK;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    new-instance v0, Landroid/support/v4/view/aI;
-
-    invoke-direct {v0}, Landroid/support/v4/view/aI;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/aH;->a:Landroid/support/v4/view/aK;
-
-    goto :goto_0
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public static a(Landroid/view/ViewConfiguration;)I
-    .locals 1
-
-    sget-object v0, Landroid/support/v4/view/aH;->a:Landroid/support/v4/view/aK;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/aK;->a(Landroid/view/ViewConfiguration;)I
-
-    move-result v0
-
-    return v0
-.end method
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
+.end annotation

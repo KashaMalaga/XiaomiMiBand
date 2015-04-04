@@ -1,24 +1,12 @@
-.class final Landroid/support/v4/view/bd;
+.class public Landroid/support/v4/view/bD;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/h/c;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/support/v4/h/c",
-        "<",
-        "Landroid/support/v4/view/ViewPager$SavedState;",
-        ">;"
-    }
-.end annotation
+.implements Landroid/support/v4/view/bz;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,40 +16,20 @@
 
 
 # virtual methods
-.method public synthetic a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
-    .locals 1
+.method public a(I)V
+    .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/support/v4/view/bd;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/support/v4/view/ViewPager$SavedState;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method
 
-.method public synthetic a(I)[Ljava/lang/Object;
-    .locals 1
+.method public a(IFI)V
+    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/view/bd;->b(I)[Landroid/support/v4/view/ViewPager$SavedState;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method
 
-.method public b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/support/v4/view/ViewPager$SavedState;
-    .locals 1
+.method public b(I)V
+    .locals 0
 
-    new-instance v0, Landroid/support/v4/view/ViewPager$SavedState;
-
-    invoke-direct {v0, p1, p2}, Landroid/support/v4/view/ViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object v0
-.end method
-
-.method public b(I)[Landroid/support/v4/view/ViewPager$SavedState;
-    .locals 1
-
-    new-array v0, p1, [Landroid/support/v4/view/ViewPager$SavedState;
-
-    return-object v0
+    return-void
 .end method

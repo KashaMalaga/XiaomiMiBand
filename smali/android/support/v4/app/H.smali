@@ -1,45 +1,49 @@
 .class Landroid/support/v4/app/H;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/app/F;
-
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/app/F;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Landroid/support/v4/app/H;->a:Landroid/support/v4/app/F;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static a(Landroid/os/Bundle;Ljava/lang/String;)[Landroid/os/Bundle;
+    .locals 3
 
-# virtual methods
-.method public run()V
-    .locals 5
+    invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
 
-    iget-object v0, p0, Landroid/support/v4/app/H;->a:Landroid/support/v4/app/F;
+    move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v4/app/H;->a:Landroid/support/v4/app/F;
+    instance-of v1, v0, [Landroid/os/Bundle;
 
-    iget-object v1, v1, Landroid/support/v4/app/F;->u:Landroid/support/v4/app/FragmentActivity;
+    if-nez v1, :cond_0
 
-    iget-object v1, v1, Landroid/support/v4/app/FragmentActivity;->d:Landroid/os/Handler;
+    if-nez v0, :cond_1
 
-    const/4 v2, 0x0
+    :cond_0
+    check-cast v0, [Landroid/os/Bundle;
 
-    const/4 v3, -0x1
+    check-cast v0, [Landroid/os/Bundle;
 
-    const/4 v4, 0x0
+    :goto_0
+    return-object v0
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/support/v4/app/F;->a(Landroid/os/Handler;Ljava/lang/String;II)Z
+    :cond_1
+    array-length v1, v0
 
-    return-void
+    const-class v2, [Landroid/os/Bundle;
+
+    invoke-static {v0, v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/os/Bundle;
+
+    invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->putParcelableArray(Ljava/lang/String;[Landroid/os/Parcelable;)V
+
+    goto :goto_0
 .end method

@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
+.field final synthetic a:Landroid/app/Dialog;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;Landroid/app/Dialog;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->b:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Landroid/app/Dialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,45 +26,12 @@
 
 
 # virtual methods
-.method public onLongClick(Landroid/view/View;)Z
-    .locals 3
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    new-instance v0, Landroid/content/Intent;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Landroid/app/Dialog;
 
-    const-string v1, "android.intent.action.GET_CONTENT"
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "*/*"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v1, "android.intent.category.OPENABLE"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
-
-    :try_start_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
-
-    const-string v2, "Select one music"
-
-    invoke-static {v0, v2}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->startActivityForResult(Landroid/content/Intent;I)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
+    return-void
 .end method

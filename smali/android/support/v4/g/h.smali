@@ -1,57 +1,108 @@
 .class Landroid/support/v4/g/h;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/os/Parcelable$ClassLoaderCreator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$ClassLoaderCreator",
+        "<TT;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field private final a:Landroid/support/v4/g/g;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/support/v4/g/g",
+            "<TT;>;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>(Landroid/support/v4/g/g;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/support/v4/g/g",
+            "<TT;>;)V"
+        }
+    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroid/support/v4/g/h;->a:Landroid/support/v4/g/g;
 
     return-void
 .end method
 
-.method public static a(Landroid/net/ConnectivityManager;)Z
+
+# virtual methods
+.method public createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/Parcel;",
+            ")TT;"
+        }
+    .end annotation
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Landroid/support/v4/g/h;->a:Landroid/support/v4/g/g;
 
-    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    invoke-interface {v0, p1, v1}, Landroid/support/v4/g/g;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
-    if-nez v1, :cond_0
+    move-result-object v0
 
-    :goto_0
-    :pswitch_0
-    return v0
+    return-object v0
+.end method
 
-    :cond_0
-    invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
+.method public createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/Parcel;",
+            "Ljava/lang/ClassLoader;",
+            ")TT;"
+        }
+    .end annotation
 
-    move-result v1
+    iget-object v0, p0, Landroid/support/v4/g/h;->a:Landroid/support/v4/g/g;
 
-    packed-switch v1, :pswitch_data_0
+    invoke-interface {v0, p1, p2}, Landroid/support/v4/g/g;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
-    :pswitch_1
-    goto :goto_0
+    move-result-object v0
 
-    :pswitch_2
-    const/4 v0, 0x0
+    return-object v0
+.end method
 
-    goto :goto_0
+.method public newArray(I)[Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)[TT;"
+        }
+    .end annotation
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_2
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
+    iget-object v0, p0, Landroid/support/v4/g/h;->a:Landroid/support/v4/g/g;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/g/g;->a(I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method

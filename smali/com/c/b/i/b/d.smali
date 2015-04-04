@@ -1,11 +1,11 @@
 .class public final Lcom/c/b/i/b/d;
-.super Lcom/c/b/q;
+.super Lcom/c/b/u;
 
 
 # instance fields
 .field private final a:F
 
-.field private b:I
+.field private final b:I
 
 
 # direct methods
@@ -19,10 +19,10 @@
     return-void
 .end method
 
-.method constructor <init>(FFFI)V
+.method private constructor <init>(FFFI)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/c/b/q;-><init>(FF)V
+    invoke-direct {p0, p1, p2}, Lcom/c/b/u;-><init>(FF)V
 
     iput p3, p0, Lcom/c/b/i/b/d;->a:F
 
@@ -167,16 +167,4 @@
     iget v0, p0, Lcom/c/b/i/b/d;->b:I
 
     return v0
-.end method
-
-.method e()V
-    .locals 1
-
-    iget v0, p0, Lcom/c/b/i/b/d;->b:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/c/b/i/b/d;->b:I
-
-    return-void
 .end method

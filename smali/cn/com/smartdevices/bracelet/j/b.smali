@@ -29,9 +29,9 @@
 .method public run()V
     .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
 
     iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/j/b;->a:Z
 
@@ -39,7 +39,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/j/a;->c(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/j/a;->c(Lcn/com/smartdevices/bracelet/j/a;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     move-result-object v1
 
@@ -47,11 +47,11 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/j/a;->c(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/j/a;->c(Lcn/com/smartdevices/bracelet/j/a;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
+    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->equals(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Z
 
     move-result v1
 
@@ -60,7 +60,7 @@
     :cond_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;Lcom/xiaomi/hm/health/dataprocess/SportDay;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
 
@@ -74,7 +74,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/f/c;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/e/c;
 
     move-result-object v0
 
@@ -82,7 +82,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/f/c;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/e/c;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/f/c;->a(I)V
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/e/c;->a(I)V
 
     :cond_1
     return-void

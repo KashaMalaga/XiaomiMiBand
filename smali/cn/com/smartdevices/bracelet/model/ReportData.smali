@@ -84,7 +84,7 @@
 .method public static fromJsonStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/ReportData;
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
     move-result-object v0
 
@@ -343,22 +343,22 @@
     return-void
 .end method
 
-.method public setStepsInfo(Lcn/com/smartdevices/bracelet/analysis/StepsInfo;)V
+.method public setStepsInfo(Lcom/xiaomi/hm/health/dataprocess/StepsInfo;)V
     .locals 1
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getStepsCount()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->getStepsCount()I
 
     move-result v0
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->steps:I
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getDistance()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->getDistance()I
 
     move-result v0
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->distance:I
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getCalories()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->getCalories()I
 
     move-result v0
 
@@ -402,7 +402,7 @@
 .method public toJsonStr()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
     move-result-object v0
 

@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="ptrRefreshableViewBackground" format="reference|color" />
+    <attr name="ptrHeaderBackground" format="reference|color" />
+    <attr name="ptrHeaderTextColor" format="reference|color" />
+    <attr name="ptrHeaderSubTextColor" format="reference|color" />
+    <attr name="ptrMode">
+        <flag name="disabled" value="0x00000000" />
+        <flag name="pullFromStart" value="0x00000001" />
+        <flag name="pullFromEnd" value="0x00000002" />
+        <flag name="both" value="0x00000003" />
+        <flag name="manualOnly" value="0x00000004" />
+        <flag name="pullDownFromTop" value="0x00000001" />
+        <flag name="pullUpFromBottom" value="0x00000002" />
+    </attr>
+    <attr name="ptrShowIndicator" format="reference|boolean" />
+    <attr name="ptrDrawable" format="reference" />
+    <attr name="ptrDrawableStart" format="reference" />
+    <attr name="ptrDrawableEnd" format="reference" />
+    <attr name="ptrOverScroll" format="reference|boolean" />
+    <attr name="ptrHeaderTextAppearance" format="reference" />
+    <attr name="ptrSubHeaderTextAppearance" format="reference" />
+    <attr name="ptrAnimationStyle">
+        <flag name="rotate" value="0x00000000" />
+        <flag name="flip" value="0x00000001" />
+    </attr>
+    <attr name="ptrScrollingWhileRefreshingEnabled" format="reference|boolean" />
+    <attr name="ptrListViewExtrasEnabled" format="reference|boolean" />
+    <attr name="ptrRotateDrawableWhilePulling" format="reference|boolean" />
+    <attr name="ptrAdapterViewBackground" format="reference|color" />
+    <attr name="ptrDrawableTop" format="reference" />
+    <attr name="ptrDrawableBottom" format="reference" />
     <attr name="guidelines">
         <enum name="on" value="2" />
         <enum name="onTouch" value="1" />
@@ -65,12 +95,12 @@
     <attr name="strokeColor" format="color" />
     <attr name="gap" format="dimension" />
     <attr name="effect">
+        <enum name="flip" value="5" />
         <enum name="standard" value="0" />
         <enum name="grow" value="1" />
         <enum name="cards" value="2" />
         <enum name="curl" value="3" />
         <enum name="wave" value="4" />
-        <enum name="flip" value="5" />
         <enum name="fly" value="6" />
         <enum name="reverse_fly" value="7" />
         <enum name="helix" value="8" />
@@ -141,6 +171,7 @@
     <attr name="wv_tips_color" format="color" />
     <attr name="wv_tips_size" format="dimension" />
     <attr name="line_mode" format="integer" />
+    <attr name="center_img" format="reference" />
     <attr name="lightColor" format="color" />
     <attr name="normalColor" format="color" />
     <attr name="heavyColor" format="color" />
@@ -155,6 +186,19 @@
         <enum name="unmoveable" value="1" />
     </attr>
     <attr name="txtColor" format="color" />
+    <attr name="rb_enable" format="boolean" />
+    <attr name="rb_color" format="color" />
+    <attr name="rb_strokeWidth" format="dimension" />
+    <attr name="rb_cx" format="integer" />
+    <attr name="rb_cy" format="integer" />
+    <attr name="rb_radius" format="dimension" />
+    <attr name="rb_duration" format="integer" />
+    <attr name="rb_rippleAmount" format="integer" />
+    <attr name="rb_scale" format="float" />
+    <attr name="rb_type">
+        <enum name="fillRipple" value="0" />
+        <enum name="strokeRipple" value="1" />
+    </attr>
     <attr name="labCircleSrc" format="reference" />
     <attr name="labCircleBackground" format="reference" />
     <attr name="labCircleText" format="string" />
@@ -165,37 +209,4 @@
     <attr name="slidepanel_height" format="dimension" />
     <attr name="border_width" format="dimension" />
     <attr name="border_color" format="color" />
-    <attr name="ptrRefreshableViewBackground" format="reference|color" />
-    <attr name="ptrHeaderBackground" format="reference|color" />
-    <attr name="ptrHeaderTextColor" format="reference|color" />
-    <attr name="ptrHeaderSubTextColor" format="reference|color" />
-    <attr name="ptrMode">
-        <flag name="disabled" value="0x00000000" />
-        <flag name="pullFromStart" value="0x00000001" />
-        <flag name="pullFromEnd" value="0x00000002" />
-        <flag name="both" value="0x00000003" />
-        <flag name="manualOnly" value="0x00000004" />
-        <flag name="pullDownFromTop" value="0x00000001" />
-        <flag name="pullUpFromBottom" value="0x00000002" />
-    </attr>
-    <attr name="ptrShowIndicator" format="reference|boolean" />
-    <attr name="ptrDrawable" format="reference" />
-    <attr name="ptrDrawableStart" format="reference" />
-    <attr name="ptrDrawableEnd" format="reference" />
-    <attr name="ptrOverScroll" format="reference|boolean" />
-    <attr name="ptrHeaderTextAppearance" format="reference" />
-    <attr name="ptrSubHeaderTextAppearance" format="reference" />
-    <attr name="ptrAnimationStyle">
-        <flag name="flip" value="0x00000001" />
-        <flag name="rotate" value="0x00000000" />
-    </attr>
-    <attr name="ptrScrollingWhileRefreshingEnabled" format="reference|boolean" />
-    <attr name="ptrListViewExtrasEnabled" format="reference|boolean" />
-    <attr name="ptrRotateDrawableWhilePulling" format="reference|boolean" />
-    <attr name="ptrAdapterViewBackground" format="reference|color" />
-    <attr name="ptrDrawableTop" format="reference" />
-    <attr name="ptrDrawableBottom" format="reference" />
-    <attr name="ptrPullLabel" format="reference" />
-    <attr name="ptrRefreshingLabel" format="reference" />
-    <attr name="ptrReleaseLabel" format="reference" />
 </resources>

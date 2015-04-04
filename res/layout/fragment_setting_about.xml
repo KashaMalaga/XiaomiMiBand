@@ -35,6 +35,7 @@
                 <include android:id="@id/split_line_visit_website" layout="@layout/split_line_with_margin" />
                 <LinearLayout android:id="@id/setting_check_apk_upgrade" android:background="@drawable/bg_item" android:paddingLeft="@dimen/common_list_item_left_right_padding" android:paddingTop="@dimen/common_list_item_top_bottom_padding" android:paddingRight="@dimen/common_list_item_left_right_padding" android:paddingBottom="@dimen/common_list_item_top_bottom_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:minHeight="@dimen/common_list_item_1_height">
                     <TextView android:textSize="@dimen/common_list_item_main_font" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/check_upgrade" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="center|right" android:id="@id/setting_check_apk_upgrade_new_icon" android:paddingRight="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/new_round_icon" />
                     <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
                 <include android:id="@id/split_line_about_apk_upgrade" layout="@layout/split_line_with_margin" />
@@ -44,16 +45,10 @@
                 </LinearLayout>
                 <include android:id="@id/split_line_about_buy_band" layout="@layout/split_line_with_margin" />
                 <LinearLayout android:id="@id/setting_about_user_agreement" android:background="@drawable/bg_item" android:paddingLeft="@dimen/common_list_item_left_right_padding" android:paddingTop="@dimen/common_list_item_top_bottom_padding" android:paddingRight="@dimen/common_list_item_left_right_padding" android:paddingBottom="@dimen/common_list_item_top_bottom_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:minHeight="@dimen/common_list_item_1_height">
-                    <TextView android:textSize="@dimen/common_list_item_main_font" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/user_agreement" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/common_list_item_main_font" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:id="@id/user_agreement_txt" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/user_agreement" android:layout_weight="1.0" />
                     <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
                 <include android:id="@id/split_line_0" layout="@layout/split_line_with_margin" />
-                <LinearLayout android:id="@id/setting_about_user_agreement_ux" android:background="@drawable/bg_item" android:paddingLeft="@dimen/common_list_item_left_right_padding" android:paddingTop="@dimen/common_list_item_top_bottom_padding" android:paddingRight="0.0dip" android:paddingBottom="@dimen/common_list_item_top_bottom_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:minHeight="@dimen/common_list_item_1_height">
-                    <TextView android:textSize="@dimen/common_list_item_main_font" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/user_agreement_ux" android:layout_weight="1.0" />
-                    <RelativeLayout android:gravity="center" android:paddingRight="@dimen/common_list_item_left_right_padding" android:clickable="true" android:layout_width="63.0dip" android:layout_height="22.0dip">
-                        <Switch android:layout_gravity="center" android:id="@id/setting_about_ux_switch" android:background="@drawable/switch_track_enable" android:focusable="false" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="40.0dip" android:layout_height="21.0dip" android:textOn="" android:textOff="" android:thumb="@drawable/switch_thumb" android:track="@drawable/switch_track_trans" android:switchMinWidth="38.0dip" android:thumbTextPadding="10.0dip" />
-                    </RelativeLayout>
-                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

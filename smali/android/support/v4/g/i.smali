@@ -11,12 +11,23 @@
     return-void
 .end method
 
-.method public static a(Landroid/net/ConnectivityManager;)Z
+.method static a(Landroid/support/v4/g/g;)Landroid/os/Parcelable$Creator;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/support/v4/g/g",
+            "<TT;>;)",
+            "Landroid/os/Parcelable$Creator",
+            "<TT;>;"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
+    new-instance v0, Landroid/support/v4/g/h;
 
-    move-result v0
+    invoke-direct {v0, p0}, Landroid/support/v4/g/h;-><init>(Landroid/support/v4/g/g;)V
 
-    return v0
+    return-object v0
 .end method

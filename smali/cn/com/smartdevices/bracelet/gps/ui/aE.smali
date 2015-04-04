@@ -1,66 +1,43 @@
-.class public Lcn/com/smartdevices/bracelet/gps/ui/aE;
+.class Lcn/com/smartdevices/bracelet/gps/ui/ae;
 .super Ljava/lang/Object;
 
-
-# static fields
-.field public static final a:I = 0x1
-
-.field public static final b:I = 0x2
-
-.field public static final c:I = 0x3
-
-.field public static final d:I = 0x4
-
-.field public static final e:I = 0x5
-
-.field public static final f:I = 0x6
-
-.field public static final g:I = 0x7
-
-.field public static final h:I = 0x8
-
-.field public static final i:I = 0x9
-
-.field public static final j:I = 0xa
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public k:Ljava/lang/String;
-
-.field public l:Ljava/lang/String;
-
-.field public m:Ljava/lang/String;
-
-.field public n:Ljava/lang/String;
-
-.field public o:I
-
-.field public p:I
-
-.field public q:Ljava/lang/String;
-
-.field public r:I
-
-.field public s:D
-
-.field public t:I
-
-.field public u:Ljava/lang/String;
-
-.field public v:Ljava/lang/String;
-
-.field public w:Ljava/lang/String;
-
-.field public x:Ljava/lang/String;
-
-.field public y:Ljava/lang/String;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)V
     .locals 0
 
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->e(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+
+    new-instance v2, Lcn/com/smartdevices/bracelet/gps/ui/af;
+
+    invoke-direct {v2, p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/af;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/ae;Landroid/graphics/Bitmap;)V
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method

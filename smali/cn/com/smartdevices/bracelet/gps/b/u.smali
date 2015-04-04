@@ -1,161 +1,137 @@
-.class public Lcn/com/smartdevices/bracelet/gps/b/u;
+.class public interface abstract Lcn/com/smartdevices/bracelet/gps/b/u;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/io/Serializable;
 
-
-# static fields
-.field private static final serialVersionUID:J = 0x1L
-
-
-# instance fields
-.field public a:I
-
-.field public b:Z
-
-.field public c:Z
-
-.field public d:Z
-
-.field public e:I
-
-.field public f:Z
-
-.field public g:Z
-
-.field public h:Z
-
-.field public i:Z
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    const/4 v1, 0x1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->a:I
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->b:Z
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->c:Z
-
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->d:Z
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->e:I
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->f:Z
-
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->g:Z
-
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->h:Z
-
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->i:Z
-
-    return-void
+# virtual methods
+.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/services/J;)Lcom/amap/api/maps/model/Polyline;
 .end method
 
-.method public constructor <init>(Z)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcn/com/smartdevices/bracelet/gps/b/u;-><init>(ZZ)V
-
-    return-void
+.method public abstract a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/services/J;)Lcom/amap/api/maps/model/Polyline;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            ">;",
+            "Lcn/com/smartdevices/bracelet/gps/services/J;",
+            ")",
+            "Lcom/amap/api/maps/model/Polyline;"
+        }
+    .end annotation
 .end method
 
-.method public constructor <init>(ZI)V
-    .locals 2
-
-    const/4 v1, 0x1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->a:I
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->b:Z
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->c:Z
-
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->d:Z
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->e:I
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->f:Z
-
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->g:Z
-
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->h:Z
-
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->i:Z
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->b:Z
-
-    iput p2, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->e:I
-
-    return-void
+.method public abstract a()V
 .end method
 
-.method public constructor <init>(ZZ)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcn/com/smartdevices/bracelet/gps/b/u;-><init>(ZI)V
-
-    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->c:Z
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/b/u;->f:Z
-
-    return-void
+.method public abstract a(F)V
 .end method
 
-.method public static a(Z)Lcn/com/smartdevices/bracelet/gps/b/u;
-    .locals 2
-
-    const/4 v1, 0x1
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/u;
-
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/b/u;-><init>(Z)V
-
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/gps/b/u;->f:Z
-
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/gps/b/u;->g:Z
-
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/gps/b/u;->h:Z
-
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/gps/b/u;->i:Z
-
-    return-object v0
+.method public abstract a(I)V
 .end method
 
-.method public static b(Z)Lcn/com/smartdevices/bracelet/gps/b/u;
-    .locals 2
+.method public abstract a(ILcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
 
-    const/4 v1, 0x1
+.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/u;
+.method public abstract a(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            ">;)V"
+        }
+    .end annotation
+.end method
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/b/u;-><init>(Z)V
+.method public abstract a(Z)V
+.end method
 
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/gps/b/u;->f:Z
+.method public abstract b()V
+.end method
 
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/gps/b/u;->g:Z
+.method public abstract b(I)V
+.end method
 
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/gps/b/u;->h:Z
+.method public abstract b(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
 
-    const/4 v1, 0x0
+.method public abstract b(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/services/J;)V
+.end method
 
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/gps/b/u;->i:Z
+.method public abstract b(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/services/J;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            ">;",
+            "Lcn/com/smartdevices/bracelet/gps/services/J;",
+            ")V"
+        }
+    .end annotation
+.end method
 
-    return-object v0
+.method public abstract c()V
+.end method
+
+.method public abstract c(I)V
+.end method
+
+.method public abstract c(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
+
+.method public abstract c(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract c(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/services/J;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            ">;",
+            "Lcn/com/smartdevices/bracelet/gps/services/J;",
+            ")V"
+        }
+    .end annotation
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract d(I)V
+.end method
+
+.method public abstract d(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
+
+.method public abstract e(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
+
+.method public abstract f(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
+
+.method public abstract g()V
+.end method
+
+.method public abstract g(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
+
+.method public abstract h()V
 .end method

@@ -917,7 +917,7 @@
 
     const-string v0, "ExceptDeviceReboot"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->b(Ljava/lang/String;)V
 
     :cond_e
     :goto_3

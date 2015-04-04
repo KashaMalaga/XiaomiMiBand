@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="numberOfPullUpdateReport">
+        <item quantity="other">%d ಐಟಂಗಳನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿದೆ.</item>
+        <item quantity="one">%d ಐಟಂ ನವೀಕರಿಸಲಾಗಿದೆ.</item>
+    </plurals>
+    <plurals name="numberFoot">
+        <item quantity="other">%s ಅಡಿ</item>
+        <item quantity="one">%s ಅಡಿ</item>
+    </plurals>
+    <plurals name="numberInch">
+        <item quantity="other">%s ಇಂಚುಗಳು</item>
+        <item quantity="one">%s ಇಂಚು</item>
+    </plurals>
+</resources>

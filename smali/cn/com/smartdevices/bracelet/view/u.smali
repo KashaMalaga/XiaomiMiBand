@@ -1,20 +1,13 @@
-.class Lcn/com/smartdevices/bracelet/view/U;
+.class public interface abstract Lcn/com/smartdevices/bracelet/view/U;
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field a:Ljava/lang/Object;
+# virtual methods
+.method public abstract a(I)V
+.end method
 
-.field b:I
+.method public abstract a(IFI)V
+.end method
 
-.field c:Z
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract b(I)V
 .end method

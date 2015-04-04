@@ -35,7 +35,7 @@
 
 .field private final mCoveredFadePaint:Landroid/graphics/Paint;
 
-.field private final mDragHelper:Landroid/support/v4/widget/ae;
+.field private final mDragHelper:Landroid/support/v4/widget/bf;
 
 .field private mDragView:Landroid/view/View;
 
@@ -200,7 +200,7 @@
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mScrollTouchSlop:I
 
-    iput-object v6, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iput-object v6, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
     :goto_0
     return-void
@@ -249,7 +249,7 @@
     :cond_2
     invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
 
-    sget-object v0, Lcom/xiaomi/hm/a/t;->SlidingUpPanelLayout:[I
+    sget-object v0, Lcom/xiaomi/hm/health/t;->SlidingUpPanelLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -405,13 +405,13 @@
 
     invoke-direct {v2, p0, v6}, Lcn/com/smartdevices/bracelet/lua/k;-><init>(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/j;)V
 
-    invoke-static {p0, v7, v2}, Landroid/support/v4/widget/ae;->a(Landroid/view/ViewGroup;FLandroid/support/v4/widget/ah;)Landroid/support/v4/widget/ae;
+    invoke-static {p0, v7, v2}, Landroid/support/v4/widget/bf;->a(Landroid/view/ViewGroup;FLandroid/support/v4/widget/bi;)Landroid/support/v4/widget/bf;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mMinFlingVelocity:I
 
@@ -419,7 +419,7 @@
 
     mul-float/2addr v0, v3
 
-    invoke-virtual {v2, v0}, Landroid/support/v4/widget/ae;->a(F)V
+    invoke-virtual {v2, v0}, Landroid/support/v4/widget/bf;->a(F)V
 
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mCanSlide:Z
 
@@ -521,10 +521,10 @@
     return v0
 .end method
 
-.method static synthetic access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/ae;
+.method static synthetic access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
     return-object v0
 .end method
@@ -1036,7 +1036,7 @@
 
     neg-int v0, p3
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/as;->a(Landroid/view/View;I)Z
+    invoke-static {p1, v0}, Landroid/support/v4/view/az;->a(Landroid/view/View;I)Z
 
     move-result v0
 
@@ -1089,7 +1089,7 @@
 .method public computeScroll()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
     if-nez v0, :cond_1
 
@@ -1098,11 +1098,11 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ae;->a(Z)Z
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/bf;->a(Z)Z
 
     move-result v0
 
@@ -1112,14 +1112,14 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/ae;->h()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/bf;->h()V
 
     goto :goto_0
 
     :cond_2
-    invoke-static {p0}, Landroid/support/v4/view/as;->c(Landroid/view/View;)V
+    invoke-static {p0}, Landroid/support/v4/view/az;->d(Landroid/view/View;)V
 
     goto :goto_0
 .end method
@@ -1899,9 +1899,9 @@
     if-eqz v0, :cond_2
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/ae;->g()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/bf;->g()V
 
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -1919,9 +1919,9 @@
     if-ne v0, v1, :cond_4
 
     :cond_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/ae;->g()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/bf;->g()V
 
     goto :goto_0
 
@@ -1934,9 +1934,9 @@
 
     :cond_6
     :goto_1
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
-    invoke-virtual {v3, p1}, Landroid/support/v4/widget/ae;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v3, p1}, Landroid/support/v4/widget/bf;->a(Landroid/view/MotionEvent;)Z
 
     move-result v3
 
@@ -1991,9 +1991,9 @@
 
     move-result v6
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/ae;->f()I
+    invoke-virtual {v0}, Landroid/support/v4/widget/bf;->f()I
 
     move-result v7
 
@@ -2084,9 +2084,9 @@
     if-nez v3, :cond_6
 
     :cond_b
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/ae;->g()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/bf;->g()V
 
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsUnableToDrag:Z
 
@@ -2665,7 +2665,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
     if-nez v0, :cond_2
 
@@ -2679,9 +2679,9 @@
     return v0
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
-    invoke-virtual {v0, p1}, Landroid/support/v4/widget/ae;->b(Landroid/view/MotionEvent;)V
+    invoke-virtual {v0, p1}, Landroid/support/v4/widget/bf;->b(Landroid/view/MotionEvent;)V
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -2731,9 +2731,9 @@
 
     sub-float v5, v3, v1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
-    invoke-virtual {v1}, Landroid/support/v4/widget/ae;->f()I
+    invoke-virtual {v1}, Landroid/support/v4/widget/bf;->f()I
 
     move-result v6
 
@@ -3002,7 +3002,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
     if-eqz v0, :cond_0
 
@@ -3038,7 +3038,7 @@
     float-to-int v0, v0
 
     :goto_1
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideableView:Landroid/view/View;
 
@@ -3048,7 +3048,7 @@
 
     move-result v4
 
-    invoke-virtual {v2, v3, v4, v0}, Landroid/support/v4/widget/ae;->a(Landroid/view/View;II)Z
+    invoke-virtual {v2, v3, v4, v0}, Landroid/support/v4/widget/bf;->a(Landroid/view/View;II)Z
 
     move-result v0
 
@@ -3056,7 +3056,7 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->setAllChildrenVisible()V
 
-    invoke-static {p0}, Landroid/support/v4/view/as;->c(Landroid/view/View;)V
+    invoke-static {p0}, Landroid/support/v4/view/az;->d(Landroid/view/View;)V
 
     const/4 v0, 0x1
 

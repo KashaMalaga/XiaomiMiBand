@@ -156,7 +156,7 @@
 
     div-float/2addr v0, v1
 
-    invoke-static {v0, v7}, Lcn/com/smartdevices/bracelet/gps/d/e;->a(FI)F
+    invoke-static {v0, v7}, Lcn/com/smartdevices/bracelet/gps/d/f;->a(FI)F
 
     move-result v0
 
@@ -178,7 +178,7 @@
 
     iget v3, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->b:F
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/gps/d/f;->c(F)J
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/gps/d/g;->c(F)J
 
     move-result-wide v3
 
@@ -198,14 +198,14 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/i;->j:Landroid/content/res/Resources;
 
-    const v4, 0x7f080340
+    const v4, 0x7f0903d8
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     :goto_1
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/i;->j:Landroid/content/res/Resources;
 
-    const v4, 0x7f08033e
+    const v4, 0x7f0903d6
 
     const/4 v5, 0x3
 
@@ -232,7 +232,7 @@
     :cond_1
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/i;->j:Landroid/content/res/Resources;
 
-    const v4, 0x7f08033f
+    const v4, 0x7f0903d7
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -291,7 +291,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

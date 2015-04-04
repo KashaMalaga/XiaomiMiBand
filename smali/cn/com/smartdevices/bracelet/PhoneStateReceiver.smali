@@ -70,9 +70,9 @@
 
     sput-object v1, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b:Ljava/util/Timer;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/B;
+    new-instance v1, Lcn/com/smartdevices/bracelet/D;
 
-    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/B;-><init>(Ljava/lang/ref/WeakReference;)V
+    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/D;-><init>(Ljava/lang/ref/WeakReference;)V
 
     sput-object v1, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->c:Ljava/util/TimerTask;
 
@@ -159,20 +159,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->isInComingCallEnabled()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
     const-string v0, "phone"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -181,6 +167,40 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "android.intent.action.PHONE_STATE"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "state"
+
+    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getCallState()I
+
+    move-result v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    invoke-static {p1}, Landroid/support/v4/content/v;->a(Landroid/content/Context;)Landroid/support/v4/content/v;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/support/v4/content/v;->a(Landroid/content/Intent;)Z
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->isInComingCallEnabled()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getCallState()I
 
     move-result v0
@@ -198,7 +218,7 @@
 
     const-string v0, "Call_Idle"
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b()V
 
@@ -235,7 +255,7 @@
 
     const-string v0, "Call_Ring"
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getInComingCallTime()I
 
@@ -278,13 +298,11 @@
 
     const-string v0, "Call_Offhook"
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b()V
 
     goto :goto_0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

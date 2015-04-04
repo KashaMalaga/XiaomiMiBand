@@ -174,10 +174,10 @@
 
 
 # virtual methods
-.method protected getDefaultDrawableResId()I
+.method protected getDefaultDrawableResId(Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;)I
     .locals 1
 
-    const v0, 0x7f020116
+    sget v0, Lcom/handmark/pulltorefresh/library/R$drawable;->default_ptr_flip:I
 
     return v0
 .end method

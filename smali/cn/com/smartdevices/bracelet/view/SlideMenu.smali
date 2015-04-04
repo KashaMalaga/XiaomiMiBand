@@ -81,9 +81,9 @@
 
 .field private P:I
 
-.field private Q:Lcn/com/smartdevices/bracelet/view/O;
+.field private Q:Lcn/com/smartdevices/bracelet/view/M;
 
-.field private R:Lcn/com/smartdevices/bracelet/view/N;
+.field private R:Lcn/com/smartdevices/bracelet/view/L;
 
 .field private S:Landroid/view/VelocityTracker;
 
@@ -116,9 +116,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/M;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/K;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/M;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/K;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->k:Landroid/view/animation/Interpolator;
 
@@ -138,7 +138,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    const v0, 0x7f010005
+    const v0, 0x7f010018
 
     invoke-direct {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/view/SlideMenu;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -202,7 +202,7 @@
 
     invoke-virtual {p0, v5}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->setWillNotDraw(Z)V
 
-    sget-object v0, Lcom/xiaomi/hm/a/t;->SlideMenu:[I
+    sget-object v0, Lcom/xiaomi/hm/health/t;->SlideMenu:[I
 
     invoke-virtual {p1, p2, v0, p3, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -600,7 +600,7 @@
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->y:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
     if-eqz v0, :cond_2
 
@@ -620,9 +620,9 @@
 
     :cond_1
     :goto_1
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/O;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
-    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/view/O;->a(F)V
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/view/M;->a(F)V
 
     :cond_2
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->r()V
@@ -1116,18 +1116,18 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/view/N;)V
+.method public a(Lcn/com/smartdevices/bracelet/view/L;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/N;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/L;
 
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/view/O;)V
+.method public a(Lcn/com/smartdevices/bracelet/view/M;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/O;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
     return-void
 .end method
@@ -1261,7 +1261,7 @@
 
     if-nez v8, :cond_1
 
-    invoke-static {v5, p2}, Lcn/com/smartdevices/bracelet/view/F;->a(Landroid/view/View;I)Z
+    invoke-static {v5, p2}, Lcn/com/smartdevices/bracelet/view/D;->a(Landroid/view/View;I)Z
 
     move-result v8
 
@@ -1295,7 +1295,7 @@
     :cond_2
     neg-int v0, p2
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/as;->a(Landroid/view/View;I)Z
+    invoke-static {p1, v0}, Landroid/support/v4/view/az;->a(Landroid/view/View;I)Z
 
     move-result v0
 
@@ -1672,7 +1672,7 @@
 .method protected d(I)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
     if-eqz v0, :cond_0
 
@@ -1680,9 +1680,9 @@
 
     if-eq p1, v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
-    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/view/O;->a(I)V
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/view/M;->a(I)V
 
     :cond_0
     iput p1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->r:I
@@ -1860,18 +1860,18 @@
     return v0
 .end method
 
-.method public j()Lcn/com/smartdevices/bracelet/view/O;
+.method public j()Lcn/com/smartdevices/bracelet/view/M;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
     return-object v0
 .end method
 
-.method public k()Lcn/com/smartdevices/bracelet/view/N;
+.method public k()Lcn/com/smartdevices/bracelet/view/L;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/N;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/L;
 
     return-object v0
 .end method
@@ -1918,13 +1918,13 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/N;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/L;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/N;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/L;
 
-    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/view/N;->a(Lcn/com/smartdevices/bracelet/view/SlideMenu;)V
+    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/view/L;->a(Lcn/com/smartdevices/bracelet/view/SlideMenu;)V
 
     goto :goto_0
 .end method

@@ -78,7 +78,7 @@
 
     iput v3, p0, Lcn/com/smartdevices/bracelet/view/WeightProgressBar;->i:F
 
-    sget-object v0, Lcom/xiaomi/hm/a/t;->WeightProgressBar:[I
+    sget-object v0, Lcom/xiaomi/hm/health/t;->WeightProgressBar:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

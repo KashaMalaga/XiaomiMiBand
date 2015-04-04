@@ -46,9 +46,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Landroid/support/v4/app/N;
+    new-instance v0, Landroid/support/v4/app/ad;
 
-    invoke-direct {v0}, Landroid/support/v4/app/N;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/app/ad;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/FragmentState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -312,11 +312,11 @@
 
     iget-object v0, p0, Landroid/support/v4/app/FragmentState;->k:Landroid/support/v4/app/Fragment;
 
-    iget-object v1, p1, Landroid/support/v4/app/FragmentActivity;->e:Landroid/support/v4/app/F;
+    iget-object v1, p1, Landroid/support/v4/app/FragmentActivity;->e:Landroid/support/v4/app/U;
 
-    iput-object v1, v0, Landroid/support/v4/app/Fragment;->mFragmentManager:Landroid/support/v4/app/F;
+    iput-object v1, v0, Landroid/support/v4/app/Fragment;->mFragmentManager:Landroid/support/v4/app/U;
 
-    sget-boolean v0, Landroid/support/v4/app/F;->b:Z
+    sget-boolean v0, Landroid/support/v4/app/U;->b:Z
 
     if-eqz v0, :cond_3
 

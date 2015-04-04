@@ -465,10 +465,10 @@
     return v0
 .end method
 
-.method public a(Lcom/c/b/i/a/r;)I
+.method public a(Lcom/c/b/i/a/s;)I
     .locals 2
 
-    invoke-virtual {p1}, Lcom/c/b/i/a/r;->a()I
+    invoke-virtual {p1}, Lcom/c/b/i/a/s;->a()I
 
     move-result v0
 

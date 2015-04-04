@@ -1,51 +1,43 @@
-.class interface abstract Lcn/com/smartdevices/bracelet/view/s;
+.class Lcn/com/smartdevices/bracelet/view/s;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+
+# instance fields
+.field final synthetic a:I
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
+
+
+# direct methods
+.method constructor <init>(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;I)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/s;->b:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
+
+    iput p2, p0, Lcn/com/smartdevices/bracelet/view/s;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<TT;>;"
-        }
-    .end annotation
-.end method
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
-.method public abstract a(Ljava/util/List;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<TT;>;)V"
-        }
-    .end annotation
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/s;->b:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
 
-.method public abstract a(Ljava/lang/Object;)Z
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)Z"
-        }
-    .end annotation
-.end method
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->a(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;)Landroid/support/v4/view/ViewPager;
 
-.method public abstract b()Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TT;"
-        }
-    .end annotation
+    move-result-object v0
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/s;->a:I
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(I)V
+
+    return-void
 .end method

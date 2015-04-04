@@ -148,7 +148,7 @@
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {p1, v0, v2}, Lcom/c/b/c/b;->c(II)V
+    invoke-virtual {p1, v0, v2}, Lcom/c/b/c/b;->d(II)V
 
     :cond_0
     add-int/lit8 v0, v0, 0x1

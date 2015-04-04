@@ -1,34 +1,35 @@
-.class public Lcn/com/smartdevices/bracelet/ui/dN;
+.class Lcn/com/smartdevices/bracelet/ui/dN;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # instance fields
-.field public a:I
-
-.field public b:I
-
-.field public c:Z
-
-.field public d:Landroid/content/pm/ResolveInfo;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dM;
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 1
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dM;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dN;->a:Lcn/com/smartdevices/bracelet/ui/dM;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/dN;->c:Z
 
-    const/4 v0, 0x0
+# virtual methods
+.method public onCancel(Landroid/content/DialogInterface;)V
+    .locals 2
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dN;->d:Landroid/content/pm/ResolveInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dN;->a:Lcn/com/smartdevices/bracelet/ui/dM;
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/dN;->a:I
+    const/4 v1, 0x1
 
-    iput p2, p0, Lcn/com/smartdevices/bracelet/ui/dN;->b:I
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dM;->a(Lcn/com/smartdevices/bracelet/ui/dM;Z)Z
 
     return-void
 .end method

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_1" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_2" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_3" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_4" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_5" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_6" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_7" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_8" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_9" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_10" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_11" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_12" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_13" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_14" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_15" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_16" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_overturn_17" />
+    <item android:duration="100" android:drawable="@drawable/instruction_weight_back" />
+</animation-list>

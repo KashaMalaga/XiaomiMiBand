@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.com.smartdevices.bracelet.relation.view.DetailScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title_back_bar"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/main_container" android:background="#fff8f8f8" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/icon" android:background="@drawable/default_friend_avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="12.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="10.0dip" />
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:id="@id/username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="username" />
+                        <ImageView android:id="@id/care_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_red_heart" android:scaleType="center" android:layout_below="@id/username" android:layout_alignTop="@id/careByMe" android:layout_alignBottom="@id/careByMe" />
+                        <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:gravity="center" android:id="@id/careByMe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="0" android:layout_toRightOf="@id/care_icon" android:layout_below="@id/username" />
+                        <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:id="@id/last_update_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_below="@id/username" android:layout_alignBottom="@id/careByMe" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:background="#ffdadada" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="13.0dip">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:gravity="center_horizontal" android:id="@id/step" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="step" android:layout_weight="1.0" />
+                        <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/label_activity" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:gravity="center_horizontal" android:id="@id/sleep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="sleep" android:layout_weight="1.0" />
+                        <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/label_sleep" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:gravity="center_horizontal" android:id="@id/weight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="weight" android:layout_weight="1.0" />
+                        <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/label_weight" />
+                    </LinearLayout>
+                </LinearLayout>
+                <cn.com.smartdevices.bracelet.relation.view.CareButton android:textSize="14.0sp" android:gravity="center" android:id="@id/care_button" android:background="@drawable/btn_red_bg" android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_marginLeft="23.299988dip" android:layout_marginRight="23.299988dip" android:layout_marginBottom="12.0dip" android:text="@string/button_send_care" />
+                <View android:background="#ffdadada" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            </LinearLayout>
+            <View android:background="#ffdadada" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="15.0dip" />
+            <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c1" android:gravity="center_vertical" android:id="@id/activity_date" android:background="#ffffffff" android:padding="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/today" android:drawableLeft="@drawable/ic_activity_record" android:drawablePadding="5.0dip" />
+            <FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="250.0dip">
+                <View android:layout_gravity="bottom" android:id="@id/chart_date_line_bg" android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="28.0dip" />
+                <cn.com.smartdevices.bracelet.chart.StatisticChartView android:id="@id/ativity_record" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </FrameLayout>
+            <LinearLayout android:background="#ffffffff" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:id="@id/day_step" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="--" />
+                    <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_step" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:id="@id/day_mileage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="--" />
+                    <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_mileage" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:id="@id/day_heat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="--" />
+                    <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_calorie" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#ffdadada" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <View android:background="#ffdadada" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="15.0dip" />
+            <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c1" android:gravity="center_vertical" android:id="@id/sleep_date" android:background="#ffffffff" android:padding="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/today" android:drawableLeft="@drawable/ic_sleep_record" android:drawablePadding="5.0dip" />
+            <FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="250.0dip">
+                <View android:layout_gravity="bottom" android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="28.0dip" />
+                <cn.com.smartdevices.bracelet.chart.StatisticChartView android:id="@id/sleep_record" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </FrameLayout>
+            <LinearLayout android:background="#ffffffff" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:id="@id/day_sleep_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="--" />
+                    <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_sleep_start_time" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:id="@id/day_sleep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="--" />
+                    <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_sleep" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:id="@id/get_up_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="--" />
+                    <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_get_up_time" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#ffdadada" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginBottom="40.0dip" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c8" android:gravity="center" android:layout_gravity="top" android:id="@id/toast_view" android:background="#aa2086b4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="36.0dip" android:text="@string/label_message_too_busy" />
+    </FrameLayout>
+</cn.com.smartdevices.bracelet.relation.view.DetailScrollView>

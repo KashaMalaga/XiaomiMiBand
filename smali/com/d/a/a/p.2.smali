@@ -14,7 +14,7 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "BaseJsonHttpResponseHandler"
+.field private static final LOG_TAG:Ljava/lang/String; = "BaseJsonHttpResponseHandler"
 
 
 # direct methods
@@ -38,57 +38,7 @@
 
 
 # virtual methods
-.method public final a(I[Lorg/apache/http/Header;Ljava/lang/String;)V
-    .locals 2
-
-    const/4 v1, 0x0
-
-    const/16 v0, 0xcc
-
-    if-eq p1, v0, :cond_1
-
-    new-instance v0, Lcom/d/a/a/q;
-
-    invoke-direct {v0, p0, p3, p1, p2}, Lcom/d/a/a/q;-><init>(Lcom/d/a/a/p;Ljava/lang/String;I[Lorg/apache/http/Header;)V
-
-    invoke-virtual {p0}, Lcom/d/a/a/p;->getUseSynchronousMode()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Ljava/lang/Thread;
-
-    invoke-direct {v1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0, p1, p2, v1, v1}, Lcom/d/a/a/p;->a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method public abstract a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Object;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I[",
-            "Lorg/apache/http/Header;",
-            "Ljava/lang/String;",
-            "TJSON_TYPE;)V"
-        }
-    .end annotation
-.end method
-
-.method public final a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final onFailure(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 6
 
     const/4 v4, 0x0
@@ -140,12 +90,12 @@
 
     move-object v5, v4
 
-    invoke-virtual/range {v0 .. v5}, Lcom/d/a/a/p;->a(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/d/a/a/p;->onFailure(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public abstract a(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Object;)V
+.method public abstract onFailure(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Object;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I[",
@@ -157,7 +107,57 @@
     .end annotation
 .end method
 
-.method protected abstract b(Ljava/lang/String;Z)Ljava/lang/Object;
+.method public final onSuccess(I[Lorg/apache/http/Header;Ljava/lang/String;)V
+    .locals 2
+
+    const/4 v1, 0x0
+
+    const/16 v0, 0xcc
+
+    if-eq p1, v0, :cond_1
+
+    new-instance v0, Lcom/d/a/a/q;
+
+    invoke-direct {v0, p0, p3, p1, p2}, Lcom/d/a/a/q;-><init>(Lcom/d/a/a/p;Ljava/lang/String;I[Lorg/apache/http/Header;)V
+
+    invoke-virtual {p0}, Lcom/d/a/a/p;->getUseSynchronousMode()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ljava/lang/Thread;
+
+    invoke-direct {v1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0, p1, p2, v1, v1}, Lcom/d/a/a/p;->onSuccess(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method public abstract onSuccess(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Object;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I[",
+            "Lorg/apache/http/Header;",
+            "Ljava/lang/String;",
+            "TJSON_TYPE;)V"
+        }
+    .end annotation
+.end method
+
+.method protected abstract parseResponse(Ljava/lang/String;Z)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

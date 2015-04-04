@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f08010a
+    const v1, 0x7f090120
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -110,7 +110,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0300be
+    const v2, 0x7f0300d5
 
     const/4 v3, 0x0
 
@@ -118,7 +118,7 @@
 
     move-result-object v5
 
-    const v1, 0x7f070373
+    const v1, 0x7f0703cd
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f070375
+    const v2, 0x7f0703cf
 
     invoke-virtual {v5, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -134,7 +134,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f070374
+    const v3, 0x7f0703ce
 
     invoke-virtual {v5, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -142,7 +142,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f070376
+    const v4, 0x7f0703d0
 
     invoke-virtual {v5, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -189,7 +189,7 @@
 
     move-result-object v3
 
-    const v6, 0x7f090010
+    const v6, 0x7f0a0001
 
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -218,7 +218,7 @@
     invoke-virtual {v4, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_1
-    const v1, 0x7f070377
+    const v1, 0x7f0703d1
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -238,7 +238,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f070372
+    const v0, 0x7f0703cc
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -275,14 +275,14 @@
 
     if-nez v6, :cond_1
 
-    const v6, 0x7f08015c
+    const v6, 0x7f090176
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(I)V
 
     goto/16 :goto_0
 
     :cond_1
-    const v6, 0x7f08015d
+    const v6, 0x7f090177
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -316,7 +316,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f090011
+    const v4, 0x7f0a0030
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 

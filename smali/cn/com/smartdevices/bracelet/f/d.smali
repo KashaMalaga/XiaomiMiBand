@@ -1,260 +1,103 @@
-.class public abstract Lcn/com/smartdevices/bracelet/f/d;
+.class public abstract Lcn/com/smartdevices/bracelet/f/D;
 .super Ljava/lang/Object;
 
 
 # static fields
-.field public static final a:I = -0x1
-
-.field public static final b:I = -0x2
-
-.field private static d:Lcn/com/smartdevices/bracelet/f/d;
+.field private static b:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Class",
+            "<+",
+            "Lcn/com/smartdevices/bracelet/f/D;",
+            ">;[",
+            "Ljava/lang/reflect/Field;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field private c:I
+.field protected a:J
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/util/HashMap;
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/f/D;->b:Ljava/util/Map;
 
     return-void
 .end method
 
-.method public constructor <init>(I)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    const-wide/16 v0, 0x0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/f/d;->c:I
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/f/d;->c:I
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/f/D;->a:J
 
     return-void
 .end method
 
-.method public static b(ZLcn/com/smartdevices/bracelet/f/c;)V
-    .locals 3
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x0
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    instance-of v0, v0, Lcn/com/smartdevices/bracelet/f/e;
-
-    if-eqz v0, :cond_3
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    invoke-virtual {v0, v1, p1}, Lcn/com/smartdevices/bracelet/f/d;->a(ZLcn/com/smartdevices/bracelet/f/c;)Z
-
-    sput-object v2, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    :cond_0
-    :goto_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/f/g;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/f/g;-><init>()V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    :cond_1
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1, p1}, Lcn/com/smartdevices/bracelet/f/d;->a(ZLcn/com/smartdevices/bracelet/f/c;)Z
-
-    :cond_2
-    :goto_1
-    return-void
-
-    :cond_3
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    instance-of v0, v0, Lcn/com/smartdevices/bracelet/f/g;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    invoke-virtual {v0, v1, p1}, Lcn/com/smartdevices/bracelet/f/d;->a(ZLcn/com/smartdevices/bracelet/f/c;)Z
-
-    sput-object v2, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    goto :goto_0
-
-    :cond_4
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    if-nez v0, :cond_5
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/f/e;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/f/e;-><init>()V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    :cond_5
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    invoke-virtual {v0, p0, p1}, Lcn/com/smartdevices/bracelet/f/d;->a(ZLcn/com/smartdevices/bracelet/f/c;)Z
-
-    goto :goto_1
-.end method
-
-.method public static c()I
+.method public static a(Ljava/lang/Class;)[Ljava/lang/reflect/Field;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class",
+            "<+",
+            "Lcn/com/smartdevices/bracelet/f/D;",
+            ">;)[",
+            "Ljava/lang/reflect/Field;"
+        }
+    .end annotation
 
-    const/4 v1, 0x0
+    sget-object v0, Lcn/com/smartdevices/bracelet/f/D;->b:Ljava/util/Map;
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
+    invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    instance-of v0, v0, Lcn/com/smartdevices/bracelet/f/e;
-
-    if-eqz v0, :cond_2
-
-    sput-object v1, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
+    :goto_0
+    return-object v0
 
     :cond_0
-    :goto_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Z
+    invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_3
+    sget-object v1, Lcn/com/smartdevices/bracelet/f/D;->b:Ljava/util/Map;
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/f/g;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/f/g;-><init>()V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    :cond_1
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/d;->b()I
-
-    move-result v0
-
-    :goto_1
-    return v0
-
-    :cond_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    instance-of v0, v0, Lcn/com/smartdevices/bracelet/f/g;
-
-    if-eqz v0, :cond_0
-
-    sput-object v1, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
+    invoke-interface {v1, p0, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
-
-    :cond_3
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    if-nez v0, :cond_4
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/f/e;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/f/e;-><init>()V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    :cond_4
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/d;->d:Lcn/com/smartdevices/bracelet/f/d;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/d;->b()I
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_5
-    const/4 v0, -0x2
-
-    goto :goto_1
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 1
+.method public a()J
+    .locals 2
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/f/d;->c:I
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/f/D;->a:J
 
-    return v0
+    return-wide v0
 .end method
 
-.method public abstract a(ZLcn/com/smartdevices/bracelet/f/c;)Z
+.method public abstract a(Landroid/database/Cursor;)Z
 .end method
 
-.method public abstract b()I
+.method public abstract b()Landroid/content/ContentValues;
 .end method

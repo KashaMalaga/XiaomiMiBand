@@ -15,13 +15,15 @@
 
 .field public static final f:I = 0xc351
 
-.field private static i:Lcn/com/smartdevices/bracelet/k/i;
+.field public static final g:I = 0xc362
+
+.field private static j:Lcn/com/smartdevices/bracelet/k/i;
 
 
 # instance fields
-.field public g:I
+.field public h:I
 
-.field public h:Ljava/lang/String;
+.field public i:Ljava/lang/String;
 
 
 # direct methods
@@ -32,7 +34,7 @@
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/k/i;-><init>()V
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/k/i;->i:Lcn/com/smartdevices/bracelet/k/i;
+    sput-object v0, Lcn/com/smartdevices/bracelet/k/i;->j:Lcn/com/smartdevices/bracelet/k/i;
 
     return-void
 .end method
@@ -44,11 +46,11 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/k/i;->h:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/k/i;->i:Ljava/lang/String;
 
     return-void
 .end method
@@ -79,7 +81,7 @@
 
     const/4 v1, 0x2
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     goto :goto_0
 .end method
@@ -124,7 +126,7 @@
 
     move-result v1
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     const-string v1, "message"
 
@@ -132,7 +134,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/k/i;->h:Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/k/i;->i:Ljava/lang/String;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -143,7 +145,7 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/k/i;->i:Lcn/com/smartdevices/bracelet/k/i;
+    sget-object v1, Lcn/com/smartdevices/bracelet/k/i;->j:Lcn/com/smartdevices/bracelet/k/i;
 
     invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->equals(Ljava/lang/Object;)Z
 
@@ -154,7 +156,7 @@
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;)V
 
     :cond_0
-    sput-object v0, Lcn/com/smartdevices/bracelet/k/i;->i:Lcn/com/smartdevices/bracelet/k/i;
+    sput-object v0, Lcn/com/smartdevices/bracelet/k/i;->j:Lcn/com/smartdevices/bracelet/k/i;
 
     return-object v0
 
@@ -163,7 +165,7 @@
 
     const/4 v1, 0x2
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     goto :goto_0
 .end method
@@ -230,7 +232,7 @@
 .method public a()Z
     .locals 2
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     const v1, 0xc351
 
@@ -250,7 +252,7 @@
 .method public b()Z
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     if-nez v0, :cond_0
 
@@ -270,7 +272,7 @@
 
     const/4 v0, 0x1
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     if-ne v1, v0, :cond_0
 
@@ -288,9 +290,9 @@
 
     check-cast p1, Lcn/com/smartdevices/bracelet/k/i;
 
-    iget v0, p1, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iget v0, p1, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     if-ne v0, v1, :cond_0
 

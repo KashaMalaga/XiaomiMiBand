@@ -27,12 +27,20 @@
 
 
 # virtual methods
-.method final check(Landroid/content/Context;Lcom/sina/weibo/sdk/api/share/VersionCheckHandler;)Z
+.method final check(Landroid/content/Context;Lcom/sina/weibo/sdk/WeiboAppManager$WeiboInfo;Lcom/sina/weibo/sdk/api/share/VersionCheckHandler;)Z
     .locals 2
 
     const/4 v0, 0x0
 
     iget-object v1, p0, Lcom/sina/weibo/sdk/api/share/SendMessageToWeiboRequest;->message:Lcom/sina/weibo/sdk/api/WeiboMessage;
+
+    if-eqz v1, :cond_0
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Lcom/sina/weibo/sdk/WeiboAppManager$WeiboInfo;->isLegal()Z
+
+    move-result v1
 
     if-nez v1, :cond_1
 
@@ -41,11 +49,11 @@
     return v0
 
     :cond_1
-    if-eqz p2, :cond_2
+    if-eqz p3, :cond_2
 
     iget-object v1, p0, Lcom/sina/weibo/sdk/api/share/SendMessageToWeiboRequest;->message:Lcom/sina/weibo/sdk/api/WeiboMessage;
 
-    invoke-virtual {p2, p1, v1}, Lcom/sina/weibo/sdk/api/share/VersionCheckHandler;->check(Landroid/content/Context;Lcom/sina/weibo/sdk/api/WeiboMessage;)Z
+    invoke-virtual {p3, p1, p2, v1}, Lcom/sina/weibo/sdk/api/share/VersionCheckHandler;->checkRequest(Landroid/content/Context;Lcom/sina/weibo/sdk/WeiboAppManager$WeiboInfo;Lcom/sina/weibo/sdk/api/WeiboMessage;)Z
 
     move-result v1
 

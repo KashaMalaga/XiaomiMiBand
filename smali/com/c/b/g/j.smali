@@ -1,5 +1,5 @@
 .class public final Lcom/c/b/g/j;
-.super Lcom/c/b/g/v;
+.super Lcom/c/b/g/x;
 
 
 # instance fields
@@ -10,7 +10,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lcom/c/b/g/v;-><init>()V
+    invoke-direct {p0}, Lcom/c/b/g/x;-><init>()V
 
     const/4 v0, 0x4
 
@@ -59,7 +59,7 @@
 
     if-ge v0, v5, :cond_1
 
-    sget-object v2, Lcom/c/b/g/j;->f:[[I
+    sget-object v2, Lcom/c/b/g/j;->d:[[I
 
     invoke-static {p1, v4, v0, v2}, Lcom/c/b/g/j;->a(Lcom/c/b/c/a;[II[[I)I
 
@@ -98,7 +98,7 @@
     goto :goto_0
 
     :cond_1
-    sget-object v2, Lcom/c/b/g/j;->e:[I
+    sget-object v2, Lcom/c/b/g/j;->c:[I
 
     invoke-static {p1, v0, v8, v2}, Lcom/c/b/g/j;->a(Lcom/c/b/c/a;IZ[I)[I
 
@@ -113,7 +113,7 @@
 
     if-ge v0, v5, :cond_3
 
-    sget-object v2, Lcom/c/b/g/j;->f:[[I
+    sget-object v2, Lcom/c/b/g/j;->d:[[I
 
     invoke-static {p1, v4, v0, v2}, Lcom/c/b/g/j;->a(Lcom/c/b/c/a;[II[[I)I
 

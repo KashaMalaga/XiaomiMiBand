@@ -1,32 +1,72 @@
-.class public Lcn/com/smartdevices/bracelet/gps/b/v;
+.class public interface abstract Lcn/com/smartdevices/bracelet/gps/b/v;
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field private a:Lcom/amap/api/maps/AMap;
-
-
-# direct methods
-.method public constructor <init>(Lcom/amap/api/maps/AMap;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/v;->a:Lcom/amap/api/maps/AMap;
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/b/v;->a:Lcom/amap/api/maps/AMap;
-
-    return-void
+# virtual methods
+.method public abstract a()V
 .end method
 
+.method public abstract a(F)V
+.end method
 
-# virtual methods
-.method public a()Lcom/amap/api/maps/AMap;
-    .locals 1
+.method public abstract a(I)V
+.end method
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/v;->a:Lcom/amap/api/maps/AMap;
+.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
 
-    return-object v0
+.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/services/J;)V
+.end method
+
+.method public abstract a(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/services/J;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            ">;",
+            "Lcn/com/smartdevices/bracelet/gps/services/J;",
+            ")V"
+        }
+    .end annotation
+.end method
+
+.method public abstract a(Z)V
+.end method
+
+.method public abstract b()V
+.end method
+
+.method public abstract b(I)V
+.end method
+
+.method public abstract b(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
+
+.method public abstract c(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract d(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.end method
+
+.method public abstract e()V
+.end method
+
+.method public abstract e(Lcn/com/smartdevices/bracelet/gps/model/c;)V
 .end method

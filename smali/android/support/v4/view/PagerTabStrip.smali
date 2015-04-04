@@ -216,9 +216,9 @@
 
     iget-object v0, p0, Landroid/support/v4/view/PagerTabStrip;->b:Landroid/widget/TextView;
 
-    new-instance v1, Landroid/support/v4/view/ae;
+    new-instance v1, Landroid/support/v4/view/af;
 
-    invoke-direct {v1, p0}, Landroid/support/v4/view/ae;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
+    invoke-direct {v1, p0}, Landroid/support/v4/view/af;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -228,9 +228,9 @@
 
     iget-object v0, p0, Landroid/support/v4/view/PagerTabStrip;->d:Landroid/widget/TextView;
 
-    new-instance v1, Landroid/support/v4/view/af;
+    new-instance v1, Landroid/support/v4/view/ag;
 
-    invoke-direct {v1, p0}, Landroid/support/v4/view/af;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
+    invoke-direct {v1, p0}, Landroid/support/v4/view/ag;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

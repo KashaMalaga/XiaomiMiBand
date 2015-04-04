@@ -609,6 +609,30 @@
 
     and-int/2addr v0, v1
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/config/b;->g:Lcn/com/smartdevices/bracelet/config/a/b;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/config/a/b;->ENABLE_RUNNING:Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "Sync"
+
+    const-string v2, "syncDataToServerInternal !Config.getInstance().RUNNER.ENABLE"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return v0
+
+    :cond_0
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/lab/sync/o;->a(Landroid/content/Context;)Z
 
     move-result v1
@@ -625,15 +649,15 @@
 
     and-int/2addr v0, v1
 
-    return v0
+    goto :goto_0
 .end method
 
 .method private static e(Landroid/content/Context;)Z
     .locals 8
 
-    const/4 v1, 0x1
-
     const/4 v0, 0x0
+
+    const/4 v1, 0x1
 
     if-nez p0, :cond_0
 
@@ -662,21 +686,36 @@
 
     invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SyncedServerDataInfo;->isSucceededToSaved()Z
 
-    move-result v2
+    move-result v5
 
     invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/model/SyncedServerDataInfo;->isSucceededToSaved()Z
 
     move-result v3
 
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/model/SyncedServerDataInfo;->isSucceededToSaved()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
 
-    move-result v4
+    move-result-object v2
+
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->g:Lcn/com/smartdevices/bracelet/config/a/b;
+
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/a/b;->ENABLE_RUNNING:Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
 
     if-eqz v2, :cond_1
 
-    if-eqz v3, :cond_1
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/model/SyncedServerDataInfo;->isSucceededToSaved()Z
 
-    if-eqz v4, :cond_1
+    move-result v2
+
+    :goto_0
+    if-eqz v5, :cond_2
+
+    if-eqz v3, :cond_2
+
+    if-eqz v2, :cond_2
 
     const-string v1, "Sync"
 
@@ -684,11 +723,16 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_0
+    :goto_1
     return v0
 
     :cond_1
-    const-string v5, "Sync"
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_2
+    const-string v4, "Sync"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -700,27 +744,27 @@
 
     move-result-object v6
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v5
 
     const-string v6, ",isSkippingDataSaved = "
 
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v5
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string v3, ",isRunningDataSaved = "
+    const-string v5, ",isRunningDataSaved = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -728,7 +772,7 @@
 
     move-result-object v2
 
-    invoke-static {v5, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Landroid/content/Context;I)Landroid/content/Intent;
 
@@ -738,7 +782,7 @@
 
     move v0, v1
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 
@@ -920,11 +964,11 @@
 
     invoke-virtual {v6, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v2, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v2, v6}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v2, v6}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
 
     move-result-object v2
 
@@ -934,11 +978,11 @@
 
     invoke-virtual {v6, v3, v4}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v3, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v3, v6}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v3, v6}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1036,7 +1080,7 @@
     goto/16 :goto_0
 
     :pswitch_6
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/a/b;->c(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/gps/a/e;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/a/b;->e(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/gps/a/e;
 
     move-result-object v1
 

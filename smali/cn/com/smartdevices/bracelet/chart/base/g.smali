@@ -73,44 +73,18 @@
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/t;->a()F
-
-    move-result v0
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->p:F
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/t;->b()F
-
-    move-result v0
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->q:F
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/content/Context;)F
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(Landroid/content/Context;)F
 
     move-result v0
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->p:F
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/chart/c/t;->b(Landroid/content/Context;)F
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/chart/c/u;->b(Landroid/content/Context;)F
 
     move-result v0
 

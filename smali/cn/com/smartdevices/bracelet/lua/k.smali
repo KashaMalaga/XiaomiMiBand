@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/lua/k;
-.super Landroid/support/v4/widget/ah;
+.super Landroid/support/v4/widget/bi;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
 
-    invoke-direct {p0}, Landroid/support/v4/widget/ah;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/widget/bi;-><init>()V
 
     return-void
 .end method
@@ -52,12 +52,12 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/ae;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/support/v4/widget/ae;->b()I
+    invoke-virtual {v1}, Landroid/support/v4/widget/bf;->b()I
 
     move-result v1
 
@@ -346,8 +346,8 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/ae;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
 
     move-result-object v1
 
@@ -355,7 +355,7 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2, v0}, Landroid/support/v4/widget/ae;->a(II)Z
+    invoke-virtual {v1, v2, v0}, Landroid/support/v4/widget/bf;->a(II)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
 
@@ -560,8 +560,8 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/ae;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
 
     move-result-object v1
 
@@ -595,7 +595,7 @@
 
     float-to-int v0, v0
 
-    invoke-virtual {v1, v3, v0}, Landroid/support/v4/widget/ae;->a(II)Z
+    invoke-virtual {v1, v3, v0}, Landroid/support/v4/widget/bf;->a(II)Z
 
     :goto_4
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
@@ -607,8 +607,8 @@
     :cond_8
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ae;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/ae;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
 
     move-result-object v1
 
@@ -616,7 +616,7 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2, v0}, Landroid/support/v4/widget/ae;->a(II)Z
+    invoke-virtual {v1, v2, v0}, Landroid/support/v4/widget/bf;->a(II)Z
 
     goto :goto_4
 .end method

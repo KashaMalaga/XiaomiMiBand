@@ -66,9 +66,11 @@
 .end method
 
 .method public c()V
-    .locals 3
+    .locals 4
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->a:Ljava/lang/String;
+    const/4 v3, 0x0
+
+    const-string v0, "MemberInfoBaseActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -101,13 +103,17 @@
     :cond_0
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->e:Z
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->o:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->o:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -120,15 +126,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f080253
+    const v1, 0x7f090301
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    invoke-static {p0, v0, v3}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -138,9 +142,40 @@
     return-void
 
     :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->o:Ljava/lang/String;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->g(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f09033e
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0, v3}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_0
+
+    :cond_3
     const-string v0, "CURRENT_USER_NAME"
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->o:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -168,7 +203,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     const-string v0, ""
 
@@ -181,7 +216,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
     invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->toJsonString()Ljava/lang/String;
@@ -226,6 +261,20 @@
     invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
+.end method
+
+.method public onBackPressed()V
+    .locals 2
+
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->onBackPressed()V
+
+    const-string v0, "CURRENT_USER_NAME"
+
+    const-string v1, ""
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
@@ -312,7 +361,7 @@
     return-void
 
     :cond_1
-    const v0, 0x7f030024
+    const v0, 0x7f03002d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->setContentView(I)V
 
@@ -330,7 +379,7 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->a()V
 
-    const v0, 0x7f0700d8
+    const v0, 0x7f070122
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->findViewById(I)Landroid/view/View;
 
@@ -391,7 +440,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    const v0, 0x7f0700d1
+    const v0, 0x7f07011b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->findViewById(I)Landroid/view/View;
 
@@ -417,7 +466,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    const v0, 0x7f0700d2
+    const v0, 0x7f07011c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->findViewById(I)Landroid/view/View;
 
@@ -485,7 +534,7 @@
 
     move-result v1
 
-    sget-object v2, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->a:Ljava/lang/String;
+    const-string v2, "MemberInfoBaseActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -517,7 +566,7 @@
 
     invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v2, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->a:Ljava/lang/String;
+    const-string v2, "MemberInfoBaseActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -573,7 +622,7 @@
 
     const/high16 v2, 0x42100000
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;F)I
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
 
     move-result v1
 
@@ -614,13 +663,25 @@
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     :cond_0
+    const-string v0, "PageWeightUserSetName"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;)V
+
     return-void
 .end method
 
 .method protected onResume()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->onResume()V
+
+    const-string v0, "PageWeightUserSetName"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
 
     return-void
 .end method

@@ -3,15 +3,15 @@
 
 
 # instance fields
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Landroid/os/Bundle;
-
 .field public flags:I
+
+.field public k:Ljava/lang/String;
+
+.field public l:Ljava/lang/String;
+
+.field public m:Ljava/lang/String;
+
+.field public n:Landroid/os/Bundle;
 
 
 # direct methods

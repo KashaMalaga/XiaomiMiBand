@@ -1,78 +1,53 @@
-.class public abstract Landroid/support/v4/app/X;
+.class Landroid/support/v4/app/X;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:I
+
+.field final synthetic c:Landroid/support/v4/app/U;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Landroid/support/v4/app/U;Ljava/lang/String;I)V
     .locals 0
+
+    iput-object p1, p0, Landroid/support/v4/app/X;->c:Landroid/support/v4/app/U;
+
+    iput-object p2, p0, Landroid/support/v4/app/X;->a:Ljava/lang/String;
+
+    iput p3, p0, Landroid/support/v4/app/X;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Z)V
-    .locals 0
-
-    sput-boolean p0, Landroid/support/v4/app/Z;->b:Z
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public abstract a(ILandroid/os/Bundle;Landroid/support/v4/app/Y;)Landroid/support/v4/content/p;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<D:",
-            "Ljava/lang/Object;",
-            ">(I",
-            "Landroid/os/Bundle;",
-            "Landroid/support/v4/app/Y",
-            "<TD;>;)",
-            "Landroid/support/v4/content/p",
-            "<TD;>;"
-        }
-    .end annotation
-.end method
+.method public run()V
+    .locals 5
 
-.method public abstract a(I)V
-.end method
+    iget-object v0, p0, Landroid/support/v4/app/X;->c:Landroid/support/v4/app/U;
 
-.method public abstract a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
-.end method
+    iget-object v1, p0, Landroid/support/v4/app/X;->c:Landroid/support/v4/app/U;
 
-.method public a()Z
-    .locals 1
+    iget-object v1, v1, Landroid/support/v4/app/U;->u:Landroid/support/v4/app/FragmentActivity;
 
-    const/4 v0, 0x0
+    iget-object v1, v1, Landroid/support/v4/app/FragmentActivity;->d:Landroid/os/Handler;
 
-    return v0
-.end method
+    iget-object v2, p0, Landroid/support/v4/app/X;->a:Ljava/lang/String;
 
-.method public abstract b(I)Landroid/support/v4/content/p;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<D:",
-            "Ljava/lang/Object;",
-            ">(I)",
-            "Landroid/support/v4/content/p",
-            "<TD;>;"
-        }
-    .end annotation
-.end method
+    const/4 v3, -0x1
 
-.method public abstract b(ILandroid/os/Bundle;Landroid/support/v4/app/Y;)Landroid/support/v4/content/p;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<D:",
-            "Ljava/lang/Object;",
-            ">(I",
-            "Landroid/os/Bundle;",
-            "Landroid/support/v4/app/Y",
-            "<TD;>;)",
-            "Landroid/support/v4/content/p",
-            "<TD;>;"
-        }
-    .end annotation
+    iget v4, p0, Landroid/support/v4/app/X;->b:I
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/support/v4/app/U;->a(Landroid/os/Handler;Ljava/lang/String;II)Z
+
+    return-void
 .end method

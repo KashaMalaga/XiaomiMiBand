@@ -81,7 +81,7 @@
 
     new-array v0, v0, [D
 
-    invoke-static {p0, p1, p2, p3, v0}, Lcn/com/smartdevices/bracelet/gps/services/J;->a(DD[D)V
+    invoke-static {p0, p1, p2, p3, v0}, Lcn/com/smartdevices/bracelet/gps/services/b/i;->a(DD[D)V
 
     return-object v0
 .end method

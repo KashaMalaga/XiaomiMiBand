@@ -11,6 +11,8 @@
 
 .field private static final d:[C
 
+.field private static final e:[C
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -38,13 +40,17 @@
 
     sput-object v0, Lcom/c/b/d/a/c;->c:[C
 
+    sget-object v0, Lcom/c/b/d/a/c;->b:[C
+
+    sput-object v0, Lcom/c/b/d/a/c;->d:[C
+
     const/16 v0, 0x20
 
     new-array v0, v0, [C
 
     fill-array-data v0, :array_3
 
-    sput-object v0, Lcom/c/b/d/a/c;->d:[C
+    sput-object v0, Lcom/c/b/d/a/c;->e:[C
 
     return-void
 
@@ -173,7 +179,7 @@
 
     :array_3
     .array-data 2
-        0x27s
+        0x60s
         0x41s
         0x42s
         0x43s
@@ -281,7 +287,7 @@
 
     if-eq v0, v6, :cond_1
 
-    invoke-virtual {v3}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {v3}, Lcom/c/b/c/c;->c()I
 
     move-result v6
 
@@ -294,11 +300,7 @@
 
     if-lez v0, :cond_2
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     :cond_2
     new-instance v3, Lcom/c/b/c/e;
@@ -331,7 +333,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -398,7 +400,7 @@
 
     if-nez v2, :cond_1
 
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -454,7 +456,7 @@
 
     :cond_5
     :goto_2
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
     move-result v2
 
@@ -580,14 +582,14 @@
 
     if-ne v2, v3, :cond_10
 
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
     move-result v2
 
     if-eqz v2, :cond_5
 
     :cond_10
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -651,7 +653,7 @@
     move v2, v1
 
     :cond_0
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
     move-result v3
 
@@ -685,7 +687,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -730,7 +732,7 @@
     goto :goto_2
 
     :cond_5
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -811,7 +813,7 @@
     goto :goto_4
 
     :cond_a
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -843,7 +845,7 @@
     goto :goto_5
 
     :cond_c
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
     move-result v3
 
@@ -876,7 +878,7 @@
 
     const/16 v6, 0x8
 
-    invoke-virtual {p0}, Lcom/c/b/c/c;->a()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
 
     move-result v0
 
@@ -894,7 +896,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
     move-result v0
 
@@ -905,7 +907,7 @@
     :goto_0
     if-gez v3, :cond_2
 
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -951,13 +953,13 @@
     :goto_1
     if-ge v0, v3, :cond_4
 
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
     move-result v2
 
     if-ge v2, v6, :cond_3
 
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -1044,7 +1046,7 @@
     move v2, v1
 
     :cond_0
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
     move-result v3
 
@@ -1078,7 +1080,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -1123,7 +1125,7 @@
     goto :goto_2
 
     :cond_5
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -1153,13 +1155,13 @@
     goto :goto_3
 
     :pswitch_2
-    sget-object v0, Lcom/c/b/d/a/c;->b:[C
+    sget-object v0, Lcom/c/b/d/a/c;->d:[C
 
     array-length v0, v0
 
     if-ge v5, v0, :cond_8
 
-    sget-object v0, Lcom/c/b/d/a/c;->b:[C
+    sget-object v0, Lcom/c/b/d/a/c;->d:[C
 
     aget-char v0, v0, v5
 
@@ -1204,20 +1206,20 @@
     goto :goto_4
 
     :cond_a
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
     throw v0
 
     :pswitch_3
-    sget-object v0, Lcom/c/b/d/a/c;->d:[C
+    sget-object v0, Lcom/c/b/d/a/c;->e:[C
 
     array-length v0, v0
 
     if-ge v5, v0, :cond_c
 
-    sget-object v0, Lcom/c/b/d/a/c;->d:[C
+    sget-object v0, Lcom/c/b/d/a/c;->e:[C
 
     aget-char v0, v0, v5
 
@@ -1242,14 +1244,14 @@
     goto :goto_5
 
     :cond_c
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
     throw v0
 
     :cond_d
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
     move-result v3
 
@@ -1276,7 +1278,7 @@
     new-array v1, v4, [I
 
     :cond_0
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
     move-result v0
 
@@ -1377,14 +1379,14 @@
     goto :goto_2
 
     :cond_8
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
     throw v0
 
     :cond_9
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
     move-result v0
 
@@ -1394,88 +1396,79 @@
 .end method
 
 .method private static d(Lcom/c/b/c/c;Ljava/lang/StringBuilder;)V
-    .locals 5
-
-    const/4 v1, 0x0
-
-    move v0, v1
+    .locals 3
 
     :cond_0
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
-    move-result v2
+    move-result v0
 
-    const/16 v3, 0x10
+    const/16 v1, 0x10
 
-    if-gt v2, v3, :cond_2
+    if-gt v0, v1, :cond_2
 
     :cond_1
     :goto_0
     return-void
 
     :cond_2
-    move v4, v1
+    const/4 v0, 0x0
+
+    move v1, v0
 
     :goto_1
-    const/4 v2, 0x4
+    const/4 v0, 0x4
 
-    if-ge v4, v2, :cond_4
+    if-ge v1, v0, :cond_5
 
-    const/4 v2, 0x6
+    const/4 v0, 0x6
 
-    invoke-virtual {p0, v2}, Lcom/c/b/c/c;->a(I)I
+    invoke-virtual {p0, v0}, Lcom/c/b/c/c;->a(I)I
 
-    move-result v2
+    move-result v0
 
-    const/16 v3, 0x1f
+    const/16 v2, 0x1f
 
-    if-ne v2, v3, :cond_6
+    if-ne v0, v2, :cond_3
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Lcom/c/b/c/c;->a()I
 
-    move v3, v0
+    move-result v0
 
-    :goto_2
-    if-nez v3, :cond_3
+    rsub-int/lit8 v0, v0, 0x8
 
-    and-int/lit8 v0, v2, 0x20
+    const/16 v1, 0x8
 
-    if-nez v0, :cond_5
+    if-eq v0, v1, :cond_1
 
-    or-int/lit8 v0, v2, 0x40
+    invoke-virtual {p0, v0}, Lcom/c/b/c/c;->a(I)I
 
-    :goto_3
+    goto :goto_0
+
+    :cond_3
+    and-int/lit8 v2, v0, 0x20
+
+    if-nez v2, :cond_4
+
+    or-int/lit8 v0, v0, 0x40
+
+    :cond_4
     int-to-char v0, v0
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :cond_3
-    add-int/lit8 v0, v4, 0x1
+    add-int/lit8 v0, v1, 0x1
 
-    move v4, v0
-
-    move v0, v3
+    move v1, v0
 
     goto :goto_1
 
-    :cond_4
-    if-nez v0, :cond_1
+    :cond_5
+    invoke-virtual {p0}, Lcom/c/b/c/c;->c()I
 
-    invoke-virtual {p0}, Lcom/c/b/c/c;->b()I
+    move-result v0
 
-    move-result v2
-
-    if-gtz v2, :cond_0
+    if-gtz v0, :cond_0
 
     goto :goto_0
-
-    :cond_5
-    move v0, v2
-
-    goto :goto_3
-
-    :cond_6
-    move v3, v0
-
-    goto :goto_2
 .end method

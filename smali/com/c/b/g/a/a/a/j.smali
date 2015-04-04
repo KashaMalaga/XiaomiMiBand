@@ -255,7 +255,7 @@
 .method public abstract a()Ljava/lang/String;
 .end method
 
-.method protected b()Lcom/c/b/c/a;
+.method protected final b()Lcom/c/b/c/a;
     .locals 1
 
     iget-object v0, p0, Lcom/c/b/g/a/a/a/j;->a:Lcom/c/b/c/a;
@@ -263,7 +263,7 @@
     return-object v0
 .end method
 
-.method protected c()Lcom/c/b/g/a/a/a/t;
+.method protected final c()Lcom/c/b/g/a/a/a/t;
     .locals 1
 
     iget-object v0, p0, Lcom/c/b/g/a/a/a/j;->b:Lcom/c/b/g/a/a/a/t;

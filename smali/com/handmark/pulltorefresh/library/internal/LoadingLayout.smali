@@ -26,7 +26,7 @@
 
 .field private final mHeaderText:Landroid/widget/TextView;
 
-.field private final mInnerLayout:Landroid/widget/RelativeLayout;
+.field private mInnerLayout:Landroid/widget/RelativeLayout;
 
 .field protected final mMode:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
 
@@ -59,15 +59,15 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;Landroid/content/res/TypedArray;)V
     .locals 8
 
-    const/4 v7, 0x1
+    const/4 v7, 0x7
+
+    const/4 v6, 0x6
+
+    const/4 v5, 0x2
+
+    const/4 v4, 0x1
 
     const/4 v2, 0x3
-
-    const/16 v6, 0x15
-
-    const/16 v5, 0x14
-
-    const/16 v4, 0x13
 
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
@@ -89,12 +89,12 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300a9
+    sget v1, Lcom/handmark/pulltorefresh/library/R$layout;->pull_to_refresh_header_vertical:I
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     :goto_0
-    const v0, 0x7f070317
+    sget v0, Lcom/handmark/pulltorefresh/library/R$id;->fl_inner:I
 
     invoke-virtual {p0, v0}, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mInnerLayout:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f07031b
+    sget v1, Lcom/handmark/pulltorefresh/library/R$id;->pull_to_refresh_text:I
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -118,7 +118,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mInnerLayout:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f070319
+    sget v1, Lcom/handmark/pulltorefresh/library/R$id;->pull_to_refresh_progress:I
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -130,7 +130,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mInnerLayout:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f07031c
+    sget v1, Lcom/handmark/pulltorefresh/library/R$id;->pull_to_refresh_sub_text:I
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -142,7 +142,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mInnerLayout:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f070318
+    sget v1, Lcom/handmark/pulltorefresh/library/R$id;->pull_to_refresh_image:I
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -172,59 +172,45 @@
 
     sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->VERTICAL:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
 
-    if-ne p3, v1, :cond_c
+    if-ne p3, v1, :cond_9
 
     const/16 v1, 0x50
 
     :goto_1
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    invoke-virtual {p4, v4}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    sget v0, Lcom/handmark/pulltorefresh/library/R$string;->pull_to_refresh_pull_label:I
 
-    move-result v0
-
-    if-eqz v0, :cond_d
-
-    invoke-virtual {p4, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mPullLabel:Ljava/lang/CharSequence;
 
-    :goto_2
-    invoke-virtual {p4, v5}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    sget v0, Lcom/handmark/pulltorefresh/library/R$string;->pull_to_refresh_refreshing_label:I
 
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    invoke-virtual {p4, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mRefreshingLabel:Ljava/lang/CharSequence;
 
-    :goto_3
-    invoke-virtual {p4, v6}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    sget v0, Lcom/handmark/pulltorefresh/library/R$string;->pull_to_refresh_release_label:I
 
-    move-result v0
-
-    if-eqz v0, :cond_f
-
-    invoke-virtual {p4, v6}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mReleaseLabel:Ljava/lang/CharSequence;
 
-    :goto_4
-    invoke-virtual {p4, v7}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    :goto_2
+    invoke-virtual {p4, v4}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p4, v7}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p4, v4}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -275,17 +261,13 @@
     invoke-direct {p0, v0}, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->setSubTextAppearance(I)V
 
     :cond_2
-    const/4 v0, 0x2
-
-    invoke-virtual {p4, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    invoke-virtual {p4, v5}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    const/4 v0, 0x2
-
-    invoke-virtual {p4, v0}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {p4, v5}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -311,17 +293,13 @@
     :cond_4
     const/4 v0, 0x0
 
-    const/4 v1, 0x6
-
-    invoke-virtual {p4, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    invoke-virtual {p4, v6}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    const/4 v0, 0x6
-
-    invoke-virtual {p4, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p4, v6}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -336,29 +314,25 @@
 
     packed-switch v1, :pswitch_data_2
 
-    const/4 v1, 0x7
-
-    invoke-virtual {p4, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    invoke-virtual {p4, v7}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_10
+    if-eqz v1, :cond_a
 
-    const/4 v0, 0x7
-
-    invoke-virtual {p4, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p4, v7}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     :cond_6
-    :goto_5
+    :goto_3
     if-nez v0, :cond_7
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->getDefaultDrawableResId()I
+    invoke-virtual {p0, p2}, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->getDefaultDrawableResId(Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;)I
 
     move-result v1
 
@@ -378,7 +352,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300a8
+    sget v1, Lcom/handmark/pulltorefresh/library/R$layout;->pull_to_refresh_header_horizontal:I
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -391,126 +365,46 @@
 
     const/16 v1, 0x30
 
-    :goto_6
+    :goto_4
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    invoke-virtual {p4, v4}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    sget v0, Lcom/handmark/pulltorefresh/library/R$string;->pull_to_refresh_from_bottom_pull_label:I
 
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    invoke-virtual {p4, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mPullLabel:Ljava/lang/CharSequence;
 
-    :goto_7
-    invoke-virtual {p4, v5}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    sget v0, Lcom/handmark/pulltorefresh/library/R$string;->pull_to_refresh_from_bottom_refreshing_label:I
 
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    invoke-virtual {p4, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mRefreshingLabel:Ljava/lang/CharSequence;
 
-    :goto_8
-    invoke-virtual {p4, v6}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    sget v0, Lcom/handmark/pulltorefresh/library/R$string;->pull_to_refresh_from_bottom_release_label:I
 
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    invoke-virtual {p4, v6}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mReleaseLabel:Ljava/lang/CharSequence;
 
-    goto/16 :goto_4
+    goto/16 :goto_2
 
     :cond_8
     move v1, v2
 
-    goto :goto_6
+    goto :goto_4
 
     :cond_9
-    const v0, 0x7f08000d
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mPullLabel:Ljava/lang/CharSequence;
-
-    goto :goto_7
-
-    :cond_a
-    const v0, 0x7f08000f
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mRefreshingLabel:Ljava/lang/CharSequence;
-
-    goto :goto_8
-
-    :cond_b
-    const v0, 0x7f08000e
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mReleaseLabel:Ljava/lang/CharSequence;
-
-    goto/16 :goto_4
-
-    :cond_c
     const/4 v1, 0x5
 
     goto/16 :goto_1
 
-    :cond_d
-    const v0, 0x7f08000a
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mPullLabel:Ljava/lang/CharSequence;
-
-    goto/16 :goto_2
-
-    :cond_e
-    const v0, 0x7f08000c
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mRefreshingLabel:Ljava/lang/CharSequence;
-
-    goto/16 :goto_3
-
-    :cond_f
-    const v0, 0x7f08000b
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mReleaseLabel:Ljava/lang/CharSequence;
-
-    goto/16 :goto_4
-
-    :cond_10
+    :cond_a
     const/16 v1, 0x11
 
     invoke-virtual {p4, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -531,7 +425,7 @@
 
     move-result-object v0
 
-    goto/16 :goto_5
+    goto :goto_3
 
     :pswitch_2
     const/16 v1, 0x8
@@ -540,7 +434,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_11
+    if-eqz v1, :cond_b
 
     const/16 v0, 0x8
 
@@ -548,9 +442,9 @@
 
     move-result-object v0
 
-    goto/16 :goto_5
+    goto :goto_3
 
-    :cond_11
+    :cond_b
     const/16 v1, 0x12
 
     invoke-virtual {p4, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -571,7 +465,7 @@
 
     move-result-object v0
 
-    goto/16 :goto_5
+    goto/16 :goto_3
 
     nop
 
@@ -769,7 +663,7 @@
     .end packed-switch
 .end method
 
-.method protected abstract getDefaultDrawableResId()I
+.method protected abstract getDefaultDrawableResId(Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;)I
 .end method
 
 .method public final hideAllViews()V

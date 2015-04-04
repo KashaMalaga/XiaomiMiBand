@@ -186,13 +186,13 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "Player"
+    const-string v1, "RunPlayer"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v2
 
@@ -247,30 +247,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, "Player"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "playSound failed "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p1, Landroid/os/Message;->what:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(Ljava/lang/String;Ljava/lang/String;)V
-
     goto :goto_0
 
     :pswitch_data_0
@@ -290,7 +266,7 @@
 .end method
 
 .method private a(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;)Z
-    .locals 4
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -331,11 +307,27 @@
 
     if-nez v1, :cond_2
 
-    const-string v1, "Player"
+    const-string v1, "RunPlayer"
 
-    const-string v2, "outputFile is null"
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "playSound failed to create file cmdId: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -354,27 +346,62 @@
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v3
 
-    iput-object v1, v2, Lcn/com/smartdevices/bracelet/gps/c/c;->b:Landroid/net/Uri;
+    iput-object v3, v2, Lcn/com/smartdevices/bracelet/gps/c/c;->b:Landroid/net/Uri;
 
     iput-boolean v0, v2, Lcn/com/smartdevices/bracelet/gps/c/c;->c:Z
 
-    const/4 v1, 0x3
+    const/4 v3, 0x3
 
-    iput v1, v2, Lcn/com/smartdevices/bracelet/gps/c/c;->d:I
+    iput v3, v2, Lcn/com/smartdevices/bracelet/gps/c/c;->d:I
 
-    const/high16 v1, 0x3f800000
+    const/high16 v3, 0x3f800000
 
-    iput v1, v2, Lcn/com/smartdevices/bracelet/gps/c/c;->e:F
+    iput v3, v2, Lcn/com/smartdevices/bracelet/gps/c/c;->e:F
 
     invoke-direct {p0, v2, p3}, Lcn/com/smartdevices/bracelet/gps/c/e;->a(Lcn/com/smartdevices/bracelet/gps/c/c;Ljava/lang/String;)Landroid/media/MediaPlayer;
 
+    move-result-object v2
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/c/e;->e:Landroid/media/MediaPlayer;
+
+    if-nez v2, :cond_3
+
+    const-string v3, "RunPlayer"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "playSound failed to create player cmdId: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ",srcFilePath: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     move-result-object v1
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/c/e;->e:Landroid/media/MediaPlayer;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eqz v1, :cond_0
+    move-result-object v1
+
+    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    if-eqz v2, :cond_0
 
     const/4 v0, 0x1
 
@@ -415,8 +442,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_2
 
+    const-string v0, "RunPlayer"
+
+    const-string v1, "Delayed cachedMsgMap !hasNext"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -545,7 +581,7 @@
 .end method
 
 .method public a(Lcn/com/smartdevices/bracelet/gps/c/d;)V
-    .locals 4
+    .locals 3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/c/e;->d:Lcn/com/smartdevices/bracelet/gps/c/g;
 
@@ -583,29 +619,45 @@
     return-void
 
     :cond_0
-    const-string v1, "Player"
+    const-string v0, "RunPlayer"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "execute delayed to play message = "
+    const-string v2, "Execute delayed to play type = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v1
 
-    iget v0, v0, Landroid/os/Message;->what:I
+    iget v2, p1, Lcn/com/smartdevices/bracelet/gps/c/d;->c:I
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v2, ",cachedSize = "
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/c/e;->f:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -272,11 +272,11 @@
 .method public a(I)V
     .locals 5
 
-    const v4, 0x7f070089
+    const v4, 0x7f0700cf
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->d:Landroid/content/Context;
 
-    const v1, 0x7f030018
+    const v1, 0x7f030020
 
     const/4 v2, 0x0
 
@@ -306,7 +306,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f09006e
+    const v3, 0x7f0a0087
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -322,7 +322,7 @@
 
     if-nez v0, :cond_0
 
-    const v2, 0x7f070088
+    const v2, 0x7f0700ce
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

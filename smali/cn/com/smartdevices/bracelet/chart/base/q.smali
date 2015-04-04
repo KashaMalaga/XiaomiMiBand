@@ -95,7 +95,17 @@
     return-void
 .end method
 
-.method public c()F
+.method public c(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->a:F
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/q;->g()V
+
+    return-void
+.end method
+
+.method public f()F
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->a:F
@@ -103,17 +113,17 @@
     return v0
 .end method
 
-.method public c(F)V
+.method public f(F)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->a:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->b:F
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/q;->d()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/q;->g()V
 
     return-void
 .end method
 
-.method protected d()V
+.method protected g()V
     .locals 2
 
     const/4 v1, 0x0
@@ -154,16 +164,6 @@
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->d:F
 
     goto :goto_0
-.end method
-
-.method public f(F)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->b:F
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/q;->d()V
-
-    return-void
 .end method
 
 .method public g(F)V

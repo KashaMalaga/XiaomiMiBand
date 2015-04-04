@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>Pzt.</item>
+        <item>Sal.</item>
+        <item>Çrş.</item>
+        <item>Perş.</item>
+        <item>Cum.</item>
+        <item>Cts.</item>
+        <item>Paz.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Pzt.</item>
+        <item>Salı.</item>
+        <item>Çrş.</item>
+        <item>Perş.</item>
+        <item>Cum.</item>
+        <item>Cts.</item>
+        <item>Paz.</item>
+    </string-array>
+    <string-array name="months">
+        <item>Ocak</item>
+        <item>Şubat</item>
+        <item>Mart</item>
+        <item>Nisan</item>
+        <item>Mayıs</item>
+        <item>Haziran</item>
+        <item>Temmuz</item>
+        <item>Ağustos</item>
+        <item>Eylül</item>
+        <item>Ekim</item>
+        <item>Kasım</item>
+        <item>Aralık</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>Bir defa</item>
+        <item>Her gün</item>
+        <item>Hafta içi</item>
+        <item>Özelleştir</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>Tutarlılığın yerini hiç bir şey tutamaz.</item>
+        <item>İlerlemek için uğraşın, mükemmellik için değil.</item>
+        <item>Tekrar başarının babasıdır.</item>
+        <item>Enerji ve süreklilik her şeyi mümkün kılar.</item>
+        <item>Küçük hedefler belirleyin ve onları geliştirin.</item>
+        <item>Her yolculuk tek bir adımla başlar.</item>
+        <item>Her gün bir hedefe ulaşın.</item>
+        <item>Ne kadar yavaş gittiğiniz hiç önemli değil, halen koltuklarında oturup yayılan herkese tur bindiriyorsunuz.</item>
+        <item>Yapabildiğiniz zaman koşun. Eğer zorundaysanız yürüyün. Gerekirse emekleyin. Yalnızca asla vazgeçmeyin.</item>
+        <item>Unutmayın, iyi bir antremandan sonra hissettikleriniz, boş boş oturup keşke antreman yapsaydım düşüncesinden çok daha iyidir.</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>Harika</item>
+        <item>İyi</item>
+        <item>Ilıman</item>
+        <item>Dikkat</item>
+        <item>Sağlıksız</item>
+        <item>Çok sağlıksız</item>
+    </string-array>
+    <string-array name="weight_unit">
+        <item>kg</item>
+        <item>jin</item>
+        <item>lb</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>Zayıf</item>
+        <item>Normal ağırlık</item>
+        <item>Fazla kilolu</item>
+        <item>Obez</item>
+        <item>Obez</item>
+    </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>BMI Kategorisi: Zayıf</item>
+        <item>BMI Kategorisi: Normal ağırlık</item>
+        <item>BMI Category: Fazla kilolu</item>
+        <item>BMI Kategori: Obez</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>Ağırlığınızı kontrol etmeye yardımcı olmak için bir hedef belirleyin.</item>
+        <item>Tebrikler! Hedef ağırlığınızdasınız.</item>
+        <item>Hedef ağırlığınızın altındasınız</item>
+        <item>Hedef ağırlığınızın üstündesiniz</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>Ağırlığınızı kontrol etmeye yardımcı olmak için bir hedef belirleyin.</item>
+        <item>Tebrikler! Hedef ağırlığınızdasınız.</item>
+        <item>Hedef ağırlığınızın altındasınız</item>
+        <item>Hedef ağırlığınızın üstündesiniz</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>Aşılan hedef</item>
+        <item>Hedefinize ulaşmadınız</item>
+        <item>Hedefinize ulaştınız!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>Henüz hedefinize ulaşmadınız</item>
+        <item>Henüz hedefinize ulaşmadınız</item>
+        <item>Henüz hedefinize ulaşmadınız</item>
+        <item>Hedefinize ulaştınız (%1$s%2$s)!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>Henüz hedefinize ulaşmadınız</item>
+        <item>Henüz hedefinize ulaşmadınız</item>
+        <item>Henüz hedefinize ulaşmadınız</item>
+        <item>Hedefinize ulaştınız (%1$s%2$s)!</item>
+    </string-array>
+</resources>

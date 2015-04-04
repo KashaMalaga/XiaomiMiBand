@@ -23,9 +23,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Landroid/support/v4/widget/Y;
+    new-instance v0, Landroid/support/v4/widget/aP;
 
-    invoke-direct {v0}, Landroid/support/v4/widget/Y;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/widget/aP;-><init>()V
 
     sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -56,7 +56,7 @@
     goto :goto_0
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Landroid/support/v4/widget/T;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Landroid/support/v4/widget/aK;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;-><init>(Landroid/os/Parcel;)V

@@ -30,7 +30,7 @@
 .method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 4
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/E;->b([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/G;->b([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -78,7 +78,7 @@
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 6
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/E;->b([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/G;->b([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -137,7 +137,7 @@
 
     move-result-object v1
 
-    iget v4, v2, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iget v4, v2, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

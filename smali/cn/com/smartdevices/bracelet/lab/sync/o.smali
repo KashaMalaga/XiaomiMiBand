@@ -44,11 +44,11 @@
 
     if-eqz v2, :cond_3
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v2, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
+    invoke-direct {v2}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
 
     move-result-object v2
 
@@ -333,7 +333,7 @@
     return v0
 
     :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/b;->c(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/gps/a/e;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/b;->e(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/gps/a/e;
 
     move-result-object v1
 
@@ -592,13 +592,13 @@
     return v0
 
     :cond_1
-    invoke-static {p0, p1, p2}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;J)Lcn/com/smartdevices/bracelet/gps/services/w;
+    invoke-static {p0, p1, p2}, Lcn/com/smartdevices/bracelet/gps/a/b;->d(Landroid/content/Context;J)Lcn/com/smartdevices/bracelet/gps/services/w;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->H()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->J()Z
 
     move-result v1
 
@@ -755,7 +755,7 @@
     throw v0
 
     :cond_1
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/w;->C()J
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/w;->E()J
 
     move-result-wide v2
 
@@ -847,7 +847,7 @@
     throw v0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/b;->d(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/gps/a/e;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/b;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/gps/a/e;
 
     move-result-object v0
 
@@ -1088,7 +1088,7 @@
     throw v0
 
     :cond_2
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/b;->c(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/gps/a/e;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/b;->e(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/gps/a/e;
 
     move-result-object v0
 
@@ -1128,7 +1128,7 @@
 
     const/4 v2, -0x2
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/d/e;->b(JI)J
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/d/f;->b(JI)J
 
     move-result-wide v2
 
@@ -1140,11 +1140,11 @@
 
     invoke-virtual {v4, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v2, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v2, v4}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v2, v4}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/e;->a(J)J
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/f;->a(J)J
 
     move-result-wide v0
 
@@ -1152,15 +1152,15 @@
 
     invoke-virtual {v4, v0, v1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v0, v4}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v0, v4}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1288,15 +1288,15 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/w;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->C()J
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->E()J
 
     move-result-wide v4
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->C()J
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->E()J
 
     move-result-wide v6
 
-    invoke-static {p0, v6, v7}, Lcn/com/smartdevices/bracelet/gps/a/b;->b(Landroid/content/Context;J)Ljava/util/List;
+    invoke-static {p0, v6, v7}, Lcn/com/smartdevices/bracelet/gps/a/b;->e(Landroid/content/Context;J)Ljava/util/List;
 
     move-result-object v6
 
@@ -1422,7 +1422,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/w;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->C()J
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->E()J
 
     move-result-wide v2
 
@@ -1507,7 +1507,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/w;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->C()J
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->E()J
 
     move-result-wide v2
 
@@ -1845,7 +1845,7 @@
             "I",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/services/q;",
+            "Lcn/com/smartdevices/bracelet/gps/services/j;",
             ">;)Z"
         }
     .end annotation
@@ -1911,13 +1911,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/q;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/j;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/q;->i()J
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/j;->i()J
 
     move-result-wide v3
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/q;->e()Ljava/util/List;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/j;->e()Ljava/util/List;
 
     move-result-object v2
 
@@ -1956,7 +1956,7 @@
 
     invoke-static {v8, v9}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/q;->c()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/j;->c()I
 
     move-result v8
 
@@ -1982,7 +1982,7 @@
 
     move-result-object v9
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/q;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/j;->b()Ljava/lang/String;
 
     move-result-object v10
 

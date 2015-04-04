@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>Lu.</item>
+        <item>Ma</item>
+        <item>Mi.</item>
+        <item>Jo</item>
+        <item>Vi.</item>
+        <item>Sî.</item>
+        <item>Du.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Lu.</item>
+        <item>Ma.</item>
+        <item>Mi.</item>
+        <item>Jo.</item>
+        <item>Vi.</item>
+        <item>Sî.</item>
+        <item>Du.</item>
+    </string-array>
+    <string-array name="months">
+        <item>Ianuarie</item>
+        <item>Februarie</item>
+        <item>Martie</item>
+        <item>Aprilie</item>
+        <item>Mai</item>
+        <item>Iunie</item>
+        <item>Iulie</item>
+        <item>August</item>
+        <item>Septembrie</item>
+        <item>Octombrie</item>
+        <item>Noiembrie</item>
+        <item>Decembrie</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>Odată</item>
+        <item>Zilnic</item>
+        <item>Zilele săptămînii</item>
+        <item>Personalizează</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>E ușor a atinge obiectivul de azi, dar nu e ușor în fiecare zi.</item>
+        <item>Străduiţi-vă pentru progres, nu pentru perfecţiune.</item>
+        <item>Repetarea este mama succesului</item>
+        <item>Energia și perseverența cuceresc toate lucrurile.</item>
+        <item>Stabiliţi obiective mici şi bazaţi-vă pe ele</item>
+        <item>Orice călătorie începe cu un singur pas.</item>
+        <item>Ai atins scopul zilei</item>
+        <item>Începe astăzi pentru a deveni mai bun mâine.</item>
+        <item>Aleargă cînd poţi.Plimbă-te.Doar nu renunţa niciodată.</item>
+        <item>Amintiți-vă, sentimentul pe care îl primeşti de la un antrenament bun este mult mai bun decât sentimentul pe care îl obții de la ședința unde ați lucrat.</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>Superb</item>
+        <item>Bun</item>
+        <item>Moderat</item>
+        <item>Atenție</item>
+        <item>Nu este sănătos</item>
+        <item>Dăunător</item>
+    </string-array>
+    <string-array name="weight_unit">
+        <item>kg</item>
+        <item>jin</item>
+        <item>lb</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>Subponderali</item>
+        <item>Greutate normală</item>
+        <item>Supraponderali</item>
+        <item>Obez</item>
+        <item>Obez</item>
+    </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>BMI Categorie: Subponderal</item>
+        <item>BMI Categorie: Greutate normală</item>
+        <item>BMI Categorie: Supraponderal</item>
+        <item>BMI Categorie: Obez</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>Setați un obiectiv pentru a ajuta la gestionarea greutăţii dumneavoastră.</item>
+        <item>Felicitări! Sunteţi la greutatea dorită.</item>
+        <item>Ești sub greutatea dorită</item>
+        <item>Ești peste greutatea dorită</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>Setați un obiectiv pentru a ajuta la gestionarea greutăţii dumneavoastră.</item>
+        <item>Felicitări! Sunteţi la greutatea dorită.</item>
+        <item>Ești sub greutatea dorită</item>
+        <item>Ești peste greutatea dorită</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>Obiectiv depășit</item>
+        <item>Nu ţi-ai atins scopul</item>
+        <item>Ţi-ai atins scopul!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>Încă nu ţi-ai atins scopul!</item>
+        <item>Încă nu ţi-ai atins scopul</item>
+        <item>Încă nu ţi-ai atins scopul</item>
+        <item>Ţi-ai atins scopul( %1$s%2$s)!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>Încă nu ţi-ai atins scopul</item>
+        <item>Încă nu ţi-ai atins scopul</item>
+        <item>Încă nu ţi-ai atins scopul</item>
+        <item>Ţi-ai atins scopul( %1$s%2$s)!</item>
+    </string-array>
+</resources>

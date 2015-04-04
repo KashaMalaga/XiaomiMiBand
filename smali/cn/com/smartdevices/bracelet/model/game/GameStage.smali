@@ -124,7 +124,7 @@
 .method public getUrl(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/E;->j(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/G;->i(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 

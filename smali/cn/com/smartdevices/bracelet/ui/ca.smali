@@ -1,97 +1,41 @@
-.class public Lcn/com/smartdevices/bracelet/ui/cA;
-.super Lcn/com/smartdevices/bracelet/ui/W;
+.class Lcn/com/smartdevices/bracelet/ui/cA;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cx;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cx;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/W;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cA;->a:Lcn/com/smartdevices/bracelet/ui/cx;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()I
+.method public run()V
     .locals 1
 
-    const v0, 0x7f030075
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cA;->a:Lcn/com/smartdevices/bracelet/ui/cx;
 
-    return v0
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/W;->onCreate(Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 6
-
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/W;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/cA;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v2
-
-    const v0, 0x7f07024a
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/cx;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;)V
 
-    if-eqz v2, :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cA;->a:Lcn/com/smartdevices/bracelet/ui/cx;
 
-    const-string v3, "REF_PROGRESS_INFO"
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cx;->d(Lcn/com/smartdevices/bracelet/ui/cx;)V
 
-    const-string v4, "..."
-
-    invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "REF_PROGRESS_CANCELABLE"
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v2, v4, v5}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    const-string v0, "dwy"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Cancelable = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/cA;->setCancelable(Z)V
-
-    :cond_0
-    return-object v1
+    return-void
 .end method

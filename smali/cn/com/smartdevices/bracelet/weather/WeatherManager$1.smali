@@ -67,7 +67,7 @@
 
     const-string v2, "WeatherStart"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$1;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 

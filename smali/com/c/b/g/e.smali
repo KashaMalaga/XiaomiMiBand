@@ -7,15 +7,19 @@
 
 .field static final b:[I
 
-.field private static final e:[C
+.field private static final c:[C
 
-.field private static final f:I
+.field private static final d:I
 
 
 # instance fields
-.field private final g:Z
+.field private final e:Z
 
-.field private final h:Z
+.field private final f:Z
+
+.field private final g:Ljava/lang/StringBuilder;
+
+.field private final h:[I
 
 
 # direct methods
@@ -28,7 +32,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/c/b/g/e;->e:[C
+    sput-object v0, Lcom/c/b/g/e;->c:[C
 
     const/16 v0, 0x2c
 
@@ -44,7 +48,7 @@
 
     aget v0, v0, v1
 
-    sput v0, Lcom/c/b/g/e;->f:I
+    sput v0, Lcom/c/b/g/e;->d:I
 
     return-void
 
@@ -102,11 +106,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0}, Lcom/c/b/g/q;-><init>()V
-
-    iput-boolean v0, p0, Lcom/c/b/g/e;->g:Z
-
-    iput-boolean v0, p0, Lcom/c/b/g/e;->h:Z
+    invoke-direct {p0, v0}, Lcom/c/b/g/e;-><init>(Z)V
 
     return-void
 .end method
@@ -114,25 +114,35 @@
 .method public constructor <init>(Z)V
     .locals 1
 
-    invoke-direct {p0}, Lcom/c/b/g/q;-><init>()V
-
-    iput-boolean p1, p0, Lcom/c/b/g/e;->g:Z
-
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/c/b/g/e;->h:Z
+    invoke-direct {p0, p1, v0}, Lcom/c/b/g/e;-><init>(ZZ)V
 
     return-void
 .end method
 
 .method public constructor <init>(ZZ)V
-    .locals 0
+    .locals 2
 
     invoke-direct {p0}, Lcom/c/b/g/q;-><init>()V
 
-    iput-boolean p1, p0, Lcom/c/b/g/e;->g:Z
+    iput-boolean p1, p0, Lcom/c/b/g/e;->e:Z
 
-    iput-boolean p2, p0, Lcom/c/b/g/e;->h:Z
+    iput-boolean p2, p0, Lcom/c/b/g/e;->f:Z
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    iput-object v0, p0, Lcom/c/b/g/e;->g:Ljava/lang/StringBuilder;
+
+    const/16 v0, 0x9
+
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Lcom/c/b/g/e;->h:[I
 
     return-void
 .end method
@@ -155,7 +165,7 @@
 
     if-ne v1, p0, :cond_0
 
-    sget-object v1, Lcom/c/b/g/e;->e:[C
+    sget-object v1, Lcom/c/b/g/e;->c:[C
 
     aget-char v0, v1, v0
 
@@ -167,7 +177,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -190,10 +200,12 @@
     :goto_0
     const v2, 0x7fffffff
 
+    array-length v6, p0
+
     move v4, v1
 
     :goto_1
-    if-ge v4, v7, :cond_1
+    if-ge v4, v6, :cond_1
 
     aget v3, p0, v4
 
@@ -224,9 +236,7 @@
 
     aget v8, p0, v6
 
-    aget v9, p0, v6
-
-    if-le v9, v2, :cond_2
+    if-le v8, v2, :cond_2
 
     const/4 v9, 0x1
 
@@ -263,13 +273,11 @@
 
     aget v6, p0, v4
 
-    aget v8, p0, v4
-
-    if-le v8, v2, :cond_5
+    if-le v6, v2, :cond_5
 
     add-int/lit8 v1, v1, -0x1
 
-    shl-int/lit8 v6, v6, 0x1
+    mul-int/lit8 v6, v6, 0x2
 
     if-lt v6, v3, :cond_5
 
@@ -372,7 +380,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -390,7 +398,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -425,7 +433,7 @@
     goto :goto_1
 
     :cond_4
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -452,7 +460,7 @@
     goto :goto_1
 
     :cond_6
-    invoke-static {}, Lcom/c/b/g;->a()Lcom/c/b/g;
+    invoke-static {}, Lcom/c/b/h;->a()Lcom/c/b/h;
 
     move-result-object v0
 
@@ -537,13 +545,13 @@
 
     move-result v8
 
-    sget v9, Lcom/c/b/g/e;->f:I
+    sget v9, Lcom/c/b/g/e;->d:I
 
     if-ne v8, v9, :cond_1
 
     sub-int v8, v5, v0
 
-    shr-int/lit8 v8, v8, 0x1
+    div-int/lit8 v8, v8, 0x2
 
     sub-int v8, v0, v8
 
@@ -608,7 +616,7 @@
     goto :goto_1
 
     :cond_4
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -617,7 +625,7 @@
 
 
 # virtual methods
-.method public a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/o;
+.method public a(ILcom/c/b/c/a;Ljava/util/Map;)Lcom/c/b/s;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -627,21 +635,29 @@
             "<",
             "Lcom/c/b/e;",
             "*>;)",
-            "Lcom/c/b/o;"
+            "Lcom/c/b/s;"
         }
     .end annotation
 
-    const/16 v0, 0x9
+    iget-object v4, p0, Lcom/c/b/g/e;->h:[I
 
-    new-array v4, v0, [I
+    const/4 v0, 0x0
+
+    invoke-static {v4, v0}, Ljava/util/Arrays;->fill([II)V
+
+    iget-object v5, p0, Lcom/c/b/g/e;->g:Ljava/lang/StringBuilder;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->setLength(I)V
 
     invoke-static {p2, v4}, Lcom/c/b/g/e;->a(Lcom/c/b/c/a;[I)[I
 
-    move-result-object v5
+    move-result-object v6
 
     const/4 v0, 0x1
 
-    aget v0, v5, v0
+    aget v0, v6, v0
 
     invoke-virtual {p2, v0}, Lcom/c/b/c/a;->d(I)I
 
@@ -649,13 +665,7 @@
 
     invoke-virtual {p2}, Lcom/c/b/c/a;->a()I
 
-    move-result v6
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v7, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    move-result v7
 
     :goto_0
     invoke-static {p2, v0, v4}, Lcom/c/b/g/e;->a(Lcom/c/b/c/a;I[I)V
@@ -666,7 +676,7 @@
 
     if-gez v1, :cond_0
 
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -677,7 +687,7 @@
 
     move-result v3
 
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     array-length v8, v4
 
@@ -705,13 +715,13 @@
 
     if-ne v3, v2, :cond_9
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->length()I
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
 
     add-int/lit8 v2, v2, -0x1
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->setLength(I)V
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->setLength(I)V
 
     const/4 v3, 0x0
 
@@ -735,64 +745,66 @@
 
     sub-int/2addr v2, v3
 
-    if-eq v1, v6, :cond_3
+    if-eq v1, v7, :cond_3
 
-    shr-int/lit8 v2, v2, 0x1
+    mul-int/lit8 v1, v2, 0x2
 
-    if-ge v2, v3, :cond_3
+    if-ge v1, v3, :cond_3
 
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
     throw v0
 
     :cond_3
-    iget-boolean v2, p0, Lcom/c/b/g/e;->g:Z
+    iget-boolean v1, p0, Lcom/c/b/g/e;->e:Z
 
-    if-eqz v2, :cond_6
+    if-eqz v1, :cond_6
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->length()I
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v2
+    move-result v1
 
-    add-int/lit8 v4, v2, -0x1
-
-    const/4 v3, 0x0
+    add-int/lit8 v4, v1, -0x1
 
     const/4 v2, 0x0
 
+    const/4 v1, 0x0
+
     :goto_3
-    if-ge v2, v4, :cond_4
+    if-ge v1, v4, :cond_4
 
-    const-string v6, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. *$/+%"
+    const-string v7, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. *$/+%"
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->charAt(I)C
+    iget-object v8, p0, Lcom/c/b/g/e;->g:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->charAt(I)C
 
     move-result v8
 
-    invoke-virtual {v6, v8}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {v7, v8}, Ljava/lang/String;->indexOf(I)I
 
-    move-result v6
+    move-result v7
 
-    add-int/2addr v3, v6
+    add-int/2addr v2, v7
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
 
     :cond_4
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->charAt(I)C
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->charAt(I)C
 
-    move-result v2
+    move-result v1
 
-    sget-object v6, Lcom/c/b/g/e;->e:[C
+    sget-object v7, Lcom/c/b/g/e;->c:[C
 
-    rem-int/lit8 v3, v3, 0x2b
+    rem-int/lit8 v2, v2, 0x2b
 
-    aget-char v3, v6, v3
+    aget-char v2, v7, v2
 
-    if-eq v2, v3, :cond_5
+    if-eq v1, v2, :cond_5
 
     invoke-static {}, Lcom/c/b/d;->a()Lcom/c/b/d;
 
@@ -801,40 +813,48 @@
     throw v0
 
     :cond_5
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->setLength(I)V
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->setLength(I)V
 
     :cond_6
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->length()I
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v2
+    move-result v1
 
-    if-nez v2, :cond_7
+    if-nez v1, :cond_7
 
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
     throw v0
 
     :cond_7
-    iget-boolean v2, p0, Lcom/c/b/g/e;->h:Z
+    iget-boolean v1, p0, Lcom/c/b/g/e;->f:Z
 
-    if-eqz v2, :cond_8
+    if-eqz v1, :cond_8
 
-    invoke-static {v7}, Lcom/c/b/g/e;->a(Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/c/b/g/e;->a(Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
     :goto_4
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    aget v3, v5, v3
+    aget v2, v6, v2
 
     const/4 v4, 0x0
 
-    aget v4, v5, v4
+    aget v4, v6, v4
 
-    add-int/2addr v3, v4
+    add-int/2addr v2, v4
+
+    int-to-float v2, v2
+
+    const/high16 v4, 0x40000000
+
+    div-float/2addr v2, v4
+
+    int-to-float v0, v0
 
     int-to-float v3, v3
 
@@ -842,52 +862,46 @@
 
     div-float/2addr v3, v4
 
-    add-int/2addr v0, v1
+    add-float/2addr v0, v3
 
-    int-to-float v0, v0
-
-    const/high16 v1, 0x40000000
-
-    div-float/2addr v0, v1
-
-    new-instance v1, Lcom/c/b/o;
+    new-instance v3, Lcom/c/b/s;
 
     const/4 v4, 0x0
 
     const/4 v5, 0x2
 
-    new-array v5, v5, [Lcom/c/b/q;
+    new-array v5, v5, [Lcom/c/b/u;
 
     const/4 v6, 0x0
 
-    new-instance v7, Lcom/c/b/q;
+    new-instance v7, Lcom/c/b/u;
 
     int-to-float v8, p1
 
-    invoke-direct {v7, v3, v8}, Lcom/c/b/q;-><init>(FF)V
+    invoke-direct {v7, v2, v8}, Lcom/c/b/u;-><init>(FF)V
 
     aput-object v7, v5, v6
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    new-instance v6, Lcom/c/b/q;
+    new-instance v6, Lcom/c/b/u;
 
     int-to-float v7, p1
 
-    invoke-direct {v6, v0, v7}, Lcom/c/b/q;-><init>(FF)V
+    invoke-direct {v6, v0, v7}, Lcom/c/b/u;-><init>(FF)V
 
-    aput-object v6, v5, v3
+    aput-object v6, v5, v2
 
     sget-object v0, Lcom/c/b/a;->c:Lcom/c/b/a;
 
-    invoke-direct {v1, v2, v4, v5, v0}, Lcom/c/b/o;-><init>(Ljava/lang/String;[B[Lcom/c/b/q;Lcom/c/b/a;)V
+    invoke-direct {v3, v1, v4, v5, v0}, Lcom/c/b/s;-><init>(Ljava/lang/String;[B[Lcom/c/b/u;Lcom/c/b/a;)V
 
-    return-object v1
+    return-object v3
 
     :cond_8
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
     goto :goto_4
 

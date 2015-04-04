@@ -1,118 +1,174 @@
 .class Lcn/com/smartdevices/bracelet/ui/dF;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$PanelSlideListener;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dE;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dD;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dE;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dD;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dE;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onGetPullDownDistance()I
-    .locals 1
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 3
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
 
-    return v0
-.end method
-
-.method public onGetPullDownDockEnable()Ljava/lang/Boolean;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    const-string v1, "\u53cd\u9988\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5!"
 
-.method public onGetThreshhold()F
-    .locals 1
+    const/4 v2, 0x0
 
-    const/4 v0, 0x0
+    invoke-static {v0, v1, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
 
-    return v0
-.end method
+    move-result-object v0
 
-.method public onGetThreshhold2()F
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public onLastSlideOffset(Landroid/view/View;F)V
-    .locals 0
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     return-void
 .end method
 
-.method public onPanelAnchored(Landroid/view/View;)V
+.method public onFinish()V
     .locals 2
 
-    const-string v0, "SettingWeightFragment"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
 
-    const-string v1, "onPanelAnchored"
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->a(Lcn/com/smartdevices/bracelet/ui/dD;)Landroid/view/View;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     return-void
 .end method
 
-.method public onPanelCollapsed(Landroid/view/View;)V
+.method public onStart()V
     .locals 2
 
-    const-string v0, "SettingWeightFragment"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
 
-    const-string v1, "onPanelCollapsed"
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->a(Lcn/com/smartdevices/bracelet/ui/dD;)Landroid/view/View;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
-.method public onPanelExpanded(Landroid/view/View;)V
-    .locals 2
-
-    const-string v0, "SettingWeightFragment"
-
-    const-string v1, "onPanelExpanded"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     return-void
 .end method
 
-.method public onPanelSlide(Landroid/view/View;Ljava/lang/Boolean;F)V
-    .locals 1
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 5
 
-    const/high16 v0, 0x3f800000
+    const/4 v4, 0x0
 
-    cmpg-float v0, p3, v0
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/G;->b([B)Ljava/lang/String;
 
-    if-gtz v0, :cond_0
+    move-result-object v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dE;
+    const-string v1, "DDDD"
 
-    invoke-static {v0, p3}, Lcn/com/smartdevices/bracelet/ui/dE;->a(Lcn/com/smartdevices/bracelet/ui/dE;F)V
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Send Feedback : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ",content : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/dD;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "\u53cd\u9988\u6210\u529f\uff0c\u8c22\u8c22!"
+
+    invoke-static {v0, v1, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+
+    :goto_0
+    return-void
 
     :cond_0
-    return-void
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "\u53cd\u9988\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5!"
+
+    invoke-static {v0, v1, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_0
 .end method

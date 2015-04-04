@@ -37,7 +37,7 @@
 
     move-result v1
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v1, v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(I)V
 

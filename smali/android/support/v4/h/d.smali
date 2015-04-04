@@ -1,108 +1,131 @@
-.class Landroid/support/v4/h/d;
+.class final Landroid/support/v4/h/d;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/os/Parcelable$ClassLoaderCreator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$ClassLoaderCreator",
-        "<TT;>;"
-    }
-.end annotation
+.implements Landroid/support/v4/h/h;
 
 
 # instance fields
-.field private final a:Landroid/support/v4/h/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/support/v4/h/c",
-            "<TT;>;"
-        }
-    .end annotation
-.end field
+.field private final a:Landroid/support/v4/h/i;
 
 
 # direct methods
-.method public constructor <init>(Landroid/support/v4/h/c;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/v4/h/c",
-            "<TT;>;)V"
-        }
-    .end annotation
+.method constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/c;
+    new-instance v0, Landroid/support/v4/h/i;
+
+    invoke-direct {v0, p1}, Landroid/support/v4/h/i;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/i;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+.method public a()I
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/i;
+
+    invoke-virtual {v0}, Landroid/support/v4/h/i;->a()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public a(I)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/i;
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/h/i;->a(I)V
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/support/v4/h/c;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/os/Parcel;",
-            ")TT;"
-        }
-    .end annotation
 
-    iget-object v0, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/c;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    if-eqz p3, :cond_0
 
-    invoke-interface {v0, p1, v1}, Landroid/support/v4/h/c;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    new-instance v0, Landroid/support/v4/h/e;
 
-    move-result-object v0
+    invoke-direct {v0, p0, p3}, Landroid/support/v4/h/e;-><init>(Landroid/support/v4/h/d;Landroid/support/v4/h/c;)V
 
-    return-object v0
+    :cond_0
+    iget-object v1, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/i;
+
+    invoke-virtual {v1, p1, p2, v0}, Landroid/support/v4/h/i;->a(Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/support/v4/h/n;)V
+
+    return-void
 .end method
 
-.method public createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/os/Parcel;",
-            "Ljava/lang/ClassLoader;",
-            ")TT;"
-        }
-    .end annotation
+.method public a(Ljava/lang/String;Landroid/net/Uri;Landroid/support/v4/h/c;)V
+    .locals 2
 
-    iget-object v0, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/c;
+    const/4 v0, 0x0
 
-    invoke-interface {v0, p1, p2}, Landroid/support/v4/h/c;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    if-eqz p3, :cond_0
 
-    move-result-object v0
+    new-instance v0, Landroid/support/v4/h/f;
 
-    return-object v0
+    invoke-direct {v0, p0, p3}, Landroid/support/v4/h/f;-><init>(Landroid/support/v4/h/d;Landroid/support/v4/h/c;)V
+
+    :cond_0
+    iget-object v1, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/i;
+
+    invoke-virtual {v1, p1, p2, v0}, Landroid/support/v4/h/i;->a(Ljava/lang/String;Landroid/net/Uri;Landroid/support/v4/h/n;)V
+
+    return-void
 .end method
 
-.method public newArray(I)[Ljava/lang/Object;
+.method public b()I
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)[TT;"
-        }
-    .end annotation
 
-    iget-object v0, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/c;
+    iget-object v0, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/i;
 
-    invoke-interface {v0, p1}, Landroid/support/v4/h/c;->a(I)[Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/support/v4/h/i;->c()I
 
-    move-result-object v0
+    move-result v0
 
-    return-object v0
+    return v0
+.end method
+
+.method public b(I)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/i;
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/h/i;->b(I)V
+
+    return-void
+.end method
+
+.method public c()I
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/i;
+
+    invoke-virtual {v0}, Landroid/support/v4/h/i;->b()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public c(I)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/h/d;->a:Landroid/support/v4/h/i;
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/h/i;->c(I)V
+
+    return-void
 .end method

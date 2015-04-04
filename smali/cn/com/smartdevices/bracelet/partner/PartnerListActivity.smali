@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field a:Landroid/widget/ExpandableListView;
+.field private mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
-.field private b:Lcn/com/smartdevices/bracelet/partner/j;
+.field private mServiceManager:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
-.field private c:Lcn/com/smartdevices/bracelet/partner/d;
+.field mServiceView:Landroid/widget/ExpandableListView;
 
 
 # direct methods
@@ -22,15 +22,15 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
     return-void
 .end method
 
-.method private b()V
+.method private setTitleBack()V
     .locals 2
 
-    const v0, 0x7f070035
+    const v0, 0x7f07003d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->findViewById(I)Landroid/view/View;
 
@@ -38,7 +38,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f080369
+    const v1, 0x7f090402
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->getString(I)Ljava/lang/String;
 
@@ -46,9 +46,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/partner/i;
+    new-instance v1, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity$1;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/partner/i;-><init>(Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity$1;-><init>(Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -57,12 +57,12 @@
 
 
 # virtual methods
-.method public a()V
+.method public expandAllGroup()V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/partner/j;->getGroupCount()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;->getGroupCount()I
 
     move-result v1
 
@@ -71,7 +71,7 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->a:Landroid/widget/ExpandableListView;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mServiceView:Landroid/widget/ExpandableListView;
 
     invoke-virtual {v2, v0}, Landroid/widget/ExpandableListView;->expandGroup(I)Z
 
@@ -86,13 +86,13 @@
 .method public onChildClick(Landroid/widget/ExpandableListView;Landroid/view/View;IIJ)Z
     .locals 6
 
-    const/4 v0, 0x1
-
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
+    const/4 v0, 0x1
 
-    invoke-virtual {v2, p3}, Lcn/com/smartdevices/bracelet/partner/j;->a(I)Ljava/lang/Integer;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
+
+    invoke-virtual {v2, p3}, Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;->getGroup(I)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -100,50 +100,52 @@
 
     move-result v3
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
-    invoke-virtual {v2, p3, p4}, Lcn/com/smartdevices/bracelet/partner/j;->a(II)Lcn/com/smartdevices/bracelet/partner/c;
+    invoke-virtual {v2, p3, p4}, Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;->getChild(II)Lcn/com/smartdevices/bracelet/partner/Partner;
 
     move-result-object v4
 
-    if-nez v4, :cond_0
+    if-nez v4, :cond_1
 
-    :goto_0
-    return v1
+    move v0, v1
 
     :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
     const/4 v2, 0x0
 
-    if-ne v0, v3, :cond_3
+    if-ne v0, v3, :cond_4
 
-    invoke-static {p0, v4}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/partner/c;)Landroid/content/Intent;
+    invoke-static {p0, v4}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->buildIntent(Landroid/content/Context;Lcn/com/smartdevices/bracelet/partner/Partner;)Landroid/content/Intent;
 
     move-result-object v2
 
-    :cond_1
+    :cond_2
     :goto_1
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->startActivity(Landroid/content/Intent;)V
 
-    :cond_2
-    if-eqz v2, :cond_7
+    :cond_3
+    if-nez v2, :cond_0
 
-    :goto_2
-    move v1, v0
+    move v0, v1
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     const-string v3, "qq"
 
-    iget-object v5, v4, Lcn/com/smartdevices/bracelet/partner/c;->j:Ljava/lang/String;
+    iget-object v5, v4, Lcn/com/smartdevices/bracelet/partner/Partner;->id:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_5
 
     new-instance v2, Landroid/content/Intent;
 
@@ -153,22 +155,22 @@
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     const-string v3, "we_chat"
 
-    iget-object v5, v4, Lcn/com/smartdevices/bracelet/partner/c;->j:Ljava/lang/String;
+    iget-object v5, v4, Lcn/com/smartdevices/bracelet/partner/Partner;->id:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/E;->r(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/G;->q(Landroid/content/Context;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_6
 
     new-instance v2, Landroid/content/Intent;
 
@@ -178,7 +180,7 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     new-instance v2, Landroid/content/Intent;
 
     const-class v3, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
@@ -187,16 +189,16 @@
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
     const-string v3, "health_link"
 
-    iget-object v4, v4, Lcn/com/smartdevices/bracelet/partner/c;->j:Ljava/lang/String;
+    iget-object v5, v4, Lcn/com/smartdevices/bracelet/partner/Partner;->id:Ljava/lang/String;
 
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_8
 
     new-instance v2, Landroid/content/Intent;
 
@@ -206,10 +208,22 @@
 
     goto :goto_1
 
-    :cond_7
-    move v0, v1
+    :cond_8
+    const-string v3, "weibo_health"
 
-    goto :goto_2
+    iget-object v4, v4, Lcn/com/smartdevices/bracelet/partner/Partner;->id:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const/4 v1, 0x3
+
+    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->a(Landroid/content/Context;I)V
+
+    goto :goto_0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
@@ -217,11 +231,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030030
+    const v0, 0x7f03003d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->setContentView(I)V
 
-    const v0, 0x7f070035
+    const v0, 0x7f07003d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->findViewById(I)Landroid/view/View;
 
@@ -229,31 +243,31 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f080369
+    const v1, 0x7f090402
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->setTitleBack()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/partner/d;
+    new-instance v0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/partner/d;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->c:Lcn/com/smartdevices/bracelet/partner/d;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mServiceManager:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->c:Lcn/com/smartdevices/bracelet/partner/d;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mServiceManager:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/partner/d;->b()Landroid/util/SparseArray;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->getLocalServiceList()Landroid/util/SparseArray;
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/partner/j;
+    new-instance v1, Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
-    invoke-direct {v1, p0, v0}, Lcn/com/smartdevices/bracelet/partner/j;-><init>(Landroid/content/Context;Landroid/util/SparseArray;)V
+    invoke-direct {v1, p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;-><init>(Landroid/content/Context;Landroid/util/SparseArray;)V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
-    const v0, 0x7f070134
+    const v0, 0x7f070181
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->findViewById(I)Landroid/view/View;
 
@@ -261,23 +275,23 @@
 
     check-cast v0, Landroid/widget/ExpandableListView;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->a:Landroid/widget/ExpandableListView;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mServiceView:Landroid/widget/ExpandableListView;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->a:Landroid/widget/ExpandableListView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mServiceView:Landroid/widget/ExpandableListView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/ExpandableListView;->setAdapter(Landroid/widget/ExpandableListAdapter;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->a:Landroid/widget/ExpandableListView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mServiceView:Landroid/widget/ExpandableListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ExpandableListView;->setOnChildClickListener(Landroid/widget/ExpandableListView$OnChildClickListener;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->a:Landroid/widget/ExpandableListView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mServiceView:Landroid/widget/ExpandableListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ExpandableListView;->setOnGroupClickListener(Landroid/widget/ExpandableListView$OnGroupClickListener;)V
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->a()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->expandAllGroup()V
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
@@ -285,11 +299,11 @@
 
     invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->c:Lcn/com/smartdevices/bracelet/partner/d;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mServiceManager:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/partner/d;->a(Z)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->loadAvailableServiceList(Z)V
 
     return-void
 .end method
@@ -326,19 +340,19 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
     const/4 v1, 0x1
 
     iget-object v2, p1, Lcn/com/smartdevices/bracelet/eventbus/EventServiceListLoad;->partners:Ljava/util/List;
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/partner/j;->a(ILjava/util/List;)V
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;->addPartners(ILjava/util/List;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/partner/j;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;->notifyDataSetChanged()V
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->a()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->expandAllGroup()V
 
     goto :goto_0
 .end method
@@ -361,17 +375,17 @@
     move v0, v1
 
     :cond_0
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
     iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventServiceStateChanged;->thirdAppId:Ljava/lang/String;
 
     iget-object v4, p1, Lcn/com/smartdevices/bracelet/eventbus/EventServiceStateChanged;->url:Ljava/lang/String;
 
-    invoke-virtual {v2, v1, v3, v0, v4}, Lcn/com/smartdevices/bracelet/partner/j;->a(ILjava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {v2, v1, v3, v0, v4}, Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;->updatePartnerItem(ILjava/lang/String;ILjava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/partner/j;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;->notifyDataSetChanged()V
 
     :cond_1
     return-void
@@ -392,9 +406,9 @@
 
     const-string v0, "PagePartnerList"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -406,9 +420,9 @@
 
     const-string v0, "PagePartnerList"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
 
     return-void
 .end method

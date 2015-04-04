@@ -23,7 +23,7 @@
 
 
 # virtual methods
-.method final check(Landroid/content/Context;Lcom/sina/weibo/sdk/api/share/VersionCheckHandler;)Z
+.method final check(Landroid/content/Context;Lcom/sina/weibo/sdk/WeiboAppManager$WeiboInfo;Lcom/sina/weibo/sdk/api/share/VersionCheckHandler;)Z
     .locals 1
 
     const/4 v0, 0x1

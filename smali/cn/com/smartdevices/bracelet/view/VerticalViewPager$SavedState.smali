@@ -27,11 +27,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/Y;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/W;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/Y;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/W;-><init>()V
 
-    invoke-static {v0}, Landroid/support/v4/h/a;->a(Landroid/support/v4/h/c;)Landroid/os/Parcelable$Creator;
+    invoke-static {v0}, Landroid/support/v4/g/e;->a(Landroid/support/v4/g/g;)Landroid/os/Parcelable$Creator;
 
     move-result-object v0
 

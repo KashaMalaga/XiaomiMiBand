@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/common_header_height">
+        <TextView android:id="@id/home_back" android:text="@string/action_pop_person_info" style="@style/BackButton" />
+    </LinearLayout>
+    <include layout="@layout/split_line_with_margin" />
+    <LinearLayout android:orientation="vertical" android:id="@id/my_page_person_info" android:background="@drawable/bg_item" android:clickable="true" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="@dimen/common_list_item_left_right_padding" android:paddingRight="@dimen/common_list_item_left_right_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/my_page_avater" android:background="@drawable/person_avatar_default_share" android:layout_width="55.0dip" android:layout_height="55.0dip" android:scaleType="fitCenter" android:layout_centerHorizontal="true" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="12.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0">
+                <TextView android:textSize="@dimen/main_ui_dialog_title_size" android:textColor="@color/main_ui_title_color" android:id="@id/my_page_person_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="XXX" />
+                <TextView android:textSize="@dimen/main_ui_content_size_2" android:textColor="@color/main_ui_content_color" android:id="@id/my_page_person_total_dist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="XXX123" />
+            </LinearLayout>
+            <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_indicator_right_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/split_line_with_margin" />
+    <LinearLayout android:layout_width="1.0dip" android:layout_height="@dimen/common_header_height" />
+    <include layout="@layout/split_line_with_margin" />
+    <RelativeLayout android:id="@id/menu_family" android:background="@drawable/bg_item" android:layout_width="fill_parent" android:layout_height="@dimen/common_list_item_1_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:onClick="onItemFamilyClick">
+        <TextView android:paddingLeft="@dimen/main_menu_item_padding" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:text="@string/family_member" style="@style/ListItemTitleText" />
+        <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/common_list_item_left_right_padding" android:src="@drawable/ic_indicator_right_arrow" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <include layout="@layout/split_line_with_margin" />
+    <RelativeLayout android:id="@id/menu_lab_factory" android:background="@drawable/bg_item" android:layout_width="fill_parent" android:layout_height="@dimen/common_list_item_1_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:onClick="onItemLabClick">
+        <TextView android:paddingLeft="@dimen/main_menu_item_padding" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:text="@string/action_pop_lab" style="@style/ListItemTitleText" />
+        <ImageView android:id="@id/menu_lab_factory_new_sign" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/new_banner_icon" />
+        <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/common_list_item_left_right_padding" android:src="@drawable/ic_indicator_right_arrow" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:id="@id/split_line_lab" android:background="@color/split_color" android:layout_width="fill_parent" android:layout_height="@dimen/round_bg_stroke" android:layout_marginLeft="@dimen/common_list_item_left_right_padding" android:layout_marginRight="@dimen/common_list_item_left_right_padding" />
+    <LinearLayout android:id="@id/device_set_goal" android:background="@drawable/bg_item" android:paddingLeft="@dimen/common_list_item_left_right_padding" android:paddingTop="6.0dip" android:paddingRight="@dimen/common_list_item_left_right_padding" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/common_list_item_1_height">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/set_person_goal" style="@style/ListItemTitleText" />
+        </LinearLayout>
+        <TextView android:id="@id/device_set_goal_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/set_goal_step" style="@style/ListItemValueText" />
+        <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+    </LinearLayout>
+    <include layout="@layout/split_line_with_margin" />
+    <LinearLayout android:id="@id/info_weight_goal" android:background="@drawable/bg_item" android:paddingLeft="@dimen/common_list_item_left_right_padding" android:paddingRight="@dimen/common_list_item_left_right_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/common_list_item_1_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/set_weight_goal" style="@style/ListItemTitleText" />
+        </LinearLayout>
+        <TextView android:id="@id/info_weight_goal_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="" style="@style/ListItemValueText" />
+        <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+    </LinearLayout>
+    <include android:id="@id/info_weight_goal_split" layout="@layout/split_line_with_margin" />
+    <LinearLayout android:id="@id/info_unit_set" android:background="@drawable/bg_item" android:paddingLeft="@dimen/common_list_item_left_right_padding" android:paddingRight="@dimen/common_list_item_left_right_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/common_list_item_1_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/set_unit" style="@style/ListItemTitleText" />
+        </LinearLayout>
+        <TextView android:id="@id/info_unit_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="" style="@style/ListItemValueText" />
+        <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+    </LinearLayout>
+    <include layout="@layout/split_line_with_margin" />
+    <LinearLayout android:layout_width="1.0dip" android:layout_height="@dimen/common_header_height" />
+    <include layout="@layout/split_line_with_margin" />
+    <LinearLayout android:id="@id/my_page_about_area" android:background="@drawable/bg_item" android:paddingLeft="@dimen/common_list_item_left_right_padding" android:paddingRight="@dimen/common_list_item_left_right_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/common_list_item_1_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/about" style="@style/ListItemTitleText" />
+        </LinearLayout>
+        <TextView android:id="@id/my_page_about_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="" style="@style/ListItemValueText" />
+        <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+    </LinearLayout>
+    <include layout="@layout/split_line_with_margin" />
+</LinearLayout>

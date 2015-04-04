@@ -1,85 +1,133 @@
 .class Lcn/com/smartdevices/bracelet/ui/cf;
-.super Lcn/com/smartdevices/bracelet/a/b;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/bZ;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bZ;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->b:Lcn/com/smartdevices/bracelet/ui/bZ;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
-    .locals 0
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 6
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
+    const/4 v5, 0x1
 
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    sparse-switch v0, :sswitch_data_0
+
+    :cond_0
+    :goto_0
     return-void
-.end method
 
-.method public c(Ljava/lang/Object;)V
-    .locals 2
+    :sswitch_0
+    const-string v0, "SCORPIONEAL"
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
-
-    const-string v0, "PersonInfoFragment"
-
-    const-string v1, "sync to bracelet ok"
+    const-string v1, "receive the msg reconnect timeout"
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-.method public d(Ljava/lang/Object;)V
-    .locals 3
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
+    const v2, 0x7f0901f4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->b:Lcn/com/smartdevices/bracelet/ui/bZ;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bZ;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->b:Lcn/com/smartdevices/bracelet/ui/bZ;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bZ;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->b:Lcn/com/smartdevices/bracelet/ui/bZ;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/bZ;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f080051
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    const v3, 0x7f0901f5
 
-    move-result-object v1
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getString(I)Ljava/lang/String;
 
-    const/4 v2, 0x0
+    move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    const/4 v3, 0x2
+
+    const/4 v4, 0x0
+
+    invoke-static {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Ljava/lang/String;Ljava/lang/String;IF)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Z)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->b(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Z)Z
+
+    goto :goto_0
+
+    :sswitch_1
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->n()Lcom/xiaomi/hm/bleservice/HwConnStatus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->p()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
 
-    :cond_0
-    return-void
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->onEvent(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->onEvent(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
+
+    goto :goto_0
+
+    :sswitch_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->h(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
+
+    goto :goto_0
+
+    :sswitch_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    const-wide/16 v1, -0x1
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;J)J
+
+    goto :goto_0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x110 -> :sswitch_0
+        0x111 -> :sswitch_1
+        0x112 -> :sswitch_2
+        0x208 -> :sswitch_3
+    .end sparse-switch
 .end method

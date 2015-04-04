@@ -11,14 +11,14 @@
 
 .field private static final d:Ljava/util/regex/Pattern;
 
-.field private static final e:Ljava/util/regex/Pattern;
+.field private static final e:Ljava/lang/String; = "\ufeff"
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    const/16 v0, 0x13
+    const/16 v0, 0x14
 
     new-array v0, v0, [Lcom/c/b/b/a/u;
 
@@ -128,9 +128,9 @@
 
     const/16 v1, 0xd
 
-    new-instance v2, Lcom/c/b/b/a/I;
+    new-instance v2, Lcom/c/b/b/a/K;
 
-    invoke-direct {v2}, Lcom/c/b/b/a/I;-><init>()V
+    invoke-direct {v2}, Lcom/c/b/b/a/K;-><init>()V
 
     aput-object v2, v0, v1
 
@@ -174,9 +174,17 @@
 
     aput-object v2, v0, v1
 
+    const/16 v1, 0x13
+
+    new-instance v2, Lcom/c/b/b/a/I;
+
+    invoke-direct {v2}, Lcom/c/b/b/a/I;-><init>()V
+
+    aput-object v2, v0, v1
+
     sput-object v0, Lcom/c/b/b/a/u;->a:[Lcom/c/b/b/a/u;
 
-    const-string v0, "\\d*"
+    const-string v0, "\\d+"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -184,7 +192,7 @@
 
     sput-object v0, Lcom/c/b/b/a/u;->b:Ljava/util/regex/Pattern;
 
-    const-string v0, "[a-zA-Z0-9]*"
+    const-string v0, "&"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -192,21 +200,13 @@
 
     sput-object v0, Lcom/c/b/b/a/u;->c:Ljava/util/regex/Pattern;
 
-    const-string v0, "&"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/c/b/b/a/u;->d:Ljava/util/regex/Pattern;
-
     const-string v0, "="
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    sput-object v0, Lcom/c/b/b/a/u;->e:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/c/b/b/a/u;->d:Ljava/util/regex/Pattern;
 
     return-void
 .end method
@@ -287,7 +287,7 @@
 
     const/4 v2, 0x2
 
-    sget-object v0, Lcom/c/b/b/a/u;->e:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/c/b/b/a/u;->d:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0, v2}, Ljava/util/regex/Pattern;->split(Ljava/lang/CharSequence;I)[Ljava/lang/String;
 
@@ -306,27 +306,22 @@
     aget-object v0, v0, v2
 
     :try_start_0
-    const-string v2, "UTF-8"
-
-    invoke-static {v0, v2}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0}, Lcom/c/b/b/a/u;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_0
+    :goto_0
     return-void
 
     :catch_0
     move-exception v0
 
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
+    goto :goto_0
 .end method
 
 .method protected static a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
@@ -377,6 +372,8 @@
 
     if-eqz p0, :cond_0
 
+    if-lez p1, :cond_0
+
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -411,7 +408,9 @@
 
     const/4 v0, 0x0
 
-    if-nez p0, :cond_1
+    if-eqz p0, :cond_0
+
+    if-gtz p2, :cond_1
 
     :cond_0
     :goto_0
@@ -448,7 +447,7 @@
 .end method
 
 .method static a(Ljava/lang/String;Ljava/lang/String;CZ)[Ljava/lang/String;
-    .locals 10
+    .locals 9
 
     const/4 v2, 0x0
 
@@ -478,7 +477,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     :cond_1
     move-object v0, v2
@@ -502,7 +501,7 @@
     move v1, v5
 
     :goto_2
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_8
 
     invoke-virtual {p1, p2, v1}, Ljava/lang/String;->indexOf(II)I
 
@@ -519,15 +518,13 @@
     goto :goto_2
 
     :cond_3
-    add-int/lit8 v1, v7, -0x1
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
+    invoke-static {p1, v7}, Lcom/c/b/b/a/u;->b(Ljava/lang/CharSequence;I)I
 
     move-result v1
 
-    const/16 v8, 0x5c
+    rem-int/lit8 v1, v1, 0x2
 
-    if-ne v1, v8, :cond_4
+    if-eqz v1, :cond_4
 
     add-int/lit8 v1, v7, 0x1
 
@@ -558,24 +555,31 @@
     move-result-object v1
 
     :cond_6
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v4
+
+    if-nez v4, :cond_7
+
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    :cond_7
     add-int/lit8 v1, v7, 0x1
 
     move v4, v3
 
     goto :goto_2
 
-    :cond_7
-    move v9, v1
+    :cond_8
+    move v8, v1
 
     move-object v1, v0
 
-    move v0, v9
+    move v0, v8
 
     goto :goto_0
 
-    :cond_8
+    :cond_9
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -589,6 +593,34 @@
     check-cast v0, [Ljava/lang/String;
 
     goto :goto_1
+.end method
+
+.method private static b(Ljava/lang/CharSequence;I)I
+    .locals 4
+
+    const/4 v1, 0x0
+
+    add-int/lit8 v0, p1, -0x1
+
+    :goto_0
+    if-ltz v0, :cond_0
+
+    invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v2
+
+    const/16 v3, 0x5c
+
+    if-ne v2, v3, :cond_0
+
+    add-int/lit8 v1, v1, 0x1
+
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v1
 .end method
 
 .method static b(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
@@ -609,47 +641,6 @@
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
-
-    goto :goto_0
-.end method
-
-.method protected static b(Ljava/lang/CharSequence;II)Z
-    .locals 3
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_1
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    add-int v1, p1, p2
-
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    if-lt v2, v1, :cond_0
-
-    sget-object v2, Lcom/c/b/b/a/u;->c:Ljava/util/regex/Pattern;
-
-    invoke-interface {p0, p1, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x1
 
     goto :goto_0
 .end method
@@ -676,50 +667,29 @@
     goto :goto_0
 .end method
 
-.method public static c(Lcom/c/b/o;)Lcom/c/b/b/a/q;
-    .locals 4
+.method protected static c(Lcom/c/b/s;)Ljava/lang/String;
+    .locals 2
 
-    sget-object v2, Lcom/c/b/b/a/u;->a:[Lcom/c/b/b/a/u;
-
-    array-length v3, v2
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v3, :cond_1
-
-    aget-object v0, v2, v1
-
-    invoke-virtual {v0, p0}, Lcom/c/b/b/a/u;->b(Lcom/c/b/o;)Lcom/c/b/b/a/q;
+    invoke-virtual {p0}, Lcom/c/b/s;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    const-string v1, "\ufeff"
 
-    :goto_1
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
 
     :cond_0
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Lcom/c/b/b/a/B;
-
-    invoke-virtual {p0}, Lcom/c/b/o;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lcom/c/b/b/a/B;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
+    return-object v0
 .end method
 
 .method protected static c(Ljava/lang/String;)Ljava/lang/String;
@@ -793,6 +763,52 @@
     goto :goto_0
 .end method
 
+.method public static d(Lcom/c/b/s;)Lcom/c/b/b/a/q;
+    .locals 4
+
+    sget-object v2, Lcom/c/b/b/a/u;->a:[Lcom/c/b/b/a/u;
+
+    array-length v3, v2
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, v3, :cond_1
+
+    aget-object v0, v2, v1
+
+    invoke-virtual {v0, p0}, Lcom/c/b/b/a/u;->b(Lcom/c/b/s;)Lcom/c/b/b/a/q;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    :goto_1
+    return-object v0
+
+    :cond_0
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Lcom/c/b/b/a/B;
+
+    invoke-virtual {p0}, Lcom/c/b/s;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lcom/c/b/b/a/B;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+.end method
+
 .method static d(Ljava/lang/String;)Ljava/util/Map;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
@@ -828,7 +844,7 @@
 
     invoke-direct {v0, v2}, Ljava/util/HashMap;-><init>(I)V
 
-    sget-object v2, Lcom/c/b/b/a/u;->d:Ljava/util/regex/Pattern;
+    sget-object v2, Lcom/c/b/b/a/u;->c:Ljava/util/regex/Pattern;
 
     add-int/lit8 v1, v1, 0x1
 
@@ -856,7 +872,31 @@
     goto :goto_0
 .end method
 
+.method static e(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    :try_start_0
+    const-string v0, "UTF-8"
+
+    invoke-static {p0, v0}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
 
 # virtual methods
-.method public abstract b(Lcom/c/b/o;)Lcom/c/b/b/a/q;
+.method public abstract b(Lcom/c/b/s;)Lcom/c/b/b/a/q;
 .end method

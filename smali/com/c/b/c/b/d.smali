@@ -25,23 +25,6 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lcom/c/b/c/b/a;->e:Lcom/c/b/c/b/a;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Only QR Code is supported at this time"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
     iput-object p1, p0, Lcom/c/b/c/b/d;->a:Lcom/c/b/c/b/a;
 
     new-instance v0, Ljava/util/ArrayList;
@@ -68,9 +51,9 @@
 .end method
 
 .method private a(I)Lcom/c/b/c/b/b;
-    .locals 9
+    .locals 10
 
-    const/4 v7, 0x1
+    const/4 v8, 0x1
 
     iget-object v0, p0, Lcom/c/b/c/b/d;->b:Ljava/util/List;
 
@@ -102,11 +85,11 @@
 
     move-result v1
 
-    move v8, v1
+    move v9, v1
 
     move-object v1, v0
 
-    move v0, v8
+    move v0, v9
 
     :goto_0
     if-gt v0, p1, :cond_0
@@ -121,17 +104,25 @@
 
     const/4 v5, 0x0
 
-    aput v7, v4, v5
+    aput v8, v4, v5
 
     iget-object v5, p0, Lcom/c/b/c/b/d;->a:Lcom/c/b/c/b/a;
 
     add-int/lit8 v6, v0, -0x1
 
+    iget-object v7, p0, Lcom/c/b/c/b/d;->a:Lcom/c/b/c/b/a;
+
+    invoke-virtual {v7}, Lcom/c/b/c/b/a;->d()I
+
+    move-result v7
+
+    add-int/2addr v6, v7
+
     invoke-virtual {v5, v6}, Lcom/c/b/c/b/a;->a(I)I
 
     move-result v5
 
-    aput v5, v4, v7
+    aput v5, v4, v8
 
     invoke-direct {v2, v3, v4}, Lcom/c/b/c/b/b;-><init>(Lcom/c/b/c/b/a;[I)V
 

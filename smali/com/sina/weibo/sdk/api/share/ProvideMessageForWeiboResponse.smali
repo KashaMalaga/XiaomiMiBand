@@ -28,7 +28,7 @@
 
 # virtual methods
 .method final check(Landroid/content/Context;Lcom/sina/weibo/sdk/api/share/VersionCheckHandler;)Z
-    .locals 2
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -45,11 +45,9 @@
 
     iget-object v1, p0, Lcom/sina/weibo/sdk/api/share/ProvideMessageForWeiboResponse;->reqPackageName:Ljava/lang/String;
 
-    invoke-virtual {p2, v1}, Lcom/sina/weibo/sdk/api/share/VersionCheckHandler;->setPackageName(Ljava/lang/String;)V
+    iget-object v2, p0, Lcom/sina/weibo/sdk/api/share/ProvideMessageForWeiboResponse;->message:Lcom/sina/weibo/sdk/api/WeiboMessage;
 
-    iget-object v1, p0, Lcom/sina/weibo/sdk/api/share/ProvideMessageForWeiboResponse;->message:Lcom/sina/weibo/sdk/api/WeiboMessage;
-
-    invoke-virtual {p2, p1, v1}, Lcom/sina/weibo/sdk/api/share/VersionCheckHandler;->check(Landroid/content/Context;Lcom/sina/weibo/sdk/api/WeiboMessage;)Z
+    invoke-virtual {p2, p1, v1, v2}, Lcom/sina/weibo/sdk/api/share/VersionCheckHandler;->checkResponse(Landroid/content/Context;Ljava/lang/String;Lcom/sina/weibo/sdk/api/WeiboMessage;)Z
 
     move-result v1
 

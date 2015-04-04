@@ -1,13 +1,19 @@
-.class public Lcn/com/smartdevices/bracelet/ui/O;
+.class Lcn/com/smartdevices/bracelet/ui/O;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)V
     .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/O;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -16,18 +22,12 @@
 
 
 # virtual methods
-.method public compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
+.method public run()V
+    .locals 1
 
-    check-cast p1, Lcn/com/smartdevices/bracelet/model/BtDevice;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/O;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    check-cast p2, Lcn/com/smartdevices/bracelet/model/BtDevice;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->a(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)V
 
-    iget v0, p2, Lcn/com/smartdevices/bracelet/model/BtDevice;->signal:I
-
-    iget v1, p1, Lcn/com/smartdevices/bracelet/model/BtDevice;->signal:I
-
-    sub-int/2addr v0, v1
-
-    return v0
+    return-void
 .end method

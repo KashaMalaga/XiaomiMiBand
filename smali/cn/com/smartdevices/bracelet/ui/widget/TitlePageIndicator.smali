@@ -20,7 +20,7 @@
 
 .field private d:Landroid/support/v4/view/ViewPager;
 
-.field private e:Landroid/support/v4/view/ba;
+.field private e:Landroid/support/v4/view/bz;
 
 .field private f:I
 
@@ -77,7 +77,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    const v0, 0x7f01001d
+    const v0, 0x7f010030
 
     invoke-direct {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -150,61 +150,61 @@
 
     move-result-object v0
 
-    const v1, 0x7f090081
+    const v1, 0x7f0a0099
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
-    const v2, 0x7f0a0002
+    const v2, 0x7f080020
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
 
-    const v3, 0x7f0a0004
+    const v3, 0x7f080022
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v3
 
-    const v4, 0x7f090082
+    const v4, 0x7f0a009a
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v4
 
-    const/high16 v5, 0x7f0c0000
+    const v5, 0x7f0c0001
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v5
 
-    const v6, 0x7f090083
+    const v6, 0x7f0a009b
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v6
 
-    const v7, 0x7f0a0005
+    const v7, 0x7f080023
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v7
 
-    const v8, 0x7f0a0006
+    const v8, 0x7f080024
 
     invoke-virtual {v0, v8}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v8
 
-    const v9, 0x7f0a0007
+    const v9, 0x7f080025
 
     invoke-virtual {v0, v9}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    sget-object v9, Lcom/xiaomi/hm/a/t;->TitlePageIndicator:[I
+    sget-object v9, Lcom/xiaomi/hm/health/t;->TitlePageIndicator:[I
 
     const/4 v10, 0x0
 
@@ -337,7 +337,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/support/v4/view/aH;->a(Landroid/view/ViewConfiguration;)I
+    invoke-static {v0}, Landroid/support/v4/view/aZ;->a(Landroid/view/ViewConfiguration;)I
 
     move-result v0
 
@@ -410,11 +410,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ae;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ad;->b()I
+    invoke-virtual {v0}, Landroid/support/v4/view/ae;->b()I
 
     move-result v3
 
@@ -498,11 +498,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ae;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/support/v4/view/ad;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Landroid/support/v4/view/ae;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -548,13 +548,13 @@
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/bz;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/bz;
 
-    invoke-interface {v0, p1}, Landroid/support/v4/view/ba;->a(I)V
+    invoke-interface {v0, p1}, Landroid/support/v4/view/bz;->a(I)V
 
     :cond_1
     return-void
@@ -569,13 +569,13 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/bz;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/bz;
 
-    invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/view/ba;->a(IFI)V
+    invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/view/bz;->a(IFI)V
 
     :cond_0
     return-void
@@ -612,10 +612,10 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ba;)V
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/bz;)V
 
     :cond_1
-    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ae;
 
     move-result-object v0
 
@@ -634,7 +634,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ba;)V
+    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/bz;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
 
@@ -651,10 +651,10 @@
     return-void
 .end method
 
-.method public a(Landroid/support/v4/view/ba;)V
+.method public a(Landroid/support/v4/view/bz;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/bz;
 
     return-void
 .end method
@@ -704,13 +704,13 @@
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->h:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/bz;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/bz;
 
-    invoke-interface {v0, p1}, Landroid/support/v4/view/ba;->b(I)V
+    invoke-interface {v0, p1}, Landroid/support/v4/view/bz;->b(I)V
 
     :cond_0
     return-void
@@ -896,11 +896,11 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ae;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ad;->b()I
+    invoke-virtual {v0}, Landroid/support/v4/view/ae;->b()I
 
     move-result v0
 
@@ -935,11 +935,11 @@
 
     iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ae;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/support/v4/view/ad;->b()I
+    invoke-virtual {v1}, Landroid/support/v4/view/ae;->b()I
 
     move-result v14
 
@@ -1714,11 +1714,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ae;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ad;->b()I
+    invoke-virtual {v0}, Landroid/support/v4/view/ae;->b()I
 
     move-result v0
 

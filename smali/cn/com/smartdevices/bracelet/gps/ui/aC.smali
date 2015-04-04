@@ -1,68 +1,67 @@
-.class Lcn/com/smartdevices/bracelet/gps/ui/aC;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class Lcn/com/smartdevices/bracelet/gps/ui/ac;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aC;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/ac;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 3
 
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    move-result-object v0
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aC;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;
-
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(I)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aC;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)Lcn/com/smartdevices/bracelet/gps/ui/aD;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aC;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)Lcn/com/smartdevices/bracelet/gps/ui/aD;
-
-    move-result-object v1
-
-    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/aD;->a(I)V
-
-    :cond_0
+    :goto_0
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ac;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Landroid/widget/RelativeLayout;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ac;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Landroid/widget/RelativeLayout;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/ac;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+
+    const v2, 0x7f040022
+
+    invoke-static {v1, v2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->startAnimation(Landroid/view/animation/Animation;)V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,27 +3,27 @@
 
 
 # static fields
-.field private static final a:I = 0x33
+.field private static final a:F = 0.2f
 
-.field private static final b:I = 0x66
+.field private static final b:F = 0.45f
 
-.field private static final e:F = 0.7916667f
+.field private static final c:F = 0.7916667f
 
-.field private static final f:F = 0.89285713f
+.field private static final d:F = 0.89285713f
 
 
 # instance fields
-.field private final g:[I
+.field private final e:[I
 
-.field private final h:[I
+.field private final f:[I
 
-.field private final i:[F
+.field private final g:[F
 
-.field private final j:[F
+.field private final h:[F
 
-.field private final k:[I
+.field private final i:[I
 
-.field private final l:[I
+.field private final j:[I
 
 
 # direct methods
@@ -36,23 +36,23 @@
 
     new-array v0, v1, [I
 
-    iput-object v0, p0, Lcom/c/b/g/a/a;->g:[I
+    iput-object v0, p0, Lcom/c/b/g/a/a;->e:[I
 
     const/16 v0, 0x8
 
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lcom/c/b/g/a/a;->h:[I
+    iput-object v0, p0, Lcom/c/b/g/a/a;->f:[I
 
     new-array v0, v1, [F
 
-    iput-object v0, p0, Lcom/c/b/g/a/a;->i:[F
+    iput-object v0, p0, Lcom/c/b/g/a/a;->g:[F
 
     new-array v0, v1, [F
 
-    iput-object v0, p0, Lcom/c/b/g/a/a;->j:[F
+    iput-object v0, p0, Lcom/c/b/g/a/a;->h:[F
 
-    iget-object v0, p0, Lcom/c/b/g/a/a;->h:[I
+    iget-object v0, p0, Lcom/c/b/g/a/a;->f:[I
 
     array-length v0, v0
 
@@ -60,9 +60,9 @@
 
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lcom/c/b/g/a/a;->k:[I
+    iput-object v0, p0, Lcom/c/b/g/a/a;->i:[I
 
-    iget-object v0, p0, Lcom/c/b/g/a/a;->h:[I
+    iget-object v0, p0, Lcom/c/b/g/a/a;->f:[I
 
     array-length v0, v0
 
@@ -70,7 +70,7 @@
 
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lcom/c/b/g/a/a;->l:[I
+    iput-object v0, p0, Lcom/c/b/g/a/a;->j:[I
 
     return-void
 .end method
@@ -111,15 +111,17 @@
 
     aget-object v1, p1, v0
 
-    const/16 v2, 0x66
+    const v2, 0x3ee66666
 
-    invoke-static {p0, v1, v2}, Lcom/c/b/g/a/a;->a([I[II)I
+    invoke-static {p0, v1, v2}, Lcom/c/b/g/a/a;->a([I[IF)F
 
     move-result v1
 
-    const/16 v2, 0x33
+    const v2, 0x3e4ccccd
 
-    if-ge v1, v2, :cond_0
+    cmpg-float v1, v1, v2
+
+    if-gez v1, :cond_0
 
     return v0
 
@@ -129,7 +131,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -314,50 +316,50 @@
 
 
 # virtual methods
-.method protected b()[I
+.method protected final b()[I
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/g/a/a;->g:[I
+    iget-object v0, p0, Lcom/c/b/g/a/a;->e:[I
 
     return-object v0
 .end method
 
-.method protected c()[I
+.method protected final c()[I
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/g/a/a;->h:[I
+    iget-object v0, p0, Lcom/c/b/g/a/a;->f:[I
 
     return-object v0
 .end method
 
-.method protected d()[F
+.method protected final d()[F
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/g/a/a;->i:[F
+    iget-object v0, p0, Lcom/c/b/g/a/a;->g:[F
 
     return-object v0
 .end method
 
-.method protected e()[F
+.method protected final e()[F
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/g/a/a;->j:[F
+    iget-object v0, p0, Lcom/c/b/g/a/a;->h:[F
 
     return-object v0
 .end method
 
-.method protected f()[I
+.method protected final f()[I
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/g/a/a;->k:[I
+    iget-object v0, p0, Lcom/c/b/g/a/a;->i:[I
 
     return-object v0
 .end method
 
-.method protected g()[I
+.method protected final g()[I
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/g/a/a;->l:[I
+    iget-object v0, p0, Lcom/c/b/g/a/a;->j:[I
 
     return-object v0
 .end method

@@ -435,7 +435,7 @@
 .method public getIsBind()Ljava/lang/Boolean;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->e()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->f()Z
 
     move-result v0
 

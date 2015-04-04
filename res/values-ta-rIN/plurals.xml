@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="numberOfPullUpdateReport">
+        <item quantity="other">புதுப்பிக்கப்பட்டது %d உருப்படிகள்.</item>
+        <item quantity="one">புதுப்பிக்கப்பட்டது %d உருப்படி.</item>
+    </plurals>
+    <plurals name="numberFoot">
+        <item quantity="other">%s அடி</item>
+        <item quantity="one">%s அடி</item>
+    </plurals>
+    <plurals name="numberInch">
+        <item quantity="other">%s அங்குலங்கள்</item>
+        <item quantity="one">%s அங்குலம்</item>
+    </plurals>
+</resources>

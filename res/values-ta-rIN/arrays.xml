@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>திங்கள்.</item>
+        <item>செவ்வாய்.</item>
+        <item>புதன்.</item>
+        <item>வியாழன்.</item>
+        <item>வெள்ளி.</item>
+        <item>சனி.</item>
+        <item>ஞாயி.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>திங்கள்.</item>
+        <item>செவ்வாய்.</item>
+        <item>புதன்.</item>
+        <item>வியாழன்.</item>
+        <item>வெள்ளி.</item>
+        <item>சனி.</item>
+        <item>ஞாயி.</item>
+    </string-array>
+    <string-array name="months">
+        <item>ஜனவரி</item>
+        <item>பிப்ரவரி</item>
+        <item>மார்ச்</item>
+        <item>ஏப்ரல்</item>
+        <item>மே</item>
+        <item>ஜூன்</item>
+        <item>ஜூலை</item>
+        <item>ஆகஸ்ட்</item>
+        <item>செப்டம்பர்</item>
+        <item>அக்டோபர்</item>
+        <item>நவம்பர்</item>
+        <item>டிசம்பர்</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>ஒரே</item>
+        <item>தினசரி</item>
+        <item>வாரநாட்கள்</item>
+        <item>விருப்பமாக்கு</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>நிலைத்தன்மைக்கு ஈடாக வேறு எதுவும் இல்லை.</item>
+        <item>முன்னேற்றத்திற்காக பாடுபடு, பூர்ணத்துவத்திற்காக இல்லை.</item>
+        <item>மீண்டும் செய்தலே வெற்றியின் தந்தை.</item>
+        <item>ஆற்றல் மற்றும் நிலைபேறு சகலத்தையும் வெற்றி பெற செய்யும்.</item>
+        <item>சிறு இலக்குகளை அமைத்து அவற்றின் மீது கட்டமைக்கவும்.</item>
+        <item>ஒவ்வொரு பயணம் ஒரு படியுடனே தொடங்குகிறது.</item>
+        <item>ஒரு நாளில் ஒரு இலக்கை அடையவும்.</item>
+        <item>எவ்வளவு மெதுவாக நீங்கள் செல்லகின்றீகள் என்பது முக்கியமல்ல, நீங்கள் எல்லோருடய அணைவிலும் இன்னும் படுக்கையில் உள்ளீர்கள்.</item>
+        <item>உங்களால் முடியும்போது ஓடவும். உங்களுக்கு வேண்டுமானால் நடக்கவும். நீங்கள் கட்டாயம் தவழ வேண்டும். ஒரு போதும் விட்டு தர வேண்டாம்.</item>
+        <item>நினைவில் கொள்ளுங்கள்,வேலையிலிருந்து நீங்கள் பெறும் உணர்வானது உட்கார்ந்து கொண்டு வேலை செய்யவேண்டும் என எண்ணுவதிலிருந்து பெறும் உணர்வை விட சிறந்தது.</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>பெரிய</item>
+        <item>நல்ல</item>
+        <item>மிதமான</item>
+        <item>எச்சரிக்கை</item>
+        <item>ஆரோக்கியமற்ற</item>
+        <item>மிகவும் ஆரோக்கியமற்ற</item>
+    </string-array>
+    <string-array name="weight_unit">
+        <item>kg</item>
+        <item>jin</item>
+        <item>lb</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>எடைகுறைவு</item>
+        <item>இயல்பான எடை</item>
+        <item>அதிக எடை</item>
+        <item>பருமன்</item>
+        <item>பருமன்</item>
+    </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>BIM வகை: எடைகுறைவு</item>
+        <item>BIM வகை: இயல்பான எடை</item>
+        <item>BIM வகை: அதிக எடை</item>
+        <item>BIM வகை: பருமன்</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>உங்கள் எடையை நிர்வகிக்க உதவுவதற்கு ஒரு இலக்கை அமைக்கவும்.</item>
+        <item>வாழ்த்துக்கள்! உங்கள் இலக்கு எடையில் நீங்கள் உள்ளீர்கள்.</item>
+        <item>உங்கள் இலக்கு எடைக்கு கீழ் நீங்கள் இருக்கிறீர்கள்</item>
+        <item>உங்கள் இலக்கு எடைக்கு மேல் நீங்கள் இருக்கிறீர்கள்</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>உங்கள் எடையை நிர்வகிக்க உதவுவதற்கு ஒரு இலக்கை அமைக்கவும்.</item>
+        <item>வாழ்த்துக்கள்! உங்கள் இலக்கு எடையில் நீங்கள் உள்ளீர்கள்.</item>
+        <item>உங்கள் இலக்கு எடைக்கு கீழ் நீங்கள் இருக்கிறீர்கள்</item>
+        <item>உங்கள் இலக்கு எடைக்கு மேல் நீங்கள் இருக்கிறீர்கள்</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>முறியடிக்கப்பட்டுள்ள இலக்கு</item>
+        <item>உங்கள் இலக்கை அடையவில்லை</item>
+        <item>நீங்கள் உங்கள் இலக்கை அடைந்தீர்கள்!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>நீங்கள் இன்னும் உங்கள் இலக்கை அடையவில்லை</item>
+        <item>நீங்கள் இன்னும் உங்கள் இலக்கை அடையவில்லை</item>
+        <item>நீங்கள் இன்னும் உங்கள் இலக்கை அடையவில்லை</item>
+        <item>நீங்கள் உங்கள் இலக்கை அடைந்தீர்கள் (%1$s%2$s)!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>நீங்கள் இன்னும் உங்கள் இலக்கை அடையவில்லை</item>
+        <item>நீங்கள் இன்னும் உங்கள் இலக்கை அடையவில்லை</item>
+        <item>நீங்கள் இன்னும் உங்கள் இலக்கை அடையவில்லை</item>
+        <item>நீங்கள் உங்கள் இலக்கை அடைந்தீர்கள் (%1$s%2$s)!</item>
+    </string-array>
+</resources>

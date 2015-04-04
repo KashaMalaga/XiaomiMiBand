@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/do;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dp;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/do;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dp;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dt;->a:Lcn/com/smartdevices/bracelet/ui/do;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dt;->a:Lcn/com/smartdevices/bracelet/ui/dp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,58 +22,24 @@
 
 
 # virtual methods
-.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    if-eqz p2, :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dt;->a:Lcn/com/smartdevices/bracelet/ui/dp;
 
-    const-string v0, "ON"
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dt;->a:Lcn/com/smartdevices/bracelet/ui/dp;
 
-    :goto_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dt;->a:Lcn/com/smartdevices/bracelet/ui/do;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/do;->a(Lcn/com/smartdevices/bracelet/ui/do;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/dp;->c(Lcn/com/smartdevices/bracelet/ui/dp;)Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliConfig()Lcn/com/smartdevices/bracelet/model/MiliConfig;
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/model/MiliConfig;->setDailySportNotify(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dp;->a(Lcn/com/smartdevices/bracelet/ui/dp;Landroid/content/Context;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dt;->a:Lcn/com/smartdevices/bracelet/ui/do;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/do;->a(Lcn/com/smartdevices/bracelet/ui/do;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setNeedSyncServer(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dt;->a:Lcn/com/smartdevices/bracelet/ui/do;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/do;->a(Lcn/com/smartdevices/bracelet/ui/do;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
-
-    move-result-object v0
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventSettingFragmentUpdate;
-
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/eventbus/EventSettingFragmentUpdate;-><init>()V
-
-    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
-
-    :cond_0
-    const-string v0, "OFF"
-
-    goto :goto_0
 .end method

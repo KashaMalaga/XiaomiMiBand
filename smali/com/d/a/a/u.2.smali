@@ -51,7 +51,7 @@
 
     iget-object v5, p0, Lcom/d/a/a/u;->a:Ljava/lang/Object;
 
-    invoke-virtual/range {v0 .. v5}, Lcom/d/a/a/p;->a(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/d/a/a/p;->onFailure(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method

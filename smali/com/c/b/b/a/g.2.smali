@@ -2,208 +2,478 @@
 .super Lcom/c/b/b/a/q;
 
 
+# static fields
+.field private static final a:Ljava/util/regex/Pattern;
+
+.field private static final b:[J
+
+.field private static final c:Ljava/util/regex/Pattern;
+
+
 # instance fields
-.field private final a:Ljava/lang/String;
-
-.field private final b:Ljava/lang/String;
-
-.field private final c:Ljava/lang/String;
-
 .field private final d:Ljava/lang/String;
 
-.field private final e:Ljava/lang/String;
+.field private final e:Ljava/util/Date;
 
-.field private final f:Ljava/lang/String;
+.field private final f:Z
 
-.field private final g:D
+.field private final g:Ljava/util/Date;
 
-.field private final h:D
+.field private final h:Z
+
+.field private final i:Ljava/lang/String;
+
+.field private final j:Ljava/lang/String;
+
+.field private final k:[Ljava/lang/String;
+
+.field private final l:Ljava/lang/String;
+
+.field private final m:D
+
+.field private final n:D
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 11
-
-    const-wide/high16 v7, 0x7ff8000000000000L
-
-    const-wide/high16 v9, 0x7ff8000000000000L
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object/from16 v5, p5
-
-    move-object/from16 v6, p6
-
-    invoke-direct/range {v0 .. v10}, Lcom/c/b/b/a/g;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;DD)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;DD)V
+.method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Lcom/c/b/b/a/r;->i:Lcom/c/b/b/a/r;
+    const-string v0, "P(?:(\\d+)W)?(?:(\\d+)D)?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+)S)?)?"
 
-    invoke-direct {p0, v0}, Lcom/c/b/b/a/q;-><init>(Lcom/c/b/b/a/r;)V
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    invoke-static {p2}, Lcom/c/b/b/a/g;->a(Ljava/lang/CharSequence;)V
+    move-result-object v0
 
-    iput-object p1, p0, Lcom/c/b/b/a/g;->a:Ljava/lang/String;
+    sput-object v0, Lcom/c/b/b/a/g;->a:Ljava/util/regex/Pattern;
 
-    iput-object p2, p0, Lcom/c/b/b/a/g;->b:Ljava/lang/String;
+    const/4 v0, 0x5
 
-    if-eqz p3, :cond_0
+    new-array v0, v0, [J
 
-    invoke-static {p3}, Lcom/c/b/b/a/g;->a(Ljava/lang/CharSequence;)V
+    fill-array-data v0, :array_0
 
-    iput-object p3, p0, Lcom/c/b/b/a/g;->c:Ljava/lang/String;
+    sput-object v0, Lcom/c/b/b/a/g;->b:[J
 
-    :goto_0
-    iput-object p4, p0, Lcom/c/b/b/a/g;->d:Ljava/lang/String;
+    const-string v0, "[0-9]{8}(T[0-9]{6}Z?)?"
 
-    iput-object p5, p0, Lcom/c/b/b/a/g;->e:Ljava/lang/String;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    iput-object p6, p0, Lcom/c/b/b/a/g;->f:Ljava/lang/String;
+    move-result-object v0
 
-    iput-wide p7, p0, Lcom/c/b/b/a/g;->g:D
-
-    iput-wide p9, p0, Lcom/c/b/b/a/g;->h:D
+    sput-object v0, Lcom/c/b/b/a/g;->c:Ljava/util/regex/Pattern;
 
     return-void
 
-    :cond_0
-    const/4 v0, 0x0
+    nop
 
-    iput-object v0, p0, Lcom/c/b/b/a/g;->c:Ljava/lang/String;
-
-    goto :goto_0
+    :array_0
+    .array-data 8
+        0x240c8400
+        0x5265c00
+        0x36ee80
+        0xea60
+        0x3e8
+    .end array-data
 .end method
 
-.method private static a(Ljava/lang/CharSequence;)V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;DD)V
+    .locals 7
 
-    const/16 v5, 0x10
+    sget-object v2, Lcom/c/b/b/a/r;->i:Lcom/c/b/b/a/r;
 
-    const/16 v4, 0xf
+    invoke-direct {p0, v2}, Lcom/c/b/b/a/q;-><init>(Lcom/c/b/b/a/r;)V
+
+    iput-object p1, p0, Lcom/c/b/b/a/g;->d:Ljava/lang/String;
+
+    :try_start_0
+    invoke-static {p2}, Lcom/c/b/b/a/g;->a(Ljava/lang/String;)Ljava/util/Date;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/c/b/b/a/g;->e:Ljava/util/Date;
+    :try_end_0
+    .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-nez p3, :cond_1
+
+    invoke-static {p4}, Lcom/c/b/b/a/g;->a(Ljava/lang/CharSequence;)J
+
+    move-result-wide v3
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v2, v3, v5
+
+    if-gez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    iput-object v2, p0, Lcom/c/b/b/a/g;->g:Ljava/util/Date;
+
+    :goto_1
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v2
 
     const/16 v3, 0x8
 
-    if-eqz p0, :cond_6
+    if-ne v2, v3, :cond_2
 
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+    const/4 v2, 0x1
 
-    move-result v1
+    :goto_2
+    iput-boolean v2, p0, Lcom/c/b/b/a/g;->f:Z
 
-    if-eq v1, v3, :cond_0
+    if-eqz p3, :cond_3
 
-    if-eq v1, v4, :cond_0
+    invoke-virtual {p3}, Ljava/lang/String;->length()I
 
-    if-eq v1, v5, :cond_0
+    move-result v2
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const/16 v3, 0x8
 
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    if-ne v2, v3, :cond_3
+
+    const/4 v2, 0x1
+
+    :goto_3
+    iput-boolean v2, p0, Lcom/c/b/b/a/g;->h:Z
+
+    iput-object p5, p0, Lcom/c/b/b/a/g;->i:Ljava/lang/String;
+
+    iput-object p6, p0, Lcom/c/b/b/a/g;->j:Ljava/lang/String;
+
+    iput-object p7, p0, Lcom/c/b/b/a/g;->k:[Ljava/lang/String;
+
+    iput-object p8, p0, Lcom/c/b/b/a/g;->l:Ljava/lang/String;
+
+    move-wide/from16 v0, p9
+
+    iput-wide v0, p0, Lcom/c/b/b/a/g;->m:D
+
+    move-wide/from16 v0, p11
+
+    iput-wide v0, p0, Lcom/c/b/b/a/g;->n:D
+
+    return-void
+
+    :catch_0
+    move-exception v2
+
+    new-instance v3, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {v2}, Ljava/text/ParseException;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v3, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v3
+
+    :cond_0
+    new-instance v2, Ljava/util/Date;
+
+    iget-object v5, p0, Lcom/c/b/b/a/g;->e:Ljava/util/Date;
+
+    invoke-virtual {v5}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v5
+
+    add-long/2addr v3, v5
+
+    invoke-direct {v2, v3, v4}, Ljava/util/Date;-><init>(J)V
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_1
+    invoke-static {p3}, Lcom/c/b/b/a/g;->a(Ljava/lang/String;)Ljava/util/Date;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/c/b/b/a/g;->g:Ljava/util/Date;
+    :try_end_1
+    .catch Ljava/text/ParseException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v2
+
+    new-instance v3, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {v2}, Ljava/text/ParseException;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v3, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v3
+
+    :cond_2
+    const/4 v2, 0x0
+
+    goto :goto_2
+
+    :cond_3
+    const/4 v2, 0x0
+
+    goto :goto_3
+.end method
+
+.method private static a(Ljava/lang/CharSequence;)J
+    .locals 9
+
+    const-wide/16 v1, -0x1
+
+    if-nez p0, :cond_1
+
+    :cond_0
+    return-wide v1
+
+    :cond_1
+    sget-object v0, Lcom/c/b/b/a/g;->a:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-wide/16 v1, 0x0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    sget-object v4, Lcom/c/b/b/a/g;->b:[J
+
+    array-length v4, v4
+
+    if-ge v0, v4, :cond_0
+
+    add-int/lit8 v4, v0, 0x1
+
+    invoke-virtual {v3, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_2
+
+    sget-object v5, Lcom/c/b/b/a/g;->b:[J
+
+    aget-wide v5, v5, v0
+
+    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v4
+
+    int-to-long v7, v4
+
+    mul-long v4, v5, v7
+
+    add-long/2addr v1, v4
+
+    :cond_2
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method private static a(ZLjava/util/Date;)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x2
+
+    if-nez p1, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    if-eqz p0, :cond_1
+
+    invoke-static {v0}, Ljava/text/DateFormat;->getDateInstance(I)Ljava/text/DateFormat;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-virtual {v0, p1}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {v0, v0}, Ljava/text/DateFormat;->getDateTimeInstance(II)Ljava/text/DateFormat;
+
+    move-result-object v0
+
+    goto :goto_1
+.end method
+
+.method private static a(Ljava/lang/String;)Ljava/util/Date;
+    .locals 7
+
+    const/16 v6, 0x10
+
+    const/4 v2, 0x0
+
+    const/16 v4, 0xf
+
+    sget-object v0, Lcom/c/b/b/a/g;->c:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/text/ParseException;
+
+    invoke-direct {v0, p0, v2}, Ljava/text/ParseException;-><init>(Ljava/lang/String;I)V
 
     throw v0
 
     :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, v3, :cond_2
-
-    invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Character;->isDigit(C)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    if-le v1, v3, :cond_6
-
-    invoke-interface {p0, v3}, Ljava/lang/CharSequence;->charAt(I)C
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    const/16 v2, 0x54
+    const/16 v1, 0x8
 
-    if-eq v0, v2, :cond_3
+    if-ne v0, v1, :cond_1
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-static {}, Lcom/c/b/b/a/g;->l()Ljava/text/DateFormat;
 
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    move-result-object v0
 
-    throw v0
+    invoke-virtual {v0, p0}, Ljava/text/DateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
 
-    :cond_3
-    const/16 v0, 0x9
+    move-result-object v0
 
-    :goto_1
-    if-ge v0, v4, :cond_5
+    :goto_0
+    return-object v0
 
-    invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
+    :cond_1
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    move-result v2
+    move-result v0
 
-    invoke-static {v2}, Ljava/lang/Character;->isDigit(C)Z
+    if-ne v0, v6, :cond_2
 
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_4
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    if-ne v1, v5, :cond_6
-
-    invoke-interface {p0, v4}, Ljava/lang/CharSequence;->charAt(I)C
+    invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
     const/16 v1, 0x5a
 
-    if-eq v0, v1, :cond_6
+    if-ne v0, v1, :cond_2
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-static {}, Lcom/c/b/b/a/g;->m()Ljava/text/DateFormat;
 
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    move-result-object v0
 
-    throw v0
+    invoke-virtual {p0, v2, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    :cond_6
-    return-void
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/util/GregorianCalendar;
+
+    invoke-direct {v1}, Ljava/util/GregorianCalendar;-><init>()V
+
+    invoke-virtual {v0}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v4}, Ljava/util/Calendar;->get(I)I
+
+    move-result v0
+
+    int-to-long v4, v0
+
+    add-long/2addr v2, v4
+
+    new-instance v0, Ljava/util/Date;
+
+    invoke-direct {v0, v2, v3}, Ljava/util/Date;-><init>(J)V
+
+    invoke-virtual {v1, v0}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
+
+    invoke-virtual {v1, v6}, Ljava/util/Calendar;->get(I)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    add-long v1, v2, v0
+
+    new-instance v0, Ljava/util/Date;
+
+    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {}, Lcom/c/b/b/a/g;->m()Ljava/text/DateFormat;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ljava/text/DateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method private static l()Ljava/text/DateFormat;
+    .locals 3
+
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "yyyyMMdd"
+
+    sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    const-string v1, "GMT"
+
+    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+
+    return-object v0
+.end method
+
+.method private static m()Ljava/text/DateFormat;
+    .locals 3
+
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "yyyyMMdd\'T\'HHmmss"
+
+    sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    return-object v0
 .end method
 
 
@@ -211,69 +481,93 @@
 .method public a()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/b/a/g;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public b()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/c/b/b/a/g;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public c()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/c/b/b/a/g;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public d()Ljava/lang/String;
-    .locals 1
-
     iget-object v0, p0, Lcom/c/b/b/a/g;->d:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public e()Ljava/lang/String;
+.method public b()Ljava/util/Date;
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/b/a/g;->e:Ljava/lang/String;
+    iget-object v0, p0, Lcom/c/b/b/a/g;->e:Ljava/util/Date;
 
     return-object v0
+.end method
+
+.method public c()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/c/b/b/a/g;->f:Z
+
+    return v0
+.end method
+
+.method public d()Ljava/util/Date;
+    .locals 1
+
+    iget-object v0, p0, Lcom/c/b/b/a/g;->g:Ljava/util/Date;
+
+    return-object v0
+.end method
+
+.method public e()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/c/b/b/a/g;->h:Z
+
+    return v0
 .end method
 
 .method public f()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/c/b/b/a/g;->f:Ljava/lang/String;
+    iget-object v0, p0, Lcom/c/b/b/a/g;->i:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public g()D
+.method public g()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/c/b/b/a/g;->j:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public h()[Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/c/b/b/a/g;->k:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public i()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/c/b/b/a/g;->l:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public j()D
     .locals 2
 
-    iget-wide v0, p0, Lcom/c/b/b/a/g;->g:D
+    iget-wide v0, p0, Lcom/c/b/b/a/g;->m:D
 
     return-wide v0
 .end method
 
-.method public h()D
+.method public k()D
     .locals 2
 
-    iget-wide v0, p0, Lcom/c/b/b/a/g;->h:D
+    iget-wide v0, p0, Lcom/c/b/b/a/g;->n:D
 
     return-wide v0
 .end method
 
-.method public o()Ljava/lang/String;
-    .locals 2
+.method public q()Ljava/lang/String;
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -281,27 +575,43 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    iget-object v1, p0, Lcom/c/b/b/a/g;->a:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Lcom/c/b/b/a/g;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    iget-object v1, p0, Lcom/c/b/b/a/g;->b:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Lcom/c/b/b/a/g;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    iget-object v1, p0, Lcom/c/b/b/a/g;->c:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Lcom/c/b/b/a/g;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
     iget-object v1, p0, Lcom/c/b/b/a/g;->d:Ljava/lang/String;
 
     invoke-static {v1, v0}, Lcom/c/b/b/a/g;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-    iget-object v1, p0, Lcom/c/b/b/a/g;->e:Ljava/lang/String;
+    iget-boolean v1, p0, Lcom/c/b/b/a/g;->f:Z
+
+    iget-object v2, p0, Lcom/c/b/b/a/g;->e:Ljava/util/Date;
+
+    invoke-static {v1, v2}, Lcom/c/b/b/a/g;->a(ZLjava/util/Date;)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-static {v1, v0}, Lcom/c/b/b/a/g;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-    iget-object v1, p0, Lcom/c/b/b/a/g;->f:Ljava/lang/String;
+    iget-boolean v1, p0, Lcom/c/b/b/a/g;->h:Z
+
+    iget-object v2, p0, Lcom/c/b/b/a/g;->g:Ljava/util/Date;
+
+    invoke-static {v1, v2}, Lcom/c/b/b/a/g;->a(ZLjava/util/Date;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lcom/c/b/b/a/g;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-object v1, p0, Lcom/c/b/b/a/g;->i:Ljava/lang/String;
+
+    invoke-static {v1, v0}, Lcom/c/b/b/a/g;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-object v1, p0, Lcom/c/b/b/a/g;->j:Ljava/lang/String;
+
+    invoke-static {v1, v0}, Lcom/c/b/b/a/g;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-object v1, p0, Lcom/c/b/b/a/g;->k:[Ljava/lang/String;
+
+    invoke-static {v1, v0}, Lcom/c/b/b/a/g;->a([Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-object v1, p0, Lcom/c/b/b/a/g;->l:Ljava/lang/String;
 
     invoke-static {v1, v0}, Lcom/c/b/b/a/g;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="numberOfPullUpdateReport">
+        <item quantity="other">%d öge güncellendi.</item>
+        <item quantity="one">%d öge güncellendi.</item>
+    </plurals>
+    <plurals name="numberFoot">
+        <item quantity="other">%s fit</item>
+        <item quantity="one">%s ft</item>
+    </plurals>
+    <plurals name="numberInch">
+        <item quantity="other">%s inç</item>
+        <item quantity="one">%s inç</item>
+    </plurals>
+</resources>

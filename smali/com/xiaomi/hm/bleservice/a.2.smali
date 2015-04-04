@@ -149,6 +149,26 @@
 
 
 # virtual methods
+.method public a()Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iget-byte v1, p0, Lcom/xiaomi/hm/bleservice/a;->c:B
+
+    and-int/lit8 v1, v1, 0x1
+
+    if-ne v1, v0, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public a(Ljava/util/UUID;)Z
     .locals 3
 
@@ -291,6 +311,50 @@
     goto :goto_0
 
     :cond_7
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public b()Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iget-byte v1, p0, Lcom/xiaomi/hm/bleservice/a;->c:B
+
+    shr-int/lit8 v1, v1, 0x1
+
+    and-int/lit8 v1, v1, 0x1
+
+    if-ne v1, v0, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public c()Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iget-byte v1, p0, Lcom/xiaomi/hm/bleservice/a;->c:B
+
+    shr-int/lit8 v1, v1, 0x2
+
+    and-int/lit8 v1, v1, 0x1
+
+    if-ne v1, v0, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
     const/4 v0, 0x0
 
     goto :goto_0

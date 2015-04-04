@@ -449,6 +449,14 @@
 
     cmpg-float v0, p3, v0
 
+    if-lez v0, :cond_0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/a/e;->t:I
+
+    int-to-float v0, v0
+
+    cmpg-float v0, p3, v0
+
     if-gtz v0, :cond_1
 
     :cond_0

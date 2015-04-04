@@ -162,7 +162,7 @@
     move-exception v1
 
     :goto_2
-    iput v7, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v7, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     sget-object v2, Lcn/com/smartdevices/bracelet/lab/sync/i;->a:Ljava/lang/String;
 
@@ -369,7 +369,7 @@
     :goto_2
     const/4 v2, 0x2
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     const-string v2, "Sync"
 
@@ -503,7 +503,7 @@
     :goto_2
     const/4 v2, 0x2
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     const-string v2, "Sync"
 
@@ -638,7 +638,7 @@
     :goto_2
     const/4 v2, 0x2
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     const-string v2, "Sync"
 
@@ -801,7 +801,7 @@
     :goto_2
     const/4 v2, 0x2
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     const-string v2, "Sync"
 
@@ -935,7 +935,7 @@
     :goto_2
     const/4 v2, 0x2
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     const-string v2, "Sync"
 
@@ -1058,7 +1058,7 @@
     :goto_2
     const/4 v2, 0x2
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     const-string v2, "Sync"
 

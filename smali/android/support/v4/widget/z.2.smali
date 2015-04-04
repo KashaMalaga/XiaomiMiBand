@@ -1,24 +1,19 @@
-.class Landroid/support/v4/widget/z;
-.super Landroid/support/v4/widget/y;
+.class interface abstract annotation Landroid/support/v4/widget/z;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
+# annotations
+.annotation build Landroid/support/a/l;
+    a = {
+        0x0L,
+        0x1L,
+        0x2L
+    }
+.end annotation
 
-    invoke-direct {p0}, Landroid/support/v4/widget/y;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public d(Ljava/lang/Object;)F
-    .locals 1
-
-    invoke-static {p1}, Landroid/support/v4/widget/B;->a(Ljava/lang/Object;)F
-
-    move-result v0
-
-    return v0
-.end method
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
+.end annotation

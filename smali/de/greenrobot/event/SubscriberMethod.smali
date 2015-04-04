@@ -131,9 +131,11 @@
 
     invoke-direct {p0}, Lde/greenrobot/event/SubscriberMethod;->checkMethodString()V
 
-    iget-object v0, p0, Lde/greenrobot/event/SubscriberMethod;->methodString:Ljava/lang/String;
-
     check-cast p1, Lde/greenrobot/event/SubscriberMethod;
+
+    invoke-direct {p1}, Lde/greenrobot/event/SubscriberMethod;->checkMethodString()V
+
+    iget-object v0, p0, Lde/greenrobot/event/SubscriberMethod;->methodString:Ljava/lang/String;
 
     iget-object v1, p1, Lde/greenrobot/event/SubscriberMethod;->methodString:Ljava/lang/String;
 

@@ -3,11 +3,13 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "watermark_guide_key"
+.field private static final a:I = 0x3e8
+
+.field private static final b:I = 0xe10
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -15,94 +17,42 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.method public static a(F)F
     .locals 2
 
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    const/high16 v0, 0x447a0000
 
-    move-result-object v0
+    mul-float/2addr v0, p0
 
-    const-string v1, ""
+    const/high16 v1, 0x45610000
 
-    invoke-interface {v0, p1, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 1
-
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    move-result v0
+    div-float/2addr v0, v1
 
     return v0
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;Z)Z
-    .locals 1
-
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(Landroid/content/Context;Ljava/lang/String;)Z
+.method public static b(F)F
     .locals 2
 
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    const/high16 v0, 0x45610000
 
-    move-result-object v0
+    mul-float/2addr v0, p0
 
-    const/4 v1, 0x1
+    const/high16 v1, 0x447a0000
 
-    invoke-interface {v0, p1, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
+    div-float/2addr v0, v1
 
     return v0
 .end method
 
-.method public static c(Landroid/content/Context;Ljava/lang/String;)Z
-    .locals 1
+.method public static c(F)J
+    .locals 2
 
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    const/high16 v0, 0x447a0000
 
-    move-result-object v0
+    mul-float/2addr v0, p0
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    float-to-long v0, v0
 
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    move-result v0
-
-    return v0
+    return-wide v0
 .end method

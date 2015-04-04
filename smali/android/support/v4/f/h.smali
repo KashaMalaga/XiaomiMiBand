@@ -1,43 +1,57 @@
 .class Landroid/support/v4/f/h;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnWindowFocusChangeListener;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/f/f;
-
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/f/f;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Landroid/support/v4/f/h;->a:Landroid/support/v4/f/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static a(Landroid/net/ConnectivityManager;)Z
+    .locals 2
 
-# virtual methods
-.method public onWindowFocusChanged(Z)V
-    .locals 1
+    const/4 v0, 0x1
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
-    iget-object v0, p0, Landroid/support/v4/f/h;->a:Landroid/support/v4/f/f;
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/support/v4/f/f;->d()V
+    if-nez v1, :cond_0
 
     :goto_0
-    return-void
+    :pswitch_0
+    return v0
 
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/f/h;->a:Landroid/support/v4/f/f;
+    invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
 
-    invoke-virtual {v0}, Landroid/support/v4/f/f;->j()V
+    move-result v1
+
+    packed-switch v1, :pswitch_data_0
+
+    :pswitch_1
+    goto :goto_0
+
+    :pswitch_2
+    const/4 v0, 0x0
 
     goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_2
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
 .end method

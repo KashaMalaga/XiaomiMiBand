@@ -28,7 +28,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$5$1;->this$1:Lcom/xiaomi/hm/bleservice/profile/WeightProfile$5;
 
     # invokes: Lcom/xiaomi/hm/bleservice/profile/WeightProfile$5;->handleData([B)V
-    invoke-static {v0, p1}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$5;->access$600(Lcom/xiaomi/hm/bleservice/profile/WeightProfile$5;[B)V
+    invoke-static {v0, p1}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$5;->access$800(Lcom/xiaomi/hm/bleservice/profile/WeightProfile$5;[B)V
 
     return-void
 .end method

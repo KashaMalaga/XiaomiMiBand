@@ -1,77 +1,87 @@
-.class Lcn/com/smartdevices/bracelet/d/d;
-.super Lcn/com/smartdevices/bracelet/d/a;
+.class synthetic Lcn/com/smartdevices/bracelet/d/d;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/d/a;-><init>()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/d/e;->values()[Lcn/com/smartdevices/bracelet/d/e;
 
-    return-void
-.end method
+    move-result-object v0
 
+    array-length v0, v0
 
-# virtual methods
-.method protected a(IJ)F
-    .locals 4
+    new-array v0, v0, [I
 
-    const-wide/16 v0, 0x0
+    sput-object v0, Lcn/com/smartdevices/bracelet/d/d;->a:[I
 
-    cmp-long v0, p2, v0
+    :try_start_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/d/d;->a:[I
 
-    if-gtz v0, :cond_0
+    sget-object v1, Lcn/com/smartdevices/bracelet/d/e;->a:Lcn/com/smartdevices/bracelet/d/e;
 
-    const/4 v0, 0x0
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/e;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
 
     :goto_0
-    return v0
+    :try_start_1
+    sget-object v0, Lcn/com/smartdevices/bracelet/d/d;->a:[I
 
-    :cond_0
-    mul-int/lit8 v0, p1, 0x2
+    sget-object v1, Lcn/com/smartdevices/bracelet/d/e;->b:Lcn/com/smartdevices/bracelet/d/e;
 
-    int-to-long v0, v0
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/e;->ordinal()I
 
-    cmp-long v0, v0, p2
+    move-result v1
 
-    if-gtz v0, :cond_1
+    const/4 v2, 0x2
 
-    const/high16 v0, 0x40800000
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    goto :goto_0
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcn/com/smartdevices/bracelet/d/d;->a:[I
 
-    :cond_1
-    int-to-long v0, p1
+    sget-object v1, Lcn/com/smartdevices/bracelet/d/e;->c:Lcn/com/smartdevices/bracelet/d/e;
 
-    div-long/2addr v0, p2
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/e;->ordinal()I
 
-    const-wide/16 v2, 0x1
+    move-result v1
 
-    cmp-long v0, v0, v2
+    const/4 v2, 0x3
 
-    if-gtz v0, :cond_2
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
 
-    const/high16 v0, 0x40c00000
+    :goto_2
+    return-void
 
-    goto :goto_0
+    :catch_0
+    move-exception v0
 
-    :cond_2
-    int-to-long v0, p1
+    goto :goto_2
 
-    div-long/2addr v0, p2
+    :catch_1
+    move-exception v0
 
-    const-wide/16 v2, 0x2
+    goto :goto_1
 
-    cmp-long v0, v0, v2
-
-    if-gtz v0, :cond_3
-
-    const/high16 v0, 0x41000000
-
-    goto :goto_0
-
-    :cond_3
-    const/high16 v0, 0x41400000
+    :catch_2
+    move-exception v0
 
     goto :goto_0
 .end method

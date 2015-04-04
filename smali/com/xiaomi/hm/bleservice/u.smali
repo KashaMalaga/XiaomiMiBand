@@ -54,6 +54,16 @@
     goto :goto_0
 .end method
 
+.method public a(Lcom/xiaomi/hm/bleservice/profile/ISyncDataCb;J)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/u;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/xiaomi/hm/bleservice/BLEService;->syncWeightData(Lcom/xiaomi/hm/bleservice/profile/ISyncDataCb;J)V
+
+    return-void
+.end method
+
 .method public b()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
     .locals 1
 
@@ -165,16 +175,6 @@
 .end method
 
 .method public k()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/u;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->startWeightSyncData()V
-
-    return-void
-.end method
-
-.method public l()V
     .locals 2
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/u;->a:Lcom/xiaomi/hm/bleservice/BLEService;

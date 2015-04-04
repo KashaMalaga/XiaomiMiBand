@@ -1,33 +1,42 @@
 .class Landroid/support/v4/widget/l;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Landroid/database/ContentObserver;
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/widget/k;
+.field final synthetic a:Landroid/support/v4/widget/j;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/k;)V
-    .locals 0
+.method public constructor <init>(Landroid/support/v4/widget/j;)V
+    .locals 1
 
-    iput-object p1, p0, Landroid/support/v4/widget/l;->a:Landroid/support/v4/widget/k;
+    iput-object p1, p0, Landroid/support/v4/widget/l;->a:Landroid/support/v4/widget/j;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public deliverSelfNotifications()Z
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/widget/l;->a:Landroid/support/v4/widget/k;
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Landroid/support/v4/widget/k;->a(Landroid/support/v4/widget/k;)V
+    return v0
+.end method
+
+.method public onChange(Z)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/widget/l;->a:Landroid/support/v4/widget/j;
+
+    invoke-virtual {v0}, Landroid/support/v4/widget/j;->c()V
 
     return-void
 .end method

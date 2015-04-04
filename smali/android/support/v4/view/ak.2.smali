@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/view/ai;
+.implements Landroid/support/v4/view/aj;
 
 
 # direct methods
@@ -19,7 +19,7 @@
 .method public a(Landroid/widget/TextView;)V
     .locals 0
 
-    invoke-static {p1}, Landroid/support/v4/view/al;->a(Landroid/widget/TextView;)V
+    invoke-virtual {p1}, Landroid/widget/TextView;->setSingleLine()V
 
     return-void
 .end method

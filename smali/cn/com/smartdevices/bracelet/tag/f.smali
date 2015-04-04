@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/Y;
+.implements Lcn/com/smartdevices/bracelet/ui/ac;
 
 
 # instance fields
@@ -37,9 +37,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/f;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
 
-    const v1, 0x7f08038a
+    const v1, 0x7f090427
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/f;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
 
@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->f()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->g()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/f;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
 

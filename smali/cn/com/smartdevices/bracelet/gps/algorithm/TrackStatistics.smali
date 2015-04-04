@@ -3,42 +3,53 @@
 
 
 # instance fields
-.field public mKilometerPaces:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/lang/Float;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public mCurSubDistance:F
 
-.field public mKilometerSpeeds:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/lang/Float;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public mCurSubStartTimetamp:J
 
-.field public mKilometerTimes:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public mCurSubTime:J
+
+.field public mFormerSubDistance:F
+
+.field public mFormerSubTime:J
+
+.field public mKilometerPaces:[F
+
+.field public mKilometerSpeeds:[F
+
+.field public mKilometerTimestamps:[J
+
+.field public mLastKilometerNum:I
+
+.field public mLastKilometerTimestamp:J
+
+.field public mLastMileNum:I
+
+.field public mLastMileTimestamp:J
+
+.field public mLastPauseSampleCount:I
+
+.field public mLastPauseTimestamp:J
+
+.field public mMaxKilometer:I
+
+.field public mMaxMile:I
+
+.field public mMilePaces:[F
+
+.field public mMileSpeeds:[F
+
+.field public mMileTimestamps:[J
+
+.field public mRealtimeDistance:F
 
 .field public mRealtimePace:F
 
+.field public mRealtimeSampleCount:I
+
 .field public mRealtimeSpeed:F
+
+.field public mRealtimeTime:J
 
 .field public mTotalDistance:F
 

@@ -69,9 +69,21 @@
         <item>肥胖</item>
     </string-array>
     <string-array name="weight_dynamic_list_bmi_tips">
-        <item>有点偏瘦哦，点击查看详情</item>
+        <item>有点偏瘦哦, 点击查看详情</item>
         <item>恭喜你身材很标准</item>
-        <item>有点偏胖哦，点击查看详情</item>
-        <item>有点偏胖哦，点击查看详情</item>
+        <item>有点偏胖哦, 点击查看详情</item>
+        <item>有点偏胖哦, 点击查看详情</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>身体是革命的本钱, 况且你还要保护心爱的人。建议加大无氧运动增加蛋白质摄入, 让自己变成一个肌肉猛男吧。</item>
+        <item>身材非常标准, 建议保持目前的生活饮食习惯, 一定要将好身材保持下去哦。</item>
+        <item>建议减少脂肪摄入, 保持蛋白质的摄入。在现有运动基础上加大有氧运动, 每次有氧运动前先进行30分钟无氧运动, 有利于提高减肥效果。</item>
+        <item>建议减少脂肪摄入, 保持蛋白质的摄入。在现有运动基础上加大有氧运动, 每次有氧运动前先进行30分钟无氧运动, 有利于提高减肥效果。</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>爱美也要注意健康哦, 平时要多观察体重避免继续下降。建议多增加无氧运动, 增加体重的同时也可以保持较好的身材。</item>
+        <item>身材非常标准, 建议保持目前的生活饮食习惯, 一定要将好身材保持下去哦。</item>
+        <item>建议减少脂肪摄入, 保持蛋白质的摄入。在现有运动基础上加大有氧运动, 每次有氧运动前先进行30分钟无氧运动, 有利于提高减肥效果。</item>
+        <item>建议减少脂肪摄入, 保持蛋白质的摄入。在现有运动基础上加大有氧运动, 每次有氧运动前先进行30分钟无氧运动, 有利于提高减肥效果。</item>
     </string-array>
 </resources>

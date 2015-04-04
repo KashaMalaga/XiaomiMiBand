@@ -224,9 +224,9 @@
 
     move-result-object v0
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->m:Lcn/com/smartdevices/bracelet/config/n;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->m:Lcn/com/smartdevices/bracelet/config/o;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/n;->a:Ljava/lang/Boolean;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/o;->a:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -250,20 +250,23 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->j:Lcn/com/smartdevices/bracelet/location/i;
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
+    :goto_0
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->i:Landroid/content/Context;
 
     const-string v1, "LocationStart"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->j:Lcn/com/smartdevices/bracelet/location/i;
 
     invoke-interface {v0}, Lcn/com/smartdevices/bracelet/location/i;->a()V
 
-    :cond_0
-    return-void
+    goto :goto_0
 .end method
 
 .method public d()V
@@ -271,14 +274,17 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->j:Lcn/com/smartdevices/bracelet/location/i;
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
+    :goto_0
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->j:Lcn/com/smartdevices/bracelet/location/i;
 
     invoke-interface {v0}, Lcn/com/smartdevices/bracelet/location/i;->b()V
 
-    :cond_0
-    return-void
+    goto :goto_0
 .end method
 
 .method public e()Lcn/com/smartdevices/bracelet/location/Location;
@@ -286,19 +292,19 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->j:Lcn/com/smartdevices/bracelet/location/i;
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->j:Lcn/com/smartdevices/bracelet/location/i;
-
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/location/i;->c()Lcn/com/smartdevices/bracelet/location/Location;
-
-    move-result-object v0
+    const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
     :cond_0
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->j:Lcn/com/smartdevices/bracelet/location/i;
+
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/location/i;->c()Lcn/com/smartdevices/bracelet/location/Location;
+
+    move-result-object v0
 
     goto :goto_0
 .end method

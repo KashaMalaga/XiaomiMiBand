@@ -1,118 +1,143 @@
 .class public Lcn/com/smartdevices/bracelet/view/b;
-.super Landroid/widget/Toast;
+.super Lcn/com/smartdevices/bracelet/view/Y;
+
+
+# static fields
+.field private static final e:Ljava/lang/String; = "DayRepeatAdapter"
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;[Ljava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/widget/Toast;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/view/Y;-><init>(Landroid/content/Context;[Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;II)Landroid/widget/Toast;
-    .locals 1
 
-    if-nez p0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x3
-
-    invoke-static {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;III)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/content/Context;III)Landroid/widget/Toast;
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0, p2, p3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-    .locals 1
-
-    const/4 v0, 0x3
-
-    invoke-static {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Landroid/content/Context;Ljava/lang/String;II)Landroid/widget/Toast;
+# virtual methods
+.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 4
 
-    const/4 v0, 0x0
+    if-nez p2, :cond_0
 
-    if-nez p0, :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/b;->a:Landroid/content/Context;
 
-    :goto_0
-    return-object v0
-
-    :cond_0
-    new-instance v2, Lcn/com/smartdevices/bracelet/view/b;
-
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/view/b;-><init>(Landroid/content/Context;)V
-
-    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v1
-
-    const v3, 0x7f030045
-
-    invoke-virtual {v1, v3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/ViewGroup;
+    const v1, 0x7f0300ec
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p2
+
+    :cond_0
+    const v0, 0x7f070417
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/b;->d:[Ljava/lang/String;
+
+    aget-object v1, v1, p1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/b;->a:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    check-cast v1, Landroid/widget/TextView;
+    const v2, 0x7f0a0001
 
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
-    invoke-virtual {v1, p3}, Landroid/widget/TextView;->setGravity(I)V
+    move-result v1
 
-    invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/view/b;->setView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-virtual {v2, p2}, Lcn/com/smartdevices/bracelet/view/b;->setDuration(I)V
+    const v0, 0x7f070418
 
-    move-object v0, v2
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/b;->b:I
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->WEEK_MASK:[I
+
+    aget v2, v2, p1
+
+    and-int/2addr v1, v2
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x1
+
+    :goto_0
+    if-eqz v1, :cond_2
+
+    const-string v1, "DayRepeatAdapter"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "mDays ="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/view/b;->b:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ", checkbox = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const v1, 0x7f020062
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    :goto_1
+    return-object p2
+
+    :cond_1
+    const/4 v1, 0x0
 
     goto :goto_0
+
+    :cond_2
+    const v1, 0x7f020063
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    goto :goto_1
 .end method

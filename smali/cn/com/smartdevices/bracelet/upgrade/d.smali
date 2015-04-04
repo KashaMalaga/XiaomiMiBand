@@ -311,7 +311,7 @@
 
     iget-object v1, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
 
-    const/high16 v8, 0x7f080000
+    const v8, 0x7f090006
 
     invoke-virtual {v1, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -3,8 +3,14 @@
 
 
 # virtual methods
-.method public abstract check(Landroid/content/Context;Lcom/sina/weibo/sdk/api/WeiboMessage;)Z
+.method public abstract checkRequest(Landroid/content/Context;Lcom/sina/weibo/sdk/WeiboAppManager$WeiboInfo;Lcom/sina/weibo/sdk/api/WeiboMessage;)Z
 .end method
 
-.method public abstract check(Landroid/content/Context;Lcom/sina/weibo/sdk/api/WeiboMultiMessage;)Z
+.method public abstract checkRequest(Landroid/content/Context;Lcom/sina/weibo/sdk/WeiboAppManager$WeiboInfo;Lcom/sina/weibo/sdk/api/WeiboMultiMessage;)Z
+.end method
+
+.method public abstract checkResponse(Landroid/content/Context;Ljava/lang/String;Lcom/sina/weibo/sdk/api/WeiboMessage;)Z
+.end method
+
+.method public abstract checkResponse(Landroid/content/Context;Ljava/lang/String;Lcom/sina/weibo/sdk/api/WeiboMultiMessage;)Z
 .end method

@@ -28,11 +28,11 @@
 
 .field private final h:[I
 
-.field private final i:Lcom/c/b/r;
+.field private final i:Lcom/c/b/v;
 
 
 # direct methods
-.method constructor <init>(Lcom/c/b/c/b;IIIIFLcom/c/b/r;)V
+.method constructor <init>(Lcom/c/b/c/b;IIIIFLcom/c/b/v;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -63,7 +63,7 @@
 
     iput-object v0, p0, Lcom/c/b/i/b/b;->h:[I
 
-    iput-object p7, p0, Lcom/c/b/i/b/b;->i:Lcom/c/b/r;
+    iput-object p7, p0, Lcom/c/b/i/b/b;->i:Lcom/c/b/v;
 
     return-void
 .end method
@@ -81,7 +81,7 @@
 
     iget-object v2, p0, Lcom/c/b/i/b/b;->a:Lcom/c/b/c/b;
 
-    invoke-virtual {v2}, Lcom/c/b/c/b;->f()I
+    invoke-virtual {v2}, Lcom/c/b/c/b;->g()I
 
     move-result v3
 
@@ -375,13 +375,13 @@
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lcom/c/b/i/b/b;->i:Lcom/c/b/r;
+    iget-object v1, p0, Lcom/c/b/i/b/b;->i:Lcom/c/b/v;
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/c/b/i/b/b;->i:Lcom/c/b/r;
+    iget-object v1, p0, Lcom/c/b/i/b/b;->i:Lcom/c/b/v;
 
-    invoke-interface {v1, v0}, Lcom/c/b/r;->a(Lcom/c/b/q;)V
+    invoke-interface {v1, v0}, Lcom/c/b/v;->a(Lcom/c/b/u;)V
 
     :cond_2
     const/4 v0, 0x0
@@ -456,7 +456,7 @@
 
     iget v0, p0, Lcom/c/b/i/b/b;->d:I
 
-    shr-int/lit8 v3, v6, 0x1
+    div-int/lit8 v3, v6, 0x2
 
     add-int v8, v0, v3
 
@@ -475,7 +475,7 @@
 
     add-int/lit8 v0, v5, 0x1
 
-    shr-int/lit8 v0, v0, 0x1
+    div-int/lit8 v0, v0, 0x2
 
     :goto_1
     add-int v10, v8, v0
@@ -506,7 +506,7 @@
     :cond_0
     add-int/lit8 v0, v5, 0x1
 
-    shr-int/lit8 v0, v0, 0x1
+    div-int/lit8 v0, v0, 0x2
 
     neg-int v0, v0
 
@@ -638,7 +638,7 @@
     goto :goto_5
 
     :cond_b
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 

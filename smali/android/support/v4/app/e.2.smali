@@ -27,7 +27,7 @@
 .method public a(Landroid/app/Activity;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    invoke-static {p1}, Landroid/support/v4/app/i;->a(Landroid/app/Activity;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Landroid/support/v4/app/j;->a(Landroid/app/Activity;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -37,7 +37,7 @@
 .method public a(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1, p2, p3}, Landroid/support/v4/app/i;->a(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;
+    invoke-static {p1, p2, p3}, Landroid/support/v4/app/j;->a(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -47,7 +47,7 @@
 .method public a(Ljava/lang/Object;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1, p2, p3, p4}, Landroid/support/v4/app/i;->a(Ljava/lang/Object;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Ljava/lang/Object;
+    invoke-static {p1, p2, p3, p4}, Landroid/support/v4/app/j;->a(Ljava/lang/Object;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Ljava/lang/Object;
 
     move-result-object v0
 

@@ -1,20 +1,5 @@
-.class final Landroid/support/v4/app/s;
+.class Landroid/support/v4/app/s;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/app/BackStackState;",
-        ">;"
-    }
-.end annotation
 
 
 # direct methods
@@ -26,42 +11,26 @@
     return-void
 .end method
 
+.method public static a(Landroid/app/Activity;)V
+    .locals 0
 
-# virtual methods
-.method public a(Landroid/os/Parcel;)Landroid/support/v4/app/BackStackState;
-    .locals 1
+    invoke-virtual {p0}, Landroid/app/Activity;->finishAffinity()V
 
-    new-instance v0, Landroid/support/v4/app/BackStackState;
-
-    invoke-direct {v0, p1}, Landroid/support/v4/app/BackStackState;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
+    return-void
 .end method
 
-.method public a(I)[Landroid/support/v4/app/BackStackState;
-    .locals 1
+.method public static a(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V
+    .locals 0
 
-    new-array v0, p1, [Landroid/support/v4/app/BackStackState;
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V
 
-    return-object v0
+    return-void
 .end method
 
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
+.method public static a(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
+    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/s;->a(Landroid/os/Parcel;)Landroid/support/v4/app/BackStackState;
+    invoke-virtual {p0, p1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/s;->a(I)[Landroid/support/v4/app/BackStackState;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

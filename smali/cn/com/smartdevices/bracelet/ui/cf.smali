@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$PanelSlideListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cx;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cx;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cF;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cF;->a:Lcn/com/smartdevices/bracelet/ui/cx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +22,108 @@
 
 
 # virtual methods
-.method public run()V
+.method public onGetPullDownDistance()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public onGetPullDownDockEnable()Ljava/lang/Boolean;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public onGetThreshhold()F
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public onGetThreshhold2()F
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public onLastSlideOffset(Landroid/view/View;F)V
+    .locals 3
+
+    const-string v0, "TAG_FOR_SLIDINGPANEL"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onLastSlideOffset "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onPanelAnchored(Landroid/view/View;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cF;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+    const-string v0, "TAG_FOR_SLIDINGPANEL"
 
-    const/4 v1, -0x1
+    const-string v1, "onPanelAnchored"
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->setResult(I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cF;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->finish()V
+.method public onPanelCollapsed(Landroid/view/View;)V
+    .locals 2
+
+    const-string v0, "TAG_FOR_SLIDINGPANEL"
+
+    const-string v1, "onPanelCollapsed"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onPanelExpanded(Landroid/view/View;)V
+    .locals 2
+
+    const-string v0, "TAG_FOR_SLIDINGPANEL"
+
+    const-string v1, "onPanelExpanded"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onPanelSlide(Landroid/view/View;Ljava/lang/Boolean;F)V
+    .locals 0
 
     return-void
 .end method

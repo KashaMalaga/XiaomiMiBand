@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field private a:Lcn/com/smartdevices/bracelet/ui/dg;
+.field private a:Lcn/com/smartdevices/bracelet/ui/dG;
 
 
 # direct methods
@@ -14,7 +14,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dg;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
     return-void
 .end method
@@ -36,7 +36,7 @@
 
     move-result-object v1
 
-    const-class v0, Lcn/com/smartdevices/bracelet/ui/dg;
+    const-class v0, Lcn/com/smartdevices/bracelet/ui/dG;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -46,13 +46,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/dg;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/dG;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dg;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
     const v0, 0x1020002
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dg;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
     invoke-virtual {v1, v0, v2}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100003
+    const v1, 0x7f100006
 
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
@@ -112,25 +112,25 @@
 
     move-result v0
 
-    const v1, 0x7f0703ca
+    const v1, 0x7f070436
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dg;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dg;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dg;->isVisible()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dG;->isVisible()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dg;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dg;->a()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dG;->a()V
 
     :cond_1
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z

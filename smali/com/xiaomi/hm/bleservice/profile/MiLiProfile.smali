@@ -78,7 +78,7 @@
 
 .field public static final PROFILE_STATE_UNKNOWN:I = 0x0
 
-.field private static final TAG:Ljava/lang/String;
+.field private static final TAG:Ljava/lang/String; = "MiLiProfile"
 
 .field private static final TEST_DISCONNECTED_REMINDER:B = 0x5t
 
@@ -146,7 +146,7 @@
 
 .field private m_enableSensorDataNotification:Z
 
-.field private m_onRealtimeStepsChangedCB:Lcn/com/smartdevices/bracelet/f/c;
+.field private m_onRealtimeStepsChangedCB:Lcn/com/smartdevices/bracelet/e/c;
 
 .field private miliCallback:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
 
@@ -156,14 +156,6 @@
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
-
-    const-class v0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -455,7 +447,7 @@
 
     iput-boolean v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_enableRealtimeStepNotification:Z
 
-    iput-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_onRealtimeStepsChangedCB:Lcn/com/smartdevices/bracelet/f/c;
+    iput-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_onRealtimeStepsChangedCB:Lcn/com/smartdevices/bracelet/e/c;
 
     iput-boolean v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_enableSensorDataNotification:Z
 
@@ -484,15 +476,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$100()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)V
+.method static synthetic access$100(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->onRealtimeStepsChanged(I)V
@@ -500,7 +484,7 @@
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
+.method static synthetic access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
     .locals 1
 
     iget v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
@@ -508,7 +492,7 @@
     return v0
 .end method
 
-.method static synthetic access$302(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)I
+.method static synthetic access$202(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)I
     .locals 0
 
     iput p1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
@@ -516,7 +500,7 @@
     return p1
 .end method
 
-.method static synthetic access$400(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
+.method static synthetic access$300(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_SensorSourceOutputStream:Ljava/io/PipedOutputStream;
@@ -524,7 +508,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
+.method static synthetic access$400(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_DataSourceOutputStream:Ljava/io/PipedOutputStream;
@@ -1364,7 +1348,7 @@
 
     if-nez v0, :cond_3
 
-    sget-object v0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
+    const-string v0, "MiLiProfile"
 
     const-string v2, "m_CharPair is null!!!"
 
@@ -1485,7 +1469,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_onRealtimeStepsChangedCB:Lcn/com/smartdevices/bracelet/f/c;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_onRealtimeStepsChangedCB:Lcn/com/smartdevices/bracelet/e/c;
 
     if-nez v0, :cond_1
 
@@ -1494,9 +1478,9 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_onRealtimeStepsChangedCB:Lcn/com/smartdevices/bracelet/f/c;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_onRealtimeStepsChangedCB:Lcn/com/smartdevices/bracelet/e/c;
 
-    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/f/c;->a(I)V
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/e/c;->a(I)V
 
     goto :goto_0
 .end method
@@ -3301,7 +3285,7 @@
     .end array-data
 .end method
 
-.method public enableRealtimeStepNotification(ZLcn/com/smartdevices/bracelet/f/c;)Z
+.method public enableRealtimeStepNotification(ZLcn/com/smartdevices/bracelet/e/c;)Z
     .locals 5
 
     const/4 v1, 0x1
@@ -3312,7 +3296,7 @@
 
     iput-boolean p1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_enableRealtimeStepNotification:Z
 
-    iput-object p2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_onRealtimeStepsChangedCB:Lcn/com/smartdevices/bracelet/f/c;
+    iput-object p2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_onRealtimeStepsChangedCB:Lcn/com/smartdevices/bracelet/e/c;
 
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_CharControlPoint:Landroid/bluetooth/BluetoothGattCharacteristic;
 
@@ -3885,7 +3869,7 @@
 
     if-nez v1, :cond_0
 
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
+    const-string v1, "MiLiProfile"
 
     const-string v2, "getRealtimeSteps return null!!!"
 
@@ -3951,7 +3935,7 @@
     goto :goto_0
 
     :cond_2
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
+    const-string v1, "MiLiProfile"
 
     new-instance v3, Ljava/lang/StringBuilder;
 

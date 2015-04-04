@@ -118,7 +118,7 @@
 
     iget-object v4, v4, Lcom/d/a/a/D;->d:Ljava/lang/Throwable;
 
-    invoke-virtual {v1, v2, v3, v0, v4}, Lcom/d/a/a/z;->a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v2, v3, v0, v4}, Lcom/d/a/a/z;->onFailure(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 

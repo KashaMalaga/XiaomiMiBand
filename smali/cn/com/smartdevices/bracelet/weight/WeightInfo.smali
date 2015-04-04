@@ -86,6 +86,10 @@
 
     iput-wide v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
 
+    iget v0, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
     return-void
 .end method
 

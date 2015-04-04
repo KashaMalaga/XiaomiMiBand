@@ -39,7 +39,7 @@
     if-gtz p3, :cond_1
 
     :cond_0
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -50,7 +50,7 @@
 
     invoke-direct {v3, p2, p3}, Lcom/c/b/c/b;-><init>(II)V
 
-    shl-int/lit8 v0, p2, 0x1
+    mul-int/lit8 v0, p2, 0x2
 
     new-array v4, v0, [F
 
@@ -70,7 +70,7 @@
     :goto_1
     if-ge v0, v5, :cond_2
 
-    shr-int/lit8 v7, v0, 0x1
+    div-int/lit8 v7, v0, 0x2
 
     int-to-float v7, v7
 
@@ -113,7 +113,7 @@
 
     if-eqz v6, :cond_3
 
-    shr-int/lit8 v6, v0, 0x1
+    div-int/lit8 v6, v0, 0x2
 
     invoke-virtual {v3, v6, v2}, Lcom/c/b/c/b;->b(II)V
     :try_end_0
@@ -127,7 +127,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 

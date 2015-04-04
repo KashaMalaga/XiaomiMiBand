@@ -1,76 +1,222 @@
-.class Lcn/com/smartdevices/bracelet/lab/ui/Q;
-.super Ljava/lang/Object;
+.class public Lcn/com/smartdevices/bracelet/lab/ui/Q;
+.super Lcn/com/smartdevices/bracelet/ui/aa;
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# static fields
+.field public static final a:Ljava/lang/String; = "operation"
+
+.field public static final b:Ljava/lang/String; = "mainNotice"
+
+.field public static final c:Ljava/lang/String; = "extraNotice"
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/EditText;
+.field private d:Landroid/widget/TextView;
 
-.field final synthetic b:Landroid/app/Dialog;
-
-.field final synthetic c:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
+.field private e:Landroid/widget/TextView;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;Landroid/widget/EditText;Landroid/app/Dialog;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aa;-><init>()V
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->a:Landroid/widget/EditText;
+    return-void
+.end method
 
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->b:Landroid/app/Dialog;
+.method public static a(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;Lcn/com/smartdevices/bracelet/ui/ac;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/app/Activity;",
+            "Ljava/lang/Class",
+            "<+",
+            "Landroid/app/DialogFragment;",
+            ">;",
+            "Landroid/os/Bundle;",
+            "Lcn/com/smartdevices/bracelet/ui/ac;",
+            ")V"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0, p2}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/app/Fragment;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/lab/ui/Q;
+
+    invoke-virtual {v0, p3}, Lcn/com/smartdevices/bracelet/lab/ui/Q;->setOpClickListener(Lcn/com/smartdevices/bracelet/ui/ac;)V
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/ui/Q;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 5
+.method protected inflateLayout()I
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->a:Landroid/widget/EditText;
+    const v0, 0x7f030074
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    return v0
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 7
+
+    const v6, 0x104000a
+
+    const/16 v5, 0x8
+
+    const/4 v4, 0x0
+
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/aa;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+
+    move-result-object v1
+
+    const v0, 0x7f070260
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->d:Landroid/widget/TextView;
+
+    const v0, 0x7f07025f
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->e:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/ui/Q;->getArguments()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    const-string v2, "extraNotice"
+
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->e:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
+
+    :goto_0
+    const-string v2, "mainNotice"
+
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->d:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
+
+    :goto_1
+    const-string v2, "operation"
+
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_0
+    if-eqz v2, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
-
-    const-string v2, "SportVote"
-
-    const-string v3, "Others"
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->b:Landroid/app/Dialog;
-
-    invoke-virtual {v1}, Landroid/app/Dialog;->dismiss()V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
-
-    const v2, 0x7f0200e8
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcn/com/smartdevices/bracelet/lab/ui/Q;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;ILjava/lang/String;)V
-
     :cond_0
-    return-void
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->mLeftButton:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->mLeftButton:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
+
+    :goto_2
+    invoke-virtual {p0, v4}, Lcn/com/smartdevices/bracelet/lab/ui/Q;->setCancelable(Z)V
+
+    return-object v1
+
+    :cond_1
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->e:Landroid/widget/TextView;
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->e:Landroid/widget/TextView;
+
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->d:Landroid/widget/TextView;
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->d:Landroid/widget/TextView;
+
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    :cond_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->d:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->e:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->mLeftButton:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v6}, Landroid/widget/TextView;->setText(I)V
+
+    goto :goto_2
 .end method

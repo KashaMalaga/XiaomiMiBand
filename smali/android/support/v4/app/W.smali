@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,31 +22,24 @@
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public run()V
+    .locals 5
 
     iget-object v0, p0, Landroid/support/v4/app/W;->a:Landroid/support/v4/app/U;
 
-    move-object v1, p1
+    iget-object v1, p0, Landroid/support/v4/app/W;->a:Landroid/support/v4/app/U;
 
-    check-cast v1, Landroid/widget/ListView;
+    iget-object v1, v1, Landroid/support/v4/app/U;->u:Landroid/support/v4/app/FragmentActivity;
 
-    move-object v2, p2
+    iget-object v1, v1, Landroid/support/v4/app/FragmentActivity;->d:Landroid/os/Handler;
 
-    move v3, p3
+    const/4 v2, 0x0
 
-    move-wide v4, p4
+    const/4 v3, -0x1
 
-    invoke-virtual/range {v0 .. v5}, Landroid/support/v4/app/U;->a(Landroid/widget/ListView;Landroid/view/View;IJ)V
+    const/4 v4, 0x0
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/support/v4/app/U;->a(Landroid/os/Handler;Ljava/lang/String;II)Z
 
     return-void
 .end method

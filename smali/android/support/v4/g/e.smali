@@ -1,12 +1,9 @@
-.class Landroid/support/v4/g/e;
+.class public Landroid/support/v4/g/e;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/support/v4/g/c;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -14,14 +11,32 @@
     return-void
 .end method
 
+.method public static a(Landroid/support/v4/g/g;)Landroid/os/Parcelable$Creator;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/support/v4/g/g",
+            "<TT;>;)",
+            "Landroid/os/Parcelable$Creator",
+            "<TT;>;"
+        }
+    .end annotation
 
-# virtual methods
-.method public a(Landroid/net/ConnectivityManager;)Z
-    .locals 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-static {p1}, Landroid/support/v4/g/h;->a(Landroid/net/ConnectivityManager;)Z
+    const/16 v1, 0xd
 
-    move-result v0
+    if-lt v0, v1, :cond_0
 
-    return v0
+    invoke-static {p0}, Landroid/support/v4/g/i;->a(Landroid/support/v4/g/g;)Landroid/os/Parcelable$Creator;
+
+    :cond_0
+    new-instance v0, Landroid/support/v4/g/f;
+
+    invoke-direct {v0, p0}, Landroid/support/v4/g/f;-><init>(Landroid/support/v4/g/g;)V
+
+    return-object v0
 .end method

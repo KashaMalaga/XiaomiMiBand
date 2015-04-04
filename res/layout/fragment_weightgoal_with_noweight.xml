@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/dialog_empty_area" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="#fff4f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:gravity="center" android:id="@id/name_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" />
+        <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:gravity="center" android:id="@id/list_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setgoalafterweight" />
+        <cn.com.smartdevices.bracelet.ui.widget.DimPanelBottomBar android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" app:right_text="@string/gotit" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </LinearLayout>
+</LinearLayout>

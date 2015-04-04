@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public onGpsStatusChanged(I)V
-    .locals 5
+    .locals 3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
 
@@ -89,51 +89,19 @@
     goto :goto_1
 
     :cond_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/services/a;->b:Lcn/com/smartdevices/bracelet/gps/services/a/c;
+
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(I)Lcn/com/smartdevices/bracelet/gps/services/u;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/u;->a()I
-
-    move-result v0
-
-    const-string v2, "GPS"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "AMapLocationListener onGpsStatusChanged curCnt = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
     move-result-object v1
 
-    const-string v3, ",curLevel = "
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/services/u;->a()I
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
-
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/services/a;->b:Lcn/com/smartdevices/bracelet/gps/services/a/c;
-
-    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/gps/services/a/c;->a(I)V
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/a/c;->a(I)V
 
     goto :goto_0
 .end method

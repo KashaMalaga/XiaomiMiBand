@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field private A:Lcn/com/smartdevices/bracelet/chart/g;
+.field private A:Lcn/com/smartdevices/bracelet/chart/f;
 
 .field private B:I
 
@@ -25,14 +25,12 @@
 
 .field private F:I
 
-.field private z:Lcn/com/smartdevices/bracelet/chart/f;
+.field private z:Lcn/com/smartdevices/bracelet/chart/e;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 9
-
-    const/4 v8, 0x0
+    .locals 8
 
     const/high16 v4, 0x41000000
 
@@ -42,9 +40,9 @@
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/chart/base/a;-><init>(Landroid/content/Context;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/chart/c;
+    new-instance v0, Lcn/com/smartdevices/bracelet/chart/b;
 
-    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/chart/c;-><init>(Lcn/com/smartdevices/bracelet/chart/a;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/chart/b;-><init>(Lcn/com/smartdevices/bracelet/chart/a;Landroid/content/Context;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->f:Lcn/com/smartdevices/bracelet/chart/base/b;
 
@@ -84,13 +82,13 @@
 
     invoke-virtual {v0, v1, v7, v2, v7}, Lcn/com/smartdevices/bracelet/chart/base/b;->a(FFFF)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/chart/f;
+    new-instance v0, Lcn/com/smartdevices/bracelet/chart/e;
 
-    invoke-direct {v0, p0, v8}, Lcn/com/smartdevices/bracelet/chart/f;-><init>(Lcn/com/smartdevices/bracelet/chart/a;Lcn/com/smartdevices/bracelet/chart/b;)V
+    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/chart/e;-><init>(Lcn/com/smartdevices/bracelet/chart/a;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/f;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/e;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/e;
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/a;->p:F
 
@@ -118,21 +116,21 @@
 
     int-to-float v3, v3
 
-    invoke-virtual {v0, v1, v2, v3, v7}, Lcn/com/smartdevices/bracelet/chart/f;->a(FFFF)V
+    invoke-virtual {v0, v1, v2, v3, v7}, Lcn/com/smartdevices/bracelet/chart/e;->a(FFFF)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/e;
 
     const/high16 v1, 0x3f800000
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/f;->c(F)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/e;->c(F)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/chart/g;
+    new-instance v0, Lcn/com/smartdevices/bracelet/chart/f;
 
-    invoke-direct {v0, p0, v8}, Lcn/com/smartdevices/bracelet/chart/g;-><init>(Lcn/com/smartdevices/bracelet/chart/a;Lcn/com/smartdevices/bracelet/chart/b;)V
+    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/chart/f;-><init>(Lcn/com/smartdevices/bracelet/chart/a;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/f;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/f;
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/a;->p:F
 
@@ -164,15 +162,15 @@
 
     int-to-float v3, v3
 
-    invoke-virtual {v0, v1, v2, v3, v7}, Lcn/com/smartdevices/bracelet/chart/g;->a(FFFF)V
+    invoke-virtual {v0, v1, v2, v3, v7}, Lcn/com/smartdevices/bracelet/chart/f;->a(FFFF)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/f;
 
     const/16 v1, 0x258
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/g;->i(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/f;->i(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/f;
 
     const/high16 v1, 0x3f000000
 
@@ -180,7 +178,7 @@
 
     mul-float/2addr v1, v2
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/g;->c(F)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/f;->c(F)V
 
     return-void
 .end method
@@ -320,9 +318,9 @@
 
     const/4 v1, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/f;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/g;->t()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/f;->t()V
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/chart/a;->B:I
 
@@ -372,7 +370,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->f:Lcn/com/smartdevices/bracelet/chart/base/b;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/c;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/b;
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/a;->r:F
 
@@ -385,7 +383,7 @@
     :cond_1
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/a;->r:F
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/c;->d()F
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/b;->d()F
 
     move-result v2
 
@@ -393,7 +391,7 @@
 
     if-gez v1, :cond_2
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/c;->d()F
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/b;->d()F
 
     move-result v1
 
@@ -426,7 +424,7 @@
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/a;->r:F
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/c;->e(F)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/b;->e(F)V
 
     goto :goto_0
 .end method
@@ -511,19 +509,19 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->j()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/e;
+
+    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/chart/e;->a(Landroid/graphics/Canvas;F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/f;
 
     invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/chart/f;->a(Landroid/graphics/Canvas;F)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
-
-    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/chart/g;->a(Landroid/graphics/Canvas;F)V
 
     :cond_0
     invoke-super {p0, p1, p2}, Lcn/com/smartdevices/bracelet/chart/base/a;->a(Landroid/graphics/Canvas;F)V
@@ -550,9 +548,9 @@
 
     iput v2, v1, Landroid/graphics/RectF;->bottom:F
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/f;
 
-    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/chart/g;->b(Landroid/graphics/RectF;)V
+    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/chart/f;->b(Landroid/graphics/RectF;)V
 
     new-instance v1, Landroid/graphics/RectF;
 
@@ -562,9 +560,9 @@
 
     iput v0, v1, Landroid/graphics/RectF;->bottom:F
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/e;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/f;->b(Landroid/graphics/RectF;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/e;->b(Landroid/graphics/RectF;)V
 
     return-void
 .end method
@@ -576,14 +574,14 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/chart/e;",
+            "Lcn/com/smartdevices/bracelet/chart/d;",
             ">;)V"
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/f;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/g;->g(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/f;->g(Ljava/util/List;)V
 
     return-void
 .end method
@@ -593,9 +591,9 @@
 
     const/4 v1, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/e;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/f;->t()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/e;->t()V
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/chart/a;->B:I
 
@@ -613,15 +611,15 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->f:Lcn/com/smartdevices/bracelet/chart/base/b;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/c;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/b;
 
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/chart/c;->a(Lcn/com/smartdevices/bracelet/chart/c;I)I
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/chart/b;->a(Lcn/com/smartdevices/bracelet/chart/b;I)I
 
     const/4 v1, 0x0
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/chart/c;->g:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/chart/b;->g:I
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/c;->a()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/b;->a()V
 
     return-void
 .end method
@@ -633,18 +631,18 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/chart/e;",
+            "Lcn/com/smartdevices/bracelet/chart/d;",
             ">;)V"
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/e;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/f;->g(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/e;->g(Ljava/util/List;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/e;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/f;->k()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/e;->k()V
 
     return-void
 .end method
@@ -652,7 +650,7 @@
 .method public c()Lcn/com/smartdevices/bracelet/chart/base/a;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/e;
 
     return-object v0
 .end method
@@ -830,9 +828,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->f:Lcn/com/smartdevices/bracelet/chart/base/b;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/c;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/b;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/c;->e()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/b;->e()V
 
     return-void
 .end method
@@ -849,9 +847,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/e;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/f;->f(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/e;->f(Ljava/util/List;)V
 
     return-void
 .end method
@@ -859,7 +857,7 @@
 .method public d()Lcn/com/smartdevices/bracelet/chart/base/a;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/f;
 
     return-object v0
 .end method
@@ -871,14 +869,14 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/chart/e;",
+            "Lcn/com/smartdevices/bracelet/chart/d;",
             ">;)V"
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/f;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/g;->f(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/f;->f(Ljava/util/List;)V
 
     return-void
 .end method
@@ -886,13 +884,13 @@
 .method public e()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->z:Lcn/com/smartdevices/bracelet/chart/e;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/e;->e()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/f;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/f;->e()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/g;->e()V
 
     return-void
 .end method
@@ -918,9 +916,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->f:Lcn/com/smartdevices/bracelet/chart/base/b;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/c;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/b;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/c;->d()F
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/b;->d()F
 
     move-result v0
 

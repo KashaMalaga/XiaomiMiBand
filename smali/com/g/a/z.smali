@@ -1,74 +1,149 @@
-.class public Lcom/g/a/Z;
+.class public Lcom/g/a/z;
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field public a:I
+# static fields
+.field private static a:Ljava/util/concurrent/ExecutorService;
 
-.field public b:I
+.field private static b:J
 
-.field public c:Ljava/lang/String;
-
-.field public d:Lcom/g/a/aa;
-
-.field public e:Z
-
-.field public f:Z
-
-.field public g:Z
+.field private static c:Ljava/util/concurrent/ExecutorService;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v2, 0x1
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/g/a/z;->a:Ljava/util/concurrent/ExecutorService;
+
+    const-wide/16 v0, 0x5
+
+    sput-wide v0, Lcom/g/a/z;->b:J
+
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/g/a/z;->c:Ljava/util/concurrent/ExecutorService;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x2710
+    return-void
+.end method
 
-    iput v0, p0, Lcom/g/a/Z;->a:I
+.method public static a()V
+    .locals 4
 
-    const/16 v0, 0x4e20
+    :try_start_0
+    sget-object v0, Lcom/g/a/z;->a:Ljava/util/concurrent/ExecutorService;
 
-    iput v0, p0, Lcom/g/a/Z;->b:I
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    if-nez v0, :cond_0
 
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+    sget-object v0, Lcom/g/a/z;->a:Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v1
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    sget-object v0, Lcom/g/a/z;->c:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/g/a/z;->c:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
+
+    :cond_1
+    sget-object v0, Lcom/g/a/z;->a:Ljava/util/concurrent/ExecutorService;
+
+    sget-wide v1, Lcom/g/a/z;->b:J
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface {v0, v1, v2, v3}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+
+    sget-object v0, Lcom/g/a/z;->c:Ljava/util/concurrent/ExecutorService;
+
+    sget-wide v1, Lcom/g/a/z;->b:J
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface {v0, v1, v2, v3}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public static a(Ljava/lang/Runnable;)V
+    .locals 1
+
+    sget-object v0, Lcom/g/a/z;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
-    const-string v1, "/Robotium-Screenshots/"
+    sput-object v0, Lcom/g/a/z;->a:Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    sget-object v0, Lcom/g/a/z;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0, p0}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public static b(Ljava/lang/Runnable;)V
+    .locals 1
+
+    sget-object v0, Lcom/g/a/z;->c:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sput-object v0, Lcom/g/a/z;->c:Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v0
+    :cond_0
+    sget-object v0, Lcom/g/a/z;->c:Ljava/util/concurrent/ExecutorService;
 
-    iput-object v0, p0, Lcom/g/a/Z;->c:Ljava/lang/String;
-
-    sget-object v0, Lcom/g/a/aa;->a:Lcom/g/a/aa;
-
-    iput-object v0, p0, Lcom/g/a/Z;->d:Lcom/g/a/aa;
-
-    iput-boolean v2, p0, Lcom/g/a/Z;->e:Z
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/g/a/Z;->f:Z
-
-    iput-boolean v2, p0, Lcom/g/a/Z;->g:Z
+    invoke-interface {v0, p0}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method

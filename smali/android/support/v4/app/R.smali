@@ -1,24 +1,13 @@
-.class final Landroid/support/v4/app/R;
+.class public abstract Landroid/support/v4/app/R;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/app/FragmentTabHost$SavedState;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field public static final a:I = 0x1
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,44 +15,93 @@
     return-void
 .end method
 
+.method public static a(Z)V
+    .locals 0
+
+    sput-boolean p0, Landroid/support/v4/app/U;->b:Z
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentTabHost$SavedState;
-    .locals 2
-
-    new-instance v0, Landroid/support/v4/app/FragmentTabHost$SavedState;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Landroid/support/v4/app/FragmentTabHost$SavedState;-><init>(Landroid/os/Parcel;Landroid/support/v4/app/P;)V
-
-    return-object v0
+.method public abstract a(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/Fragment$SavedState;
 .end method
 
-.method public a(I)[Landroid/support/v4/app/FragmentTabHost$SavedState;
-    .locals 1
-
-    new-array v0, p1, [Landroid/support/v4/app/FragmentTabHost$SavedState;
-
-    return-object v0
+.method public abstract a(I)Landroid/support/v4/app/Fragment;
 .end method
 
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
+.method public abstract a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/support/v4/app/Fragment;
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/R;->a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentTabHost$SavedState;
+.method public abstract a(Ljava/lang/String;)Landroid/support/v4/app/Fragment;
+.end method
+
+.method public abstract a()Landroid/support/v4/app/aj;
+.end method
+
+.method public abstract a(II)V
+.end method
+
+.method public abstract a(Landroid/os/Bundle;Ljava/lang/String;Landroid/support/v4/app/Fragment;)V
+.end method
+
+.method public abstract a(Landroid/support/v4/app/T;)V
+.end method
+
+.method public abstract a(Ljava/lang/String;I)V
+.end method
+
+.method public abstract a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+.end method
+
+.method public abstract b(I)Landroid/support/v4/app/S;
+.end method
+
+.method public b()Landroid/support/v4/app/aj;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    invoke-virtual {p0}, Landroid/support/v4/app/R;->a()Landroid/support/v4/app/aj;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+.method public abstract b(Landroid/support/v4/app/T;)V
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/R;->a(I)[Landroid/support/v4/app/FragmentTabHost$SavedState;
+.method public abstract b(II)Z
+.end method
 
-    move-result-object v0
+.method public abstract b(Ljava/lang/String;I)Z
+.end method
 
-    return-object v0
+.method public abstract c()Z
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract e()Z
+.end method
+
+.method public abstract f()I
+.end method
+
+.method public abstract g()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Landroid/support/v4/app/Fragment;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract h()Z
 .end method

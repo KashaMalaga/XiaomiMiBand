@@ -3,18 +3,6 @@
 
 
 # static fields
-.field private static final DIALOG_BACKGROUND_IMAGE_NAME:Ljava/lang/String; = "weibosdk_dialog_bg.9.png"
-
-.field public static final DIALOG_BOTTOM_MARGIN:I = 0xa
-
-.field private static final DIALOG_CLOSE_BUTTON_IMAGE_NAME:Ljava/lang/String; = "ic_com_sina_weibo_sdk_close.png"
-
-.field public static final DIALOG_LEFT_MARGIN:I = 0xa
-
-.field public static final DIALOG_RIGHT_MARGIN:I = 0xa
-
-.field public static final DIALOG_TOP_MARGIN:I = 0x1e
-
 .field private static final DRAWABLE:Ljava/lang/String; = "drawable"
 
 .field private static final DRAWABLE_HDPI:Ljava/lang/String; = "drawable-hdpi"
@@ -27,79 +15,14 @@
 
 .field private static final DRAWABLE_XXHDPI:Ljava/lang/String; = "drawable-xxhdpi"
 
-.field private static final LOADING_EN:Ljava/lang/String; = "Loading..."
-
-.field private static final LOADING_ZH_CN:Ljava/lang/String; = "\u52a0\u8f7d\u4e2d..."
-
-.field private static final LOADING_ZH_TW:Ljava/lang/String; = "\u8f09\u5165\u4e2d..."
-
-.field private static final NETWORK_NOT_AVAILABLE_EN:Ljava/lang/String; = "Network is not available"
-
-.field private static final NETWORK_NOT_AVAILABLE_ZH_CN:Ljava/lang/String; = "\u65e0\u6cd5\u8fde\u63a5\u5230\u7f51\u7edc\uff0c\u8bf7\u68c0\u67e5\u7f51\u7edc\u914d\u7f6e"
-
-.field private static final NETWORK_NOT_AVAILABLE_ZH_TW:Ljava/lang/String; = "\u7121\u6cd5\u9023\u63a5\u5230\u7db2\u7edc\uff0c\u8acb\u6aa2\u67e5\u7db2\u7edc\u914d\u7f6e"
-
 .field private static final PRE_INSTALL_DRAWBLE_PATHS:[Ljava/lang/String;
 
 .field private static final TAG:Ljava/lang/String;
 
-.field public static final dimen_dialog_bottom_margin:I = 0x4
-
-.field public static final dimen_dialog_left_margin:I = 0x1
-
-.field public static final dimen_dialog_right_margin:I = 0x3
-
-.field public static final dimen_dialog_top_margin:I = 0x2
-
-.field public static final drawable_dialog_background:I = 0x1
-
-.field public static final drawable_dialog_close_button:I = 0x2
-
-.field private static final sDrawableMap:Landroid/util/SparseArray;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/util/SparseArray",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private static final sLanguageMap:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap",
-            "<",
-            "Ljava/util/Locale;",
-            "Landroid/util/SparseArray",
-            "<",
-            "Ljava/lang/String;",
-            ">;>;"
-        }
-    .end annotation
-.end field
-
-.field private static final sLayoutMap:Landroid/util/SparseIntArray;
-
-.field public static final string_loading:I = 0x1
-
-.field public static final string_network_not_available:I = 0x2
-
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
-
-    const/4 v6, 0x4
-
-    const/4 v5, 0x3
-
-    const/16 v2, 0xa
-
-    const/4 v4, 0x2
-
-    const/4 v3, 0x1
+    .locals 3
 
     const-class v0, Lcom/sina/weibo/sdk/utils/ResourceManager;
 
@@ -108,30 +31,6 @@
     move-result-object v0
 
     sput-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->TAG:Ljava/lang/String;
-
-    new-instance v0, Landroid/util/SparseIntArray;
-
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
-
-    sput-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sLayoutMap:Landroid/util/SparseIntArray;
-
-    sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sLayoutMap:Landroid/util/SparseIntArray;
-
-    invoke-virtual {v0, v3, v2}, Landroid/util/SparseIntArray;->put(II)V
-
-    sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sLayoutMap:Landroid/util/SparseIntArray;
-
-    const/16 v1, 0x1e
-
-    invoke-virtual {v0, v4, v1}, Landroid/util/SparseIntArray;->put(II)V
-
-    sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sLayoutMap:Landroid/util/SparseIntArray;
-
-    invoke-virtual {v0, v5, v2}, Landroid/util/SparseIntArray;->put(II)V
-
-    sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sLayoutMap:Landroid/util/SparseIntArray;
-
-    invoke-virtual {v0, v6, v2}, Landroid/util/SparseIntArray;->put(II)V
 
     const/4 v0, 0x6
 
@@ -143,21 +42,29 @@
 
     aput-object v2, v0, v1
 
-    const-string v1, "drawable-xhdpi"
+    const/4 v1, 0x1
 
-    aput-object v1, v0, v3
+    const-string v2, "drawable-xhdpi"
 
-    const-string v1, "drawable-hdpi"
+    aput-object v2, v0, v1
 
-    aput-object v1, v0, v4
+    const/4 v1, 0x2
 
-    const-string v1, "drawable-mdpi"
+    const-string v2, "drawable-hdpi"
 
-    aput-object v1, v0, v5
+    aput-object v2, v0, v1
 
-    const-string v1, "drawable-ldpi"
+    const/4 v1, 0x3
 
-    aput-object v1, v0, v6
+    const-string v2, "drawable-mdpi"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x4
+
+    const-string v2, "drawable-ldpi"
+
+    aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
@@ -166,84 +73,6 @@
     aput-object v2, v0, v1
 
     sput-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->PRE_INSTALL_DRAWBLE_PATHS:[Ljava/lang/String;
-
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    sput-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sDrawableMap:Landroid/util/SparseArray;
-
-    sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sDrawableMap:Landroid/util/SparseArray;
-
-    const-string v1, "weibosdk_dialog_bg.9.png"
-
-    invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sDrawableMap:Landroid/util/SparseArray;
-
-    const-string v1, "ic_com_sina_weibo_sdk_close.png"
-
-    invoke-virtual {v0, v4, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sLanguageMap:Ljava/util/HashMap;
-
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    const-string v1, "\u52a0\u8f7d\u4e2d..."
-
-    invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const-string v1, "\u65e0\u6cd5\u8fde\u63a5\u5230\u7f51\u7edc\uff0c\u8bf7\u68c0\u67e5\u7f51\u7edc\u914d\u7f6e"
-
-    invoke-virtual {v0, v4, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    sget-object v1, Lcom/sina/weibo/sdk/utils/ResourceManager;->sLanguageMap:Ljava/util/HashMap;
-
-    sget-object v2, Ljava/util/Locale;->SIMPLIFIED_CHINESE:Ljava/util/Locale;
-
-    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    const-string v1, "\u8f09\u5165\u4e2d..."
-
-    invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const-string v1, "\u7121\u6cd5\u9023\u63a5\u5230\u7db2\u7edc\uff0c\u8acb\u6aa2\u67e5\u7db2\u7edc\u914d\u7f6e"
-
-    invoke-virtual {v0, v4, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    sget-object v1, Lcom/sina/weibo/sdk/utils/ResourceManager;->sLanguageMap:Ljava/util/HashMap;
-
-    sget-object v2, Ljava/util/Locale;->TRADITIONAL_CHINESE:Ljava/util/Locale;
-
-    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    const-string v1, "Loading..."
-
-    invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const-string v1, "Network is not available"
-
-    invoke-virtual {v0, v4, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    sget-object v1, Lcom/sina/weibo/sdk/utils/ResourceManager;->sLanguageMap:Ljava/util/HashMap;
-
-    sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -254,6 +83,178 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public static createColorStateList(II)Landroid/content/res/ColorStateList;
+    .locals 8
+
+    const/4 v1, 0x4
+
+    const/4 v7, 0x3
+
+    const/4 v6, 0x2
+
+    const/4 v5, 0x1
+
+    const/4 v4, 0x0
+
+    new-array v0, v1, [I
+
+    aput p1, v0, v4
+
+    aput p1, v0, v5
+
+    aput p1, v0, v6
+
+    aput p0, v0, v7
+
+    new-array v1, v1, [[I
+
+    new-array v2, v5, [I
+
+    const v3, 0x10100a7
+
+    aput v3, v2, v4
+
+    aput-object v2, v1, v4
+
+    new-array v2, v5, [I
+
+    const v3, 0x10100a1
+
+    aput v3, v2, v4
+
+    aput-object v2, v1, v5
+
+    new-array v2, v5, [I
+
+    const v3, 0x101009c
+
+    aput v3, v2, v4
+
+    aput-object v2, v1, v6
+
+    sget-object v2, Landroid/util/StateSet;->WILD_CARD:[I
+
+    aput-object v2, v1, v7
+
+    new-instance v2, Landroid/content/res/ColorStateList;
+
+    invoke-direct {v2, v1, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+
+    return-object v2
+.end method
+
+.method public static createStateListDrawable(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/graphics/drawable/StateListDrawable;
+    .locals 7
+
+    const/4 v2, -0x1
+
+    const/4 v6, 0x1
+
+    const/4 v5, 0x0
+
+    const-string v0, ".9"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-le v0, v2, :cond_0
+
+    invoke-static {p0, p1}, Lcom/sina/weibo/sdk/utils/ResourceManager;->getNinePatchDrawable(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    :goto_0
+    const-string v1, ".9"
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v1
+
+    if-le v1, v2, :cond_1
+
+    invoke-static {p0, p2}, Lcom/sina/weibo/sdk/utils/ResourceManager;->getNinePatchDrawable(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    :goto_1
+    new-instance v2, Landroid/graphics/drawable/StateListDrawable;
+
+    invoke-direct {v2}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
+
+    new-array v3, v6, [I
+
+    const v4, 0x10100a7
+
+    aput v4, v3, v5
+
+    invoke-virtual {v2, v3, v1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
+
+    new-array v3, v6, [I
+
+    const v4, 0x10100a1
+
+    aput v4, v3, v5
+
+    invoke-virtual {v2, v3, v1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
+
+    new-array v3, v6, [I
+
+    const v4, 0x101009c
+
+    aput v4, v3, v5
+
+    invoke-virtual {v2, v3, v1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
+
+    sget-object v1, Landroid/util/StateSet;->WILD_CARD:[I
+
+    invoke-virtual {v2, v1, v0}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
+
+    return-object v2
+
+    :cond_0
+    invoke-static {p0, p1}, Lcom/sina/weibo/sdk/utils/ResourceManager;->getDrawable(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {p0, p2}, Lcom/sina/weibo/sdk/utils/ResourceManager;->getDrawable(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    goto :goto_1
+.end method
+
+.method public static dp2px(Landroid/content/Context;I)I
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    int-to-float v1, p1
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    float-to-double v0, v0
+
+    const-wide/high16 v2, 0x3fe0000000000000L
+
+    add-double/2addr v0, v2
+
+    double-to-int v0, v0
+
+    return v0
 .end method
 
 .method private static extractDrawable(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -322,18 +323,18 @@
     return-object v0
 .end method
 
-.method public static getAppropriatePathOfDrawable(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-    .locals 7
+.method private static getAppropriatePathOfDrawable(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    .locals 8
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
-    const/4 v0, 0x0
+    const/4 v2, -0x1
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->TAG:Ljava/lang/String;
 
@@ -341,7 +342,7 @@
 
     invoke-static {v0, v1}, Lcom/sina/weibo/sdk/utils/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object v0, v2
+    move-object v0, v4
 
     :goto_0
     return-object v0
@@ -349,73 +350,53 @@
     :cond_0
     invoke-static {p0}, Lcom/sina/weibo/sdk/utils/ResourceManager;->getCurrentDpiFolder(Landroid/content/Context;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v6
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->TAG:Ljava/lang/String;
 
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v1, "find Appropriate path..."
 
-    move-result-object v3
+    invoke-static {v0, v1}, Lcom/sina/weibo/sdk/utils/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    const-string v3, "/"
+    move v1, v2
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    sget-object v3, Lcom/sina/weibo/sdk/utils/ResourceManager;->TAG:Ljava/lang/String;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "Maybe the appropriate path: "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v3, v5}, Lcom/sina/weibo/sdk/utils/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {p0, v1}, Lcom/sina/weibo/sdk/utils/ResourceManager;->isFileExisted(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    move-object v0, v1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v1, Lcom/sina/weibo/sdk/utils/ResourceManager;->TAG:Ljava/lang/String;
-
-    const-string v3, "Not the correct path, we need to find one..."
-
-    invoke-static {v1, v3}, Lcom/sina/weibo/sdk/utils/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    move v1, v0
+    move v3, v2
 
     :goto_1
-    sget-object v3, Lcom/sina/weibo/sdk/utils/ResourceManager;->PRE_INSTALL_DRAWBLE_PATHS:[Ljava/lang/String;
+    sget-object v5, Lcom/sina/weibo/sdk/utils/ResourceManager;->PRE_INSTALL_DRAWBLE_PATHS:[Ljava/lang/String;
 
-    array-length v3, v3
+    array-length v5, v5
 
-    if-lt v1, v3, :cond_2
+    if-lt v0, v5, :cond_3
+
+    move v0, v2
+
+    :cond_1
+    if-lez v3, :cond_7
+
+    if-lez v0, :cond_7
+
+    sub-int v2, v1, v0
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v2
+
+    sub-int/2addr v1, v3
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    if-gt v2, v1, :cond_2
+
+    move v3, v0
+
+    :cond_2
+    :goto_2
+    if-gez v3, :cond_a
 
     sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->TAG:Ljava/lang/String;
 
@@ -423,48 +404,43 @@
 
     invoke-static {v0, v1}, Lcom/sina/weibo/sdk/utils/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object v0, v2
+    move-object v0, v4
 
     goto :goto_0
 
-    :cond_2
-    if-nez v0, :cond_4
+    :cond_3
+    sget-object v5, Lcom/sina/weibo/sdk/utils/ResourceManager;->PRE_INSTALL_DRAWBLE_PATHS:[Ljava/lang/String;
 
-    sget-object v3, Lcom/sina/weibo/sdk/utils/ResourceManager;->PRE_INSTALL_DRAWBLE_PATHS:[Ljava/lang/String;
+    aget-object v5, v5, v0
 
-    aget-object v3, v3, v1
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v5
 
-    move-result v3
+    if-eqz v5, :cond_4
 
-    if-eqz v3, :cond_3
+    move v1, v0
 
-    const/4 v0, 0x1
-
-    sget-object v3, Lcom/sina/weibo/sdk/utils/ResourceManager;->TAG:Ljava/lang/String;
-
+    :cond_4
     new-instance v5, Ljava/lang/StringBuilder;
 
-    const-string v6, "Have Find index: "
+    sget-object v7, Lcom/sina/weibo/sdk/utils/ResourceManager;->PRE_INSTALL_DRAWBLE_PATHS:[Ljava/lang/String;
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    aget-object v7, v7, v0
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v7}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-direct {v5, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v7, "/"
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
-    const-string v6, ", "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    sget-object v6, Lcom/sina/weibo/sdk/utils/ResourceManager;->PRE_INSTALL_DRAWBLE_PATHS:[Ljava/lang/String;
-
-    aget-object v6, v6, v1
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
@@ -472,47 +448,79 @@
 
     move-result-object v5
 
-    invoke-static {v3, v5}, Lcom/sina/weibo/sdk/utils/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v5}, Lcom/sina/weibo/sdk/utils/ResourceManager;->isFileExisted(Landroid/content/Context;Ljava/lang/String;)Z
 
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
+    move-result v7
+
+    if-eqz v7, :cond_6
+
+    if-ne v1, v0, :cond_5
+
+    move-object v0, v5
+
+    goto :goto_0
+
+    :cond_5
+    if-gez v1, :cond_1
+
+    move v3, v0
+
+    :cond_6
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    :cond_4
-    new-instance v3, Ljava/lang/StringBuilder;
+    :cond_7
+    if-lez v3, :cond_8
 
-    sget-object v5, Lcom/sina/weibo/sdk/utils/ResourceManager;->PRE_INSTALL_DRAWBLE_PATHS:[Ljava/lang/String;
+    if-ltz v0, :cond_2
 
-    aget-object v5, v5, v1
+    :cond_8
+    if-gez v3, :cond_9
 
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    if-lez v0, :cond_9
 
-    move-result-object v5
+    move v3, v0
 
-    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_2
 
-    const-string v5, "/"
+    :cond_9
+    sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->TAG:Ljava/lang/String;
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "Not find the appropriate path for drawable"
 
-    move-result-object v3
+    invoke-static {v0, v1}, Lcom/sina/weibo/sdk/utils/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move v3, v2
 
-    move-result-object v3
+    goto :goto_2
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_a
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    sget-object v1, Lcom/sina/weibo/sdk/utils/ResourceManager;->PRE_INSTALL_DRAWBLE_PATHS:[Ljava/lang/String;
 
-    invoke-static {p0, v3}, Lcom/sina/weibo/sdk/utils/ResourceManager;->isFileExisted(Landroid/content/Context;Ljava/lang/String;)Z
+    aget-object v1, v1, v3
 
-    move-result v5
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    if-eqz v5, :cond_3
+    move-result-object v1
 
-    move-object v0, v3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     goto/16 :goto_0
 .end method
@@ -578,34 +586,10 @@
     goto :goto_0
 .end method
 
-.method public static getDimensionPixelSize(I)I
+.method public static getDrawable(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sLayoutMap:Landroid/util/SparseIntArray;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Landroid/util/SparseIntArray;->get(II)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sDrawableMap:Landroid/util/SparseArray;
-
-    const-string v1, ""
-
-    invoke-virtual {v0, p1, v1}, Landroid/util/SparseArray;->get(ILjava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {p0, v0}, Lcom/sina/weibo/sdk/utils/ResourceManager;->getAppropriatePathOfDrawable(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/sina/weibo/sdk/utils/ResourceManager;->getAppropriatePathOfDrawable(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -618,7 +602,7 @@
     return-object v0
 .end method
 
-.method public static getDrawableFromAssert(Landroid/content/Context;Ljava/lang/String;Z)Landroid/graphics/drawable/Drawable;
+.method private static getDrawableFromAssert(Landroid/content/Context;Ljava/lang/String;Z)Landroid/graphics/drawable/Drawable;
     .locals 11
 
     const/4 v6, 0x0
@@ -848,20 +832,10 @@
     goto :goto_0
 .end method
 
-.method public static getNinePatchDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+.method public static getNinePatchDrawable(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    sget-object v0, Lcom/sina/weibo/sdk/utils/ResourceManager;->sDrawableMap:Landroid/util/SparseArray;
-
-    const-string v1, ""
-
-    invoke-virtual {v0, p1, v1}, Landroid/util/SparseArray;->get(ILjava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {p0, v0}, Lcom/sina/weibo/sdk/utils/ResourceManager;->getAppropriatePathOfDrawable(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/sina/weibo/sdk/utils/ResourceManager;->getAppropriatePathOfDrawable(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -874,30 +848,41 @@
     return-object v0
 .end method
 
-.method public static getString(Landroid/content/Context;I)Ljava/lang/String;
+.method public static getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     invoke-static {}, Lcom/sina/weibo/sdk/utils/ResourceManager;->getLanguage()Ljava/util/Locale;
 
     move-result-object v0
 
-    sget-object v1, Lcom/sina/weibo/sdk/utils/ResourceManager;->sLanguageMap:Ljava/util/HashMap;
+    sget-object v1, Ljava/util/Locale;->SIMPLIFIED_CHINESE:Ljava/util/Locale;
 
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v1
 
-    check-cast v0, Landroid/util/SparseArray;
+    if-eqz v1, :cond_0
 
-    const-string v1, ""
+    :goto_0
+    return-object p2
 
-    invoke-virtual {v0, p1, v1}, Landroid/util/SparseArray;->get(ILjava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    sget-object v1, Ljava/util/Locale;->TRADITIONAL_CHINESE:Ljava/util/Locale;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
 
-    check-cast v0, Ljava/lang/String;
+    move-result v0
 
-    return-object v0
+    if-eqz v0, :cond_1
+
+    move-object p2, p3
+
+    goto :goto_0
+
+    :cond_1
+    move-object p2, p1
+
+    goto :goto_0
 .end method
 
 .method private static isFileExisted(Landroid/content/Context;Ljava/lang/String;)Z

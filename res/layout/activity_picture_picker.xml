@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huami.android.picture.OptimizeGridView android:scrollbarStyle="outsideOverlay" android:gravity="center" android:id="@id/picker_grid" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/picker_item_selector" android:drawSelectorOnTop="true" android:horizontalSpacing="4.0dip" android:verticalSpacing="4.0dip" android:stretchMode="columnWidth" android:columnWidth="@dimen/itemSize" android:numColumns="auto_fit" android:choiceMode="multipleChoiceModal"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

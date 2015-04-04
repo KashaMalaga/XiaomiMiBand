@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/Y;
+.implements Lcn/com/smartdevices/bracelet/ui/ac;
 
 
 # instance fields
@@ -29,7 +29,7 @@
 .end method
 
 .method public b(Landroid/app/DialogFragment;)V
-    .locals 2
+    .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/g;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
 
@@ -37,43 +37,15 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/g;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
 
-    const v1, 0x7f08038a
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/g;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
-
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->f(Lcn/com/smartdevices/bracelet/tag/TagDataActivity;)Lcn/com/smartdevices/bracelet/tag/a/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->f()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->e()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/g;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->h(Lcn/com/smartdevices/bracelet/tag/TagDataActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/g;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->i(Lcn/com/smartdevices/bracelet/tag/TagDataActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/g;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->a(Lcn/com/smartdevices/bracelet/tag/TagDataActivity;Z)Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->finish()V
 
     return-void
 .end method

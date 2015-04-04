@@ -1,68 +1,212 @@
-.class public Landroid/support/v4/i/e;
-.super Ljava/lang/Object;
+.class Landroid/support/v4/i/e;
+.super Landroid/support/v4/i/a;
 
 
-# static fields
-.field private static final a:Landroid/support/v4/i/f;
+# instance fields
+.field private b:Landroid/content/Context;
+
+.field private c:Landroid/net/Uri;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xe
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Landroid/support/v4/i/h;
-
-    invoke-direct {v0}, Landroid/support/v4/i/h;-><init>()V
-
-    sput-object v0, Landroid/support/v4/i/e;->a:Landroid/support/v4/i/f;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    new-instance v0, Landroid/support/v4/i/g;
-
-    invoke-direct {v0}, Landroid/support/v4/i/g;-><init>()V
-
-    sput-object v0, Landroid/support/v4/i/e;->a:Landroid/support/v4/i/f;
-
-    goto :goto_0
-.end method
-
-.method public constructor <init>()V
+.method constructor <init>(Landroid/support/v4/i/a;Landroid/content/Context;Landroid/net/Uri;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Landroid/support/v4/i/a;-><init>(Landroid/support/v4/i/a;)V
+
+    iput-object p2, p0, Landroid/support/v4/i/e;->b:Landroid/content/Context;
+
+    iput-object p3, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
+
+# virtual methods
+.method public a()Landroid/net/Uri;
     .locals 1
 
-    sget-object v0, Landroid/support/v4/i/e;->a:Landroid/support/v4/i/f;
+    iget-object v0, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/i/f;->a(Ljava/lang/String;)Ljava/lang/String;
+    return-object v0
+.end method
+
+.method public a(Ljava/lang/String;)Landroid/support/v4/i/a;
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public a(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/i/a;
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public b()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/i/e;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/support/v4/i/b;->b(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+.method public c()Ljava/lang/String;
+    .locals 2
 
-    sget-object v0, Landroid/support/v4/i/e;->a:Landroid/support/v4/i/f;
+    iget-object v0, p0, Landroid/support/v4/i/e;->b:Landroid/content/Context;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/i/f;->b(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/support/v4/i/b;->c(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public c(Ljava/lang/String;)Z
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public e()Z
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/i/e;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/support/v4/i/b;->d(Landroid/content/Context;Landroid/net/Uri;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public f()Z
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/i/e;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/support/v4/i/b;->e(Landroid/content/Context;Landroid/net/Uri;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public g()J
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/i/e;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/support/v4/i/b;->f(Landroid/content/Context;Landroid/net/Uri;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public h()J
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/i/e;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/support/v4/i/b;->g(Landroid/content/Context;Landroid/net/Uri;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public i()Z
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/i/e;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/support/v4/i/b;->h(Landroid/content/Context;Landroid/net/Uri;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public j()Z
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/i/e;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/support/v4/i/b;->i(Landroid/content/Context;Landroid/net/Uri;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public k()Z
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/i/e;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/support/v4/i/b;->j(Landroid/content/Context;Landroid/net/Uri;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public l()Z
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/i/e;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Landroid/support/v4/i/e;->c:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/support/v4/i/b;->k(Landroid/content/Context;Landroid/net/Uri;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public m()[Landroid/support/v4/i/a;
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
 .end method

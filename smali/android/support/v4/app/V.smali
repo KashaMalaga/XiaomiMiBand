@@ -23,17 +23,11 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
     iget-object v0, p0, Landroid/support/v4/app/V;->a:Landroid/support/v4/app/U;
 
-    iget-object v0, v0, Landroid/support/v4/app/U;->e:Landroid/widget/ListView;
-
-    iget-object v1, p0, Landroid/support/v4/app/V;->a:Landroid/support/v4/app/U;
-
-    iget-object v1, v1, Landroid/support/v4/app/U;->e:Landroid/widget/ListView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->focusableViewAvailable(Landroid/view/View;)V
+    invoke-virtual {v0}, Landroid/support/v4/app/U;->j()Z
 
     return-void
 .end method

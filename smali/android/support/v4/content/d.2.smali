@@ -11,10 +11,32 @@
     return-void
 .end method
 
-.method static a(Landroid/content/Context;[Landroid/content/Intent;)V
-    .locals 0
+.method public static a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivities([Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/content/Context;)Ljava/io/File;
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getNoBackupFilesDir()Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static b(Landroid/content/Context;)Ljava/io/File;
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getCodeCacheDir()Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
 .end method

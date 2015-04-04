@@ -5,16 +5,16 @@
 # instance fields
 .field final synthetic this$0:Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;
 
-.field final synthetic val$finalDay:Lcn/com/smartdevices/bracelet/model/SportDay;
+.field final synthetic val$finalDay:Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;->this$0:Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;->val$finalDay:Lcn/com/smartdevices/bracelet/model/SportDay;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;->val$finalDay:Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
@@ -28,9 +28,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;->this$0:Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;->val$finalDay:Lcn/com/smartdevices/bracelet/model/SportDay;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;->val$finalDay:Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->addNeedSyncDay(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->addNeedSyncDay(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
 
     const-string v0, "QQ.Health"
 
@@ -109,10 +109,10 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;->this$0:Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;->val$finalDay:Lcn/com/smartdevices/bracelet/model/SportDay;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;->val$finalDay:Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    # invokes: Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->checkPostResult(Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)Z
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->access$000(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)Z
+    # invokes: Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->checkPostResult(Lcom/xiaomi/hm/health/dataprocess/SportDay;Ljava/lang/String;)Z
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->access$000(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcom/xiaomi/hm/health/dataprocess/SportDay;Ljava/lang/String;)Z
 
     :cond_0
     return-void

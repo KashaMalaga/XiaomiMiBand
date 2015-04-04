@@ -1,147 +1,313 @@
-.class abstract Lcn/com/smartdevices/bracelet/gps/services/l;
-.super Landroid/os/AsyncTask;
+.class Lcn/com/smartdevices/bracelet/gps/services/l;
+.super Lcn/com/smartdevices/bracelet/lab/ui/b;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/os/AsyncTask",
-        "<",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Void;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field private static final a:I = 0x6
 
 
 # instance fields
-.field protected a:Ljava/lang/String;
+.field private b:Lcn/com/smartdevices/bracelet/gps/model/c;
 
-.field protected b:Z
+.field private c:I
 
-.field final synthetic c:Lcn/com/smartdevices/bracelet/gps/services/k;
+.field private d:Lcn/com/smartdevices/bracelet/gps/services/m;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/k;)V
-    .locals 1
+.method public constructor <init>(JLjava/lang/String;Lcn/com/smartdevices/bracelet/gps/services/m;)V
+    .locals 2
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->c:Lcn/com/smartdevices/bracelet/gps/services/k;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/lab/ui/b;-><init>(JLjava/lang/String;)V
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->a:Ljava/lang/String;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->b:Lcn/com/smartdevices/bracelet/gps/model/c;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->b:Z
+    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->c:I
 
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->d:Lcn/com/smartdevices/bracelet/gps/services/m;
 
-    move-result-object v0
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/c;
 
-    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/model/c;-><init>()V
 
-    move-result-object v0
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->b:Lcn/com/smartdevices/bracelet/gps/model/c;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->a:Ljava/lang/String;
+    iput-object p4, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->d:Lcn/com/smartdevices/bracelet/gps/services/m;
 
     return-void
+.end method
+
+.method private a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;)Z
+    .locals 5
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    if-nez p2, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    iget-wide v1, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->p:D
+
+    iget-wide v3, p2, Lcn/com/smartdevices/bracelet/gps/model/c;->p:D
+
+    cmpl-double v1, v1, v3
+
+    if-nez v1, :cond_0
+
+    iget-wide v1, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->q:D
+
+    iget-wide v3, p2, Lcn/com/smartdevices/bracelet/gps/model/c;->q:D
+
+    cmpl-double v1, v1, v3
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->d()I
+
+    move-result v1
+
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/gps/model/c;->d()I
+
+    move-result v2
+
+    if-ne v1, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method protected varargs a([Ljava/lang/Void;)Ljava/lang/Void;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
 .method public a()V
-    .locals 1
+    .locals 5
 
-    const/4 v0, 0x1
+    const/4 v3, 0x6
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->b:Z
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->d:Lcn/com/smartdevices/bracelet/gps/services/m;
 
-    invoke-super {p0, v0}, Landroid/os/AsyncTask;->cancel(Z)Z
+    if-nez v0, :cond_0
 
+    :goto_0
     return-void
-.end method
 
-.method protected a(Ljava/lang/Void;)V
-    .locals 2
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->d:Lcn/com/smartdevices/bracelet/gps/services/m;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->c:Lcn/com/smartdevices/bracelet/gps/services/k;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->c()I
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/k;->a(Lcn/com/smartdevices/bracelet/gps/services/k;)Ljava/util/concurrent/ConcurrentHashMap;
+    move-result v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/model/e;->a(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x6
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->c:I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/l;->start()Lcn/com/smartdevices/bracelet/lab/ui/b;
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->d:Lcn/com/smartdevices/bracelet/gps/services/m;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->b()Lcn/com/smartdevices/bracelet/gps/model/c;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->a:Ljava/lang/String;
+    if-nez v0, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/l;->start()Lcn/com/smartdevices/bracelet/lab/ui/b;
 
-    return-void
-.end method
+    goto :goto_0
 
-.method protected b()Ljava/lang/String;
-    .locals 1
+    :cond_2
+    :try_start_2
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->b:Lcn/com/smartdevices/bracelet/gps/model/c;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->a:Ljava/lang/String;
+    invoke-direct {p0, v1, v0}, Lcn/com/smartdevices/bracelet/gps/services/l;->a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;)Z
 
-    return-object v0
-.end method
+    move-result v1
 
-.method protected b(Ljava/lang/Void;)V
-    .locals 2
+    if-eqz v1, :cond_3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->c:Lcn/com/smartdevices/bracelet/gps/services/k;
+    iget v2, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->c:I
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/k;->a(Lcn/com/smartdevices/bracelet/gps/services/k;)Ljava/util/concurrent/ConcurrentHashMap;
+    if-lt v2, v3, :cond_3
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/l;->start()Lcn/com/smartdevices/bracelet/lab/ui/b;
+
+    goto :goto_0
+
+    :cond_3
+    :try_start_3
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/c;->b()I
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    if-eq v2, v3, :cond_4
+
+    const/4 v3, 0x3
+
+    if-ne v2, v3, :cond_5
+
+    :cond_4
+    const-string v0, "CountDown"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "GPSCountDownTiker return attr is inactive = "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/l;->start()Lcn/com/smartdevices/bracelet/lab/ui/b;
+
+    goto :goto_0
+
+    :cond_5
+    if-nez v1, :cond_6
+
+    const/4 v1, 0x0
+
+    :try_start_4
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->c:I
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->b:Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    :goto_1
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/c;->a()Lcn/com/smartdevices/bracelet/gps/model/c;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->a:Ljava/lang/String;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-wide v1
 
-    return-void
-.end method
+    const-wide/16 v3, 0x3e8
 
-.method protected synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    div-long/2addr v1, v3
 
-    check-cast p1, [Ljava/lang/Void;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/model/c;->a(J)V
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/l;->a([Ljava/lang/Void;)Ljava/lang/Void;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->d:Lcn/com/smartdevices/bracelet/gps/services/m;
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->a(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->d:Lcn/com/smartdevices/bracelet/gps/services/m;
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->c(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+
+    const-string v1, "CoutDown"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "GPSCountDownTiker newTime = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/c;->e()J
+
+    move-result-wide v3
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method protected synthetic onCancelled(Ljava/lang/Object;)V
-    .locals 0
+    move-result-object v0
 
-    check-cast p1, Ljava/lang/Void;
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/l;->a(Ljava/lang/Void;)V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/l;->start()Lcn/com/smartdevices/bracelet/lab/ui/b;
 
-    return-void
-.end method
+    goto/16 :goto_0
 
-.method protected synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 0
+    :cond_6
+    :try_start_5
+    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->c:I
 
-    check-cast p1, Ljava/lang/Void;
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/l;->b(Ljava/lang/Void;)V
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->c:I
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    return-void
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    :try_start_6
+    const-string v1, "Run"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/l;->start()Lcn/com/smartdevices/bracelet/lab/ui/b;
+
+    goto/16 :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/l;->start()Lcn/com/smartdevices/bracelet/lab/ui/b;
+
+    throw v0
 .end method

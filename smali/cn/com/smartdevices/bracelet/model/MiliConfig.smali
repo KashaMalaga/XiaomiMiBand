@@ -41,6 +41,8 @@
 
 .field public wearHand:Ljava/lang/String;
 
+.field private weightMergeResult:Z
+
 .field public weightUnit:I
 
 
@@ -82,6 +84,8 @@
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->weightUnit:I
 
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->weightMergeResult:Z
+
     return-void
 .end method
 
@@ -110,7 +114,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
     move-result-object v0
 
@@ -140,6 +144,14 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->dayReportNoti:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method public getWeightMergeResult()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->weightMergeResult:Z
+
+    return v0
 .end method
 
 .method public isValid()Z
@@ -239,10 +251,18 @@
     return-void
 .end method
 
+.method public setWeightMergeResult(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->weightMergeResult:Z
+
+    return-void
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
     move-result-object v0
 

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="#ffe6e6e6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView android:id="@id/share_list" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:cacheColorHint="@android:color/transparent" android:numColumns="4" />
+    <Button android:textSize="@dimen/click_button_text_size" android:textColor="#80888888" android:id="@id/dismiss_button" android:background="@drawable/click_btn_bg" android:layout_width="@dimen/click_button_w" android:layout_height="@dimen/click_button_h" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:text="@string/action_exit" />
+</LinearLayout>

@@ -116,13 +116,23 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/a/o;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/C;
+    new-instance v1, Lcn/com/smartdevices/bracelet/E;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/C;-><init>(Lcn/com/smartdevices/bracelet/TimeChangedReceiver;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/E;-><init>(Lcn/com/smartdevices/bracelet/TimeChangedReceiver;)V
 
     invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/a/o;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/o;->d()V
+
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+
+    move-result-object v0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventTimeChanged;
+
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/eventbus/EventTimeChanged;-><init>()V
+
+    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 
     return-void
 

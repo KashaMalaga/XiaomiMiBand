@@ -364,7 +364,7 @@
 .end method
 
 .method public isSessionValid()Z
-    .locals 4
+    .locals 1
 
     iget-object v0, p0, Lcom/sina/weibo/sdk/auth/Oauth2AccessToken;->mAccessToken:Ljava/lang/String;
 
@@ -372,33 +372,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
-
-    iget-wide v0, p0, Lcom/sina/weibo/sdk/auth/Oauth2AccessToken;->mExpiresTime:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
     if-eqz v0, :cond_0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lcom/sina/weibo/sdk/auth/Oauth2AccessToken;->mExpiresTime:J
-
-    cmp-long v0, v0, v2
-
-    if-gez v0, :cond_0
-
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     :goto_0
     return v0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method

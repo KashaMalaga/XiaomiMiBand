@@ -110,20 +110,22 @@
 
     array-length v4, v3
 
+    array-length v5, v3
+
     move v0, v1
 
     move v2, v1
 
     :goto_0
-    if-ge v0, v4, :cond_0
+    if-ge v0, v5, :cond_0
 
-    aget-object v5, v3, v0
+    aget-object v6, v3, v0
 
-    invoke-virtual {v5}, Lcom/c/b/d/a/b;->a()I
+    invoke-virtual {v6}, Lcom/c/b/d/a/b;->a()I
 
-    move-result v5
+    move-result v6
 
-    add-int/2addr v2, v5
+    add-int/2addr v2, v6
 
     add-int/lit8 v0, v0, 0x1
 
@@ -132,44 +134,42 @@
     :cond_0
     new-array v5, v2, [B
 
-    move v2, v1
+    move v0, v1
 
     :goto_1
-    if-ge v2, v4, :cond_2
+    if-ge v0, v4, :cond_2
 
-    aget-object v0, v3, v2
+    aget-object v2, v3, v0
 
-    invoke-virtual {v0}, Lcom/c/b/d/a/b;->b()[B
+    invoke-virtual {v2}, Lcom/c/b/d/a/b;->b()[B
 
     move-result-object v6
 
-    invoke-virtual {v0}, Lcom/c/b/d/a/b;->a()I
+    invoke-virtual {v2}, Lcom/c/b/d/a/b;->a()I
 
     move-result v7
 
     invoke-direct {p0, v6, v7}, Lcom/c/b/d/a/f;->a([BI)V
 
-    move v0, v1
+    move v2, v1
 
     :goto_2
-    if-ge v0, v7, :cond_1
+    if-ge v2, v7, :cond_1
 
-    mul-int v8, v0, v4
+    mul-int v8, v2, v4
 
-    add-int/2addr v8, v2
+    add-int/2addr v8, v0
 
-    aget-byte v9, v6, v0
+    aget-byte v9, v6, v2
 
     aput-byte v9, v5, v8
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
     :cond_1
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 

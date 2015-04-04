@@ -44,6 +44,9 @@
 .method public native getKilometerTimestamp(I)J
 .end method
 
+.method public native getLatestGlobalIndex()J
+.end method
+
 .method public native getLatestTimestamp()J
 .end method
 
@@ -89,7 +92,13 @@
 .method public native getTotalTime()J
 .end method
 
+.method public native getTrackStatistics(Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;)V
+.end method
+
 .method public native receiveSample(DDDJF)I
+.end method
+
+.method public native recoverFromCrash(Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;)V
 .end method
 
 .method public native setMaxAccuracy(I)V

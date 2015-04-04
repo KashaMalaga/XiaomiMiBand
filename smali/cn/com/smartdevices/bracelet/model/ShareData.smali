@@ -6,13 +6,13 @@
 
 
 # static fields
-.field private static final COLOR_ACTIVITY_STEP:I = -0xe7673c
+.field private static final COLOR_ACTIVITY_STEP:I = -0xff7130
 
 .field private static final COLOR_CONTINUE_SUCC:I = -0x1ac3bc
 
 .field private static final COLOR_CONTINUE_SUCC_NEW_RECORD:I = -0xa8ed0
 
-.field private static final COLOR_GOAL_FAILED:I = -0xe7673c
+.field private static final COLOR_GOAL_FAILED:I = -0xff7130
 
 .field private static final COLOR_GOAL_SUCC:I = -0xa8ed0
 
@@ -79,6 +79,8 @@
 
 .field public static final SHARE_TYPE_WEEK_SLEEP:I = 0x3
 
+.field public static final SHARE_TYPE_WEIGHT_REPORT_SHARE:I = 0xc8
+
 
 # instance fields
 .field public color:I
@@ -88,6 +90,8 @@
 .field public contentUnit:Ljava/lang/String;
 
 .field public description:Ljava/lang/String;
+
+.field public fuid:I
 
 .field public mExtraData:Landroid/os/Bundle;
 
@@ -102,6 +106,16 @@
 .field public type:I
 
 .field public url:Ljava/lang/String;
+
+.field public weightBMI:Ljava/lang/String;
+
+.field public weightFigure:Ljava/lang/String;
+
+.field public weightTips:Ljava/lang/String;
+
+.field public weightTitle:Ljava/lang/String;
+
+.field public weightValue:Ljava/lang/String;
 
 
 # direct methods
@@ -160,6 +174,30 @@
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
 
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->fuid:I
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightTitle:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightValue:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightTips:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightFigure:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightBMI:Ljava/lang/String;
+
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->mExtraData:Landroid/os/Bundle;
@@ -209,6 +247,30 @@
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->url:Ljava/lang/String;
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->fuid:I
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightTitle:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightValue:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightTips:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightFigure:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightBMI:Ljava/lang/String;
 
     const/4 v0, 0x0
 
@@ -261,6 +323,14 @@
     return-object v0
 .end method
 
+.method public getFuid()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->fuid:I
+
+    return v0
+.end method
+
 .method public getRanking()Ljava/lang/String;
     .locals 1
 
@@ -301,6 +371,46 @@
     return v0
 .end method
 
+.method public getWeightBMI()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightBMI:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getWeightFigure()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightFigure:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getWeightTips()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightTips:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getWeightTitle()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightTitle:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getWeightValue()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightValue:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public isSleepType()Z
     .locals 2
 
@@ -339,9 +449,9 @@
 
     const v3, -0xb6d594
 
-    const v2, -0xe7673c
+    const v2, -0xe85d9e
 
-    const v1, -0xe85d9e
+    const v1, -0xff7130
 
     const v0, -0xa8ed0
 
@@ -358,7 +468,7 @@
     goto :goto_0
 
     :sswitch_1
-    iput v2, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
 
     goto :goto_0
 
@@ -370,7 +480,7 @@
     goto :goto_0
 
     :sswitch_3
-    iput v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
 
     goto :goto_0
 
@@ -387,7 +497,7 @@
     goto :goto_0
 
     :sswitch_6
-    iput v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
 
     goto :goto_0
 
@@ -409,7 +519,7 @@
     goto :goto_0
 
     :sswitch_a
-    iput v2, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
 
     goto :goto_0
 
@@ -622,6 +732,78 @@
 
     move-result-object v0
 
+    const-string v1, "\nfuid:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->fuid:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\nweightTitle:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightTitle:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\nweightValue:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightValue:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\nweightTips:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightTips:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\nweightFigure:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightFigure:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\nweightBMI:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightBMI:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -671,6 +853,30 @@
     iget v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->type:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->fuid:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightTitle:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightValue:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightTips:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightFigure:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->weightBMI:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->mExtraData:Landroid/os/Bundle;
 

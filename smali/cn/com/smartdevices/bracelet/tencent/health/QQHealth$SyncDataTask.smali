@@ -7,7 +7,7 @@
     value = {
         "Landroid/os/AsyncTask",
         "<",
-        "Lcn/com/smartdevices/bracelet/model/SportDay;",
+        "Lcom/xiaomi/hm/health/dataprocess/SportDay;",
         "Ljava/lang/Void;",
         "Ljava/lang/Void;",
         ">;"
@@ -43,16 +43,16 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    check-cast p1, [Lcn/com/smartdevices/bracelet/model/SportDay;
+    check-cast p1, [Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$SyncDataTask;->doInBackground([Lcn/com/smartdevices/bracelet/model/SportDay;)Ljava/lang/Void;
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$SyncDataTask;->doInBackground([Lcom/xiaomi/hm/health/dataprocess/SportDay;)Ljava/lang/Void;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected varargs doInBackground([Lcn/com/smartdevices/bracelet/model/SportDay;)Ljava/lang/Void;
+.method protected varargs doInBackground([Lcom/xiaomi/hm/health/dataprocess/SportDay;)Ljava/lang/Void;
     .locals 4
 
     array-length v1, p1
@@ -66,8 +66,8 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$SyncDataTask;->this$0:Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;
 
-    # invokes: Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->syncData(Lcn/com/smartdevices/bracelet/model/SportDay;)V
-    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->access$300(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;)V
+    # invokes: Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->syncData(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
+    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->access$300(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
 
     add-int/lit8 v0, v0, 0x1
 

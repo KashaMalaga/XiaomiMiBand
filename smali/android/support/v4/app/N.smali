@@ -1,67 +1,70 @@
-.class final Landroid/support/v4/app/N;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+.class Landroid/support/v4/app/N;
+.super Landroid/os/Handler;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/app/FragmentState;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Landroid/support/v4/app/FragmentActivity;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/app/FragmentActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Landroid/support/v4/app/N;->a:Landroid/support/v4/app/FragmentActivity;
+
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentState;
-    .locals 1
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 2
 
-    new-instance v0, Landroid/support/v4/app/FragmentState;
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    invoke-direct {v0, p1}, Landroid/support/v4/app/FragmentState;-><init>(Landroid/os/Parcel;)V
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
-.end method
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-.method public a(I)[Landroid/support/v4/app/FragmentState;
-    .locals 1
+    :cond_0
+    :goto_0
+    return-void
 
-    new-array v0, p1, [Landroid/support/v4/app/FragmentState;
+    :pswitch_0
+    iget-object v0, p0, Landroid/support/v4/app/N;->a:Landroid/support/v4/app/FragmentActivity;
 
-    return-object v0
-.end method
+    iget-boolean v0, v0, Landroid/support/v4/app/FragmentActivity;->i:Z
 
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/N;->a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentState;
+    iget-object v0, p0, Landroid/support/v4/app/N;->a:Landroid/support/v4/app/FragmentActivity;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v1}, Landroid/support/v4/app/FragmentActivity;->a(Z)V
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+    goto :goto_0
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/N;->a(I)[Landroid/support/v4/app/FragmentState;
+    :pswitch_1
+    iget-object v0, p0, Landroid/support/v4/app/N;->a:Landroid/support/v4/app/FragmentActivity;
 
-    move-result-object v0
+    invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->d()V
 
-    return-object v0
+    iget-object v0, p0, Landroid/support/v4/app/N;->a:Landroid/support/v4/app/FragmentActivity;
+
+    iget-object v0, v0, Landroid/support/v4/app/FragmentActivity;->e:Landroid/support/v4/app/U;
+
+    invoke-virtual {v0}, Landroid/support/v4/app/U;->j()Z
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

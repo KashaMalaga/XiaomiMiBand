@@ -1,48 +1,35 @@
-.class Lcn/com/smartdevices/bracelet/view/X;
-.super Landroid/database/DataSetObserver;
+.class public Lcn/com/smartdevices/bracelet/view/X;
+.super Ljava/lang/Object;
 
-
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/view/U;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/view/VerticalViewPager;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/X;->a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
-
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/view/VerticalViewPager;Lcn/com/smartdevices/bracelet/view/R;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/view/X;-><init>(Lcn/com/smartdevices/bracelet/view/VerticalViewPager;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChanged()V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/X;->a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->f()V
+.method public a(I)V
+    .locals 0
 
     return-void
 .end method
 
-.method public onInvalidated()V
-    .locals 1
+.method public a(IFI)V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/X;->a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->f()V
+.method public b(I)V
+    .locals 0
 
     return-void
 .end method

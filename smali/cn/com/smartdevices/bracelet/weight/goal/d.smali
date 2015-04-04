@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/U;
+.implements Lcn/com/smartdevices/bracelet/X;
 
 
 # instance fields

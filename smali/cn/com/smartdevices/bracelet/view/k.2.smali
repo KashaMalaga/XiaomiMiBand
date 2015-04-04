@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
@@ -22,18 +22,42 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 4
+
+    const/high16 v3, 0x42c80000
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/k;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/k;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->b(Lcn/com/smartdevices/bracelet/view/DynamicView;)Landroid/view/View;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->getContext()Landroid/content/Context;
+    move-result-object v0
 
-    move-result-object v1
+    div-float v2, v1, v3
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView;Landroid/content/Context;)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/k;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->c(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/ui/widget/c;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    div-float/2addr v1, v3
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
     return-void
 .end method

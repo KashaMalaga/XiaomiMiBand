@@ -1,252 +1,160 @@
 .class Landroid/support/v4/widget/U;
-.super Landroid/support/v4/view/a;
+.super Landroid/view/animation/Animation;
 
 
 # instance fields
-.field final synthetic b:Landroid/support/v4/widget/SlidingPaneLayout;
+.field final synthetic a:Landroid/support/v4/widget/Z;
 
-.field private final c:Landroid/graphics/Rect;
+.field final synthetic b:Landroid/support/v4/widget/T;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/SlidingPaneLayout;)V
-    .locals 1
+.method constructor <init>(Landroid/support/v4/widget/T;Landroid/support/v4/widget/Z;)V
+    .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/widget/U;->b:Landroid/support/v4/widget/SlidingPaneLayout;
+    iput-object p1, p0, Landroid/support/v4/widget/U;->b:Landroid/support/v4/widget/T;
 
-    invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
+    iput-object p2, p0, Landroid/support/v4/widget/U;->a:Landroid/support/v4/widget/Z;
 
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v4/widget/U;->c:Landroid/graphics/Rect;
-
-    return-void
-.end method
-
-.method private a(Landroid/support/v4/view/a/o;Landroid/support/v4/view/a/o;)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/widget/U;->c:Landroid/graphics/Rect;
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/o;->a(Landroid/graphics/Rect;)V
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->b(Landroid/graphics/Rect;)V
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/o;->c(Landroid/graphics/Rect;)V
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->d(Landroid/graphics/Rect;)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->l()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->e(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->t()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->a(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->u()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->b(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->w()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->d(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->q()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->j(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->o()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->h(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->j()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->c(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->k()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->d(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->m()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->f(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->n()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->g(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->p()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->i(Z)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->e()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->d(I)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/a/o;->f()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/a/o;->f(I)V
+    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroid/support/v4/view/a/o;)V
-    .locals 4
+.method public applyTransformation(FLandroid/view/animation/Transformation;)V
+    .locals 7
 
-    invoke-static {p2}, Landroid/support/v4/view/a/o;->a(Landroid/support/v4/view/a/o;)Landroid/support/v4/view/a/o;
+    const v6, 0x3f4ccccd
 
-    move-result-object v0
+    iget-object v0, p0, Landroid/support/v4/widget/U;->b:Landroid/support/v4/widget/T;
 
-    invoke-super {p0, p1, v0}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/o;)V
+    iget-boolean v0, v0, Landroid/support/v4/widget/T;->c:Z
 
-    invoke-direct {p0, p2, v0}, Landroid/support/v4/widget/U;->a(Landroid/support/v4/view/a/o;Landroid/support/v4/view/a/o;)V
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/a/o;->x()V
+    iget-object v0, p0, Landroid/support/v4/widget/U;->b:Landroid/support/v4/widget/T;
 
-    const-class v0, Landroid/support/v4/widget/SlidingPaneLayout;
+    iget-object v1, p0, Landroid/support/v4/widget/U;->a:Landroid/support/v4/widget/Z;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Landroid/support/v4/widget/T;->a(Landroid/support/v4/widget/T;FLandroid/support/v4/widget/Z;)V
 
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/o;->b(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p2, p1}, Landroid/support/v4/view/a/o;->b(Landroid/view/View;)V
-
-    invoke-static {p1}, Landroid/support/v4/view/as;->j(Landroid/view/View;)Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    instance-of v1, v0, Landroid/view/View;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Landroid/view/View;
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/o;->d(Landroid/view/View;)V
+    :goto_0
+    return-void
 
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/U;->b:Landroid/support/v4/widget/SlidingPaneLayout;
+    iget-object v0, p0, Landroid/support/v4/widget/U;->a:Landroid/support/v4/widget/Z;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/SlidingPaneLayout;->getChildCount()I
+    invoke-virtual {v0}, Landroid/support/v4/widget/Z;->c()F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    const-wide v2, 0x401921fb54442d18L
+
+    iget-object v4, p0, Landroid/support/v4/widget/U;->a:Landroid/support/v4/widget/Z;
+
+    invoke-virtual {v4}, Landroid/support/v4/widget/Z;->j()D
+
+    move-result-wide v4
+
+    mul-double/2addr v2, v4
+
+    div-double/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
+
+    move-result-wide v0
+
+    double-to-float v0, v0
+
+    iget-object v1, p0, Landroid/support/v4/widget/U;->a:Landroid/support/v4/widget/Z;
+
+    invoke-virtual {v1}, Landroid/support/v4/widget/Z;->f()F
 
     move-result v1
 
-    const/4 v0, 0x0
+    iget-object v2, p0, Landroid/support/v4/widget/U;->a:Landroid/support/v4/widget/Z;
 
-    :goto_0
-    if-ge v0, v1, :cond_2
+    invoke-virtual {v2}, Landroid/support/v4/widget/Z;->e()F
 
-    iget-object v2, p0, Landroid/support/v4/widget/U;->b:Landroid/support/v4/widget/SlidingPaneLayout;
+    move-result v2
 
-    invoke-virtual {v2, v0}, Landroid/support/v4/widget/SlidingPaneLayout;->getChildAt(I)Landroid/view/View;
+    iget-object v3, p0, Landroid/support/v4/widget/U;->a:Landroid/support/v4/widget/Z;
 
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Landroid/support/v4/widget/U;->b(Landroid/view/View;)Z
+    invoke-virtual {v3}, Landroid/support/v4/widget/Z;->k()F
 
     move-result v3
 
-    if-nez v3, :cond_1
+    sub-float v0, v6, v0
 
-    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
+    invoke-static {}, Landroid/support/v4/widget/T;->a()Landroid/view/animation/Interpolator;
 
-    move-result v3
+    move-result-object v4
 
-    if-nez v3, :cond_1
+    invoke-interface {v4, p1}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
 
-    const/4 v3, 0x1
+    move-result v4
 
-    invoke-static {v2, v3}, Landroid/support/v4/view/as;->d(Landroid/view/View;I)V
+    mul-float/2addr v0, v4
 
-    invoke-virtual {p2, v2}, Landroid/support/v4/view/a/o;->c(Landroid/view/View;)V
+    add-float/2addr v0, v1
 
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
+    iget-object v1, p0, Landroid/support/v4/widget/U;->a:Landroid/support/v4/widget/Z;
 
-    goto :goto_0
+    invoke-virtual {v1, v0}, Landroid/support/v4/widget/Z;->c(F)V
 
-    :cond_2
-    return-void
-.end method
-
-.method public a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-    .locals 1
-
-    invoke-virtual {p0, p2}, Landroid/support/v4/widget/U;->b(Landroid/view/View;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/view/a;->a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public b(Landroid/view/View;)Z
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/widget/U;->b:Landroid/support/v4/widget/SlidingPaneLayout;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/widget/SlidingPaneLayout;->e(Landroid/view/View;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public d(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 1
-
-    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->d(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-
-    const-class v0, Landroid/support/v4/widget/SlidingPaneLayout;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-static {}, Landroid/support/v4/widget/T;->b()Landroid/view/animation/Interpolator;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
+    invoke-interface {v0, p1}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
 
-    return-void
+    move-result v0
+
+    mul-float/2addr v0, v6
+
+    add-float/2addr v0, v2
+
+    iget-object v1, p0, Landroid/support/v4/widget/U;->a:Landroid/support/v4/widget/Z;
+
+    invoke-virtual {v1, v0}, Landroid/support/v4/widget/Z;->b(F)V
+
+    const/high16 v0, 0x3e800000
+
+    mul-float/2addr v0, p1
+
+    add-float/2addr v0, v3
+
+    iget-object v1, p0, Landroid/support/v4/widget/U;->a:Landroid/support/v4/widget/Z;
+
+    invoke-virtual {v1, v0}, Landroid/support/v4/widget/Z;->d(F)V
+
+    const/high16 v0, 0x43100000
+
+    mul-float/2addr v0, p1
+
+    const/high16 v1, 0x44340000
+
+    iget-object v2, p0, Landroid/support/v4/widget/U;->b:Landroid/support/v4/widget/T;
+
+    invoke-static {v2}, Landroid/support/v4/widget/T;->a(Landroid/support/v4/widget/T;)F
+
+    move-result v2
+
+    const/high16 v3, 0x40a00000
+
+    div-float/2addr v2, v3
+
+    mul-float/2addr v1, v2
+
+    add-float/2addr v0, v1
+
+    iget-object v1, p0, Landroid/support/v4/widget/U;->b:Landroid/support/v4/widget/T;
+
+    invoke-virtual {v1, v0}, Landroid/support/v4/widget/T;->c(F)V
+
+    goto :goto_0
 .end method

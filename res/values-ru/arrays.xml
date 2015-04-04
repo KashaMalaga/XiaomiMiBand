@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="weeks">
-        <item>Пн.</item>
-        <item>Вт.</item>
-        <item>Ср.</item>
-        <item>Чт.</item>
-        <item>Пт.</item>
-        <item>Сб.</item>
-        <item>Вс.</item>
+        <item>Пн</item>
+        <item>Вт</item>
+        <item>Ср</item>
+        <item>Чт</item>
+        <item>Пт</item>
+        <item>Сб</item>
+        <item>Вс</item>
     </string-array>
     <string-array name="weeks_short">
-        <item>Пн.</item>
-        <item>Вт.</item>
-        <item>Ср.</item>
-        <item>Чт.</item>
-        <item>Пт.</item>
-        <item>Сб.</item>
-        <item>Вс.</item>
+        <item>Пн</item>
+        <item>Вт</item>
+        <item>Ср</item>
+        <item>Чт</item>
+        <item>Пт</item>
+        <item>Сб</item>
+        <item>Вс</item>
     </string-array>
     <string-array name="months">
         <item>Январь</item>
@@ -33,59 +33,76 @@
         <item>Декабрь</item>
     </string-array>
     <string-array name="select_days_simple">
-        <item>Один раз</item>
-        <item>Каждый день</item>
-        <item>С Пн. по Пт.</item>
-        <item>Настроить</item>
+        <item>Однократно</item>
+        <item>Ежедневно</item>
+        <item>По будням</item>
+        <item>Выбрать дни</item>
     </string-array>
     <string-array name="fortune">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Легко достичь цель сегодня, но не легко каждый день.</item>
+        <item>Не легко достигать цель каждый день</item>
+        <item>Вы ставите рекорды каждый день!</item>
+        <item>Наслаждайтесь самосовершенствованием!</item>
+        <item>Set small goals and build upon them.</item>
+        <item>Мы то, что мы делаем</item>
+        <item>Достигнута цель дня</item>
+        <item>Бросьте вызов себе сегодня, чтобы стать лучше завтра.</item>
+        <item>Просто сделайте это</item>
+        <item>Продолжайте практиковаться</item>
     </string-array>
     <string-array name="weather_aqi_descriptions">
-        <item>Отлично</item>
-        <item>Хорошо</item>
-        <item>Низкое загрязнение</item>
-        <item>Среднее загрязнение</item>
-        <item>Тяжелое загрязнение</item>
-        <item>Сильное загрязнение</item>
+        <item>отличное</item>
+        <item>хорошее</item>
+        <item>умеренное</item>
+        <item>умеренное</item>
+        <item>плохое</item>
+        <item>очень плохое</item>
     </string-array>
-    <string-array name="weight_test_unit">
-        <item>кг</item>
-        <item>кг</item>
-        <item>фунт</item>
+    <string-array name="weight_unit">
+        <item>kg</item>
+        <item>jin</item>
+        <item>lb</item>
     </string-array>
     <string-array name="weight_body_figures">
-        <item>Слишком легкий</item>
-        <item>Нормальный</item>
-        <item>Перевес</item>
-        <item>Ожирение</item>
-        <item>Очень толстый</item>
+        <item>Underweight</item>
+        <item>Normal weight</item>
+        <item>Избыточный вес</item>
+        <item>Obese</item>
+        <item>Obese</item>
     </string-array>
-    <string-array name="health_link_title">
-        <item>1. Скорая помощь 24/7</item>
-        <item>2. Совет от скорой помощи</item>
-        <item>3. Помощь в предоставлении транспортных средств</item>
-        <item>4. Помощь в предоставлении данных об происшествии</item>
-        <item>5. Связаться с родными</item>
-        <item>6. Доступные больницы</item>
-        <item>7. Руководство по госпитализации</item>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>BMI Category: Underweight</item>
+        <item>BMI Category: Normal weight</item>
+        <item>BMI Category: Overweight</item>
+        <item>BMI Category: Obese</item>
     </string-array>
-    <string-array name="health_link_content">
-        <item>Круглосуточная поддержка двуязычных специалистов скорой помощи.</item>
-        <item>В реальных случаях, пользователь по телефону может запросить совет от скорой помощи.</item>
-        <item>После получения звонка от пользователя, колл-центр осуществит вызов скорой помощи (120 или 999).</item>
-        <item>Поддержка пользователей при предоставлении информации об происшествии.</item>
-        <item>Данные предоставлены пользователями для уведомления родственников или немедленной связи.</item>
-        <item>Пользователю будет предоставлена ближайшая больница для госпитализации. Так же он имеет право выбрать по своему желанию и усмотрению.</item>
-        <item>Предоставление всей информации по процессу госпитализации.</item>
+    <string-array name="weight_report_suggestions_boy">
+        <item>Set a goal to help manage your weight.</item>
+        <item>"Congratulations! You're at your at your target weight."</item>
+        <item>"You're under your target weight"</item>
+        <item>"You're over your target weight"</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>Set a goal to help manage your weight.</item>
+        <item>"Congratulations! You're at your at your target weight."</item>
+        <item>"You're under your target weight"</item>
+        <item>"You're over your target weight"</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>Surpassed goal</item>
+        <item>"Didn't reach your goal"</item>
+        <item>You reached your goal!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>"You haven't reached your goal yet"</item>
+        <item>"You haven't reached your goal yet"</item>
+        <item>"You haven't reached your goal yet"</item>
+        <item>You reached your goal (%1$s%2$s)!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>"You haven't reached your goal yet"</item>
+        <item>"You haven't reached your goal yet"</item>
+        <item>"You haven't reached your goal yet"</item>
+        <item>You reached your goal (%1$s%2$s)!</item>
     </string-array>
 </resources>

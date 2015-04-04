@@ -266,9 +266,9 @@
 
     const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
 
-    const v1, 0x7f080351
+    const v1, 0x7f0903e9
 
-    invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/lang/String;ILandroid/app/Activity;)V
+    invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/G;->a(Ljava/lang/String;ILandroid/app/Activity;)V
 
     goto :goto_0
 
@@ -279,9 +279,9 @@
 
     const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
 
-    const v1, 0x7f080350
+    const v1, 0x7f0903e8
 
-    invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/lang/String;ILandroid/app/Activity;)V
+    invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/G;->a(Ljava/lang/String;ILandroid/app/Activity;)V
 
     goto :goto_0
 .end method

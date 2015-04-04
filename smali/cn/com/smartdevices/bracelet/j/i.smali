@@ -256,7 +256,7 @@
 
 
 # virtual methods
-.method public a()Lcn/com/smartdevices/bracelet/model/SportDay;
+.method public a()Lcom/xiaomi/hm/health/dataprocess/SportDay;
     .locals 8
 
     const/4 v3, 0x0
@@ -307,11 +307,11 @@
 
     invoke-virtual {v2, v0, v1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/SportDay;->calendar:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;->calendar:Ljava/util/Calendar;
 
     invoke-virtual {v2, v0}, Ljava/util/Calendar;->after(Ljava/lang/Object;)Z
 
@@ -319,7 +319,7 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     const/16 v1, 0x7de
 
@@ -327,15 +327,15 @@
 
     const/4 v3, 0x3
 
-    invoke-direct {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(III)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(III)V
 
     :goto_1
     return-object v0
 
     :cond_1
-    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v0, v2}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
 
     goto :goto_1
 
@@ -621,7 +621,7 @@
 
     const/16 v5, 0x3b
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->toCalenday(Ljava/lang/String;)Ljava/util/Calendar;
+    invoke-static {p1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->toCalenday(Ljava/lang/String;)Ljava/util/Calendar;
 
     move-result-object v0
 

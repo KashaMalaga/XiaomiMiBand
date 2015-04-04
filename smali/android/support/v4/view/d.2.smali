@@ -3,7 +3,7 @@
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/x;
+.method public abstract a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/L;
 .end method
 
 .method public abstract a()Ljava/lang/Object;

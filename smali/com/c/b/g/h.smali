@@ -1,5 +1,5 @@
 .class public final Lcom/c/b/g/h;
-.super Lcom/c/b/g/v;
+.super Lcom/c/b/g/x;
 
 
 # static fields
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private final h:[I
+.field private final f:[I
 
 
 # direct methods
@@ -42,13 +42,13 @@
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lcom/c/b/g/v;-><init>()V
+    invoke-direct {p0}, Lcom/c/b/g/x;-><init>()V
 
     const/4 v0, 0x4
 
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lcom/c/b/g/h;->h:[I
+    iput-object v0, p0, Lcom/c/b/g/h;->f:[I
 
     return-void
 .end method
@@ -85,7 +85,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/c/b/l;->a()Lcom/c/b/l;
+    invoke-static {}, Lcom/c/b/n;->a()Lcom/c/b/n;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
 
     const/4 v1, 0x0
 
-    iget-object v5, p0, Lcom/c/b/g/h;->h:[I
+    iget-object v5, p0, Lcom/c/b/g/h;->f:[I
 
     aput v1, v5, v1
 
@@ -132,7 +132,7 @@
 
     if-ge v2, v6, :cond_2
 
-    sget-object v3, Lcom/c/b/g/h;->g:[[I
+    sget-object v3, Lcom/c/b/g/h;->e:[[I
 
     invoke-static {p1, v5, v2, v3}, Lcom/c/b/g/h;->a(Lcom/c/b/c/a;[II[[I)I
 
@@ -186,7 +186,7 @@
     :cond_2
     invoke-static {p3, v0}, Lcom/c/b/g/h;->a(Ljava/lang/StringBuilder;I)V
 
-    sget-object v0, Lcom/c/b/g/h;->e:[I
+    sget-object v0, Lcom/c/b/g/h;->c:[I
 
     invoke-static {p1, v2, v10, v0}, Lcom/c/b/g/h;->a(Lcom/c/b/c/a;IZ[I)[I
 
@@ -201,7 +201,7 @@
 
     if-ge v0, v6, :cond_4
 
-    sget-object v2, Lcom/c/b/g/h;->f:[[I
+    sget-object v2, Lcom/c/b/g/h;->d:[[I
 
     invoke-static {p1, v5, v0, v2}, Lcom/c/b/g/h;->a(Lcom/c/b/c/a;[II[[I)I
 

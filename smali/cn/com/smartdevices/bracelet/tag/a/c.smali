@@ -24,7 +24,9 @@
 
 .field private static final v:I = 0x1006
 
-.field private static final w:I = 0x1007
+.field private static final w:I = 0x1008
+
+.field private static final x:I = 0x1007
 
 
 # instance fields
@@ -34,9 +36,9 @@
 
 .field private g:Ljava/io/File;
 
-.field private h:Lcn/com/smartdevices/bracelet/e/c;
+.field private h:Lcn/com/smartdevices/bracelet/d/c;
 
-.field private i:Lcn/com/smartdevices/bracelet/e/a;
+.field private i:Lcn/com/smartdevices/bracelet/d/a;
 
 .field private j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -85,11 +87,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f08037a
+    const v3, 0x7f090416
 
-    const v4, 0x7f0200c7
+    const v4, 0x7f0200d6
 
-    const v5, 0x7f0200c8
+    const v5, 0x7f0200d7
 
     const-string v6, "sleep"
 
@@ -101,11 +103,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f08037b
+    const v3, 0x7f090417
 
-    const v4, 0x7f02009c
+    const v4, 0x7f02009f
 
-    const v5, 0x7f02009d
+    const v5, 0x7f0200a0
 
     const-string v6, "bath"
 
@@ -117,11 +119,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f08038e
+    const v3, 0x7f09042b
 
-    const v4, 0x7f0200a0
+    const v4, 0x7f0200a3
 
-    const v5, 0x7f0200a1
+    const v5, 0x7f0200a4
 
     const-string v6, "tooth"
 
@@ -133,11 +135,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f08037c
+    const v3, 0x7f090418
 
-    const v4, 0x7f0200bf
+    const v4, 0x7f0200cc
 
-    const v5, 0x7f0200c0
+    const v5, 0x7f0200cd
 
     const-string v6, "run"
 
@@ -149,11 +151,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f08037d
+    const v3, 0x7f090419
 
-    const v4, 0x7f02009e
+    const v4, 0x7f0200a1
 
-    const v5, 0x7f02009f
+    const v5, 0x7f0200a2
 
     const-string v6, "bike"
 
@@ -165,11 +167,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f08037e
+    const v3, 0x7f09041a
 
-    const v4, 0x7f0200d0
+    const v4, 0x7f0200e0
 
-    const v5, 0x7f0200d1
+    const v5, 0x7f0200e1
 
     const-string v6, "walk"
 
@@ -181,11 +183,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f08037f
+    const v3, 0x7f09041b
 
-    const v4, 0x7f020098
+    const v4, 0x7f02009b
 
-    const v5, 0x7f020099
+    const v5, 0x7f02009c
 
     const-string v6, "badminton"
 
@@ -197,11 +199,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f080380
+    const v3, 0x7f09041c
 
-    const v4, 0x7f02009a
+    const v4, 0x7f02009d
 
-    const v5, 0x7f02009b
+    const v5, 0x7f02009e
 
     const-string v6, "basketball"
 
@@ -213,11 +215,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f080381
+    const v3, 0x7f09041d
 
-    const v4, 0x7f0200bd
+    const v4, 0x7f0200c8
 
-    const v5, 0x7f0200be
+    const v5, 0x7f0200c9
 
     const-string v6, "pingpong"
 
@@ -229,11 +231,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f080382
+    const v3, 0x7f09041e
 
-    const v4, 0x7f0200c5
+    const v4, 0x7f0200d4
 
-    const v5, 0x7f0200c6
+    const v5, 0x7f0200d5
 
     const-string v6, "sit"
 
@@ -245,11 +247,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f080383
+    const v3, 0x7f09041f
 
-    const v4, 0x7f0200ca
+    const v4, 0x7f0200da
 
-    const v5, 0x7f0200cb
+    const v5, 0x7f0200db
 
     const-string v6, "stand"
 
@@ -261,11 +263,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f080384
+    const v3, 0x7f090420
 
-    const v4, 0x7f0200a2
+    const v4, 0x7f0200a5
 
-    const v5, 0x7f0200a3
+    const v5, 0x7f0200a6
 
     const-string v6, "bus"
 
@@ -414,7 +416,7 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/e/c;
+    new-instance v0, Lcn/com/smartdevices/bracelet/d/c;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->g:Ljava/io/File;
 
@@ -422,13 +424,13 @@
 
     move-result-object v2
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/e/e;->a:Lcn/com/smartdevices/bracelet/e/e;
+    sget-object v3, Lcn/com/smartdevices/bracelet/d/e;->a:Lcn/com/smartdevices/bracelet/d/e;
 
-    invoke-direct {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/e/c;-><init>(Ljava/lang/String;Lcn/com/smartdevices/bracelet/e/e;Z)V
+    invoke-direct {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/d/c;-><init>(Ljava/lang/String;Lcn/com/smartdevices/bracelet/d/e;Z)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/e/c;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/e/a;
+    new-instance v0, Lcn/com/smartdevices/bracelet/d/a;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->g:Ljava/io/File;
 
@@ -436,9 +438,9 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/d/a;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/e/a;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/d/a;
 
     :cond_2
     return-void
@@ -535,9 +537,9 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/c;->d()Ljava/io/File;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->d()Ljava/io/File;
 
     move-result-object v0
 
@@ -560,7 +562,7 @@
 .method static synthetic b(Lcn/com/smartdevices/bracelet/tag/a/c;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->i()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->j()V
 
     return-void
 .end method
@@ -594,7 +596,7 @@
 .method static synthetic c(Lcn/com/smartdevices/bracelet/tag/a/c;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->j()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->k()V
 
     return-void
 .end method
@@ -602,7 +604,7 @@
 .method static synthetic d(Lcn/com/smartdevices/bracelet/tag/a/c;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->l()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->m()V
 
     return-void
 .end method
@@ -610,12 +612,12 @@
 .method static synthetic e(Lcn/com/smartdevices/bracelet/tag/a/c;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->k()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->l()V
 
     return-void
 .end method
 
-.method private i()V
+.method private j()V
     .locals 6
 
     const/4 v0, 0x0
@@ -679,13 +681,13 @@
     const-string v0, "0"
 
     :goto_1
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->q:Ljava/lang/String;
 
     const-string v5, ""
 
-    invoke-virtual {v3, v0, v4, v5, v2}, Lcn/com/smartdevices/bracelet/e/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v0, v4, v5, v2}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/Thread;
 
@@ -752,7 +754,7 @@
     goto :goto_2
 .end method
 
-.method private j()V
+.method private k()V
     .locals 3
 
     const/4 v0, 0x0
@@ -783,7 +785,7 @@
     return-void
 .end method
 
-.method private k()V
+.method private l()V
     .locals 2
 
     const/4 v1, 0x0
@@ -827,7 +829,7 @@
     goto :goto_0
 .end method
 
-.method private l()V
+.method private m()V
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
@@ -997,21 +999,21 @@
     if-ne p1, v0, :cond_5
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/c;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/util/List;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/c;->h()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->h()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->h()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->i()V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/tag/a/a;
 
@@ -1505,6 +1507,26 @@
 .end method
 
 .method public e()V
+    .locals 2
+
+    const/16 v0, 0x1008
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->c(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableGetSensorData(Z)Z
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(Z)V
+
+    return-void
+.end method
+
+.method public f()V
     .locals 1
 
     const/16 v0, 0x1001
@@ -1514,7 +1536,7 @@
     return-void
 .end method
 
-.method public f()V
+.method public g()V
     .locals 1
 
     const/16 v0, 0x1002
@@ -1524,7 +1546,7 @@
     return-void
 .end method
 
-.method public g()V
+.method public h()V
     .locals 1
 
     const/16 v0, 0x1005
@@ -1534,7 +1556,7 @@
     return-void
 .end method
 
-.method public h()V
+.method public i()V
     .locals 8
 
     :try_start_0
@@ -1551,13 +1573,13 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/e/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/d/a;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/e/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/d/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->a()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/a;->a()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1796,11 +1818,11 @@
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/e/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/c;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/util/List;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
 

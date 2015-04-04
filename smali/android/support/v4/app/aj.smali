@@ -3,5 +3,5 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/content/Context;[Landroid/content/Intent;IILandroid/os/Bundle;)Landroid/app/PendingIntent;
+.method public abstract a()Landroid/app/Notification$Builder;
 .end method

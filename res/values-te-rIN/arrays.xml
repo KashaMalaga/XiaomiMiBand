@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>సోమ.</item>
+        <item>మంగళ.</item>
+        <item>బుధ.</item>
+        <item>గురు.</item>
+        <item>శుక్ర.</item>
+        <item>శని.</item>
+        <item>ఆది.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>సోమ.</item>
+        <item>మంగళ.</item>
+        <item>బుధ.</item>
+        <item>గురు.</item>
+        <item>శుక్ర.</item>
+        <item>శని.</item>
+        <item>ఆది.</item>
+    </string-array>
+    <string-array name="months">
+        <item>జనవరి</item>
+        <item>ఫిబ్రవరి</item>
+        <item>మార్చి</item>
+        <item>ఏప్రిల్</item>
+        <item>మే</item>
+        <item>జూన్</item>
+        <item>జూలై</item>
+        <item>ఆగస్ట్</item>
+        <item>సెప్టెంబర్</item>
+        <item>అక్టోబర్</item>
+        <item>నవంబర్</item>
+        <item>డిసెంబర్</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>ఒకసారి</item>
+        <item>ప్రతిరోజు</item>
+        <item>వారపురోజులు</item>
+        <item>అనుకూలపరచండి</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>క్రమబద్ధతకు ప్రత్యామ్నాయం లేదు.</item>
+        <item>ప్రోగ్రెస్ కనబర్చడానికి శ్రమించండి, పరిపూర్ణత సాధించడానికి కాదు.</item>
+        <item>నిరంతర సాధన వలన పరిపూర్ణత చేకూరును.</item>
+        <item>పట్టుదలతో తలుచుకుంటే ఏదైనా సాధించవచ్చు.</item>
+        <item>చిన్న చిన్న లక్ష్యాలు సెట్ చేసుకొని, వాటిపై శ్రమించండి.</item>
+        <item>ప్రతి ప్రయాణం తొలి అడుగుతోనే మొదలవుతుంది.</item>
+        <item>రోజుకి ఒక లక్ష్యం చేరుకోండి.</item>
+        <item>మీరు ఎంతో నెమ్మదిగా ఉన్నారని చింతించాల్సిన పని లేదు, కదలకుండా సోఫాలో కూర్చొని ఉండే వాళ్ల కంటే కనీసం ప్రయత్నం చేస్తున్నందుకు మీరు ఎంతో మేలు.</item>
+        <item>మీరు పరిగెత్తగలిగినప్పుడు పరిగెత్తండి. నడవాల్సినప్పుడు నడవండి. అవసరమైతే పాకండి. అయితే ఎప్పుడూ వదిలివేయవద్దు.</item>
+        <item>గుర్తుంచుకోండి, మీరు బాగా వర్క్అవుట్ చేసిన తర్వాత పొందే అనుభూతి మీరు వర్క్ అవుట్ చేసారనే భ్రమలో కూర్చొని పొందే అనుభూతి కంటే వేయి రెట్లు గొప్పది.</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>గొప్పది</item>
+        <item>మంచిది</item>
+        <item>మధ్యస్థం</item>
+        <item>హెచ్చరిక</item>
+        <item>అనారోగ్యకరం</item>
+        <item>చాలా అనారోగ్యకరం</item>
+    </string-array>
+    <string-array name="weight_unit">
+        <item>కి.గ్రా</item>
+        <item>jin</item>
+        <item>పౌం</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>తక్కువ బరువు</item>
+        <item>సాధారణ బరువు</item>
+        <item>ఎక్కువ బరువు</item>
+        <item>స్థూలకాయం</item>
+        <item>స్థూలకాయం</item>
+    </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>బిఎంఐ వర్గం: తక్కువ బరువు</item>
+        <item>బిఎంఐ వర్గం: సాధారణ బరువు</item>
+        <item>బిఎంఐ Category: ఎక్కువ బరువు</item>
+        <item>బిఎంఐ వర్గం: స్థూలకాయం</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>మీ బరువుని నిర్వహించడంలో సహాయపడేందుకు ఒక లక్ష్యాన్ని సెట్ చేయండి.</item>
+        <item>శుభాకాంక్షలు! మీరు మీ లక్షిత బరువు దగ్గర ఉన్నారు.</item>
+        <item>మీరు మీ లక్షిత బరువు కంటే తక్కువ బరువు ఉన్నారు</item>
+        <item>మీరు మీ లక్షిత బరువు కంటే ఎక్కువ బరువు ఉన్నారు</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>మీ బరువుని నిర్వహించడంలో సహాయపడేందుకు ఒక లక్ష్యాన్ని సెట్ చేయండి.</item>
+        <item>శుభాకాంక్షలు! మీరు మీ లక్షిత బరువు దగ్గర ఉన్నారు.</item>
+        <item>మీరు మీ లక్షిత బరువు కంటే తక్కువ బరువు ఉన్నారు</item>
+        <item>మీరు మీ లక్షిత బరువు కంటే ఎక్కువ బరువు ఉన్నారు</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>లక్ష్యాన్ని దాటారు</item>
+        <item>మీ లక్ష్యాన్ని చేరుకోలేదు</item>
+        <item>మీరు మీ లక్ష్యాన్ని చేరుకున్నారు!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>మీరు మీ లక్ష్యాన్ని ఇంకా చేరుకోలేదు</item>
+        <item>మీరు మీ లక్ష్యాన్ని ఇంకా చేరుకోలేదు</item>
+        <item>మీరు మీ లక్ష్యాన్ని ఇంకా చేరుకోలేదు</item>
+        <item>మీరు మీ లక్ష్యాన్ని (%1$s%2$s) చేరుకున్నారు!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>మీరు మీ లక్ష్యాన్ని ఇంకా చేరుకోలేదు</item>
+        <item>మీరు మీ లక్ష్యాన్ని ఇంకా చేరుకోలేదు</item>
+        <item>మీరు మీ లక్ష్యాన్ని ఇంకా చేరుకోలేదు</item>
+        <item>మీరు మీ లక్ష్యాన్ని (%1$s%2$s) చేరుకున్నారు!</item>
+    </string-array>
+</resources>

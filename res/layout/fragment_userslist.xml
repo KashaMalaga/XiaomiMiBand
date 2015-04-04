@@ -5,9 +5,11 @@
     <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="#fff4f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:gravity="center" android:id="@id/list_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="@dimen/mili_margin" />
-            <FrameLayout android:background="@drawable/bg_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/item_height_small">
-                <ListView android:layout_gravity="center_vertical" android:id="@id/users_list" android:background="@null" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="200.0dip" />
+            <include layout="@layout/split_line_with_margin" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/item_height_small">
+                <ListView android:layout_gravity="center_vertical" android:id="@id/users_list" android:background="@null" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/line_divider" android:dividerHeight="1.0px" />
             </FrameLayout>
+            <include layout="@layout/split_line_with_margin" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

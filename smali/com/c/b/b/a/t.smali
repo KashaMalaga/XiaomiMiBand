@@ -13,75 +13,67 @@
 
 
 # virtual methods
-.method public a(Lcom/c/b/o;)Lcom/c/b/b/a/s;
-    .locals 7
+.method public a(Lcom/c/b/s;)Lcom/c/b/b/a/s;
+    .locals 4
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1}, Lcom/c/b/o;->d()Lcom/c/b/a;
+    invoke-virtual {p1}, Lcom/c/b/s;->d()Lcom/c/b/a;
 
-    move-result-object v3
+    move-result-object v2
 
     sget-object v1, Lcom/c/b/a;->o:Lcom/c/b/a;
 
-    if-eq v3, v1, :cond_1
+    if-eq v2, v1, :cond_1
 
     sget-object v1, Lcom/c/b/a;->p:Lcom/c/b/a;
 
-    if-eq v3, v1, :cond_1
+    if-eq v2, v1, :cond_1
 
     sget-object v1, Lcom/c/b/a;->g:Lcom/c/b/a;
 
-    if-eq v3, v1, :cond_1
+    if-eq v2, v1, :cond_1
 
     sget-object v1, Lcom/c/b/a;->h:Lcom/c/b/a;
 
-    if-eq v3, v1, :cond_1
+    if-eq v2, v1, :cond_1
 
     :cond_0
     :goto_0
     return-object v0
 
     :cond_1
-    invoke-virtual {p1}, Lcom/c/b/o;->a()Ljava/lang/String;
+    invoke-static {p1}, Lcom/c/b/b/a/t;->c(Lcom/c/b/s;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v4
+    move-result v3
 
-    const/4 v2, 0x0
+    invoke-static {v1, v3}, Lcom/c/b/b/a/t;->a(Ljava/lang/CharSequence;I)Z
 
-    :goto_1
-    if-ge v2, v4, :cond_2
+    move-result v3
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->charAt(I)C
+    if-eqz v3, :cond_0
 
-    move-result v5
-
-    const/16 v6, 0x30
-
-    if-lt v5, v6, :cond_0
-
-    const/16 v6, 0x39
-
-    if-gt v5, v6, :cond_0
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_2
     sget-object v0, Lcom/c/b/a;->p:Lcom/c/b/a;
 
-    if-ne v3, v0, :cond_3
+    if-ne v2, v0, :cond_2
 
-    invoke-static {v1}, Lcom/c/b/g/x;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/16 v2, 0x8
+
+    if-ne v0, v2, :cond_2
+
+    invoke-static {v1}, Lcom/c/b/g/z;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_2
+    :goto_1
     new-instance v2, Lcom/c/b/b/a/s;
 
     invoke-direct {v2, v1, v0}, Lcom/c/b/b/a/s;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -90,16 +82,16 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_2
     move-object v0, v1
 
-    goto :goto_2
+    goto :goto_1
 .end method
 
-.method public synthetic b(Lcom/c/b/o;)Lcom/c/b/b/a/q;
+.method public synthetic b(Lcom/c/b/s;)Lcom/c/b/b/a/q;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/c/b/b/a/t;->a(Lcom/c/b/o;)Lcom/c/b/b/a/s;
+    invoke-virtual {p0, p1}, Lcom/c/b/b/a/t;->a(Lcom/c/b/s;)Lcom/c/b/b/a/s;
 
     move-result-object v0
 

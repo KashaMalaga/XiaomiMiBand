@@ -25,7 +25,7 @@
 
 .field static final FRICTION:F = 2.0f
 
-.field static final LOG_TAG:Ljava/lang/String; = "Pull"
+.field static final LOG_TAG:Ljava/lang/String; = "PullToRefresh"
 
 .field public static final SMOOTH_SCROLL_DURATION_MS:I = 0xc8
 
@@ -311,12 +311,12 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)Landroid/view/animation/Interpolator;
-    .locals 1
+.method static synthetic access$000(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mScrollAnimationInterpolator:Landroid/view/animation/Interpolator;
+    invoke-direct {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->callRefreshListener()V
 
-    return-object v0
+    return-void
 .end method
 
 .method static synthetic access$100(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;IJJLcom/handmark/pulltorefresh/library/PullToRefreshBase$OnSmoothScrollFinishedListener;)V
@@ -327,12 +327,12 @@
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
-    .locals 0
+.method static synthetic access$200(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)Landroid/view/animation/Interpolator;
+    .locals 1
 
-    invoke-direct {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->callRefreshListener()V
+    iget-object v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mScrollAnimationInterpolator:Landroid/view/animation/Interpolator;
 
-    return-void
+    return-object v0
 .end method
 
 .method private addRefreshableView(Landroid/content/Context;Landroid/view/View;)V
@@ -527,12 +527,6 @@
 
     const/4 v3, 0x0
 
-    const-string v0, "Pull"
-
-    const-string v1, "PullToRefreshBase init"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     sget-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$4;->$SwitchMap$com$handmark$pulltorefresh$library$PullToRefreshBase$Orientation:[I
 
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->getPullToRefreshScrollDirection()Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
@@ -564,7 +558,7 @@
 
     iput v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mTouchSlop:I
 
-    sget-object v0, Lcom/xiaomi/hm/a/t;->PullToRefresh:[I
+    sget-object v0, Lcom/handmark/pulltorefresh/library/R$styleable;->PullToRefresh:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -720,8 +714,6 @@
 
     goto :goto_1
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -747,23 +739,24 @@
 
     :cond_0
     :goto_0
+    :pswitch_0
     return v0
 
-    :pswitch_0
+    :pswitch_1
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isReadyForPullStart()Z
 
     move-result v0
 
     goto :goto_0
 
-    :pswitch_1
+    :pswitch_2
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isReadyForPullEnd()Z
 
     move-result v0
 
     goto :goto_0
 
-    :pswitch_2
+    :pswitch_3
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isReadyForPullEnd()Z
 
     move-result v1
@@ -785,9 +778,10 @@
 
     :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
         :pswitch_2
+        :pswitch_1
+        :pswitch_0
+        :pswitch_3
     .end packed-switch
 .end method
 
@@ -967,12 +961,12 @@
     .end packed-switch
 
     :pswitch_data_1
-    .packed-switch 0x2
+    .packed-switch 0x1
         :pswitch_1
     .end packed-switch
 
     :pswitch_data_2
-    .packed-switch 0x2
+    .packed-switch 0x1
         :pswitch_2
     .end packed-switch
 .end method
@@ -997,28 +991,6 @@
 
 .method private final smoothScrollTo(IJJLcom/handmark/pulltorefresh/library/PullToRefreshBase$OnSmoothScrollFinishedListener;)V
     .locals 7
-
-    const-string v0, "Pull"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "smoothScrollTo  newScrollValue = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mCurrentSmoothScrollRunnable:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$SmoothScrollRunnable;
 
@@ -1118,9 +1090,9 @@
 
     const-wide/16 v4, 0x0
 
-    new-instance v6, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$1;
+    new-instance v6, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$3;
 
-    invoke-direct {v6, p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$1;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
+    invoke-direct {v6, p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$3;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
 
     move-object v0, p0
 
@@ -1136,7 +1108,7 @@
 .method public addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
     .locals 3
 
-    const-string v0, "Pull"
+    const-string v0, "PullToRefresh"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1502,8 +1474,6 @@
 
 .method public final isDisableScrollingWhileRefreshing()Z
     .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isScrollingWhileRefreshingEnabled()Z
 
@@ -1614,43 +1584,11 @@
 
     const/4 v2, 0x1
 
-    const-string v1, "Pull"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "onInterceptTouchEvent action = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isPullToRefreshEnabled()Z
 
     move-result v1
 
     if-nez v1, :cond_0
-
-    const-string v1, "Pull"
-
-    const-string v2, "onInterceptTouchEvent false (!isPullToRefreshEnabled())"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     return v0
@@ -1669,12 +1607,6 @@
     :cond_1
     iput-boolean v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
 
-    const-string v1, "Pull"
-
-    const-string v2, "onInterceptTouchEvent false (ACTION_UP|ACTION_CANCEL)"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     goto :goto_0
 
     :cond_2
@@ -1683,12 +1615,6 @@
     iget-boolean v3, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
 
     if-eqz v3, :cond_3
-
-    const-string v0, "Pull"
-
-    const-string v1, "onInterceptTouchEvent true (!ACTION_DOWN|mIsBeingDragged)"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     move v0, v2
 
@@ -1700,30 +1626,6 @@
     :cond_4
     :goto_1
     :pswitch_0
-    const-string v0, "Pull"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "onInterceptTouchEvent mIsBeingDragged = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-boolean v2, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     iget-boolean v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
 
     goto :goto_0
@@ -1739,43 +1641,11 @@
 
     if-eqz v0, :cond_5
 
-    const-string v0, "Pull"
-
-    const-string v1, "onInterceptTouchEvent true (isRefreshing|mScrollingWhileRefreshingEnabled)"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     move v0, v2
 
     goto :goto_0
 
     :cond_5
-    const-string v0, "Pull"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "onInterceptTouchEvent ACTION_MOVE isReadyForPull = "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-direct {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isReadyForPull()Z
-
-    move-result v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     invoke-direct {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isReadyForPull()Z
 
     move-result v0
@@ -1874,7 +1744,7 @@
 
     iput-object v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mCurrentMode:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
 
-    goto/16 :goto_1
+    goto :goto_1
 
     :pswitch_2
     iget v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mLastMotionX:F
@@ -1927,32 +1797,6 @@
     goto/16 :goto_1
 
     :pswitch_3
-    const-string v1, "Pull"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "onInterceptTouchEvent ACTION_DOWN isReadyForPull = "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-direct {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isReadyForPull()Z
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     invoke-direct {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isReadyForPull()Z
 
     move-result v1
@@ -1978,6 +1822,8 @@
     iput-boolean v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
 
     goto/16 :goto_1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -2006,12 +1852,6 @@
 
 .method protected onPullToRefresh()V
     .locals 2
-
-    const-string v0, "Pull"
-
-    const-string v1, "PullToRefreshBase onPullToRefresh"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     sget-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$4;->$SwitchMap$com$handmark$pulltorefresh$library$PullToRefreshBase$Mode:[I
 
@@ -2042,12 +1882,10 @@
 
     goto :goto_0
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_1
         :pswitch_0
+        :pswitch_1
     .end packed-switch
 .end method
 
@@ -2074,40 +1912,6 @@
 
 .method protected onRefreshing(Z)V
     .locals 3
-
-    const-string v0, "Pull"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "PullToRefreshBase  onRefreshing  doScroll = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",mShowViewWhileRefreshing = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-boolean v2, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mShowViewWhileRefreshing:Z
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mMode:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
 
@@ -2141,9 +1945,9 @@
 
     if-eqz v0, :cond_2
 
-    new-instance v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$2;
+    new-instance v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$1;
 
-    invoke-direct {v0, p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$2;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
+    invoke-direct {v0, p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$1;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
 
     sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$4;->$SwitchMap$com$handmark$pulltorefresh$library$PullToRefreshBase$Mode:[I
 
@@ -2191,7 +1995,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x2
+    .packed-switch 0x1
         :pswitch_1
         :pswitch_0
         :pswitch_1
@@ -2200,12 +2004,6 @@
 
 .method protected onReleaseToRefresh()V
     .locals 2
-
-    const-string v0, "Pull"
-
-    const-string v1, "PullToRefreshBase   onReleaseToRefresh"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     sget-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$4;->$SwitchMap$com$handmark$pulltorefresh$library$PullToRefreshBase$Mode:[I
 
@@ -2236,27 +2034,19 @@
 
     goto :goto_0
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_1
         :pswitch_0
+        :pswitch_1
     .end packed-switch
 .end method
 
 .method protected onReset()V
-    .locals 3
+    .locals 2
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    const-string v0, "Pull"
-
-    const-string v1, "PullToRefreshBase onReset"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iput-boolean v2, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
+    iput-boolean v1, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
 
     const/4 v0, 0x1
 
@@ -2270,7 +2060,7 @@
 
     invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->reset()V
 
-    invoke-virtual {p0, v2}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->smoothScrollTo(I)V
+    invoke-virtual {p0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->smoothScrollTo(I)V
 
     return-void
 .end method
@@ -2438,9 +2228,9 @@
 .method protected final onSizeChanged(IIII)V
     .locals 5
 
-    const-string v0, "Pull"
+    const-string v0, "PullToRefresh"
 
-    const-string v1, "PullToRefreshBase  onSizeChanged. W: %d, H: %d"
+    const-string v1, "onSizeChanged. W: %d, H: %d"
 
     const/4 v2, 0x2
 
@@ -2474,9 +2264,9 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->refreshRefreshableViewSize(II)V
 
-    new-instance v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$3;
+    new-instance v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$2;
 
-    invoke-direct {v0, p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$3;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
+    invoke-direct {v0, p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$2;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
 
     invoke-virtual {p0, v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->post(Ljava/lang/Runnable;)Z
 
@@ -2484,118 +2274,34 @@
 .end method
 
 .method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 5
+    .locals 4
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    const-string v2, "Pull"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "onTouchEvent action = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, ",mIsBeingDragged = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    iget-boolean v4, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, ",getEdgeFlags = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getEdgeFlags()I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isPullToRefreshEnabled()Z
 
     move-result v2
 
-    if-nez v2, :cond_0
+    if-nez v2, :cond_1
 
-    const-string v1, "Pull"
-
-    const-string v2, "onTouchEvent   false (!isPullToRefreshEnabled())"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
+    :cond_0
     :goto_0
     return v0
 
-    :cond_0
+    :cond_1
     iget-boolean v2, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mScrollingWhileRefreshingEnabled:Z
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_2
 
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isRefreshing()Z
 
     move-result v2
 
-    if-eqz v2, :cond_1
-
-    const-string v0, "Pull"
-
-    const-string v2, "onTouchEvent  true (isRefreshing())"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getEdgeFlags()I
-
-    move-result v2
-
     if-eqz v2, :cond_2
 
-    const-string v1, "Pull"
-
-    const-string v2, "onTouchEvent false (getEdgeFlags)"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    move v0, v1
 
     goto :goto_0
 
@@ -2604,72 +2310,29 @@
 
     move-result v2
 
-    packed-switch v2, :pswitch_data_0
+    if-nez v2, :cond_3
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getEdgeFlags()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
 
     :cond_3
-    const-string v1, "Pull"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "onTouchEvent false other action = "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v3
+    move-result v2
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    packed-switch v2, :pswitch_data_0
 
     goto :goto_0
 
     :pswitch_0
-    iget-boolean v2, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v0
-
-    iput v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mLastMotionY:F
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v0
-
-    iput v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mLastMotionX:F
-
-    invoke-direct {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->pullEvent()V
-
-    const-string v0, "Pull"
-
-    const-string v2, "onTouchEvent true (ACTION_MOVE)"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    move v0, v1
-
-    goto :goto_0
-
-    :pswitch_1
     invoke-direct {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isReadyForPull()Z
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_0
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -2687,20 +2350,37 @@
 
     iput v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mLastMotionX:F
 
-    const-string v0, "Pull"
+    move v0, v1
 
-    const-string v2, "onTouchEvent true (ACTION_DOWN)"
+    goto :goto_0
 
-    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    :pswitch_1
+    iget-boolean v2, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mLastMotionY:F
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mLastMotionX:F
+
+    invoke-direct {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->pullEvent()V
 
     move v0, v1
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :pswitch_2
     iget-boolean v2, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_0
 
     iput-boolean v0, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mIsBeingDragged:Z
 
@@ -2727,15 +2407,9 @@
 
     invoke-virtual {p0, v2, v3}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->setState(Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;[Z)V
 
-    const-string v0, "Pull"
-
-    const-string v2, "onTouchEvent true to REFRESHING (ACTION_UP)"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     move v0, v1
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_5
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->isRefreshing()Z
@@ -2746,15 +2420,9 @@
 
     invoke-virtual {p0, v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->smoothScrollTo(I)V
 
-    const-string v0, "Pull"
-
-    const-string v2, "onTouchEvent true isRefreshing(ACTION_UP)"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     move v0, v1
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_6
     sget-object v2, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;->RESET:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;
@@ -2763,21 +2431,17 @@
 
     invoke-virtual {p0, v2, v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->setState(Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;[Z)V
 
-    const-string v0, "Pull"
-
-    const-string v2, "onTouchEvent  true  RESET"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     move v0, v1
 
-    goto/16 :goto_0
+    goto :goto_0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
-        :pswitch_2
         :pswitch_0
+        :pswitch_2
+        :pswitch_1
         :pswitch_2
     .end packed-switch
 .end method
@@ -2838,7 +2502,7 @@
     move v4, v5
 
     :goto_0
-    const-string v5, "Pull"
+    const-string v5, "PullToRefresh"
 
     const-string v6, "Setting Padding. L: %d, T: %d, R: %d, B: %d"
 
@@ -3075,8 +2739,6 @@
 
 .method public setDisableScrollingWhileRefreshing(Z)V
     .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     if-nez p1, :cond_0
 
@@ -3108,7 +2770,7 @@
 
     const/4 v3, 0x0
 
-    const-string v0, "Pull"
+    const-string v0, "PullToRefresh"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3214,8 +2876,6 @@
 
 .method public setLastUpdatedLabel(Ljava/lang/CharSequence;)V
     .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->getLoadingLayoutProxy()Lcom/handmark/pulltorefresh/library/ILoadingLayout;
 
@@ -3228,8 +2888,6 @@
 
 .method public setLoadingDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->getLoadingLayoutProxy()Lcom/handmark/pulltorefresh/library/ILoadingLayout;
 
@@ -3242,8 +2900,6 @@
 
 .method public setLoadingDrawable(Landroid/graphics/drawable/Drawable;Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;)V
     .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     invoke-virtual {p2}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->showHeaderLoadingLayout()Z
 
@@ -3281,7 +2937,7 @@
 
     if-eq p1, v0, :cond_0
 
-    const-string v0, "Pull"
+    const-string v0, "PullToRefresh"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3366,8 +3022,6 @@
 
 .method public setPullLabel(Ljava/lang/CharSequence;)V
     .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->getLoadingLayoutProxy()Lcom/handmark/pulltorefresh/library/ILoadingLayout;
 
@@ -3380,8 +3034,6 @@
 
 .method public setPullLabel(Ljava/lang/CharSequence;Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;)V
     .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     invoke-virtual {p2}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->showHeaderLoadingLayout()Z
 
@@ -3402,8 +3054,6 @@
 
 .method public final setPullToRefreshEnabled(Z)V
     .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     if-eqz p1, :cond_0
 
@@ -3467,8 +3117,6 @@
 
 .method public setRefreshingLabel(Ljava/lang/CharSequence;)V
     .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->getLoadingLayoutProxy()Lcom/handmark/pulltorefresh/library/ILoadingLayout;
 
@@ -3481,8 +3129,6 @@
 
 .method public setRefreshingLabel(Ljava/lang/CharSequence;Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;)V
     .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     invoke-virtual {p2}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->showHeaderLoadingLayout()Z
 
@@ -3503,8 +3149,6 @@
 
 .method public setReleaseLabel(Ljava/lang/CharSequence;)V
     .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     sget-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->BOTH:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
 
@@ -3515,8 +3159,6 @@
 
 .method public setReleaseLabel(Ljava/lang/CharSequence;Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;)V
     .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     invoke-virtual {p2}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->showHeaderLoadingLayout()Z
 
@@ -3564,13 +3206,13 @@
 
     iput-object p1, p0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->mState:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;
 
-    const-string v0, "Pull"
+    const-string v0, "PullToRefresh"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "PullToRefreshBase State: "
+    const-string v2, "State: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

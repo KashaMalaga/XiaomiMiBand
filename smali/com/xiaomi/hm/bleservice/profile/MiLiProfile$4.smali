@@ -87,7 +87,7 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$300(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
 
     move-result v2
 
@@ -102,7 +102,7 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # setter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
-    invoke-static {v2, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$302(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)I
+    invoke-static {v2, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$202(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)I
 
     array-length v1, p1
 
@@ -123,7 +123,7 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_SensorSourceOutputStream:Ljava/io/PipedOutputStream;
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$400(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$300(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
 
     move-result-object v2
 
@@ -143,7 +143,7 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$300(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
 
     move-result v2
 

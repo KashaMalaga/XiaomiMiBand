@@ -1,170 +1,130 @@
 .class public Lcn/com/smartdevices/bracelet/ui/aV;
 .super Landroid/app/Fragment;
 
-# interfaces
-.implements Landroid/widget/ViewSwitcher$ViewFactory;
-
 
 # instance fields
-.field protected a_:[B
+.field private a:Ljava/lang/String;
 
-.field protected b_:Lcom/xiaomi/hm/view/GifView;
+.field private b:Landroid/webkit/WebView;
 
-.field protected c_:Landroid/widget/TextSwitcher;
+.field private c:Landroid/widget/ProgressBar;
+
+.field private d:Landroid/webkit/WebViewClient;
+
+.field private e:Landroid/webkit/WebChromeClient;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/aW;
+
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/aW;-><init>(Lcn/com/smartdevices/bracelet/ui/aV;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->d:Landroid/webkit/WebViewClient;
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/aX;
+
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/aX;-><init>(Lcn/com/smartdevices/bracelet/ui/aV;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->e:Landroid/webkit/WebChromeClient;
+
     return-void
 .end method
 
-
-# virtual methods
-.method public a()V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/aV;)Landroid/widget/ProgressBar;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b_:Lcom/xiaomi/hm/view/GifView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b_:Lcom/xiaomi/hm/view/GifView;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/view/GifView;->f()V
-
-    :cond_0
-    return-void
-.end method
-
-.method protected a(Landroid/view/View;)V
-    .locals 6
-
-    const-wide/16 v4, 0x12c
-
-    const/high16 v3, 0x3f800000
-
-    const/4 v2, 0x0
-
-    const v0, 0x7f07005d
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    check-cast v0, Lcom/xiaomi/hm/view/GifView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b_:Lcom/xiaomi/hm/view/GifView;
-
-    :cond_0
-    const v0, 0x7f07005c
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextSwitcher;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->c_:Landroid/widget/TextSwitcher;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->c_:Landroid/widget/TextSwitcher;
-
-    invoke-virtual {v0, p0}, Landroid/widget/TextSwitcher;->setFactory(Landroid/widget/ViewSwitcher$ViewFactory;)V
-
-    new-instance v0, Landroid/view/animation/AlphaAnimation;
-
-    invoke-direct {v0, v2, v3}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
-
-    invoke-virtual {v0, v4, v5}, Landroid/view/animation/Animation;->setDuration(J)V
-
-    new-instance v1, Landroid/view/animation/AlphaAnimation;
-
-    invoke-direct {v1, v3, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
-
-    invoke-virtual {v1, v4, v5}, Landroid/view/animation/Animation;->setDuration(J)V
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aV;->c_:Landroid/widget/TextSwitcher;
-
-    invoke-virtual {v2, v0}, Landroid/widget/TextSwitcher;->setInAnimation(Landroid/view/animation/Animation;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->c_:Landroid/widget/TextSwitcher;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextSwitcher;->setOutAnimation(Landroid/view/animation/Animation;)V
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b_:Lcom/xiaomi/hm/view/GifView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b_:Lcom/xiaomi/hm/view/GifView;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/view/GifView;->e()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public makeView()Landroid/view/View;
-    .locals 4
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aV;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f03000d
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aV;->c_:Landroid/widget/TextSwitcher;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->c:Landroid/widget/ProgressBar;
 
     return-object v0
 .end method
 
-.method public onDestroy()V
-    .locals 1
+.method public static a()Lcn/com/smartdevices/bracelet/ui/aV;
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b_:Lcom/xiaomi/hm/view/GifView;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/aV;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/aV;-><init>()V
 
-    :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b_:Lcom/xiaomi/hm/view/GifView;
+    new-instance v1, Landroid/os/Bundle;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/view/GifView;->d()V
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aV;->setArguments(Landroid/os/Bundle;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b_:Lcom/xiaomi/hm/view/GifView;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    return-object v0
+.end method
 
-    :cond_0
-    :goto_0
-    invoke-super {p0}, Landroid/app/Fragment;->onDestroy()V
+
+# virtual methods
+.method public onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    .locals 0
+
+    invoke-interface {p1}, Landroid/view/Menu;->clear()V
 
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 3
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    const v0, 0x7f0300aa
 
-    goto :goto_0
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v1
+
+    const-string v0, "http://ota.app-xae.xiaomi.net/help.html"
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->a:Ljava/lang/String;
+
+    const v0, 0x7f07000a
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/webkit/WebView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b:Landroid/webkit/WebView;
+
+    const v0, 0x7f07031d
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->c:Landroid/widget/ProgressBar;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b:Landroid/webkit/WebView;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aV;->d:Landroid/webkit/WebViewClient;
+
+    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b:Landroid/webkit/WebView;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aV;->e:Landroid/webkit/WebChromeClient;
+
+    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aV;->b:Landroid/webkit/WebView;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aV;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aV;->setHasOptionsMenu(Z)V
+
+    return-object v1
 .end method

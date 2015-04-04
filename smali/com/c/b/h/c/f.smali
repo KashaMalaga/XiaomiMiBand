@@ -3,201 +3,1161 @@
 
 
 # static fields
-.field private static final a:I = 0x0
-
-.field private static final b:I = 0x1
-
-.field private static final c:I = 0x2
-
-.field private static final d:I = 0x0
-
-.field private static final e:I = 0x1
-
-.field private static final f:I = 0x2
-
-.field private static final g:I = 0x3
-
-.field private static final h:I = 0x384
-
-.field private static final i:I = 0x385
-
-.field private static final j:I = 0x386
-
-.field private static final k:I = 0x391
-
-.field private static final l:I = 0x39c
-
-.field private static final m:[B
-
-.field private static final n:[B
-
-.field private static final o:[B
-
-.field private static final p:[B
+.field private static final a:[[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 6
 
-    const/16 v3, 0x80
+    const/16 v5, 0x8
 
-    const/16 v2, 0x1e
+    const/4 v4, 0x4
+
+    const/4 v3, 0x2
+
+    const/16 v0, 0x9
+
+    new-array v0, v0, [[I
 
     const/4 v1, 0x0
 
-    const/4 v4, -0x1
+    new-array v2, v3, [I
 
-    new-array v0, v2, [B
+    fill-array-data v2, :array_0
 
-    fill-array-data v0, :array_0
+    aput-object v2, v0, v1
 
-    sput-object v0, Lcom/c/b/h/c/f;->m:[B
+    const/4 v1, 0x1
 
-    new-array v0, v2, [B
+    new-array v2, v4, [I
 
-    fill-array-data v0, :array_1
+    fill-array-data v2, :array_1
 
-    sput-object v0, Lcom/c/b/h/c/f;->n:[B
+    aput-object v2, v0, v1
 
-    new-array v0, v3, [B
+    new-array v1, v5, [I
 
-    sput-object v0, Lcom/c/b/h/c/f;->o:[B
+    fill-array-data v1, :array_2
 
-    new-array v0, v3, [B
+    aput-object v1, v0, v3
 
-    sput-object v0, Lcom/c/b/h/c/f;->p:[B
+    const/4 v1, 0x3
 
-    sget-object v0, Lcom/c/b/h/c/f;->o:[B
+    const/16 v2, 0x10
 
-    invoke-static {v0, v4}, Ljava/util/Arrays;->fill([BB)V
+    new-array v2, v2, [I
 
-    move v0, v1
+    fill-array-data v2, :array_3
 
-    :goto_0
-    sget-object v2, Lcom/c/b/h/c/f;->m:[B
+    aput-object v2, v0, v1
 
-    array-length v2, v2
+    const/16 v1, 0x20
 
-    if-ge v0, v2, :cond_1
+    new-array v1, v1, [I
 
-    sget-object v2, Lcom/c/b/h/c/f;->m:[B
+    fill-array-data v1, :array_4
 
-    aget-byte v2, v2, v0
+    aput-object v1, v0, v4
 
-    if-lez v2, :cond_0
+    const/4 v1, 0x5
 
-    sget-object v3, Lcom/c/b/h/c/f;->o:[B
+    const/16 v2, 0x40
 
-    aput-byte v0, v3, v2
+    new-array v2, v2, [I
 
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
+    fill-array-data v2, :array_5
 
-    int-to-byte v0, v0
+    aput-object v2, v0, v1
 
-    goto :goto_0
+    const/4 v1, 0x6
 
-    :cond_1
-    sget-object v0, Lcom/c/b/h/c/f;->p:[B
+    const/16 v2, 0x80
 
-    invoke-static {v0, v4}, Ljava/util/Arrays;->fill([BB)V
+    new-array v2, v2, [I
 
-    :goto_1
-    sget-object v0, Lcom/c/b/h/c/f;->n:[B
+    fill-array-data v2, :array_6
 
-    array-length v0, v0
+    aput-object v2, v0, v1
 
-    if-ge v1, v0, :cond_3
+    const/4 v1, 0x7
 
-    sget-object v0, Lcom/c/b/h/c/f;->n:[B
+    const/16 v2, 0x100
 
-    aget-byte v0, v0, v1
+    new-array v2, v2, [I
 
-    if-lez v0, :cond_2
+    fill-array-data v2, :array_7
 
-    sget-object v2, Lcom/c/b/h/c/f;->p:[B
+    aput-object v2, v0, v1
 
-    aput-byte v1, v2, v0
+    const/16 v1, 0x200
 
-    :cond_2
-    add-int/lit8 v0, v1, 0x1
+    new-array v1, v1, [I
 
-    int-to-byte v1, v0
+    fill-array-data v1, :array_8
 
-    goto :goto_1
+    aput-object v1, v0, v5
 
-    :cond_3
+    sput-object v0, Lcom/c/b/h/c/f;->a:[[I
+
     return-void
 
     :array_0
-    .array-data 1
-        0x30t
-        0x31t
-        0x32t
-        0x33t
-        0x34t
-        0x35t
-        0x36t
-        0x37t
-        0x38t
-        0x39t
-        0x26t
-        0xdt
-        0x9t
-        0x2ct
-        0x3at
-        0x23t
-        0x2dt
-        0x2et
-        0x24t
-        0x2ft
-        0x2bt
-        0x25t
-        0x2at
-        0x3dt
-        0x5et
-        0x0t
-        0x20t
-        0x0t
-        0x0t
-        0x0t
+    .array-data 4
+        0x1b
+        0x395
     .end array-data
 
-    nop
-
     :array_1
-    .array-data 1
-        0x3bt
-        0x3ct
-        0x3et
-        0x40t
-        0x5bt
-        0x5ct
-        0x5dt
-        0x5ft
-        0x60t
-        0x7et
-        0x21t
-        0xdt
-        0x9t
-        0x2ct
-        0x3at
-        0xat
-        0x2dt
-        0x2et
-        0x24t
-        0x2ft
-        0x22t
-        0x7ct
-        0x2at
-        0x28t
-        0x29t
-        0x3ft
-        0x7bt
-        0x7dt
-        0x27t
-        0x0t
+    .array-data 4
+        0x20a
+        0x238
+        0x2d3
+        0x329
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0xed
+        0x134
+        0x1b4
+        0x11c
+        0x286
+        0x28d
+        0x1ac
+        0x17b
+    .end array-data
+
+    :array_3
+    .array-data 4
+        0x112
+        0x232
+        0xe8
+        0x2f3
+        0x257
+        0x20c
+        0x321
+        0x84
+        0x127
+        0x74
+        0x1ba
+        0x1ac
+        0x127
+        0x2a
+        0xb0
+        0x41
+    .end array-data
+
+    :array_4
+    .array-data 4
+        0x169
+        0x23f
+        0x39a
+        0x20d
+        0xb0
+        0x24a
+        0x280
+        0x141
+        0x218
+        0x2e6
+        0x2a5
+        0x2e6
+        0x2af
+        0x11c
+        0xc1
+        0x205
+        0x111
+        0x1ee
+        0x107
+        0x93
+        0x251
+        0x320
+        0x23b
+        0x140
+        0x323
+        0x85
+        0xe7
+        0x186
+        0x2ad
+        0x14a
+        0x3f
+        0x19a
+    .end array-data
+
+    :array_5
+    .array-data 4
+        0x21b
+        0x1a6
+        0x6
+        0x5d
+        0x35e
+        0x303
+        0x1c5
+        0x6a
+        0x262
+        0x11f
+        0x6b
+        0x1f9
+        0x2dd
+        0x36d
+        0x17d
+        0x264
+        0x2d3
+        0x1dc
+        0x1ce
+        0xac
+        0x1ae
+        0x261
+        0x35a
+        0x336
+        0x21f
+        0x178
+        0x1ff
+        0x190
+        0x2a0
+        0x2fa
+        0x11b
+        0xb8
+        0x1b8
+        0x23
+        0x207
+        0x1f
+        0x1cc
+        0x252
+        0xe1
+        0x217
+        0x205
+        0x160
+        0x25d
+        0x9e
+        0x28b
+        0xc9
+        0x1e8
+        0x1f6
+        0x288
+        0x2dd
+        0x2cd
+        0x53
+        0x194
+        0x61
+        0x118
+        0x303
+        0x348
+        0x275
+        0x4
+        0x17d
+        0x34b
+        0x26f
+        0x108
+        0x21f
+    .end array-data
+
+    :array_6
+    .array-data 4
+        0x209
+        0x136
+        0x360
+        0x223
+        0x35a
+        0x244
+        0x128
+        0x17b
+        0x35
+        0x30b
+        0x381
+        0x1bc
+        0x190
+        0x39d
+        0x2ed
+        0x19f
+        0x336
+        0x5d
+        0xd9
+        0xd0
+        0x3a0
+        0xf4
+        0x247
+        0x26c
+        0xf6
+        0x94
+        0x1bf
+        0x277
+        0x124
+        0x38c
+        0x1ea
+        0x2c0
+        0x204
+        0x102
+        0x1c9
+        0x38b
+        0x252
+        0x2d3
+        0x2a2
+        0x124
+        0x110
+        0x60
+        0x2ac
+        0x1b0
+        0x2ae
+        0x25e
+        0x35c
+        0x239
+        0xc1
+        0xdb
+        0x81
+        0xba
+        0xec
+        0x11f
+        0xc0
+        0x307
+        0x116
+        0xad
+        0x28
+        0x17b
+        0x2c8
+        0x1cf
+        0x286
+        0x308
+        0xab
+        0x1eb
+        0x129
+        0x2fb
+        0x9c
+        0x2dc
+        0x5f
+        0x10e
+        0x1bf
+        0x5a
+        0x1fb
+        0x30
+        0xe4
+        0x335
+        0x328
+        0x382
+        0x310
+        0x297
+        0x273
+        0x17a
+        0x17e
+        0x106
+        0x17c
+        0x25a
+        0x2f2
+        0x150
+        0x59
+        0x266
+        0x57
+        0x1b0
+        0x29e
+        0x268
+        0x9d
+        0x176
+        0xf2
+        0x2d6
+        0x258
+        0x10d
+        0x177
+        0x382
+        0x34d
+        0x1c6
+        0x162
+        0x82
+        0x32e
+        0x24b
+        0x324
+        0x22
+        0xd3
+        0x14a
+        0x21b
+        0x129
+        0x33b
+        0x361
+        0x25
+        0x205
+        0x342
+        0x13b
+        0x226
+        0x56
+        0x321
+        0x4
+        0x6c
+        0x21b
+    .end array-data
+
+    :array_7
+    .array-data 4
+        0x20c
+        0x37e
+        0x4b
+        0x2fe
+        0x372
+        0x359
+        0x4a
+        0xcc
+        0x52
+        0x24a
+        0x2c4
+        0xfa
+        0x389
+        0x312
+        0x8a
+        0x2d0
+        0x35a
+        0xc2
+        0x137
+        0x391
+        0x113
+        0xbe
+        0x177
+        0x352
+        0x1b6
+        0x2dd
+        0xc2
+        0x118
+        0xc9
+        0x118
+        0x33c
+        0x2f5
+        0x2c6
+        0x32e
+        0x397
+        0x59
+        0x44
+        0x239
+        0xb
+        0xcc
+        0x31c
+        0x25d
+        0x21c
+        0x391
+        0x321
+        0x2bc
+        0x31f
+        0x89
+        0x1b7
+        0x1a2
+        0x250
+        0x29c
+        0x161
+        0x35b
+        0x172
+        0x2b6
+        0x145
+        0xf0
+        0xd8
+        0x101
+        0x11c
+        0x225
+        0xd1
+        0x374
+        0x13b
+        0x46
+        0x149
+        0x319
+        0x1ea
+        0x112
+        0x36d
+        0xa2
+        0x2ed
+        0x32c
+        0x2ac
+        0x1cd
+        0x14e
+        0x178
+        0x351
+        0x209
+        0x133
+        0x123
+        0x323
+        0x2c8
+        0x13
+        0x166
+        0x18f
+        0x38c
+        0x67
+        0x1ff
+        0x33
+        0x8
+        0x205
+        0xe1
+        0x121
+        0x1d6
+        0x27d
+        0x2db
+        0x42
+        0xff
+        0x395
+        0x10d
+        0x1cf
+        0x33e
+        0x2da
+        0x1b1
+        0x350
+        0x249
+        0x88
+        0x21a
+        0x38a
+        0x5a
+        0x2
+        0x122
+        0x2e7
+        0xc7
+        0x28f
+        0x387
+        0x149
+        0x31
+        0x322
+        0x244
+        0x163
+        0x24c
+        0xbc
+        0x1ce
+        0xa
+        0x86
+        0x274
+        0x140
+        0x1df
+        0x82
+        0x2e3
+        0x47
+        0x107
+        0x13e
+        0x176
+        0x259
+        0xc0
+        0x25d
+        0x8e
+        0x2a1
+        0x2af
+        0xea
+        0x2d2
+        0x180
+        0xb1
+        0x2f0
+        0x25f
+        0x280
+        0x1c7
+        0xc1
+        0x2b1
+        0x2c3
+        0x325
+        0x281
+        0x30
+        0x3c
+        0x2dc
+        0x26d
+        0x37f
+        0x220
+        0x105
+        0x354
+        0x28f
+        0x135
+        0x2b9
+        0x2f3
+        0x2f4
+        0x3c
+        0xe7
+        0x305
+        0x1b2
+        0x1a5
+        0x2d6
+        0x210
+        0x1f7
+        0x76
+        0x31
+        0x31b
+        0x20
+        0x90
+        0x1f4
+        0xee
+        0x344
+        0x18a
+        0x118
+        0x236
+        0x13f
+        0x9
+        0x287
+        0x226
+        0x49
+        0x392
+        0x156
+        0x7e
+        0x20
+        0x2a9
+        0x14b
+        0x318
+        0x26c
+        0x3c
+        0x261
+        0x1b9
+        0xb4
+        0x317
+        0x37d
+        0x2f2
+        0x25d
+        0x17f
+        0xe4
+        0x2ed
+        0x2f8
+        0xd5
+        0x36
+        0x129
+        0x86
+        0x36
+        0x342
+        0x12b
+        0x39a
+        0xbf
+        0x38e
+        0x214
+        0x261
+        0x33d
+        0xbd
+        0x14
+        0xa7
+        0x1d
+        0x368
+        0x1c1
+        0x53
+        0x192
+        0x29
+        0x290
+        0x1f9
+        0x243
+        0x1e1
+        0xad
+        0x194
+        0xfb
+        0x2b0
+        0x5f
+        0x1f1
+        0x22b
+        0x282
+        0x21f
+        0x133
+        0x9f
+        0x39c
+        0x22e
+        0x288
+        0x37
+        0x1f1
+        0xa
+    .end array-data
+
+    :array_8
+    .array-data 4
+        0x160
+        0x4d
+        0x175
+        0x1f8
+        0x23
+        0x257
+        0x1ac
+        0xcf
+        0x199
+        0x23e
+        0x76
+        0x1f2
+        0x11d
+        0x17c
+        0x15e
+        0x1ec
+        0xc5
+        0x109
+        0x398
+        0x9b
+        0x392
+        0x12b
+        0xe5
+        0x283
+        0x126
+        0x367
+        0x132
+        0x58
+        0x57
+        0xc1
+        0x160
+        0x30d
+        0x34e
+        0x4b
+        0x147
+        0x208
+        0x1b3
+        0x21f
+        0xcb
+        0x29a
+        0xf9
+        0x15a
+        0x30d
+        0x26d
+        0x280
+        0x10c
+        0x31a
+        0x216
+        0x21b
+        0x30d
+        0x198
+        0x186
+        0x284
+        0x66
+        0x1dc
+        0x1f3
+        0x122
+        0x278
+        0x221
+        0x25
+        0x35a
+        0x394
+        0x228
+        0x29
+        0x21e
+        0x121
+        0x7a
+        0x110
+        0x17f
+        0x320
+        0x1e5
+        0x62
+        0x2f0
+        0x1d8
+        0x2f9
+        0x6b
+        0x310
+        0x35c
+        0x292
+        0x2e5
+        0x122
+        0xcc
+        0x2a9
+        0x197
+        0x357
+        0x55
+        0x63
+        0x3e
+        0x1e2
+        0xb4
+        0x14
+        0x129
+        0x1c3
+        0x251
+        0x391
+        0x8e
+        0x328
+        0x2ac
+        0x11f
+        0x218
+        0x231
+        0x4c
+        0x28d
+        0x383
+        0x2d9
+        0x237
+        0x2e8
+        0x186
+        0x201
+        0xc0
+        0x204
+        0x102
+        0xf0
+        0x206
+        0x31a
+        0x18b
+        0x300
+        0x350
+        0x33
+        0x262
+        0x180
+        0xa8
+        0xbe
+        0x33a
+        0x148
+        0x254
+        0x312
+        0x12f
+        0x23a
+        0x17d
+        0x19f
+        0x281
+        0x9c
+        0xed
+        0x97
+        0x1ad
+        0x213
+        0xcf
+        0x2a4
+        0x2c6
+        0x59
+        0xa8
+        0x130
+        0x192
+        0x28
+        0x2c4
+        0x23f
+        0xa2
+        0x360
+        0xe5
+        0x41
+        0x35d
+        0x349
+        0x200
+        0xa4
+        0x1dd
+        0xdd
+        0x5c
+        0x166
+        0x311
+        0x120
+        0x165
+        0x352
+        0x344
+        0x33b
+        0x2e0
+        0x2c3
+        0x5e
+        0x8
+        0x1ee
+        0x72
+        0x209
+        0x2
+        0x1f3
+        0x353
+        0x21f
+        0x98
+        0x2d9
+        0x303
+        0x5f
+        0xf8
+        0x169
+        0x242
+        0x143
+        0x358
+        0x31d
+        0x121
+        0x33
+        0x2ac
+        0x1d2
+        0x215
+        0x334
+        0x29d
+        0x2d
+        0x386
+        0x1c4
+        0xa7
+        0x156
+        0xf4
+        0xad
+        0x23
+        0x1cf
+        0x28b
+        0x33
+        0x2bb
+        0x24f
+        0x1c4
+        0x242
+        0x25
+        0x7c
+        0x12a
+        0x14c
+        0x228
+        0x2b
+        0x1ab
+        0x77
+        0x296
+        0x309
+        0x1db
+        0x352
+        0x2fc
+        0x16c
+        0x242
+        0x38f
+        0x11b
+        0x2c7
+        0x1d8
+        0x1a4
+        0xf5
+        0x120
+        0x252
+        0x18a
+        0x1ff
+        0x147
+        0x24d
+        0x309
+        0x2bb
+        0x2b0
+        0x2b
+        0x198
+        0x34a
+        0x17f
+        0x2d1
+        0x209
+        0x230
+        0x284
+        0x2ca
+        0x22f
+        0x3e
+        0x91
+        0x369
+        0x297
+        0x2c9
+        0x9f
+        0x2a0
+        0x2d9
+        0x270
+        0x3b
+        0xc1
+        0x1a1
+        0x9e
+        0xd1
+        0x233
+        0x234
+        0x157
+        0x2b5
+        0x6d
+        0x260
+        0x233
+        0x16d
+        0xb5
+        0x304
+        0x2a5
+        0x136
+        0xf8
+        0x161
+        0x2c4
+        0x19a
+        0x243
+        0x366
+        0x269
+        0x349
+        0x278
+        0x35c
+        0x121
+        0x218
+        0x23
+        0x309
+        0x26a
+        0x24a
+        0x1a8
+        0x341
+        0x4d
+        0x255
+        0x15a
+        0x10d
+        0x2f5
+        0x278
+        0x2b7
+        0x2ef
+        0x14b
+        0xf7
+        0xb8
+        0x2d
+        0x313
+        0x2a8
+        0x12
+        0x42
+        0x197
+        0x171
+        0x36
+        0x1ec
+        0xe4
+        0x265
+        0x33e
+        0x39a
+        0x1b5
+        0x207
+        0x284
+        0x389
+        0x315
+        0x1a4
+        0x131
+        0x1b9
+        0xcf
+        0x12c
+        0x37c
+        0x33b
+        0x8d
+        0x219
+        0x17d
+        0x296
+        0x201
+        0x38
+        0xfc
+        0x155
+        0xf2
+        0x31d
+        0x346
+        0x345
+        0x2d0
+        0xe0
+        0x133
+        0x277
+        0x3d
+        0x57
+        0x230
+        0x136
+        0x2f4
+        0x299
+        0x18d
+        0x328
+        0x353
+        0x135
+        0x1d9
+        0x31b
+        0x17a
+        0x1f
+        0x287
+        0x393
+        0x1cb
+        0x326
+        0x24e
+        0x2db
+        0x1a9
+        0xd8
+        0x224
+        0xf9
+        0x141
+        0x371
+        0x2bb
+        0x217
+        0x2a1
+        0x30e
+        0xd2
+        0x32f
+        0x389
+        0x12f
+        0x34b
+        0x39a
+        0x119
+        0x49
+        0x1d5
+        0x317
+        0x294
+        0xa2
+        0x1f2
+        0x134
+        0x9b
+        0x1a6
+        0x38b
+        0x331
+        0xbb
+        0x3e
+        0x10
+        0x1a9
+        0x217
+        0x150
+        0x11e
+        0x1b5
+        0x177
+        0x111
+        0x262
+        0x128
+        0xb7
+        0x39b
+        0x74
+        0x29b
+        0x2ef
+        0x161
+        0x3e
+        0x16e
+        0x2b3
+        0x17b
+        0x2af
+        0x34a
+        0x25
+        0x165
+        0x2d0
+        0x2e6
+        0x14a
+        0x5
+        0x27
+        0x39b
+        0x137
+        0x1a8
+        0xf2
+        0x2ed
+        0x141
+        0x36
+        0x29d
+        0x13c
+        0x156
+        0x12b
+        0x216
+        0x69
+        0x29b
+        0x1e8
+        0x280
+        0x2a0
+        0x240
+        0x21c
+        0x13c
+        0x1e6
+        0x2d1
+        0x262
+        0x2e
+        0x290
+        0x1bf
+        0xab
+        0x268
+        0x1d0
+        0xbe
+        0x213
+        0x129
+        0x141
+        0x2fa
+        0x2f0
+        0x215
+        0xaf
+        0x86
+        0xe
+        0x17d
+        0x1b1
+        0x2cd
+        0x2d
+        0x6f
+        0x14
+        0x254
+        0x11c
+        0x2e0
+        0x8a
+        0x286
+        0x19b
+        0x36d
+        0x29d
+        0x8d
+        0x397
+        0x2d
+        0x30c
+        0x197
+        0xa4
+        0x14c
+        0x383
+        0xa5
+        0x2d6
+        0x258
+        0x145
+        0x1f2
+        0x28f
+        0x165
+        0x2f0
+        0x300
+        0xdf
+        0x351
+        0x287
+        0x3f
+        0x136
+        0x35f
+        0xfb
+        0x16e
+        0x130
+        0x11a
+        0x2e2
+        0x2a3
+        0x19a
+        0x185
+        0xf4
+        0x1f
+        0x79
+        0x12f
+        0x107
     .end array-data
 .end method
 
@@ -209,1257 +1169,223 @@
     return-void
 .end method
 
-.method private static a(Ljava/lang/CharSequence;I)I
-    .locals 4
+.method static a(I)I
+    .locals 2
 
-    const/4 v1, 0x0
+    if-ltz p0, :cond_0
 
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+    const/16 v0, 0x8
 
-    move-result v2
-
-    if-ge p1, v2, :cond_1
-
-    invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v0
+    if-le p0, v0, :cond_1
 
     :cond_0
-    :goto_0
-    invoke-static {v0}, Lcom/c/b/h/c/f;->a(C)Z
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Error correction level must be between 0 and 8!"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    add-int/lit8 v1, p0, 0x1
+
+    shl-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method static a(Ljava/lang/CharSequence;I)Ljava/lang/String;
+    .locals 9
+
+    const/4 v2, 0x0
+
+    invoke-static {p1}, Lcom/c/b/h/c/f;->a(I)I
 
     move-result v3
 
-    if-eqz v3, :cond_1
-
-    if-ge p1, v2, :cond_1
-
-    add-int/lit8 v1, v1, 0x1
-
-    add-int/lit8 p1, p1, 0x1
-
-    if-ge p1, v2, :cond_0
-
-    invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_1
-    return v1
-.end method
-
-.method private static a(Ljava/lang/CharSequence;IILjava/lang/StringBuilder;I)I
-    .locals 9
-
-    const/16 v8, 0x1c
-
-    const/16 v7, 0x1b
-
-    const/4 v2, 0x1
-
-    const/16 v6, 0x1d
-
-    const/4 v1, 0x0
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5, p2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    move v0, v1
-
-    :cond_0
-    :goto_0
-    add-int v3, p1, v0
-
-    invoke-interface {p0, v3}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v3
-
-    packed-switch p4, :pswitch_data_0
-
-    invoke-static {v3}, Lcom/c/b/h/c/f;->e(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_d
-
-    sget-object v4, Lcom/c/b/h/c/f;->p:[B
-
-    aget-byte v3, v4, v3
-
-    int-to-char v3, v3
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
-
-    if-lt v0, p2, :cond_0
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v6
-
-    move v3, v1
-
-    move v4, v1
-
-    :goto_2
-    if-ge v3, v6, :cond_10
-
-    rem-int/lit8 v0, v3, 0x2
-
-    if-eqz v0, :cond_e
-
-    move v0, v2
-
-    :goto_3
-    if-eqz v0, :cond_f
-
-    mul-int/lit8 v0, v4, 0x1e
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->charAt(I)C
-
-    move-result v4
-
-    add-int/2addr v0, v4
-
-    int-to-char v0, v0
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :goto_4
-    add-int/lit8 v3, v3, 0x1
-
-    move v4, v0
-
-    goto :goto_2
-
-    :pswitch_0
-    invoke-static {v3}, Lcom/c/b/h/c/f;->b(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    const/16 v4, 0x20
-
-    if-ne v3, v4, :cond_1
-
-    const/16 v3, 0x1a
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_1
-    add-int/lit8 v3, v3, -0x41
-
-    int-to-char v3, v3
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {v3}, Lcom/c/b/h/c/f;->c(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move p4, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {v3}, Lcom/c/b/h/c/f;->d(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    const/4 p4, 0x2
-
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    sget-object v4, Lcom/c/b/h/c/f;->p:[B
-
-    aget-byte v3, v4, v3
-
-    int-to-char v3, v3
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :pswitch_1
-    invoke-static {v3}, Lcom/c/b/h/c/f;->c(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_6
-
-    const/16 v4, 0x20
-
-    if-ne v3, v4, :cond_5
-
-    const/16 v3, 0x1a
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_5
-    add-int/lit8 v3, v3, -0x61
-
-    int-to-char v3, v3
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_6
-    invoke-static {v3}, Lcom/c/b/h/c/f;->b(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_7
-
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v3, v3, -0x41
-
-    int-to-char v3, v3
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_1
-
-    :cond_7
-    invoke-static {v3}, Lcom/c/b/h/c/f;->d(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_8
-
-    const/4 p4, 0x2
-
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_0
-
-    :cond_8
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    sget-object v4, Lcom/c/b/h/c/f;->p:[B
-
-    aget-byte v3, v4, v3
-
-    int-to-char v3, v3
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_1
-
-    :pswitch_2
-    invoke-static {v3}, Lcom/c/b/h/c/f;->d(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_9
-
-    sget-object v4, Lcom/c/b/h/c/f;->o:[B
-
-    aget-byte v3, v4, v3
-
-    int-to-char v3, v3
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_1
-
-    :cond_9
-    invoke-static {v3}, Lcom/c/b/h/c/f;->b(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_a
-
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move p4, v1
-
-    goto/16 :goto_0
-
-    :cond_a
-    invoke-static {v3}, Lcom/c/b/h/c/f;->c(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_b
-
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move p4, v2
-
-    goto/16 :goto_0
-
-    :cond_b
-    add-int v4, p1, v0
-
-    add-int/lit8 v4, v4, 0x1
-
-    if-ge v4, p2, :cond_c
-
-    add-int v4, p1, v0
-
-    add-int/lit8 v4, v4, 0x1
-
-    invoke-interface {p0, v4}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v4
-
-    invoke-static {v4}, Lcom/c/b/h/c/f;->e(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_c
-
-    const/4 p4, 0x3
-
-    const/16 v3, 0x19
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_0
-
-    :cond_c
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    sget-object v4, Lcom/c/b/h/c/f;->p:[B
-
-    aget-byte v3, v4, v3
-
-    int-to-char v3, v3
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_1
-
-    :cond_d
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move p4, v1
-
-    goto/16 :goto_0
-
-    :cond_e
-    move v0, v1
-
-    goto/16 :goto_3
-
-    :cond_f
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->charAt(I)C
-
-    move-result v0
-
-    goto/16 :goto_4
-
-    :cond_10
-    rem-int/lit8 v0, v6, 0x2
-
-    if-eqz v0, :cond_11
-
-    mul-int/lit8 v0, v4, 0x1e
-
-    add-int/lit8 v0, v0, 0x1d
-
-    int-to-char v0, v0
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :cond_11
-    return p4
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
-.end method
-
-.method private static a(Ljava/lang/CharSequence;[BI)I
-    .locals 9
-
-    const/16 v8, 0x3f
-
-    const/16 v7, 0xd
-
-    const/4 v6, 0x5
-
-    const/4 v1, 0x0
+    new-array v4, v3, [C
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v4
-
-    move v3, p2
-
-    :goto_0
-    if-ge v3, v4, :cond_7
-
-    invoke-interface {p0, v3}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v0
-
-    move v2, v1
-
-    :goto_1
-    if-ge v2, v7, :cond_0
-
-    invoke-static {v0}, Lcom/c/b/h/c/f;->a(C)Z
 
     move-result v5
 
-    if-eqz v5, :cond_0
+    move v1, v2
 
-    add-int/lit8 v2, v2, 0x1
-
-    add-int v5, v3, v2
-
-    if-lt v5, v4, :cond_1
-
-    :cond_0
-    if-lt v2, v7, :cond_2
-
-    sub-int v0, v3, p2
-
-    :goto_2
-    return v0
-
-    :cond_1
-    invoke-interface {p0, v5}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_2
-    move v2, v0
-
-    move v0, v1
-
-    :goto_3
-    if-ge v0, v6, :cond_3
-
-    invoke-static {v2}, Lcom/c/b/h/c/f;->f(C)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    add-int/lit8 v0, v0, 0x1
-
-    add-int v2, v3, v0
-
-    if-lt v2, v4, :cond_4
-
-    :cond_3
-    if-lt v0, v6, :cond_5
-
-    sub-int v0, v3, p2
-
-    goto :goto_2
-
-    :cond_4
-    invoke-interface {p0, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v2
-
-    goto :goto_3
-
-    :cond_5
-    invoke-interface {p0, v3}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v0
-
-    aget-byte v2, p1, v3
-
-    if-ne v2, v8, :cond_6
-
-    if-eq v0, v8, :cond_6
-
-    new-instance v1, Lcom/c/b/t;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Non-encodable character detected: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, " (Unicode: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const/16 v2, 0x29
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Lcom/c/b/t;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_6
-    add-int/lit8 v0, v3, 0x1
-
-    move v3, v0
-
-    goto :goto_0
-
-    :cond_7
-    sub-int v0, v3, p2
-
-    goto :goto_2
-.end method
-
-.method static a(Ljava/lang/String;Lcom/c/b/h/c/c;)Ljava/lang/String;
-    .locals 13
-
-    const/16 v11, 0x386
-
-    const/4 v4, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v0, 0x0
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    invoke-direct {v7, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v8
-
-    sget-object v1, Lcom/c/b/h/c/c;->b:Lcom/c/b/h/c/c;
-
-    if-ne p1, v1, :cond_1
-
-    invoke-static {p0, v2, v8, v7, v2}, Lcom/c/b/h/c/f;->a(Ljava/lang/CharSequence;IILjava/lang/StringBuilder;I)I
-
-    :cond_0
     :goto_0
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-ge v1, v5, :cond_1
 
-    move-result-object v0
+    invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
-    return-object v0
+    move-result v0
 
-    :cond_1
-    sget-object v1, Lcom/c/b/h/c/c;->c:Lcom/c/b/h/c/c;
+    array-length v6, v4
 
-    if-ne p1, v1, :cond_2
+    add-int/lit8 v6, v6, -0x1
 
-    invoke-static {p0}, Lcom/c/b/h/c/f;->a(Ljava/lang/String;)[B
+    aget-char v6, v4, v6
 
-    move-result-object v0
+    add-int/2addr v0, v6
 
-    array-length v1, v0
+    rem-int/lit16 v6, v0, 0x3a1
 
-    invoke-static {v0, v2, v1, v4, v7}, Lcom/c/b/h/c/f;->a([BIIILjava/lang/StringBuilder;)V
-
-    goto :goto_0
-
-    :cond_2
-    sget-object v1, Lcom/c/b/h/c/c;->d:Lcom/c/b/h/c/c;
-
-    if-ne p1, v1, :cond_a
-
-    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-static {p0, v2, v8, v7}, Lcom/c/b/h/c/f;->a(Ljava/lang/String;IILjava/lang/StringBuilder;)V
-
-    goto :goto_0
+    add-int/lit8 v0, v3, -0x1
 
     :goto_1
-    if-ge v5, v8, :cond_0
+    const/4 v7, 0x1
 
-    invoke-static {p0, v5}, Lcom/c/b/h/c/f;->a(Ljava/lang/CharSequence;I)I
+    if-lt v0, v7, :cond_0
 
-    move-result v6
+    sget-object v7, Lcom/c/b/h/c/f;->a:[[I
 
-    const/16 v9, 0xd
+    aget-object v7, v7, p1
 
-    if-lt v6, v9, :cond_3
+    aget v7, v7, v0
 
-    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    mul-int/2addr v7, v6
 
-    const/4 v3, 0x2
+    rem-int/lit16 v7, v7, 0x3a1
 
-    invoke-static {p0, v5, v6, v7}, Lcom/c/b/h/c/f;->a(Ljava/lang/String;IILjava/lang/StringBuilder;)V
+    rsub-int v7, v7, 0x3a1
 
-    add-int v1, v5, v6
+    add-int/lit8 v8, v0, -0x1
 
-    move-object v5, v0
+    aget-char v8, v4, v8
 
-    move v0, v1
+    add-int/2addr v7, v8
 
-    move v1, v2
-
-    :goto_2
-    move v12, v0
-
-    move-object v0, v5
-
-    move v5, v12
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {p0, v5}, Lcom/c/b/h/c/f;->b(Ljava/lang/CharSequence;I)I
-
-    move-result v9
-
-    const/4 v10, 0x5
-
-    if-ge v9, v10, :cond_4
-
-    if-ne v6, v8, :cond_6
-
-    :cond_4
-    if-eqz v3, :cond_5
-
-    const/16 v1, 0x384
-
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move v1, v2
-
-    move v3, v2
-
-    :cond_5
-    invoke-static {p0, v5, v9, v7, v1}, Lcom/c/b/h/c/f;->a(Ljava/lang/CharSequence;IILjava/lang/StringBuilder;I)I
-
-    move-result v1
-
-    add-int/2addr v5, v9
-
-    move v12, v5
-
-    move-object v5, v0
-
-    move v0, v12
-
-    goto :goto_2
-
-    :cond_6
-    if-nez v0, :cond_7
-
-    invoke-static {p0}, Lcom/c/b/h/c/f;->a(Ljava/lang/String;)[B
-
-    move-result-object v0
-
-    :cond_7
-    invoke-static {p0, v0, v5}, Lcom/c/b/h/c/f;->a(Ljava/lang/CharSequence;[BI)I
-
-    move-result v6
-
-    if-nez v6, :cond_8
-
-    move v6, v4
-
-    :cond_8
-    if-ne v6, v4, :cond_9
-
-    if-nez v3, :cond_9
-
-    invoke-static {v0, v5, v4, v2, v7}, Lcom/c/b/h/c/f;->a([BIIILjava/lang/StringBuilder;)V
-
-    :goto_3
-    add-int/2addr v5, v6
-
-    move v12, v5
-
-    move-object v5, v0
-
-    move v0, v12
-
-    goto :goto_2
-
-    :cond_9
-    invoke-static {v0, v5, v6, v3, v7}, Lcom/c/b/h/c/f;->a([BIIILjava/lang/StringBuilder;)V
-
-    move v1, v2
-
-    move v3, v4
-
-    goto :goto_3
-
-    :cond_a
-    move v1, v2
-
-    move v3, v2
-
-    move v5, v2
-
-    goto :goto_1
-.end method
-
-.method private static a(Ljava/lang/String;IILjava/lang/StringBuilder;)V
-    .locals 9
-
-    const/4 v2, 0x0
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    div-int/lit8 v0, p2, 0x3
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-wide/16 v0, 0x384
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object v4
-
-    const-wide/16 v0, 0x0
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object v5
-
-    move v1, v2
-
-    :goto_0
-    add-int/lit8 v0, p2, -0x1
-
-    if-ge v1, v0, :cond_2
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->setLength(I)V
-
-    const/16 v0, 0x2c
-
-    sub-int v6, p2, v1
-
-    invoke-static {v0, v6}, Ljava/lang/Math;->min(II)I
-
-    move-result v6
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const/16 v7, 0x31
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    add-int v7, p1, v1
-
-    add-int v8, p1, v1
-
-    add-int/2addr v8, v6
-
-    invoke-virtual {p0, v7, v8}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    new-instance v0, Ljava/math/BigInteger;
-
-    invoke-direct {v0, v7}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
-
-    :cond_0
-    invoke-virtual {v0, v4}, Ljava/math/BigInteger;->mod(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/math/BigInteger;->intValue()I
-
-    move-result v7
+    rem-int/lit16 v7, v7, 0x3a1
 
     int-to-char v7, v7
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v4}, Ljava/math/BigInteger;->divide(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_1
-    if-ltz v0, :cond_1
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->charAt(I)C
-
-    move-result v7
-
-    invoke-virtual {p3, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    aput-char v7, v4, v0
 
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    :cond_1
-    add-int v0, v1, v6
+    :cond_0
+    sget-object v0, Lcom/c/b/h/c/f;->a:[[I
+
+    aget-object v0, v0, p1
+
+    aget v0, v0, v2
+
+    mul-int/2addr v0, v6
+
+    rem-int/lit16 v0, v0, 0x3a1
+
+    rsub-int v0, v0, 0x3a1
+
+    rem-int/lit16 v0, v0, 0x3a1
+
+    int-to-char v0, v0
+
+    aput-char v0, v4, v2
+
+    add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    :cond_2
-    return-void
-.end method
-
-.method private static a([BIIILjava/lang/StringBuilder;)V
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p2, v0, :cond_0
-
-    if-nez p3, :cond_0
-
-    const/16 v0, 0x391
-
-    invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :cond_0
-    const/4 v0, 0x6
-
-    if-lt p2, v0, :cond_4
-
-    const/16 v0, 0x39c
-
-    invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const/4 v0, 0x5
-
-    new-array v4, v0, [C
-
-    move v0, p1
-
-    :goto_0
-    add-int v1, p1, p2
-
-    sub-int/2addr v1, v0
-
-    const/4 v2, 0x6
-
-    if-lt v1, v2, :cond_5
-
-    const-wide/16 v2, 0x0
-
-    const/4 v1, 0x0
-
-    :goto_1
-    const/4 v5, 0x6
-
-    if-ge v1, v5, :cond_1
-
-    const/16 v5, 0x8
-
-    shl-long/2addr v2, v5
-
-    add-int v5, v0, v1
-
-    aget-byte v5, p0, v5
-
-    and-int/lit16 v5, v5, 0xff
-
-    int-to-long v5, v5
-
-    add-long/2addr v2, v5
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
     :cond_1
-    const/4 v1, 0x0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    add-int/lit8 v0, v3, -0x1
 
     :goto_2
-    const/4 v5, 0x5
+    if-ltz v0, :cond_3
 
-    if-ge v1, v5, :cond_2
+    aget-char v2, v4, v0
 
-    const-wide/16 v5, 0x384
+    if-eqz v2, :cond_2
 
-    rem-long v5, v2, v5
+    aget-char v2, v4, v0
 
-    long-to-int v5, v5
+    rsub-int v2, v2, 0x3a1
 
-    int-to-char v5, v5
+    int-to-char v2, v2
 
-    aput-char v5, v4, v1
+    aput-char v2, v4, v0
 
-    const-wide/16 v5, 0x384
+    :cond_2
+    aget-char v2, v4, v0
 
-    div-long/2addr v2, v5
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, -0x1
 
     goto :goto_2
 
-    :cond_2
-    array-length v1, v4
-
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_3
-    if-ltz v1, :cond_3
-
-    aget-char v2, v4, v1
-
-    invoke-virtual {p4, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_3
-
     :cond_3
-    add-int/lit8 v0, v0, 0x6
-
-    goto :goto_0
-
-    :cond_4
-    move v0, p1
-
-    :cond_5
-    add-int v1, p1, p2
-
-    if-ge v0, v1, :cond_6
-
-    const/16 v1, 0x385
-
-    invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :cond_6
-    :goto_4
-    add-int v1, p1, p2
-
-    if-ge v0, v1, :cond_7
-
-    aget-byte v1, p0, v0
-
-    and-int/lit16 v1, v1, 0xff
-
-    int-to-char v1, v1
-
-    invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_4
-
-    :cond_7
-    return-void
-.end method
-
-.method private static a(C)Z
-    .locals 1
-
-    const/16 v0, 0x30
-
-    if-lt p0, v0, :cond_0
-
-    const/16 v0, 0x39
-
-    if-gt p0, v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private static a(Ljava/lang/String;)[B
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private static b(Ljava/lang/CharSequence;I)I
-    .locals 6
+.method static b(I)I
+    .locals 2
 
-    const/16 v5, 0xd
+    if-gtz p0, :cond_0
 
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    move-result v4
+    const-string v1, "n must be > 0"
 
-    move v0, p1
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_0
+    const/16 v0, 0x28
+
+    if-gt p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
     :goto_0
-    if-ge v0, v4, :cond_3
-
-    invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v2
-
-    const/4 v1, 0x0
-
-    :goto_1
-    if-ge v1, v5, :cond_1
-
-    invoke-static {v2}, Lcom/c/b/h/c/f;->a(C)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    if-ge v0, v4, :cond_1
-
-    add-int/lit8 v1, v1, 0x1
-
-    add-int/lit8 v3, v0, 0x1
-
-    if-ge v3, v4, :cond_5
-
-    invoke-interface {p0, v3}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v0
-
-    move v2, v0
-
-    move v0, v3
-
-    goto :goto_1
+    return v0
 
     :cond_1
-    if-lt v1, v5, :cond_2
+    const/16 v0, 0xa0
 
-    sub-int/2addr v0, p1
+    if-gt p0, v0, :cond_2
 
-    sub-int/2addr v0, v1
+    const/4 v0, 0x3
 
-    :goto_2
-    return v0
+    goto :goto_0
 
     :cond_2
-    if-gtz v1, :cond_0
+    const/16 v0, 0x140
 
-    invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
+    if-gt p0, v0, :cond_3
 
-    move-result v1
+    const/4 v0, 0x4
 
-    invoke-static {v1}, Lcom/c/b/h/c/f;->f(C)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
+    goto :goto_0
 
     :cond_3
-    sub-int/2addr v0, p1
+    const/16 v0, 0x35f
 
-    goto :goto_2
+    if-gt p0, v0, :cond_4
+
+    const/4 v0, 0x5
+
+    goto :goto_0
 
     :cond_4
-    add-int/lit8 v0, v0, 0x1
+    new-instance v0, Lcom/c/b/x;
 
-    goto :goto_0
+    const-string v1, "No recommendation possible"
 
-    :cond_5
-    move v0, v3
+    invoke-direct {v0, v1}, Lcom/c/b/x;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1
-.end method
-
-.method private static b(C)Z
-    .locals 1
-
-    const/16 v0, 0x20
-
-    if-eq p0, v0, :cond_0
-
-    const/16 v0, 0x41
-
-    if-lt p0, v0, :cond_1
-
-    const/16 v0, 0x5a
-
-    if-gt p0, v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private static c(C)Z
-    .locals 1
-
-    const/16 v0, 0x20
-
-    if-eq p0, v0, :cond_0
-
-    const/16 v0, 0x61
-
-    if-lt p0, v0, :cond_1
-
-    const/16 v0, 0x7a
-
-    if-gt p0, v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private static d(C)Z
-    .locals 2
-
-    sget-object v0, Lcom/c/b/h/c/f;->o:[B
-
-    aget-byte v0, v0, p0
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private static e(C)Z
-    .locals 2
-
-    sget-object v0, Lcom/c/b/h/c/f;->p:[B
-
-    aget-byte v0, v0, p0
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private static f(C)Z
-    .locals 1
-
-    const/16 v0, 0x9
-
-    if-eq p0, v0, :cond_0
-
-    const/16 v0, 0xa
-
-    if-eq p0, v0, :cond_0
-
-    const/16 v0, 0xd
-
-    if-eq p0, v0, :cond_0
-
-    const/16 v0, 0x20
-
-    if-lt p0, v0, :cond_1
-
-    const/16 v0, 0x7e
-
-    if-gt p0, v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    throw v0
 .end method

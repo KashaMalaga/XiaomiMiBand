@@ -3,7 +3,7 @@
 
 
 # static fields
-.field public static final crop_image_view:I = 0x7f030044
+.field public static final crop_image_view:I = 0x7f030053
 
 
 # direct methods

@@ -12,7 +12,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/model/SportData;",
+            "Lcom/xiaomi/hm/health/dataprocess/SportData;",
             ">;"
         }
     .end annotation
@@ -89,157 +89,7 @@
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/analysis/StepsInfo;)Landroid/content/Intent;
-    .locals 12
-
-    const/high16 v11, 0x41a00000
-
-    const-wide/16 v9, 0x0
-
-    new-instance v2, Lorg/achartengine/b/g;
-
-    invoke-direct {v2}, Lorg/achartengine/b/g;-><init>()V
-
-    const/16 v0, 0x14
-
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getStageSteps()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    new-instance v3, Lorg/achartengine/b/h;
-
-    const-string v4, "\u8ba1\u6b65"
-
-    invoke-direct {v3, v4}, Lorg/achartengine/b/h;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    move v1, v0
-
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/analysis/StageSteps;
-
-    iget v5, v0, Lcn/com/smartdevices/bracelet/analysis/StageSteps;->time:I
-
-    int-to-double v5, v5
-
-    iget v7, v0, Lcn/com/smartdevices/bracelet/analysis/StageSteps;->steps:I
-
-    int-to-double v7, v7
-
-    invoke-virtual {v3, v5, v6, v7, v8}, Lorg/achartengine/b/h;->a(DD)V
-
-    iget v5, v0, Lcn/com/smartdevices/bracelet/analysis/StageSteps;->steps:I
-
-    if-le v5, v1, :cond_1
-
-    iget v0, v0, Lcn/com/smartdevices/bracelet/analysis/StageSteps;->steps:I
-
-    :goto_1
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2, v3}, Lorg/achartengine/b/g;->a(Lorg/achartengine/b/h;)V
-
-    new-instance v0, Lorg/achartengine/c/f;
-
-    invoke-direct {v0}, Lorg/achartengine/c/f;-><init>()V
-
-    new-instance v3, Lorg/achartengine/c/h;
-
-    invoke-direct {v3}, Lorg/achartengine/c/h;-><init>()V
-
-    const/16 v4, -0x100
-
-    invoke-virtual {v3, v4}, Lorg/achartengine/c/h;->a(I)V
-
-    invoke-virtual {v0, v3}, Lorg/achartengine/c/f;->a(Lorg/achartengine/c/e;)V
-
-    const/high16 v3, 0x41700000
-
-    invoke-virtual {v0, v3}, Lorg/achartengine/c/f;->b(F)V
-
-    invoke-virtual {v0, v11}, Lorg/achartengine/c/f;->c(F)V
-
-    invoke-virtual {v0, v11}, Lorg/achartengine/c/f;->g(F)V
-
-    const-string v3, "\u65f6\u95f4\uff080-23\u5c0f\u65f6\uff09"
-
-    invoke-virtual {v0, v3}, Lorg/achartengine/c/f;->b(Ljava/lang/String;)V
-
-    const-string v3, "\u6bcf\u5c0f\u65f6\u6b65\u6570"
-
-    invoke-virtual {v0, v3}, Lorg/achartengine/c/f;->c(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v9, v10}, Lorg/achartengine/c/f;->a(D)V
-
-    const-wide/high16 v3, 0x4038000000000000L
-
-    invoke-virtual {v0, v3, v4}, Lorg/achartengine/c/f;->b(D)V
-
-    invoke-virtual {v0, v9, v10}, Lorg/achartengine/c/f;->c(D)V
-
-    div-int/lit8 v3, v1, 0x14
-
-    add-int/2addr v1, v3
-
-    int-to-double v3, v1
-
-    invoke-virtual {v0, v3, v4}, Lorg/achartengine/c/f;->d(D)V
-
-    const/4 v1, 0x4
-
-    new-array v1, v1, [I
-
-    fill-array-data v1, :array_0
-
-    invoke-virtual {v0, v1}, Lorg/achartengine/c/f;->a([I)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lorg/achartengine/c/f;->j(Z)V
-
-    const-wide v3, 0x3fd3333340000000L
-
-    invoke-virtual {v0, v3, v4}, Lorg/achartengine/c/f;->g(D)V
-
-    sget-object v1, Lorg/achartengine/a/c;->a:Lorg/achartengine/a/c;
-
-    invoke-static {p1, v2, v0, v1}, Lorg/achartengine/a;->c(Landroid/content/Context;Lorg/achartengine/b/g;Lorg/achartengine/c/f;Lorg/achartengine/a/c;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_1
-    move v0, v1
-
-    goto :goto_1
-
-    :array_0
-    .array-data 4
-        0x32
-        0x32
-        0x32
-        0x32
-    .end array-data
-.end method
-
-.method public a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;)Landroid/content/Intent;
+.method public a(Landroid/content/Context;Lcom/xiaomi/hm/health/dataprocess/DaySportData;)Landroid/content/Intent;
     .locals 16
 
     new-instance v3, Ljava/util/ArrayList;
@@ -266,7 +116,7 @@
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual/range {p2 .. p2}, Lcn/com/smartdevices/bracelet/model/DaySportData;->data()Ljava/util/ArrayList;
+    invoke-virtual/range {p2 .. p2}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->data()Ljava/util/ArrayList;
 
     move-result-object v9
 
@@ -285,9 +135,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v1, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getSportMode()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getSportMode()I
 
     move-result v11
 
@@ -363,15 +213,15 @@
 
     move-result-object v1
 
-    check-cast v1, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v1, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v12
 
     int-to-double v12, v12
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getActivity()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getActivity()I
 
     move-result v1
 
@@ -449,15 +299,15 @@
 
     move-result-object v1
 
-    check-cast v1, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v1, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v12
 
     int-to-double v12, v12
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getStep()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getStep()I
 
     move-result v1
 
@@ -495,15 +345,15 @@
 
     move-result-object v1
 
-    check-cast v1, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v1, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v12
 
     int-to-double v12, v12
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getStep()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getStep()I
 
     move-result v1
 
@@ -541,15 +391,15 @@
 
     move-result-object v1
 
-    check-cast v1, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v1, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v12
 
     int-to-double v12, v12
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getActivity()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getActivity()I
 
     move-result v1
 
@@ -587,15 +437,15 @@
 
     move-result-object v1
 
-    check-cast v1, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v1, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v12
 
     int-to-double v12, v12
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getActivity()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getActivity()I
 
     move-result v1
 
@@ -633,15 +483,15 @@
 
     move-result-object v1
 
-    check-cast v1, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v1, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v9
 
     int-to-double v12, v9
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportData;->getActivity()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getActivity()I
 
     move-result v1
 
@@ -929,7 +779,157 @@
     .end array-data
 .end method
 
-.method public a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;J)Landroid/view/View;
+.method public a(Landroid/content/Context;Lcom/xiaomi/hm/health/dataprocess/StepsInfo;)Landroid/content/Intent;
+    .locals 12
+
+    const/high16 v11, 0x41a00000
+
+    const-wide/16 v9, 0x0
+
+    new-instance v2, Lorg/achartengine/b/g;
+
+    invoke-direct {v2}, Lorg/achartengine/b/g;-><init>()V
+
+    const/16 v0, 0x14
+
+    invoke-virtual {p2}, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->getStageSteps()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    new-instance v3, Lorg/achartengine/b/h;
+
+    const-string v4, "\u8ba1\u6b65"
+
+    invoke-direct {v3, v4}, Lorg/achartengine/b/h;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    move v1, v0
+
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/xiaomi/hm/health/dataprocess/StageSteps;
+
+    iget v5, v0, Lcom/xiaomi/hm/health/dataprocess/StageSteps;->time:I
+
+    int-to-double v5, v5
+
+    iget v7, v0, Lcom/xiaomi/hm/health/dataprocess/StageSteps;->steps:I
+
+    int-to-double v7, v7
+
+    invoke-virtual {v3, v5, v6, v7, v8}, Lorg/achartengine/b/h;->a(DD)V
+
+    iget v5, v0, Lcom/xiaomi/hm/health/dataprocess/StageSteps;->steps:I
+
+    if-le v5, v1, :cond_1
+
+    iget v0, v0, Lcom/xiaomi/hm/health/dataprocess/StageSteps;->steps:I
+
+    :goto_1
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2, v3}, Lorg/achartengine/b/g;->a(Lorg/achartengine/b/h;)V
+
+    new-instance v0, Lorg/achartengine/c/f;
+
+    invoke-direct {v0}, Lorg/achartengine/c/f;-><init>()V
+
+    new-instance v3, Lorg/achartengine/c/h;
+
+    invoke-direct {v3}, Lorg/achartengine/c/h;-><init>()V
+
+    const/16 v4, -0x100
+
+    invoke-virtual {v3, v4}, Lorg/achartengine/c/h;->a(I)V
+
+    invoke-virtual {v0, v3}, Lorg/achartengine/c/f;->a(Lorg/achartengine/c/e;)V
+
+    const/high16 v3, 0x41700000
+
+    invoke-virtual {v0, v3}, Lorg/achartengine/c/f;->b(F)V
+
+    invoke-virtual {v0, v11}, Lorg/achartengine/c/f;->c(F)V
+
+    invoke-virtual {v0, v11}, Lorg/achartengine/c/f;->g(F)V
+
+    const-string v3, "\u65f6\u95f4\uff080-23\u5c0f\u65f6\uff09"
+
+    invoke-virtual {v0, v3}, Lorg/achartengine/c/f;->b(Ljava/lang/String;)V
+
+    const-string v3, "\u6bcf\u5c0f\u65f6\u6b65\u6570"
+
+    invoke-virtual {v0, v3}, Lorg/achartengine/c/f;->c(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v9, v10}, Lorg/achartengine/c/f;->a(D)V
+
+    const-wide/high16 v3, 0x4038000000000000L
+
+    invoke-virtual {v0, v3, v4}, Lorg/achartengine/c/f;->b(D)V
+
+    invoke-virtual {v0, v9, v10}, Lorg/achartengine/c/f;->c(D)V
+
+    div-int/lit8 v3, v1, 0x14
+
+    add-int/2addr v1, v3
+
+    int-to-double v3, v1
+
+    invoke-virtual {v0, v3, v4}, Lorg/achartengine/c/f;->d(D)V
+
+    const/4 v1, 0x4
+
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_0
+
+    invoke-virtual {v0, v1}, Lorg/achartengine/c/f;->a([I)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lorg/achartengine/c/f;->j(Z)V
+
+    const-wide v3, 0x3fd3333340000000L
+
+    invoke-virtual {v0, v3, v4}, Lorg/achartengine/c/f;->g(D)V
+
+    sget-object v1, Lorg/achartengine/a/c;->a:Lorg/achartengine/a/c;
+
+    invoke-static {p1, v2, v0, v1}, Lorg/achartengine/a;->c(Landroid/content/Context;Lorg/achartengine/b/g;Lorg/achartengine/c/f;Lorg/achartengine/a/c;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    move v0, v1
+
+    goto :goto_1
+
+    :array_0
+    .array-data 4
+        0x32
+        0x32
+        0x32
+        0x32
+    .end array-data
+.end method
+
+.method public a(Landroid/content/Context;Lcom/xiaomi/hm/health/dataprocess/DaySportData;J)Landroid/view/View;
     .locals 33
 
     if-nez p2, :cond_0
@@ -944,7 +944,7 @@
     return-object v5
 
     :cond_0
-    invoke-virtual/range {p2 .. p2}, Lcn/com/smartdevices/bracelet/model/DaySportData;->data()Ljava/util/ArrayList;
+    invoke-virtual/range {p2 .. p2}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->data()Ljava/util/ArrayList;
 
     move-result-object v7
 
@@ -969,9 +969,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v5, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v5}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v5
 
@@ -1252,9 +1252,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v5, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/model/SportData;->getSportMode()I
+    invoke-virtual {v5}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getSportMode()I
 
     move-result v26
 
@@ -1275,7 +1275,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v5}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v27
 
@@ -1297,7 +1297,7 @@
 
     move-wide/from16 v29, v0
 
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/model/SportData;->getActivity()I
+    invoke-virtual {v5}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getActivity()I
 
     move-result v5
 
@@ -1451,7 +1451,7 @@
     goto/16 :goto_2
 
     :cond_9
-    invoke-virtual/range {p2 .. p2}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getAnalysisData()Ljava/util/ArrayList;
+    invoke-virtual/range {p2 .. p2}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->getAnalysisData()Ljava/util/ArrayList;
 
     move-result-object v5
 
@@ -1490,9 +1490,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v5, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/model/SportData;->getSportMode()I
+    invoke-virtual {v5}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getSportMode()I
 
     move-result v7
 
@@ -1509,7 +1509,7 @@
     goto :goto_3
 
     :cond_b
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v5}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v5
 
@@ -2071,7 +2071,7 @@
     return-object v0
 .end method
 
-.method public b(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;)Landroid/view/View;
+.method public b(Landroid/content/Context;Lcom/xiaomi/hm/health/dataprocess/DaySportData;)Landroid/view/View;
     .locals 18
 
     if-nez p2, :cond_0
@@ -2110,7 +2110,7 @@
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual/range {p2 .. p2}, Lcn/com/smartdevices/bracelet/model/DaySportData;->data()Ljava/util/ArrayList;
+    invoke-virtual/range {p2 .. p2}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->data()Ljava/util/ArrayList;
 
     move-result-object v11
 
@@ -2127,9 +2127,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getSportMode()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getSportMode()I
 
     move-result v12
 
@@ -2205,15 +2205,15 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v14
 
     int-to-double v14, v14
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getActivity()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getActivity()I
 
     move-result v2
 
@@ -2291,15 +2291,15 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v14
 
     int-to-double v14, v14
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getStep()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getStep()I
 
     move-result v2
 
@@ -2341,15 +2341,15 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v14
 
     int-to-double v14, v14
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getStep()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getStep()I
 
     move-result v2
 
@@ -2391,15 +2391,15 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v14
 
     int-to-double v14, v14
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getActivity()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getActivity()I
 
     move-result v2
 
@@ -2441,15 +2441,15 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v14
 
     int-to-double v14, v14
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getActivity()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getActivity()I
 
     move-result v2
 
@@ -2491,15 +2491,15 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v11
 
     int-to-double v14, v11
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getActivity()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getActivity()I
 
     move-result v2
 
@@ -2782,7 +2782,7 @@
     .end array-data
 .end method
 
-.method public b(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;J)Landroid/view/View;
+.method public b(Landroid/content/Context;Lcom/xiaomi/hm/health/dataprocess/DaySportData;J)Landroid/view/View;
     .locals 19
 
     if-nez p2, :cond_0
@@ -2797,7 +2797,7 @@
     return-object v2
 
     :cond_0
-    invoke-virtual/range {p2 .. p2}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getAnalysisData()Ljava/util/ArrayList;
+    invoke-virtual/range {p2 .. p2}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->getAnalysisData()Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -2834,9 +2834,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getTimeIndex()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getTimeIndex()I
 
     move-result v2
 
@@ -3047,9 +3047,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getSportMode()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getSportMode()I
 
     move-result v5
 
@@ -3063,9 +3063,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getSportMode()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getSportMode()I
 
     move-result v2
 
@@ -3103,9 +3103,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getSportMode()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getSportMode()I
 
     move-result v2
 
@@ -3167,9 +3167,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getSportMode()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getSportMode()I
 
     move-result v2
 
@@ -3269,9 +3269,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getActivity()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getActivity()I
 
     move-result v2
 
@@ -3762,7 +3762,7 @@
     .end array-data
 .end method
 
-.method public c(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;)Landroid/content/Intent;
+.method public c(Landroid/content/Context;Lcom/xiaomi/hm/health/dataprocess/DaySportData;)Landroid/content/Intent;
     .locals 18
 
     const/4 v2, 0x6
@@ -3857,7 +3857,7 @@
 
     invoke-direct {v11, v2}, Lorg/achartengine/b/h;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual/range {p2 .. p2}, Lcn/com/smartdevices/bracelet/model/DaySportData;->data()Ljava/util/ArrayList;
+    invoke-virtual/range {p2 .. p2}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->data()Ljava/util/ArrayList;
 
     move-result-object v12
 
@@ -3882,9 +3882,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v2, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SportData;->getSportMode()I
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getSportMode()I
 
     move-result v2
 
@@ -4368,7 +4368,7 @@
     .end array-data
 .end method
 
-.method public d(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;)Landroid/content/Intent;
+.method public d(Landroid/content/Context;Lcom/xiaomi/hm/health/dataprocess/DaySportData;)Landroid/content/Intent;
     .locals 12
 
     const/high16 v11, 0x41700000
@@ -4397,7 +4397,7 @@
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/model/DaySportData;->data()Ljava/util/ArrayList;
+    invoke-virtual {p2}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->data()Ljava/util/ArrayList;
 
     move-result-object v8
 
@@ -4416,9 +4416,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v0, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportData;->getSportMode()I
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getSportMode()I
 
     move-result v9
 
@@ -4652,14 +4652,14 @@
     .end packed-switch
 .end method
 
-.method public e(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;)Landroid/content/Intent;
+.method public e(Landroid/content/Context;Lcom/xiaomi/hm/health/dataprocess/DaySportData;)Landroid/content/Intent;
     .locals 10
 
     new-instance v4, Lorg/achartengine/b/g;
 
     invoke-direct {v4}, Lorg/achartengine/b/g;-><init>()V
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/model/DaySportData;->data()Ljava/util/ArrayList;
+    invoke-virtual {p2}, Lcom/xiaomi/hm/health/dataprocess/DaySportData;->data()Ljava/util/ArrayList;
 
     move-result-object v5
 
@@ -4692,9 +4692,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportData;
+    check-cast v0, Lcom/xiaomi/hm/health/dataprocess/SportData;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportData;->getSportMode()I
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getSportMode()I
 
     move-result v8
 
@@ -4707,7 +4707,7 @@
     if-ne v8, v9, :cond_4
 
     :cond_0
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportData;->getStep()I
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/dataprocess/SportData;->getStep()I
 
     move-result v0
 

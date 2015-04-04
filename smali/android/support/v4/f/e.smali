@@ -1,16 +1,27 @@
-.class interface abstract Landroid/support/v4/f/e;
+.class Landroid/support/v4/f/e;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v4/f/c;
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()J
-.end method
+.method public a(Landroid/net/ConnectivityManager;)Z
+    .locals 1
 
-.method public abstract a(I)V
-.end method
+    invoke-static {p1}, Landroid/support/v4/f/h;->a(Landroid/net/ConnectivityManager;)Z
 
-.method public abstract a(J)V
-.end method
+    move-result v0
 
-.method public abstract a(Landroid/view/KeyEvent;)V
+    return v0
 .end method

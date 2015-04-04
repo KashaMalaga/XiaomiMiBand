@@ -88,7 +88,7 @@
 
     const-string v1, "Game_Dislike"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity$GameJsObject;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
 

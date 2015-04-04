@@ -95,10 +95,10 @@
 
 
 # virtual methods
-.method public a(Lcom/c/b/o;)Lcom/c/b/b/a/d;
-    .locals 15
+.method public a(Lcom/c/b/s;)Lcom/c/b/b/a/d;
+    .locals 17
 
-    invoke-virtual/range {p1 .. p1}, Lcom/c/b/o;->a()Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/c/b/b/a/b;->c(Lcom/c/b/s;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -143,51 +143,51 @@
 
     invoke-static {v2, v0, v3, v4}, Lcom/c/b/b/a/b;->b(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string v3, "TEL"
+    const-string v2, "TEL"
 
     const/4 v4, 0x3
 
     const/4 v5, 0x1
 
-    invoke-static {v3, v4, v0, v5}, Lcom/c/b/b/a/b;->a(Ljava/lang/String;ILjava/lang/String;Z)[Ljava/lang/String;
+    invoke-static {v2, v4, v0, v5}, Lcom/c/b/b/a/b;->a(Ljava/lang/String;ILjava/lang/String;Z)[Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    const-string v4, "MAIL"
+    const-string v2, "MAIL"
 
     const/4 v5, 0x3
 
     const/4 v6, 0x1
 
-    invoke-static {v4, v5, v0, v6}, Lcom/c/b/b/a/b;->a(Ljava/lang/String;ILjava/lang/String;Z)[Ljava/lang/String;
+    invoke-static {v2, v5, v0, v6}, Lcom/c/b/b/a/b;->a(Ljava/lang/String;ILjava/lang/String;Z)[Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v6
 
-    const-string v4, "MEMORY:"
+    const-string v2, "MEMORY:"
 
-    const/16 v6, 0xd
+    const/16 v5, 0xd
 
     const/4 v7, 0x0
 
-    invoke-static {v4, v0, v6, v7}, Lcom/c/b/b/a/b;->b(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
+    invoke-static {v2, v0, v5, v7}, Lcom/c/b/b/a/b;->b(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v9
 
-    const-string v4, "ADD:"
+    const-string v2, "ADD:"
 
-    const/16 v6, 0xd
+    const/16 v5, 0xd
 
     const/4 v7, 0x1
 
-    invoke-static {v4, v0, v6, v7}, Lcom/c/b/b/a/b;->b(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
+    invoke-static {v2, v0, v5, v7}, Lcom/c/b/b/a/b;->b(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_2
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
     :goto_1
     new-instance v0, Lcom/c/b/b/a/d;
@@ -196,13 +196,13 @@
 
     move-result-object v1
 
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
     const/4 v7, 0x0
 
-    const/4 v10, 0x0
+    const/4 v8, 0x0
 
     const/4 v11, 0x0
 
@@ -212,26 +212,30 @@
 
     const/4 v14, 0x0
 
-    invoke-direct/range {v0 .. v14}, Lcom/c/b/b/a/d;-><init>([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    invoke-direct/range {v0 .. v16}, Lcom/c/b/b/a/d;-><init>([Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_2
-    const/4 v4, 0x1
+    const/4 v2, 0x1
 
-    new-array v9, v4, [Ljava/lang/String;
+    new-array v10, v2, [Ljava/lang/String;
 
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    aput-object v0, v9, v4
+    aput-object v0, v10, v2
 
     goto :goto_1
 .end method
 
-.method public synthetic b(Lcom/c/b/o;)Lcom/c/b/b/a/q;
+.method public synthetic b(Lcom/c/b/s;)Lcom/c/b/b/a/q;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/c/b/b/a/b;->a(Lcom/c/b/o;)Lcom/c/b/b/a/d;
+    invoke-virtual {p0, p1}, Lcom/c/b/b/a/b;->a(Lcom/c/b/s;)Lcom/c/b/b/a/d;
 
     move-result-object v0
 

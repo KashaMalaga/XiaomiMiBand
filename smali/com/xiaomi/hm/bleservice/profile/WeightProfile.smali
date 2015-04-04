@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final LASTEST_FW_VERSION:Ljava/lang/String; = "V0.3.2"
+.field public static final LASTEST_FW_VERSION:Ljava/lang/String; = "V0.3.9"
 
 .field public static final MERGE_TIME_DELTA:I = 0x7530
 
@@ -28,12 +28,16 @@
 
 .field public static final STATUS_INIT_SUCC:I = 0x3
 
-.field public static final TAG:Ljava/lang/String;
+.field public static final TAG:Ljava/lang/String; = "WeightProfile"
 
 .field public static final VERSION:Ljava/lang/String; = "2.0.5.20141206"
 
 
 # instance fields
+.field private final SANDGLASS_TEST_MODE:I
+
+.field private final SANDGLASS_USER_MODE:I
+
 .field private cptValue:[B
 
 .field private fixedThreadPool:Ljava/util/concurrent/ExecutorService;
@@ -70,14 +74,6 @@
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
-
-    const-class v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -157,6 +153,14 @@
 
     iput-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mDeviceInfo:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;
 
+    const/4 v0, 0x3
+
+    iput v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->SANDGLASS_TEST_MODE:I
+
+    const/16 v0, 0x103
+
+    iput v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->SANDGLASS_USER_MODE:I
+
     invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     return-void
@@ -204,7 +208,27 @@
     return v0
 .end method
 
-.method static synthetic access$400(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Landroid/bluetooth/BluetoothGattCharacteristic;
+.method static synthetic access$400(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)I
+    .locals 1
+
+    invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->getSandglassMode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic access$500(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Z
+    .locals 1
+
+    invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->setSandglassToUserMode()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic access$600(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Landroid/bluetooth/BluetoothGattCharacteristic;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharSyncControl:Landroid/bluetooth/BluetoothGattCharacteristic;
@@ -212,7 +236,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$402(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Landroid/bluetooth/BluetoothGattCharacteristic;)Landroid/bluetooth/BluetoothGattCharacteristic;
+.method static synthetic access$602(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Landroid/bluetooth/BluetoothGattCharacteristic;)Landroid/bluetooth/BluetoothGattCharacteristic;
     .locals 0
 
     iput-object p1, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharSyncControl:Landroid/bluetooth/BluetoothGattCharacteristic;
@@ -220,7 +244,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$500(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Landroid/bluetooth/BluetoothGattService;
+.method static synthetic access$700(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Landroid/bluetooth/BluetoothGattService;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->wsService:Landroid/bluetooth/BluetoothGattService;
@@ -412,7 +436,7 @@
 
     if-ne v2, v3, :cond_3
 
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -497,7 +521,7 @@
     iput-object v2, v0, Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;->pnp:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$PnP;
 
     :cond_3
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v1, "WeightProfile"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -517,9 +541,84 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
+.end method
+
+.method private getSandglassMode()I
+    .locals 4
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharControlPoint:Landroid/bluetooth/BluetoothGattCharacteristic;
+
+    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->read(Landroid/bluetooth/BluetoothGattCharacteristic;)[B
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    array-length v1, v0
+
+    const/4 v2, 0x2
+
+    if-ge v1, v2, :cond_1
+
+    :cond_0
+    const-string v0, "WeightProfile"
+
+    const-string v1, "getSandglassMode failed!!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, -0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const-string v1, "WeightProfile"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Sandglass mode : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/w;->b([B)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x8
+
+    const/4 v2, 0x0
+
+    aget-byte v0, v0, v2
+
+    and-int/lit16 v0, v0, 0xff
+
+    or-int/2addr v0, v1
+
+    goto :goto_0
 .end method
 
 .method public static getVersionCodeFromVersionName(Ljava/lang/String;)I
@@ -531,7 +630,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v1, "WeightProfile"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -663,10 +762,6 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharControlPoint:Landroid/bluetooth/BluetoothGattCharacteristic;
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->wsService:Landroid/bluetooth/BluetoothGattService;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharControlPoint:Landroid/bluetooth/BluetoothGattCharacteristic;
 
@@ -874,7 +969,7 @@
 
     const/4 v0, 0x0
 
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v1, "WeightProfile"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -913,7 +1008,7 @@
     if-nez v1, :cond_1
 
     :cond_0
-    sget-object v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v0, "WeightProfile"
 
     const-string v1, "wrong weight data,ignore!!!"
 
@@ -1006,6 +1101,8 @@
 
     aget-byte v0, p0, v10
 
+    add-int/lit8 v0, v0, -0x1
+
     invoke-virtual {v4, v9, v0}, Ljava/util/Calendar;->set(II)V
 
     const/4 v0, 0x6
@@ -1050,7 +1147,7 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;-><init>(IFJZZZZ)V
 
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v1, "WeightProfile"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1094,7 +1191,7 @@
 
     div-float/2addr v2, v4
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_4
     move v5, v3
@@ -1125,6 +1222,8 @@
     invoke-virtual {p1, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v1
+
+    add-int/lit8 v1, v1, 0x1
 
     int-to-byte v1, v1
 
@@ -1168,97 +1267,117 @@
 
     invoke-static {v6, v7, v0}, Lcom/xiaomi/hm/bleservice/w;->a([BIS)V
 
-    const/4 v0, 0x7
+    const/4 v7, 0x7
 
-    invoke-virtual {p1, v0}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {p1, v7}, Ljava/util/Calendar;->get(I)I
 
-    move-result v0
+    move-result v7
 
-    int-to-byte v0, v0
+    int-to-byte v7, v7
 
-    sget-object v7, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v8, "WeightProfile"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "set date:"
+    const-string v10, "set date:"
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
     invoke-virtual {p1}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/util/Date;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     move-result-object v9
 
-    invoke-virtual {v9}, Ljava/util/Date;->toString()Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v9}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v8
+    const-string v8, "WeightProfile"
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v10, "year:"
 
-    sget-object v7, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    move-result-object v9
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v9, "day:"
+    move-result-object v0
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v9, ",month:"
 
-    move-result-object v8
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object v8
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v9, ",day:"
+
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     const-string v9, ",hour:"
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v0
 
-    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v0
 
     const-string v9, ",min:"
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v0
 
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v0
 
     const-string v9, ",sec:"
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v0
 
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v0
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v0
 
-    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v7, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharDateTime:Landroid/bluetooth/BluetoothGattCharacteristic;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharDateTime:Landroid/bluetooth/BluetoothGattCharacteristic;
 
     const/16 v8, 0xa
 
@@ -1302,25 +1421,58 @@
 
     const/4 v1, 0x7
 
-    aput-byte v0, v8, v1
+    aput-byte v7, v8, v1
 
-    const/16 v0, 0x8
+    const/16 v1, 0x8
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    aput-byte v1, v8, v0
+    aput-byte v2, v8, v1
 
-    const/16 v0, 0x9
+    const/16 v1, 0x9
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    aput-byte v1, v8, v0
+    aput-byte v2, v8, v1
 
-    invoke-virtual {p0, v7, v8}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->write(Landroid/bluetooth/BluetoothGattCharacteristic;[B)Z
+    invoke-virtual {p0, v0, v8}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->write(Landroid/bluetooth/BluetoothGattCharacteristic;[B)Z
 
     move-result v0
 
     return v0
+.end method
+
+.method private setSandglassToUserMode()Z
+    .locals 2
+
+    const-string v0, "WeightProfile"
+
+    const-string v1, "setSandglassToUserMode"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharControlPoint:Landroid/bluetooth/BluetoothGattCharacteristic;
+
+    const/4 v1, 0x5
+
+    new-array v1, v1, [B
+
+    fill-array-data v1, :array_0
+
+    invoke-virtual {p0, v0, v1}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->write(Landroid/bluetooth/BluetoothGattCharacteristic;[B)Z
+
+    move-result v0
+
+    return v0
+
+    :array_0
+    .array-data 1
+        0x3t
+        0x1t
+        0x0t
+        0x0t
+        0x0t
+    .end array-data
 .end method
 
 .method private stopTransfer(Landroid/bluetooth/BluetoothGattCharacteristic;I)V
@@ -1382,7 +1534,7 @@
 
     if-nez v5, :cond_1
 
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     const-string v3, "service dfu is null!!!"
 
@@ -1420,7 +1572,7 @@
     if-nez v13, :cond_3
 
     :cond_2
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     const-string v3, "BluetoothGattCharacteristic cpt or pkt is null!!!"
 
@@ -1445,7 +1597,7 @@
 
     if-nez v3, :cond_4
 
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     const-string v3, "Fail subscribe to DFU control point!"
 
@@ -1571,7 +1723,7 @@
     if-eq v4, v5, :cond_8
 
     :cond_6
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1642,7 +1794,7 @@
     :catch_0
     move-exception v3
 
-    sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v3, "WeightProfile"
 
     const-string v4, "Fail to operate on the firmware file"
 
@@ -1676,7 +1828,7 @@
 
     if-nez v4, :cond_a
 
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     const-string v4, "write DFU_OPCODE_TRANSFER failed!!!"
 
@@ -1707,7 +1859,7 @@
     :catch_1
     move-exception v3
 
-    sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v3, "WeightProfile"
 
     const-string v4, "Fail to operate on the firmware file"
 
@@ -1736,7 +1888,7 @@
 
     const/4 v4, 0x0
 
-    sget-object v10, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v10, "WeightProfile"
 
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -1801,7 +1953,7 @@
 
     const/4 v4, 0x0
 
-    sget-object v6, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v6, "WeightProfile"
 
     const-string v9, "Insert write request to clear GKI buffer!"
 
@@ -1825,7 +1977,7 @@
 
     if-nez v6, :cond_d
 
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     const-string v4, "write DFU_OPCODE_DUMMY failed!!!"
 
@@ -1860,7 +2012,7 @@
     :catch_2
     move-exception v3
 
-    sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v3, "WeightProfile"
 
     const-string v4, "Fail to operate on the firmware file"
 
@@ -1948,7 +2100,7 @@
     if-eq v4, v5, :cond_14
 
     :cond_f
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2037,7 +2189,7 @@
 
     if-nez v5, :cond_13
 
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     const-string v4, "write firmware data failed!!!"
 
@@ -2072,7 +2224,7 @@
     :catch_3
     move-exception v3
 
-    sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v3, "WeightProfile"
 
     const-string v4, "Fail to operate on the firmware file"
 
@@ -2096,7 +2248,7 @@
     :try_start_b
     div-int/2addr v7, v14
 
-    sget-object v8, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v8, "WeightProfile"
 
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -2144,7 +2296,7 @@
     :catch_4
     move-exception v3
 
-    sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v3, "WeightProfile"
 
     const-string v4, "Fail to operate on the firmware file"
 
@@ -2154,7 +2306,7 @@
 
     :cond_14
     :try_start_c
-    sget-object v4, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v4, "WeightProfile"
 
     const-string v5, "DFU transfer rate: %.1f KBps"
 
@@ -2282,7 +2434,7 @@
     if-eq v4, v5, :cond_18
 
     :cond_16
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2312,7 +2464,7 @@
 
     invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2377,7 +2529,7 @@
     :catch_5
     move-exception v3
 
-    sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v3, "WeightProfile"
 
     const-string v4, "Fail to operate on the firmware file"
 
@@ -2387,7 +2539,7 @@
 
     :cond_18
     :try_start_e
-    sget-object v4, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v4, "WeightProfile"
 
     const-string v5, "reboot.................."
 
@@ -2417,7 +2569,7 @@
 
     if-nez v4, :cond_1a
 
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     const-string v4, "Fail to issue restart command!"
 
@@ -2448,7 +2600,7 @@
     :catch_6
     move-exception v3
 
-    sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v3, "WeightProfile"
 
     const-string v4, "Fail to operate on the firmware file"
 
@@ -2522,7 +2674,7 @@
     if-eq v4, v5, :cond_1e
 
     :cond_1c
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     const-string v4, "Fail to wait restart command response!"
 
@@ -2553,7 +2705,7 @@
     :catch_7
     move-exception v3
 
-    sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v3, "WeightProfile"
 
     const-string v4, "Fail to operate on the firmware file"
 
@@ -2590,7 +2742,7 @@
     :catch_8
     move-exception v3
 
-    sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v3, "WeightProfile"
 
     const-string v4, "Fail to operate on the firmware file"
 
@@ -2605,7 +2757,7 @@
 
     :goto_c
     :try_start_14
-    sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v2, "WeightProfile"
 
     const-string v4, "exception happend!!"
 
@@ -2635,7 +2787,7 @@
     :catch_a
     move-exception v3
 
-    sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v3, "WeightProfile"
 
     const-string v4, "Fail to operate on the firmware file"
 
@@ -2666,7 +2818,7 @@
     :catch_b
     move-exception v3
 
-    sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v3, "WeightProfile"
 
     const-string v4, "Fail to operate on the firmware file"
 
@@ -2835,6 +2987,8 @@
 
     aget-byte v1, v3, v5
 
+    add-int/lit8 v1, v1, -0x1
+
     invoke-virtual {v0, v5, v1}, Ljava/util/Calendar;->set(II)V
 
     const/4 v1, 0x3
@@ -2894,9 +3048,15 @@
 
     if-nez v2, :cond_2
 
+    const-string v3, "WeightProfile"
+
+    const-string v4, "initCharacteristics failed!!!"
+
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
     :cond_0
     :goto_0
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_6
 
     const-string v1, "================================================="
 
@@ -2939,15 +3099,24 @@
 
     invoke-static {v2}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
-    if-eqz v2, :cond_0
+    if-nez v2, :cond_3
 
+    const-string v3, "WeightProfile"
+
+    const-string v4, "setDateTime failed!!!"
+
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_3
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->getDateTime()Ljava/util/Calendar;
 
     move-result-object v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
-    sget-object v4, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v4, "WeightProfile"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2977,7 +3146,7 @@
 
     invoke-static {v4, v3}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_3
+    :cond_4
     invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->getDeviceInfo()Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;
 
     move-result-object v3
@@ -2986,7 +3155,7 @@
 
     iget-object v3, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mDeviceInfo:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_5
 
     iget-object v3, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mDeviceInfo:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;
 
@@ -2996,12 +3165,12 @@
 
     if-nez v3, :cond_0
 
-    :cond_4
+    :cond_5
     move v2, v1
 
     goto :goto_0
 
-    :cond_5
+    :cond_6
     const-string v0, "================================================="
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;)V
@@ -3018,7 +3187,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_InitCB:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IInitializationCallback;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_InitCB:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IInitializationCallback;
 
@@ -3028,7 +3197,7 @@
 
     invoke-interface {v0, v2}, Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IInitializationCallback;->onFailed(Landroid/bluetooth/BluetoothDevice;)V
 
-    :cond_6
+    :cond_7
     move v0, v1
 
     goto :goto_1
@@ -3037,7 +3206,7 @@
 .method public isConnected()Z
     .locals 3
 
-    sget-object v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v0, "WeightProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3157,7 +3326,7 @@
 .method public runFwUpgradeTask(Ljava/lang/String;Lcom/xiaomi/hm/bleservice/profile/IFirmwareUpgradeCb;)V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v0, "WeightProfile"
 
     const-string v1, "runFwUpgradeTask"
 
@@ -3177,7 +3346,7 @@
 .method public runSyncDataTask(Lcom/xiaomi/hm/bleservice/profile/ISyncDataCb;J)V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v0, "WeightProfile"
 
     const-string v1, "runSyncDataTask"
 
@@ -3189,7 +3358,7 @@
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+    const-string v0, "WeightProfile"
 
     const-string v1, "invalid uid!!!"
 

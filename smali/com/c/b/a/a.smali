@@ -11,10 +11,10 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/c/b/c/b;[Lcom/c/b/q;ZII)V
+.method public constructor <init>(Lcom/c/b/c/b;[Lcom/c/b/u;ZII)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/c/b/c/g;-><init>(Lcom/c/b/c/b;[Lcom/c/b/q;)V
+    invoke-direct {p0, p1, p2}, Lcom/c/b/c/g;-><init>(Lcom/c/b/c/b;[Lcom/c/b/u;)V
 
     iput-boolean p3, p0, Lcom/c/b/a/a;->a:Z
 

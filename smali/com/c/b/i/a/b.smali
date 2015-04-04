@@ -21,14 +21,14 @@
     return-void
 .end method
 
-.method static a([BLcom/c/b/i/a/r;Lcom/c/b/i/a/o;)[Lcom/c/b/i/a/b;
+.method static a([BLcom/c/b/i/a/s;Lcom/c/b/i/a/o;)[Lcom/c/b/i/a/b;
     .locals 13
 
     const/4 v1, 0x0
 
     array-length v0, p0
 
-    invoke-virtual {p1}, Lcom/c/b/i/a/r;->c()I
+    invoke-virtual {p1}, Lcom/c/b/i/a/s;->c()I
 
     move-result v2
 
@@ -41,11 +41,11 @@
     throw v0
 
     :cond_0
-    invoke-virtual {p1, p2}, Lcom/c/b/i/a/r;->a(Lcom/c/b/i/a/o;)Lcom/c/b/i/a/t;
+    invoke-virtual {p1, p2}, Lcom/c/b/i/a/s;->a(Lcom/c/b/i/a/o;)Lcom/c/b/i/a/u;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/c/b/i/a/t;->d()[Lcom/c/b/i/a/s;
+    invoke-virtual {v5}, Lcom/c/b/i/a/u;->d()[Lcom/c/b/i/a/t;
 
     move-result-object v6
 
@@ -60,7 +60,7 @@
 
     aget-object v4, v6, v0
 
-    invoke-virtual {v4}, Lcom/c/b/i/a/s;->a()I
+    invoke-virtual {v4}, Lcom/c/b/i/a/t;->a()I
 
     move-result v4
 
@@ -89,17 +89,17 @@
     move v0, v1
 
     :goto_2
-    invoke-virtual {v9}, Lcom/c/b/i/a/s;->a()I
+    invoke-virtual {v9}, Lcom/c/b/i/a/t;->a()I
 
     move-result v3
 
     if-ge v0, v3, :cond_2
 
-    invoke-virtual {v9}, Lcom/c/b/i/a/s;->b()I
+    invoke-virtual {v9}, Lcom/c/b/i/a/t;->b()I
 
     move-result v10
 
-    invoke-virtual {v5}, Lcom/c/b/i/a/t;->a()I
+    invoke-virtual {v5}, Lcom/c/b/i/a/u;->a()I
 
     move-result v3
 
@@ -155,7 +155,7 @@
     :cond_4
     add-int/lit8 v7, v2, 0x1
 
-    invoke-virtual {v5}, Lcom/c/b/i/a/t;->a()I
+    invoke-virtual {v5}, Lcom/c/b/i/a/u;->a()I
 
     move-result v2
 

@@ -1,53 +1,34 @@
-.class Landroid/support/v4/g/g;
+.class public interface abstract Landroid/support/v4/g/g;
 .super Ljava/lang/Object;
 
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
+# virtual methods
+.method public abstract a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/Parcel;",
+            "Ljava/lang/ClassLoader;",
+            ")TT;"
+        }
+    .end annotation
 .end method
 
-.method public static a(Landroid/net/ConnectivityManager;)Z
-    .locals 2
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    :goto_0
-    :pswitch_0
-    return v0
-
-    :cond_0
-    invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
-
-    move-result v1
-
-    packed-switch v1, :pswitch_data_0
-
-    goto :goto_0
-
-    :pswitch_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+.method public abstract a(I)[Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)[TT;"
+        }
+    .end annotation
 .end method

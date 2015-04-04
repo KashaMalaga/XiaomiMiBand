@@ -1,130 +1,107 @@
-.class public Lcn/com/smartdevices/bracelet/ui/aP;
-.super Landroid/app/Fragment;
+.class Lcn/com/smartdevices/bracelet/ui/aP;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
-.field private a:Ljava/lang/String;
-
-.field private b:Landroid/webkit/WebView;
-
-.field private c:Landroid/widget/ProgressBar;
-
-.field private d:Landroid/webkit/WebViewClient;
-
-.field private e:Landroid/webkit/WebChromeClient;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/aQ;
-
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/aQ;-><init>(Lcn/com/smartdevices/bracelet/ui/aP;)V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->d:Landroid/webkit/WebViewClient;
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/aR;
-
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/aR;-><init>(Lcn/com/smartdevices/bracelet/ui/aP;)V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->e:Landroid/webkit/WebChromeClient;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/aP;)Landroid/widget/ProgressBar;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->c:Landroid/widget/ProgressBar;
-
-    return-object v0
-.end method
-
-.method public static a()Lcn/com/smartdevices/bracelet/ui/aP;
-    .locals 2
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/aP;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/aP;-><init>()V
-
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aP;->setArguments(Landroid/os/Bundle;)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
-    .locals 0
+.method public onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 3
 
-    invoke-interface {p1}, Landroid/view/Menu;->clear()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->i(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->j(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->c(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    const v2, 0x7f0900f3
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->k(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/bluetooth/BluetoothDevice;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    const-class v0, Landroid/bluetooth/BluetoothDevice;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->k(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/bluetooth/BluetoothDevice;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/G;->a(Ljava/lang/Class;Landroid/bluetooth/BluetoothDevice;)Z
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->finish()V
 
     return-void
 .end method
 
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 3
+.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    const v0, 0x7f030097
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    invoke-virtual {p1, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v1
-
-    const-string v0, "http://ota.app-xae.xiaomi.net/help.html"
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Ljava/lang/String;
-
-    const v0, 0x7f07001f
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/webkit/WebView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->b:Landroid/webkit/WebView;
-
-    const v0, 0x7f0702ce
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->c:Landroid/widget/ProgressBar;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->b:Landroid/webkit/WebView;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aP;->d:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->b:Landroid/webkit/WebView;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aP;->e:Landroid/webkit/WebChromeClient;
-
-    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->b:Landroid/webkit/WebView;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aP;->setHasOptionsMenu(Z)V
-
-    return-object v1
+    return-void
 .end method

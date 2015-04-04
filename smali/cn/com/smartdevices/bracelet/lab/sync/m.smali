@@ -32,7 +32,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/E;->b([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/G;->b([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -170,7 +170,7 @@
 
     move-result-object v3
 
-    iget v2, v2, Lcn/com/smartdevices/bracelet/k/i;->g:I
+    iget v2, v2, Lcn/com/smartdevices/bracelet/k/i;->h:I
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

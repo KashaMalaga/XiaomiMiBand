@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/view/A;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/view/A;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/B;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/B;->a:Lcn/com/smartdevices/bracelet/view/A;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,28 +22,14 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
+.method public run()V
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/B;->a:Lcn/com/smartdevices/bracelet/view/A;
 
-    move-result-object v0
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RulerScrollView;
 
-    check-cast v0, Ljava/lang/Float;
-
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
-
-    move-result v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/B;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
-
-    float-to-int v0, v0
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)I
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/B;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->postInvalidate()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->a(Lcn/com/smartdevices/bracelet/view/RulerScrollView;)V
 
     return-void
 .end method

@@ -1,49 +1,67 @@
 .class Lcn/com/smartdevices/bracelet/ui/dK;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/tencent/tauth/IUiListener;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dI;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dG;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dI;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dG;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dK;->a:Lcn/com/smartdevices/bracelet/ui/dI;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dK;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCancel()V
-    .locals 0
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 2
 
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    sparse-switch v0, :sswitch_data_0
+
+    :goto_0
     return-void
-.end method
 
-.method public onComplete(Ljava/lang/Object;)V
-    .locals 1
+    :sswitch_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dK;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dK;->a:Lcn/com/smartdevices/bracelet/ui/dI;
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dI;->dismiss()V
+    check-cast v0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
 
-    return-void
-.end method
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/dG;->a(Lcn/com/smartdevices/bracelet/ui/dG;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
 
-.method public onError(Lcom/tencent/tauth/UiError;)V
-    .locals 1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dK;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dK;->a:Lcn/com/smartdevices/bracelet/ui/dI;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dK;->a:Lcn/com/smartdevices/bracelet/ui/dG;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dI;->dismiss()V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/dG;->c(Lcn/com/smartdevices/bracelet/ui/dG;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
 
-    return-void
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dG;->b(Lcn/com/smartdevices/bracelet/ui/dG;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
+
+    goto :goto_0
+
+    :sswitch_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dK;->a:Lcn/com/smartdevices/bracelet/ui/dG;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dG;->b(Lcn/com/smartdevices/bracelet/ui/dG;)V
+
+    goto :goto_0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_0
+        0x1002 -> :sswitch_1
+    .end sparse-switch
 .end method

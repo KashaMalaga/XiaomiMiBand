@@ -1,16 +1,23 @@
-.class public Lcn/com/smartdevices/bracelet/activity/p;
+.class Lcn/com/smartdevices/bracelet/activity/p;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/activity/o;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/activity/o;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/activity/p;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/activity/p;->b:Lcn/com/smartdevices/bracelet/activity/o;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/activity/p;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -19,204 +26,21 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
-    .annotation runtime Landroid/webkit/JavascriptInterface;
-    .end annotation
+.method public run()V
+    .locals 2
 
-    const-string v0, "WPJ"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/p;->b:Lcn/com/smartdevices/bracelet/activity/o;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/activity/o;->b:Lcn/com/smartdevices/bracelet/activity/WebActivity;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    # getter for: Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebView:Landroid/webkit/WebView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$100(Lcn/com/smartdevices/bracelet/activity/WebActivity;)Landroid/webkit/WebView;
 
-    const-string v2, "uid:"
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/p;->a:Ljava/lang/String;
 
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",security:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
     return-void
-.end method
-
-.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
-    .annotation runtime Landroid/webkit/JavascriptInterface;
-    .end annotation
-
-    const/4 v0, 0x1
-
-    const-string v1, "WebActivity"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "uid:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ",security:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ",iconUrl:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ",nick name:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ",has bind:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/p;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
-
-    # getter for: Lcn/com/smartdevices/bracelet/activity/WebActivity;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$700(Lcn/com/smartdevices/bracelet/activity/WebActivity;)Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v2
-
-    invoke-static {v1, v2, v3, p2}, Lcn/com/smartdevices/bracelet/g/a;->a(Landroid/content/Context;JLjava/lang/String;)V
-
-    invoke-static {p5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    if-ne v1, v0, :cond_1
-
-    :goto_0
-    if-eqz v0, :cond_0
-
-    const-string v1, "WebActivity"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "userInfo="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v1
-
-    invoke-static {p6, v1}, Lcn/com/smartdevices/bracelet/k/h;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v2
-
-    iput-wide v2, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-
-    :cond_0
-    new-instance v1, Landroid/content/Intent;
-
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
-
-    const-string v2, "miliao_icon_url"
-
-    invoke-virtual {v1, v2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v2, "miliao_nick_name"
-
-    invoke-virtual {v1, v2, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v2, "miliao_has_binded"
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/p;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
-
-    const/4 v2, 0x3
-
-    invoke-virtual {v0, v2, v1}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->setResult(ILandroid/content/Intent;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/p;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->finish()V
-
-    return-void
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

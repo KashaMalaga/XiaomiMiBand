@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/weight/D;
+.implements Lcn/com/smartdevices/bracelet/weight/L;
 
 
 # instance fields
@@ -25,7 +25,7 @@
 .method public a()V
     .locals 2
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->a:Ljava/lang/String;
+    const-string v0, "MemberInfoBaseActivity"
 
     const-string v1, "syncinfowithserver onSucess"
 
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/o;->b(Landroid/content/Context;)Z
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/o;->a(Landroid/content/Context;)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/c;->a:Lcn/com/smartdevices/bracelet/weight/family/b;
 
@@ -67,13 +67,25 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->a(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;Z)Z
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/c;->a:Lcn/com/smartdevices/bracelet/weight/family/b;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weight/family/b;->b:Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->a(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;)Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "Weight_Add_User_Succ"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
+
     return-void
 .end method
 
 .method public b()V
     .locals 2
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->a:Ljava/lang/String;
+    const-string v0, "MemberInfoBaseActivity"
 
     const-string v1, "syncinfowithserver onFailure"
 
@@ -86,6 +98,18 @@
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->a(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;Z)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/c;->a:Lcn/com/smartdevices/bracelet/weight/family/b;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weight/family/b;->b:Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->a(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;)Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "Weight_Add_User_Fail"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -228,16 +228,37 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->context:Landroid/content/Context;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v1
 
-    const v2, 0x7f060006
+    :try_start_0
+    const-string v2, "lua/luafile.lua"
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+    invoke-virtual {v1, v2}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v1
 
+    :goto_0
+    if-nez v1, :cond_0
+
+    const-string v0, ""
+
+    :goto_1
+    return-object v0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    move-object v1, v0
+
+    goto :goto_0
+
+    :cond_0
     new-instance v2, Ljava/io/BufferedReader;
 
     new-instance v3, Ljava/io/InputStreamReader;
@@ -246,17 +267,17 @@
 
     invoke-direct {v2, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    :try_start_0
+    :try_start_1
     const-string v3, "__luaVersion="
 
     const-string v3, ""
 
-    :cond_0
+    :cond_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -268,7 +289,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     const-string v2, "__luaVersion="
 
@@ -286,17 +307,16 @@
 
     move-result-object v0
 
-    :goto_0
-    return-object v0
+    goto :goto_1
 
-    :cond_1
+    :cond_2
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    goto :goto_0
+    goto :goto_1
 
-    :catch_0
+    :catch_1
     move-exception v1
 
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
@@ -307,7 +327,7 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public static getInstance()Lcn/com/smartdevices/bracelet/lua/LuaManager;
@@ -346,7 +366,7 @@
     sput-object v0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->__instance:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
     :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/E;->k(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/G;->j(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -835,7 +855,7 @@
 .end method
 
 .method private loadLocalLua()Z
-    .locals 7
+    .locals 10
 
     const/4 v0, 0x0
 
@@ -875,11 +895,11 @@
 
     move-result-object v6
 
-    if-eqz v5, :cond_1
+    if-eqz v5, :cond_0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->mLuaState:Lorg/keplerproject/luajava/LuaState;
 
@@ -907,7 +927,7 @@
 
     const/4 v0, 0x1
 
-    :cond_0
+    :goto_0
     const-string v1, "LuaManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -932,55 +952,188 @@
 
     return v0
 
-    :cond_1
-    const/4 v1, 0x6
+    :cond_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->context:Landroid/content/Context;
 
-    new-array v2, v1, [I
+    invoke-virtual {v1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
-    fill-array-data v2, :array_0
+    move-result-object v2
 
-    array-length v3, v2
+    :try_start_0
+    const-string v1, ""
+
+    invoke-virtual {v2, v1}, Landroid/content/res/AssetManager;->list(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
+
+    array-length v4, v3
 
     move v1, v0
 
-    :goto_0
-    if-ge v1, v3, :cond_0
+    :goto_1
+    if-ge v1, v4, :cond_1
 
-    aget v4, v2, v1
+    aget-object v5, v3, v1
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->context:Landroid/content/Context;
+    const-string v6, "LuaManager"
 
-    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "path = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
-    invoke-virtual {v5, v4}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-direct {p0, v4}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->readStream(Ljava/io/InputStream;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->mLuaState:Lorg/keplerproject/luajava/LuaState;
-
-    invoke-virtual {v5, v4}, Lorg/keplerproject/luajava/LuaState;->LdoString(Ljava/lang/String;)I
+    invoke-static {v6, v5}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_0
+    goto :goto_1
 
-    nop
+    :cond_1
+    const-string v1, "lua"
 
-    :array_0
-    .array-data 4
-        0x7f060002
-        0x7f060003
-        0x7f060005
-        0x7f060004
-        0x7f060001
-        0x7f060006
-    .end array-data
+    invoke-virtual {v2, v1}, Landroid/content/res/AssetManager;->list(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v1, "LuaManager"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "luaList="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v1, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    array-length v4, v3
+
+    move v1, v0
+
+    :goto_2
+    if-ge v1, v4, :cond_2
+
+    aget-object v5, v3, v1
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "lua/"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+
+    move-result-object v6
+
+    invoke-direct {p0, v6}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->readStream(Ljava/io/InputStream;)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "LuaManager"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "luafile="
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v7, v5}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->mLuaState:Lorg/keplerproject/luajava/LuaState;
+
+    invoke-virtual {v5, v6}, Lorg/keplerproject/luajava/LuaState;->LdoString(Ljava/lang/String;)I
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    const-string v1, "lua/localization.lua"
+
+    invoke-virtual {v2, v1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->readStream(Ljava/io/InputStream;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->mLuaState:Lorg/keplerproject/luajava/LuaState;
+
+    invoke-virtual {v3, v1}, Lorg/keplerproject/luajava/LuaState;->LdoString(Ljava/lang/String;)I
+
+    const-string v1, "lua/luafile.lua"
+
+    invoke-virtual {v2, v1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->readStream(Ljava/io/InputStream;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->mLuaState:Lorg/keplerproject/luajava/LuaState;
+
+    invoke-virtual {v2, v1}, Lorg/keplerproject/luajava/LuaState;->LdoString(Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto/16 :goto_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto/16 :goto_0
 .end method
 
 .method private loadScriptFile()V

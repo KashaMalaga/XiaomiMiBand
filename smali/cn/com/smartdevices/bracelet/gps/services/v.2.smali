@@ -187,7 +187,7 @@
     return-void
 .end method
 
-.method a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/b/u;)V
+.method a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/services/J;)V
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/v;->a:Ljava/util/List;
@@ -209,37 +209,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/a/b;
 
-    invoke-interface {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/gps/services/a/b;->a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/b/u;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method a(Lcn/com/smartdevices/bracelet/gps/services/A;)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/v;->b:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/a/a;
-
-    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/a/a;->a(Lcn/com/smartdevices/bracelet/gps/services/A;)V
+    invoke-interface {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/gps/services/a/b;->a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/services/J;)V
 
     goto :goto_0
 
@@ -313,7 +283,37 @@
     goto :goto_0
 .end method
 
-.method a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/u;)V
+.method a(Lcn/com/smartdevices/bracelet/gps/services/ai;)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/v;->b:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/a/a;
+
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/a/a;->a(Lcn/com/smartdevices/bracelet/gps/services/ai;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/services/J;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -322,7 +322,7 @@
             "<",
             "Lcn/com/smartdevices/bracelet/gps/model/c;",
             ">;",
-            "Lcn/com/smartdevices/bracelet/gps/b/u;",
+            "Lcn/com/smartdevices/bracelet/gps/services/J;",
             ")V"
         }
     .end annotation
@@ -346,7 +346,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/a/b;
 
-    invoke-interface {v0, p1, p2}, Lcn/com/smartdevices/bracelet/gps/services/a/b;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/u;)V
+    invoke-interface {v0, p1, p2}, Lcn/com/smartdevices/bracelet/gps/services/a/b;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/services/J;)V
 
     goto :goto_0
 

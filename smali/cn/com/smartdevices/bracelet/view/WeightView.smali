@@ -62,11 +62,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300ce
+    const v1, 0x7f0300f3
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0703ae
+    const v0, 0x7f070419
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightView;->findViewById(I)Landroid/view/View;
 
@@ -76,7 +76,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightView;->a:Lcn/com/smartdevices/bracelet/view/WeightProgressBar;
 
-    const v0, 0x7f0703b0
+    const v0, 0x7f07041b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightView;->findViewById(I)Landroid/view/View;
 
@@ -86,7 +86,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightView;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0703b1
+    const v0, 0x7f07041c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightView;->findViewById(I)Landroid/view/View;
 
@@ -96,7 +96,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightView;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f0703b2
+    const v0, 0x7f07041d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightView;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightView;->d:Landroid/widget/TextView;
 
-    const v0, 0x7f0703b3
+    const v0, 0x7f07041e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightView;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightView;->e:Landroid/widget/TextView;
 
-    sget-object v0, Lcom/xiaomi/hm/a/t;->WeightView:[I
+    sget-object v0, Lcom/xiaomi/hm/health/t;->WeightView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

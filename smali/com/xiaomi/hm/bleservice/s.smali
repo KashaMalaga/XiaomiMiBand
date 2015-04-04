@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/xiaomi/hm/bleservice/BLEService;
+.field final synthetic a:Lcom/xiaomi/hm/bleservice/r;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;)V
+.method constructor <init>(Lcom/xiaomi/hm/bleservice/r;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/s;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/s;->a:Lcom/xiaomi/hm/bleservice/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,22 +22,15 @@
 
 
 # virtual methods
-.method public onLowBattery()V
-    .locals 2
+.method public run()V
+    .locals 1
 
-    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$600()Ljava/lang/String;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->a:Lcom/xiaomi/hm/bleservice/r;
 
-    move-result-object v0
-
-    const-string v1, "onLowBattery"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    iget-object v0, v0, Lcom/xiaomi/hm/bleservice/r;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onWeightLowBattery()V
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$900(Lcom/xiaomi/hm/bleservice/BLEService;)V
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$800(Lcom/xiaomi/hm/bleservice/BLEService;)V
 
     return-void
 .end method

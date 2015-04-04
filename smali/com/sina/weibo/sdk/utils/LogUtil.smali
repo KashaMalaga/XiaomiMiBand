@@ -3,14 +3,14 @@
 
 
 # static fields
-.field private static sIsLogEnable:Z
+.field public static sIsLogEnable:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     sput-boolean v0, Lcom/sina/weibo/sdk/utils/LogUtil;->sIsLogEnable:Z
 

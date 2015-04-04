@@ -71,7 +71,7 @@
 
 
 # virtual methods
-.method protected a(Ljava/lang/StringBuilder;II)V
+.method protected final a(Ljava/lang/StringBuilder;II)V
     .locals 5
 
     const/16 v4, 0x30
@@ -123,7 +123,7 @@
     return-void
 .end method
 
-.method protected b(Ljava/lang/StringBuilder;I)V
+.method protected final b(Ljava/lang/StringBuilder;I)V
     .locals 2
 
     const-string v0, "(01)"

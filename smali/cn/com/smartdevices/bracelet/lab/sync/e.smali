@@ -24,7 +24,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/w;->D()Z
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/w;->F()Z
 
     move-result v1
 
@@ -341,7 +341,7 @@
 .end method
 
 .method private static b(Landroid/content/Context;Ljava/util/List;)Lcn/com/smartdevices/bracelet/lab/sync/F;
-    .locals 14
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -354,8 +354,6 @@
         }
     .end annotation
 
-    const/4 v9, 0x1
-
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -365,50 +363,52 @@
     throw v0
 
     :cond_0
-    new-instance v12, Lcn/com/smartdevices/bracelet/lab/sync/F;
+    const/4 v0, 0x1
+
+    new-instance v8, Lcn/com/smartdevices/bracelet/lab/sync/F;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
-    move-result v0
+    move-result v1
 
-    invoke-direct {v12, v0}, Lcn/com/smartdevices/bracelet/lab/sync/F;-><init>(I)V
+    invoke-direct {v8, v1}, Lcn/com/smartdevices/bracelet/lab/sync/F;-><init>(I)V
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v13
+    move-result-object v9
 
-    move v11, v9
+    move v7, v0
 
     :goto_0
-    invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    invoke-interface {v13}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object v10, v0
+    move-object v6, v0
 
-    check-cast v10, Lcn/com/smartdevices/bracelet/gps/model/j;
+    check-cast v6, Lcn/com/smartdevices/bracelet/gps/model/j;
 
-    invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/model/j;->f()J
+    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/model/j;->f()J
 
     move-result-wide v1
 
-    invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/model/j;->g()I
+    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/model/j;->g()I
 
     move-result v3
 
-    invoke-virtual {v12, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sync/F;->a(J)V
+    invoke-virtual {v8, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sync/F;->a(J)V
 
     invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/model/j;->b()Ljava/lang/String;
+    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/model/j;->b()Ljava/lang/String;
 
     move-result-object v4
 
@@ -418,7 +418,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/model/j;->b()Ljava/lang/String;
+    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/model/j;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -441,48 +441,42 @@
 
     invoke-virtual {v0, v4, v5}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v4, Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
-    invoke-direct {v4, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v4, v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
 
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/gps/model/j;->a(Ljava/lang/String;)V
+    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/gps/model/j;->a(Ljava/lang/String;)V
 
     :cond_2
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/w;
 
-    invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/model/j;->b()Ljava/lang/String;
-
-    move-result-object v8
-
-    move-object v4, v0
-
-    move v5, v3
-
-    move-wide v6, v1
-
-    invoke-direct/range {v4 .. v9}, Lcn/com/smartdevices/bracelet/gps/services/w;-><init>(IJLjava/lang/String;Z)V
-
-    invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/model/j;->b()Ljava/lang/String;
+    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/model/j;->b()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/model/j;->e()Ljava/lang/String;
+    invoke-direct {v0, v3, v1, v2, v4}, Lcn/com/smartdevices/bracelet/gps/services/w;-><init>(IJLjava/lang/String;)V
+
+    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/model/j;->b()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/model/j;->e()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/w;->a(JILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->D()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->F()Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/model/j;->d()[B
+    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/model/j;->d()[B
 
     move-result-object v4
 
@@ -506,16 +500,16 @@
     invoke-static {p0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/gps/a/b;->i(Landroid/content/Context;JI)Z
 
     :cond_3
-    and-int/2addr v0, v11
+    and-int/2addr v0, v7
 
-    move v11, v0
+    move v7, v0
 
     goto :goto_0
 
     :cond_4
     new-instance v4, Ljava/lang/String;
 
-    invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/model/j;->d()[B
+    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/model/j;->d()[B
 
     move-result-object v5
 
@@ -526,7 +520,7 @@
     goto :goto_1
 
     :cond_5
-    iput-boolean v11, v12, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Z
+    iput-boolean v7, v8, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Z
 
-    return-object v12
+    return-object v8
 .end method
