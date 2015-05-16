@@ -50,7 +50,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    sget v0, Lcom/xiaomi/hm/health/a/f;->view_share_dialog:I
+    sget v0, Lcom/xiaomi/hm/health/a/g;->view_share_dialog:I
 
     invoke-direct {p0, v0}, Lcom/huami/android/b/e;-><init>(I)V
 
@@ -124,7 +124,7 @@
 
     const/4 v4, 0x0
 
-    sget v5, Lcom/xiaomi/hm/health/a/g;->share_to_miliao_target_feeds:I
+    sget v5, Lcom/xiaomi/hm/health/a/h;->share_to_miliao_target_feeds:I
 
     invoke-virtual {p0, v5}, Lcom/huami/android/b/a/a;->getString(I)Ljava/lang/String;
 
@@ -134,7 +134,7 @@
 
     const/4 v4, 0x1
 
-    sget v5, Lcom/xiaomi/hm/health/a/g;->share_to_miliao_target_friends:I
+    sget v5, Lcom/xiaomi/hm/health/a/h;->share_to_miliao_target_friends:I
 
     invoke-virtual {p0, v5}, Lcom/huami/android/b/a/a;->getString(I)Ljava/lang/String;
 
@@ -144,7 +144,7 @@
 
     const/4 v4, 0x2
 
-    sget v5, Lcom/xiaomi/hm/health/a/g;->share_to_miliao_target_union:I
+    sget v5, Lcom/xiaomi/hm/health/a/h;->share_to_miliao_target_union:I
 
     invoke-virtual {p0, v5}, Lcom/huami/android/b/a/a;->getString(I)Ljava/lang/String;
 
@@ -156,7 +156,7 @@
 
     const-string v2, "title"
 
-    sget v3, Lcom/xiaomi/hm/health/a/g;->share_miliao_path_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/h;->share_miliao_path_selector:I
 
     invoke-virtual {p0, v3}, Lcom/huami/android/b/a/a;->getString(I)Ljava/lang/String;
 
@@ -202,7 +202,7 @@
 .method protected a(Landroid/view/View;)V
     .locals 2
 
-    sget v0, Lcom/xiaomi/hm/health/a/e;->share_list:I
+    sget v0, Lcom/xiaomi/hm/health/a/f;->share_list:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -216,7 +216,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    sget v0, Lcom/xiaomi/hm/health/a/e;->dismiss_button:I
+    sget v0, Lcom/xiaomi/hm/health/a/f;->dismiss_button:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -304,7 +304,7 @@
 
     move-result v0
 
-    sget v1, Lcom/xiaomi/hm/health/a/e;->dismiss_button:I
+    sget v1, Lcom/xiaomi/hm/health/a/f;->dismiss_button:I
 
     if-ne v0, v1, :cond_0
 
@@ -334,7 +334,7 @@
 
     iget v1, v0, Lcom/huami/android/b/a/l;->a:I
 
-    sget v2, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v2, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
     if-eq v1, v2, :cond_2
 
@@ -362,7 +362,7 @@
 
     iget-object v0, p0, Lcom/huami/android/b/a/a;->e:Lcom/huami/android/b/a/e;
 
-    sget v1, Lcom/xiaomi/hm/health/a/g;->share_prepare_tips:I
+    sget v1, Lcom/xiaomi/hm/health/a/h;->share_prepare_tips:I
 
     invoke-virtual {v0, v1}, Lcom/huami/android/b/a/e;->a(I)V
 
@@ -375,7 +375,7 @@
     :cond_1
     iget-object v0, p0, Lcom/huami/android/b/a/a;->e:Lcom/huami/android/b/a/e;
 
-    sget v1, Lcom/xiaomi/hm/health/a/g;->share_uninstall_client:I
+    sget v1, Lcom/xiaomi/hm/health/a/h;->share_uninstall_client:I
 
     invoke-virtual {v0, v1}, Lcom/huami/android/b/a/e;->a(I)V
 

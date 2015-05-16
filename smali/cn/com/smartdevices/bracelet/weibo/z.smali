@@ -16,24 +16,20 @@
 # instance fields
 .field final synthetic a:Lcn/com/smartdevices/bracelet/model/ResponseEntity;
 
-.field final synthetic b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
+.field final synthetic b:Landroid/content/Context;
 
-.field final synthetic c:Landroid/content/Context;
-
-.field final synthetic d:Lcn/com/smartdevices/bracelet/weibo/v;
+.field final synthetic c:Lcn/com/smartdevices/bracelet/weibo/v;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Landroid/content/Context;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weibo/z;->d:Lcn/com/smartdevices/bracelet/weibo/v;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weibo/z;->c:Lcn/com/smartdevices/bracelet/weibo/v;
 
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/weibo/z;->a:Lcn/com/smartdevices/bracelet/model/ResponseEntity;
 
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/weibo/z;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    iput-object p4, p0, Lcn/com/smartdevices/bracelet/weibo/z;->c:Landroid/content/Context;
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/weibo/z;->b:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/d/a/a/p;-><init>()V
 
@@ -43,9 +39,9 @@
 
 # virtual methods
 .method protected a(Ljava/lang/String;Z)Lcn/com/smartdevices/bracelet/model/ResponseEntity;
-    .locals 7
+    .locals 6
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
     const-string v0, "WeiboHealthManager"
 
@@ -53,7 +49,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "queryBindStateFromServer parse: "
+    const-string v2, "uploadToken2Server parse: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -67,7 +63,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;
 
@@ -75,7 +71,7 @@
 
     if-eqz p2, :cond_0
 
-    iput-boolean v6, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->state:Z
+    iput-boolean v5, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->state:Z
 
     :goto_0
     return-object v0
@@ -94,7 +90,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_3
+    if-nez v2, :cond_2
 
     const-string v1, "code"
 
@@ -122,43 +118,6 @@
     move-result-object v1
 
     :cond_1
-    const-string v4, "data"
-
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_2
-
-    const-string v4, "data"
-
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v3
-
-    const-string v4, "status"
-
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_2
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weibo/z;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    const-string v5, "status"
-
-    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-
-    move-result v3
-
-    iput v3, v4, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->bindState:I
-
-    :cond_2
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weibo/z;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->setData(Ljava/lang/Object;)V
-
     iput v2, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->code:I
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->msg:Ljava/lang/String;
@@ -170,11 +129,11 @@
     :catch_0
     move-exception v1
 
-    iput-boolean v6, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->state:Z
+    iput-boolean v5, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->state:Z
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weibo/z;->c:Landroid/content/Context;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weibo/z;->b:Landroid/content/Context;
 
-    const v2, 0x7f09033f
+    const v2, 0x7f0903d3
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -184,7 +143,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_2
     move v2, v1
 
     goto :goto_1
@@ -223,20 +182,39 @@
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->msg:Ljava/lang/String;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/z;->a:Lcn/com/smartdevices/bracelet/model/ResponseEntity;
-
-    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->getData()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->setData(Ljava/lang/Object;)V
-
     goto :goto_0
 .end method
 
 .method public a(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/ResponseEntity;)V
-    .locals 2
+    .locals 3
 
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p3}, Ljava/lang/Throwable;->printStackTrace()V
+
+    const-string v0, "WeiboHealthManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "uploadToken2Server onFailure statusCode:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/z;->a:Lcn/com/smartdevices/bracelet/model/ResponseEntity;
 
     const/4 v1, 0x0

@@ -3,7 +3,7 @@
 
 
 # static fields
-.field public static final picker_number_of_items_selected:I = 0x7f0d0000
+.field public static final picker_gallery:I = 0x7f100007
 
 
 # direct methods

@@ -1,158 +1,180 @@
 .class public Lcn/com/smartdevices/bracelet/tag/a;
-.super Landroid/app/Fragment;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Lcom/huami/android/view/b;
 
 
 # static fields
-.field public static final a:I = 0x3
+.field public static final a:Ljava/lang/String; = "left_button"
 
-.field private static final b:Ljava/lang/String; = "start_number"
+.field public static final b:Ljava/lang/String; = "right_button"
+
+.field public static final c:Ljava/lang/String; = "message"
 
 
 # instance fields
-.field private c:Landroid/widget/TextView;
-
-.field private d:I
-
-.field private e:Lcn/com/smartdevices/bracelet/tag/b;
+.field private d:Lcom/huami/android/view/d;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
+    invoke-direct {p0}, Lcom/huami/android/view/b;-><init>()V
 
-    const/4 v0, 0x3
+    const/4 v0, 0x0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->d:I
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->d:Lcom/huami/android/view/d;
 
     return-void
 .end method
 
-.method public static a(I)Lcn/com/smartdevices/bracelet/tag/a;
+.method public static a(Landroid/app/Activity;Landroid/os/Bundle;)Lcn/com/smartdevices/bracelet/tag/a;
     .locals 3
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/tag/a;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/tag/a;-><init>()V
+    move-result-object v0
 
-    new-instance v1, Landroid/os/Bundle;
+    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
 
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+    move-result-object v1
 
-    const-string v2, "start_number"
+    const-class v0, Lcn/com/smartdevices/bracelet/tag/a;
 
-    invoke-virtual {v1, v2, p0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tag/a;->setArguments(Landroid/os/Bundle;)V
+    move-result-object v0
+
+    invoke-static {p0, v0, p1}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/app/Fragment;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/tag/a;
+
+    const-class v2, Lcn/com/smartdevices/bracelet/tag/a;
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/tag/a;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
 
     return-object v0
 .end method
 
-.method private a()V
+.method public static a(Landroid/app/Activity;Landroid/os/Bundle;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/tag/a;
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->c:Landroid/widget/TextView;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
-    const-wide/16 v1, 0x3e8
+    move-result-object v0
 
-    invoke-virtual {v0, p0, v1, v2}, Landroid/widget/TextView;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
 
-    return-void
+    move-result-object v0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/tag/a;
+
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/tag/a;-><init>()V
+
+    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/tag/a;->setArguments(Landroid/os/Bundle;)V
+
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-class v2, Lcn/com/smartdevices/bracelet/tag/a;
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    :cond_0
+    invoke-virtual {v0, v1, p2}, Landroid/app/FragmentTransaction;->add(Landroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
+
+    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commitAllowingStateLoss()I
+
+    return-object v1
 .end method
 
 
 # virtual methods
-.method public onAttach(Landroid/app/Activity;)V
-    .locals 4
+.method protected inflateLayout()I
+    .locals 1
 
-    invoke-super {p0, p1}, Landroid/app/Fragment;->onAttach(Landroid/app/Activity;)V
+    const v0, 0x7f030098
 
-    :try_start_0
-    move-object v0, p1
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/tag/b;
-
-    move-object v1, v0
-
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a;->e:Lcn/com/smartdevices/bracelet/tag/b;
-    :try_end_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v1
-
-    new-instance v1, Ljava/lang/ClassCastException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, " must implement OnFragmentInteractionListener"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/ClassCastException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    return v0
 .end method
 
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 3
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
-    invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tag/a;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const-string v1, "start_number"
-
-    const/4 v2, 0x3
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->d:I
+    const v1, 0x7f0d021d
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->d:Lcom/huami/android/view/d;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->d:Lcom/huami/android/view/d;
+
+    invoke-interface {v0, p0}, Lcom/huami/android/view/d;->b(Landroid/app/DialogFragment;)V
 
     :cond_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tag/a;->dismiss()V
+
+    :goto_0
     return-void
+
+    :cond_1
+    const v1, 0x7f0d021f
+
+    if-ne v0, v1, :cond_3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->d:Lcom/huami/android/view/d;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->d:Lcom/huami/android/view/d;
+
+    invoke-interface {v0, p0}, Lcom/huami/android/view/d;->c(Landroid/app/DialogFragment;)V
+
+    :cond_2
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tag/a;->dismiss()V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-super {p0, p1}, Lcom/huami/android/view/b;->onClick(Landroid/view/View;)V
+
+    goto :goto_0
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 2
+    .locals 5
 
-    const v0, 0x7f030061
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcom/huami/android/view/b;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 
-    const v0, 0x7f07021a
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tag/a;->getArguments()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    const-string v0, "message"
+
+    invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const v0, 0x7f0d0075
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -160,72 +182,65 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->c:Landroid/widget/TextView;
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    const v0, 0x7f0d021d
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const-string v3, "left_button"
+
+    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    const v0, 0x7f0d021f
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const-string v3, "right_button"
+
+    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_1
     return-object v1
 .end method
 
-.method public onResume()V
+.method public setOpClickListener(Lcom/huami/android/view/d;)V
     .locals 0
 
-    invoke-super {p0}, Landroid/app/Fragment;->onResume()V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/a;->a()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/tag/a;->d:Lcom/huami/android/view/d;
 
     return-void
-.end method
-
-.method public run()V
-    .locals 3
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->d:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->d:I
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/tag/a;->d:I
-
-    if-lez v1, :cond_1
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a;->c:Landroid/widget/TextView;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, ""
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/a;->a()V
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->e:Lcn/com/smartdevices/bracelet/tag/b;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a;->e:Lcn/com/smartdevices/bracelet/tag/b;
-
-    const/4 v1, 0x2
-
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/tag/b;->a(I)V
-
-    goto :goto_0
 .end method

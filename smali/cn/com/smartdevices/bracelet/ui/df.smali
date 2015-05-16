@@ -1,174 +1,51 @@
 .class Lcn/com/smartdevices/bracelet/ui/dF;
-.super Lcom/d/a/a/h;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dD;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dE;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dD;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dE;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dE;
 
-    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 3
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const-string v1, "\u53cd\u9988\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5!"
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    return-void
-.end method
-
-.method public onFinish()V
+.method public onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
+    const/4 v0, 0x6
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->a(Lcn/com/smartdevices/bracelet/ui/dD;)Landroid/view/View;
+    if-ne v0, p2, :cond_0
 
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dE;
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dE;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
-
-    return-void
-.end method
-
-.method public onStart()V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->a(Lcn/com/smartdevices/bracelet/ui/dD;)Landroid/view/View;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
-
-    return-void
-.end method
-
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 5
-
-    const/4 v4, 0x0
-
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/G;->b([B)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "DDDD"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Send Feedback : "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ",content : "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/dD;->getActivity()Landroid/app/Activity;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/dE;->a(Lcn/com/smartdevices/bracelet/ui/dE;)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dE;->onClick(Landroid/view/View;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const-string v1, "\u53cd\u9988\u6210\u529f\uff0c\u8c22\u8c22!"
-
-    invoke-static {v0, v1, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+    const/4 v0, 0x1
 
     :goto_0
-    return-void
+    return v0
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dF;->a:Lcn/com/smartdevices/bracelet/ui/dD;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dD;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const-string v1, "\u53cd\u9988\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5!"
-
-    invoke-static {v0, v1, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

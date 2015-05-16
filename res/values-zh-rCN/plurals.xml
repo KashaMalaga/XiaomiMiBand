@@ -15,4 +15,7 @@
     <plurals name="numberInch">
         <item quantity="other">%s英寸</item>
     </plurals>
+    <plurals name="weight_match_user">
+        <item quantity="other">为你匹配了%1$d个体重相似的人，选一个呗</item>
+    </plurals>
 </resources>

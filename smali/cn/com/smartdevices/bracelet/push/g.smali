@@ -3,19 +3,19 @@
 
 
 # static fields
-.field public static final e:Ljava/lang/String; = "url"
+.field public static final h:Ljava/lang/String; = "url"
 
-.field public static final f:Ljava/lang/String; = "title"
+.field public static final i:Ljava/lang/String; = "title"
 
-.field public static final g:Ljava/lang/String; = "description"
+.field public static final j:Ljava/lang/String; = "description"
 
 
 # instance fields
-.field public final h:Landroid/net/Uri;
+.field public final k:Landroid/net/Uri;
 
-.field public final i:Ljava/lang/String;
+.field public final l:Ljava/lang/String;
 
-.field public final j:Ljava/lang/String;
+.field public final m:Ljava/lang/String;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/g;->h:Landroid/net/Uri;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/g;->k:Landroid/net/Uri;
 
     const-string v0, "title"
 
@@ -42,7 +42,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/g;->i:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/g;->l:Ljava/lang/String;
 
     const-string v0, "description"
 
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/g;->j:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/g;->m:Ljava/lang/String;
 
     return-void
 .end method
@@ -60,7 +60,7 @@
 .method public a()I
     .locals 1
 
-    const v0, 0x7f070030
+    const v0, 0x7f0d0033
 
     return v0
 .end method
@@ -76,7 +76,7 @@
 
     const-string v0, "app"
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/g;->h:Landroid/net/Uri;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/g;->k:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -88,7 +88,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/push/g;->h:Landroid/net/Uri;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/push/g;->k:Landroid/net/Uri;
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/push/g;->a(Landroid/net/Uri;)Z
 
@@ -100,7 +100,7 @@
 
     const-string v1, "android.intent.action.VIEW"
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/g;->h:Landroid/net/Uri;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/g;->k:Landroid/net/Uri;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
@@ -129,9 +129,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/g;->i:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/g;->l:Ljava/lang/String;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/g;->j:Ljava/lang/String;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/g;->m:Ljava/lang/String;
 
     invoke-virtual {p0, v1, v2, v0}, Lcn/com/smartdevices/bracelet/push/g;->a(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
@@ -143,7 +143,7 @@
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/partner/Partner;-><init>()V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/g;->h:Landroid/net/Uri;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/g;->k:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -151,11 +151,11 @@
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/partner/Partner;->url:Ljava/lang/String;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/g;->i:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/g;->l:Ljava/lang/String;
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/partner/Partner;->title:Ljava/lang/String;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/g;->j:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/g;->m:Ljava/lang/String;
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/partner/Partner;->shareContent:Ljava/lang/String;
 

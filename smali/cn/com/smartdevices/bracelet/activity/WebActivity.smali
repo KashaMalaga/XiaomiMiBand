@@ -57,7 +57,7 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebType:I
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->g()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v0
 
@@ -65,9 +65,9 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mContext:Landroid/content/Context;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/activity/q;
+    new-instance v0, Lcn/com/smartdevices/bracelet/activity/w;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/activity/q;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/activity/w;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mChromeClient:Landroid/webkit/WebChromeClient;
 
@@ -290,7 +290,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -332,8 +332,8 @@
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v4, "https://account.xiaomi.com/pass/wap/register?qs=callback%3Dhttps%253A%252F%252Faccount.xiaomi.com%252Fsts%253Fsign%253D8VUxGitrfXxS7XlgXfr7V0uceQc%25253D%2526followup%253Dhttps%25253A%25252F%25252Faccount.xiaomi.com%25252Foauth2%25252Fauthorize%25253Fskip_confirm%25253Dfalse%252526client_id%25253D2882303761517154077%252526redirect_uri%25253Dhttps%2525253A%2525252F%2525252Fhm.xiaomi.com%2525252Fhuami.health.loginview.do%252526response_type%25253Dcode%2526sid%253Doauth2.0%26sid%3Doauth2.0%26_customDisplay%3D0%26mini%3Dtrue%26lsrp_appName%3D%25E4%25BD%25BF%25E7%2594%25A8%25E4%25BD%25A0%25E7%259A%2584%25E5%25B0%258F%25E7%25B1%25B3%25E5%25B8%2590%25E5%258F%25B7%25E8%25AE%25BF%25E9%2597%25AE%2524%257B%25E5%25B0%258F%25E7%25B1%25B3%25E6%2589%258B%25E7%258E%25AF%257D%2524%26_ssign%3DrBm1F4Qu%252F%252FE074tgruygkG18tX0%253D"
-
+    const-string v4, "https://goo.gl/TBLJIs"
+	
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -366,8 +366,8 @@
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v4, "https://account.xiaomi.com/pass/wap/register?qs=callback%3Dhttps%253A%252F%252Faccount.xiaomi.com%252Fsts%253Fsign%253D8VUxGitrfXxS7XlgXfr7V0uceQc%25253D%2526followup%253Dhttps%25253A%25252F%25252Faccount.xiaomi.com%25252Foauth2%25252Fauthorize%25253Fskip_confirm%25253Dfalse%252526client_id%25253D2882303761517154077%252526redirect_uri%25253Dhttps%2525253A%2525252F%2525252Fhm.xiaomi.com%2525252Fhuami.health.loginview.do%252526response_type%25253Dcode%2526sid%253Doauth2.0%26sid%3Doauth2.0%26_customDisplay%3D0%26mini%3Dtrue%26lsrp_appName%3D%25E4%25BD%25BF%25E7%2594%25A8%25E4%25BD%25A0%25E7%259A%2584%25E5%25B0%258F%25E7%25B1%25B3%25E5%25B8%2590%25E5%258F%25B7%25E8%25AE%25BF%25E9%2597%25AE%2524%257B%25E5%25B0%258F%25E7%25B1%25B3%25E6%2589%258B%25E7%258E%25AF%257D%2524%26_ssign%3DrBm1F4Qu%252F%252FE074tgruygkG18tX0%253D"
-
+    const-string v4, "https://goo.gl/TBLJIs"
+	
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -380,13 +380,13 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebView:Landroid/webkit/WebView;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/activity/r;
+    new-instance v2, Lcn/com/smartdevices/bracelet/activity/x;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/r;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/x;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
 
     const-string v3, "login"
 
@@ -462,9 +462,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebView:Landroid/webkit/WebView;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/activity/r;
+    new-instance v2, Lcn/com/smartdevices/bracelet/activity/x;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/r;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/x;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
 
     const-string v3, "login"
 
@@ -504,7 +504,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a000c
+    const v4, 0x7f07000c
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -534,7 +534,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/high16 v3, -0x1000000
 
@@ -544,7 +544,7 @@
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
-    const v3, 0x7f07031c
+    const v3, 0x7f0d0338
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -608,7 +608,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebView:Landroid/webkit/WebView;
 
@@ -665,7 +665,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebView:Landroid/webkit/WebView;
 
@@ -682,9 +682,9 @@
 
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/activity/o;
+    new-instance v3, Lcn/com/smartdevices/bracelet/activity/u;
 
-    invoke-direct {v3, p0, v2}, Lcn/com/smartdevices/bracelet/activity/o;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;Ljava/lang/String;)V
+    invoke-direct {v3, p0, v2}, Lcn/com/smartdevices/bracelet/activity/u;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;Ljava/lang/String;)V
 
     invoke-direct {v0, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -698,7 +698,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
@@ -794,7 +794,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -804,7 +804,7 @@
 
     const/4 v2, 0x1
 
-    const v0, 0x7f0700df
+    const v0, 0x7f0d00d9
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -812,7 +812,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mShare:Landroid/view/View;
 
-    const v0, 0x7f07019a
+    const v0, 0x7f0d01a8
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -820,7 +820,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mActionBar:Landroid/view/View;
 
-    const v0, 0x7f07000a
+    const v0, 0x7f0d000d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -830,7 +830,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebView:Landroid/webkit/WebView;
 
-    const v0, 0x7f07031e
+    const v0, 0x7f0d033a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -840,7 +840,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebErrorTip:Landroid/widget/TextView;
 
-    const v0, 0x7f07031b
+    const v0, 0x7f0d0337
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -848,7 +848,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
 
-    const v0, 0x7f07031f
+    const v0, 0x7f0d033b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -870,7 +870,7 @@
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    const v0, 0x7f07031d
+    const v0, 0x7f0d0339
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -888,9 +888,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebView:Landroid/webkit/WebView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/activity/m;
+    new-instance v1, Lcn/com/smartdevices/bracelet/activity/s;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/m;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/s;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
@@ -902,9 +902,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebErrorTip:Landroid/widget/TextView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/activity/n;
+    new-instance v1, Lcn/com/smartdevices/bracelet/activity/t;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/n;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/t;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -920,7 +920,7 @@
 
     const-string v2, "Start Share!!"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getIntent()Landroid/content/Intent;
 
@@ -1141,7 +1141,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0700df
+    .packed-switch 0x7f0d00d9
         :pswitch_0
     .end packed-switch
 .end method
@@ -1151,7 +1151,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0300aa
+    const v0, 0x7f0300b5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->setContentView(I)V
 
@@ -1175,9 +1175,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/activity/l;
+    new-instance v1, Lcn/com/smartdevices/bracelet/activity/r;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/l;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/r;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
 
     const-wide/16 v2, 0x2710
 
@@ -1239,7 +1239,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x4
 
@@ -1322,7 +1322,7 @@
     goto :goto_0
 
     :pswitch_2
-    const v1, 0x7f0900f5
+    const v1, 0x7f09018a
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getString(I)Ljava/lang/String;
 
@@ -1374,7 +1374,7 @@
     goto :goto_0
 
     :pswitch_2
-    const v1, 0x7f0900f5
+    const v1, 0x7f09018a
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getString(I)Ljava/lang/String;
 

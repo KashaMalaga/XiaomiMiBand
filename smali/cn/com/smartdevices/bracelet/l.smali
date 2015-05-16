@@ -14,7 +14,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/i/d;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/h/d;
 
 .field final synthetic b:Ljava/lang/String;
 
@@ -26,10 +26,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/i/d;Ljava/lang/String;IILandroid/content/Context;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/h/d;Ljava/lang/String;IILandroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/L;->a:Lcn/com/smartdevices/bracelet/i/d;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/L;->a:Lcn/com/smartdevices/bracelet/h/d;
 
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/L;->b:Ljava/lang/String;
 
@@ -115,15 +115,22 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/L;->a:Lcn/com/smartdevices/bracelet/i/d;
+    if-nez p4, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/L;->a:Lcn/com/smartdevices/bracelet/h/d;
 
     invoke-virtual {p4}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v1
 
-    invoke-interface {v0, v1, v2}, Lcn/com/smartdevices/bracelet/i/d;->a(D)V
+    invoke-interface {v0, v1, v2}, Lcn/com/smartdevices/bracelet/h/d;->a(D)V
 
     new-instance v0, Lorg/json/JSONObject;
 
@@ -170,7 +177,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/d/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/d/x;
 
     move-result-object v1
 
@@ -180,15 +187,13 @@
 
     move-result-object v0
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/h/c;->a:Lcn/com/smartdevices/bracelet/h/c;
+    sget-object v3, Lcn/com/smartdevices/bracelet/g/c;->a:Lcn/com/smartdevices/bracelet/g/c;
 
-    invoke-virtual {v1, v2, v0, v3}, Lcn/com/smartdevices/bracelet/f/x;->a(Ljava/lang/String;Ljava/lang/String;Lcn/com/smartdevices/bracelet/h/c;)Z
+    invoke-virtual {v1, v2, v0, v3}, Lcn/com/smartdevices/bracelet/d/x;->a(Ljava/lang/String;Ljava/lang/String;Lcn/com/smartdevices/bracelet/g/c;)Z
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_0
-    :goto_0
-    return-void
+    goto :goto_0
 
     :catch_0
     move-exception v0
@@ -199,11 +204,11 @@
 .method public a(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Double;)V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/L;->a:Lcn/com/smartdevices/bracelet/i/d;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/L;->a:Lcn/com/smartdevices/bracelet/h/d;
 
     const-wide/high16 v1, -0x4010000000000000L
 
-    invoke-interface {v0, v1, v2}, Lcn/com/smartdevices/bracelet/i/d;->a(D)V
+    invoke-interface {v0, v1, v2}, Lcn/com/smartdevices/bracelet/h/d;->a(D)V
 
     return-void
 .end method

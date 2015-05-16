@@ -1,9 +1,9 @@
 .class public Lcn/com/smartdevices/bracelet/relation/db/a;
-.super Lcn/com/smartdevices/bracelet/f/D;
+.super Lcn/com/smartdevices/bracelet/d/E;
 
 
 # annotations
-.annotation runtime Lcn/com/smartdevices/bracelet/f/F;
+.annotation runtime Lcn/com/smartdevices/bracelet/d/G;
     a = "friend_detail"
 .end annotation
 
@@ -28,49 +28,49 @@
 
 # instance fields
 .field public j:J
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "user_id"
     .end annotation
 .end field
 
 .field public k:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "step"
     .end annotation
 .end field
 
 .field public l:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "deep_sleep"
     .end annotation
 .end field
 
 .field public m:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "shallow_sleep"
     .end annotation
 .end field
 
 .field public n:J
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "create_time"
     .end annotation
 .end field
 
 .field public o:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "distance"
     .end annotation
 .end field
 
 .field public p:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "calorie"
     .end annotation
 .end field
 
 .field public q:J
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "sleep_time"
     .end annotation
 .end field
@@ -80,7 +80,7 @@
 .method public constructor <init>()V
     .locals 2
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/f/D;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/d/E;-><init>()V
 
     const-wide/16 v0, 0x0
 

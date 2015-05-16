@@ -3,111 +3,154 @@
 
 
 # static fields
-.field private static b:Lcn/com/smartdevices/bracelet/p;
+.field public static final a:I = 0x0
 
-.field private static c:Landroid/content/Context;
+.field public static final b:I = 0x1
+
+.field public static final c:I = 0x2
+
+.field public static final d:I = 0x3
+
+.field public static final e:I = 0x4
+
+.field public static final f:I = 0x0
+
+.field public static final g:I = 0x1
 
 
 # instance fields
-.field a:Lde/greenrobot/daobracelet/DaoSession;
+.field private h:I
+
+.field private i:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/p;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/p;->c:Landroid/content/Context;
+    iput v0, p0, Lcn/com/smartdevices/bracelet/p;->h:I
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/p;->i:I
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method public constructor <init>(I)V
+    .locals 1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/p;->a:Lde/greenrobot/daobracelet/DaoSession;
+    iput v0, p0, Lcn/com/smartdevices/bracelet/p;->h:I
 
-    new-instance v0, Lde/greenrobot/daobracelet/DaoMaster$DevOpenHelper;
+    iput v0, p0, Lcn/com/smartdevices/bracelet/p;->i:I
 
-    const-string v1, "user-db"
-
-    invoke-direct {v0, p1, v1, v2}, Lde/greenrobot/daobracelet/DaoMaster$DevOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)V
-
-    invoke-virtual {v0}, Lde/greenrobot/daobracelet/DaoMaster$DevOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v0
-
-    new-instance v1, Lde/greenrobot/daobracelet/DaoMaster;
-
-    invoke-direct {v1, v0}, Lde/greenrobot/daobracelet/DaoMaster;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V
-
-    invoke-virtual {v1}, Lde/greenrobot/daobracelet/DaoMaster;->newSession()Lde/greenrobot/daobracelet/DaoSession;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/p;->a:Lde/greenrobot/daobracelet/DaoSession;
+    iput p1, p0, Lcn/com/smartdevices/bracelet/p;->h:I
 
     return-void
 .end method
 
-.method public static a()Lcn/com/smartdevices/bracelet/p;
-    .locals 2
+.method public constructor <init>(II)V
+    .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/p;
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/p;
+    iput v0, p0, Lcn/com/smartdevices/bracelet/p;->h:I
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/p;->c:Landroid/content/Context;
+    iput v0, p0, Lcn/com/smartdevices/bracelet/p;->i:I
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/p;-><init>(Landroid/content/Context;)V
+    iput p1, p0, Lcn/com/smartdevices/bracelet/p;->h:I
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/p;
+    iput p2, p0, Lcn/com/smartdevices/bracelet/p;->i:I
+
+    return-void
+.end method
+
+.method public static a(I)Z
+    .locals 1
+
+    const/4 v0, 0x4
+
+    if-ne p0, v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
 
     :cond_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/p;
+    const/4 v0, 0x0
 
-    return-object v0
+    goto :goto_0
 .end method
 
-.method public static a(Landroid/content/Context;)V
-    .locals 0
+.method public static b(I)Z
+    .locals 2
 
-    sput-object p0, Lcn/com/smartdevices/bracelet/p;->c:Landroid/content/Context;
+    const/4 v0, 0x1
 
-    return-void
+    const/4 v1, 0x2
+
+    if-eq p0, v1, :cond_0
+
+    if-ne p0, v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static c(I)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x4
+
+    if-eq p0, v1, :cond_0
+
+    const/4 v1, 0x2
+
+    if-eq p0, v1, :cond_0
+
+    if-ne p0, v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public b()Lde/greenrobot/daobracelet/LuaListDao;
+.method public a()I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/p;->a:Lde/greenrobot/daobracelet/DaoSession;
+    iget v0, p0, Lcn/com/smartdevices/bracelet/p;->i:I
 
-    invoke-virtual {v0}, Lde/greenrobot/daobracelet/DaoSession;->getLuaListDao()Lde/greenrobot/daobracelet/LuaListDao;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method
 
-.method public c()Lde/greenrobot/daobracelet/LuaZipFileDao;
+.method public b()I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/p;->a:Lde/greenrobot/daobracelet/DaoSession;
+    iget v0, p0, Lcn/com/smartdevices/bracelet/p;->h:I
 
-    invoke-virtual {v0}, Lde/greenrobot/daobracelet/DaoSession;->getLuaZipFileDao()Lde/greenrobot/daobracelet/LuaZipFileDao;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

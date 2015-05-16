@@ -45,7 +45,7 @@
 .method private a()V
     .locals 1
 
-    const v0, 0x7f07003d
+    const v0, 0x7f0d003e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->findViewById(I)Landroid/view/View;
 
@@ -139,8 +139,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f07003d -> :sswitch_0
-        0x7f0700e3 -> :sswitch_1
+        0x7f0d003e -> :sswitch_0
+        0x7f0d00dd -> :sswitch_1
     .end sparse-switch
 .end method
 
@@ -155,7 +155,7 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->a()V
 
-    const v0, 0x7f0700e2
+    const v0, 0x7f0d00dc
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->findViewById(I)Landroid/view/View;
 
@@ -177,7 +177,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    const v0, 0x7f0700e3
+    const v0, 0x7f0d00dd
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->findViewById(I)Landroid/view/View;
 

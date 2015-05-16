@@ -83,7 +83,7 @@
     return-object v0
 
     :pswitch_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -95,7 +95,7 @@
 
     iput v1, v0, Lcn/com/smartdevices/bracelet/model/SyncedServerDataInfo;->mDataState:I
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -107,7 +107,7 @@
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/SyncedServerDataInfo;->mStartDate:Ljava/lang/String;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -122,7 +122,7 @@
     goto :goto_0
 
     :pswitch_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -134,7 +134,7 @@
 
     iput v1, v0, Lcn/com/smartdevices/bracelet/model/SyncedServerDataInfo;->mDataState:I
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -146,7 +146,7 @@
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/SyncedServerDataInfo;->mStartDate:Ljava/lang/String;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -161,7 +161,7 @@
     goto :goto_0
 
     :pswitch_3
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -173,7 +173,7 @@
 
     iput v1, v0, Lcn/com/smartdevices/bracelet/model/SyncedServerDataInfo;->mDataState:I
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -185,7 +185,7 @@
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/SyncedServerDataInfo;->mStartDate:Ljava/lang/String;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -200,7 +200,7 @@
     goto :goto_0
 
     :pswitch_4
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -323,7 +323,7 @@
 .method public saveInfo()V
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v0
 

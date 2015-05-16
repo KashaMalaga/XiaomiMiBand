@@ -27,9 +27,9 @@
 
 .field public static final L:Ljava/lang/String; = "source"
 
-.field public static final a:Ljava/lang/String; = "http://api.developer.xiaomi.com/autoupdate/"
+.field public static final a:Ljava/lang/String; = "http://127.0.0.1/autoupdate/"
 
-.field public static final b:Ljava/lang/String; = "http://dev.staging.api.developer.n.xiaomi.com/autoupdate/"
+.field public static final b:Ljava/lang/String; = "http://127.0.0.1/autoupdate/"
 
 .field public static c:Ljava/lang/String; = null
 
@@ -84,7 +84,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "http://api.developer.xiaomi.com/autoupdate/updateself"
+    const-string v0, "http://127.0.0.1/autoupdate/updateself"
 
     sput-object v0, Lcom/xiaomi/market/sdk/o;->c:Ljava/lang/String;
 
@@ -106,7 +106,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "http://dev.staging.api.developer.n.xiaomi.com/autoupdate/updateself"
+    const-string v0, "http://127.0.0.1/autoupdate/updateself"
 
     sput-object v0, Lcom/xiaomi/market/sdk/o;->c:Ljava/lang/String;
 
@@ -114,7 +114,7 @@
     return-void
 
     :cond_0
-    const-string v0, "http://api.developer.xiaomi.com/autoupdate/updateself"
+    const-string v0, "http://127.0.0.1/autoupdate/updateself"
 
     sput-object v0, Lcom/xiaomi/market/sdk/o;->c:Ljava/lang/String;
 

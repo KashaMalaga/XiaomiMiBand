@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="running_months">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+        <item>Agosto</item>
+        <item>Septiembre</item>
+        <item>Octubre</item>
+        <item>Noviembre</item>
+        <item>Diciembre</item>
+    </string-array>
+    <string-array name="health_link_title">
+        <item>1, Servicio de emergencias 24 horas</item>
+        <item>2, Recibir recomendaciones del 112</item>
+        <item>3, Ayudar a organizar los vehículos de emergencias</item>
+        <item>4. Ayudar en el informe de las autoridades</item>
+        <item>5, Contactar con familiares</item>
+        <item>6, Enviar al Hospital de Urgencias</item>
+        <item>7, Hospitalización</item>
+    </string-array>
+    <string-array name="health_link_content">
+        <item>Los profesionales sanitarios proporcionan asistencia 24 horas al día los 365 días el año</item>
+        <item>Los sanitarios del servicio de emergencias 112 le informarán de como actuar por vía telefónica</item>
+        <item>El centro telefónico del 112 le solicitará información para localizar el punto exacto donde se encuentre el paciente y ayudar al servicio de ambulancias o rescate</item>
+        <item>Ayudar a las autoridadas a realizar el informe de accidentes</item>
+        <item>Notificar a los miembros de la familia o personas de autorizadas información del estado del paciente de acuerdo con sus deseos</item>
+        <item>Según en qué condición se encuentre el paciente, se le aplicarán unos primeros auxilios para un posterior traslado al Hospital de referencias más cercano</item>
+        <item>Proceder a la hospitalización, asesorando y dando las pautas a seguir en el cuidado del paciente</item>
+    </string-array>
+    <string-array name="weeks">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miércoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Lun.</item>
+        <item>Mar.</item>
+        <item>Mié.</item>
+        <item>Jue.</item>
+        <item>Vie.</item>
+        <item>Sáb.</item>
+        <item>Dom.</item>
+    </string-array>
+    <string-array name="months">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+        <item>Agosto</item>
+        <item>Septiembre</item>
+        <item>Octubre</item>
+        <item>Noviembre</item>
+        <item>Diciembre</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>Una vez</item>
+        <item>A diario</item>
+        <item>De lunes a viernes</item>
+        <item>Personalizar</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>Nada sustituye la persistencia</item>
+        <item>Lucha por progresar y no por conseguir la perfección</item>
+        <item>La repetición es la madre de éxito</item>
+        <item>Con esfuerzo y persistencia se consiguen todas las cosas</item>
+        <item>El mundo no se formó en un día, ni tampoco nosotros. Establece metas pequeñas y avanza sobre ellas</item>
+        <item>Todo viaje comienza con un primer paso</item>
+        <item>Logra objetivos diarios</item>
+        <item>No importa lo lento que vayas. Ya eres mas rápido que cualquiera que esté sentado en el sofá</item>
+        <item>Corre cuando puedas. Camina si tienes que hacerlo. Arrástrate si es necesario. Y nunca te des por vencido</item>
+        <item>Recuerda, la sensación que se obtiene tras una buena sesión de ejercicios es mucho mejor que la sensación que tienes al estar cruzado de brazos pensando en haber salido a ejercitarse</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>Excelente</item>
+        <item>Bueno</item>
+        <item>Moderado</item>
+        <item>Precaución</item>
+        <item>Contaminación alta</item>
+        <item>Contaminación muy alta</item>
+    </string-array>
+    <string-array name="weight_unit">
+        <item>kg</item>
+        <item>jin</item>
+        <item>lb</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>Delgado</item>
+        <item>Normal</item>
+        <item>Sobrepeso</item>
+        <item>Obeso</item>
+        <item>Obesidad mórbida</item>
+    </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>Diagnóstico IMC: Bajo peso</item>
+        <item>Diagnóstico IMC: Peso normal</item>
+        <item>Diagnóstico IMC: Sobrepeso</item>
+        <item>Diagnóstico IMC: Obeso</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_boy">
+        <item>Debes prestar atención a tu salud. Por lo general tienes que observar el peso para evitar un mayor deterioro. Te proponemos realices múltiples ejercicios anaeróbicos. Aumentar de peso para conseguir una buena figura</item>
+        <item>Te encuentras en un peso normal. Te recomendamos mamntener tus hábitos alimenticios actuales. Conseguirás mantener una buena figura</item>
+        <item>Te proponemos reducir la ingesta de grasas, manteniendo la ingesta de proteínas. Aumenta tu actividad física con ejercicios aeróbicos 30 minutos antes de realizar ejercicios anaeróbicos. Esto te ayudará a la pérdida de peso</item>
+        <item>Te proponemos reducir la ingesta de grasas, manteniendo la ingesta de proteínas. Aumenta tu actividad física con ejercicios aeróbicos 30 minutos antes de realizar ejercicios anaeróbicos. Esto te ayudará a la pérdida de peso</item>
+    </string-array>
+    <string-array name="weight_report_suggestions_girl">
+        <item>Debes prestar atención a tu salud. Por lo general tienes que observar el peso para evitar un mayor deterioro. Te proponemos múltiples ejercicios anaeróbicos. Aumentar de peso para conseguir una buena figura</item>
+        <item>Te encuentras en un peso normal. Te recomendamos mamntener tus hábitos alimenticios actuales. Conseguirás mantener una buena figura</item>
+        <item>Te proponemos reducir la ingesta de grasas, manteniendo la ingesta de proteínas. Aumenta tu actividad física con ejercicios aeróbicos 30 minutos antes de realizar ejercicios anaeróbicos. Esto le ayudará a la pérdida de peso</item>
+        <item>Te proponemos reducir la ingesta de grasas, manteniendo la ingesta de proteínas. Aumenta tu actividad física con ejercicios aeróbicos 30 minutos antes de realizar ejercicios anaeróbicos. Esto le ayudará a la pérdida de peso</item>
+    </string-array>
+    <string-array name="weight_report_result_without_goal">
+        <item>¡Has conseguido tu objetivo!</item>
+        <item>No alcanzaste tu objetivo</item>
+        <item>¡Has alcanzado tu objetivo!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_gainweight">
+        <item>Aún no has llegado al objetivo</item>
+        <item>Aún no has llegado al objetivo</item>
+        <item>Aún no has llegado al objetivo</item>
+        <item>¡Has alcanzado tu objetivo (%1$s%2$s)!</item>
+    </string-array>
+    <string-array name="weight_report_result_with_goal_loseweight">
+        <item>Aún no has llegado al objetivo</item>
+        <item>Aún no has llegado al objetivo</item>
+        <item>Aún no has llegado al objetivo</item>
+        <item>¡Has alcanzado tu objetivo (%1$s%2$s)!</item>
+    </string-array>
+    <string-array name="phone_notify_tips">
+        <item>Vibración para las llamadas recibidas en el teléfono conectado</item>
+        <item>Vibración cuando suene la alarma del dispositivo conectado</item>
+        <item>Vibración cuando se reciban mensajes SMS en el teléfono conectado</item>
+    </string-array>
+</resources>

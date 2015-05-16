@@ -3,13 +3,15 @@
 
 
 # static fields
-.field public static final numberFoot:I = 0x7f0d0002
+.field public static final numberFoot:I = 0x7f0c0002
 
-.field public static final numberInch:I = 0x7f0d0003
+.field public static final numberInch:I = 0x7f0c0003
 
-.field public static final numberOfPullUpdateReport:I = 0x7f0d0001
+.field public static final numberOfPullUpdateReport:I = 0x7f0c0001
 
-.field public static final picker_number_of_items_selected:I = 0x7f0d0000
+.field public static final picker_number_of_items_selected:I = 0x7f0c0000
+
+.field public static final weight_match_user:I = 0x7f0c0004
 
 
 # direct methods

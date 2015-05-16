@@ -653,7 +653,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-static {}, Lcom/b/Y;->a()Lcom/b/Y;
+    invoke-static {}, Lcom/b/aa;->a()Lcom/b/aa;
 
     move-result-object v4
 
@@ -661,7 +661,7 @@
 
     const-string v6, "sea"
 
-    invoke-virtual {v4, v5, v3, v2, v6}, Lcom/b/Y;->a(Landroid/content/Context;Ljava/lang/String;[BLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v3, v2, v6}, Lcom/b/aa;->a(Landroid/content/Context;Ljava/lang/String;[BLjava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Lcom/amap/api/location/core/AMapLocException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -801,16 +801,16 @@
 .end method
 
 .method public onLocationChanged(Lcom/amap/api/location/AMapLocation;)V
-    .locals 2
+    .locals 4
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     :try_start_0
     invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getAMapException()Lcom/amap/api/location/core/AMapLocException;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getAMapException()Lcom/amap/api/location/core/AMapLocException;
 
@@ -820,7 +820,23 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getAdCode()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getAdCode()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
 
     iget-object v0, p0, Lcom/amap/api/location/b;->c:Lcom/amap/api/location/a;
 
@@ -839,12 +855,70 @@
     iget-object v1, p0, Lcom/amap/api/location/b;->a:Lcom/amap/api/location/b$a;
 
     invoke-virtual {v1, v0}, Lcom/amap/api/location/b$a;->sendMessage(Landroid/os/Message;)Z
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_0
     :goto_0
     return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/amap/api/location/b;->c:Lcom/amap/api/location/a;
+
+    invoke-virtual {v0, p0}, Lcom/amap/api/location/a;->a(Lcom/amap/api/location/AMapLocationListener;)V
+
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/amap/api/location/b;->e:I
+
+    iput v1, v0, Landroid/os/Message;->what:I
+
+    new-instance v1, Lcom/amap/api/location/core/AMapLocException;
+
+    const-string v2, "\u5b9a\u4f4d\u5931\u8d25\u65e0\u6cd5\u83b7\u53d6\u57ce\u5e02\u4fe1\u606f"
+
+    invoke-direct {v1, v2}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
+
+    const/4 v2, 0x1
+
+    iget v3, p0, Lcom/amap/api/location/b;->e:I
+
+    if-ne v2, v3, :cond_2
+
+    new-instance v2, Lcom/amap/api/location/AMapLocalWeatherLive;
+
+    invoke-direct {v2}, Lcom/amap/api/location/AMapLocalWeatherLive;-><init>()V
+
+    invoke-virtual {v2, v1}, Lcom/amap/api/location/AMapLocalWeatherLive;->a(Lcom/amap/api/location/core/AMapLocException;)V
+
+    iput-object v2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    iget-object v2, p0, Lcom/amap/api/location/b;->a:Lcom/amap/api/location/b$a;
+
+    invoke-virtual {v2, v0}, Lcom/amap/api/location/b$a;->sendMessage(Landroid/os/Message;)Z
+
+    :cond_2
+    const/4 v2, 0x2
+
+    iget v3, p0, Lcom/amap/api/location/b;->e:I
+
+    if-ne v2, v3, :cond_0
+
+    new-instance v2, Lcom/amap/api/location/AMapLocalWeatherForecast;
+
+    invoke-direct {v2}, Lcom/amap/api/location/AMapLocalWeatherForecast;-><init>()V
+
+    invoke-virtual {v2, v1}, Lcom/amap/api/location/AMapLocalWeatherForecast;->a(Lcom/amap/api/location/core/AMapLocException;)V
+
+    iput-object v2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    iget-object v1, p0, Lcom/amap/api/location/b;->a:Lcom/amap/api/location/b$a;
+
+    invoke-virtual {v1, v0}, Lcom/amap/api/location/b$a;->sendMessage(Landroid/os/Message;)Z
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
 
     :catch_0
     move-exception v0

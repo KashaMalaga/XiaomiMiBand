@@ -6,14 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+.field final synthetic a:I
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/DetailActivity;I)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/c;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/c;->b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+
+    iput p2, p0, Lcn/com/smartdevices/bracelet/relation/c;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,43 +29,37 @@
 .method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/c;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/c;->b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    const v1, 0x7f04000b
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+    iget v1, p0, Lcn/com/smartdevices/bracelet/relation/c;->a:I
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(I)V
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/c;->b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/relation/d;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/relation/d;-><init>(Lcn/com/smartdevices/bracelet/relation/c;)V
+    iget v1, p0, Lcn/com/smartdevices/bracelet/relation/c;->a:I
 
-    invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->f(I)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/c;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/c;->b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->a(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/view/View;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    move-result-object v1
+    iget v1, p0, Lcn/com/smartdevices/bracelet/relation/c;->a:I
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(I)V
 
-    :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/c;->b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/relation/c;->a:I
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->f(I)V
+
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/c;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->a(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/view/View;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
 .end method

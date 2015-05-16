@@ -1,230 +1,136 @@
-.class Lcom/xiaomi/account/openauth/i;
-.super Landroid/os/AsyncTask;
+.class public Lcom/xiaomi/account/openauth/i;
+.super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/os/AsyncTask",
-        "<",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Void;",
-        "Landroid/os/Bundle;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field public static final A:I = 0x3
 
+.field public static final B:I = 0x4
 
-# instance fields
-.field final synthetic a:Lcom/xiaomi/account/openauth/h;
+.field public static final C:Ljava/lang/String; = "access_token"
 
-.field private b:Z
+.field public static final D:Ljava/lang/String; = "mac_key"
 
-.field private final synthetic c:Landroid/app/Activity;
+.field public static final E:Ljava/lang/String; = "mac_algorithm"
 
-.field private final synthetic d:J
+.field public static final F:Ljava/lang/String; = "expires_in"
 
-.field private final synthetic e:Ljava/lang/String;
+.field public static final G:Ljava/lang/String; = "scope"
 
-.field private final synthetic f:Ljava/lang/String;
+.field public static final H:Ljava/lang/String; = "state"
 
-.field private final synthetic g:Landroid/os/Bundle;
+.field public static final I:Ljava/lang/String; = "token_type"
 
-.field private final synthetic h:I
+.field public static final J:Ljava/lang/String; = "error"
+
+.field public static final K:Ljava/lang/String; = "error_description"
+
+.field public static final L:Ljava/lang/String; = "code"
+
+.field public static final M:Ljava/lang/String; = "sns_type"
+
+.field public static final N:Ljava/lang/String; = "extra_client_id"
+
+.field public static final O:Ljava/lang/String; = "extra_redirect_uri"
+
+.field public static final P:Ljava/lang/String; = "extra_user_name"
+
+.field public static final Q:Ljava/lang/String; = "extra_nick_name"
+
+.field public static final R:Ljava/lang/String; = "extra_avatar_url"
+
+.field public static final S:Ljava/lang/String; = "extra_update"
+
+.field public static final T:Ljava/lang/String; = "extra_user_id"
+
+.field public static final U:Ljava/lang/String; = "extra_access_token"
+
+.field public static final V:Ljava/lang/String; = "extra_token_type"
+
+.field public static final W:Ljava/lang/String; = "extra_mac_key"
+
+.field public static final X:Ljava/lang/String; = "extra_mac_algorithm"
+
+.field public static final Y:Ljava/lang/String; = "extra_expires_in"
+
+.field public static final Z:Ljava/lang/String; = "extra_intent"
+
+.field public static final a:I = 0x1
+
+.field public static final aa:Ljava/lang/String; = "extra_error_code"
+
+.field public static final ab:Ljava/lang/String; = "extra_error_description"
+
+.field public static final ac:Ljava/lang/String; = "extra_response_type"
+
+.field public static final ad:Ljava/lang/String; = "extra_scope"
+
+.field public static final ae:Ljava/lang/String; = "extra_state"
+
+.field public static final af:Ljava/lang/String; = "extra_skip_confirm"
+
+.field public static final ag:Ljava/lang/String; = "extra_response"
+
+.field public static final ah:Ljava/lang/String; = "extra_code"
+
+.field static final ai:C = ' '
+
+.field public static final b:I = 0x0
+
+.field public static final c:I = 0x0
+
+.field public static final d:I = -0x3e8
+
+.field public static final e:I = -0x3e9
+
+.field public static final f:I = -0x3ea
+
+.field public static final g:I = -0x3eb
+
+.field public static final h:I = 0x17701
+
+.field public static final i:I = 0x17702
+
+.field public static final j:I = 0x17703
+
+.field public static final k:I = 0x17704
+
+.field public static final l:I = 0x17705
+
+.field public static final m:I = 0x17706
+
+.field public static final n:I = 0x17707
+
+.field public static final o:I = 0x17708
+
+.field public static final p:I = 0x17709
+
+.field public static final q:I = 0x1770a
+
+.field public static final r:I = 0x1770b
+
+.field public static final s:I = 0x1770c
+
+.field public static final t:I = 0x1770d
+
+.field public static final u:Ljava/lang/String; = "/user/profile"
+
+.field public static final v:Ljava/lang/String; = "/user/relation"
+
+.field public static final w:Ljava/lang/String; = "/user/openidV2"
+
+.field public static final x:Ljava/lang/String; = "/user/phone"
+
+.field public static final y:I = 0x1
+
+.field public static final z:I = 0x2
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/account/openauth/h;Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;I)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/account/openauth/i;->a:Lcom/xiaomi/account/openauth/h;
-
-    iput-object p2, p0, Lcom/xiaomi/account/openauth/i;->c:Landroid/app/Activity;
-
-    iput-wide p3, p0, Lcom/xiaomi/account/openauth/i;->d:J
-
-    iput-object p5, p0, Lcom/xiaomi/account/openauth/i;->e:Ljava/lang/String;
-
-    iput-object p6, p0, Lcom/xiaomi/account/openauth/i;->f:Ljava/lang/String;
-
-    iput-object p7, p0, Lcom/xiaomi/account/openauth/i;->g:Landroid/os/Bundle;
-
-    iput p8, p0, Lcom/xiaomi/account/openauth/i;->h:I
-
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method protected varargs a([Ljava/lang/Void;)Landroid/os/Bundle;
-    .locals 3
-
-    const/4 v2, 0x1
-
-    :try_start_0
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/i;->a:Lcom/xiaomi/account/openauth/h;
-
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/i;->c:Landroid/app/Activity;
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/account/openauth/h;->c(Landroid/app/Activity;)Landroid/os/Bundle;
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Landroid/accounts/OperationCanceledException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Landroid/accounts/AuthenticatorException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/SecurityException;->printStackTrace()V
-
-    iput-boolean v2, p0, Lcom/xiaomi/account/openauth/i;->b:Z
-
-    :goto_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    invoke-virtual {v0}, Landroid/accounts/OperationCanceledException;->printStackTrace()V
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v0
-
-    invoke-virtual {v0}, Landroid/accounts/AuthenticatorException;->printStackTrace()V
-
-    iput-boolean v2, p0, Lcom/xiaomi/account/openauth/i;->b:Z
-
-    goto :goto_1
-
-    :catch_3
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_1
-.end method
-
-.method protected a(Landroid/os/Bundle;)V
-    .locals 8
-
-    if-eqz p1, :cond_2
-
-    const-string v0, "authAccount"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/i;->a:Lcom/xiaomi/account/openauth/h;
-
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/i;->c:Landroid/app/Activity;
-
-    iget-wide v2, p0, Lcom/xiaomi/account/openauth/i;->d:J
-
-    iget-object v4, p0, Lcom/xiaomi/account/openauth/i;->e:Ljava/lang/String;
-
-    iget-object v5, p0, Lcom/xiaomi/account/openauth/i;->f:Ljava/lang/String;
-
-    iget-object v6, p0, Lcom/xiaomi/account/openauth/i;->g:Landroid/os/Bundle;
-
-    iget v7, p0, Lcom/xiaomi/account/openauth/i;->h:I
-
-    invoke-virtual/range {v0 .. v7}, Lcom/xiaomi/account/openauth/h;->b(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;I)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    const-string v0, "intent"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "XiaomiAuthoricator.addAccount() returns intent for UI action, but we don\'t exptect this because activity is not null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    const-string v0, "XiaomiOAuthorize"
-
-    const-string v1, "do nothing after trying to add account, because no valid content in result bundle."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lcom/xiaomi/account/openauth/i;->b:Z
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/i;->a:Lcom/xiaomi/account/openauth/h;
-
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/i;->c:Landroid/app/Activity;
-
-    iget-wide v2, p0, Lcom/xiaomi/account/openauth/i;->d:J
-
-    iget-object v4, p0, Lcom/xiaomi/account/openauth/i;->e:Ljava/lang/String;
-
-    iget-object v5, p0, Lcom/xiaomi/account/openauth/i;->f:Ljava/lang/String;
-
-    iget-object v6, p0, Lcom/xiaomi/account/openauth/i;->g:Landroid/os/Bundle;
-
-    iget v7, p0, Lcom/xiaomi/account/openauth/i;->h:I
-
-    invoke-virtual/range {v0 .. v7}, Lcom/xiaomi/account/openauth/h;->c(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;I)V
-
-    goto :goto_0
-
-    :cond_3
-    const-string v0, "XiaomiOAuthorize"
-
-    const-string v1, "do nothing after trying to add account."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-.end method
-
-.method protected varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p1, [Ljava/lang/Void;
-
-    invoke-virtual {p0, p1}, Lcom/xiaomi/account/openauth/i;->a([Ljava/lang/Void;)Landroid/os/Bundle;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, Landroid/os/Bundle;
-
-    invoke-virtual {p0, p1}, Lcom/xiaomi/account/openauth/i;->a(Landroid/os/Bundle;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

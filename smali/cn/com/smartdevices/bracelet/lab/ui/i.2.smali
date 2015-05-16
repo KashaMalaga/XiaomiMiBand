@@ -1,34 +1,34 @@
 .class Lcn/com/smartdevices/bracelet/lab/ui/i;
-.super Lcn/com/smartdevices/bracelet/a/b;
+.super Lcom/xiaomi/hm/health/bt/a/b;
 
 
 # instance fields
-.field final synthetic b:Z
+.field final synthetic a:Z
 
-.field final synthetic c:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->c:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
-    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->b:Z
+    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Z
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
+    invoke-direct {p0}, Lcom/xiaomi/hm/health/bt/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c(Ljava/lang/Object;)V
+.method public a(Ljava/lang/Object;)V
     .locals 4
 
     const/4 v0, 0x0
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/xiaomi/hm/health/bt/a/b;->a(Ljava/lang/Object;)V
 
     if-eqz p1, :cond_1
 
@@ -40,13 +40,13 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->c:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->b:Z
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Z
 
     if-eqz v2, :cond_0
 
@@ -55,7 +55,7 @@
     :cond_0
     invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setMiliDisconnectedReminder(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->c:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -65,9 +65,9 @@
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setNeedSyncServer(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->c:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->c:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -91,7 +91,7 @@
 
     move-result-object v2
 
-    iget-boolean v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->b:Z
+    iget-boolean v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -113,11 +113,11 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->c:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
-    const v2, 0x7f090065
+    const v2, 0x7f0900fa
 
     invoke-static {v1, v2, v0}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -128,10 +128,10 @@
     goto :goto_0
 .end method
 
-.method public d(Ljava/lang/Object;)V
+.method public b(Ljava/lang/Object;)V
     .locals 3
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/xiaomi/hm/health/bt/a/b;->b(Ljava/lang/Object;)V
 
     const-string v0, "LabFactoryReminderActivity"
 
@@ -145,7 +145,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->b:Z
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -167,11 +167,11 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->c:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
-    const v1, 0x7f090065
+    const v1, 0x7f0900fa
 
     const/4 v2, 0x0
 

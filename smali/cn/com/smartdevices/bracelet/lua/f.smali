@@ -26,7 +26,7 @@
 
     const-string v1, "getLuaZipFile onFailure======================================================="
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -96,7 +96,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/i;->c:Ljava/lang/String;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->z()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readLatestDBLuaVersion()Ljava/lang/String;
 
     move-result-object v1
 
@@ -136,7 +136,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -188,7 +188,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

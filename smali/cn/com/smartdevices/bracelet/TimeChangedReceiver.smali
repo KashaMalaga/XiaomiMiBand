@@ -62,7 +62,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.TIME_SET"
 
@@ -76,7 +76,7 @@
 
     const-string v1, "ACTION_TIME_CHANGED"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -112,17 +112,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/o;
+    new-instance v0, Lcom/xiaomi/hm/health/bt/a/o;
 
     new-instance v1, Lcn/com/smartdevices/bracelet/E;
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/E;-><init>(Lcn/com/smartdevices/bracelet/TimeChangedReceiver;)V
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/a/o;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v0, v1}, Lcom/xiaomi/hm/health/bt/a/o;-><init>(Lcom/xiaomi/hm/health/bt/a/b;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/o;->d()V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/a/o;->f()V
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
@@ -149,7 +149,7 @@
 
     const-string v1, "ACTION_TIMEZONE_CHANGED"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -166,7 +166,7 @@
 
     const-string v1, "ACTION_DATE_CHANGED"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

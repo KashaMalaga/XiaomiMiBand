@@ -3,9 +3,9 @@
 
 
 # static fields
-.field public static final pull_to_refresh_header_horizontal:I = 0x7f0300be
+.field public static final pull_to_refresh_header_horizontal:I = 0x7f0300cc
 
-.field public static final pull_to_refresh_header_vertical:I = 0x7f0300bf
+.field public static final pull_to_refresh_header_vertical:I = 0x7f0300cd
 
 
 # direct methods

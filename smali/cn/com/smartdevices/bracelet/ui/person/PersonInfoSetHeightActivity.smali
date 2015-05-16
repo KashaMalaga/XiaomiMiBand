@@ -14,13 +14,13 @@
 
 .field private d:Lcn/com/smartdevices/bracelet/ui/person/a;
 
-.field private e:Lcn/com/smartdevices/bracelet/ui/cX;
+.field private e:Lcn/com/smartdevices/bracelet/ui/cY;
 
 .field private f:Landroid/widget/TextView;
 
 .field private g:Lkankan/wheel/widget/WheelView;
 
-.field private h:Lcn/com/smartdevices/bracelet/ui/cX;
+.field private h:Lcn/com/smartdevices/bracelet/ui/cY;
 
 .field private i:I
 
@@ -82,7 +82,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -150,7 +150,7 @@
 
     const-string v1, "onCancel"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->b()V
 
@@ -166,7 +166,7 @@
 
     const-string v1, "onNext"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->c()V
 
@@ -196,7 +196,7 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->a()V
 
-    const v0, 0x7f0700e6
+    const v0, 0x7f0d00e0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -208,7 +208,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->f:Landroid/widget/TextView;
 
-    const v1, 0x7f090129
+    const v1, 0x7f0901be
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->getString(I)Ljava/lang/String;
 
@@ -216,7 +216,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
@@ -261,9 +261,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f070121
+    const v0, 0x7f0d011b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -273,7 +273,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->c:Lkankan/wheel/widget/WheelView;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cX;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cY;
 
     const/16 v2, 0x28
 
@@ -285,7 +285,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f0a0005
+    const v5, 0x7f070005
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -295,7 +295,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f0a0009
+    const v6, 0x7f070009
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -305,7 +305,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f0a0008
+    const v7, 0x7f070008
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -323,9 +323,9 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cX;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->h:Lcn/com/smartdevices/bracelet/ui/cX;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->h:Lcn/com/smartdevices/bracelet/ui/cY;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->c:Lkankan/wheel/widget/WheelView;
 
@@ -335,19 +335,19 @@
 
     move-result-object v0
 
-    const v1, 0x7f0201bd
+    const v1, 0x7f0201e4
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f09007f
+    const v1, 0x7f090114
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f0a0009
+    const v2, 0x7f070009
 
     const/16 v3, 0xc
 
@@ -359,7 +359,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->h:Lcn/com/smartdevices/bracelet/ui/cX;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->h:Lcn/com/smartdevices/bracelet/ui/cY;
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
@@ -375,7 +375,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->d:Lcn/com/smartdevices/bracelet/ui/person/a;
 
-    const v0, 0x7f070120
+    const v0, 0x7f0d011a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -391,7 +391,7 @@
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->setVisibility(I)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cX;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cY;
 
     const/4 v2, 0x1
 
@@ -403,7 +403,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f0a0005
+    const v5, 0x7f070005
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -413,7 +413,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f0a0009
+    const v6, 0x7f070009
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -423,7 +423,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f0a0008
+    const v7, 0x7f070008
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -441,9 +441,9 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cX;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->e:Lcn/com/smartdevices/bracelet/ui/cX;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->e:Lcn/com/smartdevices/bracelet/ui/cY;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->g:Lkankan/wheel/widget/WheelView;
 
@@ -453,19 +453,19 @@
 
     move-result-object v0
 
-    const v1, 0x7f0201bd
+    const v1, 0x7f0201e4
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f09007f
+    const v1, 0x7f090114
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f0a0009
+    const v2, 0x7f070009
 
     const/16 v3, 0xc
 
@@ -477,7 +477,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->e:Lcn/com/smartdevices/bracelet/ui/cX;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->e:Lcn/com/smartdevices/bracelet/ui/cY;
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
@@ -495,13 +495,13 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->g:Lkankan/wheel/widget/WheelView;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->e:Lcn/com/smartdevices/bracelet/ui/cX;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->e:Lcn/com/smartdevices/bracelet/ui/cY;
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->c:Lkankan/wheel/widget/WheelView;
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->h:Lcn/com/smartdevices/bracelet/ui/cX;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->h:Lcn/com/smartdevices/bracelet/ui/cY;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/ui/person/a;->a(Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cX;Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cX;)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/ui/person/a;->a(Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cY;Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cY;)V
 
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->c:Lkankan/wheel/widget/WheelView;

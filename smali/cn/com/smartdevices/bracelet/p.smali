@@ -42,7 +42,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -119,7 +119,7 @@
 
     move-result-object v4
 
-    invoke-static {v1, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Lorg/json/JSONObject;
 
@@ -158,7 +158,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_2
 
@@ -221,19 +221,19 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/Keeper;->keepLazyDays(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->k(Ljava/lang/String;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/Keeper;->keepManualLazyDayAlgoStartDate(Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/P;->a:Landroid/content/Context;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/G;->u(Landroid/content/Context;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/G;->v(Landroid/content/Context;)V
 
     :cond_2
     const-string v1, "algo_start_date"
@@ -242,7 +242,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->k(Ljava/lang/String;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/Keeper;->keepManualLazyDayAlgoStartDate(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -252,7 +252,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepLazyDays(Ljava/lang/String;)Ljava/lang/String;
 
     return-void
 
@@ -286,7 +286,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 

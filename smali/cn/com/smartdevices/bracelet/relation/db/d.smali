@@ -1,11 +1,11 @@
 .class public Lcn/com/smartdevices/bracelet/relation/db/d;
-.super Lcn/com/smartdevices/bracelet/f/z;
+.super Lcn/com/smartdevices/bracelet/d/A;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcn/com/smartdevices/bracelet/f/z",
+        "Lcn/com/smartdevices/bracelet/d/A",
         "<",
         "Lcn/com/smartdevices/bracelet/relation/db/Friend;",
         ">;"
@@ -18,10 +18,10 @@
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/f/C;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/d/D;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/f/z;-><init>(Lcn/com/smartdevices/bracelet/f/C;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/d/A;-><init>(Lcn/com/smartdevices/bracelet/d/D;)V
 
     return-void
 .end method
@@ -60,7 +60,7 @@
     aput-object v3, v1, v2
 
     :try_start_0
-    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/relation/db/d;->a(Ljava/lang/String;[Ljava/lang/String;)Lcn/com/smartdevices/bracelet/f/D;
+    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/relation/db/d;->a(Ljava/lang/String;[Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/E;
 
     move-result-object v0
 
@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -162,7 +162,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, v0, v1}, Lcn/com/smartdevices/bracelet/relation/db/d;->a(Lcn/com/smartdevices/bracelet/f/D;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {p0, p1, v0, v1}, Lcn/com/smartdevices/bracelet/relation/db/d;->a(Lcn/com/smartdevices/bracelet/d/E;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0
 
@@ -263,7 +263,7 @@
     :goto_0
     if-nez v0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/relation/db/d;->a(Lcn/com/smartdevices/bracelet/f/D;)Z
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/relation/db/d;->a(Lcn/com/smartdevices/bracelet/d/E;)Z
 
     move-result v0
 

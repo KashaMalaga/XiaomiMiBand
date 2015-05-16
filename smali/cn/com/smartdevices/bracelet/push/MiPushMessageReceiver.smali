@@ -125,7 +125,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "url"
 
@@ -141,7 +141,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
@@ -226,7 +226,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     const/4 v0, 0x0
@@ -428,7 +428,7 @@
 .end method
 
 .method public onReceiveMessage(Landroid/content/Context;Lcom/xiaomi/mipush/sdk/j;)V
-    .locals 2
+    .locals 4
 
     invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/push/MiPushMessageReceiver;->processBetaApkUpgrade(Landroid/content/Context;Lcom/xiaomi/mipush/sdk/j;)Z
 
@@ -440,7 +440,7 @@
 
     const-string v1, "Processed about page jump"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -450,6 +450,28 @@
     invoke-virtual {p2}, Lcom/xiaomi/mipush/sdk/j;->c()Ljava/lang/String;
 
     move-result-object v0
+
+    const-string v1, "MiPushMessageReceiver"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Push message receiver:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/push/h;->a()Lcn/com/smartdevices/bracelet/push/h;
 

@@ -2,19 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcn/com/smartdevices/bracelet/relation/db/a;",
-        ">;"
-    }
-.end annotation
+.implements Lcom/huami/android/view/d;
 
 
 # instance fields
@@ -34,30 +22,48 @@
 
 
 # virtual methods
-.method public a(Lcn/com/smartdevices/bracelet/relation/db/a;Lcn/com/smartdevices/bracelet/relation/db/a;)I
-    .locals 4
+.method public a(Landroid/app/DialogFragment;)V
+    .locals 0
 
-    iget-wide v0, p1, Lcn/com/smartdevices/bracelet/relation/db/a;->n:J
-
-    iget-wide v2, p2, Lcn/com/smartdevices/bracelet/relation/db/a;->n:J
-
-    sub-long/2addr v0, v2
-
-    long-to-int v0, v0
-
-    return v0
+    return-void
 .end method
 
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+.method public b(Landroid/app/DialogFragment;)V
+    .locals 3
 
-    check-cast p1, Lcn/com/smartdevices/bracelet/relation/db/a;
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
-    check-cast p2, Lcn/com/smartdevices/bracelet/relation/db/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/a;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/relation/a;->a(Lcn/com/smartdevices/bracelet/relation/db/a;Lcn/com/smartdevices/bracelet/relation/db/a;)I
+    const v1, 0x7f0904a7
 
-    move-result v0
+    const/4 v2, 0x1
 
-    return v0
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;IZ)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/a;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->b(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Lcn/com/smartdevices/bracelet/relation/A;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/a;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->a(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Lcn/com/smartdevices/bracelet/relation/db/Friend;
+
+    move-result-object v1
+
+    iget-wide v1, v1, Lcn/com/smartdevices/bracelet/relation/db/Friend;->n:J
+
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/A;->c(J)V
+
+    return-void
+.end method
+
+.method public c(Landroid/app/DialogFragment;)V
+    .locals 0
+
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+
+    return-void
 .end method

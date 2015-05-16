@@ -1,159 +1,71 @@
 .class Lcn/com/smartdevices/bracelet/ui/F;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 6
+.method public run()V
+    .locals 3
 
-    const/4 v5, 0x1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    const/4 v4, 0x0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/tencent/QQLogin;
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    move-result-object v0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->logout()V
 
-    :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Landroid/widget/Button;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->c(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Landroid/widget/TextView;
+
+    move-result-object v2
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;Landroid/widget/Button;Landroid/widget/TextView;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/tencent/QQLogin;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->login(Landroid/app/Activity;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
+
+    const-string v1, "QQ_Login"
+
+    const-string v2, "FromQQ"
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->b(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
-
-    goto :goto_0
-
-    :pswitch_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    const v1, 0x7f0901b5
-
-    invoke-static {v0, v1, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->c(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
-
-    goto :goto_0
-
-    :pswitch_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->d(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->c(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
-
-    goto :goto_0
-
-    :pswitch_4
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    const v3, 0x7f0901b7
-
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    const v3, 0x7f090006
-
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->e(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)Landroid/widget/Button;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
-
-    goto :goto_0
-
-    :pswitch_5
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->f(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->e(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)Landroid/widget/Button;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Landroid/widget/Button;->setEnabled(Z)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-    .end packed-switch
 .end method

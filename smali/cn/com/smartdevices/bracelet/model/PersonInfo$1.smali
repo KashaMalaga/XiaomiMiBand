@@ -9,7 +9,7 @@
         "<",
         "Ljava/util/ArrayList",
         "<",
-        "Lcn/com/smartdevices/bracelet/model/AlarmClockItem;",
+        "Lcom/xiaomi/hm/health/bt/AlarmClockItem;",
         ">;>;"
     }
 .end annotation

@@ -75,7 +75,7 @@
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    invoke-static {v0}, Lcom/b/am;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/b/ao;->a(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -214,7 +214,7 @@
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    invoke-static {v1}, Lcom/b/am;->a(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lcom/b/ao;->a(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -270,7 +270,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/b/am;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/b/ao;->a(Ljava/lang/Throwable;)V
 
     move-object v0, v1
 

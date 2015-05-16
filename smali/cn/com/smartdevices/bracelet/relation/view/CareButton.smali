@@ -28,11 +28,13 @@
 
 .field private j:Z
 
-.field private k:Landroid/view/View$OnClickListener;
+.field private k:Lcn/com/smartdevices/bracelet/relation/A;
 
-.field private l:I
+.field private l:Landroid/view/View$OnClickListener;
 
-.field private m:Lcn/com/smartdevices/bracelet/relation/view/b;
+.field private m:I
+
+.field private n:Lcn/com/smartdevices/bracelet/relation/view/b;
 
 
 # direct methods
@@ -59,7 +61,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 8
 
-    const v7, 0x7f07002f
+    const v7, 0x7f0d0032
 
     const/4 v2, -0x2
 
@@ -73,7 +75,13 @@
 
     iput-boolean v6, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->j:Z
 
-    iput v5, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->l:I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/relation/A;->a()Lcn/com/smartdevices/bracelet/relation/A;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->k:Lcn/com/smartdevices/bracelet/relation/A;
+
+    iput v5, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:I
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -111,7 +119,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    const v2, 0x7f090446
+    const v2, 0x7f0904c1
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -187,7 +195,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020060
+    const v1, 0x7f020064
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -221,11 +229,11 @@
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->i:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:Lcn/com/smartdevices/bracelet/relation/view/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->n:Lcn/com/smartdevices/bracelet/relation/view/b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:Lcn/com/smartdevices/bracelet/relation/view/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->n:Lcn/com/smartdevices/bracelet/relation/view/b;
 
     invoke-interface {v0, p0, v2}, Lcn/com/smartdevices/bracelet/relation/view/b;->a(Landroid/view/View;I)V
 
@@ -236,7 +244,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->l:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:I
 
     const/4 v0, 0x1
 
@@ -310,7 +318,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->l:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:I
 
     const/16 v1, 0xa
 
@@ -331,7 +339,7 @@
 .method public a(Lcn/com/smartdevices/bracelet/relation/view/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:Lcn/com/smartdevices/bracelet/relation/view/b;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->n:Lcn/com/smartdevices/bracelet/relation/view/b;
 
     return-void
 .end method
@@ -345,58 +353,80 @@
 .end method
 
 .method public onClick(Landroid/view/View;)V
-    .locals 5
+    .locals 6
 
-    const/16 v4, 0xa
+    const/16 v5, 0xa
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->i:I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/relation/A;->a()Lcn/com/smartdevices/bracelet/relation/A;
 
-    if-ne v0, v1, :cond_1
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/relation/A;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->l:Landroid/view/View$OnClickListener;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->l:Landroid/view/View$OnClickListener;
+
+    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    iget v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->l:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->i:I
+
+    if-eq v0, v2, :cond_0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->l:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:I
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->l:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:I
 
-    if-le v0, v4, :cond_3
+    if-le v0, v5, :cond_3
 
-    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->setEnabled(Z)V
+    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->setEnabled(Z)V
 
-    iput v3, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->i:I
+    iput v4, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->i:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:Lcn/com/smartdevices/bracelet/relation/view/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->n:Lcn/com/smartdevices/bracelet/relation/view/b;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:Lcn/com/smartdevices/bracelet/relation/view/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->n:Lcn/com/smartdevices/bracelet/relation/view/b;
 
-    invoke-interface {v0, p0, v3}, Lcn/com/smartdevices/bracelet/relation/view/b;->a(Landroid/view/View;I)V
+    invoke-interface {v0, p0, v4}, Lcn/com/smartdevices/bracelet/relation/view/b;->a(Landroid/view/View;I)V
 
     :cond_2
-    invoke-direct {p0, v4}, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->a(I)V
+    invoke-direct {p0, v5}, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->a(I)V
 
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->k:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->l:Landroid/view/View$OnClickListener;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->k:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->l:Landroid/view/View$OnClickListener;
 
     invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
@@ -407,18 +437,18 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->g:Landroid/widget/ProgressBar;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    iput v2, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->i:I
 
     :cond_5
-    iput v1, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->i:I
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:Lcn/com/smartdevices/bracelet/relation/view/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->n:Lcn/com/smartdevices/bracelet/relation/view/b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->m:Lcn/com/smartdevices/bracelet/relation/view/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->n:Lcn/com/smartdevices/bracelet/relation/view/b;
 
-    invoke-interface {v0, p0, v1}, Lcn/com/smartdevices/bracelet/relation/view/b;->a(Landroid/view/View;I)V
+    invoke-interface {v0, p0, v2}, Lcn/com/smartdevices/bracelet/relation/view/b;->a(Landroid/view/View;I)V
 
     goto :goto_0
 .end method
@@ -426,7 +456,7 @@
 .method public setOnClickListener(Landroid/view/View$OnClickListener;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->k:Landroid/view/View$OnClickListener;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/view/CareButton;->l:Landroid/view/View$OnClickListener;
 
     return-void
 .end method

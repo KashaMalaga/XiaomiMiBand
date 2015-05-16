@@ -78,9 +78,9 @@
 .method public a()Landroid/animation/Animator;
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/q;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/r;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/view/q;-><init>(Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/view/r;-><init>(Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;)V
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)Landroid/animation/Animator;
 

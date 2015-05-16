@@ -9,7 +9,7 @@
 
 .field private static c:Ljava/util/TimerTask;
 
-.field private static d:Lcn/com/smartdevices/bracelet/a/g;
+.field private static d:Lcom/xiaomi/hm/health/bt/a/g;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->c:Ljava/util/TimerTask;
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/a/g;
+    sput-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcom/xiaomi/hm/health/bt/a/g;
 
     return-void
 .end method
@@ -35,18 +35,18 @@
     return-void
 .end method
 
-.method static synthetic a()Lcn/com/smartdevices/bracelet/a/g;
+.method static synthetic a()Lcom/xiaomi/hm/health/bt/a/g;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/a/g;
+    sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcom/xiaomi/hm/health/bt/a/g;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/a/g;)Lcn/com/smartdevices/bracelet/a/g;
+.method static synthetic a(Lcom/xiaomi/hm/health/bt/a/g;)Lcom/xiaomi/hm/health/bt/a/g;
     .locals 0
 
-    sput-object p0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/a/g;
+    sput-object p0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcom/xiaomi/hm/health/bt/a/g;
 
     return-object p0
 .end method
@@ -58,7 +58,7 @@
 
     const-string v1, "in startTimerTask"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -70,9 +70,9 @@
 
     sput-object v1, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b:Ljava/util/Timer;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/D;
+    new-instance v1, Lcn/com/smartdevices/bracelet/y;
 
-    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/D;-><init>(Ljava/lang/ref/WeakReference;)V
+    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/y;-><init>(Ljava/lang/ref/WeakReference;)V
 
     sput-object v1, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->c:Ljava/util/TimerTask;
 
@@ -96,7 +96,7 @@
 
     const-string v1, "in stopTimerTask"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b:Ljava/util/Timer;
 
@@ -106,7 +106,7 @@
 
     const-string v1, "cancel timer..."
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b:Ljava/util/Timer;
 
@@ -127,7 +127,7 @@
 
     const-string v1, "canel task..."
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->c:Ljava/util/TimerTask;
 
@@ -136,19 +136,19 @@
     sput-object v2, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->c:Ljava/util/TimerTask;
 
     :cond_1
-    sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/a/g;
+    sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcom/xiaomi/hm/health/bt/a/g;
 
     if-eqz v0, :cond_2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/g;
+    new-instance v0, Lcom/xiaomi/hm/health/bt/a/g;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v2, v1}, Lcn/com/smartdevices/bracelet/a/g;-><init>(Lcn/com/smartdevices/bracelet/a/b;I)V
+    invoke-direct {v0, v2, v1}, Lcom/xiaomi/hm/health/bt/a/g;-><init>(Lcom/xiaomi/hm/health/bt/a/b;I)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/g;->d()V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/a/g;->f()V
 
-    sput-object v2, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/a/g;
+    sput-object v2, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcom/xiaomi/hm/health/bt/a/g;
 
     :cond_2
     return-void
@@ -187,7 +187,7 @@
 
     invoke-virtual {v2, v1}, Landroid/support/v4/content/v;->a(Landroid/content/Intent;)Z
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v1
 
@@ -214,7 +214,7 @@
 
     const-string v1, "incoming IDLE"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Call_Idle"
 
@@ -251,7 +251,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Call_Ring"
 
@@ -294,7 +294,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Call_Offhook"
 

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/g/b/a;
+.implements Lcom/xiaomi/h/b/a;
 
 
 # instance fields
@@ -22,7 +22,7 @@
 
 
 # virtual methods
-.method public a(Lcom/xiaomi/g/c/e;)Z
+.method public a(Lcom/xiaomi/h/c/e;)Z
     .locals 1
 
     const/4 v0, 0x1

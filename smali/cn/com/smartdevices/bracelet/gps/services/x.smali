@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/e/c;
+.implements Lcom/xiaomi/hm/health/bt/IRealtimeStepsChangedCB;
 
 
 # instance fields
@@ -30,10 +30,12 @@
 
 
 # virtual methods
-.method public a(I)V
+.method public process(I)V
     .locals 3
 
-    const/4 v0, -0x3
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/c/a;->b()I
+
+    move-result v0
 
     if-ne p1, v0, :cond_0
 
@@ -63,7 +65,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/X;->a:Lcn/com/smartdevices/bracelet/gps/services/U;
 
@@ -77,13 +79,15 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/e/d;->b(ZLcn/com/smartdevices/bracelet/e/c;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/c/a;->a(ZLcom/xiaomi/hm/health/bt/IRealtimeStepsChangedCB;)Z
 
     :goto_0
     return-void
 
     :cond_0
-    const/4 v0, -0x1
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/c/a;->c()I
+
+    move-result v0
 
     if-ne p1, v0, :cond_1
 
@@ -91,7 +95,7 @@
 
     const-string v1, "RealtimeActiveCallback GET_STEPS_FAILED"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

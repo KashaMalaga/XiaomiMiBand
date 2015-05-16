@@ -2,18 +2,26 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/view/bz;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+.field final synthetic a:Landroid/view/View;
+
+.field final synthetic b:Landroid/view/animation/Animation;
+
+.field final synthetic c:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;Landroid/view/View;Landroid/view/animation/Animation;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bh;->c:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Landroid/view/View;
+
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/ui/bh;->b:Landroid/view/animation/Animation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,142 +30,26 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 3
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
-
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;I)I
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "selected  ---> position : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
-
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->b(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
-
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->c(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
-
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->d(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
-
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->e(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
-
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->f(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;I)I
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "selected  ---> lastPager : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->h(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public a(IFI)V
+.method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Landroid/view/View;
 
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bh;->b:Landroid/view/animation/Animation;
 
-    move-result-object v1
-
-    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;ILjava/lang/Float;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
-
-    invoke-static {v0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;IF)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     return-void
 .end method
 
-.method public b(I)V
-    .locals 3
-
-    packed-switch p1, :pswitch_data_0
-
-    :pswitch_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, " Scroll state :"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
 
     return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    return-void
 .end method

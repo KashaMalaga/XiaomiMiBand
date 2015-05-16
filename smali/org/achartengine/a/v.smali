@@ -4773,7 +4773,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {p0}, Lorg/achartengine/a/v;->d_()Lorg/achartengine/a/s;
+    invoke-virtual {p0}, Lorg/achartengine/a/v;->g_()Lorg/achartengine/a/s;
 
     move-result-object v1
 
@@ -5467,14 +5467,6 @@
 .method public abstract d()Ljava/lang/String;
 .end method
 
-.method public d_()Lorg/achartengine/a/s;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
 .method protected f()Landroid/graphics/Rect;
     .locals 1
 
@@ -5487,6 +5479,14 @@
     .locals 1
 
     iget-object v0, p0, Lorg/achartengine/a/v;->f:Lorg/achartengine/c/f;
+
+    return-object v0
+.end method
+
+.method public g_()Lorg/achartengine/a/s;
+    .locals 1
+
+    const/4 v0, 0x0
 
     return-object v0
 .end method

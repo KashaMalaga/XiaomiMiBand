@@ -18,18 +18,22 @@
 
 .field final synthetic b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
 
-.field final synthetic c:Lcn/com/smartdevices/bracelet/weibo/v;
+.field final synthetic c:Landroid/content/Context;
+
+.field final synthetic d:Lcn/com/smartdevices/bracelet/weibo/v;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weibo/A;->c:Lcn/com/smartdevices/bracelet/weibo/v;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weibo/A;->d:Lcn/com/smartdevices/bracelet/weibo/v;
 
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/weibo/A;->a:Lcn/com/smartdevices/bracelet/model/ResponseEntity;
 
     iput-object p3, p0, Lcn/com/smartdevices/bracelet/weibo/A;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
+
+    iput-object p4, p0, Lcn/com/smartdevices/bracelet/weibo/A;->c:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/d/a/a/p;-><init>()V
 
@@ -41,13 +45,15 @@
 .method protected a(Ljava/lang/String;Z)Lcn/com/smartdevices/bracelet/model/ResponseEntity;
     .locals 7
 
+    const/4 v6, 0x0
+
     const-string v0, "WeiboHealthManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "queryLoginStateFromServer:"
+    const-string v2, "queryBindStateFromServer parse: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -61,108 +67,78 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/model/ResponseEntity;
+    new-instance v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;
 
-    invoke-direct {v3}, Lcn/com/smartdevices/bracelet/model/ResponseEntity;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/ResponseEntity;-><init>()V
 
     if-eqz p2, :cond_0
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, v3, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->state:Z
-
-    move-object v0, v3
+    iput-boolean v6, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->state:Z
 
     :goto_0
     return-object v0
 
     :cond_0
-    new-instance v4, Lorg/json/JSONObject;
+    :try_start_0
+    new-instance v3, Lorg/json/JSONObject;
 
-    invoke-direct {v4, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    const/4 v0, -0x1
+    const/4 v1, -0x1
 
-    const-string v1, "code"
+    const-string v2, "code"
 
-    invoke-virtual {v4, v1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_a
-
-    const-string v0, "code"
-
-    invoke-virtual {v4, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    move v1, v0
-
-    :goto_1
-    const-string v0, ""
-
-    const-string v2, "message"
-
-    invoke-virtual {v4, v2}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+    invoke-virtual {v3, v2}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-nez v2, :cond_9
+    if-nez v2, :cond_3
 
-    const-string v0, "message"
+    const-string v1, "code"
 
-    invoke-virtual {v4, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
-    move-result-object v0
+    move-result v1
 
-    move-object v2, v0
+    move v2, v1
 
-    :goto_2
-    const-string v0, "data"
+    :goto_1
+    const-string v1, ""
 
-    invoke-virtual {v4, v0}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+    const-string v4, "message"
 
-    move-result v0
-
-    if-nez v0, :cond_8
-
-    const-string v0, "data"
-
-    invoke-virtual {v4, v0}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v4, v0, Lorg/json/JSONObject;
-
-    if-eqz v4, :cond_8
-
-    check-cast v0, Lorg/json/JSONObject;
-
-    const-string v4, "access_token"
-
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weibo/A;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
+    const-string v1, "message"
 
-    const-string v5, "access_token"
+    invoke-virtual {v3, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, v4, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->accessToken:Ljava/lang/String;
+    move-result-object v1
 
     :cond_1
-    const-string v4, "third_app_uid"
+    const-string v4, "data"
 
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    const-string v4, "data"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v3
+
+    const-string v4, "status"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -170,150 +146,48 @@
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/weibo/A;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
 
-    const-string v5, "third_app_uid"
-
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, v4, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->uid:Ljava/lang/String;
-
-    :cond_2
-    const-string v4, "third_appid"
-
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weibo/A;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    const-string v5, "third_appid"
-
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, v4, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->appId:Ljava/lang/String;
-
-    :cond_3
-    const-string v4, "expires_time"
-
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_4
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weibo/A;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    const-string v5, "expires_time"
-
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, v4, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->expiresTime:Ljava/lang/String;
-
-    :cond_4
-    const-string v4, "expires_in"
-
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_5
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weibo/A;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    const-string v5, "expires_in"
-
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
-
-    move-result-wide v5
-
-    iput-wide v5, v4, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->expiresIn:J
-
-    :cond_5
-    const-string v4, "refresh_token"
-
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_6
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weibo/A;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    const-string v5, "refresh_token"
-
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, v4, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->refreshToken:Ljava/lang/String;
-
-    :cond_6
-    const-string v4, "nick_name"
-
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_7
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weibo/A;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    const-string v5, "nick_name"
-
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, v4, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->nickName:Ljava/lang/String;
-
-    :cond_7
-    const-string v4, "status"
-
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_8
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weibo/A;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
     const-string v5, "status"
 
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
-    move-result v0
+    move-result v3
 
-    iput v0, v4, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->bindState:I
+    iput v3, v4, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->bindState:I
 
-    :cond_8
-    iput v1, v3, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->code:I
+    :cond_2
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weibo/A;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
 
-    iput-object v2, v3, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->msg:Ljava/lang/String;
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->setData(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/A;->b:Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
+    iput v2, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->code:I
 
-    invoke-virtual {v3, v0}, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->setData(Ljava/lang/Object;)V
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->msg:Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-object v0, v3
+    goto :goto_0
 
-    goto/16 :goto_0
+    :catch_0
+    move-exception v1
 
-    :cond_9
-    move-object v2, v0
+    iput-boolean v6, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->state:Z
 
-    goto/16 :goto_2
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weibo/A;->c:Landroid/content/Context;
 
-    :cond_a
-    move v1, v0
+    const v2, 0x7f0903d3
 
-    goto/16 :goto_1
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->msg:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_3
+    move v2, v1
+
+    goto :goto_1
 .end method
 
 .method public a(I[Lorg/apache/http/Header;Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/ResponseEntity;)V
@@ -331,6 +205,12 @@
     return-void
 
     :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/A;->a:Lcn/com/smartdevices/bracelet/model/ResponseEntity;
+
+    iget-boolean v1, p4, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->state:Z
+
+    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->state:Z
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/A;->a:Lcn/com/smartdevices/bracelet/model/ResponseEntity;
 
     iget v1, p4, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->code:I

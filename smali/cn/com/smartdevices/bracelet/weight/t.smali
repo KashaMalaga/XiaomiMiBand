@@ -1,46 +1,76 @@
-.class public Lcn/com/smartdevices/bracelet/weight/t;
-.super Lcn/com/smartdevices/bracelet/ui/aa;
+.class Lcn/com/smartdevices/bracelet/weight/T;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/weight/ac;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aa;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/T;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected inflateLayout()I
-    .locals 1
+.method public a()V
+    .locals 2
 
-    const v0, 0x7f0300ab
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/T;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
 
-    return v0
-.end method
+    const/4 v1, 0x0
 
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 3
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->a(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;Z)Z
 
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/aa;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/T;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
 
-    move-result-object v1
-
-    const v0, 0x7f070320
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->d(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->isSupport(Landroid/content/Context;)Z
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/weight/u;
+    move-result v0
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/weight/u;-><init>(Lcn/com/smartdevices/bracelet/weight/t;)V
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/T;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
 
-    return-object v1
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/T;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+
+    const v1, 0x1020002
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
+
+    goto :goto_0
 .end method

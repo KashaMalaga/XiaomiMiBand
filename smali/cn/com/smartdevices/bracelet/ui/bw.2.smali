@@ -1,50 +1,54 @@
-.class Lcn/com/smartdevices/bracelet/ui/bw;
-.super Landroid/os/Handler;
+.class public Lcn/com/smartdevices/bracelet/ui/bw;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field b:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Landroid/app/Activity;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field a:Ljava/lang/String;
+
+.field b:Ljava/lang/String;
+
+.field c:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;)V
+.method public constructor <init>(Landroid/content/Context;III)V
     .locals 1
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bw;->b:Ljava/lang/ref/WeakReference;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bw;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Landroid/app/Activity;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bw;->a:Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    if-nez p3, :cond_0
+
+    const-string v0, ""
+
+    :goto_0
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bw;->b:Ljava/lang/String;
+
+    if-nez p4, :cond_1
+
+    const-string v0, ""
+
+    :goto_1
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bw;->c:Ljava/lang/String;
+
+    return-void
 
     :cond_0
-    return-void
+    invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1, p4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
 .end method

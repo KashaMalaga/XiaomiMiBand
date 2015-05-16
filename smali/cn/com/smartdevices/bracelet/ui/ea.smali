@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/chart/c/p;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,21 +22,18 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 1
+.method public run()V
+    .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eA;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getActivity()Landroid/app/Activity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/eA;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    move-result-object v0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->o(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)I
 
-    if-eqz v0, :cond_0
+    move-result v1
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->f(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;I)V
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
-
-    :cond_0
     return-void
 .end method

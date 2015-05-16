@@ -5,7 +5,7 @@
 # instance fields
 .field public final a:Ljava/lang/Boolean;
     .annotation runtime Lcom/c/a/a/b;
-        a = "miUpgrade"
+        a = "enable"
     .end annotation
 .end field
 

@@ -3,33 +3,27 @@
 
 
 # static fields
-.field public static final e:Ljava/lang/String; = "expire"
+.field public static final h:Ljava/lang/String; = "expire"
 
-.field public static final f:Ljava/lang/String; = "stype"
+.field public static final i:Ljava/lang/String; = "stype"
 
-.field public static final g:Ljava/lang/String; = "t1"
+.field public static final j:Ljava/lang/String; = "t1"
 
-.field public static final h:Ljava/lang/String; = "t2"
+.field public static final k:Ljava/lang/String; = "t2"
 
-.field public static final i:Ljava/lang/String; = "weight"
+.field public static final l:Ljava/lang/String; = "weight"
 
-.field public static final j:Ljava/lang/String; = "style"
+.field public static final m:Ljava/lang/String; = "style"
 
-.field public static final k:Ljava/lang/String; = "color"
+.field public static final n:Ljava/lang/String; = "color"
 
-.field public static final l:Ljava/lang/String; = "icon"
+.field public static final o:Ljava/lang/String; = "icon"
 
-.field public static final m:Ljava/lang/String; = "url"
+.field public static final p:Ljava/lang/String; = "url"
 
 
 # instance fields
-.field public final n:I
-
-.field public final o:Ljava/lang/String;
-
-.field public final p:Ljava/lang/String;
-
-.field public final q:Ljava/lang/String;
+.field public final q:I
 
 .field public final r:Ljava/lang/String;
 
@@ -39,7 +33,13 @@
 
 .field public final u:Ljava/lang/String;
 
-.field private final v:Ljava/lang/String;
+.field public final v:Ljava/lang/String;
+
+.field public final w:Ljava/lang/String;
+
+.field public final x:Ljava/lang/String;
+
+.field private final y:Ljava/lang/String;
 
 
 # direct methods
@@ -54,7 +54,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/push/f;->n:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/push/f;->q:I
 
     const-string v0, "t1"
 
@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->o:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->r:Ljava/lang/String;
 
     const-string v0, "stype"
 
@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->p:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->s:Ljava/lang/String;
 
     const-string v0, "t2"
 
@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->q:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->t:Ljava/lang/String;
 
     const-string v0, "weight"
 
@@ -86,7 +86,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->r:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->u:Ljava/lang/String;
 
     const-string v0, "style"
 
@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->v:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->y:Ljava/lang/String;
 
     const-string v0, "url"
 
@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->u:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->x:Ljava/lang/String;
 
     const-string v0, "style"
 
@@ -118,7 +118,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->s:Ljava/lang/String;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->v:Ljava/lang/String;
 
     const-string v1, "icon"
 
@@ -126,7 +126,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->t:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->w:Ljava/lang/String;
 
     :goto_0
     return-void
@@ -134,11 +134,11 @@
     :cond_0
     const-string v0, ""
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->s:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->v:Ljava/lang/String;
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->t:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/push/f;->w:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -148,7 +148,7 @@
 .method public a()I
     .locals 1
 
-    const v0, 0x7f070031
+    const v0, 0x7f0d0034
 
     return v0
 .end method
@@ -160,33 +160,33 @@
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/LuaItem;-><init>()V
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/push/f;->n:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/push/f;->q:I
 
     int-to-long v1, v1
 
     invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setExpire(J)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->r:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->u:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setRight(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->p:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->s:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setStype(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->r:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setT1(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->q:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->t:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setT2(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->v:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->y:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setStyleJson(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->u:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->x:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setScript(Ljava/lang/String;)V
 
@@ -198,23 +198,23 @@
 
     invoke-direct {v2}, Lcn/com/smartdevices/bracelet/partner/Partner;-><init>()V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/push/f;->p:Ljava/lang/String;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/push/f;->s:Ljava/lang/String;
 
     iput-object v3, v2, Lcn/com/smartdevices/bracelet/partner/Partner;->id:Ljava/lang/String;
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/push/f;->u:Ljava/lang/String;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/push/f;->x:Ljava/lang/String;
 
     iput-object v3, v2, Lcn/com/smartdevices/bracelet/partner/Partner;->url:Ljava/lang/String;
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/push/f;->o:Ljava/lang/String;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/push/f;->r:Ljava/lang/String;
 
     iput-object v3, v2, Lcn/com/smartdevices/bracelet/partner/Partner;->title:Ljava/lang/String;
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/push/f;->q:Ljava/lang/String;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/push/f;->t:Ljava/lang/String;
 
     iput-object v3, v2, Lcn/com/smartdevices/bracelet/partner/Partner;->shareContent:Ljava/lang/String;
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/push/f;->n:I
+    iget v3, p0, Lcn/com/smartdevices/bracelet/push/f;->q:I
 
     int-to-long v3, v3
 
@@ -224,11 +224,11 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/f;->d:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/d/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/d/x;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/f/x;->a(Ljava/util/List;)Z
+    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/d/x;->a(Ljava/util/List;)Z
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->d:Landroid/content/Context;
 
@@ -278,9 +278,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/f;->r:Ljava/lang/String;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/f;->q:Ljava/lang/String;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/f;->t:Ljava/lang/String;
 
     invoke-virtual {p0, v1, v2, v0}, Lcn/com/smartdevices/bracelet/push/f;->a(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
 

@@ -44,7 +44,7 @@
                 </LinearLayout>
                 <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
                     <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:id="@id/day_mileage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="--" />
-                    <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_mileage" />
+                    <TextView android:textSize="@dimen/font_size_f3" android:textColor="@color/font_color_c3" android:id="@id/label_mileage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_mileage" />
                 </LinearLayout>
                 <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
                     <TextView android:textSize="@dimen/font_size_f1" android:textColor="@color/font_color_c1" android:id="@id/day_heat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="--" />

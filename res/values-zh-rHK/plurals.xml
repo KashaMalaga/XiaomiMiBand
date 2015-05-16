@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <plurals name="picker_number_of_items_selected">
+        <item quantity="other">選中了 %1$d 項</item>
+        <item quantity="zero">選中了 %1$d 項</item>
+        <item quantity="one">選中了 %1$d 項</item>
+    </plurals>
     <plurals name="numberOfPullUpdateReport">
         <item quantity="other">更新了%s條記錄</item>
         <item quantity="one">更新了%s條記錄</item>
@@ -9,5 +14,8 @@
     </plurals>
     <plurals name="numberInch">
         <item quantity="other">%s英寸</item>
+    </plurals>
+    <plurals name="weight_match_user">
+        <item quantity="other">爲你匹配了%1$d個體重相似的人，選一個唄</item>
     </plurals>
 </resources>

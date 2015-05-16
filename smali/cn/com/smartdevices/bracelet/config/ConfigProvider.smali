@@ -370,7 +370,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
     new-instance v0, Ljava/io/InputStreamReader;
@@ -428,7 +428,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -436,7 +436,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -567,7 +567,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/g/a;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/e/a;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     const-string v3, "ConfigProvider"
 
@@ -596,7 +596,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/g/a;->c(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/e/a;->c(Landroid/content/Context;Ljava/lang/String;)V
 
     move v2, v0
 

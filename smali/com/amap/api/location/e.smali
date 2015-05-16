@@ -119,7 +119,7 @@
 
     iget-object v0, v0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
-    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/X;
+    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/Z;
 
     if-eqz v0, :cond_1
 
@@ -131,9 +131,9 @@
 
     iget-object v0, v0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
-    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/X;
+    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/Z;
 
-    invoke-interface {v0, v2}, Lcom/b/X;->a(Lcom/amap/api/location/AMapLocation;)V
+    invoke-interface {v0, v2}, Lcom/b/Z;->a(Lcom/amap/api/location/AMapLocation;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -165,7 +165,7 @@
 
     move-result-wide v3
 
-    invoke-static {v0, v1, v3, v4}, Lcom/b/an;->a(DD)[D
+    invoke-static {v0, v1, v3, v4}, Lcom/b/ap;->a(DD)[D
 
     move-result-object v0
 
@@ -261,7 +261,7 @@
 
     iget-object v0, v0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
-    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/X;
+    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/Z;
 
     if-eqz v0, :cond_1
 
@@ -273,9 +273,9 @@
 
     iget-object v0, v0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
-    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/X;
+    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/Z;
 
-    invoke-interface {v0, v1}, Lcom/b/X;->a(Lcom/amap/api/location/AMapLocation;)V
+    invoke-interface {v0, v1}, Lcom/b/Z;->a(Lcom/amap/api/location/AMapLocation;)V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
 
@@ -378,7 +378,7 @@
 
     iget-object v0, v0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
-    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/X;
+    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/Z;
 
     if-eqz v0, :cond_1
 
@@ -390,9 +390,9 @@
 
     iget-object v0, v0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
-    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/X;
+    iget-object v0, v0, Lcom/amap/api/location/c;->a:Lcom/b/Z;
 
-    invoke-interface {v0, v1}, Lcom/b/X;->a(Lcom/amap/api/location/AMapLocation;)V
+    invoke-interface {v0, v1}, Lcom/b/Z;->a(Lcom/amap/api/location/AMapLocation;)V
 
     goto/16 :goto_0
 
@@ -467,7 +467,7 @@
 
     iget-object v1, v1, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
-    iget-object v1, v1, Lcom/amap/api/location/c;->a:Lcom/b/X;
+    iget-object v1, v1, Lcom/amap/api/location/c;->a:Lcom/b/Z;
 
     if-eqz v1, :cond_7
 
@@ -479,9 +479,9 @@
 
     iget-object v1, v1, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
-    iget-object v1, v1, Lcom/amap/api/location/c;->a:Lcom/b/X;
+    iget-object v1, v1, Lcom/amap/api/location/c;->a:Lcom/b/Z;
 
-    invoke-interface {v1, v2}, Lcom/b/X;->a(Lcom/amap/api/location/AMapLocation;)V
+    invoke-interface {v1, v2}, Lcom/b/Z;->a(Lcom/amap/api/location/AMapLocation;)V
 
     :cond_7
     throw v0

@@ -144,7 +144,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(I)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/f;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -250,7 +250,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(I)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/f;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -451,7 +451,7 @@
 
     mul-int/lit8 v3, v4, 0x3c
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/chart/c/r;->b(I)Ljava/lang/String;
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/g/f;->b(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -559,7 +559,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200ac
+    const v1, 0x7f0200aa
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -584,7 +584,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200ab
+    const v1, 0x7f0200a9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

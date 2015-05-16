@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/weight/L;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/L;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/weight/a;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/RecordWeightActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/a;Lcn/com/smartdevices/bracelet/weight/L;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/RecordWeightActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/e;->b:Lcn/com/smartdevices/bracelet/weight/a;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/L;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/RecordWeightActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,32 +22,12 @@
 
 
 # virtual methods
-.method public a()V
+.method public onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/L;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/RecordWeightActivity;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weight/RecordWeightActivity;->finish()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/L;
-
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/L;->a()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public b()V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/L;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/L;
-
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/L;->b()V
-
-    :cond_0
     return-void
 .end method

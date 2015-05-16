@@ -15,11 +15,11 @@
 
 .field private static final f:I = 0x4
 
-.field private static final g:I = 0x20
+.field private static final g:F = 55.0f
 
-.field private static final h:I = 0x2da
+.field private static final h:F = 243.3f
 
-.field private static final i:I = 0x361
+.field private static final i:F = 288.3f
 
 
 # instance fields
@@ -28,7 +28,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/view/z;",
+            "Lcn/com/smartdevices/bracelet/view/A;",
             ">;"
         }
     .end annotation
@@ -54,9 +54,9 @@
 
 .field private r:I
 
-.field private s:I
+.field private s:F
 
-.field private t:I
+.field private t:F
 
 .field private u:I
 
@@ -214,7 +214,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a007b
+    const v3, 0x7f0700a7
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -234,7 +234,7 @@
 
     const/4 v2, 0x5
 
-    const/high16 v3, 0x42000000
+    const/high16 v3, 0x425c0000
 
     invoke-virtual {v0, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
@@ -282,23 +282,23 @@
 
     const/4 v2, 0x3
 
-    const/16 v3, 0x2da
+    const v3, 0x43734ccd
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {v0, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v2
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->s:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->s:F
 
     const/4 v2, 0x4
 
-    const/16 v3, 0x361
+    const v3, 0x43902666
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {v0, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v2
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->t:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->t:F
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->B:Ljava/lang/String;
 
@@ -312,9 +312,9 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->s:I
+    iget v4, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->s:F
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -324,9 +324,9 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->t:I
+    iget v4, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->t:F
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -334,7 +334,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -438,13 +438,13 @@
 
     if-ge v0, v2, :cond_4
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/view/z;
+    new-instance v2, Lcn/com/smartdevices/bracelet/view/A;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/RippleBackground;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-direct {v2, p0, v3}, Lcn/com/smartdevices/bracelet/view/z;-><init>(Lcn/com/smartdevices/bracelet/view/RippleBackground;Landroid/content/Context;)V
+    invoke-direct {v2, p0, v3}, Lcn/com/smartdevices/bracelet/view/A;-><init>(Lcn/com/smartdevices/bracelet/view/RippleBackground;Landroid/content/Context;)V
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->z:Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -476,9 +476,9 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/view/y;
+    new-instance v4, Lcn/com/smartdevices/bracelet/view/z;
 
-    invoke-direct {v4, p0, v2}, Lcn/com/smartdevices/bracelet/view/y;-><init>(Lcn/com/smartdevices/bracelet/view/RippleBackground;Lcn/com/smartdevices/bracelet/view/z;)V
+    invoke-direct {v4, p0, v2}, Lcn/com/smartdevices/bracelet/view/z;-><init>(Lcn/com/smartdevices/bracelet/view/RippleBackground;Lcn/com/smartdevices/bracelet/view/A;)V
 
     invoke-virtual {v3, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -559,18 +559,18 @@
     .end array-data
 .end method
 
-.method static synthetic b(Lcn/com/smartdevices/bracelet/view/RippleBackground;)I
+.method static synthetic b(Lcn/com/smartdevices/bracelet/view/RippleBackground;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->s:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->s:F
 
     return v0
 .end method
 
-.method static synthetic c(Lcn/com/smartdevices/bracelet/view/RippleBackground;)I
+.method static synthetic c(Lcn/com/smartdevices/bracelet/view/RippleBackground;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->t:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/RippleBackground;->t:F
 
     return v0
 .end method
@@ -628,11 +628,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/z;
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/A;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/view/z;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/view/A;->setVisibility(I)V
 
     goto :goto_1
 

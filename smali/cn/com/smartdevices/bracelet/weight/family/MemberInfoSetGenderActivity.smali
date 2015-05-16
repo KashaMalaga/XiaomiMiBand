@@ -35,13 +35,13 @@
 .method private a(I)V
     .locals 7
 
-    const v6, 0x7f0a0057
+    const v6, 0x7f070027
 
-    const v5, 0x7f0a0056
+    const v5, 0x7f070026
 
-    const v4, 0x7f0a0005
+    const v4, 0x7f070005
 
-    const v3, 0x7f0a0009
+    const v3, 0x7f070009
 
     const/4 v2, 0x1
 
@@ -49,13 +49,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->h:Landroid/widget/ImageView;
 
-    const v1, 0x7f02012d
+    const v1, 0x7f02012c
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->i:Landroid/widget/ImageView;
 
-    const v1, 0x7f02008b
+    const v1, 0x7f02008e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -105,13 +105,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->i:Landroid/widget/ImageView;
 
-    const v1, 0x7f02008c
+    const v1, 0x7f02008f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->h:Landroid/widget/ImageView;
 
-    const v1, 0x7f02012c
+    const v1, 0x7f02012b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -174,7 +174,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a005a
+    const v2, 0x7f07002a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -197,7 +197,7 @@
 
 
 # virtual methods
-.method public c()V
+.method public d()V
     .locals 3
 
     const-string v0, "MemberInfoBaseActivity"
@@ -222,13 +222,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->e:Z
 
     if-nez v0, :cond_0
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->c()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->d()V
 
     :cond_0
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->m:I
@@ -241,7 +241,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f090128
+    const v0, 0x7f0901bd
 
     const/4 v1, 0x0
 
@@ -277,7 +277,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Keeper;->saveCurrentUser(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Landroid/content/Intent;
 
@@ -301,7 +301,7 @@
 
     const-string v2, "WEIGHTADVDATA_KEY"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
     if-nez v0, :cond_2
 
@@ -317,9 +317,9 @@
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->toJsonString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->n()Ljava/lang/String;
 
     move-result-object v0
 
@@ -365,7 +365,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f07011e
+    .packed-switch 0x7f0d0118
         :pswitch_0
         :pswitch_1
     .end packed-switch
@@ -428,20 +428,20 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->fromJsonString(Ljava/lang/String;)Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    invoke-static {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->b(Ljava/lang/String;)Lcom/xiaomi/hm/health/bt/profile/B;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
     :cond_0
     const v0, 0x7f03002b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->setContentView(I)V
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->a()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->b()V
 
-    const v0, 0x7f07011e
+    const v0, 0x7f0d0118
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -455,7 +455,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07011f
+    const v0, 0x7f0d0119
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -469,7 +469,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700e6
+    const v0, 0x7f0d00e0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -481,7 +481,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->j:Landroid/widget/TextView;
 
-    const v1, 0x7f09012a
+    const v1, 0x7f0901bf
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->getString(I)Ljava/lang/String;
 
@@ -489,7 +489,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f07011b
+    const v0, 0x7f0d0115
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -499,7 +499,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->l:Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
 
-    const v0, 0x7f07011c
+    const v0, 0x7f0d0116
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -509,7 +509,7 @@
 
     const-string v0, "CURRENT_USER_GENDER"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->getCurrentUserInfoByTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

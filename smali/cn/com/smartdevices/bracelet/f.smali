@@ -503,35 +503,35 @@
 
 .field public static final eK:Ljava/lang/String; = "Weight_Add_User"
 
-.field public static final eL:Ljava/lang/String; = "Weight_Add_User_Succ"
+.field public static final eL:Ljava/lang/String; = "From_Family_User_List_Page"
 
-.field public static final eM:Ljava/lang/String; = "Weight_Add_User_Fail"
+.field public static final eM:Ljava/lang/String; = "From_Weight_Choose_User_Page"
 
-.field public static final eN:Ljava/lang/String; = "Weight_Del_User"
+.field public static final eN:Ljava/lang/String; = "Weight_Add_User_Succ"
 
-.field public static final eO:Ljava/lang/String; = "Weight_Del_User_Succ"
+.field public static final eO:Ljava/lang/String; = "Weight_Add_User_Fail"
 
-.field public static final eP:Ljava/lang/String; = "Weight_Del_User_Fail"
+.field public static final eP:Ljava/lang/String; = "Weight_Del_User"
 
-.field public static final eQ:Ljava/lang/String; = "Weight_User_Change_Name"
+.field public static final eQ:Ljava/lang/String; = "Weight_Del_User_Succ"
 
-.field public static final eR:Ljava/lang/String; = "Weight_User_Change_Gender"
+.field public static final eR:Ljava/lang/String; = "Weight_Del_User_Fail"
 
-.field public static final eS:Ljava/lang/String; = "Weight_User_Change_Height"
+.field public static final eS:Ljava/lang/String; = "Weight_User_Change_Name"
 
-.field public static final eT:Ljava/lang/String; = "Weight_User_Change_Birth"
+.field public static final eT:Ljava/lang/String; = "Weight_User_Change_Gender"
 
-.field public static final eU:Ljava/lang/String; = "Weight_User_Change_Icon"
+.field public static final eU:Ljava/lang/String; = "Weight_User_Change_Height"
 
-.field public static final eV:Ljava/lang/String; = "Weight_Report_Change_User"
+.field public static final eV:Ljava/lang/String; = "Weight_User_Change_Birth"
 
-.field public static final eW:Ljava/lang/String; = "Weight_Report_Delete"
+.field public static final eW:Ljava/lang/String; = "Weight_User_Change_Icon"
 
-.field public static final eX:Ljava/lang/String; = "Weight_Report_Show"
+.field public static final eX:Ljava/lang/String; = "Weight_User_Change_Weight_Goal"
 
-.field public static final eY:Ljava/lang/String; = "Weight_Cancle_Choose_User"
+.field public static final eY:Ljava/lang/String; = "Weight_Report_Change_User"
 
-.field public static final eZ:Ljava/lang/String; = "Weight_Generate_Weight_Report"
+.field public static final eZ:Ljava/lang/String; = "Weight_Report_Delete"
 
 .field public static final ea:Ljava/lang/String; = "WeatherRequestCityCode"
 
@@ -587,73 +587,145 @@
 
 .field public static final f:Ljava/lang/String; = "PagePersonInfo"
 
-.field public static final fA:Ljava/lang/String; = "PageQrScan"
+.field public static final fA:Ljava/lang/String; = "Weight_Bind_Scale_Fail_And_LookingForHelp"
 
-.field public static final fB:Ljava/lang/String; = "SendCareToBraceletSuccess"
+.field public static final fB:Ljava/lang/String; = "value_device_not_found"
 
-.field public static final fC:Ljava/lang/String; = "SendCareToBraceletFail"
+.field public static final fC:Ljava/lang/String; = "value_device_bind_fail"
 
-.field public static final fD:Ljava/lang/String; = "SendCareToFriend"
+.field public static final fD:Ljava/lang/String; = "Click_Family_Member_Page"
 
-.field private static final fE:Ljava/lang/String; = "UmengAnalyticsTracker"
+.field public static final fE:Ljava/lang/String; = "Click_Family_Member_List"
 
-.field private static fF:Z = false
+.field public static final fF:Ljava/lang/String; = "Click_Del_User_And_OK"
 
-.field private static fG:Landroid/content/Context; = null
+.field public static final fG:Ljava/lang/String; = "Weight_Set_Weight_Goal"
 
-.field public static final fa:Ljava/lang/String; = "Weight_Auto_Merge_Weight"
+.field public static final fH:Ljava/lang/String; = "Weight_Reset_Weight_Goal"
 
-.field public static final fb:Ljava/lang/String; = "Weight_Click_About_Scale"
+.field public static final fI:Ljava/lang/String; = "Weight_Clear_Weight_Goal"
 
-.field public static final fc:Ljava/lang/String; = "Binded_Device"
+.field public static final fJ:Ljava/lang/String; = "Weight_Create_User_Weight"
 
-.field public static final fd:Ljava/lang/String; = "Weight_Sync_History"
+.field public static final fK:Ljava/lang/String; = "Weight_Create_User_Weight_MANUAL"
 
-.field public static final fe:Ljava/lang/String; = "Click_Sync_Weight_History_LuaItem"
+.field public static final fL:Ljava/lang/String; = "Weight_Create_User_Weight_SCALE"
 
-.field public static final ff:Ljava/lang/String; = "Scale_Connect_Fail"
+.field public static final fM:Ljava/lang/String; = "Weight_Share_Weight_Report"
 
-.field public static final fg:Ljava/lang/String; = "Bind_Scale"
+.field public static final fN:Ljava/lang/String; = "Weight_Report_BMI"
 
-.field public static final fh:Ljava/lang/String; = "Connect_Device_Time"
+.field public static final fO:Ljava/lang/String; = "Weight_Show_About_Scale"
 
-.field public static final fi:Ljava/lang/String; = "Reboot_Count"
+.field public static final fP:Ljava/lang/String; = "Weight_Item_Show_Set_Weight_Goal"
 
-.field public static final fj:Ljava/lang/String; = "AddFriendEnter"
+.field public static final fQ:Ljava/lang/String; = "PageAddFriend"
 
-.field public static final fk:Ljava/lang/String; = "PageAddFriend"
+.field public static final fR:Ljava/lang/String; = "PageFriendDetail"
 
-.field public static final fl:Ljava/lang/String; = "FriendDetailEnter"
+.field public static final fS:Ljava/lang/String; = "PageFriendMain"
 
-.field public static final fm:Ljava/lang/String; = "PageFriendDetail"
+.field public static final fT:Ljava/lang/String; = "PageMessage"
 
-.field public static final fn:Ljava/lang/String; = "FriendMainEnter"
+.field public static final fU:Ljava/lang/String; = "PageRemark"
 
-.field public static final fo:Ljava/lang/String; = "PageFriendMain"
+.field public static final fV:Ljava/lang/String; = "PageSearchResult"
 
-.field public static final fp:Ljava/lang/String; = "MessageEnter"
+.field public static final fW:Ljava/lang/String; = "PageUserCard"
 
-.field public static final fq:Ljava/lang/String; = "PageMessage"
+.field public static final fX:Ljava/lang/String; = "PageQrScan"
 
-.field public static final fr:Ljava/lang/String; = "RemarkEnter"
+.field public static final fY:Ljava/lang/String; = "PageGalleryPicker"
 
-.field public static final fs:Ljava/lang/String; = "PageRemark"
+.field public static final fZ:Ljava/lang/String; = "AddFriendEnter"
 
-.field public static final ft:Ljava/lang/String; = "SearchResultEnter"
+.field public static final fa:Ljava/lang/String; = "Weight_Report_Show"
 
-.field public static final fu:Ljava/lang/String; = "PageSearchResult"
+.field public static final fb:Ljava/lang/String; = "Weight_Report_Show_From_Dynamic"
 
-.field public static final fv:Ljava/lang/String; = "UserCardEnter"
+.field public static final fc:Ljava/lang/String; = "Weight_Cancle_Choose_User"
 
-.field public static final fw:Ljava/lang/String; = "PageUserCard"
+.field public static final fd:Ljava/lang/String; = "Weight_Generate_Weight_Report"
 
-.field public static final fx:Ljava/lang/String; = "GalleryPickerEnter"
+.field public static final fe:Ljava/lang/String; = "Weight_Auto_Merge_Weight"
 
-.field public static final fy:Ljava/lang/String; = "PageGalleryPicker"
+.field public static final ff:Ljava/lang/String; = "ON"
 
-.field public static final fz:Ljava/lang/String; = "QrcodeScanEnter"
+.field public static final fg:Ljava/lang/String; = "OFF"
+
+.field public static final fh:Ljava/lang/String; = "Weight_Click_About_Scale"
+
+.field public static final fi:Ljava/lang/String; = "Binded_Device"
+
+.field public static final fj:Ljava/lang/String; = "Weight_Sync_History"
+
+.field public static final fk:Ljava/lang/String; = "Click_Sync_Weight_History_LuaItem"
+
+.field public static final fl:Ljava/lang/String; = "Scale_Connect_Fail"
+
+.field public static final fm:Ljava/lang/String; = "Bind_Scale"
+
+.field public static final fn:Ljava/lang/String; = "Connect_Device_Time"
+
+.field public static final fo:Ljava/lang/String; = "Reboot_Count"
+
+.field public static final fp:Ljava/lang/String; = "Weight_Choose_User"
+
+.field public static final fq:Ljava/lang/String; = "Weight_Show_Statistic"
+
+.field public static final fr:Ljava/lang/String; = "Weight_Show_Instruction_Page"
+
+.field public static final fs:Ljava/lang/String; = "Weight_Click_Unbind"
+
+.field public static final ft:Ljava/lang/String; = "Weight_Bind_Later"
+
+.field public static final fu:Ljava/lang/String; = "Weight_Bind_Scale_Timeout"
+
+.field public static final fv:Ljava/lang/String; = "Weight_Bind_Scale_Fail"
+
+.field public static final fw:Ljava/lang/String; = "Weight_Bind_Scale_OK_Automatic"
+
+.field public static final fx:Ljava/lang/String; = "Weight_Bind_Scale_OK_Manual"
+
+.field public static final fy:Ljava/lang/String; = "Weight_Bind_Scale_Fail_And_Rebind"
+
+.field public static final fz:Ljava/lang/String; = "Weight_Bind_Scale_Fail_And_Not_Bind"
 
 .field public static final g:Ljava/lang/String; = "PagePersonInfoGender"
+
+.field public static final ga:Ljava/lang/String; = "RemoveFriend"
+
+.field public static final gb:Ljava/lang/String; = "FriendDetailEnter"
+
+.field public static final gc:Ljava/lang/String; = "FriendMainEnter"
+
+.field public static final gd:Ljava/lang/String; = "MessageEnter"
+
+.field public static final ge:Ljava/lang/String; = "RemarkEnter"
+
+.field public static final gf:Ljava/lang/String; = "SearchResultEnter"
+
+.field public static final gg:Ljava/lang/String; = "UserCardEnter"
+
+.field public static final gh:Ljava/lang/String; = "GalleryPickerEnter"
+
+.field public static final gi:Ljava/lang/String; = "QrcodeScanEnter"
+
+.field public static final gj:Ljava/lang/String; = "SendCareToBraceletSuccess"
+
+.field public static final gk:Ljava/lang/String; = "SendCareToBraceletFail"
+
+.field public static final gl:Ljava/lang/String; = "SendCareToFriend"
+
+.field public static final gm:Ljava/lang/String; = "AcceptCareInvitation"
+
+.field public static final gn:Ljava/lang/String; = "RefusedCareToFriend"
+
+.field private static final go:Ljava/lang/String; = "UmengAnalyticsTracker"
+
+.field private static gp:Z = false
+
+.field private static gq:Landroid/content/Context; = null
 
 .field public static final h:Ljava/lang/String; = "PagePersonInfoUnit"
 
@@ -700,7 +772,7 @@
 
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sput-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     return-void
 .end method
@@ -716,7 +788,7 @@
 .method public static a(Landroid/content/Context;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -754,7 +826,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/Exception;)V
     .locals 1
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -790,7 +862,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -845,7 +917,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -935,7 +1007,7 @@
         }
     .end annotation
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -995,7 +1067,7 @@
         }
     .end annotation
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -1053,7 +1125,7 @@
 .method public static a(Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -1111,15 +1183,15 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-boolean p0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sput-boolean p0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     invoke-static {p1}, Lcom/g/a/f;->e(Z)V
 
     invoke-static {p2}, Lcom/g/a/f;->d(Z)V
 
-    sput-object p3, Lcn/com/smartdevices/bracelet/F;->fG:Landroid/content/Context;
+    sput-object p3, Lcn/com/smartdevices/bracelet/F;->gq:Landroid/content/Context;
 
     return-void
 .end method
@@ -1127,7 +1199,7 @@
 .method public static a()Z
     .locals 1
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     return v0
 .end method
@@ -1135,7 +1207,7 @@
 .method public static b(Landroid/content/Context;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -1173,7 +1245,7 @@
 .method public static b(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -1211,7 +1283,7 @@
 .method public static b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -1259,7 +1331,7 @@
 .method public static b(Ljava/lang/String;)V
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/F;->fG:Landroid/content/Context;
+    sget-object v0, Lcn/com/smartdevices/bracelet/F;->gq:Landroid/content/Context;
 
     invoke-static {v0, p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -1269,7 +1341,7 @@
 .method public static c(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -1285,7 +1357,7 @@
 .method public static c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 
@@ -1340,7 +1412,7 @@
 .method public static c(Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->fF:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/F;->gp:Z
 
     if-nez v0, :cond_0
 

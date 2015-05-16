@@ -17,7 +17,7 @@
 
 .field private f:Landroid/widget/TextView;
 
-.field private g:Lcn/com/smartdevices/bracelet/ui/T;
+.field private g:Lcn/com/smartdevices/bracelet/ui/V;
 
 .field private h:Landroid/content/Context;
 
@@ -60,7 +60,7 @@
 .method private c()V
     .locals 3
 
-    const v0, 0x7f070183
+    const v0, 0x7f0d0191
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->findViewById(I)Landroid/view/View;
 
@@ -70,23 +70,23 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->c:Landroid/support/v4/view/ViewPager;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/T;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/V;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/ui/T;-><init>(Landroid/app/FragmentManager;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/ui/V;-><init>(Landroid/app/FragmentManager;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->g:Lcn/com/smartdevices/bracelet/ui/T;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->g:Lcn/com/smartdevices/bracelet/ui/V;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/datasource/DeviceSource;->hasBindBracelet()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/datasource/DeviceSource;->hasBindWeight()Z
 
     move-result v0
 
@@ -104,11 +104,11 @@
     :goto_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->c:Landroid/support/v4/view/ViewPager;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->g:Lcn/com/smartdevices/bracelet/ui/T;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->g:Lcn/com/smartdevices/bracelet/ui/V;
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ae;)V
 
-    const v0, 0x7f07007f
+    const v0, 0x7f0d0079
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->findViewById(I)Landroid/view/View;
 
@@ -124,7 +124,7 @@
 
     invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/ui/widget/c;->a(Landroid/support/v4/view/ViewPager;)V
 
-    const v0, 0x7f070184
+    const v0, 0x7f0d0192
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->findViewById(I)Landroid/view/View;
 
@@ -134,7 +134,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->e:Landroid/widget/TextView;
 
-    const v0, 0x7f070185
+    const v0, 0x7f0d0193
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->findViewById(I)Landroid/view/View;
 
@@ -144,13 +144,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->f:Landroid/widget/TextView;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->g()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->l:Lcn/com/smartdevices/bracelet/config/p;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->l:Lcn/com/smartdevices/bracelet/config/q;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/p;->a:Ljava/lang/Boolean;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/q;->a:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -169,21 +169,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->b:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dz;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/dz;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)V
-
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/ui/widget/c;->a(Landroid/support/v4/view/bz;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->e:Landroid/widget/TextView;
-
     new-instance v1, Lcn/com/smartdevices/bracelet/ui/dA;
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/dA;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/ui/widget/c;->a(Landroid/support/v4/view/bz;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->f:Landroid/widget/TextView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->e:Landroid/widget/TextView;
 
     new-instance v1, Lcn/com/smartdevices/bracelet/ui/dB;
 
@@ -191,16 +183,24 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->f:Landroid/widget/TextView;
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dC;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/dC;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
     return-void
 
     :cond_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/datasource/DeviceSource;->hasBindBracelet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/datasource/DeviceSource;->hasBindWeight()Z
 
     move-result v0
 
@@ -262,7 +262,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "TYPE_WEIGHT"
 
@@ -316,7 +316,7 @@
 
     const/4 v4, 0x1
 
-    const v2, 0x7f0a0055
+    const v2, 0x7f070025
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->getResources()Landroid/content/res/Resources;
 
@@ -324,13 +324,13 @@
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/datasource/DeviceSource;->hasBindBracelet()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->c()Z
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->c()Z
 
     move-result v0
 
@@ -340,7 +340,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a004d
+    const v1, 0x7f070085
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -349,7 +349,7 @@
     move v1, v0
 
     :goto_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/datasource/DeviceSource;->hasBindWeight()Z
 
     move-result v0
 
@@ -359,7 +359,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0a004e
+    const v2, 0x7f070086
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -378,9 +378,9 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/support/v4/view/ViewPager;->a(IZ)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dC;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dD;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/dC;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/dD;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)V
 
     new-array v3, v4, [Landroid/view/View;
 
@@ -467,26 +467,9 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->a()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->g:Lcn/com/smartdevices/bracelet/ui/T;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->g:Lcn/com/smartdevices/bracelet/ui/V;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/T;->c()V
-
-    return-void
-.end method
-
-.method public extendSetting(Landroid/view/View;)V
-    .locals 2
-    .param p1, "view"    # Landroid/view/View;
-
-    .prologue
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lcn/com/smartdevices/bracelet/ExtendActivity;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .local v0, "intent":Landroid/content/Intent;
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/V;->c()V
 
     return-void
 .end method
@@ -508,7 +491,7 @@
 
     move-result-object v0
 
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/dO;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/dP;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -518,7 +501,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/dO;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/dP;
 
     const-string v1, "SettingActivity"
 
@@ -540,11 +523,11 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/dO;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/dP;->onActivityResult(IILandroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -555,7 +538,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030041
+    const v0, 0x7f030044
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->setContentView(I)V
 
@@ -575,7 +558,7 @@
 
     const-string v1, "onNewIntent"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -597,7 +580,7 @@
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->h()I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/datasource/DeviceSource;->getDeviceCount()I
 
     move-result v0
 

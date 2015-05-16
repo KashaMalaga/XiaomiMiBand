@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/gps/ui/a;
-.super Lcn/com/smartdevices/bracelet/ui/aa;
+.super Lcom/huami/android/view/b;
 
 
 # static fields
@@ -11,18 +11,18 @@
 
 
 # instance fields
-.field private d:Lcn/com/smartdevices/bracelet/ui/ac;
+.field private d:Lcom/huami/android/view/d;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aa;-><init>()V
+    invoke-direct {p0}, Lcom/huami/android/view/b;-><init>()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcn/com/smartdevices/bracelet/ui/ac;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcom/huami/android/view/d;
 
     return-void
 .end method
@@ -103,68 +103,64 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f030090
+    sget v0, Lcom/xiaomi/hm/health/b/a/j;->fragment_running_short_track_confirm:I
 
     return v0
 .end method
 
 .method public onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 2
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_0
+    sget v1, Lcom/xiaomi/hm/health/b/a/i;->left_button:I
 
-    :pswitch_0
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/aa;->onClick(Landroid/view/View;)V
+    if-ne v0, v1, :cond_1
 
-    :goto_0
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcn/com/smartdevices/bracelet/ui/ac;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcom/huami/android/view/d;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcn/com/smartdevices/bracelet/ui/ac;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcom/huami/android/view/d;
 
-    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/ac;->b(Landroid/app/DialogFragment;)V
+    invoke-interface {v0, p0}, Lcom/huami/android/view/d;->b(Landroid/app/DialogFragment;)V
 
     :cond_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/a;->dismiss()V
 
-    goto :goto_0
-
-    :pswitch_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcn/com/smartdevices/bracelet/ui/ac;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcn/com/smartdevices/bracelet/ui/ac;
-
-    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/ac;->c(Landroid/app/DialogFragment;)V
+    :goto_0
+    return-void
 
     :cond_1
+    sget v1, Lcom/xiaomi/hm/health/b/a/i;->right_button:I
+
+    if-ne v0, v1, :cond_3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcom/huami/android/view/d;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcom/huami/android/view/d;
+
+    invoke-interface {v0, p0}, Lcom/huami/android/view/d;->c(Landroid/app/DialogFragment;)V
+
+    :cond_2
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/a;->dismiss()V
 
     goto :goto_0
 
-    nop
+    :cond_3
+    invoke-super {p0, p1}, Lcom/huami/android/view/b;->onClick(Landroid/view/View;)V
 
-    :pswitch_data_0
-    .packed-switch 0x7f070209
-        :pswitch_1
-        :pswitch_0
-        :pswitch_2
-    .end packed-switch
+    goto :goto_0
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 5
 
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/aa;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcom/huami/android/view/b;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 
@@ -178,7 +174,7 @@
 
     move-result-object v3
 
-    const v0, 0x7f07007b
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->description:I
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -188,7 +184,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f070209
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->left_button:I
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -213,7 +209,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_0
-    const v0, 0x7f07020b
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->right_button:I
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -241,10 +237,10 @@
     return-object v1
 .end method
 
-.method public setOpClickListener(Lcn/com/smartdevices/bracelet/ui/ac;)V
+.method public setOpClickListener(Lcom/huami/android/view/d;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcn/com/smartdevices/bracelet/ui/ac;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->d:Lcom/huami/android/view/d;
 
     return-void
 .end method

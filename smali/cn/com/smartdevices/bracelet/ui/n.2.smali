@@ -18,7 +18,7 @@
 .method private a(Landroid/view/View;)V
     .locals 2
 
-    const v0, 0x7f07003d
+    const v0, 0x7f0d003e
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

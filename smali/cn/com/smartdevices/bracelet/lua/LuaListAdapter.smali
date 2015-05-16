@@ -592,7 +592,7 @@
 
     const/4 v3, 0x0
 
-    const v10, 0x7f070333
+    const v10, 0x7f0d0353
 
     const/16 v9, 0x8
 
@@ -612,13 +612,13 @@
 
     move-result-object v0
 
-    const v2, 0x7f0300b4
+    const v2, 0x7f0300c1
 
     invoke-virtual {v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    const v0, 0x7f070334
+    const v0, 0x7f0d0354
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -628,7 +628,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/e;->a:Landroid/widget/TextView;
 
-    const v0, 0x7f070335
+    const v0, 0x7f0d0355
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -638,7 +638,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/e;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f070332
+    const v0, 0x7f0d0352
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -648,7 +648,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/e;->c:Landroid/widget/ImageView;
 
-    const v0, 0x7f0700ef
+    const v0, 0x7f0d00e9
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -765,7 +765,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f0a0001
+    const v6, 0x7f070001
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -824,7 +824,7 @@
 
     move-result-object v6
 
-    invoke-static {v1, v6}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -850,7 +850,7 @@
 
     iput v8, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e;->a()Lcn/com/smartdevices/bracelet/e;
 
     move-result-object v1
 
@@ -860,7 +860,7 @@
 
     invoke-direct {v7, p0}, Lcn/com/smartdevices/bracelet/lua/b;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)V
 
-    invoke-virtual {v1, v3, v6, v7}, Lcn/com/smartdevices/bracelet/l;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/f/a/b/f/a;)V
+    invoke-virtual {v1, v3, v6, v7}, Lcn/com/smartdevices/bracelet/e;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/f/a/b/f/a;)V
 
     :goto_4
     iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->a:Landroid/widget/TextView;
@@ -992,7 +992,7 @@
 
     move-result-object v3
 
-    const v6, 0x7f08000d
+    const v6, 0x7f080008
 
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -1028,11 +1028,11 @@
 
     const/4 v7, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/i;->a()Lcn/com/smartdevices/bracelet/i;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/i;->b()Lde/greenrobot/daobracelet/LuaListDao;
 
     move-result-object v0
 

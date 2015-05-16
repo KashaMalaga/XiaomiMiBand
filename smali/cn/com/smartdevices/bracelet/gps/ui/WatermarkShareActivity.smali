@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;
-.super Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+.super Lcom/huami/android/ui/ActionBarActivity;
 
 # interfaces
 .implements Lcom/huami/android/b/a/j;
@@ -10,16 +10,30 @@
 
 .field private b:Ljava/lang/String;
 
-.field private c:Landroid/widget/TextView;
-
-.field private d:Lcom/huami/android/b/a/h;
+.field private c:Lcom/huami/android/b/a/h;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 2
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;-><init>()V
+    const-string v0, "PageWaterMark"
+
+    const-string v1, "PageWaterMarkShare"
+
+    invoke-direct {p0, v0, v1}, Lcom/huami/android/ui/ActionBarActivity;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    const-string v0, "PageWaterMark"
+
+    const-string v1, "PageWaterMarkShare"
+
+    invoke-direct {p0, v0, v1}, Lcom/huami/android/ui/ActionBarActivity;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -35,51 +49,17 @@
 .method static synthetic b(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;)Lcom/huami/android/b/a/h;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->d:Lcom/huami/android/b/a/h;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->c:Lcom/huami/android/b/a/h;
 
     return-object v0
 .end method
 
 .method private b()V
-    .locals 2
+    .locals 3
 
-    const v0, 0x7f07003d
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->share_pane_container:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->c:Landroid/widget/TextView;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->c:Landroid/widget/TextView;
-
-    const v1, 0x7f0903e0
-
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->c:Landroid/widget/TextView;
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/aA;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aA;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
-.method private c()V
-    .locals 4
-
-    const v3, 0x7f070117
-
-    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -93,7 +73,7 @@
 
     invoke-direct {v0}, Lcom/huami/android/b/a/h;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->d:Lcom/huami/android/b/a/h;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->c:Lcom/huami/android/b/a/h;
 
     new-instance v0, Landroid/os/Bundle;
 
@@ -105,7 +85,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->d:Lcom/huami/android/b/a/h;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->c:Lcom/huami/android/b/a/h;
 
     invoke-virtual {v1, v0}, Lcom/huami/android/b/a/h;->setArguments(Landroid/os/Bundle;)V
 
@@ -117,17 +97,33 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->d:Lcom/huami/android/b/a/h;
+    sget v1, Lcom/xiaomi/hm/health/b/a/i;->share_pane_container:I
 
-    invoke-virtual {v0, v3, v1}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->c:Lcom/huami/android/b/a/h;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->d:Lcom/huami/android/b/a/h;
+    invoke-virtual {v0, v1, v2}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->c:Lcom/huami/android/b/a/h;
 
     invoke-virtual {v1, p0}, Lcom/huami/android/b/a/h;->a(Lcom/huami/android/b/a/j;)V
 
     invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
     goto :goto_0
+.end method
+
+.method private c()V
+    .locals 2
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->getActionBar()Landroid/app/ActionBar;
+
+    move-result-object v0
+
+    sget v1, Lcom/xiaomi/hm/health/b/a/n;->running_share:I
+
+    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setTitle(I)V
+
+    return-void
 .end method
 
 .method public static start(Landroid/content/Context;Ljava/lang/String;)Z
@@ -155,25 +151,25 @@
 .method public a()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aB;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aw;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aB;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aw;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;)V
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method protected onCreate(Landroid/os/Bundle;)V
+.method public onCreate(Landroid/os/Bundle;)V
     .locals 2
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/huami/android/ui/ActionBarActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030039
+    sget v0, Lcom/xiaomi/hm/health/b/a/j;->activity_running_watermark_share:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->setContentView(I)V
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->b()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->c()V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->getIntent()Landroid/content/Intent;
 
@@ -190,9 +186,9 @@
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->b:Ljava/lang/String;
 
     :cond_0
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->c()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->b()V
 
-    const v0, 0x7f07016f
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->tv_photo:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->findViewById(I)Landroid/view/View;
 
@@ -218,7 +214,7 @@
 .method protected onPause()V
     .locals 1
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onPause()V
+    invoke-super {p0}, Lcom/huami/android/ui/ActionBarActivity;->onPause()V
 
     const-string v0, "PageWaterMarkShare"
 
@@ -232,7 +228,7 @@
 .method public onResume()V
     .locals 1
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
+    invoke-super {p0}, Lcom/huami/android/ui/ActionBarActivity;->onResume()V
 
     const-string v0, "PageWaterMarkShare"
 

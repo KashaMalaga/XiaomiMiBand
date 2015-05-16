@@ -30,7 +30,7 @@
 
     const-string v0, "ServiceActivity"
 
-    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onLoadResource(Landroid/webkit/WebView;Ljava/lang/String;)V
 
@@ -177,7 +177,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity$3;->this$0:Lcn/com/smartdevices/bracelet/partner/WebActivity;
 
-    const v2, 0x7f09020d
+    const v2, 0x7f0902a2
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->getString(I)Ljava/lang/String;
 
@@ -307,7 +307,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity$3;->this$0:Lcn/com/smartdevices/bracelet/partner/WebActivity;
 
-    const v2, 0x7f0903ef
+    const v2, 0x7f090530
 
     invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;I)V
 
@@ -526,21 +526,25 @@
 
     new-instance v0, Landroid/content/Intent;
 
-    const-string v2, "cn.com.smartdevices.gps.ui.run"
+    const-string v2, "com.xiaomi.hm.health.action.RUNNING"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v2, "app://hm.xiaomi.com/run"
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity$3;->this$0:Lcn/com/smartdevices/bracelet/partner/WebActivity;
 
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity$3;->this$0:Lcn/com/smartdevices/bracelet/partner/WebActivity;
 
     invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->startActivity(Landroid/content/Intent;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity$3;->this$0:Lcn/com/smartdevices/bracelet/partner/WebActivity;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->finish()V
 
     goto/16 :goto_2
 
@@ -582,7 +586,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;)V
 
     goto :goto_4
 

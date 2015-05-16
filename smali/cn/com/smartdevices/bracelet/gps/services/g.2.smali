@@ -123,7 +123,7 @@
 
     iget v4, p0, Lcn/com/smartdevices/bracelet/gps/services/g;->e:I
 
-    invoke-static {v0, v2, v3, v4}, Lcn/com/smartdevices/bracelet/gps/a/b;->b(Landroid/content/Context;JI)Lcn/com/smartdevices/bracelet/gps/services/j;
+    invoke-static {v0, v2, v3, v4}, Lcn/com/smartdevices/bracelet/gps/b/a/n;->b(Landroid/content/Context;JI)Lcn/com/smartdevices/bracelet/gps/services/l;
 
     move-result-object v0
 
@@ -149,7 +149,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -164,14 +164,14 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
 
     :cond_1
     :try_start_1
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/j;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/l;->d()Ljava/lang/String;
 
     move-result-object v4
 
@@ -225,7 +225,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -234,7 +234,7 @@
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/gps/services/g;->f:Landroid/content/Context;
 
-    invoke-static {v4, v5, v0}, Lcn/com/smartdevices/bracelet/gps/services/d;->a(Lcn/com/smartdevices/bracelet/gps/services/d;Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/j;)Ljava/lang/String;
+    invoke-static {v4, v5, v0}, Lcn/com/smartdevices/bracelet/gps/services/d;->a(Lcn/com/smartdevices/bracelet/gps/services/d;Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/l;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -248,14 +248,14 @@
 
     const-string v2, "LoadContourTrackTask newUri is null"
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_3
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/services/g;->f:Landroid/content/Context;
 
-    invoke-static {v4, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;JLjava/lang/String;)Z
+    invoke-static {v4, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/b/a/n;->a(Landroid/content/Context;JLjava/lang/String;)Z
 
     move-result v4
 
@@ -301,7 +301,7 @@
 
     move-result-object v4
 
-    invoke-static {v5, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/services/g;->d:Lcn/com/smartdevices/bracelet/gps/services/d;

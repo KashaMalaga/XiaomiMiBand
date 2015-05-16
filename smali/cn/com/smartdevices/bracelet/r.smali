@@ -62,7 +62,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p4}, Ljava/lang/Throwable;->printStackTrace()V
 
@@ -106,7 +106,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/R;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -116,11 +116,11 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/R;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-static {v2, v0, v3}, Lcn/com/smartdevices/bracelet/k/h;->a(Landroid/content/Context;Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/k/i;
+    invoke-static {v2, v0, v3}, Lcn/com/smartdevices/bracelet/k/k;->a(Landroid/content/Context;Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/k/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/l;->c()Z
 
     move-result v0
 
@@ -160,13 +160,13 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e;->a()Lcn/com/smartdevices/bracelet/e;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/l;->d(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e;->d(Ljava/lang/String;)V
 
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/R;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
@@ -175,11 +175,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/R;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepPersonInfo(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     const/4 v0, 0x1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->o(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepIsLocationUploaded(Z)V
 
     return-void
 .end method

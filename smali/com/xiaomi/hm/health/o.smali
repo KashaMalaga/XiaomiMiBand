@@ -19,7 +19,9 @@
 
 .field public static final picker_gallery:I = 0x7f100007
 
-.field public static final search:I = 0x7f100008
+.field public static final recordweight:I = 0x7f100008
+
+.field public static final search:I = 0x7f100009
 
 
 # direct methods

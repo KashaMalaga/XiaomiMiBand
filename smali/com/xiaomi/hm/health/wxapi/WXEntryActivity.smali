@@ -25,7 +25,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const-string v0, "wx28e2610e92fbe111"
+    const-string v0, "wxe37a18fe0ec64b4c"
 
     const/4 v1, 0x0
 
@@ -150,7 +150,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/hm/health/wxapi/WXEntryActivity;->finish()V

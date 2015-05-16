@@ -4,8 +4,9 @@
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 .implements Landroid/widget/AdapterView$OnItemClickListener;
-.implements Lcn/com/smartdevices/bracelet/relation/J;
+.implements Lcn/com/smartdevices/bracelet/relation/N;
 .implements Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener2;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -14,11 +15,12 @@
         "Lcom/huami/android/ui/ActionBarActivity;",
         "Landroid/view/View$OnClickListener;",
         "Landroid/widget/AdapterView$OnItemClickListener;",
-        "Lcn/com/smartdevices/bracelet/relation/J;",
+        "Lcn/com/smartdevices/bracelet/relation/N;",
         "Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener2",
         "<",
         "Landroid/widget/ListView;",
-        ">;"
+        ">;",
+        "Ljava/lang/Runnable;"
     }
 .end annotation
 
@@ -32,19 +34,21 @@
 
 
 # instance fields
-.field private d:Lcn/com/smartdevices/bracelet/relation/w;
+.field private d:Lcn/com/smartdevices/bracelet/relation/A;
 
 .field private e:Lcn/com/smartdevices/bracelet/push/h;
 
-.field private f:Lcn/com/smartdevices/bracelet/relation/F;
+.field private f:Lcn/com/smartdevices/bracelet/relation/J;
 
 .field private g:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
-.field private h:Lcn/com/smartdevices/bracelet/relation/u;
+.field private h:Lcn/com/smartdevices/bracelet/relation/y;
 
 .field private i:Landroid/view/View;
 
-.field private j:Landroid/view/View;
+.field private j:Ljava/lang/Thread;
+
+.field private k:Landroid/view/View;
 
 
 # direct methods
@@ -75,11 +79,11 @@
 
     invoke-direct {p0, v0, v1}, Lcom/huami/android/ui/ActionBarActivity;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/relation/u;
+    new-instance v0, Lcn/com/smartdevices/bracelet/relation/y;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/relation/u;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/relation/y;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
     return-void
 .end method
@@ -100,10 +104,10 @@
     return-object v0
 .end method
 
-.method static synthetic c(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)Lcn/com/smartdevices/bracelet/relation/u;
+.method static synthetic c(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)Lcn/com/smartdevices/bracelet/relation/y;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
     return-object v0
 .end method
@@ -129,25 +133,25 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/F;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/J;
 
     if-nez v2, :cond_1
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/relation/F;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/relation/F;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/relation/J;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/relation/J;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/F;
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/J;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/F;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/J;
 
     invoke-virtual {v1, v2, v0}, Landroid/app/FragmentTransaction;->add(Landroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
 
     invoke-virtual {v1}, Landroid/app/FragmentTransaction;->commit()I
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/F;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/J;
 
-    invoke-virtual {v1, p0}, Lcn/com/smartdevices/bracelet/relation/F;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, p0}, Lcn/com/smartdevices/bracelet/relation/J;->a(Landroid/view/View$OnClickListener;)V
 
     :goto_0
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->isSupport(Landroid/content/Context;)Z
@@ -172,20 +176,20 @@
 
     :cond_0
     :goto_1
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/F;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/J;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/relation/F;->a(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/relation/J;->a(Landroid/graphics/Bitmap;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/F;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/J;
 
-    invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/relation/F;->a(Lcn/com/smartdevices/bracelet/relation/J;)V
+    invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/relation/J;->a(Lcn/com/smartdevices/bracelet/relation/N;)V
 
     return-void
 
     :cond_1
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/F;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/J;
 
-    invoke-virtual {v2, v1, v0}, Lcn/com/smartdevices/bracelet/relation/F;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
+    invoke-virtual {v2, v1, v0}, Lcn/com/smartdevices/bracelet/relation/J;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
 
     goto :goto_0
 
@@ -218,13 +222,13 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->j:Landroid/view/View;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->k:Landroid/view/View;
 
     if-eqz v1, :cond_0
 
     if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->j:Landroid/view/View;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->k:Landroid/view/View;
 
     const/4 v2, 0x0
 
@@ -232,19 +236,19 @@
 
     :cond_0
     :goto_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/F;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/J;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/F;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->f:Lcn/com/smartdevices/bracelet/relation/J;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/relation/F;->a(Z)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/relation/J;->a(Z)V
 
     :cond_1
     return-void
 
     :cond_2
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->j:Landroid/view/View;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->k:Landroid/view/View;
 
     const/16 v2, 0x8
 
@@ -333,7 +337,7 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v1
 
@@ -372,21 +376,21 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v4
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f090461
+    const v0, 0x7f0904dd
 
     invoke-static {p0, v0, v5}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
     goto :goto_1
 
     :cond_2
-    const v0, 0x7f090463
+    const v0, 0x7f0904df
 
     invoke-static {p0, v0, v5}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -431,7 +435,7 @@
     goto :goto_0
 
     :sswitch_3
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
@@ -455,13 +459,13 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f07004d -> :sswitch_2
-        0x7f070075 -> :sswitch_2
-        0x7f070076 -> :sswitch_3
-        0x7f0703f4 -> :sswitch_2
-        0x7f0703f5 -> :sswitch_3
-        0x7f0703f6 -> :sswitch_1
-        0x7f0703f8 -> :sswitch_0
+        0x7f0d004e -> :sswitch_2
+        0x7f0d006f -> :sswitch_2
+        0x7f0d0070 -> :sswitch_3
+        0x7f0d0425 -> :sswitch_2
+        0x7f0d0426 -> :sswitch_3
+        0x7f0d0427 -> :sswitch_1
+        0x7f0d0429 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -482,11 +486,11 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->setContentView(I)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/relation/w;->a()Lcn/com/smartdevices/bracelet/relation/w;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/relation/A;->a()Lcn/com/smartdevices/bracelet/relation/A;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/w;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/A;
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/push/h;->a()Lcn/com/smartdevices/bracelet/push/h;
 
@@ -498,7 +502,7 @@
 
     invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/push/h;->a(Ljava/lang/Object;)V
 
-    const v0, 0x7f070073
+    const v0, 0x7f0d006d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->findViewById(I)Landroid/view/View;
 
@@ -508,7 +512,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->g:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
-    const v0, 0x7f070074
+    const v0, 0x7f0d006e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->findViewById(I)Landroid/view/View;
 
@@ -516,7 +520,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->i:Landroid/view/View;
 
-    const v0, 0x7f070076
+    const v0, 0x7f0d0070
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->findViewById(I)Landroid/view/View;
 
@@ -524,7 +528,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070075
+    const v0, 0x7f0d006f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->findViewById(I)Landroid/view/View;
 
@@ -548,7 +552,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f09044d
+    const v1, 0x7f0904c8
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->getString(I)Ljava/lang/String;
 
@@ -556,7 +560,7 @@
 
     invoke-interface {v0, v1}, Lcom/handmark/pulltorefresh/library/ILoadingLayout;->setPullLabel(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f09044e
+    const v1, 0x7f0904c9
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->getString(I)Ljava/lang/String;
 
@@ -564,7 +568,7 @@
 
     invoke-interface {v0, v1}, Lcom/handmark/pulltorefresh/library/ILoadingLayout;->setRefreshingLabel(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f09044f
+    const v1, 0x7f0904ca
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->getString(I)Ljava/lang/String;
 
@@ -578,7 +582,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090450
+    const v1, 0x7f0904cb
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->getString(I)Ljava/lang/String;
 
@@ -586,7 +590,7 @@
 
     invoke-interface {v0, v1}, Lcom/handmark/pulltorefresh/library/ILoadingLayout;->setPullLabel(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f090451
+    const v1, 0x7f0904cc
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->getString(I)Ljava/lang/String;
 
@@ -594,7 +598,7 @@
 
     invoke-interface {v0, v1}, Lcom/handmark/pulltorefresh/library/ILoadingLayout;->setRefreshingLabel(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f090452
+    const v1, 0x7f0904cd
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->getString(I)Ljava/lang/String;
 
@@ -618,21 +622,21 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setFadingEdgeLength(I)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/w;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/A;
 
-    invoke-virtual {v0, v2, v4}, Lcn/com/smartdevices/bracelet/relation/w;->a(II)Ljava/util/List;
+    invoke-virtual {v0, v2, v4}, Lcn/com/smartdevices/bracelet/relation/A;->a(II)Ljava/util/List;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/relation/u;->a(Ljava/util/List;)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/relation/y;->a(Ljava/util/List;)V
 
     if-eqz v0, :cond_0
 
@@ -651,14 +655,20 @@
 
     invoke-virtual {v0, v5}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/w;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/A;
 
-    invoke-virtual {v0, v2, v4, v3}, Lcn/com/smartdevices/bracelet/relation/w;->a(IIZ)V
+    invoke-virtual {v0, v2, v4, v3, v2}, Lcn/com/smartdevices/bracelet/relation/A;->a(IIZZ)V
 
     :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/w;
+    new-instance v0, Ljava/lang/Thread;
 
-    invoke-virtual {v0, v2, v4, v3}, Lcn/com/smartdevices/bracelet/relation/w;->a(IIZ)V
+    invoke-direct {v0, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->j:Ljava/lang/Thread;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->j:Ljava/lang/Thread;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
 
@@ -683,6 +693,11 @@
 
     invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setMode(Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;)V
 
+    :goto_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/A;
+
+    invoke-virtual {v0, v2, v4, v3, v2}, Lcn/com/smartdevices/bracelet/relation/A;->a(IIZZ)V
+
     goto :goto_0
 
     :cond_2
@@ -692,7 +707,7 @@
 
     invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setMode(Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;)V
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z
@@ -706,7 +721,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-    const v0, 0x7f070432
+    const v0, 0x7f0d0463
 
     invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -716,7 +731,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0300e3
+    const v2, 0x7f0300f6
 
     const/4 v3, 0x0
 
@@ -724,13 +739,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f0703f9
+    const v2, 0x7f0d042a
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->j:Landroid/view/View;
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->k:Landroid/view/View;
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -758,11 +773,11 @@
 .method public onEvent(Lcn/com/smartdevices/bracelet/push/b/a;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->j:Landroid/view/View;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->k:Landroid/view/View;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/relation/t;
+    new-instance v1, Lcn/com/smartdevices/bracelet/relation/x;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/relation/t;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/relation/x;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -772,11 +787,11 @@
 .method public onEvent(Lcn/com/smartdevices/bracelet/push/b;)V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
-    iget-wide v1, p1, Lcn/com/smartdevices/bracelet/push/b;->i:J
+    iget-wide v1, p1, Lcn/com/smartdevices/bracelet/push/b;->n:J
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/u;->b(J)Lcn/com/smartdevices/bracelet/relation/db/Friend;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/y;->b(J)Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
     move-result-object v0
 
@@ -786,17 +801,11 @@
     return-void
 
     :cond_0
-    iget v1, v0, Lcn/com/smartdevices/bracelet/relation/db/Friend;->u:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, v0, Lcn/com/smartdevices/bracelet/relation/db/Friend;->u:I
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->g:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/relation/r;
+    new-instance v1, Lcn/com/smartdevices/bracelet/relation/v;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/relation/r;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/relation/v;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->post(Ljava/lang/Runnable;)Z
 
@@ -806,29 +815,29 @@
 .method public onEvent(Lcn/com/smartdevices/bracelet/push/e;)V
     .locals 3
 
-    iget v0, p1, Lcn/com/smartdevices/bracelet/push/e;->s:I
+    iget v0, p1, Lcn/com/smartdevices/bracelet/push/e;->v:I
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/w;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/A;
 
-    iget-wide v1, p1, Lcn/com/smartdevices/bracelet/push/e;->o:J
+    iget-wide v1, p1, Lcn/com/smartdevices/bracelet/push/e;->r:J
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/w;->e(J)Lcn/com/smartdevices/bracelet/relation/db/Friend;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/A;->e(J)Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/relation/u;->a(Lcn/com/smartdevices/bracelet/relation/db/Friend;)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/relation/y;->a(Lcn/com/smartdevices/bracelet/relation/db/Friend;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->g:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/relation/p;
+    new-instance v1, Lcn/com/smartdevices/bracelet/relation/s;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/relation/p;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/relation/s;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->post(Ljava/lang/Runnable;)Z
 
@@ -836,8 +845,46 @@
     return-void
 .end method
 
+.method public onEvent(Lcn/com/smartdevices/bracelet/push/j;)V
+    .locals 4
+
+    const-string v0, "FRR"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Unfollow Message by from uid "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/push/j;->l:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/relation/t;
+
+    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/relation/t;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;Lcn/com/smartdevices/bracelet/push/j;)V
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
 .method public onEvent(Lcn/com/smartdevices/bracelet/relation/b/a;)V
     .locals 3
+
+    const/4 v2, 0x0
 
     iget v0, p1, Lcn/com/smartdevices/bracelet/relation/b/a;->a:I
 
@@ -849,17 +896,25 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->i:Landroid/view/View;
 
-    const/4 v1, 0x0
+    const/16 v1, 0x8
 
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/relation/b/a;->c:Lcn/com/smartdevices/bracelet/relation/db/Friend;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/u;->a(ILcn/com/smartdevices/bracelet/relation/db/Friend;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->g:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    invoke-virtual {v0, v2}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setVisibility(I)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/u;->notifyDataSetChanged()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
+
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/relation/b/a;->c:Lcn/com/smartdevices/bracelet/relation/db/Friend;
+
+    invoke-virtual {v0, v2, v1}, Lcn/com/smartdevices/bracelet/relation/y;->a(ILcn/com/smartdevices/bracelet/relation/db/Friend;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/y;->notifyDataSetChanged()V
 
     :cond_0
     return-void
@@ -877,11 +932,11 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
     iget-wide v1, p1, Lcn/com/smartdevices/bracelet/relation/b/c;->b:J
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/u;->b(J)Lcn/com/smartdevices/bracelet/relation/db/Friend;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/y;->b(J)Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
     move-result-object v0
 
@@ -895,9 +950,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->g:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/relation/s;
+    new-instance v1, Lcn/com/smartdevices/bracelet/relation/w;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/relation/s;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/relation/w;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->post(Ljava/lang/Runnable;)Z
 
@@ -911,11 +966,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
     iget-wide v1, p1, Lcn/com/smartdevices/bracelet/relation/b/d;->c:J
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/u;->b(J)Lcn/com/smartdevices/bracelet/relation/db/Friend;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/y;->b(J)Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
     move-result-object v0
 
@@ -932,9 +987,9 @@
 
     iput-wide v1, v0, Lcn/com/smartdevices/bracelet/relation/db/Friend;->w:J
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/u;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/y;->notifyDataSetChanged()V
 
     goto :goto_0
 .end method
@@ -944,18 +999,23 @@
 
     iget-boolean v0, p1, Lcn/com/smartdevices/bracelet/relation/b/e;->b:Z
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-boolean v0, p1, Lcn/com/smartdevices/bracelet/relation/b/e;->c:Z
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/u;->a()V
+    if-nez v0, :cond_1
 
     :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/y;->a()V
+
+    :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->g:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/relation/q;
+    new-instance v1, Lcn/com/smartdevices/bracelet/relation/u;
 
-    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/relation/q;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;Lcn/com/smartdevices/bracelet/relation/b/e;)V
+    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/relation/u;-><init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;Lcn/com/smartdevices/bracelet/relation/b/e;)V
 
     invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->post(Ljava/lang/Runnable;)Z
 
@@ -979,19 +1039,15 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
     iget-wide v1, p1, Lcn/com/smartdevices/bracelet/relation/b/f;->b:J
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/u;->a(J)V
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/y;->a(J)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/u;->notifyDataSetChanged()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/u;->getCount()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/y;->getCount()I
 
     move-result v0
 
@@ -1057,7 +1113,7 @@
 
     move-result v0
 
-    const v1, 0x7f070432
+    const v1, 0x7f0d0463
 
     if-ne v0, v1, :cond_0
 
@@ -1088,21 +1144,21 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/w;
+    const/4 v3, 0x0
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/A;
 
-    const/16 v2, 0xa
+    const/16 v1, 0xa
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/relation/w;->a(IIZ)V
+    invoke-virtual {v0, v3, v1, v2, v3}, Lcn/com/smartdevices/bracelet/relation/A;->a(IIZZ)V
 
     return-void
 .end method
 
 .method public onPullUpToRefresh(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1113,19 +1169,21 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/u;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->h:Lcn/com/smartdevices/bracelet/relation/y;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/u;->getCount()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/y;->getCount()I
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/w;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/A;
 
     const/16 v2, 0xa
 
     const/4 v3, 0x0
 
-    invoke-virtual {v1, v0, v2, v3}, Lcn/com/smartdevices/bracelet/relation/w;->a(IIZ)V
+    const/4 v4, 0x1
+
+    invoke-virtual {v1, v0, v2, v3, v4}, Lcn/com/smartdevices/bracelet/relation/A;->a(IIZZ)V
 
     return-void
 .end method
@@ -1137,5 +1195,130 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->a()V
 
+    return-void
+.end method
+
+.method public run()V
+    .locals 7
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/A;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/A;->c()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4, v3}, Ljava/util/ArrayList;-><init>(I)V
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, v3, :cond_0
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/relation/db/Friend;
+
+    iget-wide v5, v0, Lcn/com/smartdevices/bracelet/relation/db/Friend;->n:J
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/A;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/A;->d()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_1
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/relation/db/f;
+
+    iget v2, v0, Lcn/com/smartdevices/bracelet/relation/db/f;->t:I
+
+    if-nez v2, :cond_1
+
+    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/relation/db/f;->q:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v4, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->d:Lcn/com/smartdevices/bracelet/relation/A;
+
+    iget-wide v5, v0, Lcn/com/smartdevices/bracelet/relation/db/f;->q:J
+
+    invoke-virtual {v2, v5, v6}, Lcn/com/smartdevices/bracelet/relation/A;->b(J)V
+
+    const-string v2, "FriendActivity"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Delete message from uid "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-wide v5, v0, Lcn/com/smartdevices/bracelet/relation/db/f;->q:J
+
+    invoke-virtual {v3, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_2
     return-void
 .end method

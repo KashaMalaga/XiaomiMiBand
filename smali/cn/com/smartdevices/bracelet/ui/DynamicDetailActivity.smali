@@ -51,7 +51,7 @@
 
     const v2, 0x1020002
 
-    const-class v3, Lcn/com/smartdevices/bracelet/ui/ad;
+    const-class v3, Lcn/com/smartdevices/bracelet/ui/ac;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -123,7 +123,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 

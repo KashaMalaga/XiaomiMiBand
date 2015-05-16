@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field a:Lcn/com/smartdevices/bracelet/gps/model/i;
+.field a:Lcn/com/smartdevices/bracelet/gps/model/l;
 
 .field b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -18,18 +18,18 @@
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/model/i;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/model/l;)V
     .locals 1
 
     const/4 v0, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/model/i;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/model/l;
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->b:Ljava/util/List;
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/model/i;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/model/l;
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -106,17 +106,17 @@
     return v0
 
     :cond_1
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/model/i;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/model/l;
 
     if-eqz v1, :cond_0
 
     check-cast p1, Lcn/com/smartdevices/bracelet/gps/ui/C;
 
-    iget-object v0, p1, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/model/i;
+    iget-object v0, p1, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/model/l;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/model/i;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/model/l;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/model/i;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/model/l;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 

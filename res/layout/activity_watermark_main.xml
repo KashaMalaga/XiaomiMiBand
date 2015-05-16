@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:id="@id/rl_watermark_main" android:background="#fff8f8f8" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:gravity="center_vertical" android:id="@id/rl_camera_head" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h">
-        <ImageButton android:id="@id/flash_lamp" android:background="@drawable/watermark_share_icon_flash_lamp_off" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17.799988dip" android:layout_alignParentLeft="true" />
-        <ImageButton android:id="@id/cam_switch" android:background="@drawable/watermark_share_icon_cam_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="17.799988dip" android:layout_alignParentRight="true" />
-    </RelativeLayout>
-    <include android:id="@id/rl_head_title" android:visibility="gone" layout="@layout/title_back" />
     <RelativeLayout android:id="@id/rl_share_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/action_bar_h">
         <FrameLayout android:id="@id/fl_camera" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <RelativeLayout android:id="@id/rl_share_area_mark" android:layout_width="fill_parent" android:layout_height="fill_parent">
             <ImageView android:id="@id/iv_cover" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
-            <cn.com.smartdevices.bracelet.view.CustomViewPager android:id="@id/vp_mark_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true" />
+            <com.huami.android.view.CustomViewPager android:id="@id/vp_mark_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true" />
         </RelativeLayout>
     </RelativeLayout>
     <cn.com.smartdevices.bracelet.gps.ui.WatermarkBar android:id="@id/h_scrollview" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rl_share_area" />
-    <RelativeLayout android:gravity="center" android:layout_gravity="bottom" android:id="@id/ll_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="146.5dip" android:layout_below="@id/h_scrollview">
+    <RelativeLayout android:gravity="center" android:layout_gravity="bottom" android:id="@id/ll_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/watermark_share_panel_height" android:layout_below="@id/h_scrollview">
         <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/share_pane_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <cn.com.smartdevices.bracelet.view.CircleImageView android:id="@id/avatar_mask" android:layout_width="51.799988dip" android:layout_height="51.799988dip" android:layout_marginRight="48.5dip" app:border_width="1.5dip" app:border_color="#ff727272" xmlns:app="http://schemas.android.com/apk/res-auto" />
+            <cn.com.smartdevices.bracelet.gps.ui.gadget.CircleImageView android:id="@id/avatar_mask" android:layout_width="51.799988dip" android:layout_height="51.799988dip" android:layout_marginRight="48.5dip" app:border_width="1.5dip" app:border_color="#ff727272" xmlns:app="http://schemas.android.com/apk/res-auto" />
             <ImageButton android:id="@id/btn_takephoto" android:background="@drawable/watermark_btn_take_photo" android:layout_width="wrap_content" android:layout_height="wrap_content" />
             <ImageButton android:id="@id/btn_share_back" android:background="@drawable/watermark_share_button_back_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="48.5dip" />
         </LinearLayout>
-        <Button android:textSize="13.799988sp" android:textColor="#ffffffff" android:id="@id/btn_save" android:background="@drawable/click_btn_bg_lab_blue_corners" android:visibility="gone" android:layout_width="313.79688dip" android:layout_height="40.5dip" android:text="@string/watermark_btn_confirm" />
+        <Button android:textSize="13.799988sp" android:textColor="#ffffffff" android:id="@id/btn_save" android:background="@drawable/click_btn_bg_blue_corners" android:visibility="gone" android:layout_width="313.79688dip" android:layout_height="40.5dip" android:text="@string/running_watermark_btn_confirm" />
     </RelativeLayout>
 </RelativeLayout>

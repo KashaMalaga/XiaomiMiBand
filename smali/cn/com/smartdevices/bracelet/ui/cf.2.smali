@@ -37,13 +37,13 @@
 
     const-string v1, "receive the msg reconnect timeout"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const v2, 0x7f0901f4
+    const v2, 0x7f090289
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getString(I)Ljava/lang/String;
 
@@ -51,7 +51,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const v3, 0x7f0901f5
+    const v3, 0x7f09028a
 
     invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getString(I)Ljava/lang/String;
 
@@ -74,15 +74,13 @@
     goto :goto_0
 
     :sswitch_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->n()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->l()Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->p()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+    sget-object v1, Lcn/com/smartdevices/bracelet/z;->b:Lcom/xiaomi/hm/health/bt/bleservice/HwSyncDataStatus;
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->e()Z
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/bt/bleservice/HwSyncDataStatus;->e()Z
 
     move-result v2
 
@@ -90,12 +88,12 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->onEvent(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->onEvent(Lcom/xiaomi/hm/health/bt/bleservice/HwSyncDataStatus;)V
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->b()Z
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->b()Z
 
     move-result v1
 
@@ -103,14 +101,14 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->onEvent(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->onEvent(Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;)V
 
     goto :goto_0
 
     :sswitch_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->h(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->i(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
 
     goto :goto_0
 

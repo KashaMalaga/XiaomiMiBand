@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/bg_color_orange" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<RelativeLayout android:background="@color/bg_color_grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView android:id="@id/multi_devices_err_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/multi_devices_title" style="@style/InfoTitle" />
     <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/content_color" android:gravity="center" android:id="@id/multi_devices_info" android:paddingLeft="@dimen/info_content_margin_left" android:paddingTop="@dimen/info_content_margin_top" android:paddingRight="@dimen/info_content_margin_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/multi_devices_info" android:layout_below="@id/multi_devices_err_title" android:layout_centerHorizontal="true" />

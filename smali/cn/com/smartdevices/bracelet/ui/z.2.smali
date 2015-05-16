@@ -6,9 +6,9 @@
 
 
 # static fields
-.field private static final b:Ljava/lang/String; = "BindDevicesWeightFragment"
+.field private static final b:Ljava/lang/String; = "BindDevicesBandFragment"
 
-.field private static final c:I = 0x100
+.field private static final c:I = 0x101
 
 
 # direct methods
@@ -25,11 +25,11 @@
 .method public c()V
     .locals 3
 
-    const-string v0, "BindDevicesWeightFragment"
+    const-string v0, "BindDevicesBandFragment"
 
     const-string v1, "On start bind clicked!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -37,11 +37,11 @@
 
     move-result-object v1
 
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    const-class v2, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const/16 v1, 0x100
+    const/16 v1, 0x101
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/z;->startActivityForResult(Landroid/content/Intent;I)V
 
@@ -51,7 +51,7 @@
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 3
 
-    const-string v0, "BindDevicesWeightFragment"
+    const-string v0, "BindDevicesBandFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -81,9 +81,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/16 v0, 0x100
+    const/16 v0, 0x101
 
     if-ne p1, v0, :cond_0
 
@@ -110,7 +110,7 @@
 .end method
 
 .method public onClick(Landroid/view/View;)V
-    .locals 3
+    .locals 2
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -122,15 +122,13 @@
     return-void
 
     :pswitch_0
-    const-string v0, "http://www.mi.com/scale"
-
-    const v1, 0x7f0903e9
-
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/z;->getActivity()Landroid/app/Activity;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/G;->a(Ljava/lang/String;ILandroid/app/Activity;)V
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/g/d;->a(Landroid/app/Activity;Z)V
 
     goto :goto_0
 
@@ -142,7 +140,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f07003b
+    .packed-switch 0x7f0d003b
         :pswitch_0
         :pswitch_1
     .end packed-switch
@@ -159,9 +157,9 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 4
 
-    const v3, 0x7f07003b
+    const v3, 0x7f0d003b
 
-    const v0, 0x7f030002
+    const v0, 0x7f030001
 
     const/4 v1, 0x0
 
@@ -175,7 +173,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f09025d
+    const v2, 0x7f0902f0
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/z;->getString(I)Ljava/lang/String;
 
@@ -193,7 +191,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07003c
+    const v0, 0x7f0d003c
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -3,29 +3,55 @@
 
 
 # static fields
-.field public static final activity_capture:I = 0x7f030007
+.field public static final album_button:I = 0x7f0d004d
 
-.field public static final activity_picture_picker:I = 0x7f030033
+.field public static final bottom_bar_frame:I = 0x7f0d021c
 
-.field public static final custom_toast:I = 0x7f030054
+.field public static final bottom_bar_frame_split:I = 0x7f0d021e
 
-.field public static final main:I = 0x7f0300b5
+.field public static final close_button:I = 0x7f0d004b
 
-.field public static final view_bottom_dialog:I = 0x7f0300d7
+.field public static final content_txt:I = 0x7f0d0205
 
-.field public static final view_dialog_menu_item:I = 0x7f0300db
+.field public static final dialog_title:I = 0x7f0d0407
 
-.field public static final view_header_toast:I = 0x7f0300e4
+.field public static final dismiss_button:I = 0x7f0d0301
 
-.field public static final view_progress_dialog:I = 0x7f0300ea
+.field public static final dlg_empty_area_btn:I = 0x7f0d0220
 
-.field public static final view_share_dialog:I = 0x7f0300ed
+.field public static final icon:I = 0x7f0d003a
 
-.field public static final view_share_dialog_item:I = 0x7f0300ee
+.field public static final label:I = 0x7f0d010f
 
-.field public static final view_share_panel:I = 0x7f0300f0
+.field public static final left_button:I = 0x7f0d021d
 
-.field public static final view_share_panel_item:I = 0x7f0300f1
+.field public static final menu_done:I = 0x7f0d0468
+
+.field public static final menu_list:I = 0x7f0d040a
+
+.field public static final message:I = 0x7f0d0409
+
+.field public static final picker_grid:I = 0x7f0d013e
+
+.field public static final preview_view:I = 0x7f0d004a
+
+.field public static final progress_txt:I = 0x7f0d0265
+
+.field public static final right_button:I = 0x7f0d021f
+
+.field public static final scan_view:I = 0x7f0d004c
+
+.field public static final share_from_mi_band_txt:I = 0x7f0d0201
+
+.field public static final share_list:I = 0x7f0d0300
+
+.field public static final share_logo:I = 0x7f0d01ff
+
+.field public static final share_to_miliao_target_feeds_fl:I = 0x7f0d0305
+
+.field public static final title_divider:I = 0x7f0d0408
+
+.field public static final tv_logo:I = 0x7f0d0200
 
 
 # direct methods

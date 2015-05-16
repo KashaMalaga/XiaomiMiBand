@@ -5,11 +5,11 @@
 # instance fields
 .field private a:Lcom/xiaomi/push/service/XMPushService;
 
-.field private b:[Lcom/xiaomi/g/c/d;
+.field private b:[Lcom/xiaomi/h/c/d;
 
 
 # direct methods
-.method public constructor <init>(Lcom/xiaomi/push/service/XMPushService;[Lcom/xiaomi/g/c/d;)V
+.method public constructor <init>(Lcom/xiaomi/push/service/XMPushService;[Lcom/xiaomi/h/c/d;)V
     .locals 1
 
     const/4 v0, 0x4
@@ -22,7 +22,7 @@
 
     iput-object p1, p0, Lcom/xiaomi/push/service/m;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    iput-object p2, p0, Lcom/xiaomi/push/service/m;->b:[Lcom/xiaomi/g/c/d;
+    iput-object p2, p0, Lcom/xiaomi/push/service/m;->b:[Lcom/xiaomi/h/c/d;
 
     return-void
 .end method
@@ -35,11 +35,11 @@
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/push/service/m;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    iget-object v1, p0, Lcom/xiaomi/push/service/m;->b:[Lcom/xiaomi/g/c/d;
+    iget-object v1, p0, Lcom/xiaomi/push/service/m;->b:[Lcom/xiaomi/h/c/d;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/push/service/XMPushService;->a([Lcom/xiaomi/g/c/e;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/push/service/XMPushService;->a([Lcom/xiaomi/h/c/e;)V
     :try_end_0
-    .catch Lcom/xiaomi/g/C; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/xiaomi/h/C; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
     return-void

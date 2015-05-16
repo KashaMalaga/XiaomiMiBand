@@ -403,7 +403,7 @@
 
     move-result v0
 
-    sget v1, Lcom/huami/android/a/f;->close_button:I
+    sget v1, Lcom/huami/android/a/g;->close_button:I
 
     if-ne v0, v1, :cond_1
 
@@ -414,7 +414,7 @@
     return-void
 
     :cond_1
-    sget v1, Lcom/huami/android/a/f;->album_button:I
+    sget v1, Lcom/huami/android/a/g;->album_button:I
 
     if-ne v0, v1, :cond_0
 
@@ -449,11 +449,11 @@
     :cond_0
     invoke-virtual {p0, v1}, Lcom/huami/android/zxing/CaptureActivity;->b(I)V
 
-    sget v0, Lcom/huami/android/a/g;->activity_capture:I
+    sget v0, Lcom/huami/android/a/h;->activity_capture:I
 
     invoke-virtual {p0, v0}, Lcom/huami/android/zxing/CaptureActivity;->setContentView(I)V
 
-    sget v0, Lcom/huami/android/a/f;->album_button:I
+    sget v0, Lcom/huami/android/a/g;->album_button:I
 
     invoke-virtual {p0, v0}, Lcom/huami/android/zxing/CaptureActivity;->findViewById(I)Landroid/view/View;
 
@@ -461,7 +461,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v0, Lcom/huami/android/a/f;->close_button:I
+    sget v0, Lcom/huami/android/a/g;->close_button:I
 
     invoke-virtual {p0, v0}, Lcom/huami/android/zxing/CaptureActivity;->findViewById(I)Landroid/view/View;
 
@@ -590,7 +590,7 @@
 
     if-nez v0, :cond_1
 
-    sget v0, Lcom/huami/android/a/f;->preview_view:I
+    sget v0, Lcom/huami/android/a/g;->preview_view:I
 
     invoke-virtual {p0, v0}, Lcom/huami/android/zxing/CaptureActivity;->findViewById(I)Landroid/view/View;
 
@@ -629,7 +629,7 @@
 
     iput-object v0, p0, Lcom/huami/android/zxing/CaptureActivity;->f:Lcom/huami/android/zxing/a/g;
 
-    sget v0, Lcom/huami/android/a/f;->scan_view:I
+    sget v0, Lcom/huami/android/a/g;->scan_view:I
 
     invoke-virtual {p0, v0}, Lcom/huami/android/zxing/CaptureActivity;->findViewById(I)Landroid/view/View;
 
@@ -649,7 +649,7 @@
 
     invoke-direct {p0}, Lcom/huami/android/zxing/CaptureActivity;->f()V
 
-    sget v0, Lcom/huami/android/a/f;->preview_view:I
+    sget v0, Lcom/huami/android/a/g;->preview_view:I
 
     invoke-virtual {p0, v0}, Lcom/huami/android/zxing/CaptureActivity;->findViewById(I)Landroid/view/View;
 

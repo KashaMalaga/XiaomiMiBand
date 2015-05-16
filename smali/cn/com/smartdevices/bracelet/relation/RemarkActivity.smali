@@ -1,24 +1,21 @@
 .class public Lcn/com/smartdevices/bracelet/relation/RemarkActivity;
 .super Lcom/huami/android/ui/ActionBarActivity;
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # static fields
-.field public static final a:Ljava/lang/String; = "username"
+.field public static final a:Ljava/lang/String; = "friend"
 
-.field private static final b:Ljava/lang/String; = "friend"
+.field public static final b:Ljava/lang/String; = "username"
+
+.field public static final c:Ljava/lang/String; = "userid"
 
 
 # instance fields
-.field private c:Lcn/com/smartdevices/bracelet/relation/db/Friend;
+.field private d:Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
-.field private d:Lcn/com/smartdevices/bracelet/relation/w;
+.field private e:Lcn/com/smartdevices/bracelet/relation/A;
 
-.field private e:Landroid/widget/EditText;
-
-.field private f:Landroid/view/View;
+.field private f:Lcn/com/smartdevices/bracelet/view/ClearEditText;
 
 
 # direct methods
@@ -50,36 +47,14 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/relation/RemarkActivity;)Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->f:Landroid/view/View;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->e:Landroid/widget/EditText;
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 5
-
-    const/4 v4, 0x0
+    .locals 4
 
     invoke-super {p0, p1}, Lcom/huami/android/ui/ActionBarActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030034
+    const v0, 0x7f030036
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->setContentView(I)V
 
@@ -95,13 +70,13 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->c:Lcn/com/smartdevices/bracelet/relation/db/Friend;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->d:Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->c:Lcn/com/smartdevices/bracelet/relation/db/Friend;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->d:Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->c:Lcn/com/smartdevices/bracelet/relation/db/Friend;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->d:Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
     iget-wide v0, v0, Lcn/com/smartdevices/bracelet/relation/db/Friend;->n:J
 
@@ -109,44 +84,39 @@
 
     cmp-long v0, v0, v2
 
-    if-gez v0, :cond_1
+    if-gez v0, :cond_2
 
     :cond_0
-    const v0, 0x7f09043c
+    const v0, 0x7f0904b7
 
-    invoke-static {p0, v0, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->finish()V
 
+    :cond_1
     :goto_0
     return-void
 
-    :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/relation/w;->a()Lcn/com/smartdevices/bracelet/relation/w;
+    :cond_2
+    invoke-static {}, Lcn/com/smartdevices/bracelet/relation/A;->a()Lcn/com/smartdevices/bracelet/relation/A;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->d:Lcn/com/smartdevices/bracelet/relation/w;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->e:Lcn/com/smartdevices/bracelet/relation/A;
 
-    const v0, 0x7f07013d
+    const v0, 0x7f0d0146
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/EditText;
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/ClearEditText;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->e:Landroid/widget/EditText;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->f:Lcn/com/smartdevices/bracelet/view/ClearEditText;
 
-    const v0, 0x7f07013e
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->f:Landroid/view/View;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->c:Lcn/com/smartdevices/bracelet/relation/db/Friend;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->d:Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/db/Friend;->x:Ljava/lang/String;
 
@@ -154,39 +124,17 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->f:Landroid/view/View;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->f:Lcn/com/smartdevices/bracelet/view/ClearEditText;
 
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->e:Landroid/widget/EditText;
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/relation/S;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/relation/S;-><init>(Lcn/com/smartdevices/bracelet/relation/RemarkActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->f:Landroid/view/View;
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->e:Landroid/widget/EditText;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->c:Lcn/com/smartdevices/bracelet/relation/db/Friend;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->d:Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
     iget-object v1, v1, Lcn/com/smartdevices/bracelet/relation/db/Friend;->x:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/ClearEditText;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z
@@ -200,7 +148,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-    const v0, 0x7f070433
+    const v0, 0x7f0d0464
 
     invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -220,13 +168,13 @@
 
     move-result v0
 
-    const v1, 0x7f070433
+    const v1, 0x7f0d0464
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->e:Landroid/widget/EditText;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->f:Lcn/com/smartdevices/bracelet/view/ClearEditText;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/ClearEditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
@@ -234,13 +182,27 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->d:Lcn/com/smartdevices/bracelet/relation/w;
+    if-eqz v0, :cond_0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->c:Lcn/com/smartdevices/bracelet/relation/db/Friend;
+    const-string v1, ""
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->e:Lcn/com/smartdevices/bracelet/relation/A;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->d:Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
     iget-wide v2, v2, Lcn/com/smartdevices/bracelet/relation/db/Friend;->n:J
 
-    invoke-virtual {v1, v2, v3, v0}, Lcn/com/smartdevices/bracelet/relation/w;->a(JLjava/lang/String;)Z
+    invoke-virtual {v1, p0, v2, v3, v0}, Lcn/com/smartdevices/bracelet/relation/A;->a(Landroid/content/Context;JLjava/lang/String;)V
 
     new-instance v1, Landroid/content/Intent;
 
@@ -250,10 +212,19 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    const-string v0, "userid"
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->d:Lcn/com/smartdevices/bracelet/relation/db/Friend;
+
+    iget-wide v2, v2, Lcn/com/smartdevices/bracelet/relation/db/Friend;->n:J
+
+    invoke-virtual {v1, v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
     const/4 v0, -0x1
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->setResult(ILandroid/content/Intent;)V
 
+    :cond_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/relation/RemarkActivity;->finish()V
 
     const/4 v0, 0x1
@@ -261,7 +232,7 @@
     :goto_0
     return v0
 
-    :cond_0
+    :cond_1
     invoke-super {p0, p1}, Lcom/huami/android/ui/ActionBarActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0

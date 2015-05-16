@@ -1,52 +1,50 @@
-.class public Lcn/com/smartdevices/bracelet/ui/bv;
-.super Lcn/com/smartdevices/bracelet/ui/bp;
+.class Lcn/com/smartdevices/bracelet/ui/bv;
+.super Landroid/os/Handler;
+
+
+# instance fields
+.field b:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/app/Activity;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method constructor <init>(Landroid/app/Activity;)V
+    .locals 1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/bp;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bv;->b:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a(Landroid/view/View;)V
-    .locals 5
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bx;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bv;->b:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bv;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const v2, 0x7f0901dc
-
-    const v3, 0x7f0901dd
-
-    const v4, 0x7f0901de
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/ui/bx;-><init>(Landroid/content/Context;III)V
-
-    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/ui/bv;->a(Landroid/view/View;Lcn/com/smartdevices/bracelet/ui/bx;)V
-
-    return-void
-.end method
-
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 2
-
-    const v0, 0x7f030014
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/bv;->a(Landroid/view/View;)V
+    check-cast v0, Landroid/app/Activity;
 
-    return-object v0
+    if-nez v0, :cond_0
+
+    :cond_0
+    return-void
 .end method

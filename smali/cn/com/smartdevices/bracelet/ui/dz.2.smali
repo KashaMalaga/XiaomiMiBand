@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/view/bz;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dy;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dy;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dz;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dz;->a:Lcn/com/smartdevices/bracelet/ui/dy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,92 +22,58 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 0
+.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 3
 
-    return-void
-.end method
+    invoke-static {p2}, Lcn/com/smartdevices/bracelet/Keeper;->keepUserAgreement(Z)V
 
-.method public a(IFI)V
-    .locals 4
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->a:Lcn/com/smartdevices/bracelet/ui/dy;
 
-    const/high16 v3, 0x3f800000
-
-    const/high16 v2, 0x3f000000
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->a(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)Landroid/animation/ValueAnimator;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dy;->a(Lcn/com/smartdevices/bracelet/ui/dy;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    if-nez p1, :cond_2
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
+    const-string v2, "UmengAnalyticsTracker  after set is ====== "
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->a(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)Landroid/animation/ValueAnimator;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    :cond_0
-    :goto_0
-    cmpl-float v0, p2, v1
+    move-result-object v1
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
+    move-result-object v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->b(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)Landroid/widget/TextView;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v0
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->t:Z
 
-    sub-float v1, v3, p2
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dz;->a:Lcn/com/smartdevices/bracelet/ui/dy;
 
-    add-float/2addr v1, v2
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/dy;->b(Lcn/com/smartdevices/bracelet/ui/dy;)Lcn/com/smartdevices/bracelet/config/b;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setAlpha(F)V
+    move-result-object v1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/config/b;->k:Lcn/com/smartdevices/bracelet/config/h;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->c(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)Landroid/widget/TextView;
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/config/h;->b:Ljava/lang/Boolean;
 
-    move-result-object v0
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    add-float v1, v2, p2
+    move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setAlpha(F)V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/BraceletApp;->a()Landroid/content/Context;
 
-    :cond_1
-    return-void
+    move-result-object v2
 
-    :cond_2
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_0
-
-    cmpl-float v0, p2, v1
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->a(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)Landroid/animation/ValueAnimator;
-
-    move-result-object v0
-
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
-
-    goto :goto_0
-.end method
-
-.method public b(I)V
-    .locals 0
+    invoke-static {p2, v0, v1, v2}, Lcn/com/smartdevices/bracelet/F;->a(ZZZLandroid/content/Context;)V
 
     return-void
 .end method

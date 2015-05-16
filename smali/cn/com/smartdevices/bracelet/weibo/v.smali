@@ -36,7 +36,7 @@
 .method public static a()Lcn/com/smartdevices/bracelet/weibo/v;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weibo/C;->a()Lcn/com/smartdevices/bracelet/weibo/v;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weibo/D;->a()Lcn/com/smartdevices/bracelet/weibo/v;
 
     move-result-object v0
 
@@ -45,34 +45,52 @@
 
 
 # virtual methods
-.method public a(Landroid/content/Context;I)Lcn/com/smartdevices/bracelet/model/ResponseEntity;
-    .locals 5
+.method public a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;I)Lcn/com/smartdevices/bracelet/model/ResponseEntity;
+    .locals 4
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/weibo/q;->d(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
+    new-instance v1, Lcn/com/smartdevices/bracelet/model/ResponseEntity;
 
-    move-result-object v1
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/model/ResponseEntity;-><init>()V
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/model/ResponseEntity;
+    const-string v2, "100005"
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/model/ResponseEntity;-><init>()V
+    new-instance v3, Lcn/com/smartdevices/bracelet/weibo/C;
 
-    const-string v3, "100005"
+    invoke-direct {v3, p0, v1, p3, p1}, Lcn/com/smartdevices/bracelet/weibo/C;-><init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;ILandroid/content/Context;)V
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/weibo/B;
+    invoke-static {v2, p3, v0, p2, v3}, Lcn/com/smartdevices/bracelet/k/j;->a(Ljava/lang/String;ILcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Lcom/d/a/a/h;)V
 
-    invoke-direct {v4, p0, v2, p2, p1}, Lcn/com/smartdevices/bracelet/weibo/B;-><init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;ILandroid/content/Context;)V
-
-    invoke-static {v3, p2, v0, v1, v4}, Lcn/com/smartdevices/bracelet/k/g;->a(Ljava/lang/String;ILcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Lcom/d/a/a/h;)V
-
-    return-object v2
+    return-object v1
 .end method
 
 .method public a(Landroid/os/Bundle;)Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
     .locals 3
+
+    const-string v0, "WeiboHealthManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Token:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p1, :cond_0
 
@@ -281,7 +299,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/weibo/q;->e(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/weibo/q;->f(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -470,33 +488,7 @@
 .method public f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/ResponseEntity;
     .locals 5
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
-
-    move-result-object v0
-
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/weibo/q;->d(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    move-result-object v1
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/model/ResponseEntity;
-
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/model/ResponseEntity;-><init>()V
-
-    const-string v3, "100005"
-
-    new-instance v4, Lcn/com/smartdevices/bracelet/weibo/y;
-
-    invoke-direct {v4, p0, v2, p1}, Lcn/com/smartdevices/bracelet/weibo/y;-><init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;Landroid/content/Context;)V
-
-    invoke-static {v3, v0, v1, v4}, Lcn/com/smartdevices/bracelet/k/g;->b(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Lcom/d/a/a/h;)V
-
-    return-object v2
-.end method
-
-.method public g(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/ResponseEntity;
-    .locals 5
-
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
@@ -512,9 +504,35 @@
 
     new-instance v4, Lcn/com/smartdevices/bracelet/weibo/z;
 
-    invoke-direct {v4, p0, v2, v1, p1}, Lcn/com/smartdevices/bracelet/weibo/z;-><init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Landroid/content/Context;)V
+    invoke-direct {v4, p0, v2, p1}, Lcn/com/smartdevices/bracelet/weibo/z;-><init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;Landroid/content/Context;)V
 
-    invoke-static {v3, v0, v1, v4}, Lcn/com/smartdevices/bracelet/k/g;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Lcom/d/a/a/h;)V
+    invoke-static {v3, v0, v1, v4}, Lcn/com/smartdevices/bracelet/k/j;->b(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Lcom/d/a/a/h;)V
+
+    return-object v2
+.end method
+
+.method public g(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/ResponseEntity;
+    .locals 5
+
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+
+    move-result-object v0
+
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/weibo/q;->d(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
+
+    move-result-object v1
+
+    new-instance v2, Lcn/com/smartdevices/bracelet/model/ResponseEntity;
+
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/model/ResponseEntity;-><init>()V
+
+    const-string v3, "100005"
+
+    new-instance v4, Lcn/com/smartdevices/bracelet/weibo/A;
+
+    invoke-direct {v4, p0, v2, v1, p1}, Lcn/com/smartdevices/bracelet/weibo/A;-><init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Landroid/content/Context;)V
+
+    invoke-static {v3, v0, v1, v4}, Lcn/com/smartdevices/bracelet/k/j;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;Lcom/d/a/a/h;)V
 
     return-object v2
 .end method
@@ -522,7 +540,7 @@
 .method public h(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/ResponseEntity;
     .locals 5
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
@@ -536,11 +554,21 @@
 
     const-string v3, "100005"
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/weibo/A;
+    new-instance v4, Lcn/com/smartdevices/bracelet/weibo/B;
 
-    invoke-direct {v4, p0, v2, v1}, Lcn/com/smartdevices/bracelet/weibo/A;-><init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;)V
+    invoke-direct {v4, p0, v2, v1}, Lcn/com/smartdevices/bracelet/weibo/B;-><init>(Lcn/com/smartdevices/bracelet/weibo/v;Lcn/com/smartdevices/bracelet/model/ResponseEntity;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;)V
 
-    invoke-static {v3, v0, v4}, Lcn/com/smartdevices/bracelet/k/g;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/d/a/a/h;)V
+    invoke-static {v3, v0, v4}, Lcn/com/smartdevices/bracelet/k/j;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/d/a/a/h;)V
 
     return-object v2
+.end method
+
+.method public i(Landroid/content/Context;)Z
+    .locals 1
+
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/weibo/q;->e(Landroid/content/Context;)Z
+
+    move-result v0
+
+    return v0
 .end method

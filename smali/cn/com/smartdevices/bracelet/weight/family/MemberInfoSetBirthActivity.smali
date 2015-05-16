@@ -18,7 +18,7 @@
 
 .field private m:Ljava/lang/String;
 
-.field private n:Lcn/com/smartdevices/bracelet/ui/cX;
+.field private n:Lcn/com/smartdevices/bracelet/ui/cY;
 
 .field private o:I
 
@@ -44,23 +44,7 @@
     return v0
 .end method
 
-.method static synthetic b(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;)Lkankan/wheel/widget/WheelView;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->i:Lkankan/wheel/widget/WheelView;
-
-    return-object v0
-.end method
-
-.method static synthetic c(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;)Lcn/com/smartdevices/bracelet/ui/cX;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->n:Lcn/com/smartdevices/bracelet/ui/cX;
-
-    return-object v0
-.end method
-
-.method private d()V
+.method private a()V
     .locals 3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->k:Lcn/com/smartdevices/bracelet/model/Birthday;
@@ -119,59 +103,65 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
+.end method
+
+.method static synthetic b(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;)Lkankan/wheel/widget/WheelView;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->i:Lkankan/wheel/widget/WheelView;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;)Lcn/com/smartdevices/bracelet/ui/cY;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->n:Lcn/com/smartdevices/bracelet/ui/cY;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public b()V
+.method public c()V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->d()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->a()V
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->b()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->c()V
 
     return-void
 .end method
 
-.method public c()V
+.method public d()V
     .locals 3
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->d()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->a()V
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->e:Z
 
     if-nez v0, :cond_0
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->c()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->d()V
 
     :cond_0
     const-string v0, "CURRENT_USER_BIRTH"
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->m:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Keeper;->saveCurrentUser(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->e:Z
-
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->f:Z
-
-    if-eqz v0, :cond_2
-
-    :cond_1
     const-class v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;
 
     invoke-virtual {v1, p0, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    :goto_0
     const-string v0, "set_visitor_mode"
 
     iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->e:Z
@@ -186,13 +176,13 @@
 
     const-string v2, "WEIGHTADVDATA_KEY"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_1
 
     const-string v0, ""
 
-    :goto_1
+    :goto_0
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v0, 0x6
@@ -201,21 +191,14 @@
 
     return-void
 
-    :cond_2
-    const-class v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetWeightActivity;
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v1, p0, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->toJsonString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->n()Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
@@ -277,20 +260,20 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->fromJsonString(Ljava/lang/String;)Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    invoke-static {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->b(Ljava/lang/String;)Lcom/xiaomi/hm/health/bt/profile/B;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
     :cond_0
     const v0, 0x7f03002a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->setContentView(I)V
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->a()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->b()V
 
-    const v0, 0x7f0700e6
+    const v0, 0x7f0d00e0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->findViewById(I)Landroid/view/View;
 
@@ -302,7 +285,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->j:Landroid/widget/TextView;
 
-    const v1, 0x7f09012a
+    const v1, 0x7f0901bf
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->getString(I)Ljava/lang/String;
 
@@ -312,7 +295,7 @@
 
     const-string v0, "CURRENT_USER_BIRTH"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->getCurrentUserInfoByTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -355,7 +338,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -385,7 +368,7 @@
 
     add-int/lit8 v13, v0, 0x0
 
-    const v0, 0x7f070119
+    const v0, 0x7f0d0113
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->findViewById(I)Landroid/view/View;
 
@@ -403,19 +386,19 @@
 
     move-result-object v0
 
-    const v1, 0x7f0201bd
+    const v1, 0x7f0201e4
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f090216
+    const v1, 0x7f0902ab
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f0a0009
+    const v2, 0x7f070009
 
     const/16 v3, 0xc
 
@@ -427,7 +410,7 @@
 
     move-result-object v14
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cX;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cY;
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->l:I
 
@@ -437,7 +420,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0a0005
+    const v3, 0x7f070005
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -447,7 +430,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0a0009
+    const v3, 0x7f070009
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -457,7 +440,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0a0008
+    const v3, 0x7f070008
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -477,11 +460,11 @@
 
     move v3, v13
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cX;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f07011a
+    const v0, 0x7f0d0114
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->findViewById(I)Landroid/view/View;
 
@@ -491,7 +474,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->i:Lkankan/wheel/widget/WheelView;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cX;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cY;
 
     const/4 v2, 0x1
 
@@ -503,7 +486,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f0a0005
+    const v5, 0x7f070005
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -513,7 +496,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f0a0009
+    const v6, 0x7f070009
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -523,7 +506,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f0a0008
+    const v7, 0x7f070008
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -541,9 +524,9 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cX;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->n:Lcn/com/smartdevices/bracelet/ui/cX;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->n:Lcn/com/smartdevices/bracelet/ui/cY;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->k:Lcn/com/smartdevices/bracelet/model/Birthday;
 
@@ -567,7 +550,7 @@
 
     if-lt v0, v1, :cond_2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cX;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cY;
 
     const/4 v2, 0x1
 
@@ -581,7 +564,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f0a0005
+    const v5, 0x7f070005
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -591,7 +574,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f0a0009
+    const v6, 0x7f070009
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -601,7 +584,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f0a0008
+    const v7, 0x7f070008
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -619,7 +602,7 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cX;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->i:Lkankan/wheel/widget/WheelView;
 
@@ -629,19 +612,19 @@
 
     move-result-object v1
 
-    const v2, 0x7f0201bd
+    const v2, 0x7f0201e4
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v1
 
-    const v2, 0x7f090215
+    const v2, 0x7f0902aa
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v3, 0x7f0a0009
+    const v3, 0x7f070009
 
     const/16 v4, 0xc
 
@@ -745,19 +728,19 @@
 
     move-result-object v0
 
-    const v1, 0x7f0201bd
+    const v1, 0x7f0201e4
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f090215
+    const v1, 0x7f0902aa
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f0a0009
+    const v2, 0x7f070009
 
     const/16 v3, 0xc
 
@@ -769,7 +752,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->n:Lcn/com/smartdevices/bracelet/ui/cX;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->n:Lcn/com/smartdevices/bracelet/ui/cY;
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 

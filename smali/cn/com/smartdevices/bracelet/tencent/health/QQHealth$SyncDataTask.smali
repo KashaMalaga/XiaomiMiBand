@@ -53,7 +53,7 @@
 .end method
 
 .method protected varargs doInBackground([Lcom/xiaomi/hm/health/dataprocess/SportDay;)Ljava/lang/Void;
-    .locals 4
+    .locals 5
 
     array-length v1, p1
 
@@ -64,10 +64,18 @@
 
     aget-object v2, p1, v0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$SyncDataTask;->this$0:Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;
+    new-instance v3, Lcn/com/smartdevices/bracelet/tencent/health/sync/HealthSportSyncer;
 
-    # invokes: Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->syncData(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
-    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->access$300(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$SyncDataTask;->this$0:Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;
+
+    # getter for: Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mContext:Landroid/content/Context;
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->access$200(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;)Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4, v2}, Lcn/com/smartdevices/bracelet/tencent/health/sync/HealthSportSyncer;-><init>(Landroid/content/Context;Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
+
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/tencent/health/sync/HealthSportSyncer;->work()V
 
     add-int/lit8 v0, v0, 0x1
 

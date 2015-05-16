@@ -3,7 +3,7 @@
 
 
 # static fields
-.field public static final beep:I = 0x7f060000
+.field public static final picker_number_of_items_selected:I = 0x7f0c0000
 
 
 # direct methods

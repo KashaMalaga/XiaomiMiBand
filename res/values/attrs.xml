@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="left_text" format="string" />
+    <attr name="right_text" format="string" />
+    <attr name="left_text_color" format="color" />
+    <attr name="right_text_color" format="color" />
+    <attr name="show_style" format="string" />
+    <attr name="swipeable" format="boolean" />
+    <attr name="guidelines">
+        <enum name="on" value="2" />
+        <enum name="onTouch" value="1" />
+        <enum name="off" value="0" />
+    </attr>
+    <attr name="fixAspectRatio" format="boolean" />
+    <attr name="aspectRatioX" format="integer" />
+    <attr name="aspectRatioY" format="integer" />
+    <attr name="imageResource" format="reference" />
     <attr name="ptrRefreshableViewBackground" format="reference|color" />
     <attr name="ptrHeaderBackground" format="reference|color" />
     <attr name="ptrHeaderTextColor" format="reference|color" />
@@ -30,15 +45,9 @@
     <attr name="ptrAdapterViewBackground" format="reference|color" />
     <attr name="ptrDrawableTop" format="reference" />
     <attr name="ptrDrawableBottom" format="reference" />
-    <attr name="guidelines">
-        <enum name="on" value="2" />
-        <enum name="onTouch" value="1" />
-        <enum name="off" value="0" />
-    </attr>
-    <attr name="fixAspectRatio" format="boolean" />
-    <attr name="aspectRatioX" format="integer" />
-    <attr name="aspectRatioY" format="integer" />
-    <attr name="imageResource" format="reference" />
+    <attr name="slidepanel_height" format="dimension" />
+    <attr name="border_width" format="dimension" />
+    <attr name="border_color" format="color" />
     <attr name="slideMenuStyle" format="reference" />
     <attr name="layout_role">
         <enum name="content" value="0" />
@@ -119,12 +128,6 @@
     <attr name="inner_parallax_factor" format="float" />
     <attr name="parallax_views_num" format="integer" />
     <attr name="circular_parallax" format="boolean" />
-    <attr name="left_text" format="string" />
-    <attr name="right_text" format="string" />
-    <attr name="left_text_color" format="color" />
-    <attr name="right_text_color" format="color" />
-    <attr name="show_style" format="string" />
-    <attr name="swipeable" format="boolean" />
     <attr name="panelHeight" format="dimension" />
     <attr name="shadowHeight" format="dimension" />
     <attr name="paralaxOffset" format="dimension" />
@@ -133,6 +136,15 @@
     <attr name="dragView" format="reference" />
     <attr name="overlay" format="boolean" />
     <attr name="touchEvent" format="boolean" />
+    <attr name="panelHeights" format="dimension" />
+    <attr name="shadowHeights" format="dimension" />
+    <attr name="paralaxOffsets" format="dimension" />
+    <attr name="fadeColors" format="color" />
+    <attr name="flingVelocitys" format="integer" />
+    <attr name="dragViews" format="reference" />
+    <attr name="overlays" format="boolean" />
+    <attr name="touchEvents" format="boolean" />
+    <attr name="scrollViews" format="reference" />
     <attr name="roundColor" format="color" />
     <attr name="roundProgressColor" format="color" />
     <attr name="roundWidth" format="dimension" />
@@ -189,8 +201,8 @@
     <attr name="rb_enable" format="boolean" />
     <attr name="rb_color" format="color" />
     <attr name="rb_strokeWidth" format="dimension" />
-    <attr name="rb_cx" format="integer" />
-    <attr name="rb_cy" format="integer" />
+    <attr name="rb_cx" format="dimension" />
+    <attr name="rb_cy" format="dimension" />
     <attr name="rb_radius" format="dimension" />
     <attr name="rb_duration" format="integer" />
     <attr name="rb_rippleAmount" format="integer" />
@@ -206,7 +218,4 @@
     <attr name="labCircleHeight" format="dimension" />
     <attr name="labCircleStroke" format="boolean" />
     <attr name="labCircleStrokeWidth" format="float" />
-    <attr name="slidepanel_height" format="dimension" />
-    <attr name="border_width" format="dimension" />
-    <attr name="border_color" format="color" />
 </resources>

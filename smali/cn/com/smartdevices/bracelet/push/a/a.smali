@@ -1,9 +1,9 @@
 .class public Lcn/com/smartdevices/bracelet/push/a/a;
-.super Lcn/com/smartdevices/bracelet/f/D;
+.super Lcn/com/smartdevices/bracelet/d/E;
 
 
 # annotations
-.annotation runtime Lcn/com/smartdevices/bracelet/f/F;
+.annotation runtime Lcn/com/smartdevices/bracelet/d/G;
     a = "push_message"
 .end annotation
 
@@ -14,7 +14,7 @@
 
 # instance fields
 .field public c:J
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "msg_id"
     .end annotation
 .end field
@@ -24,7 +24,7 @@
 .method public constructor <init>()V
     .locals 2
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/f/D;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/d/E;-><init>()V
 
     const-wide/16 v0, 0x0
 

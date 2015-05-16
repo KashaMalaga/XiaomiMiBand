@@ -71,7 +71,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -131,7 +131,7 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     mul-int v5, v3, v0
 
@@ -181,7 +181,7 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-lez v3, :cond_1
 
@@ -194,7 +194,7 @@
 
     :cond_2
     :try_start_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e;->a()Lcn/com/smartdevices/bracelet/e;
 
     move-result-object v2
 
@@ -202,7 +202,7 @@
 
     invoke-direct {v4, v3, v0}, Lcom/f/a/b/a/f;-><init>(II)V
 
-    invoke-virtual {v2, p1, v4}, Lcn/com/smartdevices/bracelet/l;->a(Ljava/lang/String;Lcom/f/a/b/a/f;)Landroid/graphics/Bitmap;
+    invoke-virtual {v2, p1, v4}, Lcn/com/smartdevices/bracelet/e;->a(Ljava/lang/String;Lcom/f/a/b/a/f;)Landroid/graphics/Bitmap;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -211,7 +211,7 @@
     :goto_2
     if-nez v1, :cond_4
 
-    const v0, 0x7f090113
+    const v0, 0x7f0901a8
 
     invoke-static {p0, v0, v8}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -327,7 +327,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f090113
+    const v0, 0x7f0901a8
 
     const/4 v1, 0x1
 
@@ -420,7 +420,7 @@
     goto :goto_1
 
     :pswitch_data_0
-    .packed-switch 0x7f070209
+    .packed-switch 0x7f0d021d
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -432,7 +432,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030052
+    const v0, 0x7f030056
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->setContentView(I)V
 
@@ -452,7 +452,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    const v0, 0x7f0701f5
+    const v0, 0x7f0d0202
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -462,7 +462,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->d:Lcom/edmodo/cropper/CropImageView;
 
-    const v0, 0x7f07020b
+    const v0, 0x7f0d021f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -474,7 +474,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070209
+    const v0, 0x7f0d021d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 

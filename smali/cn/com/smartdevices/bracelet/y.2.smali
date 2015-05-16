@@ -1,18 +1,63 @@
-.class public final Lcn/com/smartdevices/bracelet/y;
-.super Ljava/lang/Object;
+.class final Lcn/com/smartdevices/bracelet/y;
+.super Ljava/util/TimerTask;
 
 
-# static fields
-.field public static final a:Ljava/lang/String; = "cn.com.smartdevices.bracele.action.START_LAB_FACTORY_TEST_ACTIVITY"
-
-.field public static final b:Ljava/lang/String; = "cn.com.smartdevices.bracelet.action.START_LAB_SPORT_ANALYSE"
+# instance fields
+.field final synthetic a:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>(Ljava/lang/ref/WeakReference;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/y;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/y;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/y;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/Context;
+
+    const-string v1, "Call_Notify"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    :cond_0
+    new-instance v0, Lcom/xiaomi/hm/health/bt/a/g;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lcom/xiaomi/hm/health/bt/a/g;-><init>(Lcom/xiaomi/hm/health/bt/a/b;I)V
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->a(Lcom/xiaomi/hm/health/bt/a/g;)Lcom/xiaomi/hm/health/bt/a/g;
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->a()Lcom/xiaomi/hm/health/bt/a/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/a/g;->f()V
 
     return-void
 .end method

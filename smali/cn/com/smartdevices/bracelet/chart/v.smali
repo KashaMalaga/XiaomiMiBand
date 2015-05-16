@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200d9
+    const v1, 0x7f0200d7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -224,7 +224,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0800bc
+    const v1, 0x7f0800f1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1596,7 +1596,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1610,7 +1610,7 @@
 
     const-string v1, "dismissLoading."
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/chart/v;->A:Z
 

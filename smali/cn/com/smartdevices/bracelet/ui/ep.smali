@@ -1,50 +1,96 @@
-.class Lcn/com/smartdevices/bracelet/ui/eP;
-.super Landroid/text/style/ClickableSpan;
+.class public Lcn/com/smartdevices/bracelet/ui/eP;
+.super Lcom/huami/android/view/b;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/eO;
+# static fields
+.field private static final a:Ljava/lang/String; = "UseLazyDaysFragment"
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/eO;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/eP;->a:Lcn/com/smartdevices/bracelet/ui/eO;
-
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Lcom/huami/android/view/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method protected inflateLayout()I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eP;->a:Lcn/com/smartdevices/bracelet/ui/eO;
+    const v0, 0x7f030067
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/eO;->getActivity()Landroid/app/Activity;
+    return v0
+.end method
 
-    move-result-object v0
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->s(Landroid/content/Context;)V
+    invoke-super {p0, p1}, Lcom/huami/android/view/b;->onCreate(Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public updateDrawState(Landroid/text/TextPaint;)V
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/huami/android/view/b;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
-    const/high16 v0, -0x1000000
+    move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
+    return-object v0
+.end method
 
-    const/4 v0, 0x1
+.method protected onLeftButtonClicked()V
+    .locals 0
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
+    invoke-super {p0}, Lcom/huami/android/view/b;->onLeftButtonClicked()V
 
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/eP;->dismiss()V
+
+    return-void
+.end method
+
+.method protected onRightButtonClicked()V
+    .locals 2
+
+    invoke-super {p0}, Lcom/huami/android/view/b;->onRightButtonClicked()V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/eP;->dismiss()V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/eP;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "confirm_manual_lazy_day"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
+
+    invoke-direct {v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->a(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/eP;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->v(Landroid/content/Context;)V
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->r()V
+
+    :cond_0
     return-void
 .end method

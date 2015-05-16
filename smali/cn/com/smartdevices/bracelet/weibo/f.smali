@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/activity/k;
+.implements Lcn/com/smartdevices/bracelet/activity/p;
 
 
 # instance fields
@@ -33,7 +33,7 @@
 
     const-string v1, "login callback succeed"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     sget v0, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->a:I
 
@@ -58,7 +58,7 @@
 
     const-string v1, "login callback failure"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/f;->a:Lcn/com/smartdevices/bracelet/weibo/e;
 

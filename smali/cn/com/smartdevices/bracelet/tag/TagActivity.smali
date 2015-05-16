@@ -4,7 +4,11 @@
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 .implements Landroid/view/View$OnLongClickListener;
-.implements Lcn/com/smartdevices/bracelet/tag/b;
+.implements Lcn/com/smartdevices/bracelet/tag/c;
+
+
+# static fields
+.field private static final f:I = 0x1001
 
 
 # instance fields
@@ -14,14 +18,30 @@
 
 .field private e:Landroid/view/View;
 
+.field private g:Landroid/os/Handler;
+
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;-><init>()V
 
+    new-instance v0, Lcn/com/smartdevices/bracelet/tag/d;
+
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/tag/d;-><init>(Lcn/com/smartdevices/bracelet/tag/TagActivity;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->g:Landroid/os/Handler;
+
     return-void
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/tag/TagActivity;)Landroid/os/Handler;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->g:Landroid/os/Handler;
+
+    return-object v0
 .end method
 
 .method private a()V
@@ -35,13 +55,13 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/tag/k;
+    new-instance v1, Lcn/com/smartdevices/bracelet/tag/n;
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/tag/k;-><init>()V
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/tag/n;-><init>()V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->d:Landroid/widget/TextView;
 
-    const v3, 0x7f090415
+    const v3, 0x7f09048b
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -51,7 +71,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    const v2, 0x7f070072
+    const v2, 0x7f0d006c
 
     invoke-virtual {v0, v2, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -73,7 +93,7 @@
     :pswitch_0
     const/4 v0, 0x1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->k(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepUploadEnable(Z)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/TagActivity;->a()V
 
@@ -88,7 +108,7 @@
 .method public onBackPressed()V
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ae()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readUploadEnable()Z
 
     move-result v0
 
@@ -133,8 +153,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f07003d -> :sswitch_0
-        0x7f0700fc -> :sswitch_1
+        0x7f0d003e -> :sswitch_0
+        0x7f0d00f6 -> :sswitch_1
     .end sparse-switch
 .end method
 
@@ -147,7 +167,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagActivity;->setContentView(I)V
 
-    const v0, 0x7f07003d
+    const v0, 0x7f0d003e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagActivity;->findViewById(I)Landroid/view/View;
 
@@ -161,7 +181,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070051
+    const v0, 0x7f0d0052
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagActivity;->findViewById(I)Landroid/view/View;
 
@@ -169,7 +189,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f0700fc
+    const v0, 0x7f0d00f6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagActivity;->findViewById(I)Landroid/view/View;
 
@@ -191,7 +211,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ae()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readUploadEnable()Z
 
     move-result v1
 
@@ -199,15 +219,15 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->d:Landroid/widget/TextView;
 
-    const v2, 0x7f090421
+    const v2, 0x7f090497
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/tag/h;
+    new-instance v1, Lcn/com/smartdevices/bracelet/tag/k;
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/tag/h;-><init>()V
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/tag/k;-><init>()V
 
-    const v2, 0x7f070072
+    const v2, 0x7f0d006c
 
     invoke-virtual {v0, v2, v1}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -236,9 +256,9 @@
 .end method
 
 .method public onLongClick(Landroid/view/View;)Z
-    .locals 2
+    .locals 3
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/lab/b/c;->f(Landroid/content/Context;)Z
 
@@ -248,27 +268,23 @@
 
     const-string v0, "\u5f53\u524d\u7f51\u7edc\u73af\u5883\u4e0d\u662fwifi\uff0c\u8bf7\u5230wifi\u4e0b\u518d\u6b21\u91cd\u8bd5"
 
-    invoke-static {p0, v0, v1}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    invoke-static {p0, v0, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     :goto_0
-    return v1
+    return v2
 
     :cond_0
-    const-string v0, "\u5f00\u59cb\u4e0a\u4f20\uff0c\u8bf7\u4fdd\u6301\u7f51\u7edc\u73af\u5883\u7a33\u5b9a\uff01"
-
-    invoke-static {p0, v0, v1}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->c:Lcn/com/smartdevices/bracelet/tag/a/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->i()V
+    new-instance v1, Lcn/com/smartdevices/bracelet/tag/e;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/tag/e;-><init>(Lcn/com/smartdevices/bracelet/tag/TagActivity;)V
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(Lcn/com/smartdevices/bracelet/tag/a/i;)V
 
     goto :goto_0
 .end method

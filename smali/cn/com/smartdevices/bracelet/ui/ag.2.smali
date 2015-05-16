@@ -8,14 +8,14 @@
 # instance fields
 .field final synthetic a:Landroid/view/View;
 
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/ad;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/ac;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ad;Landroid/view/View;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ac;Landroid/view/View;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ag;->b:Lcn/com/smartdevices/bracelet/ui/ad;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ag;->b:Lcn/com/smartdevices/bracelet/ui/ac;
 
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/ag;->a:Landroid/view/View;
 
@@ -29,17 +29,17 @@
 .method public run()V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ag;->b:Lcn/com/smartdevices/bracelet/ui/ad;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ag;->b:Lcn/com/smartdevices/bracelet/ui/ac;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ag;->a:Landroid/view/View;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ag;->b:Lcn/com/smartdevices/bracelet/ui/ad;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ag;->b:Lcn/com/smartdevices/bracelet/ui/ac;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/ad;->i(Lcn/com/smartdevices/bracelet/ui/ad;)Landroid/view/View;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/ac;->j(Lcn/com/smartdevices/bracelet/ui/ac;)Landroid/view/View;
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/ad;->a(Lcn/com/smartdevices/bracelet/ui/ad;Landroid/view/View;Landroid/view/View;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/ac;->a(Lcn/com/smartdevices/bracelet/ui/ac;Landroid/view/View;Landroid/view/View;)V
 
     return-void
 .end method

@@ -10,10 +10,6 @@
 
 
 # instance fields
-.field private A:Lcn/com/smartdevices/bracelet/weight/y;
-
-.field private B:Z
-
 .field private b:Landroid/content/Context;
 
 .field private c:Landroid/widget/TextView;
@@ -38,7 +34,7 @@
 
 .field private m:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
-.field private n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+.field private n:Lcom/xiaomi/hm/health/bt/profile/B;
 
 .field private o:I
 
@@ -58,20 +54,20 @@
 
 .field private w:Z
 
-.field private x:I
+.field private x:F
 
-.field private y:Z
+.field private y:Lcn/com/smartdevices/bracelet/weight/V;
 
-.field private z:F
+.field private z:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 2
 
-    const/4 v0, 0x0
-
     const/4 v1, 0x0
+
+    const/4 v0, 0x0
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;-><init>()V
 
@@ -89,25 +85,19 @@
 
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->w:Z
 
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->x:I
-
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->y:Z
-
     const/4 v0, 0x0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->z:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->x:F
 
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->B:Z
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->z:Z
 
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+.method static synthetic a(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)Lcom/xiaomi/hm/health/bt/profile/B;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
     return-object v0
 .end method
@@ -119,7 +109,7 @@
 
     const/high16 v2, 0x40a00000
 
-    const v0, 0x7f0701cb
+    const v0, 0x7f0d01d8
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -133,7 +123,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0703bf
+    const v0, 0x7f0d03f5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -143,7 +133,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->t:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
-    const v0, 0x7f0703c0
+    const v0, 0x7f0d0209
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -153,7 +143,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->u:Landroid/widget/TextView;
 
-    const v0, 0x7f0701c9
+    const v0, 0x7f0d01d6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -163,7 +153,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->f:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f07018b
+    const v0, 0x7f0d0199
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -173,7 +163,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->h:Landroid/widget/ImageButton;
 
-    const v0, 0x7f070198
+    const v0, 0x7f0d01a6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -187,7 +177,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07018d
+    const v0, 0x7f0d019b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -197,7 +187,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->q:Landroid/widget/TextView;
 
-    const v0, 0x7f07018e
+    const v0, 0x7f0d019c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -207,7 +197,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->r:Landroid/widget/TextView;
 
-    const v0, 0x7f07018f
+    const v0, 0x7f0d019d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -217,7 +207,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->s:Landroid/widget/TextView;
 
-    const v0, 0x7f070197
+    const v0, 0x7f0d01a5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -227,7 +217,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f070194
+    const v0, 0x7f0d01a2
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -237,7 +227,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->d:Landroid/widget/TextView;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->k()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->j()Z
 
     move-result v0
 
@@ -247,7 +237,7 @@
 
     const-string v1, "isChinese"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->c:Landroid/widget/TextView;
 
@@ -274,7 +264,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
     :goto_0
-    const v0, 0x7f07018c
+    const v0, 0x7f0d019a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -288,7 +278,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070190
+    const v0, 0x7f0d019e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -302,7 +292,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070199
+    const v0, 0x7f0d01a7
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->findViewById(I)Landroid/view/View;
 
@@ -314,7 +304,7 @@
 
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    const v1, 0x7f09003b
+    const v1, 0x7f0900d0
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->getString(I)Ljava/lang/String;
 
@@ -328,7 +318,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v3, 0x7f090006
+    const/high16 v3, 0x7f090000
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->getString(I)Ljava/lang/String;
 
@@ -392,7 +382,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -401,7 +391,7 @@
 
     const-string v1, "isNoChinese"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->c:Landroid/widget/TextView;
 
@@ -435,7 +425,7 @@
 
     const/4 v1, 0x0
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->B:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->z:Z
 
     if-eqz v0, :cond_0
 
@@ -445,15 +435,15 @@
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->B:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->z:Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->A:Lcn/com/smartdevices/bracelet/weight/y;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->y:Lcn/com/smartdevices/bracelet/weight/V;
 
     if-nez v0, :cond_1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b:Landroid/content/Context;
 
-    const-class v2, Lcn/com/smartdevices/bracelet/weight/y;
+    const-class v2, Lcn/com/smartdevices/bracelet/weight/V;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -463,21 +453,21 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/y;
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/V;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->A:Lcn/com/smartdevices/bracelet/weight/y;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->y:Lcn/com/smartdevices/bracelet/weight/V;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->A:Lcn/com/smartdevices/bracelet/weight/y;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->y:Lcn/com/smartdevices/bracelet/weight/V;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/weight/y;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/weight/V;->setArguments(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->A:Lcn/com/smartdevices/bracelet/weight/y;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->y:Lcn/com/smartdevices/bracelet/weight/V;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/weight/w;
+    new-instance v2, Lcn/com/smartdevices/bracelet/weight/T;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/weight/w;-><init>(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/weight/T;-><init>(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)V
 
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/weight/y;->a(Lcn/com/smartdevices/bracelet/weight/F;)V
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/weight/V;->a(Lcn/com/smartdevices/bracelet/weight/ac;)V
 
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b:Landroid/content/Context;
@@ -503,9 +493,9 @@
     move-result-object v0
 
     :goto_1
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->A:Lcn/com/smartdevices/bracelet/weight/y;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->y:Lcn/com/smartdevices/bracelet/weight/V;
 
-    invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/weight/y;->a(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/weight/V;->a(Landroid/graphics/Bitmap;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
@@ -517,9 +507,9 @@
 
     invoke-virtual {v0, v1}, Landroid/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/app/FragmentTransaction;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->A:Lcn/com/smartdevices/bracelet/weight/y;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->y:Lcn/com/smartdevices/bracelet/weight/V;
 
-    invoke-virtual {v2, v0, v1}, Lcn/com/smartdevices/bracelet/weight/y;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
+    invoke-virtual {v2, v0, v1}, Lcn/com/smartdevices/bracelet/weight/V;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
 
     goto :goto_0
 
@@ -555,7 +545,7 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
     if-eqz v0, :cond_0
 
@@ -585,9 +575,9 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/bt/profile/B;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -599,7 +589,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "WeightReportActivity"
 
@@ -613,9 +603,9 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/bt/profile/B;->e()J
 
     move-result-wide v2
 
@@ -627,63 +617,63 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    new-instance v1, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    new-instance v1, Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-direct {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;-><init>()V
+    invoke-direct {v1}, Lcom/xiaomi/hm/health/bt/profile/B;-><init>()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
-
-    move-result v0
-
-    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->setValue(F)V
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->z:F
-
-    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->setBmi(F)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->j()F
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->setType(I)V
+    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/health/bt/profile/B;->b(F)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->x:F
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/health/bt/profile/B;->a(F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
+
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->h()I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/health/bt/profile/B;->a(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
+
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->e()J
 
     move-result-wide v2
 
-    invoke-virtual {v1, v2, v3}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->setTimestamp(J)V
+    invoke-virtual {v1, v2, v3}, Lcom/xiaomi/hm/health/bt/profile/B;->a(J)V
 
     if-eqz p2, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->e()J
 
     move-result-wide v2
 
-    invoke-static {v2, v3, v5}, Lcn/com/smartdevices/bracelet/weight/G;->a(JI)Ljava/lang/String;
+    invoke-static {v2, v3, v5}, Lcn/com/smartdevices/bracelet/weight/ad;->a(JI)Ljava/lang/String;
 
     move-result-object v0
 
     :goto_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/o;->a()Lcn/com/smartdevices/bracelet/weight/o;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/L;->a()Lcn/com/smartdevices/bracelet/weight/L;
 
     move-result-object v2
 
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/bt/profile/B;->e()J
 
     move-result-wide v3
 
-    invoke-virtual {v2, v3, v4}, Lcn/com/smartdevices/bracelet/weight/o;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    invoke-virtual {v2, v3, v4}, Lcn/com/smartdevices/bracelet/weight/L;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
 
     move-result-object v1
 
@@ -691,18 +681,18 @@
 
     iget v3, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
 
-    invoke-virtual {v2, v1, v3}, Lcn/com/smartdevices/bracelet/weight/o;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;I)V
+    invoke-virtual {v2, v1, v3}, Lcn/com/smartdevices/bracelet/weight/L;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;I)V
 
     :goto_1
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b:Landroid/content/Context;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/C;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/C;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/v;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/v;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v1, v2, p1, v0}, Lcn/com/smartdevices/bracelet/C;->a(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;Lcn/com/smartdevices/bracelet/weight/UserInfo;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, p1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Lcom/xiaomi/hm/health/bt/profile/B;Lcn/com/smartdevices/bracelet/weight/UserInfo;Ljava/lang/String;)V
 
     if-eqz p2, :cond_3
 
@@ -726,15 +716,15 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->e()J
 
     move-result-wide v2
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->p:I
 
-    invoke-static {v2, v3, v0}, Lcn/com/smartdevices/bracelet/weight/G;->a(JI)Ljava/lang/String;
+    invoke-static {v2, v3, v0}, Lcn/com/smartdevices/bracelet/weight/ad;->a(JI)Ljava/lang/String;
 
     move-result-object v0
 
@@ -745,7 +735,7 @@
 
     const-string v2, "can not go here,something wrong!!!"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -778,7 +768,7 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->B:Z
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->z:Z
 
     return p1
 .end method
@@ -794,7 +784,7 @@
 .method private b()V
     .locals 8
 
-    const v4, 0x7f0902b3
+    const v4, 0x7f090347
 
     const/4 v2, 0x0
 
@@ -852,13 +842,13 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v4}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
+    invoke-virtual {v4}, Lcom/xiaomi/hm/health/bt/profile/B;->j()F
 
     move-result v4
 
-    invoke-static {v4}, Lcn/com/smartdevices/bracelet/weight/G;->c(F)F
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/weight/ad;->c(F)F
 
     move-result v4
 
@@ -884,7 +874,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f09034e
+    const v4, 0x7f0903e5
 
     invoke-virtual {p0, v4}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->getString(I)Ljava/lang/String;
 
@@ -902,13 +892,13 @@
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b:Landroid/content/Context;
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v5}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
+    invoke-virtual {v5}, Lcom/xiaomi/hm/health/bt/profile/B;->h()I
 
     move-result v5
 
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/weight/G;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/weight/ad;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -969,27 +959,27 @@
 
     move-result v4
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v5}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
+    invoke-virtual {v5}, Lcom/xiaomi/hm/health/bt/profile/B;->j()F
 
     move-result v5
 
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v6, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v6}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
+    invoke-virtual {v6}, Lcom/xiaomi/hm/health/bt/profile/B;->h()I
 
     move-result v6
 
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/weight/G;->a(FI)F
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/weight/ad;->a(FI)F
 
     move-result v5
 
-    invoke-static {v0, v4, v5}, Lcn/com/smartdevices/bracelet/weight/G;->a(IIF)F
+    invoke-static {v0, v4, v5}, Lcn/com/smartdevices/bracelet/weight/ad;->a(IIF)F
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->z:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->x:F
 
     const/4 v0, 0x6
 
@@ -1005,9 +995,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->c:Landroid/widget/TextView;
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->z:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->x:F
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/weight/G;->b(F)Ljava/lang/String;
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/weight/ad;->b(F)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1017,7 +1007,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b:Landroid/content/Context;
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->z:F
+    iget v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->x:F
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->m:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
@@ -1035,7 +1025,7 @@
 
     iget v6, v6, Lcn/com/smartdevices/bracelet/weight/UserInfo;->gender:I
 
-    invoke-static {v3, v4, v5, v6}, Lcn/com/smartdevices/bracelet/weight/G;->a(Landroid/content/Context;FII)Ljava/lang/String;
+    invoke-static {v3, v4, v5, v6}, Lcn/com/smartdevices/bracelet/weight/ad;->a(Landroid/content/Context;FII)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1056,13 +1046,13 @@
 
     iget v0, v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;->targetWeight:F
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v3}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
+    invoke-virtual {v3}, Lcom/xiaomi/hm/health/bt/profile/B;->h()I
 
     move-result v3
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/weight/G;->b(FI)F
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/weight/ad;->b(FI)F
 
     move-result v0
 
@@ -1070,15 +1060,15 @@
 
     int-to-float v0, v0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v3}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
+    invoke-virtual {v3}, Lcom/xiaomi/hm/health/bt/profile/B;->j()F
 
     move-result v3
 
     sub-float/2addr v0, v3
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/G;->c(FI)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/ad;->c(FI)F
 
     move-result v0
 
@@ -1088,7 +1078,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->s:Landroid/widget/TextView;
 
-    const v4, 0x7f090316
+    const v4, 0x7f0903a9
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1106,13 +1096,13 @@
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b:Landroid/content/Context;
 
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v6, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v6}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
+    invoke-virtual {v6}, Lcom/xiaomi/hm/health/bt/profile/B;->h()I
 
     move-result v6
 
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/weight/G;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/weight/ad;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1162,7 +1152,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->s:Landroid/widget/TextView;
 
-    const v4, 0x7f090317
+    const v4, 0x7f0903aa
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1180,13 +1170,13 @@
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b:Landroid/content/Context;
 
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v6, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v6}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
+    invoke-virtual {v6}, Lcom/xiaomi/hm/health/bt/profile/B;->h()I
 
     move-result v6
 
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/weight/G;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/weight/ad;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1211,7 +1201,7 @@
     :cond_6
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->s:Landroid/widget/TextView;
 
-    const v1, 0x7f090348
+    const v1, 0x7f0903df
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->getString(I)Ljava/lang/String;
 
@@ -1222,7 +1212,7 @@
     goto :goto_3
 
     :cond_7
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/o;->a()Lcn/com/smartdevices/bracelet/weight/o;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/L;->a()Lcn/com/smartdevices/bracelet/weight/L;
 
     move-result-object v0
 
@@ -1230,100 +1220,49 @@
 
     iget v3, v3, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/weight/o;->a(I)Ljava/util/List;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    move-result-object v3
+    invoke-virtual {v4}, Lcom/xiaomi/hm/health/bt/profile/B;->e()J
 
-    const-string v4, "WeightReportActivity"
+    move-result-wide v4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->l:Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    if-eqz v0, :cond_8
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "this view weightInfo "
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3, v4, v5}, Lcn/com/smartdevices/bracelet/weight/L;->a(IJ)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
 
     move-result-object v0
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->l:Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->toString()Ljava/lang/String;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_4
-    invoke-static {v4, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->l:Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    invoke-interface {v3, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
-
-    move-result v0
-
-    invoke-interface {v3}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    if-lt v4, v1, :cond_1
-
-    if-lt v4, v1, :cond_1
-
-    add-int/lit8 v5, v0, 0x1
-
-    if-ge v5, v4, :cond_1
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {v3}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
+    invoke-virtual {v3}, Lcom/xiaomi/hm/health/bt/profile/B;->j()F
 
     move-result v3
 
     iget v0, v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->weight:F
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v4}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
+    invoke-virtual {v4}, Lcom/xiaomi/hm/health/bt/profile/B;->h()I
 
     move-result v4
 
-    invoke-static {v0, v4}, Lcn/com/smartdevices/bracelet/weight/G;->b(FI)F
+    invoke-static {v0, v4}, Lcn/com/smartdevices/bracelet/weight/ad;->b(FI)F
 
     move-result v0
 
     sub-float v0, v3, v0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/G;->c(FI)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/ad;->c(FI)F
 
     move-result v0
 
     cmpl-float v3, v0, v7
 
-    if-lez v3, :cond_9
+    if-lez v3, :cond_8
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->s:Landroid/widget/TextView;
 
-    const v4, 0x7f09031a
+    const v4, 0x7f0903ad
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1337,13 +1276,13 @@
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b:Landroid/content/Context;
 
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v6, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v6}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
+    invoke-virtual {v6}, Lcom/xiaomi/hm/health/bt/profile/B;->h()I
 
     move-result v6
 
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/weight/G;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/weight/ad;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1366,14 +1305,9 @@
     goto/16 :goto_3
 
     :cond_8
-    const-string v0, " weightInfo is null"
-
-    goto :goto_4
-
-    :cond_9
     cmpg-float v3, v0, v7
 
-    if-gez v3, :cond_a
+    if-gez v3, :cond_1
 
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
@@ -1381,7 +1315,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->s:Landroid/widget/TextView;
 
-    const v4, 0x7f09031c
+    const v4, 0x7f0903af
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1395,13 +1329,13 @@
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b:Landroid/content/Context;
 
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v6, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v6}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
+    invoke-virtual {v6}, Lcom/xiaomi/hm/health/bt/profile/B;->h()I
 
     move-result v6
 
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/weight/G;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/weight/ad;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1420,19 +1354,6 @@
     move-result-object v0
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto/16 :goto_3
-
-    :cond_a
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->s:Landroid/widget/TextView;
-
-    const v1, 0x7f09031b
-
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_3
 .end method
@@ -1586,7 +1507,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -1627,6 +1548,12 @@
     :sswitch_0
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->c()V
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b:Landroid/content/Context;
+
+    const-string v1, "Weight_Share_Weight_Report"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
+
     goto :goto_0
 
     :sswitch_1
@@ -1636,7 +1563,7 @@
 
     const-string v1, "WEIGHTTIPSACTIVITY_BMI"
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->z:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->x:F
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
@@ -1674,6 +1601,12 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->a(Landroid/os/Bundle;)V
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b:Landroid/content/Context;
+
+    const-string v1, "Weight_Report_BMI"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
+
     goto :goto_0
 
     :sswitch_2
@@ -1688,21 +1621,21 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v0, 0x7f09030e
+    const v0, 0x7f0903a1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/weight/x;
+    new-instance v1, Lcn/com/smartdevices/bracelet/weight/U;
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/weight/x;-><init>()V
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/weight/U;-><init>()V
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/weight/v;
+    new-instance v2, Lcn/com/smartdevices/bracelet/weight/S;
 
-    invoke-direct {v2, p0, v1}, Lcn/com/smartdevices/bracelet/weight/v;-><init>(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;Lcn/com/smartdevices/bracelet/ui/aa;)V
+    invoke-direct {v2, p0, v1}, Lcn/com/smartdevices/bracelet/weight/S;-><init>(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;Lcom/huami/android/view/b;)V
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/aa;->setOpClickListener(Lcn/com/smartdevices/bracelet/ui/ac;)V
+    invoke-virtual {v1, v2}, Lcom/huami/android/view/b;->setOpClickListener(Lcom/huami/android/view/d;)V
 
     new-instance v2, Landroid/os/Bundle;
 
@@ -1712,16 +1645,16 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/aa;->showPanel(Landroid/app/Activity;Landroid/app/DialogFragment;Landroid/os/Bundle;)V
+    invoke-static {p0, v1, v2}, Lcom/huami/android/view/b;->showPanel(Landroid/app/Activity;Landroid/app/DialogFragment;Landroid/os/Bundle;)V
 
     goto :goto_0
 
     :sswitch_data_0
     .sparse-switch
-        0x7f07018b -> :sswitch_0
-        0x7f07018c -> :sswitch_2
-        0x7f070190 -> :sswitch_1
-        0x7f0701cb -> :sswitch_3
+        0x7f0d0199 -> :sswitch_0
+        0x7f0d019a -> :sswitch_2
+        0x7f0d019e -> :sswitch_1
+        0x7f0d01d8 -> :sswitch_3
     .end sparse-switch
 .end method
 
@@ -1732,7 +1665,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030048
+    const v0, 0x7f03004c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->setContentView(I)V
 
@@ -1762,11 +1695,11 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->fromJsonString(Ljava/lang/String;)Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    invoke-static {v1}, Lcom/xiaomi/hm/health/bt/profile/B;->b(Ljava/lang/String;)Lcom/xiaomi/hm/health/bt/profile/B;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->m:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
@@ -1776,7 +1709,7 @@
 
     const-string v2, "info is null"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
@@ -1786,7 +1719,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->m:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
-    const v2, 0x7f0902b3
+    const v2, 0x7f090347
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->getString(I)Ljava/lang/String;
 
@@ -1839,7 +1772,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "WeightReportActivity"
 
@@ -1853,7 +1786,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1863,7 +1796,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "NEW_USER"
 
@@ -1884,17 +1817,17 @@
     iput v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->o:I
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/o;->a()Lcn/com/smartdevices/bracelet/weight/o;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/L;->a()Lcn/com/smartdevices/bracelet/weight/L;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->n:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/bt/profile/B;->e()J
 
     move-result-wide v1
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/weight/o;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/weight/L;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
 
     move-result-object v0
 
@@ -1924,7 +1857,7 @@
     :cond_2
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->m:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/a;->a()Lcn/com/smartdevices/bracelet/weight/a;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/n;->a()Lcn/com/smartdevices/bracelet/weight/n;
 
     move-result-object v2
 
@@ -1932,7 +1865,7 @@
 
     iget v3, v3, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/weight/a;->a(I)Lcn/com/smartdevices/bracelet/weight/UserInfo;
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/weight/n;->a(I)Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
     move-result-object v2
 
@@ -1944,7 +1877,7 @@
 
     const-string v2, "info is not null"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -1982,19 +1915,19 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v0, p1, Lcn/com/smartdevices/bracelet/eventbus/weight/EventUserPicked;->uid:I
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->o:I
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/a;->a()Lcn/com/smartdevices/bracelet/weight/a;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/n;->a()Lcn/com/smartdevices/bracelet/weight/n;
 
     move-result-object v0
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->o:I
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/a;->a(I)Lcn/com/smartdevices/bracelet/weight/UserInfo;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/n;->a(I)Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
     move-result-object v0
 

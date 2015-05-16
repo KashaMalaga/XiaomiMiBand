@@ -6,7 +6,7 @@
 
 
 # instance fields
-.field private a:Lcn/com/smartdevices/bracelet/tag/i;
+.field private a:Lcn/com/smartdevices/bracelet/tag/l;
 
 .field private b:Lcn/com/smartdevices/bracelet/tag/a/c;
 
@@ -41,7 +41,7 @@
 
     move-result v0
 
-    const v1, 0x7f07003d
+    const v1, 0x7f0d003e
 
     if-ne v0, v1, :cond_0
 
@@ -56,11 +56,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030044
+    const v0, 0x7f030047
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->setContentView(I)V
 
-    const v0, 0x7f07003d
+    const v0, 0x7f0d003e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -68,7 +68,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070161
+    const v0, 0x7f0d0165
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -76,13 +76,13 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/tag/i;
+    new-instance v1, Lcn/com/smartdevices/bracelet/tag/l;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/tag/i;-><init>(Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/tag/l;-><init>(Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;)V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->a:Lcn/com/smartdevices/bracelet/tag/i;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->a:Lcn/com/smartdevices/bracelet/tag/l;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->a:Lcn/com/smartdevices/bracelet/tag/i;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->a:Lcn/com/smartdevices/bracelet/tag/l;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
@@ -100,13 +100,13 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->a:Lcn/com/smartdevices/bracelet/tag/i;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->a:Lcn/com/smartdevices/bracelet/tag/l;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/tag/i;->a(Ljava/util/List;)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/tag/l;->a(Ljava/util/List;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->a:Lcn/com/smartdevices/bracelet/tag/i;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->a:Lcn/com/smartdevices/bracelet/tag/l;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/i;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/l;->notifyDataSetChanged()V
 
     const-string v0, "TagHistoryEnter"
 

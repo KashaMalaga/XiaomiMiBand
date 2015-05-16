@@ -163,7 +163,7 @@
     :catch_0
     move-exception v0
 
-    const v0, 0x7f09035f
+    const v0, 0x7f09042c
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->a(I)V
 
@@ -188,7 +188,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f07003d
+    .packed-switch 0x7f0d003e
         :pswitch_0
     .end packed-switch
 .end method
@@ -202,7 +202,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->setContentView(I)V
 
-    const v0, 0x7f07016e
+    const v0, 0x7f0d03f3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->findViewById(I)Landroid/view/View;
 
@@ -210,7 +210,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f07003d
+    const v0, 0x7f0d003e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->findViewById(I)Landroid/view/View;
 
@@ -218,7 +218,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f09035c
+    const v1, 0x7f090429
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->getString(I)Ljava/lang/String;
 
@@ -238,7 +238,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->a:Lcn/com/smartdevices/bracelet/lab/ui/z;
 
-    const v0, 0x7f0700a9
+    const v0, 0x7f0d00a3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->findViewById(I)Landroid/view/View;
 
@@ -294,7 +294,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->g()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v0
 
@@ -308,7 +308,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->k()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readBehaviorTagEnable()Z
 
     move-result v2
 
@@ -317,7 +317,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->m(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->setBehaviorTagEnable(Z)V
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/lab/p;->a(Landroid/content/Context;)Landroid/util/SparseArray;
 
@@ -329,7 +329,7 @@
 
     if-eqz v2, :cond_2
 
-    const v0, 0x7f09042a
+    const v0, 0x7f0904a5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->getString(I)Ljava/lang/String;
 
@@ -351,7 +351,7 @@
     goto :goto_0
 
     :cond_2
-    const v0, 0x7f090429
+    const v0, 0x7f0904a4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->getString(I)Ljava/lang/String;
 

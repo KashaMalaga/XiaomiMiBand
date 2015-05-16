@@ -1,5 +1,8 @@
 .class Lcn/com/smartdevices/bracelet/activity/e;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/activity/q;
 
 
 # instance fields
@@ -12,35 +15,21 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public a(Ljava/lang/Object;)V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->s(Landroid/content/Context;)V
+    check-cast p1, Ljava/lang/String;
 
-    return-void
-.end method
-
-.method public updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
-
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;Ljava/lang/String;)V
 
     return-void
 .end method

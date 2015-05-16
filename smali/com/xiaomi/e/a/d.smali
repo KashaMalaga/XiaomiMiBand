@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/g/q;
+.implements Lcom/xiaomi/h/q;
 
 
 # instance fields
@@ -22,7 +22,7 @@
 
 
 # virtual methods
-.method public a(Lcom/xiaomi/g/c/e;)V
+.method public a(Lcom/xiaomi/h/c/e;)V
     .locals 3
 
     sget-boolean v0, Lcom/xiaomi/e/a/a;->a:Z
@@ -65,7 +65,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/e/a/d;->a:Lcom/xiaomi/e/a/a;
 
-    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/g/l;
+    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/h/l;
 
     move-result-object v1
 
@@ -83,7 +83,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/c/e;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/h/c/e;->c()Ljava/lang/String;
 
     move-result-object v1
 

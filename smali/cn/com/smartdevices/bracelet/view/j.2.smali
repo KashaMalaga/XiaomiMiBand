@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/j;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
@@ -33,7 +33,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView;Landroid/content/Context;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/j;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView;)I
+
+    move-result v2
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView;Landroid/content/Context;I)V
 
     return-void
 .end method

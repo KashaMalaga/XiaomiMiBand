@@ -306,6 +306,22 @@
     return-void
 .end method
 
+.method public static a(I)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 
 # virtual methods
 .method public a()Lcn/com/smartdevices/bracelet/gps/model/c;
@@ -360,14 +376,6 @@
 
 .method public a(F)V
     .locals 0
-
-    return-void
-.end method
-
-.method public a(I)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->x:I
 
     return-void
 .end method
@@ -542,7 +550,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -593,7 +601,7 @@
 .method public b(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->w:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->x:I
 
     return-void
 .end method
@@ -662,9 +670,17 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
+.end method
+
+.method public c(I)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->w:I
+
+    return-void
 .end method
 
 .method public c(Lcn/com/smartdevices/bracelet/gps/model/c;)V

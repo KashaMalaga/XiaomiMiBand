@@ -37,7 +37,7 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->f()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getSharedPref()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -164,7 +164,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
@@ -202,7 +202,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 

@@ -61,61 +61,96 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/m;->a:Landroid/os/Bundle;
+
+    const-string v1, "code"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
+
+    const v2, 0x7f0903c8
+
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, "\nObtained the code: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
+
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
+
+    const-string v3, "AuthWeiboHealthFailureSDK"
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
+
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
+
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->a(Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->a(Z)V
 
     const-string v0, "BindWeiboHealthActivity"
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Token:"
+    const-string v3, "return[ error code "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
-
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->e(Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;)Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    const-string v2, " refreshtoken:"
+    const-string v2, " session invalid]"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
-
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->e(Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;)Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->accessToken:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "\n"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weibo/m;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -123,22 +158,12 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
+    :goto_0
+    return-void
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
-
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->e(Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;)Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weibo/q;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;)V
-
+    :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
 
     new-instance v1, Lcn/com/smartdevices/bracelet/weibo/t;
@@ -190,107 +215,6 @@
     move-result-object v3
 
     invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/weibo/t;->a(JLcom/sina/weibo/sdk/net/RequestListener;)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/m;->a:Landroid/os/Bundle;
-
-    const-string v1, "code"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
-
-    const v2, 0x7f090335
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, "\nObtained the code: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_1
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
-
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
-
-    const-string v3, "AuthWeiboHealthFailureSDK"
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
-
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
-
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->a(Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/m;->b:Lcn/com/smartdevices/bracelet/weibo/l;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->a(Z)V
-
-    const-string v0, "BindWeiboHealthActivity"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "return[ error code "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " session invalid]"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

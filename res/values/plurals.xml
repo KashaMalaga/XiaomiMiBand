@@ -17,4 +17,8 @@
         <item quantity="other">%s inches</item>
         <item quantity="one">%s inch</item>
     </plurals>
+    <plurals name="weight_match_user">
+        <item quantity="other">%1$d matches.</item>
+        <item quantity="one">%1$d match.</item>
+    </plurals>
 </resources>

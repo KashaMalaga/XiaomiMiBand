@@ -46,11 +46,11 @@
 
     new-array v0, v4, [Ljava/lang/String;
 
-    const-string v1, "http://alog.umeng.com/app_logs"
+    const-string v1, "http://127.0.0.1/app_logs"
 
     aput-object v1, v0, v2
 
-    const-string v1, "http://alog.umeng.co/app_logs"
+    const-string v1, "http://127.0.0.1/app_logs"
 
     aput-object v1, v0, v3
 
@@ -58,11 +58,11 @@
 
     new-array v0, v4, [Ljava/lang/String;
 
-    const-string v1, "http://oc.umeng.com/check_config_update"
+    const-string v1, "http://127.0.0.1/check_config_update"
 
     aput-object v1, v0, v2
 
-    const-string v1, "http://oc.umeng.co/check_config_update"
+    const-string v1, "http://127.0.0.1/check_config_update"
 
     aput-object v1, v0, v3
 

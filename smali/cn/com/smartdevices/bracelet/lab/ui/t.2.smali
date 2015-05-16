@@ -33,7 +33,7 @@
 
 
 # virtual methods
-.method public a()V
+.method public b()V
     .locals 3
 
     const/4 v2, 0x1

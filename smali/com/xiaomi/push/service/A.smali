@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/g/d/b;
+.implements Lcom/xiaomi/h/d/b;
 
 
 # direct methods
@@ -14,7 +14,7 @@
     return-void
 .end method
 
-.method public static a(Lorg/xmlpull/v1/XmlPullParser;)Lcom/xiaomi/g/c/a;
+.method public static a(Lorg/xmlpull/v1/XmlPullParser;)Lcom/xiaomi/h/c/a;
     .locals 9
 
     const/4 v8, 0x2
@@ -76,7 +76,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/xiaomi/g/e/g;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/xiaomi/h/e/g;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -96,7 +96,7 @@
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     :cond_2
-    invoke-static {p0}, Lcom/xiaomi/push/service/A;->a(Lorg/xmlpull/v1/XmlPullParser;)Lcom/xiaomi/g/c/a;
+    invoke-static {p0}, Lcom/xiaomi/push/service/A;->a(Lorg/xmlpull/v1/XmlPullParser;)Lcom/xiaomi/h/c/a;
 
     move-result-object v0
 
@@ -129,9 +129,9 @@
     goto :goto_2
 
     :cond_4
-    new-instance v0, Lcom/xiaomi/g/c/a;
+    new-instance v0, Lcom/xiaomi/h/c/a;
 
-    invoke-direct/range {v0 .. v6}, Lcom/xiaomi/g/c/a;-><init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct/range {v0 .. v6}, Lcom/xiaomi/h/c/a;-><init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 
     move-object v6, v0
 
@@ -157,7 +157,7 @@
 .method public a()V
     .locals 3
 
-    invoke-static {}, Lcom/xiaomi/g/d/c;->a()Lcom/xiaomi/g/d/c;
+    invoke-static {}, Lcom/xiaomi/h/d/c;->a()Lcom/xiaomi/h/d/c;
 
     move-result-object v0
 
@@ -165,12 +165,12 @@
 
     const-string v2, "xm:chat"
 
-    invoke-virtual {v0, v1, v2, p0}, Lcom/xiaomi/g/d/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2, p0}, Lcom/xiaomi/h/d/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public b(Lorg/xmlpull/v1/XmlPullParser;)Lcom/xiaomi/g/c/a;
+.method public b(Lorg/xmlpull/v1/XmlPullParser;)Lcom/xiaomi/h/c/a;
     .locals 3
 
     const/4 v2, 0x2
@@ -195,7 +195,7 @@
     :cond_0
     if-ne v0, v2, :cond_1
 
-    invoke-static {p1}, Lcom/xiaomi/push/service/A;->a(Lorg/xmlpull/v1/XmlPullParser;)Lcom/xiaomi/g/c/a;
+    invoke-static {p1}, Lcom/xiaomi/push/service/A;->a(Lorg/xmlpull/v1/XmlPullParser;)Lcom/xiaomi/h/c/a;
 
     move-result-object v0
 

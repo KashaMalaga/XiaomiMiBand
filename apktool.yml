@@ -1,22 +1,22 @@
 version: 2.0.0-RC3
-apkFileName: 小米运动_1.4.152_1025.apk
+apkFileName: 小米运动_1.4.641_1058.apk
 isFrameworkApk: false
 usesFramework:
   ids:
   - 1
 sdkInfo:
-  minSdkVersion: '18'
+  minSdkVersion: '15'
   targetSdkVersion: '18'
 packageInfo:
   forced-package-id: '127'
 versionInfo:
-  versionCode: '1025'
-  versionName: 1.4.152
+  versionCode: '1058'
+  versionName: 1.4.641
 compressionType: false
 unknownFiles:
   push_version: '0'
+  com/sina/weibo/sdk/net/cacert_cn.cer: '8'
+  com/sina/weibo/sdk/net/cacert_com.cer: '8'
   org/achartengine/image/zoom-1.png: '8'
   org/achartengine/image/zoom_in.png: '8'
   org/achartengine/image/zoom_out.png: '8'
-  com/sina/weibo/sdk/net/cacert_cn.cer: '8'
-  com/sina/weibo/sdk/net/cacert_com.cer: '8'

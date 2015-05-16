@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    const v1, 0x7f090042
+    const v1, 0x7f0900d7
 
     const/4 v2, 0x1
 
@@ -65,7 +65,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/N;->a:Landroid/app/Activity;
 
@@ -88,7 +88,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/N;->a:Landroid/app/Activity;
 
-    const v1, 0x7f09012e
+    const v1, 0x7f0901c3
 
     invoke-static {v0, v1, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -150,7 +150,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/N;->a:Landroid/app/Activity;
 
-    const v1, 0x7f09012f
+    const v1, 0x7f0901c4
 
     invoke-static {v0, v1, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 

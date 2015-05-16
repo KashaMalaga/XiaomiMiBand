@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="running_months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
     <string-array name="health_link_title">
         <item>1、24小时应急响应</item>
         <item>2、应急建议</item>
@@ -96,13 +110,13 @@
     </string-array>
     <string-array name="weight_report_suggestions_boy">
         <item>Set a goal to help manage your weight.</item>
-        <item>"Congratulations! You're at your at your target weight."</item>
+        <item>"Congratulations! You're at your target weight."</item>
         <item>"You're under your target weight"</item>
         <item>"You're over your target weight"</item>
     </string-array>
     <string-array name="weight_report_suggestions_girl">
         <item>Set a goal to help manage your weight.</item>
-        <item>"Congratulations! You're at your at your target weight."</item>
+        <item>"Congratulations! You're at your target weight."</item>
         <item>"You're under your target weight"</item>
         <item>"You're over your target weight"</item>
     </string-array>
@@ -122,5 +136,10 @@
         <item>"You haven't reached your goal yet"</item>
         <item>"You haven't reached your goal yet"</item>
         <item>You reached your goal (%1$s%2$s)!</item>
+    </string-array>
+    <string-array name="phone_notify_tips">
+        <item>Vibrate band for incoming calls on connected device</item>
+        <item>Vibrate band when alarm sounds on connected device</item>
+        <item>Vibrate band when connected device receives an SMS message</item>
     </string-array>
 </resources>

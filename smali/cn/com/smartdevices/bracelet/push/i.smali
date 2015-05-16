@@ -12,3 +12,5 @@
 .field public static final d:Ljava/lang/String; = "follow"
 
 .field public static final e:Ljava/lang/String; = "config"
+
+.field public static final f:Ljava/lang/String; = "unfollow"

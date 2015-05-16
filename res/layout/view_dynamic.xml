@@ -7,6 +7,9 @@
         <ViewStub android:id="@id/info_sleep" android:layout="@layout/view_dynamic_info_sleep" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="48.0dip" />
         <ViewStub android:id="@id/info_weight" android:layout="@layout/view_dynamic_info_weight" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="48.0dip" />
     </FrameLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textColor="#99ffffff" android:gravity="center" android:id="@id/dynamic_btn_weight_record" android:background="@drawable/report_weight_button_selector" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="300.0dip" android:text="@string/record_weight" android:paddingStart="15.0dip" android:paddingEnd="10.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
     <Button android:layout_gravity="bottom" android:id="@id/button1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Button" />
     <ImageView android:id="@id/imagepart1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="139.0dip" android:layout_marginTop="140.0dip" android:src="@drawable/animpart1" />
     <ImageView android:id="@id/imagepart2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="160.0dip" android:layout_marginTop="330.0dip" android:src="@drawable/animpart2" />

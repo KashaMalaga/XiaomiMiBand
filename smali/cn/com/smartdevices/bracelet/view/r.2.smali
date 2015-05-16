@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/r;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/r;->a:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,65 +22,48 @@
 
 
 # virtual methods
-.method public onGlobalLayout()V
-    .locals 3
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "NewApi"
-        }
-    .end annotation
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 4
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-ge v0, v1, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/r;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    check-cast v0, Ljava/lang/Float;
 
-    :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/r;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/r;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
+    move-result v0
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->a(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;)Landroid/support/v4/view/ViewPager;
+    const v1, 0x3e478084
 
-    move-result-object v1
+    const/high16 v2, 0x3f800000
 
-    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->c()I
+    sub-float/2addr v2, v1
 
-    move-result v1
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/r;->a:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->a(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;I)I
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;)F
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/r;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
+    move-result v3
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/r;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
+    mul-float/2addr v0, v2
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->b(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;)I
+    add-float/2addr v0, v1
 
-    move-result v1
+    mul-float/2addr v0, v3
 
-    const/4 v2, 0x0
+    float-to-int v0, v0
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->a(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;II)V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/r;->a:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
+
+    int-to-float v0, v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;F)F
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/r;->a:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/a/a;->a(Landroid/view/View;)V
 
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/r;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    goto :goto_0
 .end method

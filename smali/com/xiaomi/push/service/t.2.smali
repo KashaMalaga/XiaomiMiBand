@@ -52,15 +52,15 @@
 
     iget-object v0, p0, Lcom/xiaomi/push/service/t;->e:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->c(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/g/n;
+    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->c(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/h/n;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/xiaomi/g/n;->d()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/h/n;->d()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/g/n;->c(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/h/n;->c(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/push/service/t;->e:Lcom/xiaomi/push/service/XMPushService;
 

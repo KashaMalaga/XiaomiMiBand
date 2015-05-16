@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/media/MediaScannerConnection$MediaScannerConnectionClient;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,40 +22,34 @@
 
 
 # virtual methods
-.method public onMediaScannerConnected()V
-    .locals 3
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->m(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)Landroid/media/MediaScannerConnection;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->l(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/media/MediaScannerConnection;->scanFile(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onScanCompleted(Ljava/lang/String;Landroid/net/Uri;)V
+.method public run()V
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->h(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)Landroid/os/Handler;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    move-result-object v0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->j(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)Ljava/lang/String;
 
-    const/4 v1, 0x4
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->b(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;Ljava/lang/String;)Z
 
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->k(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
+
+    :goto_0
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->i(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
+
+    goto :goto_0
 .end method

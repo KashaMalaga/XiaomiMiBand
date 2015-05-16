@@ -49,11 +49,11 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/k/i;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/k/l;->a(Landroid/content/Context;Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/k/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/l;->c()Z
 
     move-result v0
 
@@ -158,7 +158,7 @@
 
     move-result-object v1
 
-    invoke-static {v6, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "BaseSCActivity"
 
@@ -194,7 +194,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Ljava/util/Date;->getTime()J
 
@@ -290,7 +290,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -306,7 +306,7 @@
 
     invoke-virtual {v2, v0, v1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
 
     move-result-object v0
 
@@ -318,11 +318,11 @@
 
     move-result-object v1
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/w;
+    new-instance v2, Lcn/com/smartdevices/bracelet/p;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/w;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/p;-><init>()V
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/s;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)I
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/l;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/p;)I
 
     move-result v0
 
@@ -346,7 +346,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

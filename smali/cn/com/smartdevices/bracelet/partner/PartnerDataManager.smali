@@ -3,11 +3,11 @@
 
 
 # static fields
-.field public static final GROUP_LOCAL:I = 0x2
+.field public static final GROUP_LOCAL:I = 0x0
 
-.field public static final GROUP_SERVER:I = 0x1
+.field public static final GROUP_SERVER:I = 0x2
 
-.field public static final GROUP_SPECIAL:I = 0x0
+.field public static final GROUP_SPECIAL:I = 0x1
 
 .field private static final INPUT_AUTHORIZATION_STATUS:Ljava/lang/String; = "authorization_status"
 
@@ -39,7 +39,7 @@
 
 .field private final mContext:Landroid/content/Context;
 
-.field private mDBHelper:Lcn/com/smartdevices/bracelet/f/x;
+.field private mDBHelper:Lcn/com/smartdevices/bracelet/d/x;
 
 .field mIsLoading:Z
 
@@ -54,7 +54,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->g()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/f/x;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/d/x;
 
     const/4 v0, 0x0
 
@@ -82,17 +82,17 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mContext:Landroid/content/Context;
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mLoginData:Lcn/com/smartdevices/bracelet/model/LoginData;
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/f/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/x;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/d/x;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/d/x;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/f/x;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/d/x;
 
     invoke-static {p1}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->getInstance(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lua/LuaEvent;
 
@@ -111,10 +111,10 @@
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;)Lcn/com/smartdevices/bracelet/f/x;
+.method static synthetic access$100(Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;)Lcn/com/smartdevices/bracelet/d/x;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/f/x;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/d/x;
 
     return-object v0
 .end method
@@ -667,7 +667,7 @@
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager$3;-><init>(Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;Ljava/lang/String;)V
 
-    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
+    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/k/j;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
 
     return-void
 .end method
@@ -716,7 +716,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f090293
+    const v4, 0x7f090327
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -726,7 +726,7 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     invoke-virtual {v1, v2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -741,7 +741,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f090154
+    const v4, 0x7f0901e9
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -757,7 +757,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->CONFIG:Lcn/com/smartdevices/bracelet/config/b;
 
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->r:Ljava/lang/Boolean;
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->s:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -775,7 +775,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f090155
+    const v4, 0x7f0901ea
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -808,7 +808,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f09032c
+    const v4, 0x7f0903bf
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -819,7 +819,7 @@
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    const/4 v2, 0x2
+    const/4 v2, 0x0
 
     invoke-virtual {v1, v2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -829,9 +829,9 @@
 .method public getServiceById(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/partner/Partner;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/f/x;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/d/x;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/f/x;->a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/partner/Partner;
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/d/x;->a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/partner/Partner;
 
     move-result-object v0
 
@@ -861,7 +861,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mAuthorizationListHandler:Lcom/d/a/a/h;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/d/a/a/h;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/k/j;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/d/a/a/h;)V
 
     goto :goto_0
 .end method
@@ -888,7 +888,7 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->e()J
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->getServiceUpdateTime()J
 
     move-result-wide v0
 
@@ -924,7 +924,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mAllListHandler:Lcom/d/a/a/h;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/k/g;->f(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/d/a/a/h;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/k/j;->f(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/d/a/a/h;)V
 
     goto :goto_0
 
@@ -937,9 +937,9 @@
 
     iput-boolean v4, v0, Lcn/com/smartdevices/bracelet/eventbus/EventServiceListLoad;->success:Z
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/f/x;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/d/x;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/f/x;->f()Ljava/util/List;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/x;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -963,7 +963,7 @@
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager$4;-><init>(Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;Ljava/lang/String;)V
 
-    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/k/g;->g(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
+    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/k/j;->g(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
 
     return-void
 .end method

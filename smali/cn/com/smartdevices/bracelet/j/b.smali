@@ -1,99 +1,55 @@
-.class Lcn/com/smartdevices/bracelet/j/b;
+.class public Lcn/com/smartdevices/bracelet/j/b;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field private static a:Lcn/com/smartdevices/bracelet/j/b;
 
 
 # instance fields
-.field final synthetic a:Z
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/j/a;
+.field private b:Ljava/util/Queue;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Queue",
+            "<",
+            "Lcn/com/smartdevices/bracelet/j/d;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/j/a;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
+    new-instance v0, Lcn/com/smartdevices/bracelet/j/b;
 
-    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/j/b;->a:Z
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/j/b;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lcn/com/smartdevices/bracelet/j/b;->a:Lcn/com/smartdevices/bracelet/j/b;
 
     return-void
 .end method
 
+.method private constructor <init>()V
+    .locals 1
 
-# virtual methods
-.method public run()V
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;
+    new-instance v0, Ljava/util/LinkedList;
 
-    invoke-direct {v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/j/b;->a:Z
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Ljava/util/Queue;
 
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/j/a;->c(Lcn/com/smartdevices/bracelet/j/a;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/j/a;->c(Lcn/com/smartdevices/bracelet/j/a;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->equals(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    :cond_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;Lcom/xiaomi/hm/health/dataprocess/SportDay;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/j/a;->b()I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;I)I
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/e/c;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/a;)Lcn/com/smartdevices/bracelet/e/c;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/j/b;->b:Lcn/com/smartdevices/bracelet/j/a;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/j/a;->b(Lcn/com/smartdevices/bracelet/j/a;)I
-
-    move-result v1
-
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/e/c;->a(I)V
-
-    :cond_1
     return-void
+.end method
+
+.method public static a()Lcn/com/smartdevices/bracelet/j/b;
+    .locals 1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/j/b;->a:Lcn/com/smartdevices/bracelet/j/b;
+
+    return-object v0
 .end method

@@ -23,15 +23,39 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/s;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->c(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)Lcn/com/smartdevices/bracelet/relation/u;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->a(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/u;->notifyDataSetChanged()V
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/s;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->b(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/s;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->c(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)Lcn/com/smartdevices/bracelet/relation/y;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/y;->notifyDataSetChanged()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/s;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->a()V
 
     return-void
 .end method

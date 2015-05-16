@@ -79,7 +79,7 @@
 
 .field private mSlideRange:I
 
-.field private mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
+.field private mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
 .field private mSlideableView:Landroid/view/View;
 
@@ -164,9 +164,9 @@
 
     iput v5, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragViewResId:I
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/lua/m;->b:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->COLLAPSED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     const/4 v0, 0x0
 
@@ -401,9 +401,9 @@
     :goto_2
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->setWillNotDraw(Z)V
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lua/k;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lua/m;
 
-    invoke-direct {v2, p0, v6}, Lcn/com/smartdevices/bracelet/lua/k;-><init>(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/j;)V
+    invoke-direct {v2, p0, v6}, Lcn/com/smartdevices/bracelet/lua/m;-><init>(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/l;)V
 
     invoke-static {p0, v7, v2}, Landroid/support/v4/widget/bf;->a(Landroid/view/ViewGroup;FLandroid/support/v4/widget/bi;)Landroid/support/v4/widget/bf;
 
@@ -447,7 +447,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f020010
+    const v4, 0x7f020016
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -537,18 +537,18 @@
     return v0
 .end method
 
-.method static synthetic access$600(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Lcn/com/smartdevices/bracelet/lua/m;
+.method static synthetic access$600(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     return-object v0
 .end method
 
-.method static synthetic access$602(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/m;)Lcn/com/smartdevices/bracelet/lua/m;
+.method static synthetic access$602(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     return-object p1
 .end method
@@ -1705,9 +1705,9 @@
 .method public isAnchored()Z
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lua/m;->c:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->ANCHORED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     if-ne v0, v1, :cond_0
 
@@ -1725,9 +1725,9 @@
 .method public isCollapsed()Z
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lua/m;->b:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->COLLAPSED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     if-ne v0, v1, :cond_0
 
@@ -1745,9 +1745,9 @@
 .method public isExpanded()Z
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lua/m;->a:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->EXPANDED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     if-ne v0, v1, :cond_0
 
@@ -2130,11 +2130,11 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/lua/j;->a:[I
+    sget-object v0, Lcn/com/smartdevices/bracelet/lua/l;->a:[I
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/lua/m;->ordinal()I
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->ordinal()I
 
     move-result v2
 
@@ -2401,7 +2401,7 @@
 
     const-string v2, "onMeasure: More than two child views are not supported."
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v0
 
@@ -2606,17 +2606,17 @@
 .method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
-    check-cast p1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
+    check-cast p1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState;
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;->getSuperState()Landroid/os/Parcelable;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
     invoke-super {p0, v0}, Landroid/view/ViewGroup;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    iget-object v0, p1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;->a:Lcn/com/smartdevices/bracelet/lua/m;
+    iget-object v0, p1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     return-void
 .end method
@@ -2628,13 +2628,13 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState;
 
-    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;-><init>(Landroid/os/Parcelable;)V
+    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;->a:Lcn/com/smartdevices/bracelet/lua/m;
+    iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     return-object v1
 .end method
@@ -2956,7 +2956,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsSlidingEnabled:Z
 

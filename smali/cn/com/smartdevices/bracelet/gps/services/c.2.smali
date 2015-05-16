@@ -93,11 +93,11 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/services/a;->b:Lcn/com/smartdevices/bracelet/gps/services/a/c;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(I)Lcn/com/smartdevices/bracelet/gps/services/u;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/services/v;->a(I)Lcn/com/smartdevices/bracelet/gps/services/w;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/services/u;->a()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/services/w;->a()I
 
     move-result v1
 

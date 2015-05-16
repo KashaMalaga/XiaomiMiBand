@@ -7,7 +7,7 @@
 
 .field private b:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
-.field private c:Lcn/com/smartdevices/bracelet/ui/ba;
+.field private c:Lcn/com/smartdevices/bracelet/ui/aZ;
 
 .field private d:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -115,7 +115,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->setContentView(I)V
 
-    const v0, 0x7f07007e
+    const v0, 0x7f0d0078
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->findViewById(I)Landroid/view/View;
 
@@ -125,7 +125,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->a:Landroid/support/v4/view/ViewPager;
 
-    const v0, 0x7f07007f
+    const v0, 0x7f0d0079
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->findViewById(I)Landroid/view/View;
 
@@ -143,6 +143,20 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->d:Ljava/util/ArrayList;
 
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/bb;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Fragment;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->d:Ljava/util/ArrayList;
+
     const-class v1, Lcn/com/smartdevices/bracelet/ui/bc;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -157,7 +171,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->d:Ljava/util/ArrayList;
 
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/bd;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/be;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -169,33 +183,19 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->d:Ljava/util/ArrayList;
-
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/bf;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p0, v1}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Fragment;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/ba;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/aZ;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/ui/ba;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;Landroid/app/FragmentManager;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/ui/aZ;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;Landroid/app/FragmentManager;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->c:Lcn/com/smartdevices/bracelet/ui/ba;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->c:Lcn/com/smartdevices/bracelet/ui/aZ;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->a:Landroid/support/v4/view/ViewPager;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->c:Lcn/com/smartdevices/bracelet/ui/ba;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->c:Lcn/com/smartdevices/bracelet/ui/aZ;
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ae;)V
 
@@ -211,9 +211,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->b:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aZ;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aY;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/aZ;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/aY;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;)V
 
     invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/ui/widget/c;->a(Landroid/support/v4/view/bz;)V
 

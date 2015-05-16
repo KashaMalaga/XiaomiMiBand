@@ -20,7 +20,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    sget v0, Lcom/xiaomi/hm/health/a/f;->view_progress_dialog:I
+    sget v0, Lcom/xiaomi/hm/health/a/g;->view_progress_dialog:I
 
     invoke-direct {p0, v0}, Lcom/huami/android/b/e;-><init>(I)V
 
@@ -98,7 +98,7 @@
 
     invoke-virtual {p1, v0, v0, v0, v0}, Landroid/view/View;->setPadding(IIII)V
 
-    sget v0, Lcom/xiaomi/hm/health/a/e;->progress_txt:I
+    sget v0, Lcom/xiaomi/hm/health/a/f;->progress_txt:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

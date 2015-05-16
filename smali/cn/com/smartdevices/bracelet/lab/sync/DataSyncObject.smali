@@ -28,9 +28,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/sync/c;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/sync/a;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/lab/sync/c;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/lab/sync/a;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->CREATOR:Landroid/os/Parcelable$Creator;
 

@@ -132,13 +132,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
     if-ne v0, p1, :cond_1
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/weibo/q;->g(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/weibo/q;->h(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -162,7 +162,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, ""
 
@@ -185,7 +185,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->g:Landroid/widget/Button;
 
-    const v1, 0x7f090160
+    const v1, 0x7f0901f5
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->getString(I)Ljava/lang/String;
 
@@ -202,7 +202,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->g:Landroid/widget/Button;
 
-    const v1, 0x7f09032d
+    const v1, 0x7f0903c0
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->getString(I)Ljava/lang/String;
 
@@ -221,7 +221,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->g:Landroid/widget/Button;
 
-    const v1, 0x7f090334
+    const v1, 0x7f0903c7
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->getString(I)Ljava/lang/String;
 
@@ -382,7 +382,7 @@
 
     const-string v1, "SSO"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->g:Landroid/widget/Button;
 
@@ -550,7 +550,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->setContentView(I)V
 
-    const v0, 0x7f07003c
+    const v0, 0x7f0d003c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->findViewById(I)Landroid/view/View;
 
@@ -560,7 +560,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->g:Landroid/widget/Button;
 
-    const v0, 0x7f070042
+    const v0, 0x7f0d0043
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->findViewById(I)Landroid/view/View;
 
@@ -594,7 +594,7 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->a(I)V
 
-    const v0, 0x7f07003d
+    const v0, 0x7f0d003e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->findViewById(I)Landroid/view/View;
 
@@ -647,7 +647,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
@@ -674,7 +674,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->i:Lcn/com/smartdevices/bracelet/weibo/n;
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aa;->showPanel(Landroid/app/Activity;Landroid/app/DialogFragment;)V
+    invoke-static {p0, v0}, Lcom/huami/android/view/b;->showPanel(Landroid/app/Activity;Landroid/app/DialogFragment;)V
 
     :cond_2
     :goto_0

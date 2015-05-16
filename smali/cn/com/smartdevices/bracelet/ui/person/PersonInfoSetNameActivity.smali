@@ -120,7 +120,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetNameActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -140,7 +140,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f090301
+    const v0, 0x7f090395
 
     invoke-static {p0, v0, v3}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -162,7 +162,7 @@
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f09033e
+    const v0, 0x7f0903d2
 
     invoke-static {p0, v0, v3}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -191,7 +191,7 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 5
 
-    const v4, 0x7f09027f
+    const v4, 0x7f090313
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->onCreate(Landroid/os/Bundle;)V
 
@@ -213,7 +213,7 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetNameActivity;->a()V
 
-    const v0, 0x7f070122
+    const v0, 0x7f0d011c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetNameActivity;->findViewById(I)Landroid/view/View;
 
@@ -270,7 +270,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     :cond_0
-    const v0, 0x7f0700e6
+    const v0, 0x7f0d00e0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetNameActivity;->findViewById(I)Landroid/view/View;
 
@@ -329,7 +329,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    const v0, 0x7f07011b
+    const v0, 0x7f0d0115
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetNameActivity;->findViewById(I)Landroid/view/View;
 
@@ -355,7 +355,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    const v0, 0x7f07011c
+    const v0, 0x7f0d0116
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetNameActivity;->findViewById(I)Landroid/view/View;
 
@@ -445,7 +445,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v2, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetNameActivity;->b:Ljava/lang/String;
 
@@ -473,7 +473,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     sub-int v0, v1, v0
 

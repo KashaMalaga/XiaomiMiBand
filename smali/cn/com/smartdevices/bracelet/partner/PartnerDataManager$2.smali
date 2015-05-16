@@ -134,7 +134,7 @@
 
     move-result-wide v1
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/z;->g(J)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Keeper;->setServiceUpdateTime(J)V
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
@@ -304,12 +304,12 @@
     :cond_2
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager$2;->this$0:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
-    # getter for: Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/f/x;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->access$100(Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;)Lcn/com/smartdevices/bracelet/f/x;
+    # getter for: Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/d/x;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->access$100(Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;)Lcn/com/smartdevices/bracelet/d/x;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/f/x;->g()Z
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/x;->g()Z
 
     move-result v1
 
@@ -317,18 +317,18 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager$2;->this$0:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
-    # getter for: Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/f/x;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->access$100(Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;)Lcn/com/smartdevices/bracelet/f/x;
+    # getter for: Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/d/x;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->access$100(Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;)Lcn/com/smartdevices/bracelet/d/x;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/f/x;->a(Ljava/util/List;)Z
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/d/x;->a(Ljava/util/List;)Z
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/z;->g(J)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Keeper;->setServiceUpdateTime(J)V
 
     goto/16 :goto_0
 .end method

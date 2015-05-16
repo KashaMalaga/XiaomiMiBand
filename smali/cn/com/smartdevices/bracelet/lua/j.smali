@@ -10,7 +10,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/lua/m;->values()[Lcn/com/smartdevices/bracelet/lua/m;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->values()[Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     move-result-object v0
 
@@ -23,9 +23,9 @@
     :try_start_0
     sget-object v0, Lcn/com/smartdevices/bracelet/lua/j;->a:[I
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lua/m;->a:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->EXPANDED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lua/m;->ordinal()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->ordinal()I
 
     move-result v1
 
@@ -39,9 +39,9 @@
     :try_start_1
     sget-object v0, Lcn/com/smartdevices/bracelet/lua/j;->a:[I
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lua/m;->c:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->ANCHORED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lua/m;->ordinal()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->ordinal()I
 
     move-result v1
 

@@ -30,7 +30,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "commend:"
+    const-string v3, "EventHandler|command:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -44,7 +44,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     packed-switch v0, :pswitch_data_0
 
@@ -95,15 +95,15 @@
     goto :goto_0
 
     :pswitch_7
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/u;
+    new-instance v0, Lcom/xiaomi/hm/health/bt/a/u;
 
     new-instance v1, Lcn/com/smartdevices/bracelet/tag/a/h;
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/tag/a/h;-><init>(Lcn/com/smartdevices/bracelet/tag/a/g;)V
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/a/u;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v0, v1}, Lcom/xiaomi/hm/health/bt/a/u;-><init>(Lcom/xiaomi/hm/health/bt/a/b;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/u;->d()V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/a/u;->f()V
 
     const/16 v0, 0x1007
 

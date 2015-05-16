@@ -109,8 +109,8 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager$3;->this$0:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;
 
-    # getter for: Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/f/x;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->access$100(Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;)Lcn/com/smartdevices/bracelet/f/x;
+    # getter for: Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->mDBHelper:Lcn/com/smartdevices/bracelet/d/x;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;->access$100(Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;)Lcn/com/smartdevices/bracelet/d/x;
 
     move-result-object v0
 
@@ -120,7 +120,7 @@
 
     iget-object v5, v2, Lcn/com/smartdevices/bracelet/eventbus/EventServiceStateChanged;->url:Ljava/lang/String;
 
-    invoke-virtual {v0, v3, v4, v5}, Lcn/com/smartdevices/bracelet/f/x;->a(Ljava/lang/String;ILjava/lang/String;)Z
+    invoke-virtual {v0, v3, v4, v5}, Lcn/com/smartdevices/bracelet/d/x;->a(Ljava/lang/String;ILjava/lang/String;)Z
 
     move-result v0
 
@@ -128,7 +128,7 @@
 
     const-wide/16 v3, 0x0
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/z;->g(J)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/Keeper;->setServiceUpdateTime(J)V
 
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerDataManager$3;->this$0:Lcn/com/smartdevices/bracelet/partner/PartnerDataManager;

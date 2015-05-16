@@ -1,91 +1,93 @@
-.class public Lcn/com/smartdevices/bracelet/ui/T;
-.super Landroid/support/v13/app/i;
+.class Lcn/com/smartdevices/bracelet/ui/T;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/FragmentManager;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/support/v13/app/i;-><init>(Landroid/app/FragmentManager;)V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/T;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)I
-    .locals 1
+.method public run()V
+    .locals 4
 
-    const/4 v0, -0x2
+    const/4 v3, 0x4
 
-    return v0
-.end method
+    const/4 v2, 0x0
 
-.method public a(I)Landroid/app/Fragment;
-    .locals 1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/T;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    const/4 v0, 0x0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->e(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Landroid/view/View;
 
-    packed-switch p1, :pswitch_data_0
+    move-result-object v0
 
-    :goto_0
-    return-object v0
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    :pswitch_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Z
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/T;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    move-result v0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->f(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Landroid/widget/TextView;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dO;
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dO;-><init>()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/T;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    goto :goto_0
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->mHomeBack:Landroid/widget/TextView;
 
-    :cond_0
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/y;
+    const/16 v1, 0x8
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/y;-><init>()V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/T;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    :pswitch_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->c()Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->h(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Lcom/huami/android/b/a/h;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/T;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/eg;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->g(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Lcom/huami/android/b/a/d;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/eg;-><init>()V
+    move-result-object v1
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Lcom/huami/android/b/a/h;->a(Lcom/huami/android/b/a/d;)V
 
-    :cond_1
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/z;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/T;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/z;-><init>()V
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->mHomeBack:Landroid/widget/TextView;
 
-    goto :goto_0
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    nop
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/T;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->f(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Landroid/widget/TextView;
 
-.method public b()I
-    .locals 1
+    move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->h()I
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    move-result v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/T;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    return v0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->e(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
 .end method

@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ShareActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/em;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/em;->a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,19 +25,19 @@
 .method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/em;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/em;->a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->c(Lcn/com/smartdevices/bracelet/ui/ShareActivity;)Lcom/huami/android/b/a/h;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->e()V
+    move-result-object v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/em;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/em;->a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->b(Lcn/com/smartdevices/bracelet/ui/ShareActivity;)Lcom/huami/android/b/a/d;
 
-    const/4 v1, 0x0
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(I)V
+    invoke-virtual {v0, v1}, Lcom/huami/android/b/a/h;->a(Lcom/huami/android/b/a/d;)V
 
     return-void
 .end method

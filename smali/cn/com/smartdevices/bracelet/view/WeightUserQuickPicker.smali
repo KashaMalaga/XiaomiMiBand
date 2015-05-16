@@ -9,13 +9,13 @@
 # instance fields
 .field private b:Landroid/support/v7/widget/RecyclerView;
 
-.field private c:Lcn/com/smartdevices/bracelet/view/ac;
+.field private c:Lcn/com/smartdevices/bracelet/view/ad;
 
 .field private d:Landroid/support/v7/widget/LinearLayoutManager;
 
 .field private e:I
 
-.field private f:Lcn/com/smartdevices/bracelet/view/ab;
+.field private f:Lcn/com/smartdevices/bracelet/view/ac;
 
 .field private g:I
 
@@ -54,11 +54,11 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const v0, 0x7f0300f5
+    const v0, 0x7f030108
 
     invoke-static {p1, v0, p0}, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f070426
+    const v0, 0x7f0d0457
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->findViewById(I)Landroid/view/View;
 
@@ -88,7 +88,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0800e0
+    const v1, 0x7f080113
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -98,9 +98,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->b:Landroid/support/v7/widget/RecyclerView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/view/aa;
+    new-instance v1, Lcn/com/smartdevices/bracelet/view/ab;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/aa;-><init>(Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/ab;-><init>(Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;)V
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->a(Landroid/support/v7/widget/U;)V
 
@@ -135,10 +135,10 @@
     return v0
 .end method
 
-.method static synthetic c(Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;)Lcn/com/smartdevices/bracelet/view/ab;
+.method static synthetic c(Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;)Lcn/com/smartdevices/bracelet/view/ac;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->f:Lcn/com/smartdevices/bracelet/view/ab;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->f:Lcn/com/smartdevices/bracelet/view/ac;
 
     return-object v0
 .end method
@@ -150,9 +150,9 @@
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->g:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ac;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ad;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/ac;->d()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/ad;->d()V
 
     return-void
 .end method
@@ -162,23 +162,23 @@
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->g:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ac;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ad;
 
-    invoke-virtual {v0, p2}, Lcn/com/smartdevices/bracelet/view/ac;->c(I)V
+    invoke-virtual {v0, p2}, Lcn/com/smartdevices/bracelet/view/ad;->c(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ac;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ad;
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->g:I
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/ac;->c(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/ad;->c(I)V
 
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/view/ab;)V
+.method public a(Lcn/com/smartdevices/bracelet/view/ac;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->f:Lcn/com/smartdevices/bracelet/view/ab;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->f:Lcn/com/smartdevices/bracelet/view/ac;
 
     return-void
 .end method
@@ -195,15 +195,15 @@
         }
     .end annotation
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/ac;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/ad;
 
-    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/view/ac;-><init>(Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;Ljava/util/List;)V
+    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/view/ad;-><init>(Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;Ljava/util/List;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ac;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ad;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->b:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ac;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ad;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->a(Landroid/support/v7/widget/N;)V
 
@@ -223,9 +223,9 @@
 
     const/4 v7, 0x1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ac;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ad;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/ac;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/ad;->a()I
 
     move-result v0
 
@@ -302,9 +302,9 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ac;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ad;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/ac;->a(Lcn/com/smartdevices/bracelet/view/ac;)Ljava/util/List;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/ad;->a(Lcn/com/smartdevices/bracelet/view/ad;)Ljava/util/List;
 
     move-result-object v1
 
@@ -358,9 +358,9 @@
 
     const/4 v1, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ac;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c:Lcn/com/smartdevices/bracelet/view/ad;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/ac;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/ad;->a()I
 
     move-result v0
 

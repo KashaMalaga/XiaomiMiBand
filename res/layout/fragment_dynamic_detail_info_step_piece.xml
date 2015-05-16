@@ -1,40 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout android:id="@id/info_step_piece_layout" android:paddingLeft="15.0dip" android:paddingTop="@dimen/chart_info_layout_padding_top_bottom" android:paddingRight="15.0dip" android:paddingBottom="@dimen/chart_info_layout_padding_top_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="3"
+<LinearLayout android:orientation="vertical" android:id="@id/info_step_piece_layout" android:paddingLeft="23.0dip" android:paddingTop="@dimen/chart_info_layout_padding_top_bottom_en" android:paddingRight="23.0dip" android:paddingBottom="@dimen/chart_info_layout_padding_top_bottom_en" android:layout_width="wrap_content" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout style="@style/ChartInfoItem">
-        <TextView android:text="@string/stat_step_distance_piece" style="@style/ChartInfoItemTitle" />
-        <include android:id="@id/info_step_distance" layout="@layout/view_chart_info_item_value" />
+    <TextView android:textSize="@dimen/dynamic_info_title_en" android:text="@string/chart_info_step_piece" style="@style/ChartInfoItemTitle" />
+    <View android:background="#ffc6c6c6" android:layout_width="fill_parent" android:layout_height="0.34000003dip" android:layout_marginTop="5.0dip" />
+    <LinearLayout android:paddingTop="@dimen/dynamic_info_padding_top_en" android:paddingBottom="@dimen/dynamic_info_padding_bottom_en" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include android:id="@id/info_step_distance" android:layout_width="@dimen/dynamic_info_width_en" android:layout_height="wrap_content" layout="@layout/view_chart_info_item_value" />
+        <LinearLayout android:gravity="center_vertical" android:layout_width="@dimen/dynamic_info_width_en" android:layout_height="wrap_content">
+            <TextView android:id="@id/info_step" style="@style/ChartInfoItemValue" />
+            <TextView android:text="@string/step" style="@style/ChartInfoItemValueUnit" />
+        </LinearLayout>
+        <include android:id="@id/info_step_calorie" android:layout_width="@dimen/dynamic_info_width_en" android:layout_height="wrap_content" layout="@layout/view_chart_info_item_value" />
     </LinearLayout>
-    <LinearLayout style="@style/ChartInfoItem">
-        <TextView android:text="@string/stat_step_piece" style="@style/ChartInfoItemTitle" />
-        <TextView android:id="@id/info_step" android:layout_marginTop="@dimen/dynamic_info_title_value_margin" style="@style/ChartInfoItemValue" />
+    <TextView android:textSize="@dimen/dynamic_info_title_en" android:text="@string/chart_info_step_walking_piece" style="@style/ChartInfoItemTitle" />
+    <View android:background="#ffc6c6c6" android:layout_width="fill_parent" android:layout_height="0.34000003dip" android:layout_marginTop="5.0dip" />
+    <LinearLayout android:paddingTop="@dimen/dynamic_info_padding_top_en" android:paddingBottom="@dimen/dynamic_info_padding_bottom_en" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include android:id="@id/info_step_walk_distance" android:layout_width="@dimen/dynamic_info_width_en" android:layout_height="wrap_content" layout="@layout/view_chart_info_item_value" />
+        <include android:id="@id/info_step_walk_duration" android:layout_width="@dimen/dynamic_info_width_en" android:layout_height="wrap_content" layout="@layout/view_chart_info_item_value_time_length" />
+        <include android:id="@id/info_step_walk_calorie" android:layout_width="@dimen/dynamic_info_width_en" android:layout_height="wrap_content" layout="@layout/view_chart_info_item_value" />
     </LinearLayout>
-    <LinearLayout style="@style/ChartInfoItem">
-        <TextView android:text="@string/stat_step_calorie_piece" style="@style/ChartInfoItemTitle" />
-        <include android:id="@id/info_step_calorie" layout="@layout/view_chart_info_item_value" />
+    <TextView android:textSize="@dimen/dynamic_info_title_en" android:text="@string/chart_info_step_running_piece" style="@style/ChartInfoItemTitle" />
+    <View android:background="#ffc6c6c6" android:layout_width="fill_parent" android:layout_height="0.34000003dip" android:layout_marginTop="5.0dip" />
+    <LinearLayout android:paddingTop="@dimen/dynamic_info_padding_top_en" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include android:id="@id/info_step_run_distance" android:layout_width="@dimen/dynamic_info_width_en" android:layout_height="wrap_content" layout="@layout/view_chart_info_item_value" />
+        <include android:id="@id/info_step_run_duration" android:layout_width="@dimen/dynamic_info_width_en" android:layout_height="wrap_content" layout="@layout/view_chart_info_item_value_time_length" />
+        <include android:id="@id/info_step_run_calorie" android:layout_width="@dimen/dynamic_info_width_en" android:layout_height="wrap_content" layout="@layout/view_chart_info_item_value" />
     </LinearLayout>
-    <LinearLayout style="@style/ChartInfoItem">
-        <TextView android:text="@string/stat_step_walk_distance" style="@style/ChartInfoItemTitle" />
-        <include android:id="@id/info_step_walk_distance" layout="@layout/view_chart_info_item_value" />
-    </LinearLayout>
-    <LinearLayout style="@style/ChartInfoItem">
-        <TextView android:text="@string/stat_step_walk_duration" style="@style/ChartInfoItemTitle" />
-        <include android:id="@id/info_step_walk_duration" layout="@layout/view_chart_info_item_value_time_length" />
-    </LinearLayout>
-    <LinearLayout style="@style/ChartInfoItem">
-        <TextView android:text="@string/stat_step_walk_calorie" style="@style/ChartInfoItemTitle" />
-        <include android:id="@id/info_step_walk_calorie" layout="@layout/view_chart_info_item_value" />
-    </LinearLayout>
-    <LinearLayout style="@style/ChartInfoItem">
-        <TextView android:text="@string/stat_step_run_distance" style="@style/ChartInfoItemTitle" />
-        <include android:id="@id/info_step_run_distance" layout="@layout/view_chart_info_item_value" />
-    </LinearLayout>
-    <LinearLayout style="@style/ChartInfoItem">
-        <TextView android:text="@string/stat_step_run_duration" style="@style/ChartInfoItemTitle" />
-        <include android:id="@id/info_step_run_duration" layout="@layout/view_chart_info_item_value_time_length" />
-    </LinearLayout>
-    <LinearLayout style="@style/ChartInfoItem">
-        <TextView android:text="@string/stat_step_run_calorie" style="@style/ChartInfoItemTitle" />
-        <include android:id="@id/info_step_run_calorie" layout="@layout/view_chart_info_item_value" />
-    </LinearLayout>
-</GridLayout>
+</LinearLayout>

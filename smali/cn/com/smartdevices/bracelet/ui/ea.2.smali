@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Lkankan/wheel/widget/c;
 
 
 # instance fields
@@ -22,42 +22,14 @@
 
 
 # virtual methods
-.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+.method public a(Lkankan/wheel/widget/WheelView;II)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ea;->a:Lcn/com/smartdevices/bracelet/ui/dZ;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dZ;->a(Lcn/com/smartdevices/bracelet/ui/dZ;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliConfig()Lcn/com/smartdevices/bracelet/model/MiliConfig;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Lcn/com/smartdevices/bracelet/model/MiliConfig;->setWeightMergeResult(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ea;->a:Lcn/com/smartdevices/bracelet/ui/dZ;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dZ;->a(Lcn/com/smartdevices/bracelet/ui/dZ;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ea;->a:Lcn/com/smartdevices/bracelet/ui/dZ;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dZ;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
+    add-int/lit8 v0, p3, 0x2
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ea;->a:Lcn/com/smartdevices/bracelet/ui/dZ;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/dZ;->a(Lcn/com/smartdevices/bracelet/ui/dZ;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/dZ;->a(Lcn/com/smartdevices/bracelet/ui/dZ;I)V
 
     return-void
 .end method

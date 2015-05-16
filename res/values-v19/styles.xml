@@ -7,17 +7,16 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
-    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light.NoActionBar" />
-    <style name="AppThemeTint" parent="@style/AppTheme">
-        <item name="android:fitsSystemWindows">true</item>
-        <item name="android:windowTranslucentStatus">true</item>
-    </style>
-    <style name="DimPanelTint" parent="@style/DimPanel">
-        <item name="android:windowTranslucentStatus">true</item>
-    </style>
-    <style name="MenuPanelTint" parent="@style/MenuPanel">
-        <item name="android:fitsSystemWindows">false</item>
+    <style name="DimPanelBase" parent="@android:style/Theme.Holo.Light.Panel">
         <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="DimPanel" parent="@style/DimPanelBase">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.InputMethod</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light.NoActionBar" />
+    <style name="DimPanelTint" parent="@style/DimPanel">
         <item name="android:windowTranslucentStatus">true</item>
     </style>
     <style name="CountDownDimTint" parent="@style/DimPanel">
@@ -26,6 +25,15 @@
     <style name="CountDownDimDialogTint" parent="@style/DimPanelBase">
         <item name="android:windowIsFloating">false</item>
         <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <style name="AppThemeTint" parent="@style/AppTheme">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <style name="MenuPanelTint" parent="@style/MenuPanel">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 </resources>

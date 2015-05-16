@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="picker_number_of_items_selected">
+        <item quantity="other">%1$d selecionados</item>
+        <item quantity="zero">%1$d selecionado</item>
+        <item quantity="one">%1$d selecionado</item>
+    </plurals>
+    <plurals name="numberOfPullUpdateReport">
+        <item quantity="other">Se han añadido %d actividades</item>
+        <item quantity="one">Se ha añadido %d actividad</item>
+    </plurals>
+    <plurals name="numberFoot">
+        <item quantity="other">%s pies</item>
+        <item quantity="one">%s pie</item>
+    </plurals>
+    <plurals name="numberInch">
+        <item quantity="other">%s pulgadas</item>
+        <item quantity="one">%s pulgada</item>
+    </plurals>
+    <plurals name="weight_match_user">
+        <item quantity="other">Coincidencias: %1$d</item>
+        <item quantity="one">Coincidencia: %1$d</item>
+    </plurals>
+</resources>

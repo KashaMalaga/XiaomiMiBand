@@ -224,7 +224,7 @@
 
     if-nez v4, :cond_2
 
-    invoke-virtual {p0}, Lcom/commonsware/cwac/camera/o;->a()Z
+    invoke-virtual {p0}, Lcom/commonsware/cwac/camera/o;->b()Z
 
     move-result v4
 
@@ -237,7 +237,7 @@
 
     if-ne v4, v5, :cond_3
 
-    invoke-virtual {p0}, Lcom/commonsware/cwac/camera/o;->a()Z
+    invoke-virtual {p0}, Lcom/commonsware/cwac/camera/o;->b()Z
 
     move-result v4
 
@@ -354,6 +354,12 @@
     const/4 p5, 0x0
 
     goto :goto_0
+.end method
+
+.method public a()V
+    .locals 0
+
+    return-void
 .end method
 
 .method public a(ILandroid/media/MediaRecorder;)V
@@ -501,14 +507,6 @@
     return-void
 .end method
 
-.method protected a()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/commonsware/cwac/camera/o;->i:Z
-
-    return v0
-.end method
-
 .method public b(Lcom/commonsware/cwac/camera/m;Landroid/hardware/Camera$Parameters;)Landroid/hardware/Camera$Size;
     .locals 1
 
@@ -535,18 +533,12 @@
     return-void
 .end method
 
-.method public b()Z
+.method protected b()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/commonsware/cwac/camera/o;->l:Z
+    iget-boolean v0, p0, Lcom/commonsware/cwac/camera/o;->i:Z
 
     return v0
-.end method
-
-.method public c()V
-    .locals 0
-
-    return-void
 .end method
 
 .method public c(ILandroid/media/MediaRecorder;)V
@@ -608,6 +600,14 @@
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
+.end method
+
+.method public c()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/commonsware/cwac/camera/o;->l:Z
+
+    return v0
 .end method
 
 .method public d()V

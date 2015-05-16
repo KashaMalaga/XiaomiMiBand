@@ -18,6 +18,9 @@
 .method public abstract a(IIILandroid/hardware/Camera$Parameters;Landroid/hardware/Camera$Size;)Landroid/hardware/Camera$Size;
 .end method
 
+.method public abstract a()V
+.end method
+
 .method public abstract a(ILandroid/media/MediaRecorder;)V
 .end method
 
@@ -39,13 +42,10 @@
 .method public abstract b(ILandroid/media/MediaRecorder;)V
 .end method
 
-.method public abstract b()Z
-.end method
-
-.method public abstract c()V
-.end method
-
 .method public abstract c(ILandroid/media/MediaRecorder;)V
+.end method
+
+.method public abstract c()Z
 .end method
 
 .method public abstract d()V

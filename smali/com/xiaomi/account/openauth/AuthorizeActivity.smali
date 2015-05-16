@@ -11,7 +11,15 @@
 
 .field private static final d:Ljava/lang/String; = "_locale"
 
-.field private static e:Ljava/util/HashMap; = null
+.field private static final e:Ljava/lang/String; = "extra_my_intent"
+
+.field private static final f:Ljava/lang/String; = "extra_my_bundle"
+
+.field private static final g:Ljava/lang/String; = "extra_response"
+
+.field private static final h:Ljava/lang/String; = "extra_result_code"
+
+.field private static i:Ljava/util/HashMap; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap",
@@ -23,30 +31,46 @@
     .end annotation
 .end field
 
-.field private static final f:Ljava/lang/String;
+.field private static final j:Ljava/lang/String;
 
-.field private static final g:Ljava/lang/String; = "UTF-8"
+.field private static final k:Ljava/lang/String; = "UTF-8"
+
+.field private static final p:I = 0x3e9
 
 
 # instance fields
-.field private h:Landroid/webkit/WebView;
+.field private l:Landroid/webkit/WebView;
 
-.field private i:Landroid/webkit/WebSettings;
+.field private m:Landroid/webkit/WebSettings;
 
-.field private j:Ljava/lang/String;
+.field private n:Ljava/lang/String;
+
+.field private o:Lcom/xiaomi/account/XiaomiOAuthResponse;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
+    const/4 v0, -0x1
+
+    sput v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->a:I
+
+    const/4 v0, 0x1
+
+    sput v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->b:I
+
+    const/4 v0, 0x0
+
+    sput v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->c:I
+
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->e:Ljava/util/HashMap;
+    sput-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Ljava/util/HashMap;
 
-    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->e:Ljava/util/HashMap;
+    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Ljava/util/HashMap;
 
     sget-object v1, Ljava/util/Locale;->SIMPLIFIED_CHINESE:Ljava/util/Locale;
 
@@ -54,7 +78,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->e:Ljava/util/HashMap;
+    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Ljava/util/HashMap;
 
     sget-object v1, Ljava/util/Locale;->CHINA:Ljava/util/Locale;
 
@@ -62,7 +86,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->e:Ljava/util/HashMap;
+    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Ljava/util/HashMap;
 
     sget-object v1, Ljava/util/Locale;->PRC:Ljava/util/Locale;
 
@@ -70,7 +94,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->e:Ljava/util/HashMap;
+    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Ljava/util/HashMap;
 
     sget-object v1, Ljava/util/Locale;->TRADITIONAL_CHINESE:Ljava/util/Locale;
 
@@ -78,7 +102,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->e:Ljava/util/HashMap;
+    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Ljava/util/HashMap;
 
     sget-object v1, Ljava/util/Locale;->TAIWAN:Ljava/util/Locale;
 
@@ -86,7 +110,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->e:Ljava/util/HashMap;
+    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Ljava/util/HashMap;
 
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -94,7 +118,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->e:Ljava/util/HashMap;
+    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Ljava/util/HashMap;
 
     sget-object v1, Ljava/util/Locale;->UK:Ljava/util/Locale;
 
@@ -102,7 +126,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->e:Ljava/util/HashMap;
+    sget-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Ljava/util/HashMap;
 
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -112,13 +136,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/account/openauth/c;->b:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, "/oauth2/authorize"
 
@@ -130,19 +154,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->f:Ljava/lang/String;
-
-    sget v0, Lcom/xiaomi/account/openauth/e;->a:I
-
-    sput v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->a:I
-
-    sget v0, Lcom/xiaomi/account/openauth/e;->b:I
-
-    sput v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->b:I
-
-    sget v0, Lcom/xiaomi/account/openauth/e;->c:I
-
-    sput v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->c:I
+    sput-object v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->j:Ljava/lang/String;
 
     return-void
 .end method
@@ -153,6 +165,113 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
+.end method
+
+.method public static a(Landroid/app/Activity;ILandroid/os/Bundle;)Landroid/content/Intent;
+    .locals 2
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/xiaomi/account/openauth/AuthorizeActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "extra_my_bundle"
+
+    invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+
+    const-string v1, "extra_result_code"
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/app/Activity;Landroid/content/Intent;Lcom/xiaomi/account/a;)Landroid/content/Intent;
+    .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/xiaomi/account/openauth/AuthorizeActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "extra_my_intent"
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string v1, "extra_response"
+
+    new-instance v2, Lcom/xiaomi/account/XiaomiOAuthResponse;
+
+    invoke-direct {v2, p2}, Lcom/xiaomi/account/XiaomiOAuthResponse;-><init>(Lcom/xiaomi/account/a;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Lcom/xiaomi/account/a;)Landroid/content/Intent;
+    .locals 4
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/xiaomi/account/openauth/AuthorizeActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    const-string v2, "client_id"
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "redirect_uri"
+
+    invoke-virtual {v1, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "response_type"
+
+    invoke-virtual {v1, v2, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "scope"
+
+    invoke-virtual {v1, v2, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "state"
+
+    invoke-virtual {v1, v2, p5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz p6, :cond_0
+
+    const-string v2, "skip_confirm"
+
+    invoke-static {p6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    const-string v2, "url_param"
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+
+    const-string v1, "extra_response"
+
+    new-instance v2, Lcom/xiaomi/account/XiaomiOAuthResponse;
+
+    invoke-direct {v2, p7}, Lcom/xiaomi/account/XiaomiOAuthResponse;-><init>(Lcom/xiaomi/account/a;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    return-object v0
 .end method
 
 .method private a(Ljava/lang/String;)Landroid/os/Bundle;
@@ -185,13 +304,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_1
 
-    :cond_1
-    :goto_1
-    return-object v1
-
-    :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -243,7 +357,8 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    :cond_1
+    return-object v1
 .end method
 
 .method private a()Landroid/view/View;
@@ -271,9 +386,9 @@
 
     invoke-direct {v1, p0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->h:Landroid/webkit/WebView;
+    iput-object v1, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->l:Landroid/webkit/WebView;
 
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->h:Landroid/webkit/WebView;
+    iget-object v1, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->l:Landroid/webkit/WebView;
 
     new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
@@ -313,17 +428,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_2
 
-    const-string v0, "UTF-8"
-
-    invoke-static {v1, v0}, Lorg/apache/http/client/utils/URLEncodedUtils;->format(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -353,26 +459,15 @@
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
-.end method
 
-.method private a(ILjava/lang/String;)V
-    .locals 2
+    :cond_2
+    const-string v0, "UTF-8"
 
-    new-instance v0, Landroid/content/Intent;
+    invoke-static {v1, v0}, Lorg/apache/http/client/utils/URLEncodedUtils;->format(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    move-result-object v0
 
-    invoke-direct {p0, p2}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->a(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
-
-    invoke-virtual {p0, p1, v0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->setResult(ILandroid/content/Intent;)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->finish()V
-
-    return-void
+    goto :goto_0
 .end method
 
 .method private b(Landroid/os/Bundle;)Landroid/os/Bundle;
@@ -397,7 +492,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/xiaomi/account/openauth/AuthorizeActivity;->e:Ljava/util/HashMap;
+    sget-object v1, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -407,7 +502,7 @@
 
     const-string v1, "_locale"
 
-    sget-object v2, Lcom/xiaomi/account/openauth/AuthorizeActivity;->e:Ljava/util/HashMap;
+    sget-object v2, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Ljava/util/HashMap;
 
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -422,10 +517,85 @@
 
 
 # virtual methods
+.method a(ILandroid/os/Bundle;)V
+    .locals 1
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {v0, p2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    :cond_0
+    invoke-virtual {p0, p1, v0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->setResult(ILandroid/content/Intent;)V
+
+    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->o:Lcom/xiaomi/account/XiaomiOAuthResponse;
+
+    if-eqz v0, :cond_1
+
+    if-nez p1, :cond_2
+
+    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->o:Lcom/xiaomi/account/XiaomiOAuthResponse;
+
+    invoke-virtual {v0}, Lcom/xiaomi/account/XiaomiOAuthResponse;->a()V
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->finish()V
+
+    return-void
+
+    :cond_2
+    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->o:Lcom/xiaomi/account/XiaomiOAuthResponse;
+
+    invoke-virtual {v0, p2}, Lcom/xiaomi/account/XiaomiOAuthResponse;->a(Landroid/os/Bundle;)V
+
+    goto :goto_0
+.end method
+
+.method a(ILjava/lang/String;)V
+    .locals 1
+
+    invoke-direct {p0, p2}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->a(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->a(ILandroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method protected onActivityResult(IILandroid/content/Intent;)V
+    .locals 1
+
+    const/16 v0, 0x3e9
+
+    if-ne p1, v0, :cond_0
+
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {p0, p2, v0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->a(ILandroid/os/Bundle;)V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public onBackPressed()V
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->h:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->l:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->canGoBack()Z
 
@@ -433,7 +603,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->h:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->l:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->goBack()V
 
@@ -441,57 +611,108 @@
     return-void
 
     :cond_0
-    sget v0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->c:I
+    sget v1, Lcom/xiaomi/account/openauth/AuthorizeActivity;->c:I
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v0, v1}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->a(ILjava/lang/String;)V
+    check-cast v0, Landroid/os/Bundle;
+
+    invoke-virtual {p0, v1, v0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->a(ILandroid/os/Bundle;)V
 
     goto :goto_0
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 4
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-virtual {p0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v1
+
+    const-string v0, "extra_my_bundle"
+
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-string v2, "extra_result_code"
+
+    const/4 v3, -0x1
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v1
+
+    invoke-virtual {p0, v1, v0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->a(ILandroid/os/Bundle;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const-string v0, "extra_response"
+
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/xiaomi/account/XiaomiOAuthResponse;
+
+    iput-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->o:Lcom/xiaomi/account/XiaomiOAuthResponse;
+
+    const-string v0, "extra_my_intent"
+
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/Intent;
+
+    if-eqz v0, :cond_1
+
+    const/16 v1, 0x3e9
+
+    invoke-virtual {p0, v0, v1}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto :goto_0
+
+    :cond_1
     invoke-direct {p0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->a()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->setContentView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->h:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->l:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Landroid/webkit/WebSettings;
+    iput-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->m:Landroid/webkit/WebSettings;
 
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Landroid/webkit/WebSettings;
+    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->m:Landroid/webkit/WebSettings;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Landroid/webkit/WebSettings;
+    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->m:Landroid/webkit/WebSettings;
 
-    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setSavePassword(Z)V
+    invoke-virtual {v0, v3}, Landroid/webkit/WebSettings;->setSavePassword(Z)V
 
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->i:Landroid/webkit/WebSettings;
+    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->m:Landroid/webkit/WebSettings;
 
-    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setSaveFormData(Z)V
+    invoke-virtual {v0, v3}, Landroid/webkit/WebSettings;->setSaveFormData(Z)V
 
-    invoke-virtual {p0}, Lcom/xiaomi/account/openauth/AuthorizeActivity;->getIntent()Landroid/content/Intent;
+    const-string v0, "url_param"
 
-    move-result-object v0
-
-    const-string v1, "url_param"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -501,13 +722,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    sget-object v2, Lcom/xiaomi/account/openauth/AuthorizeActivity;->f:Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    sget-object v2, Lcom/xiaomi/account/openauth/AuthorizeActivity;->j:Ljava/lang/String;
 
-    move-result-object v2
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     const-string v2, "?"
 
@@ -527,25 +748,21 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->j:Ljava/lang/String;
+    iput-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->n:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->h:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->l:Landroid/webkit/WebView;
 
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->j:Ljava/lang/String;
+    iget-object v1, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/xiaomi/account/openauth/f;->a()Lcom/xiaomi/account/openauth/f;
+    iget-object v0, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->l:Landroid/webkit/WebView;
 
-    move-result-object v0
+    new-instance v1, Lcom/xiaomi/account/openauth/a;
 
-    invoke-virtual {v0, p0}, Lcom/xiaomi/account/openauth/f;->a(Landroid/app/Activity;)Landroid/webkit/WebViewClient;
+    invoke-direct {v1, p0}, Lcom/xiaomi/account/openauth/a;-><init>(Lcom/xiaomi/account/openauth/AuthorizeActivity;)V
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/AuthorizeActivity;->h:Landroid/webkit/WebView;
-
-    invoke-virtual {v1, v0}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
-
-    return-void
+    goto :goto_0
 .end method

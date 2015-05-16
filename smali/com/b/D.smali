@@ -3,20 +3,24 @@
 
 
 # instance fields
-.field a:Ljava/lang/String;
+.field a:Lcom/b/F;
+
+.field b:Landroid/location/Location;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method protected constructor <init>(Lcom/b/C;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, ""
+    new-instance v0, Lcom/b/F;
 
-    iput-object v0, p0, Lcom/b/D;->a:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Lcom/b/D;->a:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lcom/b/F;-><init>(Landroid/telephony/CellLocation;)V
+
+    iput-object v0, p0, Lcom/b/D;->a:Lcom/b/F;
 
     return-void
 .end method

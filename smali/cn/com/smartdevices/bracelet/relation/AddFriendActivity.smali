@@ -8,7 +8,7 @@
 # instance fields
 .field private a:Landroid/widget/EditText;
 
-.field private b:Lcn/com/smartdevices/bracelet/relation/w;
+.field private b:Lcn/com/smartdevices/bracelet/relation/A;
 
 
 # direct methods
@@ -59,11 +59,11 @@
     move-result-wide v0
 
     :goto_0
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/AddFriendActivity;->b:Lcn/com/smartdevices/bracelet/relation/w;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/AddFriendActivity;->b:Lcn/com/smartdevices/bracelet/relation/A;
 
-    invoke-virtual {v2, v0, v1}, Lcn/com/smartdevices/bracelet/relation/w;->a(J)V
+    invoke-virtual {v2, v0, v1}, Lcn/com/smartdevices/bracelet/relation/A;->a(J)V
 
-    const v0, 0x7f09042c
+    const v0, 0x7f0904a7
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;I)V
 
@@ -86,7 +86,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/AddFriendActivity;->setContentView(I)V
 
-    const v0, 0x7f070035
+    const v0, 0x7f0d0036
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/AddFriendActivity;->findViewById(I)Landroid/view/View;
 
@@ -96,7 +96,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/AddFriendActivity;->a:Landroid/widget/EditText;
 
-    const v0, 0x7f070036
+    const v0, 0x7f0d0037
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/AddFriendActivity;->findViewById(I)Landroid/view/View;
 
@@ -106,11 +106,11 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/relation/w;->a()Lcn/com/smartdevices/bracelet/relation/w;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/relation/A;->a()Lcn/com/smartdevices/bracelet/relation/A;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/AddFriendActivity;->b:Lcn/com/smartdevices/bracelet/relation/w;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/AddFriendActivity;->b:Lcn/com/smartdevices/bracelet/relation/A;
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
@@ -176,14 +176,14 @@
     return-void
 
     :cond_0
-    const v0, 0x7f09043b
+    const v0, 0x7f0904b6
 
     invoke-static {p0, v0, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f090042
+    const v0, 0x7f0900d7
 
     invoke-static {p0, v0, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/lab/sync/e;
+.implements Lcn/com/smartdevices/bracelet/gps/sync/j;
 
 
 # instance fields
@@ -20,7 +20,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/ui/n;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/ui/o;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/u;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
@@ -30,12 +30,12 @@
 
 
 # virtual methods
-.method public a(Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;)V
+.method public a(Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p1, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->a:Ljava/lang/String;
+    iget-object v0, p1, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->a:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -43,7 +43,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p1, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v0, p1, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     if-nez v0, :cond_1
 
@@ -84,12 +84,12 @@
     return-void
 .end method
 
-.method public b(Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;)V
+.method public b(Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p1, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v0, p1, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     if-nez v0, :cond_1
 
@@ -130,12 +130,12 @@
     return-void
 .end method
 
-.method public c(Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;)V
+.method public c(Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p1, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->a:Ljava/lang/String;
+    iget-object v0, p1, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->a:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -143,7 +143,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p1, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v0, p1, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     if-nez v0, :cond_1
 

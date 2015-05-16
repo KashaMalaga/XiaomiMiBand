@@ -1,9 +1,9 @@
 .class public Lcn/com/smartdevices/bracelet/relation/db/f;
-.super Lcn/com/smartdevices/bracelet/f/D;
+.super Lcn/com/smartdevices/bracelet/d/E;
 
 
 # annotations
-.annotation runtime Lcn/com/smartdevices/bracelet/f/F;
+.annotation runtime Lcn/com/smartdevices/bracelet/d/G;
     a = "relation_message"
 .end annotation
 
@@ -29,54 +29,56 @@
 
 .field public static final k:I = 0x2
 
-.field public static final l:I = 0x0
+.field public static final l:I = 0x3
 
-.field public static final m:I = 0x1
+.field public static final m:I = 0x0
 
-.field public static final n:I = 0x2
+.field public static final n:I = 0x1
 
-.field public static final o:I = 0x3
+.field public static final o:I = 0x2
+
+.field public static final p:I = 0x3
 
 
 # instance fields
-.field public p:J
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+.field public q:J
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "from_user_id"
     .end annotation
 .end field
 
-.field public q:Ljava/lang/String;
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+.field public r:Ljava/lang/String;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "from_user_name"
     .end annotation
 .end field
 
-.field public r:J
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+.field public s:J
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "update_time"
     .end annotation
 .end field
 
-.field public s:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+.field public t:I
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "type"
     .end annotation
 .end field
 
-.field public t:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+.field public u:I
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "count"
     .end annotation
 .end field
 
-.field public u:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+.field public v:I
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "status"
     .end annotation
 .end field
 
-.field public v:Ljava/lang/String;
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+.field public w:Ljava/lang/String;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "icon"
     .end annotation
 .end field
@@ -86,11 +88,11 @@
 .method public constructor <init>()V
     .locals 2
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/f/D;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/d/E;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->p:J
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->q:J
 
     return-void
 .end method
@@ -123,7 +125,7 @@
 
     int-to-long v1, v1
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->p:J
+    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->q:J
 
     const-string v1, "from_user_name"
 
@@ -137,7 +139,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->q:Ljava/lang/String;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->r:Ljava/lang/String;
 
     const-string v1, "update_time"
 
@@ -151,7 +153,7 @@
 
     move-result-wide v1
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->r:J
+    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->s:J
 
     const-string v1, "type"
 
@@ -165,7 +167,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->s:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->t:I
 
     const-string v1, "count"
 
@@ -179,7 +181,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->t:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->u:I
 
     const-string v1, "status"
 
@@ -193,7 +195,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->u:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->v:I
 
     const-string v1, "icon"
 
@@ -207,7 +209,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->v:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->w:Ljava/lang/String;
 
     const/4 v0, 0x1
 
@@ -223,7 +225,7 @@
 
     const-string v1, "from_user_id"
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->p:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->q:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -233,13 +235,13 @@
 
     const-string v1, "from_user_name"
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->q:Ljava/lang/String;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->r:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "update_time"
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->r:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->s:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -249,7 +251,7 @@
 
     const-string v1, "type"
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->s:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->t:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -259,7 +261,7 @@
 
     const-string v1, "count"
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->t:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->u:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -269,7 +271,7 @@
 
     const-string v1, "status"
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->u:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->v:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -279,7 +281,7 @@
 
     const-string v1, "icon"
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->v:Ljava/lang/String;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/db/f;->w:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 

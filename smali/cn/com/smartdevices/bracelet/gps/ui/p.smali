@@ -8,7 +8,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/g;",
+            "Lcn/com/smartdevices/bracelet/gps/model/i;",
             ">;"
         }
     .end annotation
@@ -26,7 +26,7 @@
             "Landroid/content/Context;",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/g;",
+            "Lcn/com/smartdevices/bracelet/gps/model/i;",
             ">;)V"
         }
     .end annotation
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/g;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/i;
 
     :goto_0
     return-object v0
@@ -111,7 +111,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/P;->b:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f03008c
+    sget v1, Lcom/xiaomi/hm/health/b/a/j;->fragment_running_pace_item:I
 
     const/4 v2, 0x0
 
@@ -138,9 +138,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/g;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/i;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/Q;->a(Lcn/com/smartdevices/bracelet/gps/model/g;)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/Q;->a(Lcn/com/smartdevices/bracelet/gps/model/i;)V
 
     :cond_0
     return-object p2

@@ -54,7 +54,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/model/AlarmClockItem;",
+            "Lcom/xiaomi/hm/health/bt/AlarmClockItem;",
             ">;"
         }
     .end annotation
@@ -147,7 +147,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "content://com.android.deskclock/alarm"
 
@@ -294,7 +294,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "hour"
 
@@ -406,7 +406,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
@@ -416,7 +416,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->l(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepMorningAlarms(Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -430,7 +430,7 @@
     :try_start_3
     const-string v0, ""
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->l(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepMorningAlarms(Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -445,7 +445,23 @@
     throw v0
 .end method
 
-.method public static a(Lcn/com/smartdevices/bracelet/model/AlarmClockItem;Landroid/content/Context;)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->h()V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;Landroid/content/ContentResolver;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Landroid/content/ContentResolver;)V
+
+    return-void
+.end method
+
+.method public static a(Lcom/xiaomi/hm/health/bt/AlarmClockItem;Landroid/content/Context;)V
     .locals 8
 
     const/4 v6, 0x0
@@ -472,11 +488,11 @@
 
     move-result v3
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getHour()I
+    invoke-virtual {p0}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->getHour()I
 
     move-result v4
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getMinute()I
+    invoke-virtual {p0}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->getMinute()I
 
     move-result v5
 
@@ -486,11 +502,11 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getDays()I
+    invoke-virtual {p0}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->getDays()I
 
     move-result v2
 
-    sget v3, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->ALARM_ONCE:I
+    sget v3, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->ALARM_ONCE:I
 
     if-ne v2, v3, :cond_0
 
@@ -524,18 +540,18 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->setCalendar(Ljava/util/Calendar;)V
+    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->setCalendar(Ljava/util/Calendar;)V
 
-    invoke-virtual {p0, v7}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->setUpdate(Z)V
+    invoke-virtual {p0, v7}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->setUpdate(Z)V
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getDays()I
+    invoke-virtual {p0}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->getDays()I
 
     move-result v1
 
-    sget v2, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->ALARM_ONCE:I
+    sget v2, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->ALARM_ONCE:I
 
     if-ne v1, v2, :cond_1
 
@@ -573,22 +589,6 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->h()V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;Landroid/content/ContentResolver;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Landroid/content/ContentResolver;)V
-
-    return-void
-.end method
-
 .method static synthetic b(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
     .locals 1
 
@@ -608,7 +608,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->z:Landroid/view/View;
 
-    const v1, 0x7f0a000c
+    const v1, 0x7f07000c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -634,7 +634,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->z:Landroid/view/View;
 
-    const v1, 0x7f0a0055
+    const v1, 0x7f070025
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -676,7 +676,7 @@
 .method private e()V
     .locals 2
 
-    const v0, 0x7f0701e8
+    const v0, 0x7f0d01f5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -698,7 +698,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    const v0, 0x7f070048
+    const v0, 0x7f0d0049
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -706,7 +706,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->y:Landroid/view/View;
 
-    const v0, 0x7f070066
+    const v0, 0x7f0d0068
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -840,7 +840,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -934,17 +934,17 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    check-cast v0, Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getDays()I
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->getDays()I
 
     move-result v3
 
-    sget v4, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->ALARM_ONCE:I
+    sget v4, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->ALARM_ONCE:I
 
     if-ne v3, v4, :cond_0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getCalendar()Ljava/util/Calendar;
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->getCalendar()Ljava/util/Calendar;
 
     move-result-object v3
 
@@ -956,14 +956,14 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->setEnabled(Z)V
 
     goto :goto_0
 
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->r:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepPersonInfo(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->t:Lcn/com/smartdevices/bracelet/ui/e;
 
@@ -1008,7 +1008,7 @@
     return-void
 
     :cond_1
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->fromJson(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    invoke-static {v0}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->fromJson(Ljava/lang/String;)Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
     move-result-object v0
 
@@ -1030,7 +1030,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->r:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepPersonInfo(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->g()V
 
@@ -1048,7 +1048,7 @@
 
     invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;)V
 
-    const v0, 0x7f03004d
+    const v0, 0x7f030051
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->setContentView(I)V
 
@@ -1060,7 +1060,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->q:Landroid/os/Handler;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
@@ -1072,7 +1072,7 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->d()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->c()Z
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->c()Z
 
     move-result v0
 
@@ -1124,15 +1124,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    check-cast v0, Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->isEnabled()Z
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->isEnabled()Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->isSmartWakeup()Z
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->isSmartWakeup()Z
 
     move-result v0
 
@@ -1205,10 +1205,10 @@
     goto :goto_1
 .end method
 
-.method public onEvent(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
+.method public onEvent(Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;)V
     .locals 1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->h()Z
 
     move-result v0
 

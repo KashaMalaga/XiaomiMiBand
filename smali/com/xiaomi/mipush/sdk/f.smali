@@ -610,12 +610,12 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, v0}, Lcom/xiaomi/mipush/sdk/f;->a(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/h/a/d;)V
+    invoke-static {p0, p1, v0}, Lcom/xiaomi/mipush/sdk/f;->a(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/i/a/d;)V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/h/a/d;)V
+.method public static a(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/i/a/d;)V
     .locals 4
 
     const/4 v3, 0x0
@@ -634,9 +634,9 @@
     return-void
 
     :cond_0
-    new-instance v0, Lcom/xiaomi/h/a/p;
+    new-instance v0, Lcom/xiaomi/i/a/p;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/p;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/p;-><init>()V
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/m;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/m;
 
@@ -646,23 +646,23 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/p;->b(Ljava/lang/String;)Lcom/xiaomi/h/a/p;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/p;->b(Ljava/lang/String;)Lcom/xiaomi/i/a/p;
 
     const-string v1, "bar:click"
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/p;->c(Ljava/lang/String;)Lcom/xiaomi/h/a/p;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/p;->c(Ljava/lang/String;)Lcom/xiaomi/i/a/p;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/h/a/p;->a(Ljava/lang/String;)Lcom/xiaomi/h/a/p;
+    invoke-virtual {v0, p1}, Lcom/xiaomi/i/a/p;->a(Ljava/lang/String;)Lcom/xiaomi/i/a/p;
 
-    invoke-virtual {v0, v3}, Lcom/xiaomi/h/a/p;->a(Z)Lcom/xiaomi/h/a/p;
+    invoke-virtual {v0, v3}, Lcom/xiaomi/i/a/p;->a(Z)Lcom/xiaomi/i/a/p;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/u;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/u;
 
     move-result-object v1
 
-    sget-object v2, Lcom/xiaomi/h/a/a;->i:Lcom/xiaomi/h/a/a;
+    sget-object v2, Lcom/xiaomi/i/a/a;->i:Lcom/xiaomi/i/a/a;
 
-    invoke-virtual {v1, v0, v2, v3, p2}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/h/a/a;ZLcom/xiaomi/h/a/d;)V
+    invoke-virtual {v1, v0, v2, v3, p2}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/i/a/a;ZLcom/xiaomi/i/a/d;)V
 
     goto :goto_0
 .end method
@@ -880,25 +880,25 @@
 
     invoke-static {v1}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;)V
 
-    new-instance v1, Lcom/xiaomi/h/a/r;
+    new-instance v1, Lcom/xiaomi/i/a/r;
 
-    invoke-direct {v1}, Lcom/xiaomi/h/a/r;-><init>()V
+    invoke-direct {v1}, Lcom/xiaomi/i/a/r;-><init>()V
 
     invoke-static {}, Lcom/xiaomi/mipush/sdk/f;->a()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/xiaomi/h/a/r;->a(Ljava/lang/String;)Lcom/xiaomi/h/a/r;
+    invoke-virtual {v1, v2}, Lcom/xiaomi/i/a/r;->a(Ljava/lang/String;)Lcom/xiaomi/i/a/r;
 
-    invoke-virtual {v1, p1}, Lcom/xiaomi/h/a/r;->b(Ljava/lang/String;)Lcom/xiaomi/h/a/r;
+    invoke-virtual {v1, p1}, Lcom/xiaomi/i/a/r;->b(Ljava/lang/String;)Lcom/xiaomi/i/a/r;
 
-    invoke-virtual {v1, p2}, Lcom/xiaomi/h/a/r;->e(Ljava/lang/String;)Lcom/xiaomi/h/a/r;
+    invoke-virtual {v1, p2}, Lcom/xiaomi/i/a/r;->e(Ljava/lang/String;)Lcom/xiaomi/i/a/r;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/xiaomi/h/a/r;->d(Ljava/lang/String;)Lcom/xiaomi/h/a/r;
+    invoke-virtual {v1, v2}, Lcom/xiaomi/i/a/r;->d(Ljava/lang/String;)Lcom/xiaomi/i/a/r;
 
     const/4 v2, 0x6
 
@@ -906,7 +906,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/xiaomi/h/a/r;->f(Ljava/lang/String;)Lcom/xiaomi/h/a/r;
+    invoke-virtual {v1, v2}, Lcom/xiaomi/i/a/r;->f(Ljava/lang/String;)Lcom/xiaomi/i/a/r;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -916,7 +916,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/xiaomi/h/a/r;->c(Ljava/lang/String;)Lcom/xiaomi/h/a/r;
+    invoke-virtual {v1, v2}, Lcom/xiaomi/i/a/r;->c(Ljava/lang/String;)Lcom/xiaomi/i/a/r;
 
     sget-object v2, Lcom/xiaomi/mipush/sdk/f;->h:Landroid/content/Context;
 
@@ -924,7 +924,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v1, v0}, Lcom/xiaomi/mipush/sdk/u;->a(Lcom/xiaomi/h/a/r;Z)V
+    invoke-virtual {v2, v1, v0}, Lcom/xiaomi/mipush/sdk/u;->a(Lcom/xiaomi/i/a/r;Z)V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -1098,15 +1098,15 @@
     return-void
 
     :cond_0
-    new-instance v1, Lcom/xiaomi/h/a/j;
+    new-instance v1, Lcom/xiaomi/i/a/j;
 
-    invoke-direct {v1}, Lcom/xiaomi/h/a/j;-><init>()V
+    invoke-direct {v1}, Lcom/xiaomi/i/a/j;-><init>()V
 
     invoke-static {}, Lcom/xiaomi/mipush/sdk/f;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/h/a/j;->a(Ljava/lang/String;)Lcom/xiaomi/h/a/j;
+    invoke-virtual {v1, v0}, Lcom/xiaomi/i/a/j;->a(Ljava/lang/String;)Lcom/xiaomi/i/a/j;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/m;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/m;
 
@@ -1116,9 +1116,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/h/a/j;->b(Ljava/lang/String;)Lcom/xiaomi/h/a/j;
+    invoke-virtual {v1, v0}, Lcom/xiaomi/i/a/j;->b(Ljava/lang/String;)Lcom/xiaomi/i/a/j;
 
-    invoke-virtual {v1, p1}, Lcom/xiaomi/h/a/j;->c(Ljava/lang/String;)Lcom/xiaomi/h/a/j;
+    invoke-virtual {v1, p1}, Lcom/xiaomi/i/a/j;->c(Ljava/lang/String;)Lcom/xiaomi/i/a/j;
 
     invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1137,28 +1137,28 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/h/a/j;->d(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/xiaomi/i/a/j;->d(Ljava/lang/String;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v1, p3}, Lcom/xiaomi/h/a/j;->f(Ljava/lang/String;)Lcom/xiaomi/h/a/j;
+    invoke-virtual {v1, p3}, Lcom/xiaomi/i/a/j;->f(Ljava/lang/String;)Lcom/xiaomi/i/a/j;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/h/a/j;->e(Ljava/lang/String;)Lcom/xiaomi/h/a/j;
+    invoke-virtual {v1, v0}, Lcom/xiaomi/i/a/j;->e(Ljava/lang/String;)Lcom/xiaomi/i/a/j;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/u;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/u;
 
     move-result-object v0
 
-    sget-object v2, Lcom/xiaomi/h/a/a;->j:Lcom/xiaomi/h/a/a;
+    sget-object v2, Lcom/xiaomi/i/a/a;->j:Lcom/xiaomi/i/a/a;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/h/a/a;Lcom/xiaomi/h/a/d;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/i/a/a;Lcom/xiaomi/i/a/d;)V
 
     goto :goto_0
 .end method
@@ -1973,15 +1973,15 @@
 
     if-lez v0, :cond_1
 
-    new-instance v0, Lcom/xiaomi/h/a/B;
+    new-instance v0, Lcom/xiaomi/i/a/B;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/B;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/B;-><init>()V
 
     invoke-static {}, Lcom/xiaomi/mipush/sdk/f;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/B;->a(Ljava/lang/String;)Lcom/xiaomi/h/a/B;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/B;->a(Ljava/lang/String;)Lcom/xiaomi/i/a/B;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/m;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/m;
 
@@ -1991,25 +1991,25 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/B;->b(Ljava/lang/String;)Lcom/xiaomi/h/a/B;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/B;->b(Ljava/lang/String;)Lcom/xiaomi/i/a/B;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/h/a/B;->c(Ljava/lang/String;)Lcom/xiaomi/h/a/B;
+    invoke-virtual {v0, p1}, Lcom/xiaomi/i/a/B;->c(Ljava/lang/String;)Lcom/xiaomi/i/a/B;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/B;->d(Ljava/lang/String;)Lcom/xiaomi/h/a/B;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/B;->d(Ljava/lang/String;)Lcom/xiaomi/i/a/B;
 
-    invoke-virtual {v0, p2}, Lcom/xiaomi/h/a/B;->e(Ljava/lang/String;)Lcom/xiaomi/h/a/B;
+    invoke-virtual {v0, p2}, Lcom/xiaomi/i/a/B;->e(Ljava/lang/String;)Lcom/xiaomi/i/a/B;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/u;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/u;
 
     move-result-object v1
 
-    sget-object v2, Lcom/xiaomi/h/a/a;->c:Lcom/xiaomi/h/a/a;
+    sget-object v2, Lcom/xiaomi/i/a/a;->c:Lcom/xiaomi/i/a/a;
 
-    invoke-virtual {v1, v0, v2, v4}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/h/a/a;Lcom/xiaomi/h/a/d;)V
+    invoke-virtual {v1, v0, v2, v4}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/i/a/a;Lcom/xiaomi/i/a/d;)V
 
     goto :goto_0
 
@@ -2097,25 +2097,25 @@
 
     invoke-virtual {v2, v0, v1}, Lcom/xiaomi/mipush/sdk/m;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/xiaomi/h/a/r;
+    new-instance v2, Lcom/xiaomi/i/a/r;
 
-    invoke-direct {v2}, Lcom/xiaomi/h/a/r;-><init>()V
+    invoke-direct {v2}, Lcom/xiaomi/i/a/r;-><init>()V
 
     invoke-static {}, Lcom/xiaomi/mipush/sdk/f;->a()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/xiaomi/h/a/r;->a(Ljava/lang/String;)Lcom/xiaomi/h/a/r;
+    invoke-virtual {v2, v3}, Lcom/xiaomi/i/a/r;->a(Ljava/lang/String;)Lcom/xiaomi/i/a/r;
 
-    invoke-virtual {v2, v0}, Lcom/xiaomi/h/a/r;->b(Ljava/lang/String;)Lcom/xiaomi/h/a/r;
+    invoke-virtual {v2, v0}, Lcom/xiaomi/i/a/r;->b(Ljava/lang/String;)Lcom/xiaomi/i/a/r;
 
-    invoke-virtual {v2, v1}, Lcom/xiaomi/h/a/r;->e(Ljava/lang/String;)Lcom/xiaomi/h/a/r;
+    invoke-virtual {v2, v1}, Lcom/xiaomi/i/a/r;->e(Ljava/lang/String;)Lcom/xiaomi/i/a/r;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lcom/xiaomi/h/a/r;->d(Ljava/lang/String;)Lcom/xiaomi/h/a/r;
+    invoke-virtual {v2, v0}, Lcom/xiaomi/i/a/r;->d(Ljava/lang/String;)Lcom/xiaomi/i/a/r;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -2125,7 +2125,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lcom/xiaomi/h/a/r;->c(Ljava/lang/String;)Lcom/xiaomi/h/a/r;
+    invoke-virtual {v2, v0}, Lcom/xiaomi/i/a/r;->c(Ljava/lang/String;)Lcom/xiaomi/i/a/r;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/u;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/u;
 
@@ -2133,7 +2133,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v2, v1}, Lcom/xiaomi/mipush/sdk/u;->a(Lcom/xiaomi/h/a/r;Z)V
+    invoke-virtual {v0, v2, v1}, Lcom/xiaomi/mipush/sdk/u;->a(Lcom/xiaomi/i/a/r;Z)V
 
     goto :goto_0
 .end method
@@ -2252,15 +2252,15 @@
     goto :goto_0
 
     :cond_1
-    new-instance v0, Lcom/xiaomi/h/a/J;
+    new-instance v0, Lcom/xiaomi/i/a/J;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/J;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/J;-><init>()V
 
     invoke-static {}, Lcom/xiaomi/mipush/sdk/f;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/J;->a(Ljava/lang/String;)Lcom/xiaomi/h/a/J;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/J;->a(Ljava/lang/String;)Lcom/xiaomi/i/a/J;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/m;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/m;
 
@@ -2270,27 +2270,27 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/J;->b(Ljava/lang/String;)Lcom/xiaomi/h/a/J;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/J;->b(Ljava/lang/String;)Lcom/xiaomi/i/a/J;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/h/a/J;->c(Ljava/lang/String;)Lcom/xiaomi/h/a/J;
+    invoke-virtual {v0, p1}, Lcom/xiaomi/i/a/J;->c(Ljava/lang/String;)Lcom/xiaomi/i/a/J;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/J;->d(Ljava/lang/String;)Lcom/xiaomi/h/a/J;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/J;->d(Ljava/lang/String;)Lcom/xiaomi/i/a/J;
 
-    invoke-virtual {v0, p2}, Lcom/xiaomi/h/a/J;->e(Ljava/lang/String;)Lcom/xiaomi/h/a/J;
+    invoke-virtual {v0, p2}, Lcom/xiaomi/i/a/J;->e(Ljava/lang/String;)Lcom/xiaomi/i/a/J;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/u;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/u;
 
     move-result-object v1
 
-    sget-object v2, Lcom/xiaomi/h/a/a;->d:Lcom/xiaomi/h/a/a;
+    sget-object v2, Lcom/xiaomi/i/a/a;->d:Lcom/xiaomi/i/a/a;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v1, v0, v2, v3}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/h/a/a;Lcom/xiaomi/h/a/d;)V
+    invoke-virtual {v1, v0, v2, v3}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/i/a/a;Lcom/xiaomi/i/a/d;)V
 
     goto :goto_0
 .end method
@@ -2312,15 +2312,15 @@
     return-void
 
     :cond_0
-    new-instance v0, Lcom/xiaomi/h/a/F;
+    new-instance v0, Lcom/xiaomi/i/a/F;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/F;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/F;-><init>()V
 
     invoke-static {}, Lcom/xiaomi/mipush/sdk/f;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/F;->a(Ljava/lang/String;)Lcom/xiaomi/h/a/F;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/F;->a(Ljava/lang/String;)Lcom/xiaomi/i/a/F;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/m;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/m;
 
@@ -2330,7 +2330,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/F;->b(Ljava/lang/String;)Lcom/xiaomi/h/a/F;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/F;->b(Ljava/lang/String;)Lcom/xiaomi/i/a/F;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/m;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/m;
 
@@ -2340,7 +2340,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/F;->c(Ljava/lang/String;)Lcom/xiaomi/h/a/F;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/F;->c(Ljava/lang/String;)Lcom/xiaomi/i/a/F;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/m;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/m;
 
@@ -2350,19 +2350,19 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/F;->e(Ljava/lang/String;)Lcom/xiaomi/h/a/F;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/F;->e(Ljava/lang/String;)Lcom/xiaomi/i/a/F;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/h/a/F;->d(Ljava/lang/String;)Lcom/xiaomi/h/a/F;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/i/a/F;->d(Ljava/lang/String;)Lcom/xiaomi/i/a/F;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/u;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/u;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/mipush/sdk/u;->a(Lcom/xiaomi/h/a/F;)V
+    invoke-virtual {v1, v0}, Lcom/xiaomi/mipush/sdk/u;->a(Lcom/xiaomi/i/a/F;)V
 
     invoke-static {}, Lcom/xiaomi/mipush/sdk/PushMessageHandler;->a()V
 

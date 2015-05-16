@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/xiaomi/hm/health/a/f;->view_dialog_menu_item:I
+    sget v1, Lcom/xiaomi/hm/health/a/g;->view_dialog_menu_item:I
 
     const/4 v2, 0x0
 
@@ -125,7 +125,7 @@
 
     move-result-object p2
 
-    sget v0, Lcom/xiaomi/hm/health/a/e;->label:I
+    sget v0, Lcom/xiaomi/hm/health/a/f;->label:I
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

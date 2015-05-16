@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/contentLayout" android:background="@drawable/daily_sport_report_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/home_back" android:text="@string/dynamic_title_sleep" style="@style/BackButton" />
+            <TextView android:textSize="18.0dip" android:textColor="@color/content_color_brighter" android:gravity="center" android:id="@id/share_title" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/dynamic_title_sleep" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:id="@id/person_info_layout" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.1">
+            <ImageView android:id="@id/avatar_icon" android:background="@drawable/person_avatar_default" android:layout_width="65.0dip" android:layout_height="65.0dip" android:src="@drawable/person_avatar_frame_selector" android:scaleType="fitCenter" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/weight_report_white_80" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/app_name" android:layout_below="@id/avatar_icon" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <include layout="@layout/split_line_trans" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12.0sp" android:textColor="@color/weight_report_white_30" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:text="@string/dynamic_title_sleep" />
+            <include android:id="@id/layout_sleep_total" layout="@layout/layout_sleep_total" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/weight_report_white_80" android:gravity="center" android:id="@id/ranking_tv" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="26.0dip" android:text="@string/exceed_user" />
+        </LinearLayout>
+        <include layout="@layout/split_line_trans" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.5">
+            <LinearLayout android:orientation="vertical" android:paddingTop="35.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginBottom="@dimen/daily_sport_icon_margin" android:src="@drawable/icon_sleep" />
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/stat_sleep_time" style="@style/InfoContent" />
+                <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="32.0sp" android:textColor="@color/person_page_user_info_main_color" android:gravity="center" android:id="@id/start_sleep_time_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="0" android:singleLine="true" android:fontFamily="miui-light" />
+            </LinearLayout>
+            <View android:background="@color/split_color_trans" android:layout_width="@dimen/round_bg_stroke" android:layout_height="130.0dip" android:layout_marginTop="22.0dip" />
+            <LinearLayout android:orientation="vertical" android:paddingTop="35.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginBottom="@dimen/daily_sport_icon_margin" android:src="@drawable/icon_startup" />
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/stat_sleep_rise_time" style="@style/InfoContent" />
+                <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="32.0sp" android:textColor="@color/person_page_user_info_main_color" android:gravity="center" android:id="@id/sleep_rise_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="0" android:singleLine="true" android:fontFamily="miui-light" />
+            </LinearLayout>
+            <View android:background="@color/split_color_trans" android:layout_width="@dimen/round_bg_stroke" android:layout_height="130.0dip" android:layout_marginTop="22.0dip" />
+            <LinearLayout android:orientation="vertical" android:paddingTop="35.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginBottom="@dimen/daily_sport_icon_margin" android:src="@drawable/icon_deep" />
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/stat_sleep_deep" style="@style/InfoContent" />
+                <include android:id="@id/layout_sleep_deep" layout="@layout/layout_sleep_deep" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:gravity="center" android:id="@id/share_logo" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/running_share_pane_margin">
+            <ImageView android:gravity="center" android:id="@id/tv_logo" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/app_icon_small" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/content_color" android:gravity="center" android:id="@id/share_from_mi_band_txt" android:layout_width="wrap_content" android:layout_height="22.0dip" android:layout_marginLeft="9.0dip" android:text="@string/app_name" android:layout_toRightOf="@id/tv_logo" />
+        </RelativeLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/share_pane_container" android:layout_width="fill_parent" android:layout_height="@dimen/running_share_pane_margin" android:layout_alignParentBottom="true" />
+</RelativeLayout>

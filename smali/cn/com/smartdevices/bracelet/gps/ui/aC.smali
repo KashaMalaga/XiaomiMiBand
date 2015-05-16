@@ -1,5 +1,8 @@
 .class Lcn/com/smartdevices/bracelet/gps/ui/ac;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -12,56 +15,29 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/ac;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
+.method public run()V
     .locals 3
 
-    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
-
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :goto_0
-    return-void
-
-    :pswitch_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ac;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Landroid/widget/RelativeLayout;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ac;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Landroid/widget/RelativeLayout;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->e(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/ac;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
-    const v2, 0x7f040022
+    new-instance v2, Lcn/com/smartdevices/bracelet/gps/ui/ad;
 
-    invoke-static {v1, v2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+    invoke-direct {v2, p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/ad;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/ac;Landroid/graphics/Bitmap;)V
 
-    move-result-object v1
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->startAnimation(Landroid/view/animation/Animation;)V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

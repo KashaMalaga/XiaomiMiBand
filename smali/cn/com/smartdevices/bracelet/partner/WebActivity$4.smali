@@ -9,7 +9,7 @@
         "<",
         "Ljava/lang/String;",
         "Ljava/lang/Integer;",
-        "Lcn/com/smartdevices/bracelet/ui/ek;",
+        "Lcn/com/smartdevices/bracelet/ui/en;",
         ">;"
     }
 .end annotation
@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method protected varargs doInBackground([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/ek;
+.method protected varargs doInBackground([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/en;
     .locals 5
 
     const/4 v1, 0x0
@@ -85,7 +85,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/b/a;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/a/a;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -97,9 +97,9 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/ek;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/en;
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/ui/ek;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/ui/en;-><init>(Ljava/lang/String;)V
 
     :cond_0
     return-object v1
@@ -135,14 +135,14 @@
 
     check-cast p1, [Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/WebActivity$4;->doInBackground([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/ek;
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/WebActivity$4;->doInBackground([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/en;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected onPostExecute(Lcn/com/smartdevices/bracelet/ui/ek;)V
+.method protected onPostExecute(Lcn/com/smartdevices/bracelet/ui/en;)V
     .locals 3
 
     new-instance v0, Lcom/huami/android/b/a/d;
@@ -176,7 +176,7 @@
 
     iput-object v1, v0, Lcom/huami/android/b/a/d;->c:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/ui/ek;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/ui/en;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -227,9 +227,9 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lcn/com/smartdevices/bracelet/ui/ek;
+    check-cast p1, Lcn/com/smartdevices/bracelet/ui/en;
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/WebActivity$4;->onPostExecute(Lcn/com/smartdevices/bracelet/ui/ek;)V
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/WebActivity$4;->onPostExecute(Lcn/com/smartdevices/bracelet/ui/en;)V
 
     return-void
 .end method

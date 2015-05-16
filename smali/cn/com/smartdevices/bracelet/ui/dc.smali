@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/chart/c/p;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -22,12 +22,18 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 1
+.method public onClick(Landroid/view/View;)V
+    .locals 2
+
+    const/4 v1, 0x1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dC;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->applyStatusBarTint(I)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->d(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)Landroid/support/v4/view/ViewPager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v1}, Landroid/support/v4/view/ViewPager;->a(IZ)V
 
     return-void
 .end method

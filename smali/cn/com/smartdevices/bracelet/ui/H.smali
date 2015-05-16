@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/ui/H;
-.super Lcom/d/a/a/h;
+.super Lcom/xiaomi/hm/health/bt/a/b;
 
 
 # instance fields
@@ -12,62 +12,37 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/H;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcom/xiaomi/hm/health/bt/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+.method public a()V
     .locals 1
+
+    invoke-super {p0}, Lcom/xiaomi/hm/health/bt/a/b;->a()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/H;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->i(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->g(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
 
     return-void
 .end method
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 3
+.method public a(Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v2, 0x1
+    invoke-super {p0, p1}, Lcom/xiaomi/hm/health/bt/a/b;->a(Ljava/lang/Object;)V
 
-    if-eqz p3, :cond_0
+    check-cast p1, Ljava/lang/Boolean;
 
-    array-length v0, p3
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    if-ge v0, v2, :cond_1
+    move-result v0
 
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/H;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->i(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
-
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/H;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/String;
-
-    invoke-direct {v1, p3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/k/h;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/H;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/H;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
@@ -75,14 +50,29 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    const/4 v1, 0x0
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    :cond_2
+    :goto_0
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/H;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->i(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
 
     goto :goto_0
+.end method
+
+.method public b(Ljava/lang/Object;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Lcom/xiaomi/hm/health/bt/a/b;->b(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/H;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->i(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
+
+    return-void
 .end method

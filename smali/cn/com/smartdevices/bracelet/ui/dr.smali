@@ -1,126 +1,114 @@
 .class Lcn/com/smartdevices/bracelet/ui/dR;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$PanelSlideListener;
+.super Lcom/xiaomi/hm/health/bt/a/b;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dO;
+.field final synthetic a:Z
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/dP;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dO;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dP;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dR;->a:Lcn/com/smartdevices/bracelet/ui/dO;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dR;->b:Lcn/com/smartdevices/bracelet/ui/dP;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/ui/dR;->a:Z
+
+    invoke-direct {p0}, Lcom/xiaomi/hm/health/bt/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onGetPullDownDistance()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public onGetPullDownDockEnable()Ljava/lang/Boolean;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public onGetThreshhold()F
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public onGetThreshhold2()F
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public onLastSlideOffset(Landroid/view/View;F)V
+.method public a()V
     .locals 0
 
-    return-void
-.end method
-
-.method public onPanelAnchored(Landroid/view/View;)V
-    .locals 2
-
-    const-string v0, "SettingFragment"
-
-    const-string v1, "onPanelAnchored"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-super {p0}, Lcom/xiaomi/hm/health/bt/a/b;->a()V
 
     return-void
 .end method
 
-.method public onPanelCollapsed(Landroid/view/View;)V
+.method public a(Ljava/lang/Object;)V
     .locals 2
 
-    const-string v0, "SettingFragment"
+    invoke-super {p0, p1}, Lcom/xiaomi/hm/health/bt/a/b;->a(Ljava/lang/Object;)V
 
-    const-string v1, "onPanelCollapsed"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dR;->b:Lcn/com/smartdevices/bracelet/ui/dP;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dR;->b:Lcn/com/smartdevices/bracelet/ui/dP;
 
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/dP;->b(Lcn/com/smartdevices/bracelet/ui/dP;)Landroid/view/animation/RotateAnimation;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dP;->a(Lcn/com/smartdevices/bracelet/ui/dP;Landroid/view/animation/Animation;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    :goto_0
     return-void
-.end method
 
-.method public onPanelExpanded(Landroid/view/View;)V
-    .locals 2
+    :cond_1
+    if-eqz p1, :cond_2
 
-    const-string v0, "SettingFragment"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dR;->b:Lcn/com/smartdevices/bracelet/ui/dP;
 
-    const-string v1, "onPanelExpanded"
+    check-cast p1, Lcom/xiaomi/hm/health/bt/profile/d;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dP;->a(Lcn/com/smartdevices/bracelet/ui/dP;Lcom/xiaomi/hm/health/bt/profile/d;)Lcom/xiaomi/hm/health/bt/profile/d;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dR;->a:Lcn/com/smartdevices/bracelet/ui/dO;
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dR;->b:Lcn/com/smartdevices/bracelet/ui/dP;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dO;->d(Lcn/com/smartdevices/bracelet/ui/dO;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dP;->c(Lcn/com/smartdevices/bracelet/ui/dP;)Lcom/xiaomi/hm/health/bt/profile/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/ImageView;->invalidate()V
+    if-eqz v0, :cond_0
 
-    return-void
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dR;->b:Lcn/com/smartdevices/bracelet/ui/dP;
+
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/dR;->a:Z
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dP;->a(Lcn/com/smartdevices/bracelet/ui/dP;Z)V
+
+    goto :goto_0
 .end method
 
-.method public onPanelSlide(Landroid/view/View;Ljava/lang/Boolean;F)V
-    .locals 1
+.method public b(Ljava/lang/Object;)V
+    .locals 2
 
-    const/high16 v0, 0x3f800000
+    invoke-super {p0, p1}, Lcom/xiaomi/hm/health/bt/a/b;->b(Ljava/lang/Object;)V
 
-    cmpg-float v0, p3, v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dR;->b:Lcn/com/smartdevices/bracelet/ui/dP;
 
-    if-gtz v0, :cond_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dR;->b:Lcn/com/smartdevices/bracelet/ui/dP;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dR;->a:Lcn/com/smartdevices/bracelet/ui/dO;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/dP;->b(Lcn/com/smartdevices/bracelet/ui/dP;)Landroid/view/animation/RotateAnimation;
 
-    invoke-static {v0, p3}, Lcn/com/smartdevices/bracelet/ui/dO;->a(Lcn/com/smartdevices/bracelet/ui/dO;F)V
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dP;->a(Lcn/com/smartdevices/bracelet/ui/dP;Landroid/view/animation/Animation;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return-void
 
     :cond_0
-    return-void
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dR;->b:Lcn/com/smartdevices/bracelet/ui/dP;
+
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/dR;->a:Z
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dP;->a(Lcn/com/smartdevices/bracelet/ui/dP;Z)V
+
+    goto :goto_0
 .end method

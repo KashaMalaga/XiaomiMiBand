@@ -21,7 +21,13 @@
 
 .field private i:Ljava/lang/String;
 
-.field private j:Lcom/amap/api/location/core/AMapLocException;
+.field private j:Ljava/lang/String;
+
+.field private k:Ljava/lang/String;
+
+.field private l:Ljava/lang/String;
+
+.field private m:Lcom/amap/api/location/core/AMapLocException;
 
 
 # direct methods
@@ -34,7 +40,7 @@
 
     invoke-direct {v0}, Lcom/amap/api/location/core/AMapLocException;-><init>()V
 
-    iput-object v0, p0, Lcom/amap/api/location/AMapLocation;->j:Lcom/amap/api/location/core/AMapLocException;
+    iput-object v0, p0, Lcom/amap/api/location/AMapLocation;->m:Lcom/amap/api/location/core/AMapLocException;
 
     return-void
 .end method
@@ -48,7 +54,7 @@
 
     invoke-direct {v0}, Lcom/amap/api/location/core/AMapLocException;-><init>()V
 
-    iput-object v0, p0, Lcom/amap/api/location/AMapLocation;->j:Lcom/amap/api/location/core/AMapLocException;
+    iput-object v0, p0, Lcom/amap/api/location/AMapLocation;->m:Lcom/amap/api/location/core/AMapLocException;
 
     return-void
 .end method
@@ -74,7 +80,7 @@
 .method public getAMapException()Lcom/amap/api/location/core/AMapLocException;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/location/AMapLocation;->j:Lcom/amap/api/location/core/AMapLocException;
+    iget-object v0, p0, Lcom/amap/api/location/AMapLocation;->m:Lcom/amap/api/location/core/AMapLocException;
 
     return-object v0
 .end method
@@ -111,6 +117,14 @@
     return-object v0
 .end method
 
+.method public getCountry()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/location/AMapLocation;->j:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public getDistrict()Ljava/lang/String;
     .locals 1
 
@@ -135,10 +149,26 @@
     return-object v0
 .end method
 
+.method public getPoiName()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/location/AMapLocation;->l:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public getProvince()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/location/AMapLocation;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getRoad()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/location/AMapLocation;->k:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -154,7 +184,7 @@
 .method public setAMapException(Lcom/amap/api/location/core/AMapLocException;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/location/AMapLocation;->j:Lcom/amap/api/location/core/AMapLocException;
+    iput-object p1, p0, Lcom/amap/api/location/AMapLocation;->m:Lcom/amap/api/location/core/AMapLocException;
 
     return-void
 .end method
@@ -183,6 +213,14 @@
     return-void
 .end method
 
+.method public setCountry(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/location/AMapLocation;->j:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public setDistrict(Ljava/lang/String;)V
     .locals 0
 
@@ -207,10 +245,26 @@
     return-void
 .end method
 
+.method public setPoiName(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/location/AMapLocation;->l:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public setProvince(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/location/AMapLocation;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setRoad(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/location/AMapLocation;->k:Ljava/lang/String;
 
     return-void
 .end method

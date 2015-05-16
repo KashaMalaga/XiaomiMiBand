@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/weight/family/v;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
@@ -22,67 +22,44 @@
 
 
 # virtual methods
-.method public a()V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->e(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;Z)Z
+    const/4 v1, 0x1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->v(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->isSupport(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->w(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(Z)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
-
-    :cond_0
-    :goto_0
     return-void
+.end method
 
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getActivity()Landroid/app/Activity;
+    return-void
+.end method
 
-    move-result-object v0
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
-    const v1, 0x1020002
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
-
-    goto :goto_0
+    return-void
 .end method

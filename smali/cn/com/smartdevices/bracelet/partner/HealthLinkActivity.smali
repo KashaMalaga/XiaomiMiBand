@@ -64,8 +64,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f07003d -> :sswitch_0
-        0x7f07007c -> :sswitch_1
+        0x7f0d003e -> :sswitch_0
+        0x7f0d0076 -> :sswitch_1
     .end sparse-switch
 .end method
 
@@ -80,7 +80,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->setContentView(I)V
 
-    const v0, 0x7f07003d
+    const v0, 0x7f0d003e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->findViewById(I)Landroid/view/View;
 
@@ -88,13 +88,13 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f090294
+    const v2, 0x7f090328
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07007c
+    const v0, 0x7f0d0076
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->findViewById(I)Landroid/view/View;
 
@@ -114,7 +114,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f07007b
+    const v0, 0x7f0d0075
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     move-result-object v2
 
-    const/high16 v3, 0x7f0f0000
+    const v3, 0x7f0e0001
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -136,7 +136,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0f0001
+    const v3, 0x7f0e0002
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -153,7 +153,7 @@
 
     if-ge v3, v1, :cond_0
 
-    const v1, 0x7f0300e5
+    const v1, 0x7f0300f8
 
     const/4 v2, 0x0
 
@@ -161,7 +161,7 @@
 
     move-result-object v7
 
-    const v1, 0x7f070206
+    const v1, 0x7f0d0219
 
     invoke-virtual {v7, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -169,7 +169,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f07000f
+    const v2, 0x7f0d0012
 
     invoke-virtual {v7, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

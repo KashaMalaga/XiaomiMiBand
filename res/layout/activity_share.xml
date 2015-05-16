@@ -32,7 +32,7 @@
             <RelativeLayout android:id="@id/wr_header" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="45.0dip">
                 <TextView android:id="@id/wr_home_back" android:layout_width="fill_parent" android:text="@string/share" android:singleLine="true" android:layout_toLeftOf="@id/wr_share" style="@style/BackButton" />
             </RelativeLayout>
-            <include android:layout_gravity="center_horizontal" android:layout_width="67.0dip" android:layout_height="90.0dip" android:layout_marginTop="10.0dip" layout="@layout/userimg_with_name" />
+            <include android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" layout="@layout/userimg_with_name" />
             <View android:background="@color/weight_report_white_30" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="45.0dip" />
             <TextView android:textSize="12.0sp" android:textColor="@color/weight_report_white_40" android:gravity="center" android:id="@id/current_weight_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" />
             <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="68.0sp" android:textColor="@color/weight_report_white_90" android:gravity="center" android:id="@id/current_weight_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:fontFamily="miui-light" />

@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/ac;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aa;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/U;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/W;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/U;Lcn/com/smartdevices/bracelet/ui/aa;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/W;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/X;->b:Lcn/com/smartdevices/bracelet/ui/U;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/X;->a:Lcn/com/smartdevices/bracelet/ui/aa;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/X;->a:Lcn/com/smartdevices/bracelet/ui/W;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,44 +22,12 @@
 
 
 # virtual methods
-.method public a(Landroid/app/DialogFragment;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b(Landroid/app/DialogFragment;)V
+.method public onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/X;->a:Lcn/com/smartdevices/bracelet/ui/aa;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/X;->a:Lcn/com/smartdevices/bracelet/ui/W;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/aa;->dismiss()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/X;->b:Lcn/com/smartdevices/bracelet/ui/U;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/U;->b(Lcn/com/smartdevices/bracelet/ui/U;)Lcn/com/smartdevices/bracelet/ui/Z;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->b()V
-
-    return-void
-.end method
-
-.method public c(Landroid/app/DialogFragment;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/X;->a:Lcn/com/smartdevices/bracelet/ui/aa;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/aa;->dismiss()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/X;->b:Lcn/com/smartdevices/bracelet/ui/U;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/U;->b(Lcn/com/smartdevices/bracelet/ui/U;)Lcn/com/smartdevices/bracelet/ui/Z;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->a()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/W;->a(Lcn/com/smartdevices/bracelet/ui/W;)V
 
     return-void
 .end method

@@ -5,7 +5,7 @@
 # static fields
 .field private static O:Ljava/lang/String; = null
 
-.field private static P:Lcn/com/smartdevices/bracelet/ui/bw; = null
+.field private static P:Lcn/com/smartdevices/bracelet/ui/bv; = null
 
 .field private static final c:I = 0x0
 
@@ -71,7 +71,7 @@
 
 .field private p:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
-.field private q:Lcn/com/smartdevices/bracelet/ui/bo;
+.field private q:Lcn/com/smartdevices/bracelet/ui/bn;
 
 .field private r:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -151,9 +151,9 @@
 .method private a(I)V
     .locals 6
 
-    const v5, 0x7f070089
+    const v5, 0x7f0d0083
 
-    const v4, 0x7f070088
+    const v4, 0x7f0d0082
 
     const/4 v3, 0x1
 
@@ -328,9 +328,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bp;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bo;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bp;->a:Landroid/view/View;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Landroid/view/View;
 
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -348,9 +348,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bp;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bo;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bp;->a:Landroid/view/View;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Landroid/view/View;
 
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -368,9 +368,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bp;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bo;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bp;->a:Landroid/view/View;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
 
@@ -420,9 +420,9 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setRepeatCount(I)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bi;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bh;
 
-    invoke-direct {v1, p0, p1, v0}, Lcn/com/smartdevices/bracelet/ui/bi;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;Landroid/view/View;Landroid/view/animation/Animation;)V
+    invoke-direct {v1, p0, p1, v0}, Lcn/com/smartdevices/bracelet/ui/bh;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;Landroid/view/View;Landroid/view/animation/Animation;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -463,10 +463,10 @@
     return-void
 .end method
 
-.method static synthetic b()Lcn/com/smartdevices/bracelet/ui/bw;
+.method static synthetic b()Lcn/com/smartdevices/bracelet/ui/bv;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bw;
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bv;
 
     return-object v0
 .end method
@@ -525,9 +525,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bj;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bi;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bj;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bi;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -609,11 +609,11 @@
 .end method
 
 .method private c()V
-    .locals 2
+    .locals 3
 
-    const/4 v1, 0x4
+    const/4 v2, 0x4
 
-    const v0, 0x7f07000f
+    const v0, 0x7f0d0012
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -627,7 +627,7 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/RippleBackground;->a()V
 
-    const v0, 0x7f07008d
+    const v0, 0x7f0d0087
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -637,7 +637,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->x:Landroid/widget/ImageView;
 
-    const v0, 0x7f070083
+    const v0, 0x7f0d007d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -645,7 +645,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->v:Landroid/view/View;
 
-    const v0, 0x7f070092
+    const v0, 0x7f0d008c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -657,9 +657,15 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->y:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    const v0, 0x7f07008e
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->y:Landroid/widget/ImageView;
+
+    const v1, 0x7f0200f7
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
+
+    const v0, 0x7f0d0088
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -669,9 +675,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->N:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f070090
+    const v0, 0x7f0d008a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -683,9 +689,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->A:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    const v0, 0x7f07008f
+    const v0, 0x7f0d0089
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -697,9 +703,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->z:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    const v0, 0x7f070091
+    const v0, 0x7f0d008b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -711,9 +717,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->B:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    const v0, 0x7f070093
+    const v0, 0x7f0d008d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -721,7 +727,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->u:Landroid/view/View;
 
-    const v0, 0x7f070095
+    const v0, 0x7f0d008f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -731,7 +737,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->C:Landroid/widget/ImageView;
 
-    const v0, 0x7f07008a
+    const v0, 0x7f0d0084
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -741,7 +747,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->D:Landroid/widget/ImageView;
 
-    const v0, 0x7f07008c
+    const v0, 0x7f0d0086
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -751,7 +757,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->E:Landroid/widget/ImageView;
 
-    const v0, 0x7f070087
+    const v0, 0x7f0d0081
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -761,7 +767,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->F:Landroid/widget/ImageView;
 
-    const v0, 0x7f070086
+    const v0, 0x7f0d0080
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -771,7 +777,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->G:Landroid/widget/ImageView;
 
-    const v0, 0x7f070085
+    const v0, 0x7f0d007f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -781,7 +787,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->H:Landroid/widget/ImageView;
 
-    const v0, 0x7f070084
+    const v0, 0x7f0d007e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -789,7 +795,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->w:Landroid/view/View;
 
-    const v0, 0x7f070096
+    const v0, 0x7f0d0090
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -797,7 +803,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->I:Landroid/view/View;
 
-    const v0, 0x7f070099
+    const v0, 0x7f0d0093
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -807,7 +813,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a:Landroid/widget/ImageView;
 
-    const v0, 0x7f070098
+    const v0, 0x7f0d0092
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -817,7 +823,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->J:Landroid/widget/ImageView;
 
-    const v0, 0x7f07009a
+    const v0, 0x7f0d0094
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -825,7 +831,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->K:Landroid/view/View;
 
-    const v0, 0x7f07009c
+    const v0, 0x7f0d0096
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -833,7 +839,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->L:Landroid/view/View;
 
-    const v0, 0x7f07009e
+    const v0, 0x7f0d0098
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -843,7 +849,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->I:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method
@@ -862,12 +868,6 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->y:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->y:Landroid/widget/ImageView;
-
-    const v2, 0x7f0200f6
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->y:Landroid/widget/ImageView;
 
@@ -903,7 +903,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v2, v1
 
@@ -925,11 +925,11 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bw;
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bv;
 
     int-to-long v1, v2
 
-    invoke-virtual {v0, v5, v1, v2}, Lcn/com/smartdevices/bracelet/ui/bw;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v0, v5, v1, v2}, Lcn/com/smartdevices/bracelet/ui/bv;->sendEmptyMessageDelayed(IJ)Z
 
     :goto_1
     return-void
@@ -955,21 +955,21 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bw;
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bv;
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bw;->removeMessages(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bv;->removeMessages(I)V
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bw;
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bv;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bw;->removeMessages(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bv;->removeMessages(I)V
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bw;
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bv;
 
-    invoke-virtual {v0, v5}, Lcn/com/smartdevices/bracelet/ui/bw;->removeMessages(I)V
+    invoke-virtual {v0, v5}, Lcn/com/smartdevices/bracelet/ui/bv;->removeMessages(I)V
 
     goto :goto_1
 .end method
@@ -1181,9 +1181,9 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bm;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bl;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bm;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bl;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -1206,9 +1206,9 @@
 
     invoke-virtual {v0, v9}, Landroid/view/View;->setVisibility(I)V
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bw;
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bv;
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/ui/bw;->removeMessages(I)V
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/ui/bv;->removeMessages(I)V
 
     goto :goto_0
 .end method
@@ -1306,9 +1306,9 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bk;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bj;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bk;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bj;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -1348,9 +1348,9 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bl;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bk;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bl;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bk;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -1472,13 +1472,13 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->e()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bg;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bf;
 
-    invoke-direct {v0, p0, p0}, Lcn/com/smartdevices/bracelet/ui/bg;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;Landroid/app/Activity;)V
+    invoke-direct {v0, p0, p0}, Lcn/com/smartdevices/bracelet/ui/bf;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;Landroid/app/Activity;)V
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bw;
+    sput-object v0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->P:Lcn/com/smartdevices/bracelet/ui/bv;
 
-    const v0, 0x7f07007e
+    const v0, 0x7f0d0078
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -1488,7 +1488,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->o:Landroid/support/v4/view/ViewPager;
 
-    const v0, 0x7f07007f
+    const v0, 0x7f0d0079
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -1503,6 +1503,20 @@
     invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->r:Ljava/util/ArrayList;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->r:Ljava/util/ArrayList;
+
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/bp;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Fragment;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->r:Ljava/util/ArrayList;
 
@@ -1574,33 +1588,19 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->r:Ljava/util/ArrayList;
-
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/bv;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p0, v1}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Fragment;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bo;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bn;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/ui/bo;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;Landroid/app/FragmentManager;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/ui/bn;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;Landroid/app/FragmentManager;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->q:Lcn/com/smartdevices/bracelet/ui/bo;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->q:Lcn/com/smartdevices/bracelet/ui/bn;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->o:Landroid/support/v4/view/ViewPager;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->q:Lcn/com/smartdevices/bracelet/ui/bo;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->q:Lcn/com/smartdevices/bracelet/ui/bn;
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ae;)V
 
@@ -1616,9 +1616,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->p:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bh;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bg;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bh;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bg;-><init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
 
     invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/ui/widget/c;->a(Landroid/support/v4/view/bz;)V
 

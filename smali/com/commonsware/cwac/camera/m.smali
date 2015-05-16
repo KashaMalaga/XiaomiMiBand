@@ -119,7 +119,7 @@
 
     iget-object v0, p0, Lcom/commonsware/cwac/camera/m;->a:Lcom/commonsware/cwac/camera/b;
 
-    invoke-interface {v0}, Lcom/commonsware/cwac/camera/b;->b()Z
+    invoke-interface {v0}, Lcom/commonsware/cwac/camera/b;->c()Z
 
     move-result v0
 

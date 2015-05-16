@@ -18,6 +18,10 @@
 
 .field public static final F:Ljava/lang/String; = "index"
 
+.field public static final G:Ljava/lang/String; = "gidx"
+
+.field public static final H:Ljava/lang/String; = "ts"
+
 .field public static final b:Ljava/lang/String; = "ct"
 
 .field public static final c:Ljava/lang/String; = "dis"
@@ -72,11 +76,11 @@
 
 
 # instance fields
-.field G:I
+.field I:I
 
-.field H:I
+.field J:I
 
-.field private I:J
+.field private K:J
 
 .field a:Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
 
@@ -93,13 +97,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->a:Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->G:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->I:I
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->H:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->J:I
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->I:J
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->K:J
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
 
@@ -107,7 +111,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->a:Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
 
-    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->I:J
+    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->K:J
 
     return-void
 .end method
@@ -148,7 +152,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-object v1
@@ -224,7 +228,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-object v2
@@ -266,7 +270,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-object v2
@@ -284,13 +288,13 @@
     :try_start_0
     const-string v0, "state"
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->G:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->I:I
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v0, "index"
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->H:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->J:I
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
@@ -494,6 +498,22 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
+    const-string v0, "gidx"
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->a:Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
+
+    iget v2, v2, Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;->mCurGloIndex:I
+
+    invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    const-string v0, "ts"
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->a:Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
+
+    iget-wide v2, v2, Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;->mCurTimestamp:J
+
+    invoke-virtual {v1, v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->a:Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;->mKilometerSpeeds:[F
@@ -603,7 +623,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -611,9 +631,9 @@
 .method a(II)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->G:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->I:I
 
-    iput p2, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->H:I
+    iput p2, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->J:I
 
     return-void
 .end method
@@ -632,7 +652,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->G:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->I:I
 
     const-string v1, "index"
 
@@ -640,7 +660,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->H:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->J:I
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->a:Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
 
@@ -936,6 +956,26 @@
 
     iput v2, v1, Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;->mMaxMile:I
 
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->a:Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
+
+    const-string v2, "gidx"
+
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v2
+
+    iput v2, v1, Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;->mCurGloIndex:I
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->a:Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
+
+    const-string v2, "ts"
+
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
+
+    move-result-wide v2
+
+    iput-wide v2, v1, Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;->mCurTimestamp:J
+
     const-string v1, "kmspmarray"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
@@ -1108,7 +1148,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1118,7 +1158,7 @@
 .method public b()J
     .locals 2
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->I:J
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->K:J
 
     return-wide v0
 .end method
@@ -1533,6 +1573,34 @@
     iget-object v2, v2, Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;->mMileTimestamps:[J
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",mCurGloIndex:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->a:Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
+
+    iget v2, v2, Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;->mCurGloIndex:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",mCurTimestamp:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/services/ah;->a:Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
+
+    iget-wide v2, v2, Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;->mCurTimestamp:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

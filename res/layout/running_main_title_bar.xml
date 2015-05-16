@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dynamic_header" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/header_nav_left" android:paddingLeft="13.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:textColor="#e6ffffff" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/running_settings" />
+    </FrameLayout>
+    <TextView android:textSize="15.5sp" android:textColor="@android:color/white" android:layout_gravity="center" android:id="@id/dynamic_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/running_helper" />
+    <FrameLayout android:layout_gravity="right" android:id="@id/header_history" android:paddingLeft="20.0dip" android:paddingRight="13.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:clickable="false" android:text="@string/running_history" style="@style/RightButton" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="left" android:id="@id/header_more" android:paddingLeft="13.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:clickable="false" android:text="@string/running_settings" style="@style/LeftButton" />
+    </FrameLayout>
+</FrameLayout>

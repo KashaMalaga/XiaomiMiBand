@@ -1192,7 +1192,6 @@ function activityRun(listDao,ConfigInfo ,personInfo)
 end
 
 function getDistanceString(meter)
-    log('getActivityMsgs,  getDistanceString,distance='..meter.."m")
     if string.len(meter) > 3 then
         m2 = string.sub(meter,-3,-3) --1234 get 2
         m1 = string.sub(meter,1,-4)  --xxx234 get xxx
@@ -1336,7 +1335,7 @@ function sleepGood(listDao,ConfigInfo)
     stype = "4001"
 
     strScript = "function doAction(context, luaAction) \
-        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DynamicDetailActivity');\
+        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DailySleepReportActivity');\
         luaAction:putExtra(intent,'Mode',0x10)\
         luaAction:putExtra(intent,'From','FromDynamicList')\
         context:startActivity(intent)\
@@ -1363,7 +1362,7 @@ function sleepNormal(listDao,ConfigInfo)
 
     stype = "4001"
     strScript = "function doAction(context, luaAction) \
-        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DynamicDetailActivity');\
+        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DailySleepReportActivity');\
         luaAction:putExtra(intent,'Mode',0x10)\
         luaAction:putExtra(intent,'From','FromDynamicList')\
         context:startActivity(intent)\
@@ -1387,7 +1386,7 @@ function sleepBad(listDao,ConfigInfo)
 
     stype = "4001"
     strScript = "function doAction(context, luaAction) \
-        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DynamicDetailActivity');\
+        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DailySleepReportActivity');\
         luaAction:putExtra(intent,'Mode',0x10)\
         luaAction:putExtra(intent,'From','FromDynamicList')\
         context:startActivity(intent)\
@@ -2053,7 +2052,7 @@ function set24HourFormat(is24Hour)
     g_is24HourFormat = is24Hour;
 end
 
------====================== Mi Push ==============================----
+-----====================== Show LuaItem from java ==============================----
 function showLuaItem(listDao, configInfo, luaItem)
     log("============= showLuaItem =============")
     t = {}

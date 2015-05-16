@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/relation/c;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/c;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/d;->a:Lcn/com/smartdevices/bracelet/relation/c;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/d;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,14 +22,40 @@
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/view/animation/Animation;)V
+.method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/d;->a:Lcn/com/smartdevices/bracelet/relation/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/d;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/c;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+    const v1, 0x7f04000b
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->a(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/view/View;
+    invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/relation/e;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/relation/e;-><init>(Lcn/com/smartdevices/bracelet/relation/d;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/d;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->c(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/d;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->c(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/view/View;
 
     move-result-object v0
 
@@ -37,27 +63,5 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/d;->a:Lcn/com/smartdevices/bracelet/relation/c;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/c;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->a(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
-
-    return-void
-.end method
-
-.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
+    goto :goto_0
 .end method

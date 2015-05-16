@@ -477,42 +477,35 @@
 .end method
 
 .method public static e(Landroid/content/Context;)Z
-    .locals 3
+    .locals 2
+
+    if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    if-nez p0, :cond_1
-
-    :cond_0
     :goto_0
     return v0
 
-    :cond_1
-    const-string v1, "com_weibo_sdk_android"
+    :cond_0
+    const-string v0, "com_weibo_sdk_android"
 
-    const v2, 0x8000
+    const v1, 0x8000
 
-    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "uid"
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result v2
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
 
-    if-eqz v2, :cond_0
+    move-result-object v0
 
-    const-string v2, "access_token"
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x1
+    move-result v0
 
     goto :goto_0
 .end method
@@ -558,7 +551,48 @@
     goto :goto_0
 .end method
 
-.method public static g(Landroid/content/Context;)Ljava/lang/String;
+.method public static g(Landroid/content/Context;)Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    const-string v1, "com_weibo_sdk_android"
+
+    const v2, 0x8000
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v1
+
+    const-string v2, "uid"
+
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string v2, "access_token"
+
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public static h(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
     if-nez p0, :cond_0
@@ -588,7 +622,7 @@
     goto :goto_0
 .end method
 
-.method public static h(Landroid/content/Context;)V
+.method public static i(Landroid/content/Context;)V
     .locals 2
 
     if-nez p0, :cond_0

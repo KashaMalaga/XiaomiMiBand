@@ -3,15 +3,19 @@
 
 
 # static fields
-.field static a:I
+.field public static a:Ljava/lang/String;
 
-.field static b:Ljava/lang/String;
+.field public static b:Ljava/lang/String;
 
-.field private static c:Landroid/content/SharedPreferences;
+.field static c:I
 
-.field private static d:Landroid/content/SharedPreferences$Editor;
+.field static d:Ljava/lang/String;
 
-.field private static e:Ljava/lang/reflect/Method;
+.field private static e:Landroid/content/SharedPreferences;
+
+.field private static f:Landroid/content/SharedPreferences$Editor;
+
+.field private static g:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -20,15 +24,23 @@
 
     const/4 v1, 0x0
 
+    const-string v0, ""
+
+    sput-object v0, Lcom/amap/api/location/core/d;->a:Ljava/lang/String;
+
+    const-string v0, ""
+
+    sput-object v0, Lcom/amap/api/location/core/d;->b:Ljava/lang/String;
+
     const/16 v0, 0x800
 
-    sput v0, Lcom/amap/api/location/core/d;->a:I
+    sput v0, Lcom/amap/api/location/core/d;->c:I
 
-    sput-object v1, Lcom/amap/api/location/core/d;->c:Landroid/content/SharedPreferences;
+    sput-object v1, Lcom/amap/api/location/core/d;->e:Landroid/content/SharedPreferences;
 
-    sput-object v1, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sput-object v1, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
-    sput-object v1, Lcom/amap/api/location/core/d;->b:Ljava/lang/String;
+    sput-object v1, Lcom/amap/api/location/core/d;->d:Ljava/lang/String;
 
     return-void
 .end method
@@ -114,11 +126,11 @@
     const/4 v0, 0x0
 
     :try_start_0
-    sget-object v1, Lcom/amap/api/location/core/d;->b:Ljava/lang/String;
+    sget-object v1, Lcom/amap/api/location/core/d;->d:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/amap/api/location/core/d;->b:Ljava/lang/String;
+    sget-object v1, Lcom/amap/api/location/core/d;->d:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -137,14 +149,14 @@
 
     move-result-object v1
 
-    sput-object v1, Lcom/amap/api/location/core/d;->b:Ljava/lang/String;
+    sput-object v1, Lcom/amap/api/location/core/d;->d:Ljava/lang/String;
 
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/amap/api/location/core/d;->b:Ljava/lang/String;
+    sget-object v2, Lcom/amap/api/location/core/d;->d:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -207,7 +219,7 @@
     .locals 4
 
     :try_start_0
-    sget-object v0, Lcom/amap/api/location/core/d;->c:Landroid/content/SharedPreferences;
+    sget-object v0, Lcom/amap/api/location/core/d;->e:Landroid/content/SharedPreferences;
 
     if-nez v0, :cond_0
 
@@ -219,23 +231,23 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amap/api/location/core/d;->c:Landroid/content/SharedPreferences;
+    sput-object v0, Lcom/amap/api/location/core/d;->e:Landroid/content/SharedPreferences;
 
     :cond_0
-    sget-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sget-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lcom/amap/api/location/core/d;->c:Landroid/content/SharedPreferences;
+    sget-object v0, Lcom/amap/api/location/core/d;->e:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    sput-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sput-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     :cond_1
-    sget-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sget-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "last_know_lat"
 
@@ -249,7 +261,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    sget-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sget-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "last_know_lng"
 
@@ -263,7 +275,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    sget-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sget-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "province"
 
@@ -273,7 +285,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    sget-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sget-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "city"
 
@@ -283,7 +295,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    sget-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sget-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "district"
 
@@ -293,7 +305,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    sget-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sget-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "cityCode"
 
@@ -303,7 +315,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    sget-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sget-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "adCode"
 
@@ -313,7 +325,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    sget-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sget-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "accuracy"
 
@@ -323,7 +335,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
 
-    sget-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sget-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "time"
 
@@ -333,7 +345,7 @@
 
     invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    sget-object v0, Lcom/amap/api/location/core/d;->d:Landroid/content/SharedPreferences$Editor;
+    sget-object v0, Lcom/amap/api/location/core/d;->f:Landroid/content/SharedPreferences$Editor;
 
     invoke-static {v0}, Lcom/amap/api/location/core/d;->a(Landroid/content/SharedPreferences$Editor;)V
     :try_end_0
@@ -366,7 +378,7 @@
     if-lt v0, v1, :cond_2
 
     :try_start_0
-    sget-object v0, Lcom/amap/api/location/core/d;->e:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/amap/api/location/core/d;->g:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_1
 
@@ -382,10 +394,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amap/api/location/core/d;->e:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/amap/api/location/core/d;->g:Ljava/lang/reflect/Method;
 
     :cond_1
-    sget-object v0, Lcom/amap/api/location/core/d;->e:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/amap/api/location/core/d;->g:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
 

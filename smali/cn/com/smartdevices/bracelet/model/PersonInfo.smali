@@ -31,7 +31,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/model/AlarmClockItem;",
+            "Lcom/xiaomi/hm/health/bt/AlarmClockItem;",
             ">;"
         }
     .end annotation
@@ -198,7 +198,7 @@
             ")",
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/model/AlarmClockItem;",
+            "Lcom/xiaomi/hm/health/bt/AlarmClockItem;",
             ">;"
         }
     .end annotation
@@ -288,7 +288,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public enableAlarmNotify(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iput-boolean p1, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->alarmNotifyEnabled:Z
 
     return-void
 .end method
@@ -340,7 +350,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public enableSmsNotify(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iput-boolean p1, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->smsNotifyEnabled:Z
 
     return-void
 .end method
@@ -360,7 +380,7 @@
             "()",
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/model/AlarmClockItem;",
+            "Lcom/xiaomi/hm/health/bt/AlarmClockItem;",
             ">;"
         }
     .end annotation
@@ -386,7 +406,7 @@
 
     if-ge v0, v5, :cond_2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->F()Ljava/util/ArrayList;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readMorningAlarms()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -403,9 +423,9 @@
     :goto_0
     if-ge v2, v5, :cond_1
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    new-instance v4, Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
-    invoke-direct {v4}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;-><init>()V
+    invoke-direct {v4}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;-><init>()V
 
     if-eqz v3, :cond_3
 
@@ -421,7 +441,7 @@
 
     check-cast v0, Ljava/util/Calendar;
 
-    invoke-virtual {v4, v0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->setCalendar(Ljava/util/Calendar;)V
+    invoke-virtual {v4, v0}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->setCalendar(Ljava/util/Calendar;)V
 
     add-int/lit8 v0, v1, 0x1
 
@@ -439,7 +459,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/Keeper;->keepPersonInfo(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     const-string v0, "PersonInfo"
 
@@ -467,7 +487,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->alarmClockItems:Ljava/util/ArrayList;
@@ -518,6 +538,202 @@
     and-int/lit16 v0, v0, 0xff
 
     return v0
+.end method
+
+.method public getMiLiHwConfig()Lcom/xiaomi/hm/health/bt/profile/u;
+    .locals 5
+
+    const/16 v0, 0x606
+
+    const/4 v1, 0x0
+
+    new-instance v2, Lcom/xiaomi/hm/health/bt/profile/u;
+
+    invoke-direct {v2}, Lcom/xiaomi/hm/health/bt/profile/u;-><init>()V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getDaySportGoalSteps()I
+
+    move-result v3
+
+    if-lez v3, :cond_2
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getDaySportGoalSteps()I
+
+    move-result v3
+
+    iput v3, v2, Lcom/xiaomi/hm/health/bt/profile/u;->b:I
+
+    :goto_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getAlarmClockItems()Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lcom/xiaomi/hm/health/bt/profile/u;->c:Ljava/util/ArrayList;
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    if-eqz v3, :cond_6
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/model/MiliConfig;->lightColor:Ljava/lang/String;
+
+    if-eqz v3, :cond_6
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/model/MiliConfig;->lightColor:Ljava/lang/String;
+
+    const-string v4, "BLUE"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    :cond_0
+    :goto_1
+    iput v0, v2, Lcom/xiaomi/hm/health/bt/profile/u;->d:I
+
+    :goto_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    if-eqz v0, :cond_9
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->wearHand:Ljava/lang/String;
+
+    if-eqz v0, :cond_9
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->wearHand:Ljava/lang/String;
+
+    const-string v3, "LEFT_HAND"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    move v0, v1
+
+    :goto_3
+    iput-byte v0, v2, Lcom/xiaomi/hm/health/bt/profile/u;->f:B
+
+    :goto_4
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->enableConnectedBtAdv:Z
+
+    iput-boolean v0, v2, Lcom/xiaomi/hm/health/bt/profile/u;->g:Z
+
+    :cond_1
+    return-object v2
+
+    :cond_2
+    const-string v3, "PersonInfo"
+
+    const-string v4, "day sport goals is inValid!"
+
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_3
+    const-string v4, "GREEN"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    const v0, 0x40500
+
+    goto :goto_1
+
+    :cond_4
+    const-string v4, "RED"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    const v0, 0x60102
+
+    goto :goto_1
+
+    :cond_5
+    const-string v4, "ORANGE"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const v0, 0x60200
+
+    goto :goto_1
+
+    :cond_6
+    const-string v0, "PersonInfo"
+
+    const-string v3, "miliConfig is null or lightColor is null"
+
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_7
+    const-string v3, "RIGHT_HAND"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_8
+
+    const/4 v0, 0x1
+
+    goto :goto_3
+
+    :cond_8
+    const-string v3, "ONBODY"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    const/4 v0, 0x2
+
+    goto :goto_3
+
+    :cond_9
+    const-string v0, "PersonInfo"
+
+    const-string v1, "miliConfig is null or wearHand is null"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :cond_a
+    move v0, v1
+
+    goto :goto_3
 .end method
 
 .method public getMiliColor()Ljava/lang/String;
@@ -668,6 +884,16 @@
     return v0
 .end method
 
+.method public isAlarmNotifyEnabled()Z
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->alarmNotifyEnabled:Z
+
+    return v0
+.end method
+
 .method public isEnableConnectedBtAdv()Z
     .locals 1
 
@@ -712,7 +938,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
@@ -720,6 +946,16 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public isSmsNotifyEnabled()Z
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->smsNotifyEnabled:Z
+
+    return v0
 .end method
 
 .method public isValid()Z
@@ -797,7 +1033,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -869,7 +1105,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

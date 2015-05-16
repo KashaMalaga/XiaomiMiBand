@@ -2,19 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener",
-        "<",
-        "Landroid/widget/ExpandableListView;",
-        ">;"
-    }
-.end annotation
+.implements Landroid/os/IBinder$DeathRecipient;
 
 
 # instance fields
@@ -34,45 +22,20 @@
 
 
 # virtual methods
-.method public onRefresh(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
+.method public binderDied()V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/handmark/pulltorefresh/library/PullToRefreshBase",
-            "<",
-            "Landroid/widget/ExpandableListView;",
-            ">;)V"
-        }
-    .end annotation
+
+    const-string v0, "UI"
+
+    const-string v1, "binderDied"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/o;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Ljava/util/List;)Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/sync/k;)Lcn/com/smartdevices/bracelet/gps/sync/k;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/o;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->i(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;->onRefreshComplete()V
-
-    :goto_0
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/o;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Z)Z
-
-    goto :goto_0
 .end method

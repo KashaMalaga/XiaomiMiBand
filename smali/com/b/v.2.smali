@@ -1,74 +1,48 @@
 .class final Lcom/b/v;
-.super Landroid/os/Handler;
-
-
-# instance fields
-.field private synthetic a:Lcom/b/u;
+.super Landroid/content/BroadcastReceiver;
 
 
 # direct methods
-.method constructor <init>(Lcom/b/u;)V
+.method constructor <init>(Lcom/b/at;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/b/v;->a:Lcom/b/u;
-
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
+    if-eqz p2, :cond_0
+
     :try_start_0
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :cond_0
-    :goto_0
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lcom/b/v;->a:Lcom/b/u;
-
-    iget-object v0, v0, Lcom/b/u;->a:Lcom/b/ar;
-
-    invoke-static {v0}, Lcom/b/ar;->d(Lcom/b/ar;)Lcom/b/w;
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    const-string v1, "android.location.GPS_FIX_CHANGE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/b/v;->a:Lcom/b/u;
+    const/4 v0, 0x0
 
-    iget-object v0, v0, Lcom/b/u;->a:Lcom/b/ar;
-
-    invoke-static {v0}, Lcom/b/ar;->d(Lcom/b/ar;)Lcom/b/w;
-
-    move-result-object v1
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Lcom/b/w;->a(Ljava/lang/String;)V
+    sput-boolean v0, Lcom/b/at;->b:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    :cond_0
+    :goto_0
+    return-void
 
     :catch_0
     move-exception v0
 
     goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

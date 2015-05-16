@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/ac;
+.implements Lcom/huami/android/view/d;
 
 
 # instance fields
@@ -33,11 +33,9 @@
 
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+    const-string v1, "cn.com.smartdevices.bracelet.intent.action.LOGIN"
 
-    const-class v2, Lcn/com/smartdevices/bracelet/activity/LoginActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 

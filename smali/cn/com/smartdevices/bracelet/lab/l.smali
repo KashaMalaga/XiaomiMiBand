@@ -27,23 +27,23 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/l;->a:Lcn/com/smartdevices/bracelet/lab/k;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/k;->b:Lcn/com/smartdevices/bracelet/lab/i;
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/h;->a(Lcn/com/smartdevices/bracelet/lab/h;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/h;->a(Lcn/com/smartdevices/bracelet/lab/h;)Lcom/xiaomi/hm/health/bt/profile/v;
 
     move-result-object v0
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/l;->a:Lcn/com/smartdevices/bracelet/lab/k;
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/lab/k;->b:Lcn/com/smartdevices/bracelet/lab/i;
 
     iget-object v1, v1, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
 
     iget-object v1, v1, Lcn/com/smartdevices/bracelet/lab/h;->a:Lcn/com/smartdevices/bracelet/lab/d;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->startParseSensorData(Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/health/bt/profile/v;->a(Lcom/xiaomi/hm/health/bt/profile/f;)V
 
     return-void
 .end method

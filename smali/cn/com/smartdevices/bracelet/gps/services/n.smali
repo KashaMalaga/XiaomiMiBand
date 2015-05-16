@@ -486,7 +486,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method
@@ -605,7 +605,7 @@
 
     const/4 v3, 0x6
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/gps/d/f;->b(FI)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/gps/f/h;->b(FI)Ljava/lang/String;
 
     move-result-object v2
 
@@ -629,7 +629,7 @@
 
     const/4 v3, 0x6
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/gps/d/f;->b(FI)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/gps/f/h;->b(FI)Ljava/lang/String;
 
     move-result-object v2
 
@@ -641,7 +641,7 @@
 
     const/4 v3, 0x6
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/gps/d/f;->b(FI)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/gps/f/h;->b(FI)Ljava/lang/String;
 
     move-result-object v2
 
@@ -735,12 +735,12 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/b/m;)V
+.method public a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/b/n;)V
     .locals 8
 
     const/4 v7, 0x0
@@ -753,7 +753,7 @@
 
     move-result-object v1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/b/l;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/b/m;
 
     aget-wide v2, v1, v7
 
@@ -768,7 +768,7 @@
     :goto_0
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/gps/services/b/l;-><init>(Landroid/content/Context;DDLcn/com/smartdevices/bracelet/gps/services/b/m;)V
+    invoke-direct/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/gps/services/b/m;-><init>(Landroid/content/Context;DDLcn/com/smartdevices/bracelet/gps/services/b/n;)V
 
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
@@ -776,7 +776,7 @@
 
     new-array v2, v7, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/b/l;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/b/m;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     :cond_0
     :goto_1
@@ -794,7 +794,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/N;->z:Lcn/com/smartdevices/bracelet/gps/model/f;
 
-    invoke-interface {p2, v0}, Lcn/com/smartdevices/bracelet/gps/services/b/m;->a(Lcn/com/smartdevices/bracelet/gps/model/f;)V
+    invoke-interface {p2, v0}, Lcn/com/smartdevices/bracelet/gps/services/b/n;->a(Lcn/com/smartdevices/bracelet/gps/model/f;)V
 
     goto :goto_1
 .end method

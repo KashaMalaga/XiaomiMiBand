@@ -27,6 +27,8 @@
     .end annotation
 .end field
 
+.field public final e:Ljava/lang/String;
+
 
 # direct methods
 .method public constructor <init>()V
@@ -53,6 +55,10 @@
     const-string v0, "https://hm.xiaomi.com/huami.health.loginview.do"
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/i;->d:Ljava/lang/String;
+
+    const-string v0, "https://hm.mi-ae.com/huami.health.loginview.do"
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/i;->e:Ljava/lang/String;
 
     return-void
 .end method

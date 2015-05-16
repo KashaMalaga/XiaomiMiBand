@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="35.0dip" />
+    <solid android:color="@color/running_gps_dialog_btn_bg" />
+    <size android:height="35.0dip" android:width="120.0dip" />
+</shape>

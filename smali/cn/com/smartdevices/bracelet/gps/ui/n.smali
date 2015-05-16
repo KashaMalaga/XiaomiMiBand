@@ -1,12 +1,12 @@
 .class public Lcn/com/smartdevices/bracelet/gps/ui/N;
-.super Lcn/com/smartdevices/bracelet/ui/aa;
+.super Lcom/huami/android/view/b;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aa;-><init>()V
+    invoke-direct {p0}, Lcom/huami/android/view/b;-><init>()V
 
     return-void
 .end method
@@ -68,7 +68,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f030089
+    sget v0, Lcom/xiaomi/hm/health/b/a/j;->fragment_running_no_gps_prompt:I
 
     return v0
 .end method
@@ -76,7 +76,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/aa;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcom/huami/android/view/b;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
 .method protected onLeftButtonClicked()V
     .locals 0
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/aa;->onLeftButtonClicked()V
+    invoke-super {p0}, Lcom/huami/android/view/b;->onLeftButtonClicked()V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/N;->dismiss()V
 
@@ -104,7 +104,7 @@
 .method protected onRightButtonClicked()V
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/d/e;->a()Landroid/content/Intent;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/f/f;->a()Landroid/content/Intent;
 
     move-result-object v0
 

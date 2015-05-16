@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/phone_notify_home_back" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h" style="@style/BackButton" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:id="@id/phone_notify_ll" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:minHeight="@dimen/item_height">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/phone_notify_switch_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListItemTitleText" />
+                </LinearLayout>
+                <RelativeLayout android:gravity="center" android:paddingRight="@dimen/mili_margin" android:clickable="true" android:layout_width="63.0dip" android:layout_height="fill_parent">
+                    <Switch android:layout_gravity="center" android:id="@id/phone_notify_switch" android:background="@drawable/switch_track_enable" android:focusable="false" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="40.0dip" android:layout_height="21.0dip" android:textOn="" android:textOff="" android:thumb="@drawable/switch_thumb" android:track="@drawable/switch_track_trans" android:switchMinWidth="38.0dip" android:thumbTextPadding="10.0dip" />
+                </RelativeLayout>
+            </LinearLayout>
+            <include layout="@layout/split_line_with_margin" />
+            <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:id="@id/phone_notify_tips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/mili_margin" />
+            <ImageView android:layout_gravity="center" android:id="@id/phone_notify_help_iv" android:layout_width="260.0dip" android:layout_height="160.0dip" android:layout_marginTop="105.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff898989" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginTop="116.0dip" android:layout_marginRight="@dimen/mili_margin" android:text="@string/tips" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff898989" android:id="@id/phone_notify_tips2_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginTop="7.0dip" android:layout_marginRight="@dimen/mili_margin" />
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/phone_notify_mask_view" android:background="#90ffffff" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:background="@color/bg_color_orange" android:layout_width="fill_parent" android:layout_height="54.0dip">
+                <TextView android:textColor="@color/content_color_brighter" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/connected_broadcast_disconnect_tips" android:drawableLeft="@drawable/info" android:drawablePadding="5.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

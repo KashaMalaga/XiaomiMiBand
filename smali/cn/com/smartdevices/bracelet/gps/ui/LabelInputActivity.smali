@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;
-.super Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+.super Landroid/app/Activity;
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -8,7 +8,7 @@
 # instance fields
 .field private a:Landroid/widget/ListView;
 
-.field private b:Lcn/com/smartdevices/bracelet/gps/ui/G;
+.field private b:Lcn/com/smartdevices/bracelet/gps/ui/H;
 
 .field private c:Landroid/content/res/Resources;
 
@@ -23,11 +23,11 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;-><init>()V
+    invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->a:Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->b:Lcn/com/smartdevices/bracelet/gps/ui/G;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->b:Lcn/com/smartdevices/bracelet/gps/ui/H;
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->c:Landroid/content/res/Resources;
 
@@ -67,42 +67,12 @@
     return-object v0
 .end method
 
-.method static synthetic b(Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;)Lcn/com/smartdevices/bracelet/gps/ui/G;
+.method static synthetic b(Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;)Lcn/com/smartdevices/bracelet/gps/ui/H;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->b:Lcn/com/smartdevices/bracelet/gps/ui/G;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->b:Lcn/com/smartdevices/bracelet/gps/ui/H;
 
     return-object v0
-.end method
-
-.method private b()V
-    .locals 2
-
-    const v0, 0x7f07003d
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    const v1, 0x7f090403
-
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    goto :goto_0
 .end method
 
 .method static synthetic c(Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;)Landroid/widget/EditText;
@@ -122,17 +92,10 @@
 
     move-result v0
 
-    sparse-switch v0, :sswitch_data_0
+    sget v1, Lcom/xiaomi/hm/health/b/a/i;->confirm:I
 
-    :goto_0
-    return-void
+    if-ne v0, v1, :cond_0
 
-    :sswitch_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->finish()V
-
-    goto :goto_0
-
-    :sswitch_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->d:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -151,7 +114,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->d:Landroid/widget/EditText;
 
@@ -169,9 +132,11 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/widget/EditText;->setSelection(II)V
 
-    goto :goto_0
-
     :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -187,20 +152,14 @@
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->finish()V
 
     goto :goto_0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x7f07003d -> :sswitch_0
-        0x7f0700e3 -> :sswitch_1
-    .end sparse-switch
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030088
+    sget v0, Lcom/xiaomi/hm/health/b/a/j;->fragment_running_label_input:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->setContentView(I)V
 
@@ -210,7 +169,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->c:Landroid/content/res/Resources;
 
-    const v0, 0x7f040003
+    sget v0, Lcom/xiaomi/hm/health/b/a/b;->edit_shake:I
 
     invoke-static {p0, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -218,7 +177,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->e:Landroid/view/animation/Animation;
 
-    const v0, 0x7f070293
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->label_input:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->findViewById(I)Landroid/view/View;
 
@@ -230,17 +189,17 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->d:Landroid/widget/EditText;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/F;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/G;
 
     const/16 v2, 0x14
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->d:Landroid/widget/EditText;
 
-    invoke-direct {v1, p0, v2, v3}, Lcn/com/smartdevices/bracelet/gps/ui/F;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;ILandroid/widget/EditText;)V
+    invoke-direct {v1, p0, v2, v3}, Lcn/com/smartdevices/bracelet/gps/ui/G;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;ILandroid/widget/EditText;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    const v0, 0x7f0700e3
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->confirm:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->findViewById(I)Landroid/view/View;
 
@@ -248,9 +207,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->b()V
-
-    const v0, 0x7f070295
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->hot_list:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->findViewById(I)Landroid/view/View;
 
@@ -272,27 +229,27 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/G;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/H;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->a()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/G;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;Landroid/content/Context;Ljava/util/List;)V
+    invoke-direct {v0, p0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/H;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;Landroid/content/Context;Ljava/util/List;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->b:Lcn/com/smartdevices/bracelet/gps/ui/G;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->b:Lcn/com/smartdevices/bracelet/gps/ui/H;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->a:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->b:Lcn/com/smartdevices/bracelet/gps/ui/G;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->b:Lcn/com/smartdevices/bracelet/gps/ui/H;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;->a:Landroid/widget/ListView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/D;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/E;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/D;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/E;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 

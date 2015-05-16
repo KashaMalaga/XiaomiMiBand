@@ -41,7 +41,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x4
+    const/16 v0, 0x29
 
     iput-byte v0, p0, Lcom/b/e;->k:B
 
@@ -144,7 +144,7 @@
 
     array-length v1, v1
 
-    invoke-static {v0, v1}, Lcom/b/j;->a([BI)[B
+    invoke-static {v0, v1}, Lcom/b/l;->a([BI)[B
 
     move-result-object v0
 
@@ -164,7 +164,7 @@
 
     array-length v1, v1
 
-    invoke-static {v0, v1}, Lcom/b/j;->a([BI)[B
+    invoke-static {v0, v1}, Lcom/b/l;->a([BI)[B
 
     move-result-object v0
 
@@ -179,7 +179,7 @@
     :goto_0
     iget-short v0, p0, Lcom/b/e;->i:S
 
-    if-ge v1, v0, :cond_4
+    if-ge v1, v0, :cond_5
 
     new-instance v5, Ljava/io/ByteArrayOutputStream;
 
@@ -197,15 +197,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/b/aq;
+    check-cast v0, Lcom/b/as;
 
-    iget-object v7, v0, Lcom/b/aq;->c:Lcom/b/as;
+    iget-object v7, v0, Lcom/b/as;->c:Lcom/b/au;
 
     if-eqz v7, :cond_0
 
-    iget-object v7, v0, Lcom/b/aq;->c:Lcom/b/as;
+    iget-object v7, v0, Lcom/b/as;->c:Lcom/b/au;
 
-    invoke-virtual {v7, v6}, Lcom/b/as;->a(Ljava/io/DataOutputStream;)Ljava/lang/Boolean;
+    invoke-virtual {v7, v6}, Lcom/b/au;->a(Ljava/io/DataOutputStream;)Ljava/lang/Boolean;
 
     move-result-object v7
 
@@ -220,13 +220,13 @@
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     :cond_0
-    iget-object v7, v0, Lcom/b/aq;->d:Lcom/b/ao;
+    iget-object v7, v0, Lcom/b/as;->d:Lcom/b/aq;
 
     if-eqz v7, :cond_1
 
-    iget-object v7, v0, Lcom/b/aq;->d:Lcom/b/ao;
+    iget-object v7, v0, Lcom/b/as;->d:Lcom/b/aq;
 
-    invoke-virtual {v7, v6}, Lcom/b/ao;->a(Ljava/io/DataOutputStream;)Ljava/lang/Boolean;
+    invoke-virtual {v7, v6}, Lcom/b/aq;->a(Ljava/io/DataOutputStream;)Ljava/lang/Boolean;
 
     move-result-object v7
 
@@ -241,13 +241,13 @@
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     :cond_1
-    iget-object v7, v0, Lcom/b/aq;->e:Lcom/b/k;
+    iget-object v7, v0, Lcom/b/as;->e:Lcom/b/m;
 
     if-eqz v7, :cond_2
 
-    iget-object v7, v0, Lcom/b/aq;->e:Lcom/b/k;
+    iget-object v7, v0, Lcom/b/as;->e:Lcom/b/m;
 
-    invoke-virtual {v7, v6}, Lcom/b/k;->a(Ljava/io/DataOutputStream;)Ljava/lang/Boolean;
+    invoke-virtual {v7, v6}, Lcom/b/m;->a(Ljava/io/DataOutputStream;)Ljava/lang/Boolean;
 
     move-result-object v7
 
@@ -262,11 +262,32 @@
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     :cond_2
-    iget-object v7, v0, Lcom/b/aq;->f:Lcom/b/g;
+    iget-object v7, v0, Lcom/b/as;->f:Lcom/b/i;
 
     if-eqz v7, :cond_3
 
-    iget-object v7, v0, Lcom/b/aq;->f:Lcom/b/g;
+    iget-object v7, v0, Lcom/b/as;->f:Lcom/b/i;
+
+    invoke-virtual {v7, v6}, Lcom/b/i;->a(Ljava/io/DataOutputStream;)Ljava/lang/Boolean;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v7
+
+    if-nez v7, :cond_3
+
+    const/4 v7, 0x0
+
+    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    :cond_3
+    iget-object v7, v0, Lcom/b/as;->g:Lcom/b/g;
+
+    if-eqz v7, :cond_4
+
+    iget-object v7, v0, Lcom/b/as;->g:Lcom/b/g;
 
     invoke-virtual {v7, v6}, Lcom/b/g;->a(Ljava/io/DataOutputStream;)Ljava/lang/Boolean;
 
@@ -276,13 +297,13 @@
 
     move-result v6
 
-    if-nez v6, :cond_3
+    if-nez v6, :cond_4
 
     const/4 v6, 0x0
 
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    :cond_3
+    :cond_4
     invoke-virtual {v5}, Ljava/io/ByteArrayOutputStream;->size()I
 
     move-result v6
@@ -297,13 +318,13 @@
 
     move-result v6
 
-    iput-short v6, v0, Lcom/b/aq;->a:S
+    iput-short v6, v0, Lcom/b/as;->a:S
 
-    iget-short v6, v0, Lcom/b/aq;->a:S
+    iget-short v6, v0, Lcom/b/as;->a:S
 
     invoke-virtual {v4, v6}, Ljava/io/DataOutputStream;->writeShort(I)V
 
-    iget v0, v0, Lcom/b/aq;->b:I
+    iget v0, v0, Lcom/b/as;->b:I
 
     invoke-virtual {v4, v0}, Ljava/io/DataOutputStream;->writeInt(I)V
 
@@ -321,7 +342,7 @@
 
     goto/16 :goto_0
 
-    :cond_4
+    :cond_5
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->size()I
 
     move-result v0

@@ -13,9 +13,9 @@
 
 .field private c:Landroid/view/View;
 
-.field private d:Ljava/lang/String;
+.field private final d:Ljava/lang/String;
 
-.field private e:Ljava/lang/String;
+.field private final e:Ljava/lang/String;
 
 
 # direct methods
@@ -198,7 +198,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/xiaomi/hm/health/a/b;->bg_color_blue:I
+    sget v2, Lcom/xiaomi/hm/health/a/c;->bg_color_blue:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -214,7 +214,7 @@
 
     iget-object v2, p0, Lcom/huami/android/ui/ActionBarActivity;->c:Landroid/view/View;
 
-    sget v3, Lcom/xiaomi/hm/health/a/b;->bg_color_blue:I
+    sget v3, Lcom/xiaomi/hm/health/a/c;->bg_color_blue:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundResource(I)V
 

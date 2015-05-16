@@ -1,60 +1,157 @@
-.class Lcn/com/smartdevices/bracelet/ui/do;
-.super Landroid/content/BroadcastReceiver;
-
-
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
+.class public Lcn/com/smartdevices/bracelet/ui/do;
+.super Lcom/huami/android/view/b;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/do;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
-
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Lcom/huami/android/view/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 5
+.method protected inflateLayout()I
+    .locals 1
 
-    const-string v0, "intent"
+    const v0, 0x7f03009b
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    return v0
+.end method
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+.method public onClick(Landroid/view/View;)V
+    .locals 3
 
-    const-string v2, ""
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    :goto_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/do;->dismiss()V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/do;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "PhotoFromCamera"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.media.action.IMAGE_CAPTURE"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/do;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    const-string v2, "extra_download_id"
+    const/16 v2, 0x12
 
-    const-wide/16 v3, 0x0
+    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    invoke-virtual {p2, v2, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+    goto :goto_0
 
-    move-result-wide v2
+    :pswitch_1
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/do;->getActivity()Landroid/app/Activity;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object v0
+
+    const-string v1, "PhotoFromGallery"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/do;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-class v2, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/do;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    const/16 v2, 0x11
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/do;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
+    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->b(Landroid/app/Activity;)V
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x7f0d02d4
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/huami/android/view/b;->onCreate(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 2
+
+    invoke-super {p0, p1, p2, p3}, Lcom/huami/android/view/b;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0d02d4
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v1, 0x7f0d02d5
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-object v0
+.end method
+
+.method public onPause()V
+    .locals 1
+
+    invoke-super {p0}, Lcom/huami/android/view/b;->onPause()V
+
+    const-string v0, "PagePersonInfoAvatarSelection"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onResume()V
+    .locals 1
+
+    invoke-super {p0}, Lcom/huami/android/view/b;->onResume()V
+
+    const-string v0, "PagePersonInfoAvatarSelection"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
 
     return-void
 .end method

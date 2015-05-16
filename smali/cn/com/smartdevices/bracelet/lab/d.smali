@@ -3,7 +3,7 @@
 
 # interfaces
 .implements Lcn/com/smartdevices/bracelet/lab/o;
-.implements Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;
+.implements Lcom/xiaomi/hm/health/bt/profile/f;
 
 
 # static fields
@@ -112,7 +112,47 @@
     return-void
 .end method
 
-.method private a(SSS)V
+.method private b(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/d;->e:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/lab/n;
+
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/lab/n;->a(I)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method private b(SSS)V
     .locals 6
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/d;->e:Ljava/util/concurrent/ConcurrentHashMap;
@@ -193,46 +233,6 @@
     return-void
 .end method
 
-.method private b(I)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/d;->e:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/n;
-
-    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/lab/n;->a(I)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
 .method private d()Lcn/com/smartdevices/bracelet/gaocept/a;
     .locals 2
 
@@ -280,7 +280,7 @@
 
     const-string v0, ".MISportLab"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b/a;->d(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/a/a;->d(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
@@ -407,20 +407,20 @@
 .method public a(I)V
     .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/p;
+    new-instance v0, Lcom/xiaomi/hm/health/bt/a/p;
 
     new-instance v1, Lcn/com/smartdevices/bracelet/lab/e;
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/lab/e;-><init>(Lcn/com/smartdevices/bracelet/lab/d;I)V
 
-    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/a/p;-><init>(ILcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v0, p1, v1}, Lcom/xiaomi/hm/health/bt/a/p;-><init>(ILcom/xiaomi/hm/health/bt/a/b;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/p;->e()V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/a/p;->g()V
 
     return-void
 .end method
 
-.method public a(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
+.method public a(Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;)V
     .locals 3
 
     const-string v0, "Lab"
@@ -435,7 +435,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->h()Z
 
     move-result v2
 
@@ -449,7 +449,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->f()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->f()Z
 
     move-result v2
 
@@ -463,7 +463,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->e()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->e()Z
 
     move-result v2
 
@@ -477,7 +477,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->c()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->c()Z
 
     move-result v2
 
@@ -491,7 +491,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->d()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->d()Z
 
     move-result v2
 
@@ -505,7 +505,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->g()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->g()Z
 
     move-result v2
 
@@ -517,9 +517,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->h()Z
 
     move-result v0
 
@@ -534,6 +534,14 @@
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/d;->b(I)V
 
     goto :goto_0
+.end method
+
+.method public a(SSS)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/lab/d;->b(SSS)V
+
+    return-void
 .end method
 
 .method public a(Lcn/com/smartdevices/bracelet/lab/n;Lcn/com/smartdevices/bracelet/lab/q;)Z
@@ -605,7 +613,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -669,7 +677,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -802,7 +810,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/d;->c:Lcn/com/smartdevices/bracelet/lab/h;
 
@@ -834,7 +842,7 @@
 .method public b()Z
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->c()Z
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->c()Z
 
     move-result v0
 
@@ -881,7 +889,7 @@
 
     :cond_2
     :try_start_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v2
 
@@ -910,7 +918,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -1095,7 +1103,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/d;->c:Lcn/com/smartdevices/bracelet/lab/h;
 
@@ -1195,12 +1203,12 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public onEvent(Lcom/xiaomi/hm/bleservice/HwBatteryStatus;)V
+.method public onEvent(Lcom/xiaomi/hm/health/bt/bleservice/HwBatteryStatus;)V
     .locals 3
 
     const-string v0, "Lab"
@@ -1215,7 +1223,7 @@
 
     move-result-object v1
 
-    iget v2, p1, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->e:I
+    iget v2, p1, Lcom/xiaomi/hm/health/bt/bleservice/HwBatteryStatus;->e:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1227,7 +1235,7 @@
 
     move-result-object v1
 
-    iget v2, p1, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->f:I
+    iget v2, p1, Lcom/xiaomi/hm/health/bt/bleservice/HwBatteryStatus;->f:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1237,15 +1245,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public process(SSS)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/lab/d;->a(SSS)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

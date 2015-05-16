@@ -43,15 +43,23 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
+    const/high16 v1, 0x3f800000
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/n;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->d(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setScaleX(F)V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setRotationY(F)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/n;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->d(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setScaleY(F)V
 
     return-void
 .end method

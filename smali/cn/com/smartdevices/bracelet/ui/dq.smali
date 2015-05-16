@@ -1,114 +1,76 @@
 .class Lcn/com/smartdevices/bracelet/ui/dQ;
-.super Lcn/com/smartdevices/bracelet/a/b;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
-.field final synthetic b:Z
-
-.field final synthetic c:Lcn/com/smartdevices/bracelet/ui/dO;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dP;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dO;Z)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dP;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->c:Lcn/com/smartdevices/bracelet/ui/dO;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->a:Lcn/com/smartdevices/bracelet/ui/dP;
 
-    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->b:Z
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
-    .locals 0
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 3
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
+    const-string v0, "SettingFragment"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "updateProfile onFailed: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public c(Ljava/lang/Object;)V
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 2
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->a:Lcn/com/smartdevices/bracelet/ui/dP;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->c:Lcn/com/smartdevices/bracelet/ui/dO;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->c:Lcn/com/smartdevices/bracelet/ui/dO;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/dO;->b(Lcn/com/smartdevices/bracelet/ui/dO;)Landroid/view/animation/RotateAnimation;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dO;->a(Lcn/com/smartdevices/bracelet/ui/dO;Landroid/view/animation/Animation;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    if-eqz p1, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->c:Lcn/com/smartdevices/bracelet/ui/dO;
-
-    check-cast p1, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$BatteryInfo;
-
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dO;->a(Lcn/com/smartdevices/bracelet/ui/dO;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$BatteryInfo;)Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$BatteryInfo;
-
-    :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->c:Lcn/com/smartdevices/bracelet/ui/dO;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dO;->c(Lcn/com/smartdevices/bracelet/ui/dO;)Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$BatteryInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dP;->a(Lcn/com/smartdevices/bracelet/ui/dP;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->clearNeedSyncServer()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->c:Lcn/com/smartdevices/bracelet/ui/dO;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->a:Lcn/com/smartdevices/bracelet/ui/dP;
 
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->b:Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/dP;->a(Lcn/com/smartdevices/bracelet/ui/dP;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dO;->a(Lcn/com/smartdevices/bracelet/ui/dO;Z)V
+    move-result-object v0
 
-    goto :goto_0
-.end method
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepPersonInfo(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
-.method public d(Ljava/lang/Object;)V
-    .locals 2
+    const-string v0, "SettingFragment"
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
+    const-string v1, "send person info to server ok!"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->c:Lcn/com/smartdevices/bracelet/ui/dO;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->c:Lcn/com/smartdevices/bracelet/ui/dO;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/dO;->b(Lcn/com/smartdevices/bracelet/ui/dO;)Landroid/view/animation/RotateAnimation;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dO;->a(Lcn/com/smartdevices/bracelet/ui/dO;Landroid/view/animation/Animation;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :goto_0
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->c:Lcn/com/smartdevices/bracelet/ui/dO;
-
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->b:Z
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dO;->a(Lcn/com/smartdevices/bracelet/ui/dO;Z)V
-
-    goto :goto_0
 .end method

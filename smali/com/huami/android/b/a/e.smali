@@ -25,7 +25,7 @@
 
 .field public static final i:Ljava/lang/String; = "com.tencent.mm"
 
-.field public static final j:Ljava/lang/String; = "wx28e2610e92fbe111"
+.field public static final j:Ljava/lang/String; = "wxe37a18fe0ec64b4c"
 
 .field public static final k:Ljava/lang/String; = "1103177325"
 
@@ -124,7 +124,7 @@
 
     move-result-object v0
 
-    const-string v1, "wx28e2610e92fbe111"
+    const-string v1, "wxe37a18fe0ec64b4c"
 
     invoke-static {p1, v1}, Lcom/tencent/mm/sdk/openapi/WXAPIFactory;->createWXAPI(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/sdk/openapi/IWXAPI;
 
@@ -134,7 +134,7 @@
 
     iget-object v1, p0, Lcom/huami/android/b/a/e;->z:Lcom/tencent/mm/sdk/openapi/IWXAPI;
 
-    const-string v2, "wx28e2610e92fbe111"
+    const-string v2, "wxe37a18fe0ec64b4c"
 
     invoke-interface {v1, v2}, Lcom/tencent/mm/sdk/openapi/IWXAPI;->registerApp(Ljava/lang/String;)Z
 
@@ -307,7 +307,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcom/sina/weibo/sdk/api/WeiboMessage;
 
@@ -387,7 +387,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
     iget-object v0, p0, Lcom/huami/android/b/a/e;->B:Lcom/sina/weibo/sdk/api/share/IWeiboShareAPI;
@@ -453,7 +453,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -463,7 +463,7 @@
 
     const-string v1, "shareToWeibo isWeiboAppSupportAPI false"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -514,7 +514,7 @@
 
     iget-object v2, p0, Lcom/huami/android/b/a/e;->C:Landroid/app/Activity;
 
-    sget v3, Lcom/xiaomi/hm/health/a/g;->app_name:I
+    sget v3, Lcom/xiaomi/hm/health/a/h;->app_name:I
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -704,7 +704,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcom/sina/weibo/sdk/api/ImageObject;
 
@@ -770,7 +770,7 @@
 
     iget-object v2, p0, Lcom/huami/android/b/a/e;->C:Landroid/app/Activity;
 
-    sget v3, Lcom/xiaomi/hm/health/a/g;->app_name:I
+    sget v3, Lcom/xiaomi/hm/health/a/h;->app_name:I
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -876,9 +876,9 @@
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weixin_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weixin_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_weixin_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_weixin_label:I
 
     const-string v5, "ShareToWeChat"
 
@@ -886,15 +886,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weixin_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weixin_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_pengyouquan_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_pengyouquan_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_pengyouquan_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_pengyouquan_label:I
 
     const-string v5, "ShareToWeChatFriends"
 
@@ -902,7 +902,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_pengyouquan_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_pengyouquan_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -910,13 +910,13 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/util/Locale;->toString()Ljava/lang/String;
 
     move-result-object v3
 
     sget-object v4, Ljava/util/Locale;->SIMPLIFIED_CHINESE:Ljava/util/Locale;
 
-    invoke-virtual {v4}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/util/Locale;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -928,9 +928,9 @@
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_miliao_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_miliao_label:I
 
     const-string v5, "ShareToMiChat"
 
@@ -938,15 +938,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weibo_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weibo_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_weibo_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_weibo_label:I
 
     const-string v5, "ShareToWeibo"
 
@@ -954,15 +954,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weibo_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weibo_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_qq_zone_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_qq_zone_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_qq_zone_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_qq_zone_label:I
 
     const-string v5, "ShareToQQZone"
 
@@ -970,15 +970,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_qq_zone_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_qq_zone_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_qq_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_qq_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_qq_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_qq_label:I
 
     const-string v5, "ShareToQQ"
 
@@ -986,7 +986,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_qq_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_qq_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -1014,9 +1014,9 @@
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_miliao_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_miliao_label:I
 
     const-string v5, "ShareToMiChat"
 
@@ -1024,15 +1024,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weibo_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weibo_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_weibo_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_weibo_label:I
 
     const-string v5, "ShareToWeibo"
 
@@ -1040,15 +1040,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weibo_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weibo_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_line_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_line_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_line_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_line_label:I
 
     const-string v5, "ShareToLine"
 
@@ -1056,15 +1056,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_line_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_line_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_facebook_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_facebook_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_facebook_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_facebook_label:I
 
     const-string v5, "ShareToFaceBook"
 
@@ -1072,15 +1072,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_facebook_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_facebook_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_twitter_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_twitter_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_twitter_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_twitter_label:I
 
     const-string v5, "ShareToTwitter"
 
@@ -1088,7 +1088,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_twitter_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_twitter_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -1097,9 +1097,9 @@
     :cond_1
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_line_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_line_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_line_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_line_label:I
 
     const-string v5, "ShareToLine"
 
@@ -1107,15 +1107,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_line_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_line_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_facebook_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_facebook_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_facebook_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_facebook_label:I
 
     const-string v5, "ShareToFaceBook"
 
@@ -1123,15 +1123,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_facebook_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_facebook_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_twitter_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_twitter_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_twitter_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_twitter_label:I
 
     const-string v5, "ShareToTwitter"
 
@@ -1139,7 +1139,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_twitter_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_twitter_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -1234,7 +1234,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v4, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -1248,7 +1248,7 @@
 
     if-eqz v5, :cond_2
 
-    sget v1, Lcom/xiaomi/hm/health/a/d;->share_weibo_selector:I
+    sget v1, Lcom/xiaomi/hm/health/a/e;->share_weibo_selector:I
 
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1283,7 +1283,7 @@
 
     if-eqz v3, :cond_3
 
-    sget v1, Lcom/xiaomi/hm/health/a/d;->share_pengyouquan_selector:I
+    sget v1, Lcom/xiaomi/hm/health/a/e;->share_pengyouquan_selector:I
 
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1302,7 +1302,7 @@
 
     if-eqz v3, :cond_1
 
-    sget v1, Lcom/xiaomi/hm/health/a/d;->share_weixin_selector:I
+    sget v1, Lcom/xiaomi/hm/health/a/e;->share_weixin_selector:I
 
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1321,7 +1321,7 @@
 
     if-eqz v5, :cond_5
 
-    sget v1, Lcom/xiaomi/hm/health/a/d;->share_qq_zone_selector:I
+    sget v1, Lcom/xiaomi/hm/health/a/e;->share_qq_zone_selector:I
 
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1348,7 +1348,7 @@
 
     if-eqz v3, :cond_1
 
-    sget v1, Lcom/xiaomi/hm/health/a/d;->share_qq_selector:I
+    sget v1, Lcom/xiaomi/hm/health/a/e;->share_qq_selector:I
 
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1367,7 +1367,7 @@
 
     if-eqz v4, :cond_7
 
-    sget v1, Lcom/xiaomi/hm/health/a/d;->share_line_selector:I
+    sget v1, Lcom/xiaomi/hm/health/a/e;->share_line_selector:I
 
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1386,7 +1386,7 @@
 
     if-eqz v4, :cond_8
 
-    sget v1, Lcom/xiaomi/hm/health/a/d;->share_facebook_selector:I
+    sget v1, Lcom/xiaomi/hm/health/a/e;->share_facebook_selector:I
 
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1405,7 +1405,7 @@
 
     if-eqz v3, :cond_0
 
-    sget v1, Lcom/xiaomi/hm/health/a/d;->share_twitter_selector:I
+    sget v1, Lcom/xiaomi/hm/health/a/e;->share_twitter_selector:I
 
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1424,7 +1424,7 @@
 
     if-eqz v0, :cond_a
 
-    sget v0, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v0, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
     invoke-virtual {p1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1467,7 +1467,7 @@
     :cond_2
     iget v5, p1, Lcom/huami/android/b/a/l;->a:I
 
-    sget v6, Lcom/xiaomi/hm/health/a/d;->share_weixin_selector:I
+    sget v6, Lcom/xiaomi/hm/health/a/e;->share_weixin_selector:I
 
     if-ne v5, v6, :cond_3
 
@@ -1482,7 +1482,7 @@
     :cond_3
     iget v5, p1, Lcom/huami/android/b/a/l;->a:I
 
-    sget v6, Lcom/xiaomi/hm/health/a/d;->share_pengyouquan_selector:I
+    sget v6, Lcom/xiaomi/hm/health/a/e;->share_pengyouquan_selector:I
 
     if-ne v5, v6, :cond_4
 
@@ -1497,7 +1497,7 @@
     :cond_4
     iget v5, p1, Lcom/huami/android/b/a/l;->a:I
 
-    sget v6, Lcom/xiaomi/hm/health/a/d;->share_weibo_selector:I
+    sget v6, Lcom/xiaomi/hm/health/a/e;->share_weibo_selector:I
 
     if-ne v5, v6, :cond_5
 
@@ -1534,7 +1534,7 @@
     :cond_5
     iget v5, p1, Lcom/huami/android/b/a/l;->a:I
 
-    sget v6, Lcom/xiaomi/hm/health/a/d;->share_qq_selector:I
+    sget v6, Lcom/xiaomi/hm/health/a/e;->share_qq_selector:I
 
     if-ne v5, v6, :cond_6
 
@@ -1545,7 +1545,7 @@
     :cond_6
     iget v5, p1, Lcom/huami/android/b/a/l;->a:I
 
-    sget v6, Lcom/xiaomi/hm/health/a/d;->share_qq_zone_selector:I
+    sget v6, Lcom/xiaomi/hm/health/a/e;->share_qq_zone_selector:I
 
     if-ne v5, v6, :cond_9
 
@@ -1570,7 +1570,7 @@
     :cond_9
     iget v5, p1, Lcom/huami/android/b/a/l;->a:I
 
-    sget v6, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v6, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
     if-ne v5, v6, :cond_a
 
@@ -1597,7 +1597,7 @@
     :cond_a
     iget v5, p1, Lcom/huami/android/b/a/l;->a:I
 
-    sget v6, Lcom/xiaomi/hm/health/a/d;->share_facebook_selector:I
+    sget v6, Lcom/xiaomi/hm/health/a/e;->share_facebook_selector:I
 
     if-ne v5, v6, :cond_b
 
@@ -1634,7 +1634,7 @@
     :cond_b
     iget v5, p1, Lcom/huami/android/b/a/l;->a:I
 
-    sget v6, Lcom/xiaomi/hm/health/a/d;->share_twitter_selector:I
+    sget v6, Lcom/xiaomi/hm/health/a/e;->share_twitter_selector:I
 
     if-ne v5, v6, :cond_c
 
@@ -1671,7 +1671,7 @@
     :cond_c
     iget v5, p1, Lcom/huami/android/b/a/l;->a:I
 
-    sget v6, Lcom/xiaomi/hm/health/a/d;->share_line_selector:I
+    sget v6, Lcom/xiaomi/hm/health/a/e;->share_line_selector:I
 
     if-ne v5, v6, :cond_0
 
@@ -1779,7 +1779,7 @@
 
     const-string v1, "share error"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1799,7 +1799,7 @@
 
     iget-object v2, p0, Lcom/huami/android/b/a/e;->C:Landroid/app/Activity;
 
-    sget v3, Lcom/xiaomi/hm/health/a/g;->app_name:I
+    sget v3, Lcom/xiaomi/hm/health/a/h;->app_name:I
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -1870,9 +1870,9 @@
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weixin_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weixin_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_weixin_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_weixin_label:I
 
     const-string v5, "ShareToWeChat"
 
@@ -1880,7 +1880,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weixin_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weixin_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -1890,9 +1890,9 @@
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_pengyouquan_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_pengyouquan_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_pengyouquan_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_pengyouquan_label:I
 
     const-string v5, "ShareToWeChatFriends"
 
@@ -1900,7 +1900,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_pengyouquan_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_pengyouquan_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -1931,9 +1931,9 @@
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_miliao_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_miliao_label:I
 
     const-string v5, "ShareToMiChat"
 
@@ -1941,15 +1941,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weibo_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weibo_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_weibo_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_weibo_label:I
 
     const-string v5, "ShareToWeibo"
 
@@ -1957,15 +1957,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weibo_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weibo_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_qq_zone_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_qq_zone_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_qq_zone_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_qq_zone_label:I
 
     const-string v5, "ShareToQQZone"
 
@@ -1973,16 +1973,16 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_qq_zone_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_qq_zone_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     :cond_1
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_qq_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_qq_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_qq_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_qq_label:I
 
     const-string v5, "ShareToQQ"
 
@@ -1990,7 +1990,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_qq_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_qq_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -2023,9 +2023,9 @@
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_miliao_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_miliao_label:I
 
     const-string v5, "ShareToMiChat"
 
@@ -2033,15 +2033,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weibo_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weibo_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_weibo_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_weibo_label:I
 
     const-string v5, "ShareToWeibo"
 
@@ -2049,15 +2049,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_weibo_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_weibo_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_line_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_line_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_line_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_line_label:I
 
     const-string v5, "ShareToLine"
 
@@ -2065,15 +2065,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_line_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_line_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_facebook_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_facebook_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_facebook_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_facebook_label:I
 
     const-string v5, "ShareToFaceBook"
 
@@ -2081,15 +2081,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_facebook_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_facebook_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_twitter_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_twitter_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_twitter_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_twitter_label:I
 
     const-string v5, "ShareToTwitter"
 
@@ -2097,7 +2097,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_twitter_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_twitter_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -2110,9 +2110,9 @@
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_line_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_line_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_line_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_line_label:I
 
     const-string v5, "ShareToLine"
 
@@ -2120,15 +2120,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_line_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_line_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_facebook_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_facebook_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_facebook_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_facebook_label:I
 
     const-string v5, "ShareToFaceBook"
 
@@ -2136,15 +2136,15 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_facebook_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_facebook_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     new-instance v2, Lcom/huami/android/b/a/l;
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_twitter_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_twitter_selector:I
 
-    sget v4, Lcom/xiaomi/hm/health/a/g;->share_twitter_label:I
+    sget v4, Lcom/xiaomi/hm/health/a/h;->share_twitter_label:I
 
     const-string v5, "ShareToTwitter"
 
@@ -2152,7 +2152,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget v3, Lcom/xiaomi/hm/health/a/d;->share_twitter_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/e;->share_twitter_selector:I
 
     invoke-virtual {v1, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -2174,7 +2174,7 @@
 
     if-ne v1, v2, :cond_0
 
-    sget v1, Lcom/xiaomi/hm/health/a/g;->share_uninstall_client:I
+    sget v1, Lcom/xiaomi/hm/health/a/h;->share_uninstall_client:I
 
     invoke-virtual {p0, v1}, Lcom/huami/android/b/a/e;->a(I)V
 
@@ -2186,7 +2186,7 @@
 
     if-ne v1, v2, :cond_1
 
-    sget v1, Lcom/xiaomi/hm/health/a/g;->share_miliao_too_old:I
+    sget v1, Lcom/xiaomi/hm/health/a/h;->share_miliao_too_old:I
 
     invoke-virtual {p0, v1}, Lcom/huami/android/b/a/e;->a(I)V
 
@@ -2241,7 +2241,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

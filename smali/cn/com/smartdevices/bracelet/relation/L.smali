@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/relation/MessageActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/relation/J;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/MessageActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/J;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/L;->a:Lcn/com/smartdevices/bracelet/relation/MessageActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/L;->a:Lcn/com/smartdevices/bracelet/relation/J;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,22 +22,30 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/L;->a:Lcn/com/smartdevices/bracelet/relation/MessageActivity;
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/relation/MessageActivity;->a(Z)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/L;->a:Lcn/com/smartdevices/bracelet/relation/J;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/L;->a:Lcn/com/smartdevices/bracelet/relation/MessageActivity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/J;->b(Lcn/com/smartdevices/bracelet/relation/J;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/MessageActivity;->a(Lcn/com/smartdevices/bracelet/relation/MessageActivity;)Lcn/com/smartdevices/bracelet/relation/Q;
+    return-void
+.end method
 
-    move-result-object v0
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/Q;->notifyDataSetChanged()V
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

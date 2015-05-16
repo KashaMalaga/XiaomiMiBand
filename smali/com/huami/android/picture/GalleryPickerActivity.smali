@@ -137,7 +137,7 @@
 
     iget-object v1, p0, Lcom/huami/android/picture/GalleryPickerActivity;->p:Lcom/huami/android/bitmaprun/x;
 
-    sget v2, Lcom/huami/android/a/e;->picker_empty_photo:I
+    sget v2, Lcom/huami/android/a/f;->picker_empty_photo:I
 
     invoke-virtual {v1, v2}, Lcom/huami/android/bitmaprun/x;->b(I)V
 
@@ -173,7 +173,7 @@
 
     iput-object v0, p0, Lcom/huami/android/picture/GalleryPickerActivity;->l:Lcom/huami/android/picture/c;
 
-    sget v0, Lcom/huami/android/a/f;->picker_grid:I
+    sget v0, Lcom/huami/android/a/g;->picker_grid:I
 
     invoke-virtual {p0, v0}, Lcom/huami/android/picture/GalleryPickerActivity;->findViewById(I)Landroid/view/View;
 
@@ -284,7 +284,7 @@
 
     move-result v2
 
-    sget v3, Lcom/huami/android/a/f;->menu_done:I
+    sget v3, Lcom/huami/android/a/g;->menu_done:I
 
     if-ne v2, v3, :cond_1
 
@@ -373,7 +373,7 @@
 
     invoke-super {p0, p1}, Lcom/huami/android/ui/ActionBarActivity;->onCreate(Landroid/os/Bundle;)V
 
-    sget v0, Lcom/huami/android/a/g;->activity_picture_picker:I
+    sget v0, Lcom/huami/android/a/h;->activity_picture_picker:I
 
     invoke-virtual {p0, v0}, Lcom/huami/android/picture/GalleryPickerActivity;->setContentView(I)V
 
@@ -397,7 +397,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/huami/android/a/d;->image_thumbnail_size:I
+    sget v1, Lcom/huami/android/a/e;->image_thumbnail_size:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -409,7 +409,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/huami/android/a/d;->image_thumbnail_spacing:I
+    sget v1, Lcom/huami/android/a/e;->image_thumbnail_spacing:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -506,7 +506,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/huami/android/a/i;->picker_number_of_items_selected:I
+    sget v2, Lcom/huami/android/a/j;->picker_number_of_items_selected:I
 
     const/4 v3, 0x1
 

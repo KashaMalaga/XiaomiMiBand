@@ -1,104 +1,39 @@
 .class Lcn/com/smartdevices/bracelet/ui/dg;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 3
+.method public run()V
+    .locals 2
 
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :goto_0
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->setResult(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->setResult(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->finish()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->finish()V
 
-    goto :goto_0
-
-    :pswitch_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)Landroid/app/Activity;
-
-    move-result-object v0
-
-    const v1, 0x7f090273
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->b(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
-
-    goto :goto_0
-
-    :pswitch_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->c(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->d(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_0
-        :pswitch_2
-    .end packed-switch
+    return-void
 .end method

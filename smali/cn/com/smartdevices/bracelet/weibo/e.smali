@@ -44,7 +44,7 @@
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/weibo/f;-><init>(Lcn/com/smartdevices/bracelet/weibo/e;)V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/activity/k;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/activity/p;)V
 
     return-void
 .end method

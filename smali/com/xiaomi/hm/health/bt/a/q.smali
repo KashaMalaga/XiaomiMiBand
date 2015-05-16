@@ -1,0 +1,62 @@
+.class public Lcom/xiaomi/hm/health/bt/a/q;
+.super Lcom/xiaomi/hm/health/bt/a/x;
+
+
+# instance fields
+.field private a:I
+
+
+# direct methods
+.method public constructor <init>(ILcom/xiaomi/hm/health/bt/a/b;)V
+    .locals 1
+
+    invoke-direct {p0, p2}, Lcom/xiaomi/hm/health/bt/a/x;-><init>(Lcom/xiaomi/hm/health/bt/a/b;)V
+
+    const/16 v0, 0x1f40
+
+    iput v0, p0, Lcom/xiaomi/hm/health/bt/a/q;->a:I
+
+    iput p1, p0, Lcom/xiaomi/hm/health/bt/a/q;->a:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lcom/xiaomi/hm/health/bt/a/b;)V
+    .locals 3
+
+    iget-object v0, p0, Lcom/xiaomi/hm/health/bt/a/q;->k:Lcom/xiaomi/hm/health/bt/a/b;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/xiaomi/hm/health/bt/a/q;->k:Lcom/xiaomi/hm/health/bt/a/b;
+
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/a/b;->b()V
+
+    :cond_0
+    iget-object v0, p0, Lcom/xiaomi/hm/health/bt/a/q;->m:Lcom/xiaomi/hm/health/bt/profile/v;
+
+    const/4 v1, 0x0
+
+    iget v2, p0, Lcom/xiaomi/hm/health/bt/a/q;->a:I
+
+    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/health/bt/profile/v;->a(BI)Z
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/xiaomi/hm/health/bt/a/q;->k:Lcom/xiaomi/hm/health/bt/a/b;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/xiaomi/hm/health/bt/a/q;->k:Lcom/xiaomi/hm/health/bt/a/b;
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/health/bt/a/b;->c(Ljava/lang/Object;)V
+
+    :cond_1
+    return-void
+.end method

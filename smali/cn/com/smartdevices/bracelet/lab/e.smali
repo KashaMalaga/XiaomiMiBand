@@ -1,32 +1,32 @@
 .class Lcn/com/smartdevices/bracelet/lab/e;
-.super Lcn/com/smartdevices/bracelet/a/b;
+.super Lcom/xiaomi/hm/health/bt/a/b;
 
 
 # instance fields
-.field final synthetic b:I
+.field final synthetic a:I
 
-.field final synthetic c:Lcn/com/smartdevices/bracelet/lab/d;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/lab/d;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/lab/d;I)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/e;->c:Lcn/com/smartdevices/bracelet/lab/d;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/e;->b:Lcn/com/smartdevices/bracelet/lab/d;
 
-    iput p2, p0, Lcn/com/smartdevices/bracelet/lab/e;->b:I
+    iput p2, p0, Lcn/com/smartdevices/bracelet/lab/e;->a:I
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
+    invoke-direct {p0}, Lcom/xiaomi/hm/health/bt/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c(Ljava/lang/Object;)V
+.method public a(Ljava/lang/Object;)V
     .locals 3
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/xiaomi/hm/health/bt/a/b;->a(Ljava/lang/Object;)V
 
     check-cast p1, Ljava/lang/Integer;
 
@@ -50,7 +50,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/e;->b:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/e;->a:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -60,7 +60,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -78,7 +78,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/e;->b:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/e;->a:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -88,15 +88,15 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public d(Ljava/lang/Object;)V
+.method public b(Ljava/lang/Object;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/xiaomi/hm/health/bt/a/b;->b(Ljava/lang/Object;)V
 
     return-void
 .end method

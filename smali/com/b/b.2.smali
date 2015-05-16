@@ -44,11 +44,19 @@
 
     iget-object v0, p0, Lcom/b/b;->a:Lcom/b/a;
 
-    invoke-static {}, Lcom/b/am;->a()J
+    invoke-static {}, Lcom/b/ao;->a()J
 
     move-result-wide v1
 
     invoke-static {v0, v1, v2}, Lcom/b/a;->a(Lcom/b/a;J)J
+
+    iget-object v0, p0, Lcom/b/b;->a:Lcom/b/a;
+
+    invoke-static {}, Lcom/b/ao;->a()J
+
+    move-result-wide v1
+
+    invoke-static {v0, v1, v2}, Lcom/b/a;->b(Lcom/b/a;J)J
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -130,14 +138,14 @@
     return-void
 
     :pswitch_0
-    invoke-static {p1}, Lcom/b/am;->a(I)I
+    invoke-static {p1}, Lcom/b/ao;->a(I)I
 
     move-result v0
 
     goto :goto_0
 
     :pswitch_1
-    invoke-static {p1}, Lcom/b/am;->a(I)I
+    invoke-static {p1}, Lcom/b/ao;->a(I)I
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -186,7 +194,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/b/am;->a(I)I
+    invoke-static {v0}, Lcom/b/ao;->a(I)I
 
     move-result v0
 

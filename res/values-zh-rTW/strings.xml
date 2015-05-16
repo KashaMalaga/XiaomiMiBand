@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="pull_to_refresh_refreshing_label">正在載入…</string>
-    <string name="pull_to_refresh_from_bottom_pull_label">載入更多</string>
     <string name="app_name">小米運動</string>
     <string name="share_uninstall_client">未安裝應用程式, 不能分享！</string>
     <string name="share_miliao_too_old">米聊版本較低, 不支援分享</string>
@@ -23,7 +21,110 @@
     <string name="ok">確定</string>
     <string name="cancel">取消</string>
     <string name="action_loading">加载中</string>
+    <string name="come_from_xiaomi_bracelet">來自小米運動</string>
     <string name="picker_menu_done">完成</string>
+    <string name="open_gallery">打开相册</string>
+    <string name="scan_label">將二維碼放入框中，即可自動掃描</string>
+    <string name="pull_to_refresh_refreshing_label">正在載入…</string>
+    <string name="pull_to_refresh_from_bottom_pull_label">載入更多</string>
+    <string name="running_helper">跑步</string>
+    <string name="running_no_gps">打開GPS才能準確記錄你的運動軌跡，是否打開？</string>
+    <string name="running_set_speed">速度提醒</string>
+    <string name="running_speed">時速</string>
+    <string name="running_speed_with_unit">時速(公里/時)</string>
+    <string name="running_real_time_pace">配速(分/公里)</string>
+    <string name="running_pace">配速</string>
+    <string name="running_set_goal">跑步目標</string>
+    <string name="running_set_dist">距離提醒</string>
+    <string name="running_speed_detail">%.2f公里/時</string>
+    <string name="running_pace_detail">%s/公里</string>
+    <string name="running_distance_detail">%.2f公里</string>
+    <string name="running_distance_desc">公里</string>
+    <string name="running_time_desc">用時</string>
+    <string name="running_start">開始</string>
+    <string name="running_pause">暫停</string>
+    <string name="running_resume">繼續</string>
+    <string name="running_stop">停止</string>
+    <string name="running_gps_turnon">打開</string>
+    <string name="running_gps_cancel">取消</string>
+    <string name="running_settings">設定</string>
+    <string name="running_history">歷史</string>
+    <string name="running_slider_prompt">>>>向右滑動解鎖</string>
+    <string name="running_distance">距離</string>
+    <string name="running_distance_unit">距離(公里)</string>
+    <string name="running_average_speed">平均速度</string>
+    <string name="running_step">步數</string>
+    <string name="running_altitude">海拔</string>
+    <string name="running_burn">消耗</string>
+    <string name="running_start_time">開始時間</string>
+    <string name="running_end_time">結束時間</string>
+    <string name="running_history_title">歷史記錄</string>
+    <string name="running_history_date" formatted="false">"%d月%d日
+%d年"</string>
+    <string name="running_history_no_data">暫無數據</string>
+    <string name="running_history_no_more_data">已無多事</string>
+    <string name="running_history_no_data_refresh">暫無數據，點選螢幕刷新</string>
+    <string name="running_history_no_data_refreshing">正在刷新，請稍候……</string>
+    <string name="running_cost_cal">%.1f大卡</string>
+    <string name="running_prepare_map">正在準備數據，請稍候……</string>
+    <string name="running_prompt_per_kilometer" formatted="false">你已經跑了%s公里，用時%s，最近1公里的配速爲%s。%s</string>
+    <string name="running_prompt_great">好棒！！</string>
+    <string name="running_prompt_come_on">加油加油！！</string>
+    <string name="running_kilometers">公里</string>
+    <string name="running_per_kilometers">/公里</string>
+    <string name="running_kilometers_per_hour">公里/時</string>
+    <string name="running_gps_locating">GPS定位中……</string>
+    <string name="running_set_pace">配速提醒</string>
+    <string name="running_lable_miles_fastest">公里最快</string>
+    <string name="running_lable_km_slowest">公里最慢</string>
+    <string name="running_share">分享</string>
+    <string name="running_watermark">水印照片</string>
+    <string name="sport_ranking_desc_poor">你的成績在所有%s用戶中墊底，加油啊！</string>
+    <string name="sport_ranking_desc_normal" formatted="false">你打敗了 &lt;b>%s&lt;/b> 的小米運動%s用戶！</string>
+    <string name="sport_ranking_desc_great">你已經到了獨孤求敗的境界！</string>
+    <string name="sport_new_record_ropeskipping">連跳新紀錄</string>
+    <string name="running_btn_save">保存</string>
+    <string name="running_btn_confirm">确定</string>
+    <string name="running_btn_continue">返回</string>
+    <string name="running_no_track_desc">你還沒動吧，確定要取消這次跑步嗎？</string>
+    <string name="running_stop_sport_confirm">確定要停止這次跑步嗎？</string>
+    <string name="running_set_pace_desc">慢於該配速手環將震動提醒</string>
+    <string name="running_gps_poor_signal">GPS訊號差，請移動到開闊的地方繼續。</string>
+    <string name="running_cal_with_unit">消耗(大卡)</string>
+    <string name="running_cal_desc">消耗</string>
+    <string name="running_cal_burnt">%d大卡</string>
+    <string name="running_step_frequency">步頻(步/分)</string>
+    <string name="running_marathon_cost_time">該配速下一個馬拉松需要%s</string>
+    <string name="running_label_hint">標題隱藏</string>
+    <string name="running_sport_state_sr_tips">自倚閣中，走而自續</string>
+    <string name="running_auto_pause">自動暫停</string>
+    <string name="running_auto_pause_desc">當跑步中途停下時，自動暫停記錄</string>
+    <string name="running_gallery">相簿</string>
+    <string name="running_failed_to_get_history_neterror">網路不給力</string>
+    <string name="running_get_history_no_more_data">已無歷史資料</string>
+    <string name="running_delete_track_item_confirm">確定删除該記錄？删除後無法恢復</string>
+    <string name="running_backgroud_notification">跑步中……加油加油</string>
+    <string name="running_volumn_notice">梯音量低，请于乐用中节，否则走时不闻音播报信</string>
+    <string name="running_share_to_mypace">我的配速表</string>
+    <string name="running_share_to_watermark">我的水印照片</string>
+    <string name="running_watermark_search_location">\#正在取得你的位置#</string>
+    <string name="running_watermark_btn_confirm">儲存分享</string>
+    <string name="running_watermark_guide_tips">拖曳移動水印</string>
+    <string name="running_no_bracelet_tips">(僅限手環連接時設定)</string>
+    <string name="running_contour_track_failed_to_create">不能分，請檢查儲存空是否足夠</string>
+    <string name="running_signal_strong">强</string>
+    <string name="running_signal_weak">弱</string>
+    <string name="running_signal_none">無</string>
+    <string name="running_state_paused">暫停</string>
+    <string name="running_state_stopped">停止</string>
+    <string name="running_confirm">确定</string>
+    <string name="running_share_to_title">小米运动</string>
+    <string name="running_date_yesterday">昨天</string>
+    <string name="running_date_this_week">本周</string>
+    <string name="running_date_last_week">上周</string>
+    <string name="running_date_this_month">本月</string>
+    <string name="running_date_last_month">上月</string>
+    <string name="running_unlogin_notice">汝未录app，用中之数以为汝与步至服务器，数或在异下失？</string>
     <string name="register">註冊</string>
     <string name="login">登入</string>
     <string name="logining">登入中 ...</string>
@@ -101,7 +202,7 @@
     <string name="bind_bracelet_ok">手環已綁定成功</string>
     <string name="device_not_response">我的手環怎麼沒亮燈？</string>
     <string name="action_local_ota">SD卡升級</string>
-    <string name="bracelet_not_found_title">未发现小米手環</string>
+    <string name="bracelet_not_found_title">未發現小米手環</string>
     <string name="bracelet_not_found_info">請確保手環有電, 並且貼近手機</string>
     <string name="get_help">取得幫助</string>
     <string name="system_not_support_title">無法支援</string>
@@ -116,10 +217,10 @@
     <string name="female">女</string>
     <string name="unit_metric">公制</string>
     <string name="unit_british">英制</string>
-    <string name="unit_metric_detail">公制（米、公里）</string>
+    <string name="unit_metric_detail">公制（公尺、公里）</string>
     <string name="unit_british_detail">英制（英尺、英里）</string>
     <string name="cm">公分</string>
-    <string name="metre">米</string>
+    <string name="metre">公尺</string>
     <string name="unit_inch">英寸</string>
     <string name="unit_foot">英尺</string>
     <string name="share">分享</string>
@@ -143,7 +244,7 @@
     <string name="odo_british">總英里數</string>
     <string name="daily_sporty">日均步數</string>
     <string name="km">公里</string>
-    <string name="cal">千卡</string>
+    <string name="cal">大卡</string>
     <string name="step">步</string>
     <string name="s_mili">的手環</string>
     <string name="rename_mili">命名手環</string>
@@ -294,7 +395,7 @@
     <string name="bracelet_login_info_2">登入則表示您同意遵守小米的</string>
     <string name="please_input_gender">請選擇你的性別</string>
     <string name="input_precise_person_info">請輸入準確的個人資訊, 以便精確計算運動和睡眠結果</string>
-    <string name="input_precise_user_info">请输入准确的个人信息, 以便精确分析身体数据</string>
+    <string name="input_precise_user_info">請輸入準確的個人資訊, 以便精確分析身體資料</string>
     <string name="check_upgrade">檢查更新</string>
     <string name="visit_micom">瀏覽官網</string>
     <string name="join_improvement_plan_detial">我們會統計你對產品部分功能的使用情況, 用於提升我們的產品和服務, 整個過程會遵循我們的隱私政策。</string>
@@ -388,20 +489,20 @@
     <string name="share_step_goal_succ_title">目標達成</string>
     <string name="share_step_goal_failed_title_today">今天一共走了</string>
     <string name="share_step_goal_failed_title">一共走了</string>
-    <string name="share_step_description">"行走%1$s, 消耗熱量%2$s千卡
+    <string name="share_step_description">"行走%1$s, 消耗熱量%2$s大卡
 "</string>
     <string name="share_step_description_run">"走路%1$s, 跑步%2$s
-消耗熱量%3$s千卡
+消耗熱量%3$s大卡
 "</string>
     <string name="share_step_description_weekly">"行程%1$s%2$s
-總計消耗%3$s千卡
+總計消耗%3$s大卡
 最高記錄%4$s一天走了%5$s步"</string>
     <string name="share_step_description_weekly_run">"走路%1$s, 跑步%2$s
 %3$s
 最高記錄%4$s一天走了%5$s步"</string>
     <string name="share_play_ground_format">相當於繞標準操場%1$s圈</string>
     <string name="share_step_description_monthly">"行程%1$s, %2$s
-總計消耗%3$s千卡, 節省%4$s升汽油
+總計消耗%3$s大卡, 節省%4$s升汽油
 最高記錄%5$s一天走了%6$s步"</string>
     <string name="share_step_description_monthly_run">"走路%1$s, 跑步%2$s
 %3$s, 節省%4$s升汽油
@@ -447,8 +548,8 @@
     <string name="bind_qq_health_title">綁定QQ健康, 與好友們一起PK運動排行</string>
     <string name="step1">1.</string>
     <string name="step2">2.</string>
-    <string name="bind_weixin_tips_1">點擊“生成二維碼”, 在手機相簿中生成連結二維碼。</string>
-    <string name="bind_weixin_tips_2">點擊“啟動微信”, 使用微信掃描QR Code中的相簿功能, 從手機相簿中選擇上一步生成的二維碼完成連結。</string>
+    <string name="bind_weixin_tips_1">點選“生成二維碼”, 在手機相簿中生成連結二維碼。</string>
+    <string name="bind_weixin_tips_2">點選“啟動微信”, 使用微信掃描QR Code中的相簿功能, 從手機相簿中選擇上一步生成的二維碼完成連結。</string>
     <string name="bind_weixin_now">正在生成二維碼, 請稍候...</string>
     <string name="bind_weixin_failed">微信接入失敗, 請重試</string>
     <string name="bind_weixin_succ">綁定成功, 趕快用微信體驗吧！</string>
@@ -458,7 +559,6 @@
     <string name="share_step_walk">, 我共走了</string>
     <string name="one_week">一週</string>
     <string name="walked">走了</string>
-    <string name="come_from_xiaomi_bracelet">來自小米運動</string>
     <string name="unlock_screen_invalid">解鎖失效怎麼辦？</string>
     <string name="unlock_screen_help_title0">手環是否貼近手機</string>
     <string name="unlock_screen_help_title1">嘗試重新啟動藍牙</string>
@@ -484,8 +584,28 @@
 設定目標"</string>
     <string name="instruction_tip_3">"電量將耗盡
 請及時充電"</string>
+    <string name="instruction_weight_title_1">可綁定多台手機</string>
+    <string name="instruction_weight_tips1_1">小米體重機支援綁定多台手機</string>
+    <string name="instruction_weight_title_2">測量時無需使用手機</string>
+    <string name="instruction_weight_tips1_2">使用手機綁定後, 體重記錄會儲存在體重機裡</string>
+    <string name="instruction_weight_tips2_2">啟動APP後在體重機附近10公尺內就會自動同步</string>
+    <string name="instruction_weight_title_3">設定測量單位</string>
+    <string name="instruction_weight_tips1_3">設定後, 手機APP和體重機顯示的體重單位將會同時改變</string>
+    <string name="instruction_weight_title_4">電量用盡</string>
+    <string name="instruction_weight_tips1_4">測量時如果電池電量用盡會顯示如下圖案</string>
+    <string name="instruction_weight_tips2_4">更換電池後請連接體重機自動完成初始化</string>
+    <string name="instruction_weight_title_5">超出可測量最大值</string>
+    <string name="instruction_weight_tips1_5">當閃爍顯示以下圖案時, 說明重量超過了</string>
+    <string name="instruction_weight_tips2_5">體重機的最大測量範圍150公斤</string>
+    <string name="instruction_weight_title_6">測量提示</string>
+    <string name="instruction_weight_tips1_6">測量時, 注意保持地板和體重機表面乾燥, 以免滑倒</string>
+    <string name="instruction_weight_tips2_6">為了準確測量, 請不要將體重機放在地板接縫處</string>
+    <string name="instruction_weight_page6_t1">只穿輕薄衣物</string>
+    <string name="instruction_weight_page6_t2">"雙腳自然站在
+體重機的中心區域"</string>
+    <string name="instruction_weight_page6_t3">堅硬平坦的地面</string>
     <string name="new_record_born">太棒了, 新紀錄誕生</string>
-    <string name="new_record_format_str">"行程%1$s, 消耗熱量%2$s千卡
+    <string name="new_record_format_str">"行程%1$s, 消耗熱量%2$s大卡
 新的記錄不過是我漫漫旅程上的一個腳印
 夢想的腳步永遠不會停下"</string>
     <string name="continue_reach_goal">已連續達標</string>
@@ -529,7 +649,7 @@
     <string name="runed">跑了</string>
     <string name="share_to_miliao_path">選擇分享路徑</string>
     <string name="no_network_connection">網路未連線</string>
-    <string name="no_network_connection_retry">點擊螢幕, 重新載入</string>
+    <string name="no_network_connection_retry">點選螢幕, 重新載入</string>
     <string name="gen_qr_code">生成二維碼</string>
     <string name="bin_weixin_device_not_connect">請先連接手環, 再進行微信接入設定</string>
     <string name="share_to_content_sleep">我的睡眠資訊</string>
@@ -547,7 +667,7 @@
     <string name="bind_qq_health_tip">"每次完成手環數據同步時會將步數和睡眠數據同步
 至QQ健康, 同步時需連網"</string>
     <string name="bind_weixin_new_tips">"點選“微信接入”啟動微信進入小米手環帳號頁面, 
-然後點擊“關注”按鈕即可完成接入"</string>
+然後點選“關注”按鈕即可完成接入"</string>
     <string name="bind_weixin_new_now">正在進行微信接入, 請稍候......</string>
     <string name="bind_weixin_new_disable_tips">"接入微信關注小米手環服務號碼後即可透過微信檢視目
 前步數, 並且與朋 友圈中的好友們一起PK運動排行"</string>
@@ -595,8 +715,7 @@
     <string name="user_agreement_prefix">點選同意以確認小米手環的</string>
     <string name="battery">電量</string>
     <string name="signal_strength">訊號強度：</string>
-    <string name="confirm_lazy_day">确定使用假單?</string>
-    <string name="closed">關閉</string>
+    <string name="confirm_lazy_day">確定使用假單?</string>
     <string name="birthday">出生年月</string>
     <string name="user_agreement_ux">加入用戶體驗改善計畫</string>
     <string name="weight_dynamic_title">%1$s %2$s, 體重%3$s%4$s</string>
@@ -610,11 +729,12 @@
     <string name="weight_unit_text_info">你已經綁定了體重機, 重量單位將以體重機的設定為準, 打開體重機反面的電池蓋可以調整重量單位</string>
     <string name="bind_devices">綁定設備</string>
     <string name="bind_mi_band">綁定小米手環</string>
-    <string name="bind_mi_weight">Pair scale 綁定體重機</string>
+    <string name="bind_mi_weight">綁定體重機</string>
     <string name="bind_mi_band_about"><Data>&lt;a href=http://www.mi.com>瞭解小米手環&lt;/a></Data></string>
     <string name="bind_mi_weight_about">" "<Data>&lt;a href=http://www.mi.com>瞭解小米體重機&lt;/a></Data>" "</string>
     <string name="bind_mi_weight_howto">玩轉體重機</string>
     <string name="agree_ux">參與用戶體驗改善計畫</string>
+    <string name="bind_mi_weight_howto_tips">如何玩轉體重機</string>
     <string name="search_weight_scale">尋找體重機</string>
     <string name="search_weight_scale_info">請靠近體重機</string>
     <string name="weight_device_list">附近的體重機</string>
@@ -644,11 +764,11 @@
     <string name="visitor_weight">訪客測量體重</string>
     <string name="name">稱呼</string>
     <string name="input_family_member_name">請輸入家庭成員的稱呼</string>
-    <string name="input_person_name">你还没有昵称, 快为自己想个好名字吧</string>
+    <string name="input_person_name">你還沒有昵稱, 快為自己想個好名字吧</string>
     <string name="goal_weight">目標體重</string>
     <string name="delete">刪除</string>
     <string name="weight_report_suggest">建議：</string>
-    <string name="weight_device_battery_tips">电量低, 更换电池后连接秤自动完成初始化</string>
+    <string name="weight_device_battery_tips">電量低, 更換電池後連接體重機自動完成初始化</string>
     <string name="weight_help_title_0">體重機是否在手機附近？</string>
     <string name="weight_help_info_0">小米體重機使用藍牙和手機連接, 所以當連接體重機時, 手機靠近體重機將更有利於搜尋。</string>
     <string name="weight_help_title_1">電池電量是否足夠？</string>
@@ -678,8 +798,8 @@
  綁定手環後, 此資料僅作為參考, 不會儲存到雲端"</string>
     <string name="incomingcall_info_1">使用來電提醒需要小米手環一直在後台運行</string>
     <string name="incomingcall_info_2">"請參照圖示鎖定小米手環應用
-並將小米手環新增到第三方手機助手白名單中"</string>
-    <string name="incomingcall_info_3">"如果手機安裝有第三方手機助手
+並將小米手環新增到協力廠商手機助手白名單中"</string>
+    <string name="incomingcall_info_3">"如果手機安裝有協力廠商手機助手
 請將小米手環新增到白名單中"</string>
     <string name="incoming_call_notify_closed">關閉來電提醒</string>
     <string name="title_activity_mark">行為標註</string>
@@ -696,17 +816,17 @@
     <string name="weight_settings_merge_title">合併頻繁測量體重記錄</string>
     <string name="weight_settings_merge_tips">同一成員兩次量體重間隔30秒內, 覆蓋前一條記錄</string>
     <string name="not_fount_available_userinfo">未能找到合適成員</string>
-    <string name="choose_userinfo_for_weight">為本次量體中選個主人吧</string>
+    <string name="choose_userinfo_for_weight">為本次量體重中選個主人吧</string>
     <string name="visitor">訪客</string>
     <string name="new_user">新成員</string>
     <string name="set_goal_weight_tips">根據你提供的身體資訊, 我們通過BMI指數計算得出你的標準體重區間為%1$s-%2$s%3$s</string>
-    <string name="set_weight_goal">設定體重目標</string>
+    <string name="set_weight_goal">體重目標</string>
     <string name="clear_weight_goal">清除目標</string>
     <string name="reset_weight_goal">重新設定</string>
     <string name="set_weight_goal_yes">設定目標</string>
     <string name="set_weight_goal_no">不設定了</string>
     <string name="weight_tip_bmi_name">什麼是BMI</string>
-    <string name="weight_tip_bmi_content">BMI[Body Mass Index] 即BMI指数, 也叫身体质量指数, 是衡量是否肥胖和标准体重的重要指标。BMI是体重（公斤）除以身高（米）的二次方的值。</string>
+    <string name="weight_tip_bmi_content">BMI[Body Mass Index] 即BMI指數, 也叫身體品質指數, 是衡量是否肥胖和標準體重的重要指標。BMI是體重（公斤）除以身高（公尺）的二次方的值。</string>
     <string name="weight_tip_fat_name">單看BMI值不能判定虛胖</string>
     <string name="weight_tip_fat_content">BMI是從身高和體重計算的值, 為簡單判定肥胖度的標準, 即使是標準體重, 也存在脂肪多的\"虛胖\"。因此體重變化時確認是肌肉還是脂肪增加是很重要的。</string>
     <string name="daily_sport_report">今日運動成績</string>
@@ -785,7 +905,6 @@
     <string name="bind_qq_health_tip_another_qq">需要切換至手機QQ當前登錄的賬號, 才能在健康中看到數據</string>
     <string name="bind_qq_health_tip_init">登錄後繼續完成綁定QQ健康</string>
     <string name="please_input_name">請輸入你的名稱</string>
-    <string name="runner_unlogin_notice">你還未登入app，使用過程中的數據將無法為你同步到伺服器，數據可能會在一些情況下丟失。現在去登入？</string>
     <string name="weight_test_dynamic_detail">體重：%1$s%2$s</string>
     <string name="gotit">知道了</string>
     <string name="setgoalafterweight">請在量體重後設定目標</string>
@@ -793,13 +912,13 @@
     <string name="total_distance_format">累計%s</string>
     <string name="state_open">開啟</string>
     <string name="state_close">關閉</string>
-    <string name="pairing">Pairing ...</string>
+    <string name="pairing">正在綁定...</string>
     <string name="weight_low_battery">電量用盡, 請更換電池</string>
     <string name="weight_connect_failed_title">體重機連接失敗, 點選檢視詳細幫助</string>
     <string name="sure_to_delete_weight">確認刪除該體重紀錄？</string>
     <string name="multi_devices_weight_title">綁定失敗</string>
     <string name="upload_log">上傳調試日誌</string>
-    <string name="upload_log_info">請確保是wifi網絡連接, 否則會耗費您的數據流量, 確定上傳？</string>
+    <string name="upload_log_info">請確保是wifi網路連接, 否則會耗費您的網路流量, 確定上傳？</string>
     <string name="please_connect_internet">請連網操作</string>
     <string name="user_set_succ_info">請開啟%1$sAPP完成第一次量體重</string>
     <string name="lighter_than_goal">比目標輕%1$s</string>
@@ -840,21 +959,25 @@
     <string name="rebind_weibo_health">重新綁定</string>
     <string name="weibosdk_toast_auth_failed">綁定失敗</string>
     <string name="weibosdk_toast_auth_canceled">取消授權</string>
+    <string name="weibosdk_toast_binded">當前帳號已綁定其他微博帳號</string>
     <string name="upload_log_ok">上傳成功, 感謝您的支持！</string>
-    <string name="upload_log_fail">上傳失敗, 您可以重新上傳, 感謝您的支持！</string>
-    <string name="set_weight_goal_tips">%1$s, 快來設置體重目標吧</string>
+    <string name="upload_log_fail">上傳失敗, 您可以重新上傳, 感謝您的支援！</string>
+    <string name="set_weight_goal_tips">%1$s, 快來設定體重目標吧</string>
     <string name="tips">小提示</string>
     <string name="alarm_tips">"鬧鐘震動過程中, 輕拍手環即可停止震動。 
 手環檢測到你已起床, 即會停止震動。"</string>
-    <string name="prepare_log">准備上傳日志文件</string>
+    <string name="prepare_log">准備上傳日誌檔</string>
     <string name="uploaded">已上傳：</string>
-    <string name="invalid_name">名稱包含非法字符, 請重新輸入</string>
+    <string name="invalid_name">名稱包含非法字元, 請重新輸入</string>
     <string name="parse_data_failed">解析數據失敗</string>
     <string name="ampm_format">ahh:mm</string>
-    <string name="dynamic_title_weight_not_nearby">體重秤不在附近</string>
+    <string name="ampm_format_hhmmss">ahh:mm:ss</string>
+    <string name="detial_ampm_format">凌晨hh:mm</string>
+    <string name="detial_ampm_format_hhmmss">凌晨hh:mm:ss</string>
+    <string name="dynamic_title_weight_not_nearby">體重機不在附近</string>
     <string name="weight_less_than_tips">根據你提供的身體資訊, 我們通過BMI指數計算得出你的體重不宜超過%1$s</string>
     <string name="baby_weight_tips">嬰幼兒及兒童不宜過度控制體重, 以免影響正常生長發育</string>
-    <string name="weight_goal_height_100">合理的控制体重, 不要让自己太瘦哦</string>
+    <string name="weight_goal_height_100">合理的控制體重, 不要讓自己太瘦哦</string>
     <string name="set">設定</string>
     <string name="no_need_weight_goal">確定不再需要體重目標了?</string>
     <string name="weight_reach_goal">恭喜你達成目標</string>
@@ -862,14 +985,26 @@
     <string name="set_family_member">設定家庭成員</string>
     <string name="pick_family_member">選擇要的家庭成員</string>
     <string name="bmi_item_tips">BMI指數%1$s, 體型%2$s</string>
-    <string name="share_to_mypace">我的配速表</string>
-    <string name="share_to_sport_trace">我的運動軌迹</string>
-    <string name="share_to_watermark">我的水印照片</string>
+    <string name="over_the_max_user_count">最多16個家庭成員哦</string>
+    <string name="current_weight">當前體重</string>
+    <string name="exceed_user_percentage">超過%1$s用戶</string>
+    <string name="stop_on_bed_time">起床時間</string>
+    <string name="setting_daily_sleep_notify_info">早上起床後提醒我昨日的睡眠情況</string>
+    <string name="setting_daily_sleep_notify">每日睡眠結果通知</string>
+    <string name="alarm_notify">手機鬧鐘提醒</string>
+    <string name="sms_notify">手機簡訊提醒</string>
+    <string name="alarm_notify_tips2">使用手機鬧鐘提醒不影響手環鬧鐘的使用，手環鬧鐘無需連接手機也可以震動，但是手機鬧鐘提醒需要保持手機和手環 的連接。</string>
+    <string name="sms_notify_tips2">使用手機簡訊提醒需要保持手機和手環的連接。</string>
+    <string name="notify_no_permission">沒有設定權限</string>
+    <string name="notify_set_failed">設定失敗</string>
+    <string name="generate_user_succ">用戶創建成功</string>
+    <string name="weight_match_no_user">體重未匹配到任何人，選一個唄</string>
+    <string name="miid_not_support">未知小米账号</string>
+    <string name="body_standard_ref">體重標準值參考</string>
+    <string name="family_member_info">家人信息</string>
+    <string name="share_to_friends">分享给好友</string>
     <string name="tag_reconnect_notice">手環與app已經重連，請重新標註。</string>
     <string name="sport_coming_soon">正在開發中</string>
-    <string name="signal_strong">強</string>
-    <string name="signal_weak">弱</string>
-    <string name="signal_none">無</string>
     <string name="lab_factory_title">實驗室</string>
     <string name="lab_factory_sport_type_situp">仰臥起坐</string>
     <string name="lab_factory_sport_type_ropeskipping">跳繩</string>
@@ -905,7 +1040,7 @@
     <string name="lab_factory_sport_type_badminton">羽毛球</string>
     <string name="lab_factory_sport_type_tennis">網球</string>
     <string name="lab_factory_sport_type_pingpong">乒乓球</string>
-    <string name="lab_factory_sport_type_riding">騎行</string>
+    <string name="lab_factory_sport_type_riding">騎車</string>
     <string name="lab_factory_sport_type_running">跑步</string>
     <string name="lab_factory_sport_type_swimming">游泳</string>
     <string name="lab_factory_sport_type_climbing">登山</string>
@@ -949,116 +1084,27 @@
     <string name="lab_factory_sport_continuous_situp">連續最好</string>
     <string name="lab_factory_sport_accumulate">本次累計%d個</string>
     <string name="lab_factory_disconnected_reminder">藍牙中斷連接提醒</string>
-    <string name="lab_factory_disconnected_reminder_tips">當手環與手機藍牙連接中斷時，手環會振動1次並且點亮白色指示燈進行提醒</string>
+    <string name="lab_factory_disconnected_reminder_tips">當手環與手機藍牙連接中斷時，手環會震動1次並且點亮白色指示燈進行提醒</string>
     <string name="lab_factory_disconnected_reminder_disconnect">請先連接手環,再進行提醒設定</string>
     <string name="sport_running_helper">跑步</string>
     <string name="sport_share">立即分享</string>
-    <string name="sport_running_no_gps">打開GPS才能準確記錄你的運動軌跡，是否打開？</string>
-    <string name="sport_running_set_speed">速度提醒</string>
-    <string name="sport_running_speed">時速</string>
-    <string name="sport_running_speed_with_unit">時速(公里/時)</string>
-    <string name="sport_running_real_time_pace">配速(分/公里)</string>
-    <string name="sport_running_pace">配速</string>
-    <string name="sport_running_set_goal">跑步目標</string>
-    <string name="sport_running_set_dist">距離提醒</string>
-    <string name="sport_running_speed_detail">%.2f公里/時</string>
-    <string name="sport_running_pace_detail">%s/公里</string>
-    <string name="sport_running_distance_detail">%.2f公里</string>
-    <string name="sport_running_distance_desc">公里</string>
-    <string name="sport_running_time_desc">用時</string>
-    <string name="sport_running_start">開始</string>
-    <string name="sport_running_pause">暫停</string>
-    <string name="sport_running_resume">繼續</string>
-    <string name="sport_running_stop">停止</string>
-    <string name="sport_running_gps_turnon">打開</string>
-    <string name="sport_running_gps_cancel">取消</string>
-    <string name="sport_running_settings">設定</string>
-    <string name="sport_running_history">歷史</string>
-    <string name="sport_running_slider_prompt">>>>向右滑動解鎖</string>
-    <string name="sport_running_distance">距離</string>
-    <string name="sport_running_distance_unit">距離(公里)</string>
-    <string name="sport_running_average_speed">平均速度</string>
-    <string name="sport_running_step">步數</string>
-    <string name="sport_running_altitude">海拔</string>
-    <string name="sport_running_burn">消耗</string>
-    <string name="sport_running_start_time">開始時間</string>
-    <string name="sport_running_end_time">結束時間</string>
-    <string name="sport_running_history_title">歷史記錄</string>
-    <string name="sport_running_history_date" formatted="false">"%d月%d日
-%d年"</string>
-    <string name="sport_running_history_no_data">暫無數據</string>
-    <string name="sport_running_history_no_more_data">已無多事</string>
-    <string name="sport_running_history_no_data_refresh">暫無數據，點選螢幕刷新</string>
-    <string name="sport_running_history_no_data_refreshing">正在刷新，請稍候……</string>
-    <string name="sport_running_cost_cal">%.1f大卡</string>
-    <string name="sport_running_prepare_map">正在準備數據，請稍候……</string>
-    <string name="sport_running_prompt_per_kilometer" formatted="false">你已經跑了%s公里，用時%s，最近1公里的配速爲%s。%s</string>
-    <string name="sport_running_prompt_great">好棒！！</string>
-    <string name="sport_running_prompt_come_on">加油加油！！</string>
-    <string name="sport_running_kilometers">公里</string>
-    <string name="sport_running_per_kilometers">/公里</string>
-    <string name="sport_running_kilometers_per_hour">公里/時</string>
-    <string name="sport_running_gps_locating">GPS定位中……</string>
-    <string name="sport_running_set_pace">配速提醒</string>
-    <string name="sport_running_lable_miles_fastest">公里最快</string>
-    <string name="sport_running_lable_km_slowest">公里最慢</string>
-    <string name="sport_running_share">分享</string>
-    <string name="sport_running_watermark">水印照片</string>
-    <string name="sport_ranking_desc_poor">你的成績在所有%s用戶中墊底，加油啊！</string>
-    <string name="sport_ranking_desc_normal" formatted="false">你打敗了 &lt;b>%s&lt;/b> 的小米運動%s用户！</string>
-    <string name="sport_ranking_desc_great">你已经到了獨孤求敗的境界！</string>
-    <string name="sport_new_record_ropeskipping">連跳新紀錄</string>
     <string name="share_step_ranking">超過 &lt;b>%s&lt;/b> 的小米運動用戶！</string>
     <string name="buy_bracelet_desc">先買個手環吧</string>
     <string name="bracelet_store_desc">小米商城</string>
-    <string name="title_activity_open">合作夥伴授權頁面</string>
-    <string name="state_deauthorization_success">取消授權成功</string>
-    <string name="state_deauthorization_doing">取消授權中……</string>
-    <string name="state_deauthorization_error">取消授權失敗</string>
-    <string name="state_authorization_error">授權失敗</string>
-    <string name="state_authorization_doing">授權中……</string>
-    <string name="state_authorization_success">授權成功</string>
     <string name="share_image_preparing">正在準備分享內容……</string>
-    <string name="enable_hidden_feature">隱藏功能已開啓</string>
-    <string name="disable_hidden_feature">隱藏功能已關閉</string>
     <string name="btn_save">儲存</string>
     <string name="btn_delete">刪除</string>
     <string name="btn_confirm">確定</string>
     <string name="btn_continue">返回</string>
-    <string name="running_short_track_desc">你才活動了%d確定要取消這次跑步嗎？</string>
-    <string name="running_no_track_desc">你還沒動吧，確定要取消這次跑步嗎？</string>
-    <string name="running_stop_sport_confirm">確定要停止這次跑步嗎？</string>
-    <string name="running_set_pace_desc">慢於該配速手環將震動提醒</string>
-    <string name="running_gps_poor_signal">GPS訊號差，請移動到開闊的地方繼續。</string>
-    <string name="sport_running_cal_with_unit">消耗(大卡)</string>
-    <string name="sport_running_cal_desc">消耗</string>
-    <string name="sport_running_cal_burnt">%d大卡</string>
-    <string name="sport_running_step_frequency">步頻(步/分)</string>
-    <string name="sport_running_marathon_cost_time">該配速下一個馬拉松需要%s</string>
     <string name="action_pop_service">服務</string>
-    <string name="sport_running_label_hint">標題隱藏</string>
-    <string name="sport_running_sport_state_sr_tips">自倚閣中，走而自續</string>
-    <string name="sport_running_auto_pause">自動暫停</string>
-    <string name="sport_running_auto_pause_desc">當跑步中途停下時，自動暫停記錄</string>
-    <string name="sport_running_gallery">相簿</string>
-    <string name="sport_running_failed_to_get_history_neterror">網路不給力</string>
-    <string name="sport_running_get_history_no_more_data">已無歷史資料</string>
-    <string name="sport_running_delete_track_item_confirm">確定删除該記錄？删除後無法恢復</string>
-    <string name="sport_running_backgroud_notification">跑步中……加油加油</string>
-    <string name="sport_running_volumn_notice">梯音量低，请于乐用中节，否则走时不闻音播报信</string>
-    <string name="watermark_search_location">\#正在取得你的位置#</string>
-    <string name="watermark_btn_confirm">儲存分享</string>
-    <string name="watermark_guide_tips">拖曳移動水印</string>
     <string name="no_bracelet_tips">(僅限手環連接時設定)</string>
-    <string name="contour_track_failed_to_create">不能分，請檢查儲存空是否足夠</string>
-    <string name="share_img_failed_to_create">不能分，請檢查儲存空是否足夠</string>
     <string name="label_continue_record">繼續標注</string>
     <string name="label_runner_group">跑跑團</string>
     <string name="action_mark">行為標註</string>
     <string name="action_sleep">睡覺</string>
     <string name="action_bath">洗澡</string>
     <string name="action_run">跑步</string>
-    <string name="action_bike">騎行</string>
+    <string name="action_bike">騎車</string>
     <string name="action_walk">步行</string>
     <string name="action_badminton">羽毛球</string>
     <string name="action_basketball">籃球</string>
@@ -1078,68 +1124,69 @@
     <string name="toast_disable_behavior_tag">關閉行為標註功能！</string>
     <string name="action_brush_tooth">刷牙</string>
     <string name="data_loading">正在載入數據，請稍候……</string>
-    <string name="label_friend_added">已添加</string>
+    <string name="label_friend_added">已新增</string>
     <string name="toast_url_parse_error">網頁地址格式錯誤</string>
-    <string name="action_scan_friend">添加親友</string>
+    <string name="action_scan_friend">新增親友</string>
     <string name="title_activity_tag_history">標註記錄</string>
     <string name="title_friend_detail">詳情</string>
-    <string name="title_add_friend">添加親友</string>
-    <string name="label_scan_add">掃壹掃加親友</string>
+    <string name="title_add_friend">新增親友</string>
+    <string name="label_scan_add">掃一掃加親友</string>
     <string name="title_friend_list">親友</string>
     <string name="title_message">消息</string>
-    <string name="title_activity_search_result">檢索結果</string>
-    <string name="title_activity_remark">添加備注</string>
+    <string name="title_activity_search_result">搜尋結果</string>
+    <string name="title_activity_remark">新增備注</string>
     <string name="label_uid">小米ID：%1$s</string>
     <string name="hint_input_xiaomi_uid">請輸入小米ID</string>
     <string name="hint_input_remark_name">請輸入備註名稱：</string>
     <string name="search_result_is_empty">找不到對應的小米用戶！</string>
-    <string name="toast_user_info_error">用戶信息錯誤！</string>
+    <string name="toast_user_info_error">用戶資訊錯誤！</string>
     <string name="toast_friend_remove_success">好友刪除成功！</string>
     <string name="toast_friend_remove_failed">好友刪除失敗！</string>
     <string name="toast_care_send_success">關愛發送成功！</string>
     <string name="toast_care_send_failed">關愛發送失敗！</string>
     <string name="toast_operation_failed">操作失敗！</string>
     <string name="toast_no_more_data">沒有更多數據了</string>
-    <string name="toast_add_friend_success">關註申請已經發送！</string>
-    <string name="toast_add_friend_failed">關註申請發送失敗！</string>
-    <string name="button_search_friend">檢索用戶</string>
+    <string name="toast_add_friend_success">關注申請已經發送！</string>
+    <string name="toast_add_friend_failed">關注申請發送失敗！</string>
+    <string name="button_search_friend">搜尋用戶</string>
     <string name="button_send_care">關愛TA</string>
     <string name="label_sport_data">活動數據</string>
     <string name="label_sleep_data">睡眠數據</string>
     <string name="label_step_with_unit">%s 步</string>
     <string name="label_empty_friend">"關注好友後
-即可查看對方活動和睡眠等數據"</string>
-    <string name="label_message_too_busy">你發送的關愛過于頻繁，請稍候再試!</string>
+即可檢視對方活動和睡眠等數據"</string>
+    <string name="label_message_too_busy">你發送的關愛過於頻繁，請稍候再試!</string>
     <string name="label_message">消息</string>
-    <string name="label_pull_to_refresh">下拉刷新</string>
-    <string name="label_refreshing">刷新中...</string>
-    <string name="label_release_to_refresh">松開後開始刷新</string>
-    <string name="label_pull_to_load">上拉加載更多</string>
+    <string name="label_pull_to_refresh">下拉重新整理</string>
+    <string name="label_refreshing">重新整理中...</string>
+    <string name="label_release_to_refresh">鬆開後開始重新整理</string>
+    <string name="label_pull_to_load">上拉載入更多</string>
     <string name="label_loading">正在載入...</string>
-    <string name="label_release_to_load">松開開始加載</string>
+    <string name="label_release_to_load">鬆開開始載入</string>
     <string name="label_weight">上次體重</string>
     <string name="label_sleep">昨晚睡眠</string>
     <string name="label_activity">今日步數</string>
     <string name="label_remark_name">備注名稱</string>
     <string name="label_delete_friend">取消關注</string>
     <string name="label_request_add_friend">申請關注你</string>
-    <string name="label_refuse_add_friend_by_me">妳拒絕了TA的關註申請</string>
-    <string name="label_refuse_add_friend_by_him">拒絕了妳的關註申請</string>
+    <string name="label_refuse_add_friend_by_me">你拒絕了TA的關注申請</string>
+    <string name="label_refuse_add_friend_by_him">拒絕了你的關注申請</string>
     <string name="label_get_up_time">醒來時間</string>
     <string name="label_refused">已拒絕</string>
     <string name="label_accepted">已同意</string>
     <string name="label_more">更多</string>
-    <string name="label_share_to_friend">將二維碼分享給妳的好友，讓Ta關注我</string>
-    <string name="label_refuse">拒绝</string>
-    <string name="lable_qrcode_is_myself">不能添加自己爲好友！</string>
-    <string name="label_update_time">更新于：%s</string>
-    <string name="label_qrcode_error">二維碼識別出錯!</string>
+    <string name="label_share_to_friend">將二維碼分享給你的好友，讓Ta關注我</string>
+    <string name="label_refuse">拒絕</string>
+    <string name="lable_qrcode_is_myself">不能新增自己爲好友！</string>
+    <string name="label_update_time">更新於：%s</string>
+    <string name="label_qrcode_error">二維碼辨識出錯!</string>
     <string name="label_care_time_by_other">關愛了你%s次</string>
     <string name="label_care_time_by_me">關愛了TA %s次</string>
-    <string name="label_no_care_time_by_me">還沒被關愛過</string>
+    <string name="label_no_care_time_by_me">你還沒關愛過Ta</string>
     <string name="label_step">步數</string>
-    <string name="label_mileage">裏程 (公裏)</string>
-    <string name="label_calorie">消耗 (千卡)</string>
+    <string name="label_mileage">里程 (公里)</string>
+    <string name="label_mileage_dynamic">里程 (%s)</string>
+    <string name="label_calorie">消耗 (大卡)</string>
     <string name="label_sleep_start_time">入睡時間</string>
     <string name="toast_content_empty_error">內容不能為空！</string>
     <string name="label_search_result_empty">此帳號不存在！請返回重新輸入。</string>
@@ -1149,15 +1196,32 @@
     <string name="label_sleep_time">%1$s小時%2$s分</string>
     <string name="label_message_empty">暫時沒有新消息</string>
     <string name="label_my_qrcode">我的二維碼</string>
-    <string name="label_preparing_share_image">正在准備分享圖片…</string>
-    <string name="label_share_info1">保存二維碼到手機，即可關注他</string>
-    <string name="label_share_info2">打開小米運動 - 親友 - 掃壹掃加親友 - 打開相冊掃描此二維碼即可</string>
+    <string name="label_preparing_share_image">正在準備分享圖片…</string>
+    <string name="label_share_info1">掃描二維碼即可關註Ta</string>
+    <string name="label_share_info2">"保存二維碼到本地-打開小米運動
+親友-掃一掃加親友-點擊“打開相冊”
+選擇此二維碼即可掃描"</string>
     <string name="message_title_friend">好友消息</string>
     <string name="message_title_care">關愛消息</string>
-    <string name="label_friend_add_message">%s 申請妳的日常數據</string>
-    <string name="label_friend_accept_message">%s 同意了妳的關註申請</string>
-    <string name="label_friend_refuse_message">%s 拒絕了妳關註申請</string>
-    <string name="label_friend_care_message">%s 向妳發送了壹個關愛提醒了，快去看看吧！</string>
+    <string name="label_friend_add_message">%s 申請你的日常數據</string>
+    <string name="label_friend_accept_message">%s 同意了你的關注申請</string>
+    <string name="label_friend_refuse_message">%s 拒絕了你關注申請</string>
+    <string name="label_friend_care_message">%s 向你發送了一個關愛提醒了，快去看看吧！</string>
+    <string name="runner_unlogin_notice">你還未登入app，使用過程中的數據將無法為你同步到伺服器，數據可能會在一些情況下丟失。現在去登入？</string>
+    <string name="title_activity_open">合作夥伴授權頁面</string>
+    <string name="state_deauthorization_success">取消授權成功</string>
+    <string name="state_deauthorization_doing">取消授權中……</string>
+    <string name="state_deauthorization_error">取消授權失敗</string>
+    <string name="state_authorization_error">授權失敗</string>
+    <string name="state_authorization_doing">授權中……</string>
+    <string name="state_authorization_success">授權成功</string>
+    <string name="enable_hidden_feature">隱藏功能已開啓</string>
+    <string name="disable_hidden_feature">隱藏功能已關閉</string>
+    <string name="running_share_img_failed_to_create">不能分，請檢查儲存空是否足夠</string>
+    <string name="running_date_today">今天</string>
     <string name="weight_goal">體重目標</string>
     <string name="state_binded_nickname_weibo">已綁定微博: %s</string>
+    <string name="label_no_update">還未更新過</string>
+    <string name="running_hort_track_desc">你才活動了%d確定要取消這次跑步嗎？</string>
+    <string name="running_hare_to_sport_trace">我的運動軌迹</string>
 </resources>

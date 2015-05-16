@@ -26,7 +26,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030040
+    const v0, 0x7f030043
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SettingAboutUserAgreementActivity;->setContentView(I)V
 
@@ -40,9 +40,9 @@
 
     move-result-object v0
 
-    const v1, 0x7f070072
+    const v1, 0x7f0d006c
 
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/dx;
+    const-class v2, Lcn/com/smartdevices/bracelet/ui/dy;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

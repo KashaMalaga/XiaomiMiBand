@@ -24,7 +24,7 @@
 
 .field private d:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
-.field private e:Lcn/com/smartdevices/bracelet/weight/family/h;
+.field private e:Lcn/com/smartdevices/bracelet/weight/family/k;
 
 
 # direct methods
@@ -73,7 +73,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300d1
+    const v1, 0x7f0300e3
 
     const/4 v2, 0x1
 
@@ -81,7 +81,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0703bf
+    const v0, 0x7f0d03f5
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -95,7 +95,7 @@
 
     invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0703c0
+    const v0, 0x7f0d0209
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -163,7 +163,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->d:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
@@ -183,7 +183,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
-    const v1, 0x7f020085
+    const v1, 0x7f020086
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->setBackgroundResource(I)V
 
@@ -196,10 +196,10 @@
     goto :goto_0
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/weight/family/h;)V
+.method public a(Lcn/com/smartdevices/bracelet/weight/family/k;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->e:Lcn/com/smartdevices/bracelet/weight/family/h;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->e:Lcn/com/smartdevices/bracelet/weight/family/k;
 
     return-void
 .end method
@@ -225,7 +225,7 @@
 
     if-eqz p1, :cond_0
 
-    const v0, 0x7f0703be
+    const v0, 0x7f0d03f4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->findViewById(I)Landroid/view/View;
 
@@ -245,7 +245,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0703c0
+    const v0, 0x7f0d0209
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->findViewById(I)Landroid/view/View;
 
@@ -320,20 +320,20 @@
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->e:Lcn/com/smartdevices/bracelet/weight/family/h;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->e:Lcn/com/smartdevices/bracelet/weight/family/k;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->e:Lcn/com/smartdevices/bracelet/weight/family/h;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->e:Lcn/com/smartdevices/bracelet/weight/family/k;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->d:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/weight/family/h;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/weight/family/k;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
 
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0703bf
+    .packed-switch 0x7f0d03f5
         :pswitch_0
     .end packed-switch
 .end method

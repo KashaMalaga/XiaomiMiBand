@@ -2,7 +2,19 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/animation/Interpolator;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcn/com/smartdevices/bracelet/view/T;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
@@ -16,22 +28,28 @@
 
 
 # virtual methods
-.method public getInterpolation(F)F
-    .locals 3
+.method public a(Lcn/com/smartdevices/bracelet/view/T;Lcn/com/smartdevices/bracelet/view/T;)I
+    .locals 2
 
-    const/high16 v2, 0x3f800000
+    iget v0, p1, Lcn/com/smartdevices/bracelet/view/T;->b:I
 
-    sub-float v0, p1, v2
+    iget v1, p2, Lcn/com/smartdevices/bracelet/view/T;->b:I
 
-    mul-float v1, v0, v0
+    sub-int/2addr v0, v1
 
-    mul-float/2addr v1, v0
+    return v0
+.end method
 
-    mul-float/2addr v1, v0
+.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
 
-    mul-float/2addr v0, v1
+    check-cast p1, Lcn/com/smartdevices/bracelet/view/T;
 
-    add-float/2addr v0, v2
+    check-cast p2, Lcn/com/smartdevices/bracelet/view/T;
+
+    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/view/Q;->a(Lcn/com/smartdevices/bracelet/view/T;Lcn/com/smartdevices/bracelet/view/T;)I
+
+    move-result v0
 
     return v0
 .end method

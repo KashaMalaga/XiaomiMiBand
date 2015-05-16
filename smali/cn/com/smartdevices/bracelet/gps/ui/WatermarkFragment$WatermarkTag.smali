@@ -28,7 +28,7 @@
 
 .field private j:I
 
-.field private final k:Lcn/com/smartdevices/bracelet/gps/ui/ay;
+.field private final k:Lcn/com/smartdevices/bracelet/gps/ui/au;
 
 
 # direct methods
@@ -37,15 +37,15 @@
 
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/ay;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/au;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/ui/ay;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/ui/au;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;->k:Lcn/com/smartdevices/bracelet/gps/ui/ay;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;->k:Lcn/com/smartdevices/bracelet/gps/ui/au;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/az;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/av;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/az;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/av;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;->d:Landroid/view/View$OnTouchListener;
 
@@ -57,15 +57,15 @@
 
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/ay;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/au;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/ui/ay;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/ui/au;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;->k:Lcn/com/smartdevices/bracelet/gps/ui/ay;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;->k:Lcn/com/smartdevices/bracelet/gps/ui/au;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/az;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/av;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/az;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/av;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;->d:Landroid/view/View$OnTouchListener;
 
@@ -77,15 +77,15 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/ay;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/au;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/ui/ay;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/ui/au;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;->k:Lcn/com/smartdevices/bracelet/gps/ui/ay;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;->k:Lcn/com/smartdevices/bracelet/gps/ui/au;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/az;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/av;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/az;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/av;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;->d:Landroid/view/View$OnTouchListener;
 
@@ -156,10 +156,10 @@
     return p1
 .end method
 
-.method static synthetic e(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;)Lcn/com/smartdevices/bracelet/gps/ui/ay;
+.method static synthetic e(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;)Lcn/com/smartdevices/bracelet/gps/ui/au;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;->k:Lcn/com/smartdevices/bracelet/gps/ui/ay;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;->k:Lcn/com/smartdevices/bracelet/gps/ui/au;
 
     return-object v0
 .end method
@@ -169,9 +169,9 @@
 .method public a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment$WatermarkTag;
     .locals 4
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/ay;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/au;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/ui/ay;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/ui/au;-><init>()V
 
     new-instance v1, Landroid/widget/RelativeLayout;
 
@@ -236,7 +236,7 @@
     return-object p0
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/gps/ui/ay;)V
+.method public a(Lcn/com/smartdevices/bracelet/gps/ui/au;)V
     .locals 0
 
     return-void
@@ -301,19 +301,19 @@
 
     if-eqz v0, :cond_2
 
-    instance-of v2, v0, Lcn/com/smartdevices/bracelet/gps/ui/ay;
+    instance-of v2, v0, Lcn/com/smartdevices/bracelet/gps/ui/au;
 
     if-eqz v2, :cond_1
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/ui/ay;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/ui/au;
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/gps/ui/ay;->a:I
+    iget v2, v0, Lcn/com/smartdevices/bracelet/gps/ui/au;->a:I
 
-    iget v4, v0, Lcn/com/smartdevices/bracelet/gps/ui/ay;->b:I
+    iget v4, v0, Lcn/com/smartdevices/bracelet/gps/ui/au;->b:I
 
-    iget v5, v0, Lcn/com/smartdevices/bracelet/gps/ui/ay;->c:I
+    iget v5, v0, Lcn/com/smartdevices/bracelet/gps/ui/au;->c:I
 
-    iget v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/ay;->d:I
+    iget v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/au;->d:I
 
     invoke-virtual {v1, v2, v4, v5, v0}, Landroid/view/View;->layout(IIII)V
 

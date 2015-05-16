@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <cn.com.smartdevices.bracelet.lua.SlidingUpPanelLayout android:gravity="bottom" android:id="@id/fragment_setting_sliding_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" sothree:panelHeight="@dimen/main_ui_panel_height" sothree:shadowHeight="0.0dip" sothree:paralaxOffset="0.0dip" sothree:dragView="@id/dragView" sothree:overlay="true" sothree:touchEvent="true" xmlns:sothree="http://schemas.android.com/apk/res-auto">
+    <cn.com.smartdevices.bracelet.lua.SlidingUpPanelLayout android:gravity="bottom" android:id="@id/fragment_setting_sliding_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" sothree:panelHeight="@dimen/main_ui_panel_height" sothree:shadowHeight="0.0dip" sothree:paralaxOffset="0.0dip" sothree:overlay="true" sothree:touchEvent="true" xmlns:sothree="http://schemas.android.com/apk/res-auto">
         <RelativeLayout android:id="@id/bind_band" android:layout_width="fill_parent" android:layout_height="@dimen/common_sliding_panel_top_height">
             <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_devices_bind_band" android:layout_centerInParent="true" />
         </RelativeLayout>
         <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="@dimen/main_ui_panel_height">
-            <TextView android:textSize="13.0sp" android:textColorLink="@color/main_ui_content_color" android:id="@id/about_mi_band" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="40.0dip" android:text="@string/about" android:layout_below="@id/icon" android:layout_centerHorizontal="true" />
-            <Button android:textSize="@dimen/click_button_text_size" android:textColor="@color/main_ui_title_color" android:id="@id/start_bind" android:background="@drawable/click_btn_bg_3" android:layout_width="@dimen/click_button_w" android:layout_height="@dimen/click_button_h" android:layout_marginBottom="12.0dip" android:text="@string/bind_mi_band" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="13.0sp" android:textColorLink="@color/main_ui_content_color" android:id="@id/about_mi_band" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="40.0dip" android:text="@string/about" />
+            <Button android:textSize="@dimen/click_button_text_size" android:textColor="@color/main_ui_title_color" android:id="@id/start_bind" android:background="@drawable/click_btn_bg_3" android:layout_width="@dimen/click_button_w" android:layout_height="@dimen/click_button_h" android:layout_marginBottom="12.0dip" android:text="@string/bind_mi_band" />
         </LinearLayout>
     </cn.com.smartdevices.bracelet.lua.SlidingUpPanelLayout>
 </LinearLayout>

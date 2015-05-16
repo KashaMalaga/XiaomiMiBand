@@ -29,7 +29,7 @@
 
     const-string v1, "Scroll OnStart!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/I;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
@@ -93,7 +93,7 @@
 
     const-string v1, "Scroll OnJustify!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/I;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
@@ -159,7 +159,7 @@
 
     const-string v1, "Scroll OnFinish!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/I;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 

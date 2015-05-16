@@ -34,11 +34,11 @@
 
     :array_0
     .array-data 4
-        0x7f010013
-        0x7f010014
-        0x7f010015
-        0x7f010016
-        0x7f010017
+        0x7f010006
+        0x7f010007
+        0x7f010008
+        0x7f010009
+        0x7f01000a
     .end array-data
 .end method
 

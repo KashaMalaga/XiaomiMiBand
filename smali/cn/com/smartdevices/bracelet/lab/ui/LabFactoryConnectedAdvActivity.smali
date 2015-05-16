@@ -82,13 +82,13 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;->setContentView(I)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;->d:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    const v0, 0x7f07003d
+    const v0, 0x7f0d003e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;->findViewById(I)Landroid/view/View;
 
@@ -100,7 +100,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700a4
+    const v0, 0x7f0d009e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;->findViewById(I)Landroid/view/View;
 
@@ -118,7 +118,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700a5
+    const v0, 0x7f0d009f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;->findViewById(I)Landroid/view/View;
 
@@ -146,7 +146,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f0700a6
+    const v0, 0x7f0d00a0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;->findViewById(I)Landroid/view/View;
 
@@ -177,10 +177,10 @@
     return-void
 .end method
 
-.method public onEvent(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
+.method public onEvent(Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;)V
     .locals 1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->h()Z
 
     move-result v0
 
@@ -196,7 +196,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->c()Z
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->c()Z
 
     move-result v0
 

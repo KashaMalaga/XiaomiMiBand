@@ -42,7 +42,7 @@
 .method public a()I
     .locals 1
 
-    const v0, 0x7f030086
+    sget v0, Lcom/xiaomi/hm/health/b/a/j;->fragment_running_count_down:I
 
     return v0
 .end method
@@ -170,19 +170,19 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/a/a;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0b002a
+    sget v0, Lcom/xiaomi/hm/health/b/a/o;->CountDownDimTint:I
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/a/c;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->isSupport(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/f/k;->b(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f0b002b
+    sget v0, Lcom/xiaomi/hm/health/b/a/o;->CountDownDimDialogTint:I
 
     :cond_0
     const/4 v1, 0x0
@@ -199,7 +199,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f07021a
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->counter:I
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

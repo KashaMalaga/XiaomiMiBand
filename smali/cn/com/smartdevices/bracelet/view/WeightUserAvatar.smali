@@ -50,9 +50,9 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->g:I
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/Z;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/aa;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/view/Z;-><init>(Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/view/aa;-><init>(Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;)V
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
@@ -358,7 +358,7 @@
 .method public setBackgroundResource(I)V
     .locals 1
 
-    const v0, 0x7f020085
+    const v0, 0x7f020086
 
     if-ne p1, v0, :cond_1
 

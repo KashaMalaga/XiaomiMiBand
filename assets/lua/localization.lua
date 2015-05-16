@@ -49,7 +49,7 @@ localization_table = {
     { 'zh_TW', localization_zh_rTW_table},
     { 'zh_HK', localization_zh_rTW_table},
     { 'hi' , localization_hi_rIN_table},
-    { 'bn_IN' , localization_bn_rIN_table},
+    { 'es_ES' , localization_es_rES_table},
     { 'kn_IN' , localization_kn_rIN_table},
     { 'ml_IN' , localization_ml_rIN_table},
     { 'ta_IN' , localization_ta_rIN_table},
@@ -94,7 +94,7 @@ function getString(string_locale)
     str = g_curTable[string_locale];
 
     if (str == nil) then
-        str = localization_English_table[string_locale]
+        str = localization_en_table[string_locale]
     end
     return str
 end

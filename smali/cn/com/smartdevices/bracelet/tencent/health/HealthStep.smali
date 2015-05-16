@@ -1,6 +1,9 @@
 .class public Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/tencent/health/HealthData;
+
 
 # instance fields
 .field private achieve:I

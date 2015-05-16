@@ -23,83 +23,19 @@
 
 # virtual methods
 .method public onComplete(Ljava/lang/String;)V
-    .locals 3
+    .locals 2
 
-    const-string v0, "WeiboHealthManager"
+    new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v1, Lcn/com/smartdevices/bracelet/weibo/y;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/weibo/y;-><init>(Lcn/com/smartdevices/bracelet/weibo/x;Ljava/lang/String;)V
 
-    const-string v2, "Refresh Token & Save Token:"
+    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/x;->a:Lcn/com/smartdevices/bracelet/weibo/w;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weibo/w;->b:Lcn/com/smartdevices/bracelet/weibo/v;
-
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/weibo/v;->a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/ThirdLoginState;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weibo/x;->a:Lcn/com/smartdevices/bracelet/weibo/w;
-
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/weibo/w;->a:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/weibo/q;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/ThirdLoginState;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/x;->a:Lcn/com/smartdevices/bracelet/weibo/w;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weibo/w;->b:Lcn/com/smartdevices/bracelet/weibo/v;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weibo/x;->a:Lcn/com/smartdevices/bracelet/weibo/w;
-
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/weibo/w;->a:Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weibo/v;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/ResponseEntity;
-
-    move-result-object v0
-
-    iget-boolean v1, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->state:Z
-
-    if-eqz v1, :cond_0
-
-    iget v0, v0, Lcn/com/smartdevices/bracelet/model/ResponseEntity;->code:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    const-string v0, "WeiboHealthManager"
-
-    const-string v1, "Upload Token OK"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
     return-void
-
-    :cond_0
-    const-string v0, "WeiboHealthManager"
-
-    const-string v1, "Upload Token ERROR"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
 .end method
 
 .method public onWeiboException(Lcom/sina/weibo/sdk/exception/WeiboException;)V
@@ -125,7 +61,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/x;->a:Lcn/com/smartdevices/bracelet/weibo/w;
 

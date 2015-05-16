@@ -34,14 +34,28 @@
     :pswitch_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/a;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    const v1, 0x7f090105
+    const v1, 0x7f09019a
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;I)V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/a;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/a;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;Lcn/com/smartdevices/bracelet/model/LoginInfo;)V
 
     goto :goto_0
 
     :pswitch_data_0
     .packed-switch 0x100
         :pswitch_0
+        :pswitch_1
     .end packed-switch
 .end method

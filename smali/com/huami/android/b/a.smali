@@ -38,7 +38,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    sget v0, Lcom/xiaomi/hm/health/a/f;->view_bottom_dialog:I
+    sget v0, Lcom/xiaomi/hm/health/a/g;->view_bottom_dialog:I
 
     invoke-direct {p0, v0}, Lcom/huami/android/b/e;-><init>(I)V
 
@@ -54,7 +54,7 @@
 
     const/16 v6, 0x8
 
-    sget v0, Lcom/xiaomi/hm/health/a/e;->dialog_title:I
+    sget v0, Lcom/xiaomi/hm/health/a/f;->dialog_title:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -64,7 +64,7 @@
 
     iput-object v0, p0, Lcom/huami/android/b/a;->k:Landroid/widget/TextView;
 
-    sget v0, Lcom/xiaomi/hm/health/a/e;->menu_list:I
+    sget v0, Lcom/xiaomi/hm/health/a/f;->menu_list:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -74,7 +74,7 @@
 
     iput-object v0, p0, Lcom/huami/android/b/a;->l:Landroid/widget/ListView;
 
-    sget v0, Lcom/xiaomi/hm/health/a/e;->left_button:I
+    sget v0, Lcom/xiaomi/hm/health/a/f;->left_button:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -84,7 +84,7 @@
 
     iput-object v0, p0, Lcom/huami/android/b/a;->m:Landroid/widget/TextView;
 
-    sget v0, Lcom/xiaomi/hm/health/a/e;->right_button:I
+    sget v0, Lcom/xiaomi/hm/health/a/f;->right_button:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -102,7 +102,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v0, Lcom/xiaomi/hm/health/a/e;->message:I
+    sget v0, Lcom/xiaomi/hm/health/a/f;->message:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -110,13 +110,13 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    sget v1, Lcom/xiaomi/hm/health/a/e;->title_divider:I
+    sget v1, Lcom/xiaomi/hm/health/a/f;->title_divider:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    sget v2, Lcom/xiaomi/hm/health/a/e;->bottom_bar_frame:I
+    sget v2, Lcom/xiaomi/hm/health/a/f;->bottom_bar_frame:I
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -269,7 +269,7 @@
     :cond_4
     iget-object v0, p0, Lcom/huami/android/b/a;->m:Landroid/widget/TextView;
 
-    sget v1, Lcom/xiaomi/hm/health/a/g;->ok:I
+    sget v1, Lcom/xiaomi/hm/health/a/h;->ok:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -278,7 +278,7 @@
     :cond_5
     iget-object v0, p0, Lcom/huami/android/b/a;->n:Landroid/widget/TextView;
 
-    sget v1, Lcom/xiaomi/hm/health/a/g;->cancel:I
+    sget v1, Lcom/xiaomi/hm/health/a/h;->cancel:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -310,7 +310,7 @@
 
     move-result v1
 
-    sget v2, Lcom/xiaomi/hm/health/a/e;->left_button:I
+    sget v2, Lcom/xiaomi/hm/health/a/f;->left_button:I
 
     if-ne v1, v2, :cond_2
 
@@ -330,7 +330,7 @@
     return-void
 
     :cond_2
-    sget v2, Lcom/xiaomi/hm/health/a/e;->right_button:I
+    sget v2, Lcom/xiaomi/hm/health/a/f;->right_button:I
 
     if-ne v1, v2, :cond_0
 

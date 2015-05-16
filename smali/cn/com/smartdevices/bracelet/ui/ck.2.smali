@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/bJ;
+.implements Lcn/com/smartdevices/bracelet/ui/bI;
 
 
 # instance fields
@@ -33,7 +33,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ck;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->g(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/content/Context;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->h(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/content/Context;
 
     move-result-object v0
 

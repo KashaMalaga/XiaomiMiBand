@@ -5,7 +5,7 @@
 # instance fields
 .field final synthetic a:Lcn/com/smartdevices/bracelet/lab/d;
 
-.field private b:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+.field private b:Lcom/xiaomi/hm/health/bt/profile/v;
 
 .field private volatile c:Landroid/os/Looper;
 
@@ -13,7 +13,7 @@
 
 .field private e:I
 
-.field private f:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;
+.field private f:Lcom/xiaomi/hm/health/bt/profile/h;
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcom/xiaomi/hm/health/bt/profile/v;
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Landroid/os/Looper;
 
@@ -36,7 +36,7 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->e:I
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->f:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->f:Lcom/xiaomi/hm/health/bt/profile/h;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/h;->c()V
 
@@ -51,18 +51,18 @@
     return p1
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/h;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;)Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/h;Lcom/xiaomi/hm/health/bt/profile/h;)Lcom/xiaomi/hm/health/bt/profile/h;
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/h;->f:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/h;->f:Lcom/xiaomi/hm/health/bt/profile/h;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/h;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/h;)Lcom/xiaomi/hm/health/bt/profile/v;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcom/xiaomi/hm/health/bt/profile/v;
 
     return-object v0
 .end method
@@ -124,19 +124,19 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->a()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->a()Lcom/xiaomi/hm/health/bt/profile/v;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcom/xiaomi/hm/health/bt/profile/v;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcom/xiaomi/hm/health/bt/profile/v;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcom/xiaomi/hm/health/bt/profile/v;
 
-    invoke-virtual {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->isConnected()Z
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/bt/profile/v;->v()Z
 
     move-result v2
 
@@ -147,7 +147,7 @@
 
     const-string v3, "BraceletOpState.OFFLINE !mProfile.isConnected"
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->e:I
 

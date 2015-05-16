@@ -16,6 +16,8 @@
 
 .field private static sFirstDayOfWeek:I = 0x0
 
+.field private static sIsEnglish:Z = false
+
 .field private static sMinimalDaysInFirstWeek:I = 0x0
 
 .field private static final serialVersionUID:J = 0x1L
@@ -62,6 +64,10 @@
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
+
+    sput-boolean v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;->sIsEnglish:Z
+
+    sget-boolean v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;->sIsEnglish:Z
 
     if-eqz v0, :cond_0
 
@@ -312,6 +318,41 @@
     invoke-direct {v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
 
     return-object v0
+.end method
+
+.method public static onLocaleChanged(Z)V
+    .locals 2
+
+    const/4 v1, 0x1
+
+    sget-boolean v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;->sIsEnglish:Z
+
+    if-eq p0, v0, :cond_0
+
+    sput-boolean p0, Lcom/xiaomi/hm/health/dataprocess/SportDay;->sIsEnglish:Z
+
+    sget-boolean v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;->sIsEnglish:Z
+
+    if-eqz v0, :cond_1
+
+    sput v1, Lcom/xiaomi/hm/health/dataprocess/SportDay;->sFirstDayOfWeek:I
+
+    sput v1, Lcom/xiaomi/hm/health/dataprocess/SportDay;->sMinimalDaysInFirstWeek:I
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    const/4 v0, 0x2
+
+    sput v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;->sFirstDayOfWeek:I
+
+    const/4 v0, 0x4
+
+    sput v0, Lcom/xiaomi/hm/health/dataprocess/SportDay;->sMinimalDaysInFirstWeek:I
+
+    goto :goto_0
 .end method
 
 .method public static toCalenday(Ljava/lang/String;)Ljava/util/Calendar;

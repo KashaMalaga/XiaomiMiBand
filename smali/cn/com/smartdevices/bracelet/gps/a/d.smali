@@ -1,296 +1,373 @@
 .class public Lcn/com/smartdevices/bracelet/gps/a/d;
-.super Ljava/lang/Object;
+.super Lcn/com/smartdevices/bracelet/gps/a/a;
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "KeyGPSLocation"
+.field private static final a:F = 3.2f
 
-.field private static final b:Ljava/lang/String; = "GPSTrackerConfig"
+.field private static final b:F = 4.0f
 
-.field private static final c:Ljava/lang/String; = "_GaoDe"
+.field private static final c:F = 5.5f
 
-.field private static final d:Ljava/lang/String; = "_Baidu"
+.field private static final d:F = 6.0f
 
-.field private static final e:Ljava/lang/String; = "CrashTrackID"
+.field private static final e:F = 6.5f
 
-.field private static final f:Ljava/lang/String; = "DisValidation"
+.field private static final f:F = 7.0f
 
-.field private static final g:Ljava/lang/String; = "RestoreConfig"
+.field private static final g:F = 7.5f
+
+.field private static final h:F = 8.0f
+
+.field private static final i:F = 8.4f
+
+.field private static final j:F = 9.7f
+
+.field private static final k:F = 10.8f
+
+.field private static final l:F = 11.3f
+
+.field private static final m:F = 12.1f
+
+.field private static final n:F = 12.9f
+
+.field private static final o:F = 13.8f
+
+.field private static final p:F = 14.5f
+
+.field private static final q:F = 16.0f
+
+.field private static final r:F = 17.5f
+
+.field private static final s:F = 19.2f
+
+.field private static final t:F = 20.8f
+
+.field private static final u:F = 22.4f
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/a/a;-><init>()V
 
     return-void
 .end method
 
-.method private static a(Landroid/content/Context;Ljava/lang/String;F)F
-    .locals 2
 
-    const-string v0, "GPSTrackerConfig"
+# virtual methods
+.method public bridge synthetic a(IJ)F
+    .locals 1
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/gps/a/a;->a(IJ)F
 
     move-result v0
 
     return v0
 .end method
 
-.method public static a(Landroid/content/Context;)J
-    .locals 2
-
-    const-string v0, "CrashTrackID"
-
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/gps/a/d;->d(Landroid/content/Context;Ljava/lang/String;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static a(Landroid/content/Context;J)V
+.method public bridge synthetic a(IJF)F
     .locals 1
 
-    const-string v0, "CrashTrackID"
-
-    invoke-static {p0, v0, p1, p2}, Lcn/com/smartdevices/bracelet/gps/a/d;->a(Landroid/content/Context;Ljava/lang/String;J)V
-
-    return-void
-.end method
-
-.method public static a(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 2
-
-    const-string v0, "KeyGPSLocation"
-
-    const-string v1, "_GaoDe"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0, p1}, Lcn/com/smartdevices/bracelet/gps/a/d;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method private static a(Landroid/content/Context;Ljava/lang/String;I)V
-    .locals 2
-
-    const-string v0, "GPSTrackerConfig"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    return-void
-.end method
-
-.method private static a(Landroid/content/Context;Ljava/lang/String;J)V
-    .locals 2
-
-    const-string v0, "GPSTrackerConfig"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    return-void
-.end method
-
-.method private static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    const-string v0, "GPSTrackerConfig"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    return-void
-.end method
-
-.method private static a(Landroid/content/Context;Ljava/lang/String;Z)Z
-    .locals 2
-
-    const-string v0, "GPSTrackerConfig"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-super {p0, p1, p2, p3, p4}, Lcn/com/smartdevices/bracelet/gps/a/a;->a(IJF)F
 
     move-result v0
 
     return v0
 .end method
 
-.method public static b(Landroid/content/Context;)Ljava/lang/String;
-    .locals 2
+.method protected b(IJ)F
+    .locals 7
 
-    const-string v0, "KeyGPSLocation"
+    const/high16 v3, 0x41b80000
 
-    const-string v1, "_GaoDe"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/gps/a/d;->e(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static b(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 1
-
-    const-string v0, "KeyGPSLocation"
-
-    invoke-static {p0, v0, p1}, Lcn/com/smartdevices/bracelet/gps/a/d;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method private static c(Landroid/content/Context;Ljava/lang/String;)I
-    .locals 2
-
-    const-string v0, "GPSTrackerConfig"
+    const/high16 v2, 0x41800000
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    const-wide/16 v4, 0x0
 
-    move-result-object v0
+    cmp-long v0, p2, v4
 
-    const/4 v1, -0x1
+    if-lez v0, :cond_16
 
-    invoke-interface {v0, p1, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    int-to-float v0, p1
+
+    long-to-float v4, p2
+
+    div-float/2addr v0, v4
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/f/i;->b(F)F
 
     move-result v0
 
-    return v0
-.end method
+    :goto_0
+    const-string v4, "Cal"
 
-.method public static c(Landroid/content/Context;)Ljava/lang/String;
-    .locals 1
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    const-string v0, "KeyGPSLocation"
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/gps/a/d;->e(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    const-string v6, "getMets  speed = "
 
-    move-result-object v0
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    move-result-object v5
 
-.method public static d(Landroid/content/Context;)F
-    .locals 2
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const-string v0, "DisValidation"
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    cmpg-float v4, v0, v1
+
+    if-gtz v4, :cond_0
+
+    :goto_1
+    return v1
+
+    :cond_0
+    const v1, 0x404ccccd
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_1
+
+    const/high16 v1, 0x40000000
+
+    goto :goto_1
+
+    :cond_1
+    const/high16 v1, 0x40800000
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_2
+
+    const/high16 v1, 0x40400000
+
+    goto :goto_1
+
+    :cond_2
+    const/high16 v1, 0x40b00000
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_3
+
+    const v1, 0x4099999a
+
+    goto :goto_1
+
+    :cond_3
+    const/high16 v1, 0x40c00000
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_4
+
+    const v1, 0x40d66666
+
+    goto :goto_1
+
+    :cond_4
+    const/high16 v1, 0x40d00000
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_5
+
+    const v1, 0x40e66666
+
+    goto :goto_1
+
+    :cond_5
+    const/high16 v1, 0x40e00000
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_6
+
+    const v1, 0x40f66666
+
+    goto :goto_1
+
+    :cond_6
+    const/high16 v1, 0x40f00000
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_7
+
+    const v1, 0x4101999a
+
+    goto :goto_1
+
+    :cond_7
+    const/high16 v1, 0x41000000
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_8
+
+    const v1, 0x4109999a
+
+    goto :goto_1
+
+    :cond_8
+    const v1, 0x41066666
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_9
+
+    const/high16 v1, 0x41100000
+
+    goto :goto_1
+
+    :cond_9
+    const v1, 0x411b3333
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_a
 
     const/high16 v1, 0x41200000
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/gps/a/d;->a(Landroid/content/Context;Ljava/lang/String;F)F
+    goto :goto_1
 
-    move-result v0
+    :cond_a
+    const v1, 0x412ccccd
 
-    return v0
-.end method
+    cmpg-float v1, v0, v1
 
-.method private static d(Landroid/content/Context;Ljava/lang/String;)J
-    .locals 3
+    if-gtz v1, :cond_b
 
-    const-string v0, "GPSTrackerConfig"
+    const/high16 v1, 0x41300000
 
-    const/4 v1, 0x0
+    goto :goto_1
 
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    :cond_b
+    const v1, 0x4134cccd
 
-    move-result-object v0
+    cmpg-float v1, v0, v1
 
-    const-wide/16 v1, -0x1
+    if-gtz v1, :cond_c
 
-    invoke-interface {v0, p1, v1, v2}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+    const/high16 v1, 0x41380000
 
-    move-result-wide v0
+    goto :goto_1
 
-    return-wide v0
-.end method
+    :cond_c
+    const v1, 0x4141999a
 
-.method private static e(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+    cmpg-float v1, v0, v1
 
-    const-string v0, "GPSTrackerConfig"
+    if-gtz v1, :cond_d
 
-    const/4 v1, 0x0
+    const/high16 v1, 0x41480000
 
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    goto/16 :goto_1
 
-    move-result-object v0
+    :cond_d
+    const v1, 0x414e6666
 
-    const-string v1, ""
+    cmpg-float v1, v0, v1
 
-    invoke-interface {v0, p1, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-gtz v1, :cond_e
 
-    move-result-object v0
+    const/high16 v1, 0x41580000
 
-    return-object v0
-.end method
+    goto/16 :goto_1
 
-.method public static e(Landroid/content/Context;)Z
-    .locals 2
+    :cond_e
+    const v1, 0x415ccccd
 
-    const-string v0, "RestoreConfig"
+    cmpg-float v1, v0, v1
 
-    const/4 v1, 0x0
+    if-gtz v1, :cond_f
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/gps/a/d;->a(Landroid/content/Context;Ljava/lang/String;Z)Z
+    const/high16 v1, 0x41600000
 
-    move-result v0
+    goto/16 :goto_1
 
-    return v0
+    :cond_f
+    const/high16 v1, 0x41680000
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_10
+
+    const/high16 v1, 0x41700000
+
+    goto/16 :goto_1
+
+    :cond_10
+    cmpg-float v1, v0, v2
+
+    if-gtz v1, :cond_11
+
+    move v1, v2
+
+    goto/16 :goto_1
+
+    :cond_11
+    const/high16 v1, 0x418c0000
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_12
+
+    const/high16 v1, 0x41900000
+
+    goto/16 :goto_1
+
+    :cond_12
+    const v1, 0x4199999a
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_13
+
+    const/high16 v1, 0x41980000
+
+    goto/16 :goto_1
+
+    :cond_13
+    const v1, 0x41a66666
+
+    cmpg-float v1, v0, v1
+
+    if-gtz v1, :cond_14
+
+    const/high16 v1, 0x41a00000
+
+    goto/16 :goto_1
+
+    :cond_14
+    const v1, 0x41b33333
+
+    cmpg-float v0, v0, v1
+
+    if-gtz v0, :cond_15
+
+    move v1, v3
+
+    goto/16 :goto_1
+
+    :cond_15
+    move v1, v3
+
+    goto/16 :goto_1
+
+    :cond_16
+    move v0, v1
+
+    goto/16 :goto_0
 .end method

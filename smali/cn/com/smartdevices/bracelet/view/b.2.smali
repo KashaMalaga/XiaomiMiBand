@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/view/b;
-.super Lcn/com/smartdevices/bracelet/view/Y;
+.super Lcn/com/smartdevices/bracelet/view/Z;
 
 
 # static fields
@@ -10,7 +10,7 @@
 .method public constructor <init>(Landroid/content/Context;[Ljava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/view/Y;-><init>(Landroid/content/Context;[Ljava/lang/String;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/view/Z;-><init>(Landroid/content/Context;[Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300ec
+    const v1, 0x7f0300ff
 
     const/4 v2, 0x0
 
@@ -37,7 +37,7 @@
     move-result-object p2
 
     :cond_0
-    const v0, 0x7f070417
+    const v0, 0x7f0d0448
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0001
+    const v2, 0x7f070001
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -65,7 +65,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v0, 0x7f070418
+    const v0, 0x7f0d0449
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -75,7 +75,7 @@
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/view/b;->b:I
 
-    sget-object v2, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->WEEK_MASK:[I
+    sget-object v2, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->WEEK_MASK:[I
 
     aget v2, v2, p1
 
@@ -120,9 +120,9 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v1, 0x7f020062
+    const v1, 0x7f020066
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -135,7 +135,7 @@
     goto :goto_0
 
     :cond_2
-    const v1, 0x7f020063
+    const v1, 0x7f020067
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

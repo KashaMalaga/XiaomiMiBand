@@ -35,7 +35,7 @@
 
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
 
     move-result-object v0
 
@@ -43,13 +43,13 @@
 
     invoke-direct {v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/s;->h(Lcom/xiaomi/hm/health/dataprocess/SportDay;)I
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/l;->h(Lcom/xiaomi/hm/health/dataprocess/SportDay;)I
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:I
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/ui/w;->b:I
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/s;->a(II)V
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/l;->a(II)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 

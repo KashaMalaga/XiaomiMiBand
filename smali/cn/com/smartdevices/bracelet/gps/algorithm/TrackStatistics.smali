@@ -3,11 +3,15 @@
 
 
 # instance fields
+.field public mCurGloIndex:I
+
 .field public mCurSubDistance:F
 
 .field public mCurSubStartTimetamp:J
 
 .field public mCurSubTime:J
+
+.field public mCurTimestamp:J
 
 .field public mFormerSubDistance:F
 

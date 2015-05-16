@@ -109,19 +109,19 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->I:F
 
-    const v0, -0x686847
+    const v0, -0x59593d
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->U:I
 
-    const v0, -0x929263
+    const v0, -0x88885c
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->V:I
 
-    const v0, -0x59593d
+    const v0, -0x686847
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->W:I
 
-    const v0, -0x88885c
+    const v0, -0x929263
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->X:I
 
@@ -804,7 +804,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->j:Landroid/graphics/RectF;
 
@@ -929,7 +929,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Chart.StatisticChart"
 
@@ -953,7 +953,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->Q:Lcn/com/smartdevices/bracelet/chart/E;
 
@@ -970,12 +970,12 @@
     return-void
 .end method
 
-.method static synthetic l(Lcn/com/smartdevices/bracelet/chart/y;)F
+.method static synthetic l(Lcn/com/smartdevices/bracelet/chart/y;)Lcn/com/smartdevices/bracelet/chart/base/b;
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->N:F
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->f:Lcn/com/smartdevices/bracelet/chart/base/b;
 
-    return v0
+    return-object v0
 .end method
 
 .method private l(I)V
@@ -1057,7 +1057,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Chart.StatisticChart"
 
@@ -1081,7 +1081,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->Q:Lcn/com/smartdevices/bracelet/chart/E;
 
@@ -1130,7 +1130,7 @@
 .method static synthetic m(Lcn/com/smartdevices/bracelet/chart/y;)I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->aa:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->L:I
 
     return v0
 .end method
@@ -1138,7 +1138,7 @@
 .method static synthetic n(Lcn/com/smartdevices/bracelet/chart/y;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->ad:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->N:F
 
     return v0
 .end method
@@ -1146,17 +1146,17 @@
 .method static synthetic o(Lcn/com/smartdevices/bracelet/chart/y;)I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->L:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->aa:I
 
     return v0
 .end method
 
-.method static synthetic p(Lcn/com/smartdevices/bracelet/chart/y;)Lcn/com/smartdevices/bracelet/chart/base/b;
+.method static synthetic p(Lcn/com/smartdevices/bracelet/chart/y;)F
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->f:Lcn/com/smartdevices/bracelet/chart/base/b;
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->ad:F
 
-    return-object v0
+    return v0
 .end method
 
 .method static synthetic q(Lcn/com/smartdevices/bracelet/chart/y;)Lcn/com/smartdevices/bracelet/chart/base/b;
@@ -1175,7 +1175,15 @@
     return-object v0
 .end method
 
-.method static synthetic s(Lcn/com/smartdevices/bracelet/chart/y;)I
+.method static synthetic s(Lcn/com/smartdevices/bracelet/chart/y;)Lcn/com/smartdevices/bracelet/chart/base/b;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->f:Lcn/com/smartdevices/bracelet/chart/base/b;
+
+    return-object v0
+.end method
+
+.method static synthetic t(Lcn/com/smartdevices/bracelet/chart/y;)I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->U:I
@@ -1183,7 +1191,7 @@
     return v0
 .end method
 
-.method static synthetic t(Lcn/com/smartdevices/bracelet/chart/y;)I
+.method static synthetic u(Lcn/com/smartdevices/bracelet/chart/y;)I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->V:I
@@ -1191,7 +1199,7 @@
     return v0
 .end method
 
-.method static synthetic u(Lcn/com/smartdevices/bracelet/chart/y;)I
+.method static synthetic v(Lcn/com/smartdevices/bracelet/chart/y;)I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->Y:I
@@ -1199,7 +1207,7 @@
     return v0
 .end method
 
-.method static synthetic v(Lcn/com/smartdevices/bracelet/chart/y;)I
+.method static synthetic w(Lcn/com/smartdevices/bracelet/chart/y;)I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->Z:I
@@ -1207,7 +1215,7 @@
     return v0
 .end method
 
-.method static synthetic w(Lcn/com/smartdevices/bracelet/chart/y;)I
+.method static synthetic x(Lcn/com/smartdevices/bracelet/chart/y;)I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->X:I
@@ -1215,7 +1223,7 @@
     return v0
 .end method
 
-.method static synthetic x(Lcn/com/smartdevices/bracelet/chart/y;)I
+.method static synthetic y(Lcn/com/smartdevices/bracelet/chart/y;)I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->W:I
@@ -1300,28 +1308,6 @@
     move-result v6
 
     if-nez v6, :cond_3
-
-    const-string v1, "Chart.StatisticChart"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "No Item Data : "
-
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v2
 
@@ -1409,28 +1395,6 @@
     move-result v6
 
     if-nez v6, :cond_8
-
-    const-string v1, "Chart.StatisticChart"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "No Item Data : "
-
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v2
 
@@ -1910,7 +1874,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/chart/y;->C:I
 
@@ -1969,7 +1933,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/chart/y;->G:I
 
@@ -2058,7 +2022,7 @@
     return-void
 
     :sswitch_0
-    const v0, 0x7f0a004d
+    const v0, 0x7f070085
 
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2067,7 +2031,7 @@
     goto :goto_0
 
     :sswitch_1
-    const v0, 0x7f0a004c
+    const v0, 0x7f070084
 
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2076,7 +2040,7 @@
     goto :goto_0
 
     :sswitch_2
-    const v0, 0x7f0a004e
+    const v0, 0x7f070086
 
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2176,7 +2140,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/y;->J:I
 

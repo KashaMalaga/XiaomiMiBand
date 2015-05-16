@@ -1273,6 +1273,57 @@
     goto/16 :goto_1
 .end method
 
+.method protected a(Lcn/com/smartdevices/bracelet/chart/base/c;)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/E;->b:Lcn/com/smartdevices/bracelet/chart/y;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/y;->l(Lcn/com/smartdevices/bracelet/chart/y;)Lcn/com/smartdevices/bracelet/chart/base/b;
+
+    move-result-object v1
+
+    iget v1, v1, Lcn/com/smartdevices/bracelet/chart/base/b;->g:I
+
+    iget v2, p1, Lcn/com/smartdevices/bracelet/chart/base/c;->c:I
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/E;->b:Lcn/com/smartdevices/bracelet/chart/y;
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/chart/y;->m(Lcn/com/smartdevices/bracelet/chart/y;)I
+
+    move-result v3
+
+    sub-int v3, v1, v3
+
+    add-int/lit8 v3, v3, -0x1
+
+    add-int/lit8 v3, v3, -0x2
+
+    if-lt v2, v3, :cond_0
+
+    iget v2, p1, Lcn/com/smartdevices/bracelet/chart/base/c;->c:I
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/E;->b:Lcn/com/smartdevices/bracelet/chart/y;
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/chart/y;->m(Lcn/com/smartdevices/bracelet/chart/y;)I
+
+    move-result v3
+
+    add-int/2addr v1, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    add-int/lit8 v1, v1, 0x2
+
+    if-gt v2, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    return v0
+.end method
+
 .method protected b(Landroid/graphics/RectF;Lcn/com/smartdevices/bracelet/chart/base/c;)F
     .locals 3
 

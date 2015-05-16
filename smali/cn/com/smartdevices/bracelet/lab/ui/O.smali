@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/ac;
+.implements Lcom/huami/android/view/d;
 
 
 # instance fields

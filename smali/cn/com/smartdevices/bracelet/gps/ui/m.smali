@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/H;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/I;
 
 .field private b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -20,7 +20,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/H;Landroid/content/Context;Ljava/util/List;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/I;Landroid/content/Context;Ljava/util/List;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -35,7 +35,7 @@
 
     const/4 v0, 0x0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/M;->a:Lcn/com/smartdevices/bracelet/gps/ui/H;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/M;->a:Lcn/com/smartdevices/bracelet/gps/ui/I;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
@@ -140,19 +140,19 @@
 
     new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/K;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/M;->a:Lcn/com/smartdevices/bracelet/gps/ui/H;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/M;->a:Lcn/com/smartdevices/bracelet/gps/ui/I;
 
-    invoke-direct {v1, v0, v3}, Lcn/com/smartdevices/bracelet/gps/ui/K;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/H;Lcn/com/smartdevices/bracelet/gps/ui/I;)V
+    invoke-direct {v1, v0, v3}, Lcn/com/smartdevices/bracelet/gps/ui/K;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/I;Lcn/com/smartdevices/bracelet/gps/ui/J;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/M;->c:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f0300c5
+    sget v2, Lcom/xiaomi/hm/health/b/a/j;->running_label_input_list_item:I
 
     invoke-virtual {v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    const v0, 0x7f070115
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->label:I
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

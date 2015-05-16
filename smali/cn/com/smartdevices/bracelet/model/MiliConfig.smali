@@ -21,6 +21,8 @@
 
 
 # instance fields
+.field public alarmNotifyEnabled:Z
+
 .field public dayReportNoti:Ljava/lang/String;
 
 .field public disconnectedReminder:I
@@ -34,6 +36,10 @@
 .field public inComingCallNotifyTime:I
 
 .field public lightColor:Ljava/lang/String;
+
+.field public mOpenSleepNotify:Z
+
+.field public smsNotifyEnabled:Z
 
 .field public unit:I
 
@@ -82,9 +88,15 @@
 
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->enableConnectedBtAdv:Z
 
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->alarmNotifyEnabled:Z
+
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->smsNotifyEnabled:Z
+
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->weightUnit:I
 
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->weightMergeResult:Z
+
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->mOpenSleepNotify:Z
 
     return-void
 .end method
@@ -112,7 +124,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/G;->c()Lcom/c/a/k;
 
@@ -138,6 +150,14 @@
 
 
 # virtual methods
+.method public getDailySleepNofity()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->mOpenSleepNotify:Z
+
+    return v0
+.end method
+
 .method public getDailySportNofity()Ljava/lang/String;
     .locals 1
 
@@ -233,7 +253,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
@@ -241,6 +261,14 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public setDailySleepNotify(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->mOpenSleepNotify:Z
+
+    return-void
 .end method
 
 .method public setDailySportNotify(Ljava/lang/String;)V
@@ -302,7 +330,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/String;->toString()Ljava/lang/String;
 

@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="running_months">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
     <string-array name="weeks">
         <item>周一</item>
         <item>周二</item>
@@ -85,5 +99,10 @@
         <item>身材非常标准, 建议保持目前的生活饮食习惯, 一定要将好身材保持下去哦。</item>
         <item>建议减少脂肪摄入, 保持蛋白质的摄入。在现有运动基础上加大有氧运动, 每次有氧运动前先进行30分钟无氧运动, 有利于提高减肥效果。</item>
         <item>建议减少脂肪摄入, 保持蛋白质的摄入。在现有运动基础上加大有氧运动, 每次有氧运动前先进行30分钟无氧运动, 有利于提高减肥效果。</item>
+    </string-array>
+    <string-array name="phone_notify_tips">
+        <item>当手环和手机连接时，手机有新来电，手环会同步振动</item>
+        <item>当手环和手机连接时，手机闹钟响铃，手环会同步振动</item>
+        <item>当手环和手机连接时，手机有新短信，手环会同步振动</item>
     </string-array>
 </resources>

@@ -32,15 +32,19 @@
 
     iget-wide v0, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
 
-    const-wide/16 v2, -0x1
+    const-wide/16 v2, 0x0
 
     cmp-long v0, v0, v2
 
-    if-eqz v0, :cond_0
+    if-lez v0, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->security:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     const/4 v0, 0x1
 

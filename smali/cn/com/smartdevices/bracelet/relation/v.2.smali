@@ -1,30 +1,41 @@
 .class Lcn/com/smartdevices/bracelet/relation/v;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public a:Landroid/widget/ImageView;
-
-.field public b:Landroid/widget/TextView;
-
-.field public c:Landroid/widget/TextView;
-
-.field public d:Landroid/widget/TextView;
-
-.field public e:Landroid/widget/TextView;
-
-.field public f:Landroid/widget/TextView;
-
-.field public g:Landroid/widget/TextView;
-
-.field public h:Landroid/widget/ImageView;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
     .locals 0
 
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/v;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/v;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->c(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)Lcn/com/smartdevices/bracelet/relation/y;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/y;->notifyDataSetChanged()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/v;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->a()V
 
     return-void
 .end method

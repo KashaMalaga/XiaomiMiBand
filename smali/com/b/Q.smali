@@ -1,315 +1,307 @@
-.class public final Lcom/b/Q;
+.class public Lcom/b/Q;
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field final synthetic a:Lcom/b/P;
+# static fields
+.field static a:Ljava/lang/String;
 
-.field private final b:Lcom/b/S;
+.field static b:Ljava/lang/String;
 
-.field private final c:[Z
+.field static c:Ljava/lang/String;
 
-.field private d:Z
+.field static d:Ljava/lang/String;
 
-.field private e:Z
+.field static e:Ljava/lang/String;
+
+.field static f:Ljava/lang/String;
+
+.field static g:Z
+
+.field static h:Z
+
+.field static i:J
+
+.field static j:J
+
+.field static k:Z
+
+.field static final l:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field static final m:[Ljava/lang/String;
 
 
 # direct methods
-.method private constructor <init>(Lcom/b/P;Lcom/b/S;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Lcom/b/Q;->a:Lcom/b/P;
+    const/4 v6, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lcom/b/Q;->b:Lcom/b/S;
-
-    invoke-static {p2}, Lcom/b/S;->d(Lcom/b/S;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    const/4 v5, 0x2
 
     const/4 v0, 0x0
 
-    :goto_0
-    iput-object v0, p0, Lcom/b/Q;->c:[Z
+    const/4 v4, 0x0
+
+    const/4 v3, 0x1
+
+    sput-object v0, Lcom/b/Q;->a:Ljava/lang/String;
+
+    sput-object v0, Lcom/b/Q;->b:Ljava/lang/String;
+
+    sput-object v0, Lcom/b/Q;->c:Ljava/lang/String;
+
+    const-string v0, ""
+
+    sput-object v0, Lcom/b/Q;->d:Ljava/lang/String;
+
+    const-string v0, ""
+
+    sput-object v0, Lcom/b/Q;->e:Ljava/lang/String;
+
+    const-string v0, ""
+
+    sput-object v0, Lcom/b/Q;->f:Ljava/lang/String;
+
+    sput-boolean v4, Lcom/b/Q;->g:Z
+
+    sput-boolean v3, Lcom/b/Q;->h:Z
+
+    const-wide/16 v0, 0x2710
+
+    sput-wide v0, Lcom/b/Q;->i:J
+
+    const-wide/16 v0, 0x7530
+
+    sput-wide v0, Lcom/b/Q;->j:J
+
+    sput-boolean v3, Lcom/b/Q;->k:Z
+
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    sput-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const-string v1, "UNKNOWN"
+
+    invoke-virtual {v0, v4, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const-string v1, "GPRS"
+
+    invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const-string v1, "EDGE"
+
+    invoke-virtual {v0, v5, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const-string v1, "UMTS"
+
+    invoke-virtual {v0, v6, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/4 v1, 0x4
+
+    const-string v2, "CDMA"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/4 v1, 0x5
+
+    const-string v2, "EVDO_0"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/4 v1, 0x6
+
+    const-string v2, "EVDO_A"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/4 v1, 0x7
+
+    const-string v2, "1xRTT"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/16 v1, 0x8
+
+    const-string v2, "HSDPA"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/16 v1, 0x9
+
+    const-string v2, "HSUPA"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/16 v1, 0xa
+
+    const-string v2, "HSPA"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/16 v1, 0xb
+
+    const-string v2, "IDEN"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/16 v1, 0xc
+
+    const-string v2, "EVDO_B"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/16 v1, 0xd
+
+    const-string v2, "LTE"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/16 v1, 0xe
+
+    const-string v2, "EHRPD"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object v0, Lcom/b/Q;->l:Landroid/util/SparseArray;
+
+    const/16 v1, 0xf
+
+    const-string v2, "HSPAP"
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    const/16 v0, 0x9
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const-string v1, "android.permission.ACCESS_COARSE_LOCATION"
+
+    aput-object v1, v0, v4
+
+    const-string v1, "android.permission.ACCESS_FINE_LOCATION"
+
+    aput-object v1, v0, v3
+
+    const-string v1, "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"
+
+    aput-object v1, v0, v5
+
+    const-string v1, "android.permission.ACCESS_NETWORK_STATE"
+
+    aput-object v1, v0, v6
+
+    const/4 v1, 0x4
+
+    const-string v2, "android.permission.ACCESS_WIFI_STATE"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x5
+
+    const-string v2, "android.permission.CHANGE_WIFI_STATE"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x6
+
+    const-string v2, "android.permission.INTERNET"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x7
+
+    const-string v2, "android.permission.READ_PHONE_STATE"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8
+
+    const-string v2, "android.permission.WRITE_EXTERNAL_STORAGE"
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/b/Q;->m:[Ljava/lang/String;
 
     return-void
-
-    :cond_0
-    invoke-static {p1}, Lcom/b/P;->e(Lcom/b/P;)I
-
-    move-result v0
-
-    new-array v0, v0, [Z
-
-    goto :goto_0
 .end method
 
-.method synthetic constructor <init>(Lcom/b/P;Lcom/b/S;Lcom/b/U;)V
+.method private constructor <init>()V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/b/Q;-><init>(Lcom/b/P;Lcom/b/S;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/b/Q;)Lcom/b/S;
-    .locals 1
-
-    iget-object v0, p0, Lcom/b/Q;->b:Lcom/b/S;
-
-    return-object v0
-.end method
-
-.method static synthetic a(Lcom/b/Q;Z)Z
+.method static a(Ljava/lang/String;)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/b/Q;->d:Z
-
-    return p1
-.end method
-
-.method static synthetic b(Lcom/b/Q;)[Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/b/Q;->c:[Z
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public a(I)Ljava/io/OutputStream;
-    .locals 4
-
-    if-ltz p1, :cond_0
-
-    iget-object v0, p0, Lcom/b/Q;->a:Lcom/b/P;
-
-    invoke-static {v0}, Lcom/b/P;->e(Lcom/b/P;)I
-
-    move-result v0
-
-    if-lt p1, v0, :cond_1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Expected index "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " to "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "be greater than 0 and less than the maximum value count "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "of "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/b/Q;->a:Lcom/b/P;
-
-    invoke-static {v2}, Lcom/b/P;->e(Lcom/b/P;)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    iget-object v2, p0, Lcom/b/Q;->a:Lcom/b/P;
-
-    monitor-enter v2
-
-    :try_start_0
-    iget-object v0, p0, Lcom/b/Q;->b:Lcom/b/S;
-
-    invoke-static {v0}, Lcom/b/S;->a(Lcom/b/S;)Lcom/b/Q;
-
-    move-result-object v0
-
-    if-eq v0, p0, :cond_2
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_2
-    :try_start_1
-    iget-object v0, p0, Lcom/b/Q;->b:Lcom/b/S;
-
-    invoke-static {v0}, Lcom/b/S;->d(Lcom/b/S;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Lcom/b/Q;->c:[Z
-
-    const/4 v1, 0x1
-
-    aput-boolean v1, v0, p1
-
-    :cond_3
-    iget-object v0, p0, Lcom/b/Q;->b:Lcom/b/S;
-
-    invoke-virtual {v0, p1}, Lcom/b/S;->b(I)Ljava/io/File;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    move-result-object v1
-
-    :try_start_2
-    new-instance v0, Ljava/io/FileOutputStream;
-
-    invoke-direct {v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-    :try_end_2
-    .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    move-object v1, v0
-
-    :goto_0
-    :try_start_3
-    new-instance v0, Lcom/b/R;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, p0, v1, v3}, Lcom/b/R;-><init>(Lcom/b/Q;Ljava/io/OutputStream;Lcom/b/U;)V
-
-    monitor-exit v2
-
-    :goto_1
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    iget-object v0, p0, Lcom/b/Q;->a:Lcom/b/P;
-
-    invoke-static {v0}, Lcom/b/P;->f(Lcom/b/P;)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    new-instance v0, Ljava/io/FileOutputStream;
-
-    invoke-direct {v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-    :try_end_4
-    .catch Ljava/io/FileNotFoundException; {:try_start_4 .. :try_end_4} :catch_1
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    move-object v1, v0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    :try_start_5
-    invoke-static {}, Lcom/b/P;->b()Ljava/io/OutputStream;
-
-    move-result-object v0
-
-    monitor-exit v2
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    goto :goto_1
-.end method
-
-.method public a()V
-    .locals 3
-
-    const/4 v2, 0x1
-
-    iget-boolean v0, p0, Lcom/b/Q;->d:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/b/Q;->a:Lcom/b/P;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, p0, v1}, Lcom/b/P;->a(Lcom/b/P;Lcom/b/Q;Z)V
-
-    iget-object v0, p0, Lcom/b/Q;->a:Lcom/b/P;
-
-    iget-object v1, p0, Lcom/b/Q;->b:Lcom/b/S;
-
-    invoke-static {v1}, Lcom/b/S;->c(Lcom/b/S;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/b/P;->c(Ljava/lang/String;)Z
-
-    :goto_0
-    iput-boolean v2, p0, Lcom/b/Q;->e:Z
+    sput-object p0, Lcom/b/Q;->d:Ljava/lang/String;
 
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/b/Q;->a:Lcom/b/P;
-
-    invoke-static {v0, p0, v2}, Lcom/b/P;->a(Lcom/b/P;Lcom/b/Q;Z)V
-
-    goto :goto_0
 .end method
 
-.method public b()V
-    .locals 2
+.method static a(Z)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/b/Q;->a:Lcom/b/P;
+    sput-boolean p0, Lcom/b/Q;->g:Z
 
-    const/4 v1, 0x0
+    return-void
+.end method
 
-    invoke-static {v0, p0, v1}, Lcom/b/P;->a(Lcom/b/P;Lcom/b/Q;Z)V
+.method static b(Ljava/lang/String;)V
+    .locals 0
+
+    sput-object p0, Lcom/b/Q;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static c(Ljava/lang/String;)V
+    .locals 0
+
+    sput-object p0, Lcom/b/Q;->f:Ljava/lang/String;
 
     return-void
 .end method

@@ -73,15 +73,15 @@
 
     iget-object v0, p0, Lcom/xiaomi/push/service/a;->b:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/g/l;
+    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/h/l;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/U;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/g/l;->a(Lcom/xiaomi/push/service/U;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/h/l;->a(Lcom/xiaomi/push/service/U;)V
     :try_end_0
-    .catch Lcom/xiaomi/g/C; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/xiaomi/h/C; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
@@ -124,7 +124,7 @@
 
     invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
     :try_end_1
-    .catch Lcom/xiaomi/g/C; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Lcom/xiaomi/h/C; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 .end method

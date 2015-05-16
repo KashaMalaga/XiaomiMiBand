@@ -64,9 +64,9 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/view/O;->a()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/view/P;->a()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/S;->a:Lcn/com/smartdevices/bracelet/Y;
 
@@ -117,17 +117,17 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/S;->b:Landroid/content/Context;
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/l;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/l;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/view/O;->a()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/view/P;->a()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/l;->c()Z
 
     move-result v0
 
@@ -148,7 +148,7 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/S;->c:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepPersonInfo(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/S;->a:Lcn/com/smartdevices/bracelet/Y;
 

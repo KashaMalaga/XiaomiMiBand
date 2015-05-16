@@ -26,7 +26,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/MainActivity;->c:Lcn/com/smartdevices/bracelet/weibo/v;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->g()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v0
 
@@ -74,14 +74,14 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v1
 
@@ -110,16 +110,16 @@
 
     const-string v2, "extras is null!"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->I()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfoBase()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->a()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/q;->a()Z
 
     move-result v3
 
@@ -155,7 +155,7 @@
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     if-eqz v2, :cond_4
@@ -209,7 +209,7 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
 
-    const/16 v1, 0x12
+    const/16 v1, 0xF
 
     const/4 v2, 0x1
 
@@ -225,7 +225,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
@@ -256,7 +256,7 @@
 
     if-ge v0, v1, :cond_2
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/b;->c(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/xiaomi/hm/health/bt/a;->c(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -325,7 +325,7 @@
 
     const-string v1, "test:\n"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

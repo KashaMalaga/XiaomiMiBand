@@ -356,7 +356,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/commonsware/cwac/camera/b;->c()V
+    invoke-interface {v0}, Lcom/commonsware/cwac/camera/b;->a()V
 
     return-void
 .end method

@@ -3,47 +3,35 @@
 
 
 # static fields
-.field public static final action_exit:I = 0x7f090013
+.field public static final brand_pane:I = 0x7f030055
 
-.field public static final action_loading:I = 0x7f09001a
+.field public static final custom_toast:I = 0x7f030058
 
-.field public static final app_name:I = 0x7f090006
+.field public static final dialog_bottom_bar:I = 0x7f03005c
 
-.field public static final cancel:I = 0x7f090019
+.field public static final dialog_empty_area:I = 0x7f03005e
 
-.field public static final ok:I = 0x7f090018
+.field public static final dialog_empty_area_transparent:I = 0x7f03005f
 
-.field public static final share_facebook_label:I = 0x7f090011
+.field public static final main:I = 0x7f0300c2
 
-.field public static final share_line_label:I = 0x7f090010
+.field public static final split_line_with_margin:I = 0x7f0300df
 
-.field public static final share_miliao_label:I = 0x7f09000f
+.field public static final view_bottom_dialog:I = 0x7f0300e9
 
-.field public static final share_miliao_path_selector:I = 0x7f090017
+.field public static final view_dialog_menu_item:I = 0x7f0300ee
 
-.field public static final share_miliao_too_old:I = 0x7f090008
+.field public static final view_header_toast:I = 0x7f0300f7
 
-.field public static final share_pengyouquan_label:I = 0x7f09000b
+.field public static final view_progress_dialog:I = 0x7f0300fd
 
-.field public static final share_prepare_tips:I = 0x7f090009
+.field public static final view_share_dialog:I = 0x7f030100
 
-.field public static final share_qq_label:I = 0x7f09000d
+.field public static final view_share_dialog_item:I = 0x7f030101
 
-.field public static final share_qq_zone_label:I = 0x7f09000e
+.field public static final view_share_panel:I = 0x7f030103
 
-.field public static final share_to_miliao_target_feeds:I = 0x7f090014
-
-.field public static final share_to_miliao_target_friends:I = 0x7f090015
-
-.field public static final share_to_miliao_target_union:I = 0x7f090016
-
-.field public static final share_twitter_label:I = 0x7f090012
-
-.field public static final share_uninstall_client:I = 0x7f090007
-
-.field public static final share_weibo_label:I = 0x7f09000a
-
-.field public static final share_weixin_label:I = 0x7f09000c
+.field public static final view_share_panel_item:I = 0x7f030104
 
 
 # direct methods

@@ -3,154 +3,122 @@
 
 
 # static fields
-.field public static final a:I = 0x0
+.field private static final a:Ljava/lang/String; = "misc_keeper"
 
-.field public static final b:I = 0x1
+.field private static b:Landroid/content/SharedPreferences; = null
 
-.field public static final c:I = 0x2
+.field private static final c:Ljava/lang/String; = "ref_track_thumb_cleaned"
 
-.field public static final d:I = 0x3
-
-.field public static final e:I = 0x4
-
-.field public static final f:I = 0x0
-
-.field public static final g:I = 0x1
-
-
-# instance fields
-.field private h:I
-
-.field private i:I
+.field private static final d:Ljava/lang/String; = "ref_trash_cleaned"
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/w;->b:Landroid/content/SharedPreferences;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
-    .locals 1
-
-    const/4 v0, 0x0
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/w;->h:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/w;->i:I
 
     return-void
 .end method
 
-.method public constructor <init>(I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/w;->h:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/w;->i:I
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/w;->h:I
-
-    return-void
-.end method
-
-.method public constructor <init>(II)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/w;->h:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/w;->i:I
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/w;->h:I
-
-    iput p2, p0, Lcn/com/smartdevices/bracelet/w;->i:I
-
-    return-void
-.end method
-
-.method public static a(I)Z
-    .locals 1
-
-    const/4 v0, 0x4
-
-    if-ne p0, v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static b(I)Z
+.method public static a(Landroid/content/Context;)V
     .locals 2
 
-    const/4 v0, 0x1
+    sget-object v0, Lcn/com/smartdevices/bracelet/w;->b:Landroid/content/SharedPreferences;
 
-    const/4 v1, 0x2
+    if-eqz v0, :cond_0
 
-    if-eq p0, v1, :cond_0
-
-    if-ne p0, v0, :cond_1
+    :goto_0
+    return-void
 
     :cond_0
-    :goto_0
-    return v0
+    const-string v0, "misc_keeper"
 
-    :cond_1
-    const/4 v0, 0x0
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/w;->b:Landroid/content/SharedPreferences;
 
     goto :goto_0
 .end method
 
-.method public static c(I)Z
+.method public static a(Z)V
     .locals 2
 
-    const/4 v0, 0x1
+    sget-object v0, Lcn/com/smartdevices/bracelet/w;->b:Landroid/content/SharedPreferences;
 
-    const/4 v1, 0x4
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    if-eq p0, v1, :cond_0
+    move-result-object v0
 
-    const/4 v1, 0x2
+    const-string v1, "ref_track_thumb_cleaned"
 
-    if-eq p0, v1, :cond_0
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    if-ne p0, v0, :cond_1
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method
 
+.method public static a()Z
+    .locals 3
 
-# virtual methods
-.method public a()I
-    .locals 1
+    sget-object v0, Lcn/com/smartdevices/bracelet/w;->b:Landroid/content/SharedPreferences;
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/w;->i:I
+    const-string v1, "ref_track_thumb_cleaned"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
 
     return v0
 .end method
 
-.method public b()I
-    .locals 1
+.method public static b(Z)V
+    .locals 2
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/w;->h:I
+    sget-object v0, Lcn/com/smartdevices/bracelet/w;->b:Landroid/content/SharedPreferences;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "ref_trash_cleaned"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
+.method public static b()Z
+    .locals 3
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/w;->b:Landroid/content/SharedPreferences;
+
+    const-string v1, "ref_trash_cleaned"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
 
     return v0
 .end method

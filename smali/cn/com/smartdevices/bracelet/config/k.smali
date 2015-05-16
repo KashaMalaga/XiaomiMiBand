@@ -80,9 +80,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/k;->e:Ljava/lang/Boolean;
 
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 

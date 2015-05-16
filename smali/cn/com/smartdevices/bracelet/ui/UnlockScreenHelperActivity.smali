@@ -87,9 +87,9 @@
 .method private a()V
     .locals 8
 
-    const v7, 0x7f0a0026
+    const v7, 0x7f07006a
 
-    const v6, 0x7f0a0001
+    const v6, 0x7f070001
 
     const/4 v5, 0x1
 
@@ -125,7 +125,7 @@
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->c()Z
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->c()Z
 
     move-result v0
 
@@ -151,7 +151,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->j:Landroid/widget/TextView;
 
-    const v2, 0x7f09019f
+    const v2, 0x7f090234
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->getString(I)Ljava/lang/String;
 
@@ -222,7 +222,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->n:Landroid/widget/TextView;
 
-    const v1, 0x7f0901a4
+    const v1, 0x7f090239
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -235,7 +235,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->j:Landroid/widget/TextView;
 
-    const v2, 0x7f09019e
+    const v2, 0x7f090233
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->getString(I)Ljava/lang/String;
 
@@ -298,7 +298,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0055
+    const v2, 0x7f070025
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -331,7 +331,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a000c
+    const v2, 0x7f07000c
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -343,7 +343,7 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->c()Z
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->c()Z
 
     move-result v0
 
@@ -370,13 +370,13 @@
 
     if-ne p1, v1, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->l()Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readBraceletBtInfo()Lcom/xiaomi/hm/health/bt/BraceletBtInfo;
 
     move-result-object v1
 
     const-string v2, "android.bluetooth.device.extra.NAME"
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;->address:Ljava/lang/String;
+    iget-object v1, v1, Lcom/xiaomi/hm/health/bt/BraceletBtInfo;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -408,7 +408,7 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    const v0, 0x7f0a000c
+    const v0, 0x7f07000c
 
     :goto_1
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->p:Landroid/view/View;
@@ -439,7 +439,7 @@
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f0a0055
+    const v0, 0x7f070025
 
     goto :goto_1
 .end method
@@ -528,7 +528,7 @@
 
     move-result-object v2
 
-    invoke-static {v4, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -616,9 +616,9 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0701ad -> :sswitch_1
-        0x7f0701af -> :sswitch_0
-        0x7f0701b3 -> :sswitch_2
+        0x7f0d01bb -> :sswitch_1
+        0x7f0d01bd -> :sswitch_0
+        0x7f0d01c1 -> :sswitch_2
     .end sparse-switch
 .end method
 
@@ -627,11 +627,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030045
+    const v0, 0x7f030048
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->setContentView(I)V
 
-    const v0, 0x7f07000f
+    const v0, 0x7f0d0012
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -639,7 +639,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->d:Landroid/view/View;
 
-    const v0, 0x7f0701a8
+    const v0, 0x7f0d01b6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -647,7 +647,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->e:Landroid/view/View;
 
-    const v0, 0x7f0701b5
+    const v0, 0x7f0d01c3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -655,7 +655,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->f:Landroid/view/View;
 
-    const v0, 0x7f0701ad
+    const v0, 0x7f0d01bb
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -667,7 +667,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0701af
+    const v0, 0x7f0d01bd
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -679,7 +679,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0701b0
+    const v0, 0x7f0d01be
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -689,7 +689,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->i:Landroid/widget/TextView;
 
-    const v0, 0x7f0701b1
+    const v0, 0x7f0d01bf
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -699,7 +699,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->l:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0701ab
+    const v0, 0x7f0d01b9
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -709,7 +709,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->m:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0701b2
+    const v0, 0x7f0d01c0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -719,7 +719,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->n:Landroid/widget/TextView;
 
-    const v0, 0x7f0701b7
+    const v0, 0x7f0d01c5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -727,7 +727,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->p:Landroid/view/View;
 
-    const v0, 0x7f0701aa
+    const v0, 0x7f0d01b8
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -737,7 +737,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->o:Landroid/widget/TextView;
 
-    const v0, 0x7f0701b3
+    const v0, 0x7f0d01c1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -771,7 +771,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0701ac
+    const v0, 0x7f0d01ba
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -781,7 +781,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->j:Landroid/widget/TextView;
 
-    const v0, 0x7f0701ae
+    const v0, 0x7f0d01bc
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -791,7 +791,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->k:Landroid/widget/TextView;
 
-    const v0, 0x7f0701a9
+    const v0, 0x7f0d01b7
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -801,7 +801,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->r:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0701b4
+    const v0, 0x7f0d01c2
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -856,10 +856,10 @@
     goto :goto_0
 .end method
 
-.method public onEvent(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
+.method public onEvent(Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;)V
     .locals 1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->h()Z
 
     move-result v0
 
@@ -947,9 +947,9 @@
 
     const-string v1, "Start Setting For SmartLock!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f0701b6
+    const v0, 0x7f0d01c4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -963,7 +963,7 @@
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v0, 0x7f0901aa
+    const v0, 0x7f09023f
 
     const/4 v1, 0x1
 
@@ -973,15 +973,15 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/i;
+    new-instance v0, Lcom/xiaomi/hm/health/bt/a/i;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/eM;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/eO;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/eM;-><init>(Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/eO;-><init>(Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;)V
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/a/i;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v0, v1}, Lcom/xiaomi/hm/health/bt/a/i;-><init>(Lcom/xiaomi/hm/health/bt/a/b;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/i;->c()V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/a/i;->e()V
 
     :cond_0
     return-void

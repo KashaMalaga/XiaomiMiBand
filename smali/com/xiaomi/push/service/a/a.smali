@@ -284,7 +284,7 @@
 
     :cond_0
     :try_start_1
-    invoke-static {}, Lcom/xiaomi/g/u;->d()I
+    invoke-static {}, Lcom/xiaomi/h/u;->d()I
 
     move-result v0
 

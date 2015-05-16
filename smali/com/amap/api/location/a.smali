@@ -2,6 +2,10 @@
 .super Ljava/lang/Object;
 
 
+# static fields
+.field static h:Lcom/amap/api/location/a;
+
+
 # instance fields
 .field a:Lcom/amap/api/location/d;
 
@@ -17,9 +21,9 @@
 
 .field g:Lcom/amap/api/location/b;
 
-.field private h:Landroid/content/Context;
+.field private i:Landroid/content/Context;
 
-.field private i:Ljava/util/Vector;
+.field private j:Ljava/util/Vector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Vector",
@@ -30,9 +34,9 @@
     .end annotation
 .end field
 
-.field private j:Lcom/amap/api/location/a$a;
+.field private k:Lcom/amap/api/location/a$a;
 
-.field private k:Ljava/util/Vector;
+.field private l:Ljava/util/Vector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Vector",
@@ -42,20 +46,30 @@
         }
     .end annotation
 .end field
-
-.field private l:Lcom/amap/api/location/AMapLocation;
 
 .field private m:Lcom/amap/api/location/AMapLocation;
 
-.field private n:Ljava/lang/Thread;
+.field private n:Lcom/amap/api/location/AMapLocation;
 
-.field private o:J
+.field private volatile o:Ljava/lang/Thread;
 
-.field private p:F
+.field private p:J
+
+.field private q:F
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Landroid/location/LocationManager;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/amap/api/location/a;->h:Lcom/amap/api/location/a;
+
+    return-void
+.end method
+
+.method private constructor <init>(Landroid/content/Context;Landroid/location/LocationManager;)V
     .locals 4
 
     const/4 v3, 0x0
@@ -66,15 +80,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v1, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    iput-object v1, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
 
-    iput-object v1, p0, Lcom/amap/api/location/a;->j:Lcom/amap/api/location/a$a;
+    iput-object v1, p0, Lcom/amap/api/location/a;->k:Lcom/amap/api/location/a$a;
 
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    iput-object v0, p0, Lcom/amap/api/location/a;->k:Ljava/util/Vector;
+    iput-object v0, p0, Lcom/amap/api/location/a;->l:Ljava/util/Vector;
 
     iput-object v1, p0, Lcom/amap/api/location/a;->a:Lcom/amap/api/location/d;
 
@@ -88,15 +102,15 @@
 
     const-wide/16 v0, 0x7d0
 
-    iput-wide v0, p0, Lcom/amap/api/location/a;->o:J
+    iput-wide v0, p0, Lcom/amap/api/location/a;->p:J
 
     const/high16 v0, 0x41200000
 
-    iput v0, p0, Lcom/amap/api/location/a;->p:F
+    iput v0, p0, Lcom/amap/api/location/a;->q:F
 
-    iput-object p1, p0, Lcom/amap/api/location/a;->h:Landroid/content/Context;
+    iput-object p1, p0, Lcom/amap/api/location/a;->i:Landroid/content/Context;
 
-    invoke-direct {p0}, Lcom/amap/api/location/a;->c()V
+    invoke-direct {p0}, Lcom/amap/api/location/a;->e()V
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -112,12 +126,12 @@
 
     invoke-direct {v0, p0, v1}, Lcom/amap/api/location/a$a;-><init>(Lcom/amap/api/location/a;Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/amap/api/location/a;->j:Lcom/amap/api/location/a$a;
+    iput-object v0, p0, Lcom/amap/api/location/a;->k:Lcom/amap/api/location/a$a;
 
     :goto_0
     new-instance v0, Lcom/amap/api/location/d;
 
-    iget-object v1, p0, Lcom/amap/api/location/a;->j:Lcom/amap/api/location/a$a;
+    iget-object v1, p0, Lcom/amap/api/location/a;->k:Lcom/amap/api/location/a$a;
 
     invoke-direct {v0, p1, p2, v1, p0}, Lcom/amap/api/location/d;-><init>(Landroid/content/Context;Landroid/location/LocationManager;Lcom/amap/api/location/a$a;Lcom/amap/api/location/a;)V
 
@@ -125,7 +139,7 @@
 
     new-instance v0, Lcom/amap/api/location/c;
 
-    iget-object v1, p0, Lcom/amap/api/location/a;->j:Lcom/amap/api/location/a$a;
+    iget-object v1, p0, Lcom/amap/api/location/a;->k:Lcom/amap/api/location/a$a;
 
     invoke-direct {v0, p1, v1, p0}, Lcom/amap/api/location/c;-><init>(Landroid/content/Context;Lcom/amap/api/location/a$a;Lcom/amap/api/location/a;)V
 
@@ -150,7 +164,7 @@
 
     invoke-direct {v0, p0}, Lcom/amap/api/location/a$a;-><init>(Lcom/amap/api/location/a;)V
 
-    iput-object v0, p0, Lcom/amap/api/location/a;->j:Lcom/amap/api/location/a$a;
+    iput-object v0, p0, Lcom/amap/api/location/a;->k:Lcom/amap/api/location/a$a;
 
     goto :goto_0
 .end method
@@ -158,15 +172,50 @@
 .method static synthetic a(Lcom/amap/api/location/a;Lcom/amap/api/location/AMapLocation;)Lcom/amap/api/location/AMapLocation;
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/location/a;->l:Lcom/amap/api/location/AMapLocation;
+    iput-object p1, p0, Lcom/amap/api/location/a;->m:Lcom/amap/api/location/AMapLocation;
 
     return-object p1
+.end method
+
+.method public static declared-synchronized a(Landroid/content/Context;Landroid/location/LocationManager;)Lcom/amap/api/location/a;
+    .locals 2
+
+    const-class v1, Lcom/amap/api/location/a;
+
+    monitor-enter v1
+
+    :try_start_0
+    sget-object v0, Lcom/amap/api/location/a;->h:Lcom/amap/api/location/a;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/amap/api/location/a;
+
+    invoke-direct {v0, p0, p1}, Lcom/amap/api/location/a;-><init>(Landroid/content/Context;Landroid/location/LocationManager;)V
+
+    sput-object v0, Lcom/amap/api/location/a;->h:Lcom/amap/api/location/a;
+
+    :cond_0
+    sget-object v0, Lcom/amap/api/location/a;->h:Lcom/amap/api/location/a;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
 .end method
 
 .method static synthetic a(Lcom/amap/api/location/a;)Ljava/util/Vector;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
 
     return-object v0
 .end method
@@ -174,7 +223,7 @@
 .method static synthetic b(Lcom/amap/api/location/a;)Lcom/amap/api/location/AMapLocation;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->l:Lcom/amap/api/location/AMapLocation;
+    iget-object v0, p0, Lcom/amap/api/location/a;->m:Lcom/amap/api/location/AMapLocation;
 
     return-object v0
 .end method
@@ -182,7 +231,7 @@
 .method static synthetic b(Lcom/amap/api/location/a;Lcom/amap/api/location/AMapLocation;)Lcom/amap/api/location/AMapLocation;
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/location/a;->m:Lcom/amap/api/location/AMapLocation;
+    iput-object p1, p0, Lcom/amap/api/location/a;->n:Lcom/amap/api/location/AMapLocation;
 
     return-object p1
 .end method
@@ -190,21 +239,44 @@
 .method static synthetic c(Lcom/amap/api/location/a;)Ljava/util/Vector;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->k:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/amap/api/location/a;->l:Ljava/util/Vector;
 
     return-object v0
 .end method
 
-.method private c()V
-    .locals 1
+.method static declared-synchronized c()V
+    .locals 2
 
-    new-instance v0, Ljava/util/Vector;
+    const-class v1, Lcom/amap/api/location/a;
 
-    invoke-direct {v0}, Ljava/util/Vector;-><init>()V
+    monitor-enter v1
 
-    iput-object v0, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    :try_start_0
+    sget-object v0, Lcom/amap/api/location/a;->h:Lcom/amap/api/location/a;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/amap/api/location/a;->h:Lcom/amap/api/location/a;
+
+    invoke-virtual {v0}, Lcom/amap/api/location/a;->d()V
+
+    :cond_0
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/amap/api/location/a;->h:Lcom/amap/api/location/a;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
 .end method
 
 .method private c(Z)V
@@ -218,7 +290,7 @@
 .method static synthetic d(Lcom/amap/api/location/a;)Landroid/content/Context;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->h:Landroid/content/Context;
+    iget-object v0, p0, Lcom/amap/api/location/a;->i:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -234,9 +306,21 @@
 .method static synthetic e(Lcom/amap/api/location/a;)Lcom/amap/api/location/AMapLocation;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->m:Lcom/amap/api/location/AMapLocation;
+    iget-object v0, p0, Lcom/amap/api/location/a;->n:Lcom/amap/api/location/AMapLocation;
 
     return-object v0
+.end method
+
+.method private e()V
+    .locals 1
+
+    new-instance v0, Ljava/util/Vector;
+
+    invoke-direct {v0}, Ljava/util/Vector;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
+
+    return-void
 .end method
 
 
@@ -244,17 +328,17 @@
 .method a()Lcom/amap/api/location/AMapLocation;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->l:Lcom/amap/api/location/AMapLocation;
+    iget-object v0, p0, Lcom/amap/api/location/a;->m:Lcom/amap/api/location/AMapLocation;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->l:Lcom/amap/api/location/AMapLocation;
+    iget-object v0, p0, Lcom/amap/api/location/a;->m:Lcom/amap/api/location/AMapLocation;
 
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/amap/api/location/a;->h:Landroid/content/Context;
+    iget-object v0, p0, Lcom/amap/api/location/a;->i:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/amap/api/location/core/d;->b(Landroid/content/Context;)Lcom/amap/api/location/AMapLocation;
 
@@ -266,21 +350,21 @@
 .method a(DDFJLandroid/app/PendingIntent;)V
     .locals 2
 
-    new-instance v0, Lcom/b/W;
+    new-instance v0, Lcom/b/Y;
 
-    invoke-direct {v0}, Lcom/b/W;-><init>()V
+    invoke-direct {v0}, Lcom/b/Y;-><init>()V
 
-    iput-wide p1, v0, Lcom/b/W;->b:D
+    iput-wide p1, v0, Lcom/b/Y;->b:D
 
-    iput-wide p3, v0, Lcom/b/W;->a:D
+    iput-wide p3, v0, Lcom/b/Y;->a:D
 
-    iput p5, v0, Lcom/b/W;->c:F
+    iput p5, v0, Lcom/b/Y;->c:F
 
-    invoke-virtual {v0, p6, p7}, Lcom/b/W;->a(J)V
+    invoke-virtual {v0, p6, p7}, Lcom/b/Y;->a(J)V
 
     iget-object v1, p0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
-    invoke-virtual {v1, v0, p8}, Lcom/amap/api/location/c;->a(Lcom/b/W;Landroid/app/PendingIntent;)V
+    invoke-virtual {v1, v0, p8}, Lcom/amap/api/location/c;->a(Lcom/b/Y;Landroid/app/PendingIntent;)V
 
     return-void
 .end method
@@ -309,11 +393,13 @@
 .end method
 
 .method a(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
-    .locals 7
+    .locals 8
 
-    iput-wide p1, p0, Lcom/amap/api/location/a;->o:J
+    const/4 v7, 0x1
 
-    iput p3, p0, Lcom/amap/api/location/a;->p:F
+    iput-wide p1, p0, Lcom/amap/api/location/a;->p:J
+
+    iput p3, p0, Lcom/amap/api/location/a;->q:F
 
     if-eqz p4, :cond_0
 
@@ -331,29 +417,11 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/amap/api/location/g;-><init>(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
 
-    iget-object v1, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    iget-object v1, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
 
     invoke-virtual {v1, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    :cond_0
     const-string v0, "gps"
-
-    invoke-virtual {v0, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/amap/api/location/a;->a:Lcom/amap/api/location/d;
-
-    invoke-virtual {v0, p1, p2, p3}, Lcom/amap/api/location/d;->a(JF)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :cond_2
-    const-string v0, "lbs"
 
     invoke-virtual {v0, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -361,26 +429,45 @@
 
     if-eqz v0, :cond_1
 
+    iget-object v0, p0, Lcom/amap/api/location/a;->a:Lcom/amap/api/location/d;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/amap/api/location/d;->a(JF)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    const-string v0, "lbs"
+
+    invoke-virtual {v0, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     iget-boolean v0, p0, Lcom/amap/api/location/a;->f:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/amap/api/location/a;->a:Lcom/amap/api/location/d;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/amap/api/location/d;->a(JF)V
 
-    :cond_3
+    :cond_2
     iget-object v0, p0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
     invoke-virtual {v0, p1, p2}, Lcom/amap/api/location/c;->a(J)V
 
-    const/4 v0, 0x1
+    invoke-direct {p0, v7}, Lcom/amap/api/location/a;->c(Z)V
 
-    invoke-direct {p0, v0}, Lcom/amap/api/location/a;->c(Z)V
+    iget-object v0, p0, Lcom/amap/api/location/a;->o:Ljava/lang/Thread;
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->n:Ljava/lang/Thread;
+    if-nez v0, :cond_0
 
-    if-nez v0, :cond_1
+    iget-object v0, p0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
+
+    invoke-virtual {v0, v7}, Lcom/amap/api/location/c;->b(Z)V
 
     new-instance v0, Ljava/lang/Thread;
 
@@ -388,9 +475,9 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    iput-object v0, p0, Lcom/amap/api/location/a;->n:Ljava/lang/Thread;
+    iput-object v0, p0, Lcom/amap/api/location/a;->o:Ljava/lang/Thread;
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->n:Ljava/lang/Thread;
+    iget-object v0, p0, Lcom/amap/api/location/a;->o:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
@@ -410,26 +497,59 @@
 .method a(Lcom/amap/api/location/AMapLocationListener;)V
     .locals 5
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
 
-    move-result v2
-
-    move v1, v3
+    move-result v0
 
     :goto_0
-    if-ge v1, v2, :cond_0
+    move v2, v1
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    move v3, v0
 
-    invoke-virtual {v0, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
+    :goto_1
+    if-ge v2, v3, :cond_2
+
+    iget-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
+
+    invoke-virtual {v0, v2}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/amap/api/location/g;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
+
+    invoke-virtual {v0, v2}, Ljava/util/Vector;->remove(I)Ljava/lang/Object;
+
+    add-int/lit8 v3, v3, -0x1
+
+    add-int/lit8 v0, v2, -0x1
+
+    move v2, v3
+
+    :goto_2
+    add-int/lit8 v0, v0, 0x1
+
+    move v3, v2
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v4, v0, Lcom/amap/api/location/g;->b:Lcom/amap/api/location/AMapLocationListener;
+
+    if-eqz v4, :cond_1
 
     iget-object v4, v0, Lcom/amap/api/location/g;->b:Lcom/amap/api/location/AMapLocationListener;
 
@@ -437,69 +557,63 @@
 
     move-result v4
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_5
 
-    iget-object v4, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    :cond_1
+    iget-object v4, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
 
     invoke-virtual {v4, v0}, Ljava/util/Vector;->remove(Ljava/lang/Object;)Z
 
-    add-int/lit8 v2, v2, -0x1
+    add-int/lit8 v3, v3, -0x1
 
-    add-int/lit8 v0, v1, -0x1
+    add-int/lit8 v0, v2, -0x1
 
-    move v1, v2
+    move v2, v3
 
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
+    goto :goto_2
 
-    move v2, v1
+    :cond_2
+    iget-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
 
-    move v1, v0
+    if-eqz v0, :cond_3
 
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lcom/amap/api/location/a;->a:Lcom/amap/api/location/d;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_4
+
+    :cond_3
+    invoke-virtual {p0, v1}, Lcom/amap/api/location/a;->b(Z)V
+
+    invoke-direct {p0, v1}, Lcom/amap/api/location/a;->c(Z)V
+
+    invoke-virtual {p0}, Lcom/amap/api/location/a;->b()V
+
+    iget-object v0, p0, Lcom/amap/api/location/a;->a:Lcom/amap/api/location/d;
+
+    if-eqz v0, :cond_4
 
     iget-object v0, p0, Lcom/amap/api/location/a;->a:Lcom/amap/api/location/d;
 
     invoke-virtual {v0}, Lcom/amap/api/location/d;->b()V
 
-    invoke-virtual {p0, v3}, Lcom/amap/api/location/a;->b(Z)V
-
-    invoke-direct {p0, v3}, Lcom/amap/api/location/a;->c(Z)V
-
-    iget-object v0, p0, Lcom/amap/api/location/a;->n:Ljava/lang/Thread;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/amap/api/location/a;->n:Ljava/lang/Thread;
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/location/a;->n:Ljava/lang/Thread;
-
-    :cond_1
+    :cond_4
     return-void
 
-    :cond_2
+    :cond_5
+    move v0, v2
+
+    move v2, v3
+
+    goto :goto_2
+
+    :cond_6
     move v0, v1
 
-    move v1, v2
-
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method a(Z)V
@@ -507,11 +621,11 @@
 
     invoke-direct {p0, p1}, Lcom/amap/api/location/a;->d(Z)V
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
 
@@ -527,9 +641,9 @@
 
     iget-object v0, p0, Lcom/amap/api/location/a;->a:Lcom/amap/api/location/d;
 
-    iget-wide v1, p0, Lcom/amap/api/location/a;->o:J
+    iget-wide v1, p0, Lcom/amap/api/location/a;->p:J
 
-    iget v3, p0, Lcom/amap/api/location/a;->p:F
+    iget v3, p0, Lcom/amap/api/location/a;->q:F
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/amap/api/location/d;->a(JF)V
 
@@ -545,12 +659,79 @@
     goto :goto_0
 .end method
 
-.method declared-synchronized b()V
+.method b()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/location/c;->b(Z)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/amap/api/location/a;->o:Ljava/lang/Thread;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/amap/api/location/a;->o:Ljava/lang/Thread;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/amap/api/location/a;->o:Ljava/lang/Thread;
+
+    :cond_1
+    return-void
+.end method
+
+.method b(DDFJLandroid/app/PendingIntent;)V
+    .locals 2
+
+    new-instance v0, Lcom/b/Y;
+
+    invoke-direct {v0}, Lcom/b/Y;-><init>()V
+
+    iput-wide p1, v0, Lcom/b/Y;->b:D
+
+    iput-wide p3, v0, Lcom/b/Y;->a:D
+
+    iput p5, v0, Lcom/b/Y;->c:F
+
+    invoke-virtual {v0, p6, p7}, Lcom/b/Y;->a(J)V
+
+    iget-object v1, p0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
+
+    invoke-virtual {v1, v0, p8}, Lcom/amap/api/location/c;->b(Lcom/b/Y;Landroid/app/PendingIntent;)V
+
+    return-void
+.end method
+
+.method b(Landroid/app/PendingIntent;)V
     .locals 1
 
-    monitor-enter p0
+    iget-object v0, p0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
-    :try_start_0
+    invoke-virtual {v0, p1}, Lcom/amap/api/location/c;->b(Landroid/app/PendingIntent;)V
+
+    return-void
+.end method
+
+.method b(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/location/a;->c:Z
+
+    return-void
+.end method
+
+.method d()V
+    .locals 1
+
     iget-object v0, p0, Lcom/amap/api/location/a;->a:Lcom/amap/api/location/d;
 
     if-eqz v0, :cond_0
@@ -574,18 +755,14 @@
 
     iget-object v0, p0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
 
-    invoke-virtual {v0}, Lcom/amap/api/location/c;->a()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
+    invoke-virtual {v0}, Lcom/amap/api/location/c;->b()V
 
     :cond_1
-    iget-object v0, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/amap/api/location/a;->j:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->clear()V
 
@@ -593,61 +770,6 @@
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/amap/api/location/a;->b(Z)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/location/a;->n:Ljava/lang/Thread;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method b(DDFJLandroid/app/PendingIntent;)V
-    .locals 2
-
-    new-instance v0, Lcom/b/W;
-
-    invoke-direct {v0}, Lcom/b/W;-><init>()V
-
-    iput-wide p1, v0, Lcom/b/W;->b:D
-
-    iput-wide p3, v0, Lcom/b/W;->a:D
-
-    iput p5, v0, Lcom/b/W;->c:F
-
-    invoke-virtual {v0, p6, p7}, Lcom/b/W;->a(J)V
-
-    iget-object v1, p0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
-
-    invoke-virtual {v1, v0, p8}, Lcom/amap/api/location/c;->b(Lcom/b/W;Landroid/app/PendingIntent;)V
-
-    return-void
-.end method
-
-.method b(Landroid/app/PendingIntent;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/location/a;->b:Lcom/amap/api/location/c;
-
-    invoke-virtual {v0, p1}, Lcom/amap/api/location/c;->b(Landroid/app/PendingIntent;)V
-
-    return-void
-.end method
-
-.method b(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/location/a;->c:Z
 
     return-void
 .end method

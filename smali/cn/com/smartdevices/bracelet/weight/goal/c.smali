@@ -33,7 +33,7 @@
 
     const-string v1, "\u670d\u52a1\u5668\u5220\u9664\u6210\u529f\u672c\u5730\u5220\u9664"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/goal/c;->a:Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;
 
@@ -49,7 +49,7 @@
 
     const-string v1, "\u670d\u52a1\u5668\u5220\u9664\u5931\u8d25"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -1,207 +1,55 @@
-.class public Lcn/com/smartdevices/bracelet/tag/h;
-.super Landroid/app/Fragment;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class Lcn/com/smartdevices/bracelet/tag/h;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field private a:Lcn/com/smartdevices/bracelet/tag/b;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/tag/TagDataActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/tag/h;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
-.end method
-
-.method public static a()Lcn/com/smartdevices/bracelet/tag/h;
-    .locals 2
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/tag/h;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/tag/h;-><init>()V
-
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tag/h;->setArguments(Landroid/os/Bundle;)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public onAttach(Landroid/app/Activity;)V
-    .locals 4
-
-    invoke-super {p0, p1}, Landroid/app/Fragment;->onAttach(Landroid/app/Activity;)V
-
-    :try_start_0
-    move-object v0, p1
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/tag/b;
-
-    move-object v1, v0
-
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/tag/h;->a:Lcn/com/smartdevices/bracelet/tag/b;
-    :try_end_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v1
-
-    new-instance v1, Ljava/lang/ClassCastException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, " must implement OnFragmentInteractionListener"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/ClassCastException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public onClick(Landroid/view/View;)V
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/xiaomi/hm/health/bt/bleservice/BLEService;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_0
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/h;->a:Lcn/com/smartdevices/bracelet/tag/b;
-
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/h;->a:Lcn/com/smartdevices/bracelet/tag/b;
+    sget-object v0, Lcom/xiaomi/hm/health/bt/bleservice/BLEService;->p:Ljava/lang/String;
 
-    const/4 v1, 0x1
-
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/tag/b;->a(I)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x7f070075
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
-
-    invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tag/h;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p2, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    const-string v1, "TagGuideEnter"
+    check-cast v0, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;Ljava/lang/String;)V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/h;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
 
-    return-void
-.end method
-
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 2
-
-    const v0, 0x7f030076
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v0
-
-    const v1, 0x7f070075
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->f(Lcn/com/smartdevices/bracelet/tag/TagDataActivity;)Lcn/com/smartdevices/bracelet/tag/a/c;
 
     move-result-object v1
 
-    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;)V
 
-    return-object v0
-.end method
-
-.method public onDetach()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/app/Fragment;->onDetach()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/h;->a:Lcn/com/smartdevices/bracelet/tag/b;
-
-    return-void
-.end method
-
-.method public onPause()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/app/Fragment;->onPause()V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tag/h;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Landroid/content/Context;)V
-
-    const-string v0, "PageBehaviorTagGuide"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->a(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onResume()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/app/Fragment;->onResume()V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tag/h;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->b(Landroid/content/Context;)V
-
-    const-string v0, "PageBehaviorTagGuide"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/F;->c(Ljava/lang/String;)V
-
+    :cond_0
     return-void
 .end method

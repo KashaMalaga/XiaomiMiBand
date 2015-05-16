@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:background="#fff8f8f8" android:layout_width="fill_parent" android:layout_height="@dimen/watermark_camera_header_h"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/flash_lamp" android:background="@drawable/watermark_share_icon_flash_lamp_off" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17.799988dip" android:layout_alignParentLeft="true" />
+    <ImageButton android:id="@id/cam_switch" android:background="@drawable/watermark_share_icon_cam_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="17.799988dip" android:layout_alignParentRight="true" />
+</RelativeLayout>

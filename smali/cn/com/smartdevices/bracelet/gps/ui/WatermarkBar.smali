@@ -17,7 +17,7 @@
 
 .field private c:Landroid/content/Context;
 
-.field private d:Lcn/com/smartdevices/bracelet/gps/ui/ao;
+.field private d:Lcn/com/smartdevices/bracelet/gps/ui/ak;
 
 .field private e:I
 
@@ -32,9 +32,9 @@
 
     invoke-direct {p0, p1}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/an;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aj;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/an;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aj;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->g:Landroid/view/View$OnClickListener;
 
@@ -48,9 +48,9 @@
 
     invoke-direct {p0, p1, p2}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/an;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aj;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/an;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aj;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->g:Landroid/view/View$OnClickListener;
 
@@ -64,9 +64,9 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/an;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aj;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/an;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aj;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->g:Landroid/view/View$OnClickListener;
 
@@ -75,10 +75,10 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)Lcn/com/smartdevices/bracelet/gps/ui/ao;
+.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)Lcn/com/smartdevices/bracelet/gps/ui/ak;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->d:Lcn/com/smartdevices/bracelet/gps/ui/ao;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->d:Lcn/com/smartdevices/bracelet/gps/ui/ak;
 
     return-object v0
 .end method
@@ -86,15 +86,15 @@
 .method private a(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 12
 
+    const/high16 v11, 0x40400000
+
     const/high16 v4, 0x3f800000
-
-    const/16 v11, 0x11
-
-    const/4 v8, -0x2
 
     const/4 v10, -0x1
 
-    const/4 v9, 0x0
+    const/4 v9, -0x2
+
+    const/4 v8, 0x0
 
     new-instance v0, Landroid/widget/LinearLayout;
 
@@ -122,45 +122,43 @@
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-direct {v1, v8, v8}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v1, v9, v9}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->c:Landroid/content/Context;
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v2
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->c:Landroid/content/Context;
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v3
 
-    invoke-virtual {v1, v2, v9, v3, v9}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
+    invoke-virtual {v1, v2, v8, v3, v8}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v1, Landroid/widget/TextView;
+    new-instance v1, Landroid/widget/ImageView;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->c:Landroid/content/Context;
 
-    invoke-direct {v1, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v1, v10}, Landroid/widget/TextView;->setTextColor(I)V
+    sget-object v2, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
 
-    const/high16 v2, 0x42000000
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextSize(F)V
+    new-instance v2, Ljava/io/File;
 
-    invoke-virtual {v1}, Landroid/widget/TextView;->setSingleLine()V
+    invoke-direct {v2, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b:Landroid/graphics/Typeface;
+    invoke-static {v2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
+    move-result-object v2
 
-    invoke-virtual {v1, v11}, Landroid/widget/TextView;->setGravity(I)V
-
-    invoke-virtual {v1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageURI(Landroid/net/Uri;)V
 
     new-instance v2, Landroid/widget/TextView;
 
@@ -168,7 +166,9 @@
 
     invoke-direct {v2, v3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v2, v11}, Landroid/widget/TextView;->setGravity(I)V
+    const/16 v3, 0x11
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setGravity(I)V
 
     invoke-virtual {v2, v10}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -184,7 +184,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setId(I)V
 
-    invoke-virtual {v3, v9}, Landroid/widget/TextView;->setBackgroundColor(I)V
+    invoke-virtual {v3, v8}, Landroid/widget/TextView;->setBackgroundColor(I)V
 
     new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -192,7 +192,7 @@
 
     const/high16 v6, 0x42a00000
 
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v5
 
@@ -200,35 +200,33 @@
 
     const/high16 v7, 0x42a00000
 
-    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v6
 
     invoke-direct {v4, v5, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    iput v11, v4, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+    const/16 v5, 0x11
+
+    iput v5, v4, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
     new-instance v5, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-direct {v5, v10, v8}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v5, v10, v9}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     iget-object v6, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->c:Landroid/content/Context;
 
-    const/high16 v7, 0x40400000
-
-    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v6, v11}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v6
 
     iget-object v7, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->c:Landroid/content/Context;
 
-    const/high16 v8, 0x40400000
-
-    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v7, v11}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v7
 
-    invoke-virtual {v5, v9, v6, v9, v7}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
+    invoke-virtual {v5, v8, v6, v8, v7}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
     new-instance v6, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -236,7 +234,7 @@
 
     const/high16 v8, 0x40c00000
 
-    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v7
 
@@ -318,15 +316,15 @@
 .method private b(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 12
 
-    const/high16 v11, 0x40400000
-
     const/high16 v4, 0x3f800000
+
+    const/16 v11, 0x11
+
+    const/4 v8, -0x2
 
     const/4 v10, -0x1
 
-    const/4 v9, -0x2
-
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
     new-instance v0, Landroid/widget/LinearLayout;
 
@@ -354,43 +352,45 @@
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-direct {v1, v9, v9}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v1, v8, v8}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->c:Landroid/content/Context;
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v2
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->c:Landroid/content/Context;
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v3
 
-    invoke-virtual {v1, v2, v8, v3, v8}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
+    invoke-virtual {v1, v2, v9, v3, v9}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v1, Landroid/widget/ImageView;
+    new-instance v1, Landroid/widget/TextView;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->c:Landroid/content/Context;
 
-    invoke-direct {v1, v2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    sget-object v2, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
+    invoke-virtual {v1, v10}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    const/high16 v2, 0x42000000
 
-    new-instance v2, Ljava/io/File;
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextSize(F)V
 
-    invoke-direct {v2, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1}, Landroid/widget/TextView;->setSingleLine()V
 
-    invoke-static {v2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b:Landroid/graphics/Typeface;
 
-    move-result-object v2
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageURI(Landroid/net/Uri;)V
+    invoke-virtual {v1, v11}, Landroid/widget/TextView;->setGravity(I)V
+
+    invoke-virtual {v1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     new-instance v2, Landroid/widget/TextView;
 
@@ -398,9 +398,7 @@
 
     invoke-direct {v2, v3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    const/16 v3, 0x11
-
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setGravity(I)V
+    invoke-virtual {v2, v11}, Landroid/widget/TextView;->setGravity(I)V
 
     invoke-virtual {v2, v10}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -416,7 +414,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setId(I)V
 
-    invoke-virtual {v3, v8}, Landroid/widget/TextView;->setBackgroundColor(I)V
+    invoke-virtual {v3, v9}, Landroid/widget/TextView;->setBackgroundColor(I)V
 
     new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -424,7 +422,7 @@
 
     const/high16 v6, 0x42a00000
 
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v5
 
@@ -432,33 +430,35 @@
 
     const/high16 v7, 0x42a00000
 
-    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v6
 
     invoke-direct {v4, v5, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    const/16 v5, 0x11
-
-    iput v5, v4, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+    iput v11, v4, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
     new-instance v5, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-direct {v5, v10, v9}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v5, v10, v8}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     iget-object v6, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->c:Landroid/content/Context;
 
-    invoke-static {v6, v11}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    const/high16 v7, 0x40400000
+
+    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v6
 
     iget-object v7, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->c:Landroid/content/Context;
 
-    invoke-static {v7, v11}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    const/high16 v8, 0x40400000
+
+    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v7
 
-    invoke-virtual {v5, v8, v6, v8, v7}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
+    invoke-virtual {v5, v9, v6, v9, v7}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
     new-instance v6, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -466,7 +466,7 @@
 
     const/high16 v8, 0x40c00000
 
-    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v7
 
@@ -582,7 +582,7 @@
 
     int-to-float v1, v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/f/j;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -592,10 +592,10 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/gps/ui/ao;)V
+.method public a(Lcn/com/smartdevices/bracelet/gps/ui/ak;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->d:Lcn/com/smartdevices/bracelet/gps/ui/ao;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->d:Lcn/com/smartdevices/bracelet/gps/ui/ak;
 
     return-void
 .end method
@@ -607,7 +607,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/ui/ap;",
+            "Lcn/com/smartdevices/bracelet/gps/ui/al;",
             ">;)V"
         }
     .end annotation
@@ -635,15 +635,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/ui/ap;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/ui/al;
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/ui/ap;->p:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/ui/al;->p:I
 
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/gps/ui/ap;->k:Ljava/lang/String;
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/gps/ui/al;->k:Ljava/lang/String;
 
-    iget v4, v0, Lcn/com/smartdevices/bracelet/gps/ui/ap;->p:I
+    iget v4, v0, Lcn/com/smartdevices/bracelet/gps/ui/al;->p:I
 
-    iget v5, v0, Lcn/com/smartdevices/bracelet/gps/ui/ap;->o:I
+    iget v5, v0, Lcn/com/smartdevices/bracelet/gps/ui/al;->o:I
 
     packed-switch v5, :pswitch_data_0
 
@@ -655,72 +655,72 @@
     goto :goto_0
 
     :pswitch_0
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/ap;->l:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/al;->l:Ljava/lang/String;
 
-    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 
     :pswitch_1
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/ap;->m:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/al;->m:Ljava/lang/String;
 
-    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 
     :pswitch_2
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/ap;->w:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/al;->w:Ljava/lang/String;
 
-    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 
     :pswitch_3
     const-string v0, "06:18"
 
-    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 
     :pswitch_4
     const-string v0, "06:18"
 
-    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 
     :pswitch_5
     const-string v0, "06:18"
 
-    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 
     :pswitch_6
     const-string v0, "06:18"
 
-    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 
     :pswitch_7
     const-string v0, "06:18"
 
-    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 
     :pswitch_8
     const-string v0, "06:18"
 
-    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 
     :pswitch_9
     const-string v0, "06:18"
 
-    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v3, v0, v4}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->b(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 

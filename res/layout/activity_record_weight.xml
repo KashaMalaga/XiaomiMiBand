@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/home_back_area" android:background="@color/bg_mode_weight" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h">
+        <Button android:textSize="@dimen/info_content_size" android:textColor="@color/content_color" android:id="@id/cancel" android:background="@drawable/click_btn_bg_small" android:layout_width="@dimen/btn_small_w" android:layout_height="@dimen/btn_small_h" android:layout_marginLeft="10.0dip" android:text="@string/cancel" android:layout_centerVertical="true" />
+        <Button android:textSize="@dimen/info_content_size" android:textColor="@color/content_color" android:id="@id/confirm" android:background="@drawable/click_btn_bg_small" android:layout_width="@dimen/btn_small_w" android:layout_height="@dimen/btn_small_h" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/confirm" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginTop="20.0dip" />
+    <RelativeLayout android:id="@id/weight_layout" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <TextView android:textSize="16.0sp" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:text="体重" />
+        <EditText android:textColor="@color/text_color_gray" android:textColorHint="@color/text_color_gray" android:gravity="center|right" android:id="@id/manual_weight_edittext" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:singleLine="true" android:numeric="decimal" android:layout_toLeftOf="@id/manual_weight_unit" />
+        <TextView android:textColor="@color/text_color_gray" android:gravity="center_vertical" android:id="@id/manual_weight_unit" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="20.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+    <RelativeLayout android:id="@id/date_layout" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <TextView android:textSize="16.0sp" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:text="日期" />
+        <TextView android:textColor="@color/text_color_gray" android:gravity="center_vertical" android:id="@id/manual_weight_date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="20.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+    <RelativeLayout android:id="@id/user_layout" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <TextView android:textSize="16.0sp" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:text="成员" />
+        <TextView android:textColor="@color/text_color_gray" android:gravity="center_vertical" android:id="@id/manual_weight_name" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="20.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+</LinearLayout>

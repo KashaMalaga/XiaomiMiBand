@@ -35,6 +35,8 @@
 
 .field private awakeNum:I
 
+.field private day:Lcom/xiaomi/hm/health/dataprocess/SportDay;
+
 .field private hasSleep:Z
 
 .field private minutesOfNonRem:I
@@ -287,7 +289,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/util/Date;
 
@@ -406,6 +408,14 @@
     iget v0, p0, Lcom/xiaomi/hm/health/dataprocess/SleepInfo;->sleepCount:I
 
     return v0
+.end method
+
+.method public getSportDay()Lcom/xiaomi/hm/health/dataprocess/SportDay;
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/hm/health/dataprocess/SleepInfo;->day:Lcom/xiaomi/hm/health/dataprocess/SportDay;
+
+    return-object v0
 .end method
 
 .method public getStageSleep()Ljava/util/ArrayList;
@@ -891,7 +901,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -929,6 +939,14 @@
     .locals 0
 
     iput p1, p0, Lcom/xiaomi/hm/health/dataprocess/SleepInfo;->sleepCount:I
+
+    return-void
+.end method
+
+.method public setSportDay(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/xiaomi/hm/health/dataprocess/SleepInfo;->day:Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     return-void
 .end method

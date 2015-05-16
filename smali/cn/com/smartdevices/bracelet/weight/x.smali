@@ -1,63 +1,43 @@
-.class public Lcn/com/smartdevices/bracelet/weight/x;
-.super Lcn/com/smartdevices/bracelet/ui/aa;
+.class Lcn/com/smartdevices/bracelet/weight/X;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/V;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/V;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aa;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/X;->a:Lcn/com/smartdevices/bracelet/weight/V;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected inflateLayout()I
-    .locals 1
+.method public run()V
+    .locals 2
 
-    const v0, 0x7f03005d
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/X;->a:Lcn/com/smartdevices/bracelet/weight/V;
 
-    return v0
-.end method
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/X;->a:Lcn/com/smartdevices/bracelet/weight/V;
 
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 4
-
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/aa;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/V;->a(Lcn/com/smartdevices/bracelet/weight/V;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/x;->getArguments()Landroid/os/Bundle;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weight/V;->a(Lcn/com/smartdevices/bracelet/weight/V;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    move-result-object v2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/X;->a:Lcn/com/smartdevices/bracelet/weight/V;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weight/V;->a()V
 
-    const-string v0, "Msg"
-
-    invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const v0, 0x7f070207
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    const-string v3, "Msg"
-
-    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    return-object v1
+    return-void
 .end method

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/ac;
+.implements Lcom/huami/android/view/d;
 
 
 # instance fields
@@ -65,7 +65,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v5, v0}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;ILjava/util/List;)Z
+    invoke-static {v1, v5, v0}, Lcn/com/smartdevices/bracelet/gps/b/a/n;->a(Landroid/content/Context;ILjava/util/List;)Z
 
     move-result v1
 
@@ -77,7 +77,7 @@
 
     move-result-wide v1
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/gps/d/f;->b(J)J
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/gps/f/h;->b(J)J
 
     move-result-wide v1
 
@@ -116,7 +116,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v5, v0}, Lcn/com/smartdevices/bracelet/lab/sync/G;->a(Landroid/content/Context;ILjava/util/ArrayList;)Z
+    invoke-static {v1, v5, v0}, Lcn/com/smartdevices/bracelet/gps/sync/n;->a(Landroid/content/Context;ILjava/util/ArrayList;)Z
 
     :goto_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/v;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
@@ -147,7 +147,7 @@
 
     const-string v1, "deleteTargetTrackId failed to delete from db"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method

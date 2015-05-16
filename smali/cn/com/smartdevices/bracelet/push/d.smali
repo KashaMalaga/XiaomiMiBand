@@ -3,11 +3,11 @@
 
 
 # static fields
-.field private static final e:Ljava/lang/String; = "ConfigMessage"
+.field private static final h:Ljava/lang/String; = "ConfigMessage"
 
 
 # instance fields
-.field private final f:Lorg/json/JSONObject;
+.field private final i:Lorg/json/JSONObject;
 
 
 # direct methods
@@ -16,7 +16,7 @@
 
     invoke-direct/range {p0 .. p6}, Lcn/com/smartdevices/bracelet/push/a;-><init>(Landroid/content/Context;JJLorg/json/JSONObject;)V
 
-    iput-object p6, p0, Lcn/com/smartdevices/bracelet/push/d;->f:Lorg/json/JSONObject;
+    iput-object p6, p0, Lcn/com/smartdevices/bracelet/push/d;->i:Lorg/json/JSONObject;
 
     return-void
 .end method
@@ -26,7 +26,7 @@
 .method public a()I
     .locals 1
 
-    const v0, 0x7f070032
+    const v0, 0x7f0d0035
 
     return v0
 .end method
@@ -34,7 +34,7 @@
 .method public b()V
     .locals 4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/push/d;->f:Lorg/json/JSONObject;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/push/d;->i:Lorg/json/JSONObject;
 
     if-nez v0, :cond_0
 
@@ -42,7 +42,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->g()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v1
 
@@ -53,7 +53,7 @@
     move-result-object v2
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/push/d;->f:Lorg/json/JSONObject;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/push/d;->i:Lorg/json/JSONObject;
 
     invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/config/b;->a(Lorg/json/JSONObject;Lorg/json/JSONObject;)V
 
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method

@@ -1,33 +1,13 @@
-.class Lcn/com/smartdevices/bracelet/ui/ab;
+.class public interface abstract Lcn/com/smartdevices/bracelet/ui/ab;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aa;
-
-
-# direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aa;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/ui/aa;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+.method public abstract a()V
+.end method
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/ui/aa;
+.method public abstract b()V
+.end method
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/aa;->onEmptyAreaClicked()V
-
-    return-void
+.method public abstract c()V
 .end method

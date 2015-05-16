@@ -55,7 +55,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/ui/W;->c()I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/services/M;->c()I
 
     move-result v1
 
@@ -65,7 +65,7 @@
 
     move-result v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/ui/W;->b()I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/services/M;->b()I
 
     move-result v1
 
@@ -75,7 +75,7 @@
     return v0
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/ui/W;->a()I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/services/M;->a()I
 
     move-result v0
 
@@ -91,7 +91,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/services/k;",
+            "Lcn/com/smartdevices/bracelet/gps/services/m;",
             ">;)",
             "Lcn/com/smartdevices/bracelet/gps/services/h;"
         }
@@ -118,9 +118,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/k;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/m;
 
-    invoke-direct {v3, v0}, Lcn/com/smartdevices/bracelet/gps/services/h;->a(Lcn/com/smartdevices/bracelet/gps/services/k;)V
+    invoke-direct {v3, v0}, Lcn/com/smartdevices/bracelet/gps/services/h;->a(Lcn/com/smartdevices/bracelet/gps/services/m;)V
 
     goto :goto_0
 
@@ -146,7 +146,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/k;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/m;
 
     if-nez v2, :cond_1
 
@@ -154,7 +154,7 @@
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/k;->c()S
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->c()S
 
     move-result v2
 
@@ -164,7 +164,7 @@
 
     int-to-float v2, v2
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/k;->d()S
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->d()S
 
     move-result v6
 
@@ -183,7 +183,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/k;->c()S
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->c()S
 
     move-result v6
 
@@ -193,7 +193,7 @@
 
     int-to-float v6, v6
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/k;->d()S
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/m;->d()S
 
     move-result v0
 
@@ -221,7 +221,7 @@
     return-object v0
 .end method
 
-.method private a(Lcn/com/smartdevices/bracelet/gps/services/k;)V
+.method private a(Lcn/com/smartdevices/bracelet/gps/services/m;)V
     .locals 4
 
     const/4 v3, 0x1
@@ -230,13 +230,13 @@
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/h;->a:I
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/k;->c()S
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/m;->c()S
 
     move-result v1
 
     if-lt v0, v1, :cond_0
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/k;->c()S
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/m;->c()S
 
     move-result v0
 
@@ -249,13 +249,13 @@
     :cond_0
     iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/h;->b:I
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/k;->d()S
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/m;->d()S
 
     move-result v1
 
     if-lt v0, v1, :cond_1
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/k;->d()S
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/m;->d()S
 
     move-result v0
 
@@ -268,13 +268,13 @@
     :cond_1
     iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/h;->c:I
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/k;->c()S
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/m;->c()S
 
     move-result v1
 
     if-gt v0, v1, :cond_2
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/k;->c()S
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/m;->c()S
 
     move-result v0
 
@@ -287,13 +287,13 @@
     :cond_2
     iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/h;->d:I
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/k;->d()S
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/m;->d()S
 
     move-result v1
 
     if-gt v0, v1, :cond_3
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/k;->d()S
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/m;->d()S
 
     move-result v0
 

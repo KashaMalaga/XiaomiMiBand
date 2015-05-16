@@ -7,6 +7,10 @@
 
 .field public static final ERROR_CODE_FAILURE_AUTH:I = 0x20
 
+.field public static final ERROR_CODE_FAILURE_INFO:I = 0x21
+
+.field public static final ERROR_CODE_FAILURE_LOCATION:I = 0x22
+
 .field public static final ERROR_CODE_INVALID_PARAMETER:I = 0x18
 
 .field public static final ERROR_CODE_IO:I = 0x15
@@ -30,6 +34,10 @@
 .field public static final ERROR_CONNECTION:Ljava/lang/String; = "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
 
 .field public static final ERROR_FAILURE_AUTH:Ljava/lang/String; = "key\u9274\u6743\u5931\u8d25"
+
+.field public static final ERROR_FAILURE_INFO:Ljava/lang/String; = "\u83b7\u53d6\u57fa\u7ad9/WiFi\u4fe1\u606f\u4e3a\u7a7a\u6216\u5931\u8d25"
+
+.field public static final ERROR_FAILURE_LOCATION:Ljava/lang/String; = "\u5b9a\u4f4d\u5931\u8d25\u65e0\u6cd5\u83b7\u53d6\u57ce\u5e02\u4fe1\u606f"
 
 .field public static final ERROR_INVALID_PARAMETER:Ljava/lang/String; = "\u65e0\u6548\u7684\u53c2\u6570 - IllegalArgumentException"
 
@@ -271,9 +279,39 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_c
 
     const/16 v0, 0x20
+
+    iput v0, p0, Lcom/amap/api/location/core/AMapLocException;->b:I
+
+    goto/16 :goto_0
+
+    :cond_c
+    const-string v0, "\u83b7\u53d6\u57fa\u7ad9/WiFi\u4fe1\u606f\u4e3a\u7a7a\u6216\u5931\u8d25"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    const/16 v0, 0x21
+
+    iput v0, p0, Lcom/amap/api/location/core/AMapLocException;->b:I
+
+    goto/16 :goto_0
+
+    :cond_d
+    const-string v0, "\u5b9a\u4f4d\u5931\u8d25\u65e0\u6cd5\u83b7\u53d6\u57ce\u5e02\u4fe1\u606f"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x22
 
     iput v0, p0, Lcom/amap/api/location/core/AMapLocException;->b:I
 

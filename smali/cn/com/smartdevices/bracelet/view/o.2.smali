@@ -41,7 +41,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setRotationY(F)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setScaleX(F)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/o;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->d(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setScaleY(F)V
 
     return-void
 .end method

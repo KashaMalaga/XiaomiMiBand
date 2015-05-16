@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/ui/j;
-.super Lcn/com/smartdevices/bracelet/ui/aa;
+.super Lcom/huami/android/view/b;
 
 
 # static fields
@@ -22,7 +22,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aa;-><init>()V
+    invoke-direct {p0}, Lcom/huami/android/view/b;-><init>()V
 
     return-void
 .end method
@@ -32,7 +32,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f03004f
+    const v0, 0x7f030053
 
     return v0
 .end method
@@ -40,13 +40,13 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 2
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/aa;->onCancel(Landroid/content/DialogInterface;)V
+    invoke-super {p0, p1}, Lcom/huami/android/view/b;->onCancel(Landroid/content/DialogInterface;)V
 
     const-string v0, "ApkUpgradeFragment"
 
     const-string v1, "onCancel();"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -54,7 +54,7 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/aa;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/huami/android/view/b;->onCreate(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 3
 
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/aa;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcom/huami/android/view/b;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 
@@ -94,7 +94,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/j;->f:Ljava/lang/String;
 
-    const v0, 0x7f0701eb
+    const v0, 0x7f0d01f8
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -112,13 +112,13 @@
 .method protected onEmptyAreaClicked()V
     .locals 2
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/aa;->onEmptyAreaClicked()V
+    invoke-super {p0}, Lcom/huami/android/view/b;->onEmptyAreaClicked()V
 
     const-string v0, "ApkUpgradeFragment"
 
     const-string v1, "onEmptyAreaClicked()"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -140,7 +140,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090125
+    const v1, 0x7f0901ba
 
     invoke-static {v0, v1, v3}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -190,7 +190,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v2, 0x7f090006
+    const/high16 v2, 0x7f090000
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/j;->getString(I)Ljava/lang/String;
 
@@ -235,7 +235,7 @@
 
     move-result-wide v3
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/z;->b(J)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/Keeper;->keepDownloadApkId(J)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -313,7 +313,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->b(J)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Keeper;->keepDownloadApkId(J)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -356,7 +356,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method

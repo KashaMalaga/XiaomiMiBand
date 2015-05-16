@@ -1,314 +1,215 @@
-.class public Lcn/com/smartdevices/bracelet/lab/sync/G;
-.super Ljava/lang/Object;
+.class final Lcn/com/smartdevices/bracelet/lab/sync/g;
+.super Lcom/d/a/a/h;
+
+
+# instance fields
+.field final synthetic a:I
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/lab/sync/h;
+
+.field final synthetic c:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(ILcn/com/smartdevices/bracelet/lab/sync/h;Landroid/content/Context;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->a:I
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->b:Lcn/com/smartdevices/bracelet/lab/sync/h;
+
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->c:Landroid/content/Context;
+
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;J)V
-    .locals 1
 
-    if-nez p0, :cond_0
+# virtual methods
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 5
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const/4 v4, 0x0
 
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/G;->l(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :goto_0
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/G;->b([B)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, p1, p2}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Landroid/content/Context;J)Z
+    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->a:I
 
-    goto :goto_0
-.end method
+    invoke-static {v1, v4}, Lcn/com/smartdevices/bracelet/lab/sync/k;->a(IZ)V
 
-.method public static a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/a/b;)V
-    .locals 1
+    const-string v1, "Sync"
 
-    if-nez p0, :cond_0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    const-string v3, "syncFromServer onFailure statusCode = "
 
-    throw v0
-
-    :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/G;->l(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :goto_0
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Landroid/content/Context;)Z
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/content/Context;)Z
-    .locals 6
-
-    const/4 v1, 0x0
-
-    const/4 v5, 0x4
-
-    const/4 v0, 0x1
-
-    if-nez p0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/w;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {v3, v0}, Lcn/com/smartdevices/bracelet/w;-><init>(I)V
+    move-result-object v2
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/s;->a(Lcn/com/smartdevices/bracelet/w;)Ljava/util/ArrayList;
+    const-string v3, "  content = "
 
-    move-result-object v3
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v3, :cond_2
+    move-result-object v2
 
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, ", type = "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->a:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->b:Lcn/com/smartdevices/bracelet/lab/sync/h;
+
+    iput-boolean v4, v0, Lcn/com/smartdevices/bracelet/lab/sync/h;->a:Z
+
+    return-void
+.end method
+
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 5
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->c:Landroid/content/Context;
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->a:I
+
+    new-instance v3, Ljava/lang/String;
+
+    invoke-direct {v3, p3}, Ljava/lang/String;-><init>([B)V
+
+    invoke-static {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/lab/sync/d;->a(Landroid/content/Context;ILjava/lang/String;Ljava/util/ArrayList;)Lcn/com/smartdevices/bracelet/k/l;
+
+    move-result-object v2
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/k/l;->c()Z
 
     move-result v3
 
-    if-lez v3, :cond_2
+    if-eqz v3, :cond_0
 
-    :cond_1
-    :goto_0
-    return v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->c:Landroid/content/Context;
 
-    :cond_2
-    new-instance v3, Lcn/com/smartdevices/bracelet/w;
+    iget v3, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->a:I
 
-    const/4 v4, 0x2
+    const/4 v4, 0x1
 
-    invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/w;-><init>(I)V
-
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/s;->a(Lcn/com/smartdevices/bracelet/w;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-gtz v2, :cond_1
-
-    :cond_3
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->g:Lcn/com/smartdevices/bracelet/config/a/b;
-
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/a/b;->ENABLE_RUNNING:Ljava/lang/Boolean;
-
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    const-string v0, "Sync"
-
-    const-string v2, "isNeedSyncToServer !Config.getInstance().RUNNER.ENABLE"
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_4
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/b;->e(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/gps/a/e;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_5
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/gps/a/e;->n()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    :cond_5
-    invoke-static {p0, v5}, Lcn/com/smartdevices/bracelet/gps/a/b;->c(Landroid/content/Context;I)Ljava/util/List;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_6
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-gtz v2, :cond_1
-
-    :cond_6
-    invoke-static {p0, v5}, Lcn/com/smartdevices/bracelet/gps/a/b;->e(Landroid/content/Context;I)Ljava/util/List;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_7
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-gtz v2, :cond_1
-
-    :cond_7
-    invoke-static {p0, v5}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;I)Ljava/util/List;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_8
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-gtz v2, :cond_1
-
-    :cond_8
-    move v0, v1
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/content/Context;ILjava/util/ArrayList;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "I",
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/lang/Long;",
-            ">;)Z"
-        }
-    .end annotation
-
-    if-eqz p0, :cond_0
-
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/w;->a(I)Z
+    invoke-static {v0, v1, v3, v4}, Lcn/com/smartdevices/bracelet/lab/sync/b;->a(Landroid/content/Context;Ljava/util/ArrayList;II)Z
 
     move-result v0
-
-    if-eqz v0, :cond_0
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-gtz v0, :cond_1
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->a:I
 
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/lab/sync/k;->a(IZ)V
 
-    throw v0
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->c:Landroid/content/Context;
+
+    invoke-static {v1}, Lcom/xiaomi/hm/health/bt/bleservice/BLEService;->b(Landroid/content/Context;)V
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/G;->l(Landroid/content/Context;)Z
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->b:Lcn/com/smartdevices/bracelet/lab/sync/h;
 
-    move-result v0
+    iput-boolean v0, v1, Lcn/com/smartdevices/bracelet/lab/sync/h;->a:Z
 
-    if-nez v0, :cond_2
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->b:Lcn/com/smartdevices/bracelet/lab/sync/h;
 
-    const/4 v0, 0x0
+    iget-boolean v1, v1, Lcn/com/smartdevices/bracelet/lab/sync/h;->a:Z
 
-    :goto_0
-    return v0
+    if-nez v1, :cond_2
 
-    :cond_2
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    const-string v1, "Sync"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "syncFromServer onSuccess = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/k/l;->c()Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", w.code ="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget v2, v2, Lcn/com/smartdevices/bracelet/k/l;->h:I
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ", isSucceeded = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {v0, p1, p2}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Landroid/content/Context;ILjava/util/ArrayList;)Z
+    const-string v2, ", type = "
 
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method public static b(Landroid/content/Context;Lcn/com/smartdevices/bracelet/a/b;)Z
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/G;->l(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->c(Landroid/content/Context;)Z
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->a:I
 
-    move-result v0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    return-void
 .end method

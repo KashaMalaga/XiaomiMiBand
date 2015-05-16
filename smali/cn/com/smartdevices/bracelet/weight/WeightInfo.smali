@@ -9,6 +9,12 @@
 
 
 # instance fields
+.field public deviceid:Ljava/lang/String;
+    .annotation runtime Lcom/activeandroid/a/a;
+        a = "DeviceId"
+    .end annotation
+.end field
+
 .field public synced:I
     .annotation runtime Lcom/activeandroid/a/a;
         a = "Synced"
@@ -152,7 +158,7 @@
 
     move-result-object v1
 
-    const-string v2, "yyyy-MM-dd hh:mm:ss"
+    const-string v2, "yyyy-MM-dd HH:mm:ss"
 
     iget-wide v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
 
@@ -161,6 +167,22 @@
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "DeviceId"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->deviceid:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ", "
 

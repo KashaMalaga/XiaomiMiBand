@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
@@ -26,66 +26,88 @@
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 3
 
-    return-void
-.end method
+    const/high16 v2, 0x43960000
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->B(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/widget/TextView;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/16 v1, 0x8
+    check-cast v0, Ljava/lang/Float;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
+    move-result v0
+
+    cmpg-float v1, v0, v2
+
+    if-gtz v1, :cond_1
+
+    :cond_0
+    :goto_0
     return-void
-.end method
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    :cond_1
+    const/high16 v1, 0x44160000
 
-    return-void
-.end method
+    cmpg-float v1, v0, v1
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
+    if-gez v1, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    sub-float/2addr v0, v2
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->B(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->B(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
+    div-float/2addr v0, v2
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/ui/bM;->a:F
 
-    neg-float v1, v1
+    mul-float/2addr v0, v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTranslationY(F)V
+    iget v1, p0, Lcn/com/smartdevices/bracelet/ui/bM;->a:F
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    sub-float/2addr v0, v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->J(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bM;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    move-result-object v0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->C(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/widget/TextView;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->setFlagsToFalse()V
+    move-result-object v1
 
-    return-void
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTranslationY(F)V
+
+    goto :goto_0
+
+    :cond_2
+    const v1, 0x45228000
+
+    cmpl-float v1, v0, v1
+
+    if-ltz v1, :cond_0
+
+    sub-float/2addr v0, v2
+
+    sub-float/2addr v0, v2
+
+    const/high16 v1, 0x44fa0000
+
+    sub-float/2addr v0, v1
+
+    neg-float v0, v0
+
+    div-float/2addr v0, v2
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/ui/bM;->a:F
+
+    mul-float/2addr v0, v1
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bM;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->C(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTranslationY(F)V
+
+    goto :goto_0
 .end method

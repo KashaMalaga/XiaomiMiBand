@@ -1,11 +1,11 @@
 .class public Lcn/com/smartdevices/bracelet/push/a/b;
-.super Lcn/com/smartdevices/bracelet/f/z;
+.super Lcn/com/smartdevices/bracelet/d/A;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcn/com/smartdevices/bracelet/f/z",
+        "Lcn/com/smartdevices/bracelet/d/A",
         "<",
         "Lcn/com/smartdevices/bracelet/push/a/a;",
         ">;"
@@ -14,10 +14,10 @@
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/f/C;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/d/D;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/f/z;-><init>(Lcn/com/smartdevices/bracelet/f/C;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/d/A;-><init>(Lcn/com/smartdevices/bracelet/d/D;)V
 
     return-void
 .end method
@@ -127,7 +127,7 @@
 
     iput-wide p1, v0, Lcn/com/smartdevices/bracelet/push/a/a;->c:J
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/push/a/b;->a(Lcn/com/smartdevices/bracelet/f/D;)Z
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/push/a/b;->a(Lcn/com/smartdevices/bracelet/d/E;)Z
 
     return-void
 .end method

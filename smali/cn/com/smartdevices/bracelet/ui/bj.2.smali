@@ -25,13 +25,13 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->b()Lcn/com/smartdevices/bracelet/ui/bw;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->b()Lcn/com/smartdevices/bracelet/ui/bv;
 
     move-result-object v0
 
-    const/4 v1, 0x4
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bw;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bv;->sendEmptyMessage(I)Z
 
     return-void
 .end method
@@ -43,7 +43,17 @@
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bj;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->i(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)Landroid/view/View;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method

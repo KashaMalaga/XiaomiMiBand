@@ -1,122 +1,186 @@
-.class public Lcn/com/smartdevices/bracelet/ui/bf;
-.super Lcn/com/smartdevices/bracelet/ui/bb;
+.class Lcn/com/smartdevices/bracelet/ui/bf;
+.super Lcn/com/smartdevices/bracelet/ui/bv;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;Landroid/app/Activity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/bb;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/ui/bv;-><init>(Landroid/app/Activity;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/bb;->onCreate(Landroid/os/Bundle;)V
-
-    const-string v0, "DDDD"
-
-    const-string v1, "Load Gif!!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bf;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f020112
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
-
-    move-result-object v0
-
-    :try_start_0
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->a(Ljava/io/InputStream;)[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a_:[B
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
-.end method
-
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+.method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    const v0, 0x7f030011
+    const/4 v2, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x4
 
-    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/bf;->a(Landroid/view/View;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bf;->c_:Landroid/widget/TextSwitcher;
-
-    const v2, 0x7f0901ce
-
-    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/bf;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextSwitcher;->setCurrentText(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bf;->b_:Lcom/xiaomi/hm/view/GifView;
-
-    sget-object v2, Lcom/xiaomi/hm/view/f;->c:Lcom/xiaomi/hm/view/f;
-
-    invoke-virtual {v1, v2}, Lcom/xiaomi/hm/view/GifView;->a(Lcom/xiaomi/hm/view/f;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bf;->b_:Lcom/xiaomi/hm/view/GifView;
-
-    invoke-virtual {v1}, Lcom/xiaomi/hm/view/GifView;->c()V
-
-    return-object v0
-.end method
-
-.method public setUserVisibleHint(Z)V
-    .locals 2
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/bb;->setUserVisibleHint(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->b_:Lcom/xiaomi/hm/view/GifView;
-
-    if-nez v0, :cond_0
-
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
-    if-eqz p1, :cond_1
+    :pswitch_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->b_:Lcom/xiaomi/hm/view/GifView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)I
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a_:[B
+    move-result v0
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->a([B)V
+    if-ne v0, v1, :cond_0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, " handle MESSAGE_WEIGHT_-----TRANSLATE-----_ANIM"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->b(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
 
     goto :goto_0
 
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->b_:Lcom/xiaomi/hm/view/GifView;
+    :pswitch_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/view/GifView;->f()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, " handle MESSAGE_MAGNIFY_-------ALPHA------_ANIM"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->c(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
 
     goto :goto_0
+
+    :pswitch_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, " handle MESSAGE_MAGNIFY_-------SWIPE------_ANIM"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->d(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)Landroid/widget/ImageView;
+
+    move-result-object v1
+
+    const v2, 0x7f04000f
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;Landroid/view/View;I)V
+
+    goto :goto_0
+
+    :pswitch_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, " handle MESSAGE_MAGNIFY_-------BILnk------_ANIM"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->e(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->f(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->e(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)Landroid/widget/ImageView;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;Landroid/view/View;)V
+
+    goto :goto_0
+
+    :pswitch_4
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)I
+
+    move-result v0
+
+    const/4 v1, 0x5
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->g(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)V
+
+    goto/16 :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_3
+        :pswitch_4
+    .end packed-switch
 .end method

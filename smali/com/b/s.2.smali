@@ -1,322 +1,239 @@
 .class final Lcom/b/s;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/location/LocationListener;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field private synthetic a:Lcom/b/ar;
+.field final synthetic a:Lcom/b/o;
 
 
 # direct methods
-.method constructor <init>(Lcom/b/ar;)V
+.method private constructor <init>(Lcom/b/o;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/b/s;->a:Lcom/b/ar;
+    iput-object p1, p0, Lcom/b/s;->a:Lcom/b/o;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
-.method private static a(Landroid/location/Location;)Z
-    .locals 4
+.method synthetic constructor <init>(Lcom/b/o;B)V
+    .locals 0
 
-    if-eqz p0, :cond_0
+    invoke-direct {p0, p1}, Lcom/b/s;-><init>(Lcom/b/o;)V
 
-    const-string v0, "gps"
-
-    invoke-virtual {p0}, Landroid/location/Location;->getProvider()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v0
-
-    const-wide v2, -0x3fa9800000000000L
-
-    cmpl-double v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v0
-
-    const-wide v2, 0x4056800000000000L
-
-    cmpg-double v0, v0, v2
-
-    if-gez v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v0
-
-    const-wide v2, -0x3f99800000000000L
-
-    cmpl-double v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v0
-
-    const-wide v2, 0x4066800000000000L
-
-    cmpg-double v0, v0, v2
-
-    if-gez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final onLocationChanged(Landroid/location/Location;)V
-    .locals 6
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
+
+    if-eqz p1, :cond_2
+
+    if-eqz p2, :cond_2
 
     :try_start_0
-    invoke-virtual {p1}, Landroid/location/Location;->getTime()J
+    iget-object v0, p0, Lcom/b/s;->a:Lcom/b/o;
 
-    move-result-wide v2
+    invoke-static {v0}, Lcom/b/o;->c(Lcom/b/o;)Landroid/net/wifi/WifiManager;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-result-object v0
 
-    move-result-wide v0
+    if-eqz v0, :cond_2
 
-    new-instance v4, Ljava/text/SimpleDateFormat;
+    iget-object v0, p0, Lcom/b/s;->a:Lcom/b/o;
 
-    const-string v5, "yyyy-MM-dd HH:mm:ss"
+    invoke-static {v0}, Lcom/b/o;->d(Lcom/b/o;)Ljava/util/Timer;
 
-    invoke-direct {v4, v5}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-eqz v0, :cond_2
 
-    move-result-object v5
+    iget-object v0, p0, Lcom/b/s;->a:Lcom/b/o;
 
-    invoke-virtual {v4, v5}, Ljava/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/b/o;->e(Lcom/b/o;)Ljava/util/List;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v0
 
-    move-result-object v5
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v4, v5}, Ljava/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    const-wide/16 v4, 0x0
+    move-result-object v0
 
-    cmp-long v4, v2, v4
+    if-eqz v0, :cond_2
 
-    if-gtz v4, :cond_5
+    const-string v0, "android.net.wifi.SCAN_RESULTS"
 
-    :goto_0
-    if-eqz p1, :cond_0
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/b/s;->a(Landroid/location/Location;)Z
+    move-result-object v1
 
-    move-result v2
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v2, :cond_1
+    move-result v0
 
-    :cond_0
-    :goto_1
-    return-void
+    if-eqz v0, :cond_2
 
-    :cond_1
-    invoke-virtual {p1}, Landroid/location/Location;->getSpeed()F
+    iget-object v0, p0, Lcom/b/s;->a:Lcom/b/o;
 
-    move-result v2
+    invoke-static {v0}, Lcom/b/o;->c(Lcom/b/o;)Landroid/net/wifi/WifiManager;
 
-    invoke-static {}, Lcom/b/ar;->g()I
+    move-result-object v0
 
-    move-result v3
-
-    int-to-float v3, v3
-
-    cmpl-float v2, v2, v3
-
-    if-lez v2, :cond_2
-
-    invoke-static {}, Lcom/b/ar;->h()I
-
-    move-result v2
-
-    invoke-static {v2}, Lcom/b/A;->a(I)V
-
-    invoke-static {}, Lcom/b/ar;->h()I
-
-    move-result v2
-
-    mul-int/lit8 v2, v2, 0xa
-
-    invoke-static {v2}, Lcom/b/A;->b(I)V
-
-    :goto_2
-    iget-object v2, p0, Lcom/b/s;->a:Lcom/b/ar;
-
-    invoke-static {v2}, Lcom/b/ar;->b(Lcom/b/ar;)Lcom/b/z;
+    invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getScanResults()Ljava/util/List;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/b/z;->a()Z
+    monitor-enter p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {p1}, Lcom/b/s;->a(Landroid/location/Location;)Z
+    :try_start_1
+    iget-object v0, p0, Lcom/b/s;->a:Lcom/b/o;
 
-    iget-object v2, p0, Lcom/b/s;->a:Lcom/b/ar;
+    invoke-static {v0}, Lcom/b/o;->e(Lcom/b/o;)Ljava/util/List;
 
-    invoke-static {v2}, Lcom/b/ar;->b(Lcom/b/ar;)Lcom/b/z;
+    move-result-object v0
 
-    move-result-object v2
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    invoke-virtual {v2}, Lcom/b/z;->a()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-static {p1}, Lcom/b/s;->a(Landroid/location/Location;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    invoke-virtual {p1, v2, v3}, Landroid/location/Location;->setTime(J)V
-
-    iget-object v2, p0, Lcom/b/s;->a:Lcom/b/ar;
+    iget-object v0, p0, Lcom/b/s;->a:Lcom/b/o;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    invoke-static {v2, v3, v4}, Lcom/b/ar;->a(Lcom/b/ar;J)J
+    invoke-static {v0, v3, v4}, Lcom/b/o;->a(Lcom/b/o;J)J
 
-    iget-object v2, p0, Lcom/b/s;->a:Lcom/b/ar;
+    if-eqz v2, :cond_0
 
-    invoke-static {v2, p1}, Lcom/b/ar;->a(Lcom/b/ar;Landroid/location/Location;)Landroid/location/Location;
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    iget-object v2, p0, Lcom/b/s;->a:Lcom/b/ar;
+    move-result v0
 
-    invoke-static {v2}, Lcom/b/ar;->c(Lcom/b/ar;)Z
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_0
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/wifi/ScanResult;
+
+    iget-object v3, p0, Lcom/b/s;->a:Lcom/b/o;
+
+    invoke-static {v3}, Lcom/b/o;->e(Lcom/b/o;)Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    new-instance v0, Lcom/b/t;
+
+    invoke-direct {v0, p0}, Lcom/b/t;-><init>(Lcom/b/s;)V
+
+    monitor-enter p0
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    :try_start_3
+    iget-object v1, p0, Lcom/b/s;->a:Lcom/b/o;
+
+    invoke-static {v1}, Lcom/b/o;->d(Lcom/b/o;)Ljava/util/Timer;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/b/s;->a:Lcom/b/o;
+
+    invoke-static {v1}, Lcom/b/o;->d(Lcom/b/o;)Ljava/util/Timer;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/Timer;->cancel()V
+
+    iget-object v1, p0, Lcom/b/s;->a:Lcom/b/o;
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v2}, Lcom/b/o;->a(Lcom/b/o;Ljava/util/Timer;)Ljava/util/Timer;
+
+    :cond_1
+    iget-object v1, p0, Lcom/b/s;->a:Lcom/b/o;
+
+    new-instance v2, Ljava/util/Timer;
+
+    invoke-direct {v2}, Ljava/util/Timer;-><init>()V
+
+    invoke-static {v1, v2}, Lcom/b/o;->a(Lcom/b/o;Ljava/util/Timer;)Ljava/util/Timer;
+
+    iget-object v1, p0, Lcom/b/s;->a:Lcom/b/o;
+
+    invoke-static {v1}, Lcom/b/o;->d(Lcom/b/o;)Ljava/util/Timer;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/b/o;->z()I
 
     move-result v2
 
-    const/4 v3, 0x1
+    int-to-long v2, v2
 
-    if-eq v2, v3, :cond_4
+    invoke-virtual {v1, v0, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
-    iget-object v2, p0, Lcom/b/s;->a:Lcom/b/ar;
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    const/4 v3, 0x0
+    :cond_2
+    :goto_1
+    return-void
 
-    invoke-static {v2, p1, v3, v0, v1}, Lcom/b/ar;->a(Lcom/b/ar;Landroid/location/Location;IJ)V
+    :catchall_0
+    move-exception v0
 
-    goto :goto_1
+    :try_start_4
+    monitor-exit p0
+
+    throw v0
 
     :catch_0
     move-exception v0
 
     goto :goto_1
 
-    :cond_2
-    invoke-virtual {p1}, Landroid/location/Location;->getSpeed()F
+    :catchall_1
+    move-exception v0
 
-    move-result v2
+    monitor-exit p0
 
-    invoke-static {}, Lcom/b/ar;->i()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    cmpl-float v2, v2, v3
-
-    if-lez v2, :cond_3
-
-    invoke-static {}, Lcom/b/ar;->j()I
-
-    move-result v2
-
-    invoke-static {v2}, Lcom/b/A;->a(I)V
-
-    invoke-static {}, Lcom/b/ar;->j()I
-
-    move-result v2
-
-    mul-int/lit8 v2, v2, 0xa
-
-    invoke-static {v2}, Lcom/b/A;->b(I)V
-
-    goto :goto_2
-
-    :cond_3
-    invoke-static {}, Lcom/b/ar;->k()I
-
-    move-result v2
-
-    invoke-static {v2}, Lcom/b/A;->a(I)V
-
-    invoke-static {}, Lcom/b/ar;->k()I
-
-    move-result v2
-
-    mul-int/lit8 v2, v2, 0xa
-
-    invoke-static {v2}, Lcom/b/A;->b(I)V
-
-    goto :goto_2
-
-    :cond_4
-    iget-object v0, p0, Lcom/b/s;->a:Lcom/b/ar;
-
-    const-string v1, "new location in indoor collect"
-
-    invoke-static {v0, v1}, Lcom/b/ar;->a(Lcom/b/ar;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto/16 :goto_1
-
-    :cond_5
-    move-wide v0, v2
-
-    goto/16 :goto_0
-.end method
-
-.method public final onProviderDisabled(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onProviderEnabled(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
-    .locals 0
-
-    return-void
+    throw v0
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 .end method

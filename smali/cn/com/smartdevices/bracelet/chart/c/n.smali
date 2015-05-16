@@ -43,7 +43,7 @@
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c/n;->b:I
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/weight/G;->c(FI)F
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/weight/ad;->c(FI)F
 
     move-result v0
 

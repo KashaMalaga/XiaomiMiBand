@@ -1,81 +1,128 @@
-.class public final Lcom/b/T;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/io/Closeable;
+.class Lcom/b/T;
+.super Ljava/io/FilterOutputStream;
 
 
 # instance fields
-.field final synthetic a:Lcom/b/P;
-
-.field private final b:Ljava/lang/String;
-
-.field private final c:J
-
-.field private final d:[Ljava/io/InputStream;
-
-.field private final e:[J
+.field final synthetic a:Lcom/b/S;
 
 
 # direct methods
-.method private constructor <init>(Lcom/b/P;Ljava/lang/String;J[Ljava/io/InputStream;[J)V
+.method private constructor <init>(Lcom/b/S;Ljava/io/OutputStream;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/b/T;->a:Lcom/b/P;
+    iput-object p1, p0, Lcom/b/T;->a:Lcom/b/S;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lcom/b/T;->b:Ljava/lang/String;
-
-    iput-wide p3, p0, Lcom/b/T;->c:J
-
-    iput-object p5, p0, Lcom/b/T;->d:[Ljava/io/InputStream;
-
-    iput-object p6, p0, Lcom/b/T;->e:[J
+    invoke-direct {p0, p2}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/b/P;Ljava/lang/String;J[Ljava/io/InputStream;[JLcom/b/U;)V
+.method synthetic constructor <init>(Lcom/b/S;Ljava/io/OutputStream;Lcom/b/W;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p6}, Lcom/b/T;-><init>(Lcom/b/P;Ljava/lang/String;J[Ljava/io/InputStream;[J)V
+    invoke-direct {p0, p1, p2}, Lcom/b/T;-><init>(Lcom/b/S;Ljava/io/OutputStream;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)Ljava/io/InputStream;
-    .locals 1
-
-    iget-object v0, p0, Lcom/b/T;->d:[Ljava/io/InputStream;
-
-    aget-object v0, v0, p1
-
-    return-object v0
-.end method
-
 .method public close()V
-    .locals 4
+    .locals 2
 
-    iget-object v1, p0, Lcom/b/T;->d:[Ljava/io/InputStream;
+    :try_start_0
+    iget-object v0, p0, Lcom/b/T;->out:Ljava/io/OutputStream;
 
-    array-length v2, v1
-
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    if-ge v0, v2, :cond_0
+    return-void
 
-    aget-object v3, v1, v0
+    :catch_0
+    move-exception v0
 
-    invoke-static {v3}, Lcom/b/al;->a(Ljava/io/Closeable;)V
+    iget-object v0, p0, Lcom/b/T;->a:Lcom/b/S;
 
-    add-int/lit8 v0, v0, 0x1
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/b/S;->a(Lcom/b/S;Z)Z
 
     goto :goto_0
+.end method
 
-    :cond_0
+.method public flush()V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/b/T;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    iget-object v0, p0, Lcom/b/T;->a:Lcom/b/S;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/b/S;->a(Lcom/b/S;Z)Z
+
+    goto :goto_0
+.end method
+
+.method public write(I)V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/b/T;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    iget-object v0, p0, Lcom/b/T;->a:Lcom/b/S;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/b/S;->a(Lcom/b/S;Z)Z
+
+    goto :goto_0
+.end method
+
+.method public write([BII)V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/b/T;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    iget-object v0, p0, Lcom/b/T;->a:Lcom/b/S;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/b/S;->a(Lcom/b/S;Z)Z
+
+    goto :goto_0
 .end method

@@ -56,7 +56,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/upgrade/UpgradeService;->getPackageName()Ljava/lang/String;
 
@@ -125,7 +125,7 @@
     return-void
 .end method
 
-.method public static a(Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)Z
+.method public static a(Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;Lcom/xiaomi/hm/health/bt/profile/e;)Z
     .locals 5
 
     const/4 v0, 0x0
@@ -150,13 +150,13 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;->getFirmwareVersionMajor()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/profile/e;->b()I
 
     move-result v2
 
@@ -170,7 +170,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;->getFirmwareVersionMinor()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/profile/e;->c()I
 
     move-result v2
 
@@ -178,7 +178,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;->getFirmwareVersionRevision()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/profile/e;->d()I
 
     move-result v2
 
@@ -186,7 +186,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;->getFirmwareVersionBuild()I
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/profile/e;->a()I
 
     move-result v2
 
@@ -218,7 +218,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->b:F
 
@@ -270,7 +270,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -309,9 +309,9 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/ui/dG;->d:Landroid/os/Handler;
+    sget-object v1, Lcn/com/smartdevices/bracelet/ui/dH;->d:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
@@ -325,7 +325,7 @@
 
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/ui/dG;->d:Landroid/os/Handler;
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/dH;->d:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 

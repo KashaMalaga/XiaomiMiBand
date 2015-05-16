@@ -58,7 +58,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    const v1, 0x7f020191
+    sget v1, Lcom/xiaomi/hm/health/b/a/h;->running_slidable_dot_normal:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -74,7 +74,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    const v1, 0x7f020190
+    sget v1, Lcom/xiaomi/hm/health/b/a/h;->running_slidable_dot_focused:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 

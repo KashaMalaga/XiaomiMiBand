@@ -3,7 +3,7 @@
 
 
 # static fields
-.field public static final ic_launcher:I = 0x7f0200be
+.field public static final ic_launcher:I = 0x7f0200bc
 
 
 # direct methods

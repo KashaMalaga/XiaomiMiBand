@@ -2,22 +2,30 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcn/com/smartdevices/bracelet/relation/db/a;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:I
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/DetailActivity;I)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/b;->b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
-
-    iput p2, p0, Lcn/com/smartdevices/bracelet/relation/b;->a:I
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/b;->a:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,40 +34,30 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public a(Lcn/com/smartdevices/bracelet/relation/db/a;Lcn/com/smartdevices/bracelet/relation/db/a;)I
+    .locals 4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/b;->b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+    iget-wide v0, p1, Lcn/com/smartdevices/bracelet/relation/db/a;->n:J
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->c:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    iget-wide v2, p2, Lcn/com/smartdevices/bracelet/relation/db/a;->n:J
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/relation/b;->a:I
+    sub-long/2addr v0, v2
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(I)V
+    long-to-int v0, v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/b;->b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+    return v0
+.end method
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->c:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/relation/b;->a:I
+    check-cast p1, Lcn/com/smartdevices/bracelet/relation/db/a;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->f(I)V
+    check-cast p2, Lcn/com/smartdevices/bracelet/relation/db/a;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/b;->b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/relation/b;->a(Lcn/com/smartdevices/bracelet/relation/db/a;Lcn/com/smartdevices/bracelet/relation/db/a;)I
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->d:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    move-result v0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/relation/b;->a:I
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/b;->b:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->d:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/relation/b;->a:I
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->f(I)V
-
-    return-void
+    return v0
 .end method

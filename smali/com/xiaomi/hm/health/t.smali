@@ -209,6 +209,26 @@
 
 .field public static final RoundProgressBar_textSize:I = 0x4
 
+.field public static final ScrollSlidingUpPanelLayout:[I
+
+.field public static final ScrollSlidingUpPanelLayout_dragViews:I = 0x5
+
+.field public static final ScrollSlidingUpPanelLayout_fadeColors:I = 0x3
+
+.field public static final ScrollSlidingUpPanelLayout_flingVelocitys:I = 0x4
+
+.field public static final ScrollSlidingUpPanelLayout_overlays:I = 0x6
+
+.field public static final ScrollSlidingUpPanelLayout_panelHeights:I = 0x0
+
+.field public static final ScrollSlidingUpPanelLayout_paralaxOffsets:I = 0x2
+
+.field public static final ScrollSlidingUpPanelLayout_scrollViews:I = 0x8
+
+.field public static final ScrollSlidingUpPanelLayout_shadowHeights:I = 0x1
+
+.field public static final ScrollSlidingUpPanelLayout_touchEvents:I = 0x7
+
 .field public static final SlidableTwoPanelLayout:[I
 
 .field public static final SlidableTwoPanelLayout_slidepanel_height:I = 0x0
@@ -406,7 +426,7 @@
 
     new-array v0, v3, [I
 
-    const v1, 0x7f010056
+    const v1, 0x7f010005
 
     aput v1, v0, v2
 
@@ -478,9 +498,17 @@
 
     sput-object v0, Lcom/xiaomi/hm/health/t;->RoundProgressBar:[I
 
+    const/16 v0, 0x9
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_c
+
+    sput-object v0, Lcom/xiaomi/hm/health/t;->ScrollSlidingUpPanelLayout:[I
+
     new-array v0, v3, [I
 
-    const v1, 0x7f01009b
+    const v1, 0x7f01001e
 
     aput v1, v0, v2
 
@@ -488,13 +516,13 @@
 
     new-array v0, v5, [I
 
-    fill-array-data v0, :array_c
+    fill-array-data v0, :array_d
 
     sput-object v0, Lcom/xiaomi/hm/health/t;->SlideMenu:[I
 
     new-array v0, v3, [I
 
-    const v1, 0x7f010019
+    const v1, 0x7f010022
 
     aput v1, v0, v2
 
@@ -502,7 +530,7 @@
 
     new-array v0, v5, [I
 
-    fill-array-data v0, :array_d
+    fill-array-data v0, :array_e
 
     sput-object v0, Lcom/xiaomi/hm/health/t;->SlidingUpPanelLayout:[I
 
@@ -510,7 +538,7 @@
 
     new-array v0, v0, [I
 
-    fill-array-data v0, :array_e
+    fill-array-data v0, :array_f
 
     sput-object v0, Lcom/xiaomi/hm/health/t;->TitlePageIndicator:[I
 
@@ -518,7 +546,7 @@
 
     new-array v0, v0, [I
 
-    fill-array-data v0, :array_f
+    fill-array-data v0, :array_10
 
     sput-object v0, Lcom/xiaomi/hm/health/t;->ViewPagerIndicator:[I
 
@@ -526,13 +554,13 @@
 
     new-array v0, v0, [I
 
-    fill-array-data v0, :array_10
+    fill-array-data v0, :array_11
 
     sput-object v0, Lcom/xiaomi/hm/health/t;->WeightGoalSetView:[I
 
     new-array v0, v5, [I
 
-    fill-array-data v0, :array_11
+    fill-array-data v0, :array_12
 
     sput-object v0, Lcom/xiaomi/hm/health/t;->WeightProgressBar:[I
 
@@ -540,44 +568,51 @@
 
     new-array v0, v0, [I
 
-    fill-array-data v0, :array_12
+    fill-array-data v0, :array_13
 
     sput-object v0, Lcom/xiaomi/hm/health/t;->WeightView:[I
 
     return-void
 
-    nop
-
     :array_0
     .array-data 4
-        0x7f01009c
-        0x7f01009d
+        0x7f01001f
+        0x7f010020
     .end array-data
 
     :array_1
     .array-data 4
         0x10100c4
         0x10100d4
-        0x7f010033
-        0x7f010035
-        0x7f010042
-        0x7f010043
-        0x7f010044
-        0x7f010045
-        0x7f010046
-        0x7f010047
+        0x7f01003c
+        0x7f01003e
+        0x7f01004b
+        0x7f01004c
+        0x7f01004d
+        0x7f01004e
+        0x7f01004f
+        0x7f010050
     .end array-data
 
     :array_2
     .array-data 4
-        0x7f010013
-        0x7f010014
-        0x7f010015
-        0x7f010016
-        0x7f010017
+        0x7f010006
+        0x7f010007
+        0x7f010008
+        0x7f010009
+        0x7f01000a
     .end array-data
 
     :array_3
+    .array-data 4
+        0x7f010000
+        0x7f010001
+        0x7f010002
+        0x7f010003
+        0x7f010004
+    .end array-data
+
+    :array_4
     .array-data 4
         0x7f010051
         0x7f010052
@@ -586,68 +621,48 @@
         0x7f010055
     .end array-data
 
-    :array_4
-    .array-data 4
-        0x7f010048
-        0x7f010049
-        0x7f01004a
-        0x7f01004b
-        0x7f01004c
-    .end array-data
-
     :array_5
     .array-data 4
-        0x7f010094
-        0x7f010095
-        0x7f010096
-        0x7f010097
-        0x7f010098
-        0x7f010099
-        0x7f01009a
+        0x7f0100a0
+        0x7f0100a1
+        0x7f0100a2
+        0x7f0100a3
+        0x7f0100a4
+        0x7f0100a5
+        0x7f0100a6
     .end array-data
 
     :array_6
     .array-data 4
-        0x7f010081
-        0x7f010082
+        0x7f01008d
+        0x7f01008e
     .end array-data
 
     :array_7
     .array-data 4
-        0x7f010022
-        0x7f010023
-        0x7f010024
-        0x7f010025
-        0x7f010026
-        0x7f010027
-        0x7f010028
-        0x7f010029
-        0x7f01002a
         0x7f01002b
         0x7f01002c
+        0x7f01002d
+        0x7f01002e
+        0x7f01002f
+        0x7f010030
+        0x7f010031
+        0x7f010032
+        0x7f010033
+        0x7f010034
+        0x7f010035
     .end array-data
 
     :array_8
     .array-data 4
-        0x7f01004d
-        0x7f01004e
-        0x7f01004f
-        0x7f010050
+        0x7f010056
+        0x7f010057
+        0x7f010058
+        0x7f010059
     .end array-data
 
     :array_9
     .array-data 4
-        0x7f010000
-        0x7f010001
-        0x7f010002
-        0x7f010003
-        0x7f010004
-        0x7f010005
-        0x7f010006
-        0x7f010007
-        0x7f010008
-        0x7f010009
-        0x7f01000a
         0x7f01000b
         0x7f01000c
         0x7f01000d
@@ -656,117 +671,125 @@
         0x7f010010
         0x7f010011
         0x7f010012
+        0x7f010013
+        0x7f010014
+        0x7f010015
+        0x7f010016
+        0x7f010017
+        0x7f010018
+        0x7f010019
+        0x7f01001a
+        0x7f01001b
+        0x7f01001c
+        0x7f01001d
     .end array-data
 
     :array_a
     .array-data 4
-        0x7f01008a
-        0x7f01008b
-        0x7f01008c
-        0x7f01008d
-        0x7f01008e
-        0x7f01008f
-        0x7f010090
-        0x7f010091
-        0x7f010092
-        0x7f010093
+        0x7f010096
+        0x7f010097
+        0x7f010098
+        0x7f010099
+        0x7f01009a
+        0x7f01009b
+        0x7f01009c
+        0x7f01009d
+        0x7f01009e
+        0x7f01009f
     .end array-data
 
     :array_b
     .array-data 4
-        0x7f01005f
-        0x7f010060
-        0x7f010061
+        0x7f01006b
+        0x7f01006c
+        0x7f01006d
+        0x7f01006e
+        0x7f01006f
+        0x7f010070
+        0x7f010071
+        0x7f010072
+        0x7f010073
+    .end array-data
+
+    :array_c
+    .array-data 4
         0x7f010062
         0x7f010063
         0x7f010064
         0x7f010065
         0x7f010066
         0x7f010067
-    .end array-data
-
-    :array_c
-    .array-data 4
-        0x7f01001a
-        0x7f01001b
-        0x7f01001c
-        0x7f01001d
-        0x7f01001e
-        0x7f01001f
-        0x7f010020
-        0x7f010021
+        0x7f010068
+        0x7f010069
+        0x7f01006a
     .end array-data
 
     :array_d
     .array-data 4
-        0x7f010057
-        0x7f010058
-        0x7f010059
+        0x7f010023
+        0x7f010024
+        0x7f010025
+        0x7f010026
+        0x7f010027
+        0x7f010028
+        0x7f010029
+        0x7f01002a
+    .end array-data
+
+    :array_e
+    .array-data 4
         0x7f01005a
         0x7f01005b
         0x7f01005c
         0x7f01005d
         0x7f01005e
+        0x7f01005f
+        0x7f010060
+        0x7f010061
     .end array-data
 
-    :array_e
+    :array_f
     .array-data 4
         0x1010095
         0x1010098
         0x10100d4
-        0x7f010034
+        0x7f01003d
+        0x7f010040
+        0x7f010041
+        0x7f010042
+        0x7f010043
+        0x7f010044
+        0x7f010045
+        0x7f010046
+        0x7f010047
+        0x7f010048
+        0x7f010049
+        0x7f01004a
+    .end array-data
+
+    :array_10
+    .array-data 4
+        0x7f010036
         0x7f010037
         0x7f010038
         0x7f010039
         0x7f01003a
         0x7f01003b
-        0x7f01003c
-        0x7f01003d
-        0x7f01003e
-        0x7f01003f
-        0x7f010040
-        0x7f010041
-    .end array-data
-
-    :array_f
-    .array-data 4
-        0x7f01002d
-        0x7f01002e
-        0x7f01002f
-        0x7f010030
-        0x7f010031
-        0x7f010032
-    .end array-data
-
-    :array_10
-    .array-data 4
-        0x7f010083
-        0x7f010084
-        0x7f010085
-        0x7f010086
-        0x7f010087
-        0x7f010088
-        0x7f010089
     .end array-data
 
     :array_11
     .array-data 4
-        0x7f010068
-        0x7f010069
-        0x7f01006a
-        0x7f01006b
-        0x7f01006c
-        0x7f01006d
-        0x7f01006e
-        0x7f01006f
+        0x7f01008f
+        0x7f010090
+        0x7f010091
+        0x7f010092
+        0x7f010093
+        0x7f010094
+        0x7f010095
     .end array-data
 
     :array_12
     .array-data 4
-        0x7f010070
-        0x7f010071
-        0x7f010072
-        0x7f010073
         0x7f010074
         0x7f010075
         0x7f010076
@@ -775,11 +798,27 @@
         0x7f010079
         0x7f01007a
         0x7f01007b
+    .end array-data
+
+    :array_13
+    .array-data 4
         0x7f01007c
         0x7f01007d
         0x7f01007e
         0x7f01007f
         0x7f010080
+        0x7f010081
+        0x7f010082
+        0x7f010083
+        0x7f010084
+        0x7f010085
+        0x7f010086
+        0x7f010087
+        0x7f010088
+        0x7f010089
+        0x7f01008a
+        0x7f01008b
+        0x7f01008c
     .end array-data
 .end method
 

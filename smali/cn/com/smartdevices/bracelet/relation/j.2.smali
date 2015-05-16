@@ -59,7 +59,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->c:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
     const/4 v1, 0x0
 

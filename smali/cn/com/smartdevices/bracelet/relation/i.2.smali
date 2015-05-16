@@ -41,7 +41,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->c:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a()Landroid/animation/Animator;
 
@@ -57,7 +57,7 @@
 
     iget-object v1, v1, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->c:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->c()V
 
@@ -121,7 +121,9 @@
 .end method
 
 .method public c(I)V
-    .locals 6
+    .locals 9
+
+    const-wide/16 v7, 0x3e8
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/i;->a:Lcn/com/smartdevices/bracelet/relation/h;
 
@@ -162,99 +164,95 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/relation/db/a;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/i;->a:Lcn/com/smartdevices/bracelet/relation/h;
+    iget v1, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->m:I
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+    iget v2, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->l:I
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->b(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/widget/TextView;
-
-    move-result-object v1
+    add-int/2addr v1, v2
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/i;->a:Lcn/com/smartdevices/bracelet/relation/h;
 
     iget-object v2, v2, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    iget-wide v3, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->n:J
-
-    const v5, 0x7f09046f
-
-    invoke-virtual {v2, v3, v4, v5}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->a(JI)Ljava/lang/String;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->i(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/widget/TextView;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/relation/i;->a:Lcn/com/smartdevices/bracelet/relation/h;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/i;->a:Lcn/com/smartdevices/bracelet/relation/h;
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+    iget-wide v4, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->n:J
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->c(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/widget/TextView;
+    const v6, 0x7f0904eb
 
-    move-result-object v1
+    invoke-virtual {v3, v4, v5, v6}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->a(JI)Ljava/lang/String;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget v3, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->k:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ""
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/i;->a:Lcn/com/smartdevices/bracelet/relation/h;
-
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
-
-    iget v2, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->o:I
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/chart/c/r;->c(Landroid/content/Context;I)[Ljava/lang/String;
-
-    move-result-object v1
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/i;->a:Lcn/com/smartdevices/bracelet/relation/h;
 
     iget-object v2, v2, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->d(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/widget/TextView;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->j(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/widget/TextView;
 
     move-result-object v2
 
-    const/4 v3, 0x0
+    const-string v3, "HH:mm"
 
-    aget-object v1, v1, v3
+    iget-wide v4, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->q:J
 
-    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    mul-long/2addr v4, v7
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/i;->a:Lcn/com/smartdevices/bracelet/relation/h;
+    invoke-static {v3, v4, v5}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+    move-result-object v3
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->e(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/widget/TextView;
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    move-result-object v1
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/relation/i;->a:Lcn/com/smartdevices/bracelet/relation/h;
 
-    iget v0, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->p:I
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
 
-    int-to-long v2, v0
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->k(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/widget/TextView;
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(J)Ljava/lang/String;
+    move-result-object v2
+
+    const-string v3, "HH:mm"
+
+    iget-wide v4, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->q:J
+
+    mul-long/2addr v4, v7
+
+    const v0, 0xea60
+
+    mul-int/2addr v0, v1
+
+    int-to-long v6, v0
+
+    add-long/2addr v4, v6
+
+    invoke-static {v3, v4, v5}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/i;->a:Lcn/com/smartdevices/bracelet/relation/h;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/relation/h;->f:Lcn/com/smartdevices/bracelet/relation/DetailActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->l(Lcn/com/smartdevices/bracelet/relation/DetailActivity;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/relation/DetailActivity;->a(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 .end method

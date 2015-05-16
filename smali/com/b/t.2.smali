@@ -1,39 +1,51 @@
 .class final Lcom/b/t;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/util/TimerTask;
+
+
+# instance fields
+.field private synthetic a:Lcom/b/s;
 
 
 # direct methods
-.method constructor <init>(Lcom/b/ar;)V
+.method constructor <init>(Lcom/b/s;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    iput-object p1, p0, Lcom/b/t;->a:Lcom/b/s;
+
+    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
-
-    if-eqz p2, :cond_0
+.method public final run()V
+    .locals 1
 
     :try_start_0
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "android.location.GPS_FIX_CHANGE"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    sget-boolean v0, Lcom/b/I;->a:Z
 
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/b/t;->a:Lcom/b/s;
 
-    sput-boolean v0, Lcom/b/ar;->b:Z
+    iget-object v0, v0, Lcom/b/s;->a:Lcom/b/o;
+
+    invoke-static {v0}, Lcom/b/o;->c(Lcom/b/o;)Landroid/net/wifi/WifiManager;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/b/t;->a:Lcom/b/s;
+
+    iget-object v0, v0, Lcom/b/s;->a:Lcom/b/o;
+
+    invoke-static {v0}, Lcom/b/o;->c(Lcom/b/o;)Landroid/net/wifi/WifiManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->startScan()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

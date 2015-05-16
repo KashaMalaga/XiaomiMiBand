@@ -1,62 +1,181 @@
 .class Lcn/com/smartdevices/bracelet/view/ad;
-.super Ljava/lang/Object;
+.super Landroid/support/v7/widget/N;
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/support/v7/widget/N",
+        "<",
+        "Lcn/com/smartdevices/bracelet/view/af;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;
 
-.field final synthetic b:I
-
-.field final synthetic c:Lcn/com/smartdevices/bracelet/view/ac;
+.field private b:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/weight/UserInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/view/ac;Lcn/com/smartdevices/bracelet/weight/UserInfo;I)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/weight/UserInfo;",
+            ">;)V"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/ad;->c:Lcn/com/smartdevices/bracelet/view/ac;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/ad;->a:Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/view/ad;->a:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+    invoke-direct {p0}, Landroid/support/v7/widget/N;-><init>()V
 
-    iput p3, p0, Lcn/com/smartdevices/bracelet/view/ad;->b:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/view/ad;->b:Ljava/util/List;
 
     return-void
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/view/ad;)Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/ad;->b:Ljava/util/List;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public a()I
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/ad;->b:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public synthetic a(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/aj;
+    .locals 1
+
+    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/view/ad;->c(Landroid/view/ViewGroup;I)Lcn/com/smartdevices/bracelet/view/af;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic a(Landroid/support/v7/widget/aj;I)V
+    .locals 0
+
+    check-cast p1, Lcn/com/smartdevices/bracelet/view/af;
+
+    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/view/ad;->a(Lcn/com/smartdevices/bracelet/view/af;I)V
+
+    return-void
+.end method
+
+.method public a(Lcn/com/smartdevices/bracelet/view/af;I)V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/ad;->c:Lcn/com/smartdevices/bracelet/view/ac;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/ad;->b:Ljava/util/List;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/view/ac;->a:Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c(Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;)Lcn/com/smartdevices/bracelet/view/ab;
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/ad;->c:Lcn/com/smartdevices/bracelet/view/ac;
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/view/af;->r:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/view/ac;->a:Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;
+    const v2, 0x7f020071
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->c(Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;)Lcn/com/smartdevices/bracelet/view/ab;
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->setImageResource(I)V
 
-    move-result-object v0
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/view/af;->r:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/ad;->a:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/ad;->b:I
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;->a(Ljava/lang/String;)V
 
-    invoke-interface {v0, p1, v1, v2}, Lcn/com/smartdevices/bracelet/view/ab;->a(Landroid/view/View;Lcn/com/smartdevices/bracelet/weight/UserInfo;I)V
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/view/af;->r:Lcn/com/smartdevices/bracelet/view/WeightUserAvatar;
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/G;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Landroid/widget/ImageView;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/ad;->a:Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;->b(Lcn/com/smartdevices/bracelet/view/WeightUserQuickPicker;)I
+
+    move-result v1
+
+    if-ne v1, p2, :cond_0
+
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/view/af;->a:Landroid/view/View;
+
+    const/high16 v2, 0x3f800000
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
+
+    :goto_0
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/view/af;->a:Landroid/view/View;
+
+    new-instance v2, Lcn/com/smartdevices/bracelet/view/ae;
+
+    invoke-direct {v2, p0, v0, p2}, Lcn/com/smartdevices/bracelet/view/ae;-><init>(Lcn/com/smartdevices/bracelet/view/ad;Lcn/com/smartdevices/bracelet/weight/UserInfo;I)V
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-void
 
     :cond_0
-    return-void
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/view/af;->a:Landroid/view/View;
+
+    const v2, 0x3e99999a
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
+
+    goto :goto_0
+.end method
+
+.method public c(Landroid/view/ViewGroup;I)Lcn/com/smartdevices/bracelet/view/af;
+    .locals 3
+
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f030109
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/view/af;
+
+    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/view/af;-><init>(Landroid/view/View;)V
+
+    return-object v1
 .end method

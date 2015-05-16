@@ -152,7 +152,7 @@
 
     monitor-enter v2
     :try_end_0
-    .catch Lcom/xiaomi/g/C; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/xiaomi/h/C; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
     sget-object v0, Lcom/xiaomi/push/service/H;->a:Ljava/util/Map;
@@ -200,7 +200,7 @@
     :try_start_2
     throw v0
     :try_end_2
-    .catch Lcom/xiaomi/g/C; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Lcom/xiaomi/h/C; {:try_start_2 .. :try_end_2} :catch_0
 
     :catch_0
     move-exception v0
@@ -261,7 +261,7 @@
 
     monitor-enter v2
     :try_end_0
-    .catch Lcom/xiaomi/g/C; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/xiaomi/h/C; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
     sget-object v0, Lcom/xiaomi/push/service/H;->b:Ljava/util/ArrayList;
@@ -305,7 +305,7 @@
     :try_start_2
     throw v0
     :try_end_2
-    .catch Lcom/xiaomi/g/C; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Lcom/xiaomi/h/C; {:try_start_2 .. :try_end_2} :catch_0
 
     :catch_0
     move-exception v0

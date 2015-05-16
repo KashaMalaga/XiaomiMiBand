@@ -3,9 +3,9 @@
 
 
 # instance fields
-.field a:Landroid/widget/TextView;
+.field public a:Landroid/widget/TextView;
 
-.field b:Landroid/widget/ImageView;
+.field public b:Landroid/widget/TextView;
 
 
 # direct methods

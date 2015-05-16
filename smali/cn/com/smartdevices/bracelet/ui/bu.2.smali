@@ -1,12 +1,12 @@
 .class public Lcn/com/smartdevices/bracelet/ui/bu;
-.super Lcn/com/smartdevices/bracelet/ui/bp;
+.super Lcn/com/smartdevices/bracelet/ui/bo;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/bp;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/bo;-><init>()V
 
     return-void
 .end method
@@ -16,29 +16,21 @@
 .method protected a(Landroid/view/View;)V
     .locals 5
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bx;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bw;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    const v2, 0x7f0901d4
+    const v2, 0x7f090270
 
-    const v3, 0x7f0901d5
+    const v3, 0x7f090271
 
-    const/4 v4, 0x0
+    const v4, 0x7f090272
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/ui/bx;-><init>(Landroid/content/Context;III)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/ui/bw;-><init>(Landroid/content/Context;III)V
 
-    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/ui/bu;->a(Landroid/view/View;Lcn/com/smartdevices/bracelet/ui/bx;)V
-
-    return-void
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/bp;->onCreate(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/ui/bu;->a(Landroid/view/View;Lcn/com/smartdevices/bracelet/ui/bw;)V
 
     return-void
 .end method

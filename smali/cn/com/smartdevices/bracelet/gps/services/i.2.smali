@@ -3,15 +3,13 @@
 
 
 # instance fields
-.field public a:Lcn/com/smartdevices/bracelet/gps/b/E;
+.field public a:I
 
 .field public b:I
 
-.field public c:I
+.field public c:J
 
-.field public d:J
-
-.field public e:I
+.field public d:I
 
 
 # direct methods
@@ -28,7 +26,7 @@
 .method public a()Z
     .locals 4
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->d:J
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->c:J
 
     const-wide/16 v2, 0x0
 
@@ -36,15 +34,11 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->a:Lcn/com/smartdevices/bracelet/gps/b/E;
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->b:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->a:I
 
     if-lez v0, :cond_0
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->c:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/i;->b:I
 
     if-gtz v0, :cond_1
 

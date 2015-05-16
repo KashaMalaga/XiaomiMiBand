@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/relation/n;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/n;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/p;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/p;->a:Lcn/com/smartdevices/bracelet/relation/n;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,40 +22,30 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/p;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
+    return-void
+.end method
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->a(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)Landroid/view/View;
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/p;->a:Lcn/com/smartdevices/bracelet/relation/n;
 
-    const/16 v1, 0x8
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/n;->b(Lcn/com/smartdevices/bracelet/relation/n;)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    return-void
+.end method
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/p;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->b(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
+    return-void
+.end method
 
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/p;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->c(Lcn/com/smartdevices/bracelet/relation/FriendActivity;)Lcn/com/smartdevices/bracelet/relation/u;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/u;->notifyDataSetChanged()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/p;->a:Lcn/com/smartdevices/bracelet/relation/FriendActivity;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/relation/FriendActivity;->a()V
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

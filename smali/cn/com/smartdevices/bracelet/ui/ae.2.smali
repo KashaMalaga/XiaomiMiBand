@@ -1,359 +1,67 @@
 .class Lcn/com/smartdevices/bracelet/ui/ae;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/GestureDetector$OnGestureListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ad;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ac;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ad;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ac;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ac;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 5
+.method public onDown(Landroid/view/MotionEvent;)Z
+    .locals 1
 
-    const/4 v4, 0x1
+    const/4 v0, 0x0
 
-    const/4 v3, 0x0
+    return v0
+.end method
 
-    iget v0, p1, Landroid/os/Message;->what:I
+.method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    .locals 1
 
-    if-nez v0, :cond_1
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
+    return v0
+.end method
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ad;->a(Lcn/com/smartdevices/bracelet/ui/ad;)Lcn/com/smartdevices/bracelet/e/b;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcn/com/smartdevices/bracelet/e/b;->m()Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ad;->a(Lcn/com/smartdevices/bracelet/ui/ad;Lcom/xiaomi/hm/health/dataprocess/SportDay;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ad;->a(Lcn/com/smartdevices/bracelet/ui/ad;)Lcn/com/smartdevices/bracelet/e/b;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcn/com/smartdevices/bracelet/e/b;->l()Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ad;->b(Lcn/com/smartdevices/bracelet/ui/ad;Lcom/xiaomi/hm/health/dataprocess/SportDay;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ad;->a(Lcn/com/smartdevices/bracelet/ui/ad;)Lcn/com/smartdevices/bracelet/e/b;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcn/com/smartdevices/bracelet/e/b;->j()Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ad;->c(Lcn/com/smartdevices/bracelet/ui/ad;Lcom/xiaomi/hm/health/dataprocess/SportDay;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ad;->a(Lcn/com/smartdevices/bracelet/ui/ad;)Lcn/com/smartdevices/bracelet/e/b;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcn/com/smartdevices/bracelet/e/b;->k()Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ad;->d(Lcn/com/smartdevices/bracelet/ui/ad;Lcom/xiaomi/hm/health/dataprocess/SportDay;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    :cond_0
-    :goto_0
-    const-string v0, "Dynamic.Detail"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Today : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/ad;->c(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " , StartDay : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/ad;->d(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " , StopDay : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/ad;->e(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " , CurrentDay : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/ad;->b(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->b(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ad;->e(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->equals(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->b(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ad;->d(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->equals(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->f(Lcn/com/smartdevices/bracelet/ui/ad;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->g(Lcn/com/smartdevices/bracelet/ui/ad;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setEnabled(Z)V
-
-    :goto_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->h(Lcn/com/smartdevices/bracelet/ui/ad;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->m()Lcn/com/smartdevices/bracelet/chart/b/d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/b/d;->b()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->h(Lcn/com/smartdevices/bracelet/ui/ad;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->h(Lcn/com/smartdevices/bracelet/ui/ad;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(I)Lcn/com/smartdevices/bracelet/chart/b/e;
+.method public onLongPress(Landroid/view/MotionEvent;)V
+    .locals 0
 
     return-void
+.end method
 
-    :cond_1
-    iget v0, p1, Landroid/os/Message;->what:I
+.method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    .locals 1
 
-    if-ne v0, v4, :cond_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
+    return v0
+.end method
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
+.method public onShowPress(Landroid/view/MotionEvent;)V
+    .locals 0
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ad;->b(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
+    return-void
+.end method
 
-    move-result-object v1
+.method public onSingleTapUp(Landroid/view/MotionEvent;)Z
+    .locals 1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ad;->e(Lcn/com/smartdevices/bracelet/ui/ad;Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
+    const/4 v0, 0x0
 
-    goto/16 :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->b(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ad;->e(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->equals(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->f(Lcn/com/smartdevices/bracelet/ui/ad;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->g(Lcn/com/smartdevices/bracelet/ui/ad;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setEnabled(Z)V
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->b(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ad;->d(Lcn/com/smartdevices/bracelet/ui/ad;)Lcom/xiaomi/hm/health/dataprocess/SportDay;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->equals(Lcom/xiaomi/hm/health/dataprocess/SportDay;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->f(Lcn/com/smartdevices/bracelet/ui/ad;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->g(Lcn/com/smartdevices/bracelet/ui/ad;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->setEnabled(Z)V
-
-    goto :goto_1
-
-    :cond_4
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->f(Lcn/com/smartdevices/bracelet/ui/ad;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/ad;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ad;->g(Lcn/com/smartdevices/bracelet/ui/ad;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->setEnabled(Z)V
-
-    goto/16 :goto_1
+    return v0
 .end method

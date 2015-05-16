@@ -1,0 +1,1 @@
+ALTER TABLE WeightInfos ADD COLUMN DeviceId TEXT;

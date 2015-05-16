@@ -1,68 +1,55 @@
 .class Lcn/com/smartdevices/bracelet/ui/cr;
-.super Lcn/com/smartdevices/bracelet/a/b;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cr;->b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cr;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c(Ljava/lang/Object;)V
+.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 2
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
+    if-eqz p2, :cond_0
 
-    const-string v0, "NewAlarmActivity"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    const-string v1, "set alarm to mili OK"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public d(Ljava/lang/Object;)V
-    .locals 3
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->b(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Landroid/content/Context;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cr;->b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    const/16 v1, 0x1e
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->b(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Landroid/content/Context;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->setDuration(I)V
 
-    move-result-object v1
+    :goto_0
+    return-void
 
-    const v2, 0x7f090065
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    const/4 v1, 0x0
 
-    return-void
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->setDuration(I)V
+
+    goto :goto_0
 .end method

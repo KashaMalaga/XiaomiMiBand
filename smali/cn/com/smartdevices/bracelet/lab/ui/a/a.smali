@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/lab/ui/a/a;
-.super Lcn/com/smartdevices/bracelet/ui/aa;
+.super Lcom/huami/android/view/b;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aa;-><init>()V
+    invoke-direct {p0}, Lcom/huami/android/view/b;-><init>()V
 
     return-void
 .end method
@@ -22,7 +22,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f030073
+    const v0, 0x7f03007b
 
     return v0
 .end method
@@ -51,7 +51,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070259
+    .packed-switch 0x7f0d0270
         :pswitch_1
         :pswitch_0
         :pswitch_0
@@ -62,7 +62,7 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/aa;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/huami/android/view/b;->onCreate(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
 .method public onDestroy()V
     .locals 0
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/aa;->onDestroy()V
+    invoke-super {p0}, Lcom/huami/android/view/b;->onDestroy()V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
 .method public onPause()V
     .locals 1
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/aa;->onPause()V
+    invoke-super {p0}, Lcom/huami/android/view/b;->onPause()V
 
     const-string v0, "PageBraceletHand"
 
@@ -90,7 +90,7 @@
 .method public onResume()V
     .locals 1
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/aa;->onResume()V
+    invoke-super {p0}, Lcom/huami/android/view/b;->onResume()V
 
     const-string v0, "PageBraceletHand"
 
@@ -102,9 +102,9 @@
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 1
 
-    invoke-super {p0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/aa;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/huami/android/view/b;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const v0, 0x7f070259
+    const v0, 0x7f0d0270
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07025c
+    const v0, 0x7f0d0273
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

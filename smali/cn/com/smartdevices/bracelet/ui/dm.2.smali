@@ -29,13 +29,13 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dm;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
 
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    const-class v2, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dm;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;->startActivityForResult(Landroid/content/Intent;I)V
 

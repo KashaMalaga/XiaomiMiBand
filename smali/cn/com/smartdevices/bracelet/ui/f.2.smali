@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+.field final synthetic a:Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
 .field final synthetic b:Lcn/com/smartdevices/bracelet/ui/e;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/e;Lcn/com/smartdevices/bracelet/model/AlarmClockItem;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/e;Lcom/xiaomi/hm/health/bt/AlarmClockItem;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/f;->b:Lcn/com/smartdevices/bracelet/ui/e;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/f;->a:Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/f;->a:Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,11 +29,11 @@
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/f;->a:Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/f;->a:Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
-    invoke-virtual {v0, p2}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->setEnabled(Z)V
+    invoke-virtual {v0, p2}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/f;->a:Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/f;->a:Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/f;->b:Lcn/com/smartdevices/bracelet/ui/e;
 
@@ -43,7 +43,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Lcn/com/smartdevices/bracelet/model/AlarmClockItem;Landroid/content/Context;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Lcom/xiaomi/hm/health/bt/AlarmClockItem;Landroid/content/Context;)V
 
     const-string v0, "AlarmAdapter"
 
@@ -57,9 +57,9 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/f;->a:Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/f;->a:Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->toJson()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->toJson()Ljava/lang/String;
 
     move-result-object v2
 
@@ -71,13 +71,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/f;->b:Lcn/com/smartdevices/bracelet/ui/e;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/e;->notifyDataSetChanged()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/l;
+    new-instance v0, Lcom/xiaomi/hm/health/bt/a/l;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/f;->b:Lcn/com/smartdevices/bracelet/ui/e;
 
@@ -91,9 +91,9 @@
 
     invoke-direct {v2, p0, p2}, Lcn/com/smartdevices/bracelet/ui/g;-><init>(Lcn/com/smartdevices/bracelet/ui/f;Z)V
 
-    invoke-direct {v0, v1, v2}, Lcn/com/smartdevices/bracelet/a/l;-><init>(Ljava/util/ArrayList;Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v0, v1, v2}, Lcom/xiaomi/hm/health/bt/a/l;-><init>(Ljava/util/ArrayList;Lcom/xiaomi/hm/health/bt/a/b;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/l;->c()V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/a/l;->e()V
 
     return-void
 .end method

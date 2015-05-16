@@ -112,7 +112,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/huami/android/a/j;->beep:I
+    sget v2, Lcom/huami/android/a/k;->beep:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->openRawResourceFd(I)Landroid/content/res/AssetFileDescriptor;
     :try_end_0

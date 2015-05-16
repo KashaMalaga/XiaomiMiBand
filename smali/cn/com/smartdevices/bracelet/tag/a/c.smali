@@ -2,7 +2,7 @@
 .super Landroid/os/HandlerThread;
 
 # interfaces
-.implements Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;
+.implements Lcom/xiaomi/hm/health/bt/profile/f;
 
 
 # static fields
@@ -36,15 +36,15 @@
 
 .field private g:Ljava/io/File;
 
-.field private h:Lcn/com/smartdevices/bracelet/d/c;
+.field private h:Lcn/com/smartdevices/bracelet/c/c;
 
-.field private i:Lcn/com/smartdevices/bracelet/d/a;
+.field private i:Lcn/com/smartdevices/bracelet/c/a;
 
-.field private j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+.field private j:Lcom/xiaomi/hm/health/bt/profile/v;
 
 .field private k:I
 
-.field private l:Lcn/com/smartdevices/bracelet/tag/a/j;
+.field private l:Lcn/com/smartdevices/bracelet/tag/a/k;
 
 .field private final m:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -87,11 +87,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f090416
+    const v3, 0x7f09048c
 
-    const v4, 0x7f0200d6
+    const v4, 0x7f0200d4
 
-    const v5, 0x7f0200d7
+    const v5, 0x7f0200d5
 
     const-string v6, "sleep"
 
@@ -103,11 +103,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f090417
+    const v3, 0x7f09048d
 
-    const v4, 0x7f02009f
+    const v4, 0x7f02009d
 
-    const v5, 0x7f0200a0
+    const v5, 0x7f02009e
 
     const-string v6, "bath"
 
@@ -119,11 +119,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f09042b
+    const v3, 0x7f0904a6
 
-    const v4, 0x7f0200a3
+    const v4, 0x7f0200a1
 
-    const v5, 0x7f0200a4
+    const v5, 0x7f0200a2
 
     const-string v6, "tooth"
 
@@ -135,11 +135,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f090418
+    const v3, 0x7f09048e
 
-    const v4, 0x7f0200cc
+    const v4, 0x7f0200ca
 
-    const v5, 0x7f0200cd
+    const v5, 0x7f0200cb
 
     const-string v6, "run"
 
@@ -151,11 +151,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f090419
+    const v3, 0x7f09048f
 
-    const v4, 0x7f0200a1
+    const v4, 0x7f02009f
 
-    const v5, 0x7f0200a2
+    const v5, 0x7f0200a0
 
     const-string v6, "bike"
 
@@ -167,11 +167,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f09041a
+    const v3, 0x7f090490
 
-    const v4, 0x7f0200e0
+    const v4, 0x7f0200de
 
-    const v5, 0x7f0200e1
+    const v5, 0x7f0200df
 
     const-string v6, "walk"
 
@@ -183,11 +183,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f09041b
+    const v3, 0x7f090491
 
-    const v4, 0x7f02009b
+    const v4, 0x7f020099
 
-    const v5, 0x7f02009c
+    const v5, 0x7f02009a
 
     const-string v6, "badminton"
 
@@ -199,11 +199,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f09041c
+    const v3, 0x7f090492
 
-    const v4, 0x7f02009d
+    const v4, 0x7f02009b
 
-    const v5, 0x7f02009e
+    const v5, 0x7f02009c
 
     const-string v6, "basketball"
 
@@ -215,11 +215,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f09041d
+    const v3, 0x7f090493
 
-    const v4, 0x7f0200c8
+    const v4, 0x7f0200c6
 
-    const v5, 0x7f0200c9
+    const v5, 0x7f0200c7
 
     const-string v6, "pingpong"
 
@@ -231,11 +231,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f09041e
+    const v3, 0x7f090494
 
-    const v4, 0x7f0200d4
+    const v4, 0x7f0200d2
 
-    const v5, 0x7f0200d5
+    const v5, 0x7f0200d3
 
     const-string v6, "sit"
 
@@ -247,11 +247,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f09041f
+    const v3, 0x7f090495
 
-    const v4, 0x7f0200da
+    const v4, 0x7f0200d8
 
-    const v5, 0x7f0200db
+    const v5, 0x7f0200d9
 
     const-string v6, "stand"
 
@@ -263,11 +263,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tag/a/b;
 
-    const v3, 0x7f090420
+    const v3, 0x7f090496
 
-    const v4, 0x7f0200a5
+    const v4, 0x7f0200a3
 
-    const v5, 0x7f0200a6
+    const v5, 0x7f0200a4
 
     const-string v6, "bus"
 
@@ -313,15 +313,15 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->e:Landroid/content/Context;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->a()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->a()Lcom/xiaomi/hm/health/bt/profile/v;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->q:Ljava/lang/String;
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v2
 
@@ -416,7 +416,7 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/d/c;
+    new-instance v0, Lcn/com/smartdevices/bracelet/c/c;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->g:Ljava/io/File;
 
@@ -424,13 +424,13 @@
 
     move-result-object v2
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/d/e;->a:Lcn/com/smartdevices/bracelet/d/e;
+    sget-object v3, Lcn/com/smartdevices/bracelet/c/e;->a:Lcn/com/smartdevices/bracelet/c/e;
 
-    invoke-direct {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/d/c;-><init>(Ljava/lang/String;Lcn/com/smartdevices/bracelet/d/e;Z)V
+    invoke-direct {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/c/c;-><init>(Ljava/lang/String;Lcn/com/smartdevices/bracelet/c/e;Z)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/c/c;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/d/a;
+    new-instance v0, Lcn/com/smartdevices/bracelet/c/a;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->g:Ljava/io/File;
 
@@ -438,9 +438,9 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/d/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/c/a;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/d/a;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/c/a;
 
     :cond_2
     return-void
@@ -451,16 +451,38 @@
     goto :goto_0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/tag/a/c;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+.method static synthetic a(Lcn/com/smartdevices/bracelet/tag/a/c;)Lcom/xiaomi/hm/health/bt/profile/v;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     return-object v0
 .end method
 
 .method private a(Lcn/com/smartdevices/bracelet/tag/a/a;)V
     .locals 3
+
+    const-string v0, "BraceletManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "appendRecord|historyItem:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/io/File;
 
@@ -531,15 +553,37 @@
 .end method
 
 .method private a(Z)V
-    .locals 2
+    .locals 3
+
+    const-string v0, "BraceletManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "clearDirtyData|exitWithException:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/c/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->d()Ljava/io/File;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/c;->d()Ljava/io/File;
 
     move-result-object v0
 
@@ -568,7 +612,29 @@
 .end method
 
 .method private c(I)V
-    .locals 2
+    .locals 3
+
+    const-string v0, "BraceletManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "sendCommand|command:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->f:Lcn/com/smartdevices/bracelet/tag/a/g;
 
@@ -622,7 +688,13 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    const-string v1, "BraceletManager"
+
+    const-string v2, "enableGetSensorData"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     if-nez v1, :cond_0
 
@@ -632,11 +704,11 @@
     return-void
 
     :cond_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableGetSensorData(Z)Z
+    invoke-virtual {v1, v2}, Lcom/xiaomi/hm/health/bt/profile/v;->c(Z)Z
 
     move-result v1
 
@@ -674,6 +746,28 @@
 
     move-result-object v2
 
+    const-string v0, "BraceletManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "timestamp : "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->p:Lcn/com/smartdevices/bracelet/model/LoginData;
 
     if-nez v0, :cond_2
@@ -681,13 +775,13 @@
     const-string v0, "0"
 
     :goto_1
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/c/c;
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->q:Ljava/lang/String;
 
     const-string v5, ""
 
-    invoke-virtual {v3, v0, v4, v5, v2}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v0, v4, v5, v2}, Lcn/com/smartdevices/bracelet/c/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/Thread;
 
@@ -741,9 +835,9 @@
     goto :goto_1
 
     :cond_3
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->isConnected()Z
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/bt/profile/v;->v()Z
 
     move-result v1
 
@@ -759,13 +853,19 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    const-string v1, "BraceletManager"
+
+    const-string v2, "stopGetSendorData"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableGetSensorData(Z)Z
+    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/health/bt/profile/v;->c(Z)Z
 
     move-result v1
 
@@ -786,32 +886,38 @@
 .end method
 
 .method private l()V
-    .locals 2
+    .locals 3
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    const-string v0, "BraceletManager"
+
+    const-string v1, "stopWithException"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableGetSensorData(Z)Z
+    invoke-virtual {v0, v2}, Lcom/xiaomi/hm/health/bt/profile/v;->c(Z)Z
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(I)V
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(I)V
 
     :goto_0
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->isConnected()Z
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/v;->v()Z
 
     move-result v0
 
@@ -824,7 +930,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(I)V
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(I)V
 
     goto :goto_0
 .end method
@@ -832,24 +938,42 @@
 .method private m()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    const-string v0, "BraceletManager"
+
+    const-string v1, "connectBracelet"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    const-string v0, "BraceletManager"
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->getDevice()Landroid/bluetooth/BluetoothDevice;
+    const-string v1, "mProfile is null"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
+
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/v;->f()Landroid/bluetooth/BluetoothDevice;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/b;->a(Landroid/bluetooth/BluetoothDevice;Z)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/health/bt/a;->a(Landroid/bluetooth/BluetoothDevice;Z)V
 
     :goto_0
     return-void
 
     :cond_0
+    const-string v0, "BraceletManager"
+
+    const-string v1, "mProfile is not null"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(I)V
@@ -918,7 +1042,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "lastState:"
+    const-string v2, "notifyStatusChanged|mTagStatus:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -930,7 +1054,7 @@
 
     move-result-object v1
 
-    const-string v2, " | currentState:"
+    const-string v2, ",status:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -944,22 +1068,22 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->k:I
 
     packed-switch v0, :pswitch_data_0
 
     :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->l:Lcn/com/smartdevices/bracelet/tag/a/j;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->l:Lcn/com/smartdevices/bracelet/tag/a/k;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->l:Lcn/com/smartdevices/bracelet/tag/a/j;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->l:Lcn/com/smartdevices/bracelet/tag/a/k;
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->k:I
 
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/tag/a/j;->b(I)V
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/tag/a/k;->b(I)V
 
     :cond_0
     return-void
@@ -999,15 +1123,15 @@
     if-ne p1, v0, :cond_5
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/c/c;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/c/c;->a(Ljava/util/List;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/c/c;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/c;->h()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/c;->h()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
 
@@ -1040,9 +1164,9 @@
 
     invoke-direct {p0, v5}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->isConnected()Z
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/v;->v()Z
 
     move-result v0
 
@@ -1060,9 +1184,9 @@
     :cond_5
     invoke-direct {p0, v5}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->isConnected()Z
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/v;->v()Z
 
     move-result v0
 
@@ -1092,16 +1216,190 @@
     .end packed-switch
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/tag/a/j;)V
+.method public a(Lcn/com/smartdevices/bracelet/tag/a/i;)V
+    .locals 8
+
+    const-string v0, "BraceletManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "uploadUserData|observer:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->e:Landroid/content/Context;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/b/c;->f(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "BraceletManager"
+
+    const-string v1, "current network is not wifi"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz p1, :cond_0
+
+    const-string v0, "\u5f53\u524d\u7f51\u7edc\u4e0d\u662fwifi\uff0c\u6682\u505c\u4e0a\u4f20"
+
+    invoke-interface {p1, v0}, Lcn/com/smartdevices/bracelet/tag/a/i;->a(Ljava/lang/String;)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/c/a;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/c/a;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/a;->a()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    if-eqz p1, :cond_2
+
+    invoke-interface {p1, v0}, Lcn/com/smartdevices/bracelet/tag/a/i;->a(Ljava/util/List;)V
+
+    :cond_2
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    :cond_3
+    :goto_1
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/io/File;
+
+    invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v2, 0x2e
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "_"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
+
+    array-length v2, v3
+
+    const/4 v4, 0x5
+
+    if-ne v2, v4, :cond_3
+
+    const/4 v2, 0x3
+
+    aget-object v2, v3, v2
+
+    const/4 v4, 0x4
+
+    aget-object v3, v3, v4
+
+    new-instance v7, Ljava/io/File;
+
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->g:Ljava/io/File;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v5, ".sbin"
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v7, v4, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/b/b;->b(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object v4
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->p:Lcn/com/smartdevices/bracelet/model/LoginData;
+
+    new-instance v5, Lcn/com/smartdevices/bracelet/tag/a/f;
+
+    invoke-direct {v5, p0, p1, v1, v7}, Lcn/com/smartdevices/bracelet/tag/a/f;-><init>(Lcn/com/smartdevices/bracelet/tag/a/c;Lcn/com/smartdevices/bracelet/tag/a/i;Ljava/io/File;Ljava/io/File;)V
+
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/k/j;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/d/a/a/h;)Z
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method public a(Lcn/com/smartdevices/bracelet/tag/a/k;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->l:Lcn/com/smartdevices/bracelet/tag/a/j;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->l:Lcn/com/smartdevices/bracelet/tag/a/k;
 
     return-void
 .end method
 
-.method public a(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
+.method public a(Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;)V
     .locals 2
+
+    const-string v0, "BraceletManager"
+
+    const-string v1, "onConnectStatusCHnaged"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "BraceletManager"
 
@@ -1110,11 +1408,11 @@
     const-string v0, "null"
 
     :goto_0
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->h()Z
 
     move-result v0
 
@@ -1123,11 +1421,11 @@
     :cond_0
     const/4 v0, 0x2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->a()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->a()Lcom/xiaomi/hm/health/bt/profile/v;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     :goto_1
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(I)V
@@ -1135,20 +1433,20 @@
     return-void
 
     :cond_1
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->e()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->c()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->c()Z
 
     move-result v0
 
@@ -1199,16 +1497,159 @@
     return-void
 .end method
 
+.method public a(SSS)V
+    .locals 3
+
+    const-string v0, "BraceletManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "process|x:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",y:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",z:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->k:I
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
+
+    invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
+
+    invoke-static {p2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
+
+    invoke-static {p3}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/16 v1, 0x3e8
+
+    if-le v0, v1, :cond_0
+
+    const-string v0, "BraceletManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "write data "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/c/c;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/c/c;->a(Ljava/util/List;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const/16 v0, 0x1006
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->c(I)V
+
+    goto :goto_0
+.end method
+
 .method public b()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->isConnected()Z
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/v;->v()Z
 
     move-result v0
 
@@ -1231,17 +1672,39 @@
 .end method
 
 .method public b(I)V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/p;
+    const-string v0, "BraceletManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setLatency|level:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/xiaomi/hm/health/bt/a/p;
 
     new-instance v1, Lcn/com/smartdevices/bracelet/tag/a/e;
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/tag/a/e;-><init>(Lcn/com/smartdevices/bracelet/tag/a/c;I)V
 
-    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/a/p;-><init>(ILcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v0, p1, v1}, Lcom/xiaomi/hm/health/bt/a/p;-><init>(ILcom/xiaomi/hm/health/bt/a/b;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/p;->e()V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/a/p;->g()V
 
     return-void
 .end method
@@ -1352,7 +1815,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1393,7 +1856,7 @@
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
@@ -1415,7 +1878,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1432,7 +1895,7 @@
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
@@ -1454,7 +1917,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1484,7 +1947,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_5
 
@@ -1509,15 +1972,21 @@
 .method public e()V
     .locals 2
 
+    const-string v0, "BraceletManager"
+
+    const-string v1, "abortRecord"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
     const/16 v0, 0x1008
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->c(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableGetSensorData(Z)Z
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/health/bt/profile/v;->c(Z)Z
 
     const/4 v0, 0x1
 
@@ -1527,7 +1996,13 @@
 .end method
 
 .method public f()V
-    .locals 1
+    .locals 2
+
+    const-string v0, "BraceletManager"
+
+    const-string v1, "beginDataTransfer"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v0, 0x1001
 
@@ -1537,7 +2012,13 @@
 .end method
 
 .method public g()V
-    .locals 1
+    .locals 2
+
+    const-string v0, "BraceletManager"
+
+    const-string v1, "stopDataTransfer"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v0, 0x1002
 
@@ -1547,7 +2028,13 @@
 .end method
 
 .method public h()V
-    .locals 1
+    .locals 2
+
+    const-string v0, "BraceletManager"
+
+    const-string v1, "connect"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v0, 0x1005
 
@@ -1557,132 +2044,13 @@
 .end method
 
 .method public i()V
-    .locals 8
+    .locals 1
 
-    :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->e:Landroid/content/Context;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/b/c;->f(Landroid/content/Context;)Z
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(Lcn/com/smartdevices/bracelet/tag/a/i;)V
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    :goto_0
     return-void
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/d/a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->i:Lcn/com/smartdevices/bracelet/d/a;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/a;->a()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :cond_2
-    :goto_1
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/io/File;
-
-    invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/16 v2, 0x2e
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "_"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v3
-
-    array-length v2, v3
-
-    const/4 v4, 0x5
-
-    if-ne v2, v4, :cond_2
-
-    const/4 v2, 0x3
-
-    aget-object v2, v3, v2
-
-    const/4 v4, 0x4
-
-    aget-object v3, v3, v4
-
-    new-instance v7, Ljava/io/File;
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->g:Ljava/io/File;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v5, ".sbin"
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v7, v4, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/b/b;->b(Ljava/io/File;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->p:Lcn/com/smartdevices/bracelet/model/LoginData;
-
-    new-instance v5, Lcn/com/smartdevices/bracelet/tag/a/f;
-
-    invoke-direct {v5, p0, v1, v7}, Lcn/com/smartdevices/bracelet/tag/a/f;-><init>(Lcn/com/smartdevices/bracelet/tag/a/c;Ljava/io/File;Ljava/io/File;)V
-
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/d/a/a/h;)Z
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
 .end method
 
 .method protected onLooperPrepared()V
@@ -1741,119 +2109,24 @@
     return-void
 .end method
 
-.method public process(SSS)V
-    .locals 3
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->k:I
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
-
-    invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
-
-    invoke-static {p2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
-
-    invoke-static {p3}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    const/16 v1, 0x3e8
-
-    if-le v0, v1, :cond_0
-
-    const-string v0, "BraceletManager"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "write data "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->h:Lcn/com/smartdevices/bracelet/d/c;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/d/c;->a(Ljava/util/List;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->o:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const/16 v0, 0x1006
-
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->c(I)V
-
-    goto :goto_0
-.end method
-
 .method public quit()Z
     .locals 3
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    const-string v1, "BraceletManager"
+
+    const-string v2, "quit"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->j:Lcom/xiaomi/hm/health/bt/profile/v;
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableGetSensorData(Z)Z
+    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/health/bt/profile/v;->c(Z)Z
 
     :cond_0
     iget v1, p0, Lcn/com/smartdevices/bracelet/tag/a/c;->k:I

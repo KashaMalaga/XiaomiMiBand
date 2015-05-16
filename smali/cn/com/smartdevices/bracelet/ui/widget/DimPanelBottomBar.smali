@@ -32,11 +32,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f030057
+    sget v1, Lcom/xiaomi/hm/health/a/g;->dialog_bottom_bar:I
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f070209
+    sget v0, Lcom/xiaomi/hm/health/a/f;->left_button:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -46,7 +46,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f07020b
+    sget v0, Lcom/xiaomi/hm/health/a/f;->right_button:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -56,13 +56,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f070208
+    sget v0, Lcom/xiaomi/hm/health/a/f;->bottom_bar_frame:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    const v0, 0x7f07020a
+    sget v0, Lcom/xiaomi/hm/health/a/f;->bottom_bar_frame_split:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -72,7 +72,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/xiaomi/hm/health/t;->DimPanelFragmentBottomBar:[I
+    sget-object v1, Lcom/xiaomi/hm/health/a/j;->DimPanelFragmentBottomBar:[I
 
     invoke-virtual {v0, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -96,7 +96,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0001
+    sget v2, Lcom/xiaomi/hm/health/a/c;->main_ui_title_color:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -112,7 +112,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0001
+    sget v2, Lcom/xiaomi/hm/health/a/c;->main_ui_title_color:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -164,13 +164,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v2, 0x7f020072
+    sget v2, Lcom/xiaomi/hm/health/a/e;->click_btn_bg_3:I
 
-    const v1, 0x7f020073
+    sget v1, Lcom/xiaomi/hm/health/a/e;->click_btn_bg_3_left_round:I
 
-    const v0, 0x7f020074
+    sget v0, Lcom/xiaomi/hm/health/a/e;->click_btn_bg_3_right_round:I
 
     const-string v11, "dark"
 
@@ -180,13 +180,13 @@
 
     if-eqz v10, :cond_0
 
-    const v2, 0x7f020071
+    sget v2, Lcom/xiaomi/hm/health/a/e;->click_btn_bg:I
 
-    const v1, 0x7f02007a
+    sget v1, Lcom/xiaomi/hm/health/a/e;->click_btn_bg_left_round:I
 
-    const v0, 0x7f02007b
+    sget v0, Lcom/xiaomi/hm/health/a/e;->click_btn_bg_right_round:I
 
-    const v10, 0x7f0a0009
+    sget v10, Lcom/xiaomi/hm/health/a/c;->content_color:I
 
     invoke-virtual {v4, v10}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -295,7 +295,7 @@
 
     invoke-virtual {v4, v0}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a003d
+    sget v0, Lcom/xiaomi/hm/health/a/c;->trans:I
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setBackgroundResource(I)V
 

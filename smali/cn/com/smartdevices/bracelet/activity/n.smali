@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcn/com/smartdevices/bracelet/V;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/activity/m;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/activity/m;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/activity/n;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/activity/n;->a:Lcn/com/smartdevices/bracelet/activity/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,46 +22,71 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 3
+.method public a(Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;)V
+    .locals 4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/n;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
+    if-eqz p1, :cond_0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/G;->l(Landroid/content/Context;)Z
+    const-string v0, "login"
 
-    move-result v0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/n;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
+    const-string v2, "LoginAvtivity "
 
-    # getter for: Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebView:Landroid/webkit/WebView;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$100(Lcn/com/smartdevices/bracelet/activity/WebActivity;)Landroid/webkit/WebView;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/webkit/WebView;->clearHistory()V
+    iget v1, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->goal:F
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/n;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
+    iput v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->targetWeight:F
 
-    # invokes: Lcn/com/smartdevices/bracelet/activity/WebActivity;->loadPages()V
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$500(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepPersonInfo(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
-    :goto_0
-    return-void
+    const-string v1, "login"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "save goal "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget v0, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->targetWeight:F
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/n;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
-
-    const v1, 0x7f090042
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    goto :goto_0
+    return-void
 .end method

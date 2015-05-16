@@ -33,13 +33,13 @@
 .method private d()V
     .locals 6
 
-    const v5, 0x7f0a0057
+    const v5, 0x7f070027
 
-    const v4, 0x7f0a0056
+    const v4, 0x7f070026
 
-    const v3, 0x7f0a0005
+    const v3, 0x7f070005
 
-    const v2, 0x7f0a0009
+    const v2, 0x7f070009
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -51,13 +51,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->c:Landroid/widget/ImageView;
 
-    const v1, 0x7f02012d
+    const v1, 0x7f02012c
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->d:Landroid/widget/ImageView;
 
-    const v1, 0x7f02008b
+    const v1, 0x7f02008e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -99,13 +99,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->d:Landroid/widget/ImageView;
 
-    const v1, 0x7f02008c
+    const v1, 0x7f02008f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->c:Landroid/widget/ImageView;
 
-    const v1, 0x7f02012c
+    const v1, 0x7f02012b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -160,7 +160,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a005a
+    const v2, 0x7f07002a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -192,7 +192,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f090128
+    const v0, 0x7f0901bd
 
     const/4 v1, 0x0
 
@@ -260,7 +260,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f07011e
+    .packed-switch 0x7f0d0118
         :pswitch_0
         :pswitch_1
     .end packed-switch
@@ -325,7 +325,7 @@
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->nickname:Ljava/lang/String;
 
     :cond_1
-    const v0, 0x7f0700e6
+    const v0, 0x7f0d00e0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -337,7 +337,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->e:Landroid/widget/TextView;
 
-    const v1, 0x7f090129
+    const v1, 0x7f0901be
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->getString(I)Ljava/lang/String;
 
@@ -345,7 +345,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f07011e
+    const v0, 0x7f0d0118
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -359,7 +359,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07011f
+    const v0, 0x7f0d0119
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -373,7 +373,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07011b
+    const v0, 0x7f0d0115
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -383,7 +383,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->g:Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
 
-    const v0, 0x7f07011c
+    const v0, 0x7f0d0116
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 

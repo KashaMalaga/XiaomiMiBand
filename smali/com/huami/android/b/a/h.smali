@@ -101,7 +101,7 @@
 
     const/4 v4, 0x0
 
-    sget v5, Lcom/xiaomi/hm/health/a/g;->share_to_miliao_target_feeds:I
+    sget v5, Lcom/xiaomi/hm/health/a/h;->share_to_miliao_target_feeds:I
 
     invoke-virtual {p0, v5}, Lcom/huami/android/b/a/h;->getString(I)Ljava/lang/String;
 
@@ -111,7 +111,7 @@
 
     const/4 v4, 0x1
 
-    sget v5, Lcom/xiaomi/hm/health/a/g;->share_to_miliao_target_friends:I
+    sget v5, Lcom/xiaomi/hm/health/a/h;->share_to_miliao_target_friends:I
 
     invoke-virtual {p0, v5}, Lcom/huami/android/b/a/h;->getString(I)Ljava/lang/String;
 
@@ -121,7 +121,7 @@
 
     const/4 v4, 0x2
 
-    sget v5, Lcom/xiaomi/hm/health/a/g;->share_to_miliao_target_union:I
+    sget v5, Lcom/xiaomi/hm/health/a/h;->share_to_miliao_target_union:I
 
     invoke-virtual {p0, v5}, Lcom/huami/android/b/a/h;->getString(I)Ljava/lang/String;
 
@@ -133,7 +133,7 @@
 
     const-string v2, "title"
 
-    sget v3, Lcom/xiaomi/hm/health/a/g;->share_miliao_path_selector:I
+    sget v3, Lcom/xiaomi/hm/health/a/h;->share_miliao_path_selector:I
 
     invoke-virtual {p0, v3}, Lcom/huami/android/b/a/h;->getString(I)Ljava/lang/String;
 
@@ -196,13 +196,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/huami/android/b/a/h;->h:Lcom/huami/android/b/a/l;
 
     iget v0, v0, Lcom/huami/android/b/a/l;->a:I
 
-    sget v1, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v1, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
     if-eq v0, v1, :cond_2
 
@@ -334,7 +334,7 @@
     .annotation build Landroid/support/a/r;
     .end annotation
 
-    sget v0, Lcom/xiaomi/hm/health/a/f;->view_share_panel:I
+    sget v0, Lcom/xiaomi/hm/health/a/g;->view_share_panel:I
 
     const/4 v1, 0x0
 
@@ -342,7 +342,7 @@
 
     move-result-object v1
 
-    sget v0, Lcom/xiaomi/hm/health/a/e;->share_list:I
+    sget v0, Lcom/xiaomi/hm/health/a/f;->share_list:I
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -409,13 +409,13 @@
 
     const-string v1, "onItemClick"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/huami/android/b/a/h;->h:Lcom/huami/android/b/a/l;
 
     iget v0, v0, Lcom/huami/android/b/a/l;->a:I
 
-    sget v1, Lcom/xiaomi/hm/health/a/d;->share_miliao_selector:I
+    sget v1, Lcom/xiaomi/hm/health/a/e;->share_miliao_selector:I
 
     if-eq v0, v1, :cond_3
 
@@ -442,7 +442,7 @@
 
     iget-object v0, p0, Lcom/huami/android/b/a/h;->g:Lcom/huami/android/b/a/e;
 
-    sget v1, Lcom/xiaomi/hm/health/a/g;->share_prepare_tips:I
+    sget v1, Lcom/xiaomi/hm/health/a/h;->share_prepare_tips:I
 
     invoke-virtual {v0, v1}, Lcom/huami/android/b/a/e;->a(I)V
 
@@ -487,14 +487,14 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_2
     iget-object v0, p0, Lcom/huami/android/b/a/h;->g:Lcom/huami/android/b/a/e;
 
-    sget v1, Lcom/xiaomi/hm/health/a/g;->share_uninstall_client:I
+    sget v1, Lcom/xiaomi/hm/health/a/h;->share_uninstall_client:I
 
     invoke-virtual {v0, v1}, Lcom/huami/android/b/a/e;->a(I)V
 

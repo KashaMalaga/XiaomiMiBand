@@ -5,6 +5,10 @@
 .implements Landroid/view/View$OnClickListener;
 
 
+# static fields
+.field private static final s:J = 0x3e8L
+
+
 # instance fields
 .field private h:Landroid/content/Context;
 
@@ -14,7 +18,7 @@
 
 .field private k:Landroid/widget/TextView;
 
-.field private l:Lcn/com/smartdevices/bracelet/ui/cX;
+.field private l:Lcn/com/smartdevices/bracelet/ui/cY;
 
 .field private m:I
 
@@ -22,11 +26,13 @@
 
 .field private o:Lcn/com/smartdevices/bracelet/ui/person/a;
 
-.field private p:Lcn/com/smartdevices/bracelet/ui/cX;
+.field private p:Lcn/com/smartdevices/bracelet/ui/cY;
 
 .field private q:Z
 
 .field private r:Z
+
+.field private t:J
 
 
 # direct methods
@@ -47,6 +53,10 @@
 
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->r:Z
 
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->t:J
+
     return-void
 .end method
 
@@ -58,39 +68,7 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->r:Z
-
-    return p1
-.end method
-
-.method static synthetic b(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->r:Z
-
-    return v0
-.end method
-
-.method static synthetic c(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;)I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->m:I
-
-    return v0
-.end method
-
-.method static synthetic d(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;)F
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->n:F
-
-    return v0
-.end method
-
-.method private d()V
+.method private a()V
     .locals 3
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->q:Z
@@ -128,7 +106,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -144,6 +122,38 @@
     iput v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->m:I
 
     goto :goto_0
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->r:Z
+
+    return p1
+.end method
+
+.method static synthetic b(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->r:Z
+
+    return v0
+.end method
+
+.method static synthetic c(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;)I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->m:I
+
+    return v0
+.end method
+
+.method static synthetic d(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;)F
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->n:F
+
+    return v0
 .end method
 
 .method private e()I
@@ -181,32 +191,108 @@
 
 
 # virtual methods
-.method public b()V
+.method public c()V
     .locals 2
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->d()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->a()V
 
     const-string v0, "MemberInfoBaseActivity"
 
     const-string v1, "onCancel"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->b()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->c()V
 
     return-void
 .end method
 
-.method public c()V
-    .locals 6
+.method public d()V
+    .locals 7
+
+    const/4 v6, 0x6
 
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->c()V
+    const-string v0, "TIME"
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->d()V
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "now "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " last time "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->t:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->t:J
+
+    sub-long/2addr v0, v2
+
+    const-wide/16 v2, 0x3e8
+
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_0
+
+    const-string v0, "TIME"
+
+    const-string v1, "click too fast, unable to go to next page"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const-string v0, "TIME"
+
+    const-string v1, "able to go next"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->t:J
+
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->d()V
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->a()V
 
     const-string v0, "CURRENT_USER_HEIGHT"
 
@@ -230,51 +316,60 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Keeper;->saveCurrentUser(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->e:Z
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->f:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_b
 
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    :cond_1
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->e:Z
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->f:Z
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
+    if-eqz v0, :cond_3
+
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
+
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->j()F
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/bt/profile/B;->h()I
 
     move-result v1
 
-    invoke-static {v0, v1, v4}, Lcn/com/smartdevices/bracelet/weight/G;->c(FII)F
+    invoke-static {v0, v1, v4}, Lcn/com/smartdevices/bracelet/weight/ad;->c(FII)F
 
     move-result v0
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->n:F
 
-    :goto_0
+    :goto_1
     new-instance v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
     invoke-direct {v1}, Lcn/com/smartdevices/bracelet/weight/UserInfo;-><init>()V
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->e:Z
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_6
 
     const-string v0, "CURRENT_USER_NAME"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->getCurrentUserInfoByTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -282,7 +377,7 @@
 
     const-string v0, "CURRENT_USER_GENDER"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->getCurrentUserInfoByTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -290,7 +385,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_4
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -298,10 +393,10 @@
 
     iput v0, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->gender:I
 
-    :goto_1
+    :goto_2
     const-string v0, "CURRENT_USER_BIRTH"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->getCurrentUserInfoByTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -309,7 +404,7 @@
 
     const-string v0, "CURRENT_USER_HEIGHT"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->getCurrentUserInfoByTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -317,7 +412,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_3
+    if-nez v2, :cond_5
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -325,7 +420,7 @@
 
     iput v0, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->height:I
 
-    :goto_2
+    :goto_3
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->n:F
 
     iput v0, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->weight:F
@@ -364,7 +459,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/weight/family/b;
 
@@ -374,10 +469,9 @@
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/family/b;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    :goto_3
-    return-void
+    goto/16 :goto_0
 
-    :cond_1
+    :cond_3
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -392,24 +486,24 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->n:F
 
-    goto :goto_0
+    goto/16 :goto_1
 
-    :cond_2
+    :cond_4
     iput v5, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->gender:I
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_3
+    :cond_5
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->m:I
 
     iput v0, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->height:I
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_4
+    :cond_6
     const-string v0, "CURRENT_USER_NAME"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->getCurrentUserInfoByTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -417,7 +511,7 @@
 
     const-string v0, "CURRENT_USER_GENDER"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->getCurrentUserInfoByTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -425,7 +519,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_6
+    if-nez v2, :cond_8
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -436,7 +530,7 @@
     :goto_4
     const-string v0, "CURRENT_USER_BIRTH"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->getCurrentUserInfoByTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -444,7 +538,7 @@
 
     const-string v0, "CURRENT_USER_HEIGHT"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->getCurrentUserInfoByTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -452,7 +546,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_7
+    if-nez v2, :cond_9
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -471,31 +565,31 @@
 
     const-string v2, ""
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/Keeper;->saveCurrentUser(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "CURRENT_USER_GENDER"
 
     const-string v2, ""
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/Keeper;->saveCurrentUser(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "CURRENT_USER_BIRTH"
 
     const-string v2, ""
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/Keeper;->saveCurrentUser(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "CURRENT_USER_HEIGHT"
 
     const-string v2, ""
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/Keeper;->saveCurrentUser(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->m:I
 
@@ -511,13 +605,13 @@
 
     iget v4, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->n:F
 
-    invoke-static {v2, v3, v4}, Lcn/com/smartdevices/bracelet/weight/G;->a(IIF)F
+    invoke-static {v2, v3, v4}, Lcn/com/smartdevices/bracelet/weight/ad;->a(IIF)F
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->setBmi(F)V
+    invoke-virtual {v0, v2}, Lcom/xiaomi/hm/health/bt/profile/B;->a(F)V
 
-    :cond_5
+    :cond_7
     new-instance v2, Landroid/content/Intent;
 
     const-class v0, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
@@ -526,9 +620,9 @@
 
     const-string v3, "WEIGHTADVDATA_KEY"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_a
 
     const-string v0, ""
 
@@ -547,32 +641,73 @@
 
     invoke-virtual {v2, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    const/4 v0, 0x6
+    invoke-virtual {p0, v2, v6}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    invoke-virtual {p0, v2, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    goto/16 :goto_0
 
-    goto/16 :goto_3
-
-    :cond_6
+    :cond_8
     iput v5, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->gender:I
 
     goto :goto_4
 
-    :cond_7
+    :cond_9
     const/16 v0, 0xaa
 
     iput v0, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->height:I
 
     goto :goto_5
 
-    :cond_8
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    :cond_a
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->toJsonString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->n()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_6
+
+    :cond_b
+    new-instance v1, Landroid/content/Intent;
+
+    const-class v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetWeightActivity;
+
+    invoke-direct {v1, p0, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v2, "WEIGHTADVDATA_KEY"
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
+
+    if-nez v0, :cond_c
+
+    const-string v0, ""
+
+    :goto_7
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v0, "set_visitor_mode"
+
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->e:Z
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    const-string v0, "weight_choose_user"
+
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->f:Z
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    invoke-virtual {p0, v1, v6}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto/16 :goto_0
+
+    :cond_c
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
+
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->n()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_7
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
@@ -634,20 +769,20 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->fromJsonString(Ljava/lang/String;)Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    invoke-static {v0}, Lcom/xiaomi/hm/health/bt/profile/B;->b(Ljava/lang/String;)Lcom/xiaomi/hm/health/bt/profile/B;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->g:Lcom/xiaomi/hm/health/bt/profile/B;
 
     :cond_0
     const v0, 0x7f03002c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->setContentView(I)V
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->a()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->b()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
@@ -662,7 +797,7 @@
     :goto_0
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->q:Z
 
-    const v0, 0x7f0700e6
+    const v0, 0x7f0d00e0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -674,7 +809,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->k:Landroid/widget/TextView;
 
-    const v1, 0x7f09012a
+    const v1, 0x7f0901bf
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->getString(I)Ljava/lang/String;
 
@@ -682,7 +817,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f070121
+    const v0, 0x7f0d011b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -692,7 +827,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->i:Lkankan/wheel/widget/WheelView;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cX;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cY;
 
     const/16 v2, 0x28
 
@@ -704,7 +839,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f0a0005
+    const v5, 0x7f070005
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -714,7 +849,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f0a0009
+    const v6, 0x7f070009
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -724,7 +859,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f0a0008
+    const v7, 0x7f070008
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -742,9 +877,9 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cX;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->p:Lcn/com/smartdevices/bracelet/ui/cX;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->p:Lcn/com/smartdevices/bracelet/ui/cY;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->i:Lkankan/wheel/widget/WheelView;
 
@@ -754,19 +889,19 @@
 
     move-result-object v0
 
-    const v1, 0x7f0201bd
+    const v1, 0x7f0201e4
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f09007f
+    const v1, 0x7f090114
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f0a0009
+    const v2, 0x7f070009
 
     const/16 v3, 0xc
 
@@ -778,13 +913,13 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->p:Lcn/com/smartdevices/bracelet/ui/cX;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->p:Lcn/com/smartdevices/bracelet/ui/cY;
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
     const-string v0, "CURRENT_USER_HEIGHT"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->getCurrentUserInfoByTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -815,7 +950,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->o:Lcn/com/smartdevices/bracelet/ui/person/a;
 
-    const v0, 0x7f070120
+    const v0, 0x7f0d011a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -831,7 +966,7 @@
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->setVisibility(I)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cX;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cY;
 
     const/4 v2, 0x1
 
@@ -843,7 +978,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f0a0005
+    const v5, 0x7f070005
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -853,7 +988,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f0a0009
+    const v6, 0x7f070009
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -863,7 +998,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f0a0008
+    const v7, 0x7f070008
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -881,9 +1016,9 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cX;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->l:Lcn/com/smartdevices/bracelet/ui/cX;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->l:Lcn/com/smartdevices/bracelet/ui/cY;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->j:Lkankan/wheel/widget/WheelView;
 
@@ -893,19 +1028,19 @@
 
     move-result-object v0
 
-    const v1, 0x7f0201bd
+    const v1, 0x7f0201e4
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f09007f
+    const v1, 0x7f090114
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f0a0009
+    const v2, 0x7f070009
 
     const/16 v3, 0xc
 
@@ -917,7 +1052,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->l:Lcn/com/smartdevices/bracelet/ui/cX;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->l:Lcn/com/smartdevices/bracelet/ui/cY;
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
@@ -935,13 +1070,13 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->j:Lkankan/wheel/widget/WheelView;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->l:Lcn/com/smartdevices/bracelet/ui/cX;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->l:Lcn/com/smartdevices/bracelet/ui/cY;
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->i:Lkankan/wheel/widget/WheelView;
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->p:Lcn/com/smartdevices/bracelet/ui/cX;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->p:Lcn/com/smartdevices/bracelet/ui/cY;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/ui/person/a;->a(Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cX;Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cX;)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/ui/person/a;->a(Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cY;Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cY;)V
 
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetHeightActivity;->i:Lkankan/wheel/widget/WheelView;

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/g/e/k;
+.implements Lcom/xiaomi/h/e/k;
 
 
 # instance fields
@@ -61,7 +61,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/e/a/c;->a:Lcom/xiaomi/e/a/a;
 
-    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/g/l;
+    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/h/l;
 
     move-result-object v1
 

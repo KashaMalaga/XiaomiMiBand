@@ -5,16 +5,24 @@
 # instance fields
 .field final synthetic a:J
 
-.field final synthetic b:Lcn/com/smartdevices/bracelet/relation/w;
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Landroid/content/Context;
+
+.field final synthetic d:Lcn/com/smartdevices/bracelet/relation/A;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/w;J)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/relation/A;JLjava/lang/String;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/D;->b:Lcn/com/smartdevices/bracelet/relation/w;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/relation/D;->d:Lcn/com/smartdevices/bracelet/relation/A;
 
     iput-wide p2, p0, Lcn/com/smartdevices/bracelet/relation/D;->a:J
+
+    iput-object p4, p0, Lcn/com/smartdevices/bracelet/relation/D;->b:Ljava/lang/String;
+
+    iput-object p5, p0, Lcn/com/smartdevices/bracelet/relation/D;->c:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
@@ -26,25 +34,22 @@
 .method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 3
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/relation/b/f;
+    if-eqz p4, :cond_0
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/relation/b/f;-><init>()V
+    invoke-virtual {p4}, Ljava/lang/Throwable;->printStackTrace()V
 
-    const/4 v1, -0x1
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/D;->c:Landroid/content/Context;
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/relation/b/f;->a:I
+    const v1, 0x7f0903ef
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/relation/D;->a:J
+    const/4 v2, 0x1
 
-    iput-wide v1, v0, Lcn/com/smartdevices/bracelet/relation/b/f;->b:J
+    invoke-static {v0, v1, v2}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/D;->b:Lcn/com/smartdevices/bracelet/relation/w;
+    move-result-object v0
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/relation/w;->b(Lcn/com/smartdevices/bracelet/relation/w;)Lde/greenrobot/event/EventBus;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     return-void
 .end method
@@ -52,77 +57,55 @@
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 4
 
-    new-instance v0, Ljava/lang/String;
+    const/4 v3, 0x0
 
-    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
+    const-string v0, "friendManager"
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/relation/b/f;
+    const-string v1, "Update user nick name"
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/relation/b/f;-><init>()V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/relation/D;->a:J
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/D;->d:Lcn/com/smartdevices/bracelet/relation/A;
 
-    iput-wide v2, v1, Lcn/com/smartdevices/bracelet/relation/b/f;->b:J
-
-    :try_start_0
-    new-instance v2, Lorg/json/JSONObject;
-
-    invoke-direct {v2, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "code"
-
-    invoke-virtual {v2, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    iput v0, v1, Lcn/com/smartdevices/bracelet/relation/b/f;->a:I
-
-    iget v0, v1, Lcn/com/smartdevices/bracelet/relation/b/f;->a:I
-
-    const/4 v2, 0x1
-
-    if-ne v0, v2, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/D;->b:Lcn/com/smartdevices/bracelet/relation/w;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/w;->a(Lcn/com/smartdevices/bracelet/relation/w;)Lcn/com/smartdevices/bracelet/relation/db/d;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/A;->a(Lcn/com/smartdevices/bracelet/relation/A;)Lcn/com/smartdevices/bracelet/relation/db/d;
 
     move-result-object v0
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/relation/D;->a:J
+    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/relation/D;->a:J
 
-    invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/relation/db/d;->b(J)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/D;->b:Lcn/com/smartdevices/bracelet/relation/w;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/w;->d(Lcn/com/smartdevices/bracelet/relation/w;)Lcn/com/smartdevices/bracelet/relation/db/g;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/relation/db/d;->a(J)Lcn/com/smartdevices/bracelet/relation/db/Friend;
 
     move-result-object v0
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/relation/D;->a:J
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/D;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/relation/db/g;->c(J)Z
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/relation/db/Friend;->x:Ljava/lang/String;
 
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/D;->b:Lcn/com/smartdevices/bracelet/relation/w;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/relation/D;->d:Lcn/com/smartdevices/bracelet/relation/A;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/w;->b(Lcn/com/smartdevices/bracelet/relation/w;)Lde/greenrobot/event/EventBus;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/relation/A;->a(Lcn/com/smartdevices/bracelet/relation/A;)Lcn/com/smartdevices/bracelet/relation/db/d;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/relation/db/d;->c(Lcn/com/smartdevices/bracelet/relation/db/Friend;)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/D;->d:Lcn/com/smartdevices/bracelet/relation/A;
+
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v3, v1, v3, v3}, Lcn/com/smartdevices/bracelet/relation/A;->a(IIZZ)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/D;->d:Lcn/com/smartdevices/bracelet/relation/A;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/relation/A;->b(Lcn/com/smartdevices/bracelet/relation/A;)Lcn/com/smartdevices/bracelet/relation/db/g;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/relation/D;->a:J
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/relation/D;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/relation/db/g;->a(JLjava/lang/String;)Z
 
     return-void
-
-    :catch_0
-    move-exception v0
-
-    const/4 v0, -0x1
-
-    iput v0, v1, Lcn/com/smartdevices/bracelet/relation/b/f;->a:I
-
-    goto :goto_0
 .end method

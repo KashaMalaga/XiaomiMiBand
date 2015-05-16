@@ -88,7 +88,7 @@
 
     move-result-object v1
 
-    sget v3, Lcom/xiaomi/hm/health/a/f;->custom_toast:I
+    sget v3, Lcom/xiaomi/hm/health/a/g;->custom_toast:I
 
     invoke-virtual {v1, v3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 

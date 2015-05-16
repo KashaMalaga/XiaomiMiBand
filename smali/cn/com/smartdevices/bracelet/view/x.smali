@@ -1,12 +1,24 @@
-.class public Lcn/com/smartdevices/bracelet/view/X;
+.class final Lcn/com/smartdevices/bracelet/view/X;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/view/U;
+.implements Landroid/support/v4/g/g;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/support/v4/g/g",
+        "<",
+        "Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -16,20 +28,40 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 0
+.method public synthetic a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/view/X;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public a(IFI)V
-    .locals 0
+.method public synthetic a(I)[Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/X;->b(I)[Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public b(I)V
-    .locals 0
+.method public b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+    .locals 1
 
-    return-void
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+
+    invoke-direct {v0, p1, p2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+
+    return-object v0
+.end method
+
+.method public b(I)[Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+    .locals 1
+
+    new-array v0, p1, [Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+
+    return-object v0
 .end method

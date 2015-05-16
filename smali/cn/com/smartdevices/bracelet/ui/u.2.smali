@@ -1,46 +1,46 @@
 .class Lcn/com/smartdevices/bracelet/ui/u;
-.super Lcn/com/smartdevices/bracelet/a/b;
+.super Lcom/xiaomi/hm/health/bt/a/b;
 
 
 # instance fields
-.field final synthetic b:Lorg/json/JSONObject;
+.field final synthetic a:Lorg/json/JSONObject;
 
-.field final synthetic c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Lorg/json/JSONObject;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/u;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/u;->b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/u;->b:Lorg/json/JSONObject;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/u;->a:Lorg/json/JSONObject;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
+    invoke-direct {p0}, Lcom/xiaomi/hm/health/bt/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
+.method public a()V
     .locals 0
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
+    invoke-super {p0}, Lcom/xiaomi/hm/health/bt/a/b;->a()V
 
     return-void
 .end method
 
-.method public c(Ljava/lang/Object;)V
+.method public a(Ljava/lang/Object;)V
     .locals 3
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/xiaomi/hm/health/bt/a/b;->a(Ljava/lang/Object;)V
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/u;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/u;->b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/u;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/u;->b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
 
@@ -48,7 +48,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/u;->b:Lorg/json/JSONObject;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/u;->a:Lorg/json/JSONObject;
 
     invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -60,10 +60,10 @@
     return-void
 .end method
 
-.method public d(Ljava/lang/Object;)V
+.method public b(Ljava/lang/Object;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/xiaomi/hm/health/bt/a/b;->b(Ljava/lang/Object;)V
 
     return-void
 .end method

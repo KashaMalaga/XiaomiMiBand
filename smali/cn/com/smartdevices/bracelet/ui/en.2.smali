@@ -1,65 +1,79 @@
-.class Lcn/com/smartdevices/bracelet/ui/en;
+.class public Lcn/com/smartdevices/bracelet/ui/en;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+.field private a:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/en;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/en;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
+.method public a()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public a(Ljava/lang/String;)V
     .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/en;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
+.method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    const/4 v1, 0x1
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    if-eqz p1, :cond_0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->v(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    instance-of v1, p1, Lcn/com/smartdevices/bracelet/ui/en;
 
-    move-result-object v0
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(Z)V
+    :cond_0
+    :goto_0
+    return v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    :cond_1
+    check-cast p1, Lcn/com/smartdevices/bracelet/ui/en;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->w(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/en;->a:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(Z)V
+    move-result v1
 
-    return-void
-.end method
+    if-nez v1, :cond_0
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->a:Ljava/lang/String;
 
-    return-void
-.end method
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/ui/en;->a()Ljava/lang/String;
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object v1
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    goto :goto_0
 .end method

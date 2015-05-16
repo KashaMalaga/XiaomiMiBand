@@ -1,120 +1,76 @@
-.class public final Lcn/com/smartdevices/bracelet/gps/services/k;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final a:Ljava/lang/String; = "h"
-
-.field public static final b:Ljava/lang/String; = "v"
-
-.field public static final c:Ljava/lang/String; = "t"
-
-.field public static final d:I = 0x6
-
-.field private static final serialVersionUID:J = 0x1L
+.class Lcn/com/smartdevices/bracelet/gps/services/k;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field private e:S
-
-.field private f:S
-
-.field private g:S
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/j;
 
 
 # direct methods
-.method public constructor <init>(SSS)V
-    .locals 1
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/j;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->a:Lcn/com/smartdevices/bracelet/gps/services/j;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-short v0, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->e:S
-
-    iput-short v0, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->f:S
-
-    iput-short v0, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->g:S
-
-    iput-short p1, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->e:S
-
-    iput-short p2, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->f:S
-
-    iput-short p3, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->g:S
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lorg/json/JSONObject;
-    .locals 3
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 6
 
-    new-instance v1, Lorg/json/JSONObject;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->a:Lcn/com/smartdevices/bracelet/gps/services/j;
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+    monitor-enter v1
 
     :try_start_0
-    const-string v0, "h"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->a:Lcn/com/smartdevices/bracelet/gps/services/j;
 
-    iget-short v2, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->e:S
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/j;->a(Lcn/com/smartdevices/bracelet/gps/services/j;)J
 
-    invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+    move-result-wide v2
 
-    const-string v0, "v"
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    iget-short v2, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->f:S
+    move-result-wide v4
 
-    invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+    sub-long/2addr v2, v4
 
-    const-string v0, "t"
+    const-wide/16 v4, 0x0
 
-    iget-short v2, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->g:S
+    cmp-long v0, v2, v4
 
-    invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    if-gtz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->a:Lcn/com/smartdevices/bracelet/gps/services/j;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/j;->b()V
 
     :goto_0
-    return-object v1
+    monitor-exit v1
 
-    :catch_0
-    move-exception v0
+    return-void
 
-    const-string v2, "GPSDB"
+    :cond_0
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/services/k;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3}, Lcn/com/smartdevices/bracelet/gps/services/k;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto :goto_0
-.end method
 
-.method public b()S
-    .locals 1
+    :catchall_0
+    move-exception v0
 
-    iget-short v0, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->g:S
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return v0
-.end method
-
-.method public c()S
-    .locals 1
-
-    iget-short v0, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->e:S
-
-    return v0
-.end method
-
-.method public d()S
-    .locals 1
-
-    iget-short v0, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->f:S
-
-    return v0
+    throw v0
 .end method

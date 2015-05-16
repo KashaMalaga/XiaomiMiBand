@@ -77,7 +77,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    const v0, 0x7f010030
+    const v0, 0x7f010039
 
     invoke-direct {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -150,55 +150,55 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0099
+    const v1, 0x7f0700b5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
-    const v2, 0x7f080020
+    const v2, 0x7f080063
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
 
-    const v3, 0x7f080022
+    const v3, 0x7f080065
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v3
 
-    const v4, 0x7f0a009a
+    const v4, 0x7f0700b6
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v4
 
-    const v5, 0x7f0c0001
+    const v5, 0x7f0b0001
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v5
 
-    const v6, 0x7f0a009b
+    const v6, 0x7f0700b7
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v6
 
-    const v7, 0x7f080023
+    const v7, 0x7f080066
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v7
 
-    const v8, 0x7f080024
+    const v8, 0x7f080067
 
     invoke-virtual {v0, v8}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v8
 
-    const v9, 0x7f080025
+    const v9, 0x7f080068
 
     invoke-virtual {v0, v9}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -1370,7 +1370,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f02000b
+    const v3, 0x7f020011
 
     invoke-static {v1, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 

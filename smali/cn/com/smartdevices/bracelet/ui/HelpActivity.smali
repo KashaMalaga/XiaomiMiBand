@@ -23,7 +23,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/ui/aU;",
+            "Lcn/com/smartdevices/bracelet/ui/aT;",
             ">;"
         }
     .end annotation
@@ -78,58 +78,58 @@
 
     :array_0
     .array-data 4
-        0x7f090109
-        0x7f09010a
-        0x7f09010b
-        0x7f09010c
-        0x7f09010d
-        0x7f09010e
-        0x7f09010f
-        0x7f090110
-        0x7f090111
-        0x7f090112
+        0x7f09019e
+        0x7f09019f
+        0x7f0901a0
+        0x7f0901a1
+        0x7f0901a2
+        0x7f0901a3
+        0x7f0901a4
+        0x7f0901a5
+        0x7f0901a6
+        0x7f0901a7
     .end array-data
 
     :array_1
     .array-data 4
-        0x7f090286
-        0x7f090287
-        0x7f090288
-        0x7f090289
-        0x7f09028a
-        0x7f09028b
-        0x7f09028c
-        0x7f09028d
-        0x7f090111
-        0x7f090112
-        0x7f09030f
-        0x7f090310
+        0x7f09031a
+        0x7f09031b
+        0x7f09031c
+        0x7f09031d
+        0x7f09031e
+        0x7f09031f
+        0x7f090320
+        0x7f090321
+        0x7f0901a6
+        0x7f0901a7
+        0x7f0903a2
+        0x7f0903a3
     .end array-data
 
     :array_2
     .array-data 4
-        0x7f090286
-        0x7f090287
-        0x7f090288
-        0x7f090289
-        0x7f09028a
-        0x7f09028b
-        0x7f09028c
-        0x7f09028d
-        0x7f090111
-        0x7f090112
+        0x7f09031a
+        0x7f09031b
+        0x7f09031c
+        0x7f09031d
+        0x7f09031e
+        0x7f09031f
+        0x7f090320
+        0x7f090321
+        0x7f0901a6
+        0x7f0901a7
     .end array-data
 
     :array_3
     .array-data 4
-        0x7f0901bf
-        0x7f0901c4
-        0x7f0901c0
-        0x7f0901c5
-        0x7f0901c1
-        0x7f0901c6
-        0x7f0901c2
-        0x7f0901c3
+        0x7f090253
+        0x7f090258
+        0x7f090254
+        0x7f090259
+        0x7f090255
+        0x7f09025a
+        0x7f090256
+        0x7f090257
     .end array-data
 .end method
 
@@ -138,7 +138,7 @@
 
     const/4 v6, 0x0
 
-    const v0, 0x7f07032e
+    const v0, 0x7f0d034a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HelpActivity;->findViewById(I)Landroid/view/View;
 
@@ -164,9 +164,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcn/com/smartdevices/bracelet/ui/aU;
+    check-cast v1, Lcn/com/smartdevices/bracelet/ui/aT;
 
-    iget v3, v1, Lcn/com/smartdevices/bracelet/ui/aU;->a:I
+    iget v3, v1, Lcn/com/smartdevices/bracelet/ui/aT;->a:I
 
     if-lez v3, :cond_1
 
@@ -174,7 +174,7 @@
 
     invoke-direct {v3, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    iget v4, v1, Lcn/com/smartdevices/bracelet/ui/aU;->a:I
+    iget v4, v1, Lcn/com/smartdevices/bracelet/ui/aT;->a:I
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(I)V
 
@@ -182,7 +182,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f08000a
+    const v5, 0x7f080005
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -196,7 +196,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0a0005
+    const v5, 0x7f070005
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -207,7 +207,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     :cond_1
-    iget v3, v1, Lcn/com/smartdevices/bracelet/ui/aU;->b:I
+    iget v3, v1, Lcn/com/smartdevices/bracelet/ui/aT;->b:I
 
     if-lez v3, :cond_0
 
@@ -215,7 +215,7 @@
 
     invoke-direct {v3, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    iget v1, v1, Lcn/com/smartdevices/bracelet/ui/aU;->b:I
+    iget v1, v1, Lcn/com/smartdevices/bracelet/ui/aT;->b:I
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -223,7 +223,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f080030
+    const v4, 0x7f080072
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -237,7 +237,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f0a0009
+    const v4, 0x7f070009
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -249,7 +249,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f080077
+    const v4, 0x7f0800b8
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -283,9 +283,9 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/HelpActivity;->g:Ljava/util/ArrayList;
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/ui/aU;
+    new-instance v4, Lcn/com/smartdevices/bracelet/ui/aT;
 
-    invoke-direct {v4, p0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/aU;-><init>(Lcn/com/smartdevices/bracelet/ui/HelpActivity;II)V
+    invoke-direct {v4, p0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/aT;-><init>(Lcn/com/smartdevices/bracelet/ui/HelpActivity;II)V
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -317,7 +317,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f07032d
+    .packed-switch 0x7f0d0349
         :pswitch_0
     .end packed-switch
 .end method
@@ -325,11 +325,11 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
 
-    const v1, 0x7f07032d
+    const v1, 0x7f0d0349
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0300b2
+    const v0, 0x7f0300bd
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HelpActivity;->setContentView(I)V
 
@@ -413,7 +413,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/HelpActivity;->b:Landroid/widget/TextView;
 
-    const v2, 0x7f090108
+    const v2, 0x7f09019d
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 

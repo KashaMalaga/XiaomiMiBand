@@ -2,6 +2,12 @@
 .super Ljava/lang/Object;
 
 
+# static fields
+.field public static final f:I = 0x0
+
+.field public static final g:I = 0x1
+
+
 # instance fields
 .field public final a:J
 
@@ -10,6 +16,8 @@
 .field public final c:I
 
 .field protected d:Landroid/content/Context;
+
+.field public e:I
 
 
 # direct methods
@@ -69,7 +77,7 @@
 
     invoke-virtual {v1, p3}, Landroid/support/v4/app/aT;->a(Landroid/app/PendingIntent;)Landroid/support/v4/app/aT;
 
-    const v2, 0x7f020006
+    const v2, 0x7f020007
 
     invoke-virtual {v1, v2}, Landroid/support/v4/app/aT;->a(I)Landroid/support/v4/app/aT;
 
@@ -79,7 +87,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a000c
+    const v3, 0x7f07000c
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 

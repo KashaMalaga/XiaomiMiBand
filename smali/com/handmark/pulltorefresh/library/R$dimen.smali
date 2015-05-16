@@ -3,15 +3,15 @@
 
 
 # static fields
-.field public static final header_footer_left_right_padding:I = 0x7f080003
+.field public static final header_footer_left_right_padding:I = 0x7f080025
 
-.field public static final header_footer_top_bottom_padding:I = 0x7f080004
+.field public static final header_footer_top_bottom_padding:I = 0x7f080026
 
-.field public static final indicator_corner_radius:I = 0x7f080001
+.field public static final indicator_corner_radius:I = 0x7f080023
 
-.field public static final indicator_internal_padding:I = 0x7f080002
+.field public static final indicator_internal_padding:I = 0x7f080024
 
-.field public static final indicator_right_padding:I = 0x7f080000
+.field public static final indicator_right_padding:I = 0x7f080022
 
 
 # direct methods

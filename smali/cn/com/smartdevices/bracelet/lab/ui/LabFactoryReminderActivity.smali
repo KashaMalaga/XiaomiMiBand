@@ -56,7 +56,7 @@
 .method private a(Z)V
     .locals 3
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/a/d;
+    new-instance v1, Lcom/xiaomi/hm/health/bt/a/d;
 
     new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/i;
 
@@ -67,9 +67,9 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-direct {v1, v2, v0}, Lcn/com/smartdevices/bracelet/a/d;-><init>(Lcn/com/smartdevices/bracelet/a/b;B)V
+    invoke-direct {v1, v2, v0}, Lcom/xiaomi/hm/health/bt/a/d;-><init>(Lcom/xiaomi/hm/health/bt/a/b;B)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/d;->c()V
+    invoke-virtual {v1}, Lcom/xiaomi/hm/health/bt/a/d;->e()V
 
     return-void
 
@@ -124,7 +124,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->setContentView(I)V
 
-    const v0, 0x7f0700b3
+    const v0, 0x7f0d00ad
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -136,13 +136,13 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    const v0, 0x7f0700b4
+    const v0, 0x7f0d00ae
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -160,7 +160,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700b5
+    const v0, 0x7f0d00af
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -196,7 +196,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->d:Landroid/widget/Switch;
 
@@ -221,7 +221,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f0700b6
+    const v0, 0x7f0d00b0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -257,10 +257,10 @@
     return-void
 .end method
 
-.method public onEvent(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
+.method public onEvent(Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;)V
     .locals 1
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+    invoke-virtual {p1}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->h()Z
 
     move-result v0
 
@@ -295,7 +295,7 @@
     invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->c()Z
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->c()Z
 
     move-result v0
 

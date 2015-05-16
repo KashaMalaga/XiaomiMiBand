@@ -1,9 +1,14 @@
 .class public Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/tencent/health/HealthData;
+
 
 # instance fields
 .field private awakeTime:I
+
+.field private day:Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
 .field private deepTime:I
 
@@ -46,6 +51,14 @@
     iget v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;->awakeTime:I
 
     return v0
+.end method
+
+.method public getDay()Lcom/xiaomi/hm/health/dataprocess/SportDay;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;->day:Lcom/xiaomi/hm/health/dataprocess/SportDay;
+
+    return-object v0
 .end method
 
 .method public getDeepTime()I
@@ -117,6 +130,14 @@
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;->awakeTime:I
+
+    return-void
+.end method
+
+.method public setDay(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;->day:Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     return-void
 .end method

@@ -1,51 +1,49 @@
 .class final Lcom/b/r;
-.super Ljava/util/TimerTask;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/location/GpsStatus$NmeaListener;
 
 
 # instance fields
-.field private synthetic a:Lcom/b/q;
+.field private synthetic a:Lcom/b/o;
 
 
 # direct methods
-.method constructor <init>(Lcom/b/q;)V
+.method private constructor <init>(Lcom/b/o;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/b/r;->a:Lcom/b/q;
+    iput-object p1, p0, Lcom/b/r;->a:Lcom/b/o;
 
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/b/o;B)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/b/r;-><init>(Lcom/b/o;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final onNmeaReceived(JLjava/lang/String;)V
     .locals 1
 
     :try_start_0
-    iget-object v0, p0, Lcom/b/r;->a:Lcom/b/q;
+    iget-object v0, p0, Lcom/b/r;->a:Lcom/b/o;
 
-    iget-object v0, v0, Lcom/b/q;->a:Lcom/b/m;
+    invoke-static {v0, p1, p2}, Lcom/b/o;->c(Lcom/b/o;J)J
 
-    invoke-static {v0}, Lcom/b/m;->c(Lcom/b/m;)Landroid/net/wifi/WifiManager;
+    iget-object v0, p0, Lcom/b/r;->a:Lcom/b/o;
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/b/r;->a:Lcom/b/q;
-
-    iget-object v0, v0, Lcom/b/q;->a:Lcom/b/m;
-
-    invoke-static {v0}, Lcom/b/m;->c(Lcom/b/m;)Landroid/net/wifi/WifiManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->startScan()Z
+    invoke-static {v0, p3}, Lcom/b/o;->a(Lcom/b/o;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_0
     :goto_0
     return-void
 

@@ -41,7 +41,7 @@
     .end array-data
 .end method
 
-.method protected static a(Landroid/content/Context;Lorg/apache/thrift/b;Lcom/xiaomi/h/a/a;)Lcom/xiaomi/h/a/n;
+.method protected static a(Landroid/content/Context;Lorg/apache/thrift/b;Lcom/xiaomi/i/a/a;)Lcom/xiaomi/i/a/n;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -50,15 +50,15 @@
             "<TT;*>;>(",
             "Landroid/content/Context;",
             "TT;",
-            "Lcom/xiaomi/h/a/a;",
+            "Lcom/xiaomi/i/a/a;",
             ")",
-            "Lcom/xiaomi/h/a/n;"
+            "Lcom/xiaomi/i/a/n;"
         }
     .end annotation
 
-    sget-object v0, Lcom/xiaomi/h/a/a;->a:Lcom/xiaomi/h/a/a;
+    sget-object v0, Lcom/xiaomi/i/a/a;->a:Lcom/xiaomi/i/a/a;
 
-    invoke-virtual {p2, v0}, Lcom/xiaomi/h/a/a;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v0}, Lcom/xiaomi/i/a/a;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -67,7 +67,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-static {p0, p1, p2, v0}, Lcom/xiaomi/mipush/sdk/q;->a(Landroid/content/Context;Lorg/apache/thrift/b;Lcom/xiaomi/h/a/a;Z)Lcom/xiaomi/h/a/n;
+    invoke-static {p0, p1, p2, v0}, Lcom/xiaomi/mipush/sdk/q;->a(Landroid/content/Context;Lorg/apache/thrift/b;Lcom/xiaomi/i/a/a;Z)Lcom/xiaomi/i/a/n;
 
     move-result-object v0
 
@@ -79,7 +79,7 @@
     goto :goto_0
 .end method
 
-.method protected static a(Landroid/content/Context;Lorg/apache/thrift/b;Lcom/xiaomi/h/a/a;Z)Lcom/xiaomi/h/a/n;
+.method protected static a(Landroid/content/Context;Lorg/apache/thrift/b;Lcom/xiaomi/i/a/a;Z)Lcom/xiaomi/i/a/n;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -88,13 +88,13 @@
             "<TT;*>;>(",
             "Landroid/content/Context;",
             "TT;",
-            "Lcom/xiaomi/h/a/a;",
+            "Lcom/xiaomi/i/a/a;",
             "Z)",
-            "Lcom/xiaomi/h/a/n;"
+            "Lcom/xiaomi/i/a/n;"
         }
     .end annotation
 
-    invoke-static {p1}, Lcom/xiaomi/h/a/N;->a(Lorg/apache/thrift/b;)[B
+    invoke-static {p1}, Lcom/xiaomi/i/a/N;->a(Lorg/apache/thrift/b;)[B
 
     move-result-object v0
 
@@ -110,9 +110,9 @@
     return-object v0
 
     :cond_0
-    new-instance v1, Lcom/xiaomi/h/a/n;
+    new-instance v1, Lcom/xiaomi/i/a/n;
 
-    invoke-direct {v1}, Lcom/xiaomi/h/a/n;-><init>()V
+    invoke-direct {v1}, Lcom/xiaomi/i/a/n;-><init>()V
 
     if-eqz p3, :cond_1
 
@@ -143,39 +143,39 @@
 
     :cond_1
     :goto_1
-    new-instance v2, Lcom/xiaomi/h/a/f;
+    new-instance v2, Lcom/xiaomi/i/a/f;
 
-    invoke-direct {v2}, Lcom/xiaomi/h/a/f;-><init>()V
+    invoke-direct {v2}, Lcom/xiaomi/i/a/f;-><init>()V
 
     const-wide/16 v3, 0x5
 
-    iput-wide v3, v2, Lcom/xiaomi/h/a/f;->a:J
+    iput-wide v3, v2, Lcom/xiaomi/i/a/f;->a:J
 
     const-string v3, "fakeid"
 
-    iput-object v3, v2, Lcom/xiaomi/h/a/f;->b:Ljava/lang/String;
+    iput-object v3, v2, Lcom/xiaomi/i/a/f;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/xiaomi/h/a/n;->a(Lcom/xiaomi/h/a/f;)Lcom/xiaomi/h/a/n;
+    invoke-virtual {v1, v2}, Lcom/xiaomi/i/a/n;->a(Lcom/xiaomi/i/a/f;)Lcom/xiaomi/i/a/n;
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/h/a/n;->a(Ljava/nio/ByteBuffer;)Lcom/xiaomi/h/a/n;
+    invoke-virtual {v1, v0}, Lcom/xiaomi/i/a/n;->a(Ljava/nio/ByteBuffer;)Lcom/xiaomi/i/a/n;
 
-    invoke-virtual {v1, p2}, Lcom/xiaomi/h/a/n;->a(Lcom/xiaomi/h/a/a;)Lcom/xiaomi/h/a/n;
+    invoke-virtual {v1, p2}, Lcom/xiaomi/i/a/n;->a(Lcom/xiaomi/i/a/a;)Lcom/xiaomi/i/a/n;
 
     const/4 v0, 0x1
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/h/a/n;->c(Z)Lcom/xiaomi/h/a/n;
+    invoke-virtual {v1, v0}, Lcom/xiaomi/i/a/n;->c(Z)Lcom/xiaomi/i/a/n;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/h/a/n;->b(Ljava/lang/String;)Lcom/xiaomi/h/a/n;
+    invoke-virtual {v1, v0}, Lcom/xiaomi/i/a/n;->b(Ljava/lang/String;)Lcom/xiaomi/i/a/n;
 
-    invoke-virtual {v1, p3}, Lcom/xiaomi/h/a/n;->a(Z)Lcom/xiaomi/h/a/n;
+    invoke-virtual {v1, p3}, Lcom/xiaomi/i/a/n;->a(Z)Lcom/xiaomi/i/a/n;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/m;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/m;
 
@@ -185,7 +185,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/h/a/n;->a(Ljava/lang/String;)Lcom/xiaomi/h/a/n;
+    invoke-virtual {v1, v0}, Lcom/xiaomi/i/a/n;->a(Ljava/lang/String;)Lcom/xiaomi/i/a/n;
 
     move-object v0, v1
 
@@ -227,10 +227,10 @@
     return-object v2
 .end method
 
-.method protected static a(Landroid/content/Context;Lcom/xiaomi/h/a/n;)Lorg/apache/thrift/b;
+.method protected static a(Landroid/content/Context;Lcom/xiaomi/i/a/n;)Lorg/apache/thrift/b;
     .locals 3
 
-    invoke-virtual {p1}, Lcom/xiaomi/h/a/n;->c()Z
+    invoke-virtual {p1}, Lcom/xiaomi/i/a/n;->c()Z
 
     move-result v0
 
@@ -249,7 +249,7 @@
     move-result-object v0
 
     :try_start_0
-    invoke-virtual {p1}, Lcom/xiaomi/h/a/n;->f()[B
+    invoke-virtual {p1}, Lcom/xiaomi/i/a/n;->f()[B
 
     move-result-object v1
 
@@ -260,17 +260,17 @@
     move-result-object v0
 
     :goto_0
-    invoke-virtual {p1}, Lcom/xiaomi/h/a/n;->a()Lcom/xiaomi/h/a/a;
+    invoke-virtual {p1}, Lcom/xiaomi/i/a/n;->a()Lcom/xiaomi/i/a/a;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/xiaomi/mipush/sdk/q;->a(Lcom/xiaomi/h/a/a;)Lorg/apache/thrift/b;
+    invoke-static {v1}, Lcom/xiaomi/mipush/sdk/q;->a(Lcom/xiaomi/i/a/a;)Lorg/apache/thrift/b;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-static {v1, v0}, Lcom/xiaomi/h/a/N;->a(Lorg/apache/thrift/b;[B)V
+    invoke-static {v1, v0}, Lcom/xiaomi/i/a/N;->a(Lorg/apache/thrift/b;[B)V
 
     :cond_0
     return-object v1
@@ -287,19 +287,19 @@
     throw v1
 
     :cond_1
-    invoke-virtual {p1}, Lcom/xiaomi/h/a/n;->f()[B
+    invoke-virtual {p1}, Lcom/xiaomi/i/a/n;->f()[B
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method private static a(Lcom/xiaomi/h/a/a;)Lorg/apache/thrift/b;
+.method private static a(Lcom/xiaomi/i/a/a;)Lorg/apache/thrift/b;
     .locals 2
 
     sget-object v0, Lcom/xiaomi/mipush/sdk/r;->a:[I
 
-    invoke-virtual {p0}, Lcom/xiaomi/h/a/a;->ordinal()I
+    invoke-virtual {p0}, Lcom/xiaomi/i/a/a;->ordinal()I
 
     move-result v1
 
@@ -313,72 +313,72 @@
     return-object v0
 
     :pswitch_0
-    new-instance v0, Lcom/xiaomi/h/a/t;
+    new-instance v0, Lcom/xiaomi/i/a/t;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/t;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/t;-><init>()V
 
     goto :goto_0
 
     :pswitch_1
-    new-instance v0, Lcom/xiaomi/h/a/H;
+    new-instance v0, Lcom/xiaomi/i/a/H;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/H;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/H;-><init>()V
 
     goto :goto_0
 
     :pswitch_2
-    new-instance v0, Lcom/xiaomi/h/a/D;
+    new-instance v0, Lcom/xiaomi/i/a/D;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/D;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/D;-><init>()V
 
     goto :goto_0
 
     :pswitch_3
-    new-instance v0, Lcom/xiaomi/h/a/L;
+    new-instance v0, Lcom/xiaomi/i/a/L;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/L;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/L;-><init>()V
 
     goto :goto_0
 
     :pswitch_4
-    new-instance v0, Lcom/xiaomi/h/a/z;
+    new-instance v0, Lcom/xiaomi/i/a/z;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/z;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/z;-><init>()V
 
     goto :goto_0
 
     :pswitch_5
-    new-instance v0, Lcom/xiaomi/h/a/h;
+    new-instance v0, Lcom/xiaomi/i/a/h;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/h;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/h;-><init>()V
 
     goto :goto_0
 
     :pswitch_6
-    new-instance v0, Lcom/xiaomi/h/a/l;
+    new-instance v0, Lcom/xiaomi/i/a/l;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/l;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/l;-><init>()V
 
     goto :goto_0
 
     :pswitch_7
-    new-instance v0, Lcom/xiaomi/h/a/x;
+    new-instance v0, Lcom/xiaomi/i/a/x;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/x;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/x;-><init>()V
 
     goto :goto_0
 
     :pswitch_8
-    new-instance v0, Lcom/xiaomi/h/a/p;
+    new-instance v0, Lcom/xiaomi/i/a/p;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/p;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/p;-><init>()V
 
     goto :goto_0
 
     :pswitch_9
-    new-instance v0, Lcom/xiaomi/h/a/l;
+    new-instance v0, Lcom/xiaomi/i/a/l;
 
-    invoke-direct {v0}, Lcom/xiaomi/h/a/l;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/i/a/l;-><init>()V
 
     goto :goto_0
 

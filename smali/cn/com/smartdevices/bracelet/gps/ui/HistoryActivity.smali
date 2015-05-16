@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
-.super Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+.super Lcn/com/smartdevices/bracelet/gps/ui/CustomActionBarActivity;
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -18,7 +18,7 @@
             "Ljava/util/HashMap",
             "<",
             "Ljava/lang/String;",
-            "Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;",
+            "Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;",
             ">;"
         }
     .end annotation
@@ -30,7 +30,7 @@
             "Ljava/util/HashMap",
             "<",
             "Ljava/lang/String;",
-            "Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;",
+            "Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;",
             ">;"
         }
     .end annotation
@@ -38,7 +38,7 @@
 
 .field private final f:Landroid/os/IBinder$DeathRecipient;
 
-.field private g:Lcn/com/smartdevices/bracelet/lab/sync/f;
+.field private g:Lcn/com/smartdevices/bracelet/gps/sync/k;
 
 .field private h:Lcn/com/smartdevices/bracelet/gps/ui/y;
 
@@ -72,11 +72,15 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;-><init>()V
+    const-string v0, "RunHistoryIn"
+
+    const-string v1, "PageRunHistory"
+
+    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/CustomActionBarActivity;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/x;
 
-    invoke-direct {v0, p0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/x;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/ui/n;)V
+    invoke-direct {v0, p0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/x;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/ui/o;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a:Lcn/com/smartdevices/bracelet/gps/ui/x;
 
@@ -88,13 +92,13 @@
 
     iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->e:Ljava/util/HashMap;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/n;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/o;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/n;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/o;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->f:Landroid/os/IBinder$DeathRecipient;
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/lab/sync/f;
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/gps/sync/k;
 
     iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->h:Lcn/com/smartdevices/bracelet/gps/ui/y;
 
@@ -117,12 +121,74 @@
     return-void
 .end method
 
-.method private a(Lcn/com/smartdevices/bracelet/gps/model/i;ILjava/util/List;)Lcn/com/smartdevices/bracelet/gps/ui/C;
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
+
+    const/4 v2, 0x0
+
+    const-string v0, "RunHistoryIn"
+
+    const-string v1, "PageRunHistory"
+
+    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/CustomActionBarActivity;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/x;
+
+    invoke-direct {v0, p0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/x;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/ui/o;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a:Lcn/com/smartdevices/bracelet/gps/ui/x;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->b:Lcn/com/smartdevices/bracelet/gps/ui/u;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->c:Lcn/com/smartdevices/bracelet/gps/ui/w;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->d:Ljava/util/HashMap;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->e:Ljava/util/HashMap;
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/o;
+
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/o;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->f:Landroid/os/IBinder$DeathRecipient;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/gps/sync/k;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->h:Lcn/com/smartdevices/bracelet/gps/ui/y;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->i:Landroid/view/View;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->j:Landroid/widget/TextView;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->k:Landroid/view/View;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->l:Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;
+
+    const-wide/16 v0, -0x2
+
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->m:J
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->n:Landroid/content/Context;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->o:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    return-void
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/sync/k;)Lcn/com/smartdevices/bracelet/gps/sync/k;
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/gps/sync/k;
+
+    return-object p1
+.end method
+
+.method private a(Lcn/com/smartdevices/bracelet/gps/model/l;ILjava/util/List;)Lcn/com/smartdevices/bracelet/gps/ui/C;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcn/com/smartdevices/bracelet/gps/model/i;",
+            "Lcn/com/smartdevices/bracelet/gps/model/l;",
             "I",
             "Ljava/util/List",
             "<",
@@ -134,11 +200,11 @@
 
     new-instance v6, Lcn/com/smartdevices/bracelet/gps/ui/C;
 
-    invoke-direct {v6, p1}, Lcn/com/smartdevices/bracelet/gps/ui/C;-><init>(Lcn/com/smartdevices/bracelet/gps/model/i;)V
+    invoke-direct {v6, p1}, Lcn/com/smartdevices/bracelet/gps/ui/C;-><init>(Lcn/com/smartdevices/bracelet/gps/model/l;)V
 
     const/4 v1, 0x4
 
-    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/i;->f:J
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/l;->f:J
 
     move-object v0, p0
 
@@ -146,7 +212,7 @@
 
     move-object v5, p3
 
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;IJILjava/util/List;)Ljava/util/List;
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/b/a/n;->a(Landroid/content/Context;IJILjava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
@@ -197,42 +263,6 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/lab/sync/f;)Lcn/com/smartdevices/bracelet/lab/sync/f;
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/lab/sync/f;
-
-    return-object p1
-.end method
-
-.method private a()V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->h:Lcn/com/smartdevices/bracelet/gps/ui/y;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/y;->getGroupCount()I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->b(Z)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a:Lcn/com/smartdevices/bracelet/gps/ui/x;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/x;->sendEmptyMessage(I)Z
-
-    goto :goto_0
-.end method
-
 .method private a(Lcn/com/smartdevices/bracelet/gps/services/N;)V
     .locals 4
 
@@ -246,7 +276,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f09040a
+    sget v3, Lcom/xiaomi/hm/health/b/a/n;->running_delete_track_item_confirm:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -262,7 +292,7 @@
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/v;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/services/N;)V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/a;->setOpClickListener(Lcn/com/smartdevices/bracelet/ui/ac;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/a;->setOpClickListener(Lcom/huami/android/view/d;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -312,7 +342,7 @@
 
     move-wide v4, p3
 
-    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;IJJI)Ljava/util/List;
+    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/gps/b/a/n;->a(Landroid/content/Context;IJJI)Ljava/util/List;
 
     move-result-object v0
 
@@ -369,7 +399,7 @@
 
     const/4 v6, 0x3
 
-    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;IJJI)Ljava/util/List;
+    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/gps/b/a/n;->a(Landroid/content/Context;IJJI)Ljava/util/List;
 
     move-result-object v1
 
@@ -393,9 +423,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/i;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/l;
 
-    iget-wide v5, v0, Lcn/com/smartdevices/bracelet/gps/model/i;->f:J
+    iget-wide v5, v0, Lcn/com/smartdevices/bracelet/gps/model/l;->f:J
 
     sub-long/2addr v5, v8
 
@@ -440,7 +470,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->n:Landroid/content/Context;
 
-    const v2, 0x7f090409
+    sget v2, Lcom/xiaomi/hm/health/b/a/n;->running_get_history_no_more_data:I
 
     invoke-static {v1, v2, v0}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -461,7 +491,7 @@
     :cond_1
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->n:Landroid/content/Context;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/G;->l(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/f/g;->f(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -469,7 +499,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->n:Landroid/content/Context;
 
-    const v2, 0x7f090408
+    sget v2, Lcom/xiaomi/hm/health/b/a/n;->running_failed_to_get_history_neterror:I
 
     invoke-static {v1, v2, v0}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -515,11 +545,11 @@
     :cond_0
     const/4 v0, -0x2
 
-    invoke-static {p1, p2, v0}, Lcn/com/smartdevices/bracelet/gps/d/f;->b(JI)J
+    invoke-static {p1, p2, v0}, Lcn/com/smartdevices/bracelet/gps/f/h;->b(JI)J
 
     move-result-wide v0
 
-    invoke-static {p1, p2}, Lcn/com/smartdevices/bracelet/gps/d/f;->a(J)J
+    invoke-static {p1, p2}, Lcn/com/smartdevices/bracelet/gps/f/h;->a(J)J
 
     move-result-wide v2
 
@@ -556,34 +586,6 @@
     return-object v0
 .end method
 
-.method private b()V
-    .locals 2
-
-    const v0, 0x7f07003d
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    const v1, 0x7f0903ce
-
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/s;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/s;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
 .method private b(J)V
     .locals 7
 
@@ -593,11 +595,11 @@
 
     const-string v1, "syncMoreDataCommand"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;-><init>()V
 
     new-instance v1, Landroid/os/Bundle;
 
@@ -621,21 +623,21 @@
 
     invoke-virtual {v1, v3, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->d:Ljava/util/HashMap;
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->a:Ljava/lang/String;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/lab/sync/f;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/gps/sync/k;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/lab/sync/f;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/gps/sync/k;
 
-    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/lab/sync/f;->a(Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;)V
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/gps/sync/k;->a(Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;)V
 
     :goto_0
     return-void
@@ -665,17 +667,17 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    new-instance v1, Lcom/xiaomi/hm/health/dataprocess/SportDay;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/model/k;
 
-    invoke-direct {v1, v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/gps/model/k;-><init>(Ljava/util/Calendar;)V
 
     mul-long v2, p3, v3
 
     invoke-virtual {v0, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    new-instance v2, Lcom/xiaomi/hm/health/dataprocess/SportDay;
+    new-instance v2, Lcn/com/smartdevices/bracelet/gps/model/k;
 
-    invoke-direct {v2, v0}, Lcom/xiaomi/hm/health/dataprocess/SportDay;-><init>(Ljava/util/Calendar;)V
+    invoke-direct {v2, v0}, Lcn/com/smartdevices/bracelet/gps/model/k;-><init>(Ljava/util/Calendar;)V
 
     const-string v0, "UI"
 
@@ -689,7 +691,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/model/k;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -703,7 +705,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/xiaomi/hm/health/dataprocess/SportDay;->getKey()Ljava/lang/String;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/gps/model/k;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -715,7 +717,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -779,7 +781,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/i;",
+            "Lcn/com/smartdevices/bracelet/gps/model/l;",
             ">;)Z"
         }
     .end annotation
@@ -821,7 +823,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/i;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/l;
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->h:Lcn/com/smartdevices/bracelet/gps/ui/y;
 
@@ -829,7 +831,7 @@
 
     const/4 v7, 0x0
 
-    invoke-direct {p0, v0, v6, v7}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a(Lcn/com/smartdevices/bracelet/gps/model/i;ILjava/util/List;)Lcn/com/smartdevices/bracelet/gps/ui/C;
+    invoke-direct {p0, v0, v6, v7}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a(Lcn/com/smartdevices/bracelet/gps/model/l;ILjava/util/List;)Lcn/com/smartdevices/bracelet/gps/ui/C;
 
     move-result-object v0
 
@@ -954,7 +956,7 @@
     div-long/2addr v0, v6
 
     :goto_0
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/f;->b(J)J
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/f/h;->b(J)J
 
     move-result-wide v2
 
@@ -969,7 +971,7 @@
     div-long/2addr v0, v6
 
     :goto_1
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/f;->a(J)J
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/f/h;->a(J)J
 
     move-result-wide v0
 
@@ -977,13 +979,13 @@
 
     const-string v5, "syncDiffDataCommand"
 
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-direct {p0, v2, v3, v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->b(JJ)V
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;
+    new-instance v4, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;
 
-    invoke-direct {v4}, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;-><init>()V
+    invoke-direct {v4}, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;-><init>()V
 
     new-instance v5, Landroid/os/Bundle;
 
@@ -1001,21 +1003,21 @@
 
     invoke-virtual {v5, v0, v8}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    iput-object v5, v4, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iput-object v5, v4, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->e:Ljava/util/HashMap;
 
-    iget-object v1, v4, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->a:Ljava/lang/String;
+    iget-object v1, v4, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/lab/sync/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/gps/sync/k;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/lab/sync/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/gps/sync/k;
 
-    invoke-interface {v0, v4}, Lcn/com/smartdevices/bracelet/lab/sync/f;->a(Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;)V
+    invoke-interface {v0, v4}, Lcn/com/smartdevices/bracelet/gps/sync/k;->a(Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;)V
 
     :goto_2
     return v8
@@ -1058,6 +1060,34 @@
     return-object v0
 .end method
 
+.method private d()V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->h:Lcn/com/smartdevices/bracelet/gps/ui/y;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/y;->getGroupCount()I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->b(Z)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a:Lcn/com/smartdevices/bracelet/gps/ui/x;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/x;->sendEmptyMessage(I)Z
+
+    goto :goto_0
+.end method
+
 .method static synthetic e(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)Lcn/com/smartdevices/bracelet/gps/ui/u;
     .locals 1
 
@@ -1066,10 +1096,10 @@
     return-object v0
 .end method
 
-.method static synthetic f(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)Lcn/com/smartdevices/bracelet/lab/sync/f;
+.method static synthetic f(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)Lcn/com/smartdevices/bracelet/gps/sync/k;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/lab/sync/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/gps/sync/k;
 
     return-object v0
 .end method
@@ -1132,6 +1162,36 @@
 
 
 # virtual methods
+.method protected a()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, ""
+
+    return-object v0
+.end method
+
+.method protected b()Ljava/lang/String;
+    .locals 2
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/xiaomi/hm/health/b/a/n;->running_history_title:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected c()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
@@ -1141,21 +1201,23 @@
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_0
+    sget v1, Lcom/xiaomi/hm/health/b/a/i;->no_data:I
 
-    :cond_0
-    :goto_0
-    return-void
+    if-ne v0, v1, :cond_0
 
-    :pswitch_0
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a(Ljava/util/List;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
     invoke-direct {p0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a(Z)Z
 
     move-result v0
@@ -1173,13 +1235,6 @@
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x7f07015e
-        :pswitch_0
-    .end packed-switch
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
@@ -1187,9 +1242,9 @@
 
     const/4 v5, 0x1
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/CustomActionBarActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030036
+    sget v0, Lcom/xiaomi/hm/health/b/a/j;->activity_running_history:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->setContentView(I)V
 
@@ -1199,7 +1254,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->n:Landroid/content/Context;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->b()V
+    invoke-virtual {p0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a(Landroid/view/View$OnClickListener;)V
 
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
@@ -1229,13 +1284,13 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/w;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/ui/n;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/w;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/ui/o;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->c:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;
+    const-class v1, Lcn/com/smartdevices/bracelet/gps/sync/SyncSportDataService;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -1272,7 +1327,7 @@
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
-    const v0, 0x7f070161
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->history_list:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -1302,31 +1357,31 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->l:Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/gps/ui/o;
+    new-instance v2, Lcn/com/smartdevices/bracelet/gps/ui/p;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/gps/ui/o;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/gps/ui/p;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
 
     invoke-virtual {v1, v2}, Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;->setOnRefreshListener(Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener;)V
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/p;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/p;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ExpandableListView;->setOnGroupClickListener(Landroid/widget/ExpandableListView$OnGroupClickListener;)V
 
     new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/q;
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/q;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ExpandableListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ExpandableListView;->setOnGroupClickListener(Landroid/widget/ExpandableListView$OnGroupClickListener;)V
 
     new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/r;
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/r;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
 
+    invoke-virtual {v0, v1}, Landroid/widget/ExpandableListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/s;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/s;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
+
     invoke-virtual {v0, v1}, Landroid/widget/ExpandableListView;->setOnChildClickListener(Landroid/widget/ExpandableListView$OnChildClickListener;)V
 
-    const v0, 0x7f07015e
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->no_data:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -1344,7 +1399,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700fe
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->no_data_refresh:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -1354,7 +1409,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->j:Landroid/widget/TextView;
 
-    const v0, 0x7f070160
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->loading:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -1385,15 +1440,15 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/lab/sync/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/gps/sync/k;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/lab/sync/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->g:Lcn/com/smartdevices/bracelet/gps/sync/k;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->b:Lcn/com/smartdevices/bracelet/gps/ui/u;
 
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sync/f;->b(Lcn/com/smartdevices/bracelet/lab/sync/e;)V
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/gps/sync/k;->b(Lcn/com/smartdevices/bracelet/gps/sync/j;)V
 
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a:Lcn/com/smartdevices/bracelet/gps/ui/x;
@@ -1441,7 +1496,7 @@
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->unbindService(Landroid/content/ServiceConnection;)V
 
     :cond_6
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onDestroy()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/gps/ui/CustomActionBarActivity;->onDestroy()V
 
     return-void
 .end method
@@ -1449,7 +1504,7 @@
 .method public onPause()V
     .locals 1
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/gps/ui/CustomActionBarActivity;->onResume()V
 
     const-string v0, "PageRunHistory"
 
@@ -1463,9 +1518,9 @@
 .method public onResume()V
     .locals 1
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/gps/ui/CustomActionBarActivity;->onResume()V
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->d()V
 
     const-string v0, "PageRunHistory"
 

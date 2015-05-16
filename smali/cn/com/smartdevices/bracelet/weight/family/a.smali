@@ -49,7 +49,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -85,7 +85,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v0, 0x64
 
@@ -99,9 +99,9 @@
 
     const-string v1, " should refresh month"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cX;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cY;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/a;->a:Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;
 
@@ -127,7 +127,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f0a0005
+    const v6, 0x7f070005
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -139,7 +139,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0a0009
+    const v7, 0x7f070009
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -151,7 +151,7 @@
 
     move-result-object v7
 
-    const v9, 0x7f0a0008
+    const v9, 0x7f070008
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -163,7 +163,7 @@
 
     move v12, v11
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cX;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/cY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/a;->a:Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;
 
@@ -212,7 +212,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/a;->a:Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->c(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;)Lcn/com/smartdevices/bracelet/ui/cX;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;->c(Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetBirthActivity;)Lcn/com/smartdevices/bracelet/ui/cY;
 
     move-result-object v1
 

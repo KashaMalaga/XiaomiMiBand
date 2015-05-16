@@ -1,1276 +1,563 @@
 .class public Lcn/com/smartdevices/bracelet/x;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements La/a/a/x;
+
 
 # static fields
-.field public static a:I = 0x0
+.field public static final a:I = 0x0
 
-.field public static b:I = 0x0
+.field public static final b:I = 0x1
 
-.field public static c:I = 0x0
+.field public static final c:I = 0x2
 
-.field public static d:I = 0x0
+.field private static final d:Ljava/lang/String; = "MiuiAPI"
 
-.field public static e:I = 0x0
+.field private static e:Lcn/com/smartdevices/bracelet/x; = null
 
-.field public static f:Z = false
+.field private static final h:Ljava/lang/String; = "\\d+.\\d+.\\d+(-internal)?"
 
-.field public static g:I = 0x0
+.field private static final i:Z
 
-.field private static final h:I = 0x1400000
+.field private static final j:Z
 
-.field private static i:Z = false
 
-.field private static final j:Z = true
+# instance fields
+.field private f:La/a/a/t;
 
-.field private static final k:Z = true
-
-.field private static final l:Z = true
-
-.field private static final m:Z = true
-
-.field private static final n:Z = true
-
-.field private static o:Z = false
-
-.field private static p:Z = false
-
-.field private static q:Z = false
-
-.field private static final r:Z = true
-
-.field private static final s:Z = false
-
-.field private static final t:Ljava/lang/String; = "DEBUG"
+.field private g:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 4
 
-    const/4 v3, 0x2
-
-    const/4 v2, 0x0
-
     const/4 v1, 0x1
 
-    const/4 v0, -0x1
-
-    sput v0, Lcn/com/smartdevices/bracelet/x;->a:I
-
-    sput v2, Lcn/com/smartdevices/bracelet/x;->b:I
-
-    sput v1, Lcn/com/smartdevices/bracelet/x;->c:I
-
-    sput v3, Lcn/com/smartdevices/bracelet/x;->d:I
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->b:I
-
-    sput v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sput-boolean v1, Lcn/com/smartdevices/bracelet/x;->f:Z
-
-    sput v3, Lcn/com/smartdevices/bracelet/x;->g:I
-
-    sput-boolean v2, Lcn/com/smartdevices/bracelet/x;->i:Z
-
-    sput-boolean v1, Lcn/com/smartdevices/bracelet/x;->o:Z
-
-    sput-boolean v1, Lcn/com/smartdevices/bracelet/x;->p:Z
-
-    sput-boolean v1, Lcn/com/smartdevices/bracelet/x;->q:Z
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Object;)V
-    .locals 4
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->p:Z
-
-    if-eqz v0, :cond_0
-
-    if-nez p0, :cond_0
-
-    const-string v0, "DEBUG"
-
-    const-string v1, ">>> `NOT NULL` ASSERTION FAILED <<<"
-
     const/4 v2, 0x0
 
-    const/16 v3, 0x65
+    const/4 v0, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;IC)V
+    sput-object v0, Lcn/com/smartdevices/bracelet/x;->e:Lcn/com/smartdevices/bracelet/x;
 
-    :cond_0
-    return-void
-.end method
+    sget-object v0, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
-.method public static a(Ljava/lang/String;)V
-    .locals 3
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const-string v0, "DEBUG"
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x64
-
-    invoke-static {v0, p0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;IC)V
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->a:I
-
-    if-le v0, v1, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->e()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method private static a(Ljava/lang/String;Ljava/lang/String;IC)V
-    .locals 6
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->i:Z
+    move-result v0
 
     if-nez v0, :cond_0
 
-    :goto_0
-    return-void
+    sget-object v0, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
-    :cond_0
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    const-string v3, "\\d+.\\d+.\\d+(-internal)?"
 
-    move-result-object v0
+    invoke-virtual {v0, v3}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object v1
-
-    add-int/lit8 v2, p2, 0x4
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {v1}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/16 v3, 0x2e
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->lastIndexOf(I)I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, 0x1
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1}, Ljava/lang/StackTraceElement;->getLineNumber()I
-
-    move-result v1
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "["
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v4, "]"
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v4, "<"
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, ":"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, ":"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "> "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, ""
-
-    sparse-switch p3, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_0
-
-    :sswitch_1
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_0
-
-    :sswitch_2
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_0
-
-    :sswitch_3
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_0
-
-    :sswitch_4
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x64 -> :sswitch_0
-        0x65 -> :sswitch_4
-        0x69 -> :sswitch_2
-        0x76 -> :sswitch_1
-        0x77 -> :sswitch_3
-    .end sparse-switch
-.end method
-
-.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 2
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->a:I
-
-    if-le v0, v1, :cond_0
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->d:I
-
-    if-ge v0, v1, :cond_0
-
-    invoke-static {p0, p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Thread;)V
-    .locals 4
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->p:Z
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    if-eqz p0, :cond_0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v2
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DEBUG"
-
-    const-string v1, ">>> `RUN ON THREAD` ASSERTION FAILED <<<"
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x65
-
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;IC)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static a(Z)V
-    .locals 4
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->p:Z
-
-    if-eqz v0, :cond_0
-
-    if-nez p0, :cond_0
-
-    const-string v0, "DEBUG"
-
-    const-string v1, ">>> `TRUE` ASSERTION FAILED <<<"
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x65
-
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;IC)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static a(ZZ)V
-    .locals 1
-
-    if-eqz p0, :cond_0
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->b:I
+    move v0, v1
 
     :goto_0
-    sput v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->c(Z)V
-
-    sput-boolean p1, Lcn/com/smartdevices/bracelet/x;->f:Z
-
-    return-void
-
-    :cond_0
-    sget v0, Lcn/com/smartdevices/bracelet/x;->a:I
-
-    goto :goto_0
-.end method
-
-.method public static a(ZZZ)V
-    .locals 2
-
-    const/4 v0, 0x1
-
     sput-boolean v0, Lcn/com/smartdevices/bracelet/x;->i:Z
 
-    sput-boolean p0, Lcn/com/smartdevices/bracelet/x;->o:Z
+    const-string v0, "user"
 
-    sput-boolean p1, Lcn/com/smartdevices/bracelet/x;->p:Z
+    sget-object v3, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
-    sput-boolean p2, Lcn/com/smartdevices/bracelet/x;->q:Z
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->g()V
-
-    const-string v0, "         ENABLE_VERBOSE: TRUE"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
-
-    const-string v0, "           ENABLE_DEBUG: TRUE"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
-
-    const-string v0, "            ENABLE_INFO: TRUE"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
-
-    const-string v0, "            ENABLE_WARN: TRUE"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
-
-    const-string v0, "           ENABLE_ERROR: TRUE"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "           ENABLE_TRACE: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->o:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "TRUE"
-
-    :goto_0
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "          ENABLE_ASSERT: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->p:Z
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    const-string v0, "TRUE"
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->i:Z
+
+    if-nez v0, :cond_1
 
     :goto_1
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "      ENABLE_DEBUG_LOCK: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->q:Z
-
-    if-eqz v0, :cond_2
-
-    const-string v0, "TRUE"
-
-    :goto_2
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
-
-    const-string v0, "        ENABLE_LOG_META: TRUE"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
-
-    const-string v0, "  ENABLE_LOG_TRACE_INFO: FALSE"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    sput-boolean v1, Lcn/com/smartdevices/bracelet/x;->j:Z
 
     return-void
 
     :cond_0
-    const-string v0, "FALSE"
+    move v0, v2
 
     goto :goto_0
 
     :cond_1
-    const-string v0, "FALSE"
+    move v1, v2
 
     goto :goto_1
-
-    :cond_2
-    const-string v0, "FALSE"
-
-    goto :goto_2
 .end method
 
-.method public static a()Z
+.method private constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static a()Lcn/com/smartdevices/bracelet/x;
+    .locals 1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/x;->e:Lcn/com/smartdevices/bracelet/x;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/x;
+
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/x;-><init>()V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/x;->e:Lcn/com/smartdevices/bracelet/x;
+
+    :cond_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/x;->e:Lcn/com/smartdevices/bracelet/x;
+
+    return-object v0
+.end method
+
+.method public static b(Landroid/content/Context;)Z
     .locals 2
 
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
+    const-string v0, "ro.product.mod_device"
 
-    sget v1, Lcn/com/smartdevices/bracelet/x;->a:I
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
-    if-le v0, v1, :cond_0
+    move-result-object v0
 
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
+    const-string v1, "_alpha"
 
-    sget v1, Lcn/com/smartdevices/bracelet/x;->d:I
+    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    if-ge v0, v1, :cond_0
+    move-result v0
 
-    const/4 v0, 0x1
+    return v0
+.end method
+
+.method public static c(Landroid/content/Context;)Z
+    .locals 8
+
+    const/4 v7, 0x5
+
+    const/4 v6, 0x3
+
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/G;->g(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    :try_start_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->h()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    sget-object v2, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
+
+    const-string v3, "\\."
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    aget-object v3, v2, v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    const/4 v4, 0x1
+
+    aget-object v4, v2, v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
+    const/4 v5, 0x2
+
+    aget-object v2, v2, v5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    if-le v3, v7, :cond_2
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_2
+    if-lt v3, v7, :cond_0
+
+    if-le v4, v6, :cond_3
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_3
+    if-lt v4, v6, :cond_0
+
+    const/16 v3, 0xd
+
+    if-lt v2, v3, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_4
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    sget-object v2, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
+
+    const-string v3, "\\."
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    aget-object v3, v2, v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    const/4 v4, 0x1
+
+    aget-object v4, v2, v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
+    const/4 v5, 0x2
+
+    aget-object v2, v2, v5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v2
+
+    if-le v3, v7, :cond_5
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_5
+    if-lt v3, v7, :cond_0
+
+    if-le v4, v6, :cond_6
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_6
+    if-lt v4, v6, :cond_0
+
+    const/4 v3, 0x6
+
+    if-lt v2, v3, :cond_0
+
+    move v0, v1
+
+    goto/16 :goto_0
+
+    :catch_0
+    move-exception v1
+
+    goto/16 :goto_0
+.end method
+
+.method public static h()Z
+    .locals 1
+
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->i:Z
+
+    return v0
+.end method
+
+.method public static i()Z
+    .locals 1
+
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->j:Z
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/String;)I
+    .locals 3
+
+    const-string v0, "MiuiAPI"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "bindDevice:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    :try_start_0
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    invoke-virtual {v0, p1}, La/a/a/t;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "MiuiAPI"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "bindDevice "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " failed!!!"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v0, 0x0
 
     :goto_0
     return v0
 
     :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static b(Ljava/lang/Object;)V
-    .locals 4
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->p:Z
-
-    if-eqz v0, :cond_0
-
-    if-eqz p0, :cond_0
-
-    const-string v0, "DEBUG"
-
-    const-string v1, ">>> `NULL` ASSERTION FAILED <<<"
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x65
-
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;IC)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static b(Ljava/lang/String;)V
-    .locals 4
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->q:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DEBUG"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "LOCK#"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x76
-
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;IC)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static b(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 5
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->f:Z
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/io/File;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "/mili_log.txt"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Ljava/io/File;->length()J
-
-    move-result-wide v1
-
-    const-wide/32 v3, 0x1400000
-
-    cmp-long v1, v1, v3
-
-    if-lez v1, :cond_1
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
-
-    :cond_1
-    :try_start_0
-    new-instance v1, Ljava/io/FileWriter;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v0, v2}, Ljava/io/FileWriter;-><init>(Ljava/io/File;Z)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->f()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, "  "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, "  "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, "\n"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/io/FileWriter;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :catch_0
     move-exception v0
 
-    goto :goto_0
-.end method
+    const-string v1, "MiuiAPI"
 
-.method public static b(Z)V
-    .locals 1
-
-    if-eqz p0, :cond_0
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->b:I
-
-    :goto_0
-    sput v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sput-boolean p0, Lcn/com/smartdevices/bracelet/x;->f:Z
-
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->c(Z)V
-
-    return-void
-
-    :cond_0
-    sget v0, Lcn/com/smartdevices/bracelet/x;->a:I
-
-    goto :goto_0
-.end method
-
-.method public static b()Z
-    .locals 1
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->f:Z
-
-    return v0
-.end method
-
-.method public static c()V
-    .locals 3
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->a:I
-
-    if-le v0, v1, :cond_0
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->c:I
-
-    if-ge v0, v1, :cond_0
-
-    new-instance v0, Ljava/lang/Exception;
-
-    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getStackTrace()[Ljava/lang/StackTraceElement;
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    sget v1, Lcn/com/smartdevices/bracelet/x;->g:I
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    add-int/lit8 v1, v1, -0x1
+    const/4 v0, 0x2
 
-    aget-object v0, v0, v1
+    goto :goto_0
+.end method
+
+.method public a(La/a/a/t;)V
+    .locals 2
+
+    const-string v0, "MiuiAPI"
+
+    const-string v1, "MiBleDeviceManager onInit!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    return-void
+.end method
+
+.method public a(Landroid/content/Context;)V
+    .locals 2
+
+    const-string v0, "MiuiAPI"
+
+    const-string v1, "init"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {p1, p0}, La/a/a/t;->a(Landroid/content/Context;La/a/a/x;)La/a/a/t;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    return-void
+.end method
+
+.method public a(I)Z
+    .locals 4
+
+    const-string v0, "MiuiAPI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
-
-    move-result-object v2
+    const-string v2, "setAlertIncallDelay:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, ":"
+    move-result-object v1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getLineNumber()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "."
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v0
+    move-result-object v1
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_0
-    return-void
-.end method
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
 
-.method public static c(Ljava/lang/String;)V
-    .locals 3
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
 
-    const-string v0, "DEBUG"
+    const-string v2, "alert_incall_delayed"
 
-    const/4 v1, 0x0
+    mul-int/lit16 v3, p1, 0x3e8
 
-    const/16 v2, 0x65
-
-    invoke-static {v0, p0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;IC)V
-
-    return-void
-.end method
-
-.method public static c(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->a:I
-
-    if-le v0, v1, :cond_0
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->c:I
-
-    if-ge v0, v1, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->e()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    invoke-static {p0, p1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static c(Z)V
-    .locals 0
-
-    sput-boolean p0, Lcn/com/smartdevices/bracelet/x;->i:Z
-
-    sput-boolean p0, Lcn/com/smartdevices/bracelet/x;->o:Z
-
-    sput-boolean p0, Lcn/com/smartdevices/bracelet/x;->p:Z
-
-    sput-boolean p0, Lcn/com/smartdevices/bracelet/x;->q:Z
-
-    return-void
-.end method
-
-.method public static d()V
-    .locals 4
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/x;->o:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DEBUG"
-
-    const-string v1, "<<<<===="
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x76
-
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;IC)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static d(Ljava/lang/String;)V
-    .locals 3
-
-    const-string v0, "DEBUG"
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x69
-
-    invoke-static {v0, p0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;IC)V
-
-    return-void
-.end method
-
-.method public static d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->a:I
-
-    if-le v0, v1, :cond_0
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->c:I
-
-    if-ge v0, v1, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->e()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method private static e()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/Exception;
-
-    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object v0
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->g:I
-
-    aget-object v0, v0, v1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "<"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "."
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, 0x1
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ":"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ":"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getLineNumber()I
+    invoke-virtual {v0, v1, v2, v3}, La/a/a/t;->a(Ljava/lang/String;Ljava/lang/String;I)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :goto_0
+    return v0
 
-    const-string v0, "> "
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "MiuiAPI"
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method public static e(Ljava/lang/String;)V
-    .locals 3
-
-    const-string v0, "DEBUG"
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x76
-
-    invoke-static {v0, p0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;IC)V
-
-    return-void
-.end method
-
-.method public static e(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 6
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->a:I
-
-    if-le v0, v1, :cond_1
-
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/x;->c:I
-
-    if-ge v0, v1, :cond_1
-
-    const/16 v2, 0x3e8
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    :goto_0
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    goto :goto_0
+.end method
 
-    move-result v1
+.method public a(Z)Z
+    .locals 3
 
-    div-int/2addr v1, v2
+    const-string v0, "MiuiAPI"
 
-    if-gt v0, v1, :cond_1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    mul-int v3, v0, v2
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    add-int/lit8 v1, v0, 0x1
+    const-string v2, "setAlertAlarm:"
 
-    mul-int/2addr v1, v2
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    if-le v1, v4, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    :cond_0
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->e()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {p1, v3, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1278,173 +565,569 @@
 
     move-result-object v1
 
-    invoke-static {p0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    add-int/lit8 v0, v0, 0x1
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
 
-    goto :goto_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
 
-    :cond_1
-    return-void
-.end method
+    const-string v2, "alert_alarm_enabled"
 
-.method private static f()Ljava/lang/String;
-    .locals 3
+    invoke-virtual {v0, v1, v2, p1}, La/a/a/t;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance v0, Ljava/util/Date;
+    move-result v0
 
-    invoke-direct {v0}, Ljava/util/Date;-><init>()V
+    :goto_0
+    return v0
 
-    new-instance v1, Ljava/text/SimpleDateFormat;
+    :catch_0
+    move-exception v0
 
-    const-string v2, "yyyy-MM-dd HH:mm:ss.SSS"
+    const-string v1, "MiuiAPI"
 
-    invoke-direct {v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
-.method public static f(Ljava/lang/String;)V
-    .locals 3
+.method public b()V
+    .locals 2
 
-    const-string v0, "DEBUG"
+    const-string v0, "MiuiAPI"
 
-    const/4 v1, 0x0
+    const-string v1, "MiBleDeviceManager onDestroy!"
 
-    const/16 v2, 0x77
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, p0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;IC)V
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
 
     return-void
 .end method
 
-.method public static f(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method public b(Ljava/lang/String;)Z
+    .locals 3
 
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
+    const-string v0, "MiuiAPI"
 
-    sget v1, Lcn/com/smartdevices/bracelet/x;->a:I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    if-le v0, v1, :cond_0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget v0, Lcn/com/smartdevices/bracelet/x;->e:I
+    const-string v2, "unbindDevice:"
 
-    sget v1, Lcn/com/smartdevices/bracelet/x;->d:I
-
-    if-ge v0, v1, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->e()Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    invoke-virtual {v0, p1}, La/a/a/t;->b(Ljava/lang/String;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "MiuiAPI"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
+    goto :goto_0
 .end method
 
-.method private static g()V
-    .locals 1
+.method public b(Z)Z
+    .locals 4
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+    const-string v0, "MiuiAPI"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    const-string v2, "setAlertIncall:"
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    move-result-object v1
 
-    const-string v0, "MM.:  .:\'   `:::  .:`MMMMMMMMMMM|`MMM\'|MMMMMMMMMMM\':  .:\'   `:::  .:\'.MM"
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    move-result-object v1
 
-    const-string v0, "MMMM.     :          `MMMMMMMMMM  :*\'  MMMMMMMMMM\'        :        .MMMM"
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    move-result-object v1
 
-    const-string v0, "MMMMM.    ::    .     `MMMMMMMM\'  ::   `MMMMMMMM\'   .     ::   .  .MMMMM"
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    const/4 v0, 0x1
 
-    const-string v0, "MMMMMM. :   :: ::\'  :   :: ::\'  :   :: ::\'      :: ::\'  :   :: ::.MMMMMM"
+    :try_start_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
 
-    const-string v0, "MMMMMMM    ;::         ;::         ;::         ;::         ;::   MMMMMMM"
+    const-string v3, "alert_incall_enabled"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3, p1}, La/a/a/t;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    const-string v0, "MMMMMMM .:\'   `:::  .:\'   `:::  .:\'   `:::  .:\'   `:::  .:\'   `::MMMMMMM"
+    move-result v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    and-int/2addr v0, v1
 
-    const-string v0, "MMMMMM\'     :           :           :           :           :    `MMMMMM"
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
 
-    const-string v0, "MMMMM\'______::____      ::    .     ::    .     ::     ___._::____`MMMMM"
+    const-string v3, "alert_incall_enabled_in_contacts"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3, p1}, La/a/a/t;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMM`---._ :: ::\'  :   :: ::\'  _.--::MMMMMMMMMMMMMMMMMMMM"
+    move-result v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    and-int/2addr v0, v1
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMMMMMMMMM::.         ::  .--MMMMMMMMMMMMMMMMMMMMMMMMMMM"
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-.     ;::-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+    const-string v3, "alert_incall_enabled_no_contacts"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3, p1}, La/a/a/t;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. .:\' .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+    move-result v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    and-int/2addr v0, v1
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.   .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+    :goto_0
+    return v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    :catch_0
+    move-exception v0
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\\ /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+    const-string v1, "MiuiAPI"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMVMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+    move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM .:ZylvanaS:. MM"
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    goto :goto_0
+.end method
 
-    const-string v0, "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+.method public c()Z
+    .locals 4
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
 
-    return-void
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
+
+    const-string v2, "alert_alarm_enabled"
+
+    invoke-virtual {v0, v1, v2}, La/a/a/t;->a(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    const-string v1, "MiuiAPI"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "isSetAlertAlarm:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "MiuiAPI"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public c(Z)Z
+    .locals 4
+
+    const-string v0, "MiuiAPI"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setAlertSms:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    :try_start_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
+
+    const-string v3, "alert_sms_enabled"
+
+    invoke-virtual {v1, v2, v3, p1}, La/a/a/t;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    and-int/2addr v0, v1
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
+
+    const-string v3, "alert_sms_enabled_in_contacts"
+
+    invoke-virtual {v1, v2, v3, p1}, La/a/a/t;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    and-int/2addr v0, v1
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
+
+    const-string v3, "alert_sms_enabled_no_contacts"
+
+    invoke-virtual {v1, v2, v3, p1}, La/a/a/t;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v1
+
+    and-int/2addr v0, v1
+
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "MiuiAPI"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public d()Z
+    .locals 4
+
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
+
+    const-string v2, "alert_incall_enabled"
+
+    invoke-virtual {v0, v1, v2}, La/a/a/t;->a(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    const-string v1, "MiuiAPI"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "isSetAlertIncall:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "MiuiAPI"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public e()Z
+    .locals 4
+
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
+
+    const-string v2, "alert_sms_enabled"
+
+    invoke-virtual {v0, v1, v2}, La/a/a/t;->a(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    const-string v1, "MiuiAPI"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "isSetAlertSms:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "MiuiAPI"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public f()Z
+    .locals 5
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    invoke-virtual {v1}, La/a/a/t;->b()I
+
+    move-result v1
+
+    const-string v2, "MiuiAPI"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "isSupportIncallDelay service version:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v2, 0x2
+
+    if-lt v1, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v1
+
+    const-string v2, "MiuiAPI"
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method public g()I
+    .locals 4
+
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/x;->f:La/a/a/t;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/x;->g:Ljava/lang/String;
+
+    const-string v2, "alert_incall_delayed"
+
+    invoke-virtual {v0, v1, v2}, La/a/a/t;->b(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    const-string v1, "MiuiAPI"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "getIncallDelay:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    div-int/lit16 v0, v0, 0x3e8
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "MiuiAPI"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x2
+
+    goto :goto_0
 .end method

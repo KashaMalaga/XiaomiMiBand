@@ -11,7 +11,7 @@
     return-void
 .end method
 
-.method public static a(Lcn/com/smartdevices/bracelet/c/c;)F
+.method public static a(Lcn/com/smartdevices/bracelet/b/c;)F
     .locals 4
 
     if-nez p0, :cond_0
@@ -28,7 +28,7 @@
 
     const/4 v3, 0x0
 
-    invoke-interface {p0, v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/c/c;->a(IJF)F
+    invoke-interface {p0, v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/b/c;->a(IJF)F
 
     move-result v0
 

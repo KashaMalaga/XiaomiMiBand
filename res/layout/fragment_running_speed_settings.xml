@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/dialog_empty_area" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="#fff4f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/auto_pause_enabled" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="63.0dip">
+            <TextView android:textSize="@dimen/running_settings_title" android:textColor="@color/running_settings_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/running_auto_pause" android:layout_centerVertical="true" />
+            <RelativeLayout android:gravity="center|right" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <Switch android:layout_gravity="center" android:id="@id/auto_pause_switcher" android:background="@drawable/switch_track_enable" android:focusable="false" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="40.0dip" android:layout_height="21.0dip" android:textOn="" android:textOff="" android:thumb="@drawable/switch_thumb" android:track="@drawable/switch_track_trans" android:switchMinWidth="38.0dip" android:thumbTextPadding="10.0dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <include layout="@layout/split_line_with_margin" />
+        <RelativeLayout android:gravity="center_vertical" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="63.0dip">
+            <TextView android:textSize="@dimen/running_settings_title" android:textColor="@color/running_settings_title" android:id="@id/pace_notify_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/running_set_pace" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/running_settings_title" android:textColor="@color/running_settings_title" android:id="@id/pace_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" android:layout_toRightOf="@id/pace_notify_desc" android:layout_centerVertical="true" />
+            <RelativeLayout android:gravity="center|right" android:clickable="true" android:layout_width="63.0dip" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <Switch android:layout_gravity="center" android:id="@id/pace_notify_switcher" android:background="@drawable/switch_track_enable" android:focusable="false" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="40.0dip" android:layout_height="21.0dip" android:textOn="" android:textOff="" android:thumb="@drawable/switch_thumb" android:track="@drawable/switch_track_trans" android:switchMinWidth="38.0dip" android:thumbTextPadding="10.0dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/pace_containter" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="96.0dip" android:layout_marginTop="@dimen/running_progressbar_top_margin" android:layout_marginBottom="@dimen/running_progressbar_bottom_margin" android:splitMotionEvents="true">
+            <SeekBar android:orientation="horizontal" android:id="@id/set_low_pace" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="32" android:progressDrawable="@drawable/running_seekbar_enabled" android:thumb="@drawable/running_seekbar_thumb_enabled" />
+            <TextView android:textSize="@dimen/running_sport_desc_text_size" android:textColor="@color/running_light_text" android:id="@id/slow_speed_remide_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="27.0dip" android:text="@string/running_set_pace_desc" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

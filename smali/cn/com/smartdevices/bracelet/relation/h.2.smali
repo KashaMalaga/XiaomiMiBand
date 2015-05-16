@@ -142,9 +142,17 @@
 
     iput-object v3, v2, Lcn/com/smartdevices/bracelet/chart/J;->e:Ljava/lang/String;
 
-    iget v0, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->k:I
+    iget v3, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->l:I
 
-    iput v0, v2, Lcn/com/smartdevices/bracelet/chart/J;->a:I
+    iput v3, v2, Lcn/com/smartdevices/bracelet/chart/J;->c:I
+
+    iget v3, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->l:I
+
+    iget v0, v0, Lcn/com/smartdevices/bracelet/relation/db/a;->m:I
+
+    add-int/2addr v0, v3
+
+    iput v0, v2, Lcn/com/smartdevices/bracelet/chart/J;->b:I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/relation/h;->g:Ljava/util/List;
 

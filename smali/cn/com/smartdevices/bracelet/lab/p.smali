@@ -120,11 +120,11 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->g()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->b()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/datasource/DeviceSource;->hasBindSensorHub()Z
 
     move-result v2
 
@@ -142,7 +142,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f09035e
+    const v4, 0x7f09042b
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -158,7 +158,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f09035d
+    const v4, 0x7f09042a
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -184,7 +184,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f090377
+    const v4, 0x7f090444
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -226,7 +226,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f0903aa
+    const v4, 0x7f090477
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -253,7 +253,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f09029a
+    const v4, 0x7f09032e
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -274,7 +274,7 @@
 
     if-eqz v3, :cond_6
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->k()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readBehaviorTagEnable()Z
 
     move-result v3
 
@@ -286,7 +286,7 @@
 
     invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v4, 0x7f090415
+    const v4, 0x7f09048b
 
     iput v4, v3, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -313,7 +313,7 @@
 
     invoke-direct {v1, v3}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v3, 0x7f090414
+    const v3, 0x7f09048a
 
     iput v3, v1, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -335,7 +335,7 @@
 
     invoke-direct {v1, v3}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v3, 0x7f09047d
+    const v3, 0x7f09054a
 
     iput v3, v1, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 
@@ -359,7 +359,7 @@
 
     invoke-direct {v1, v3}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Ljava/lang/String;)V
 
-    const v3, 0x7f09047e
+    const v3, 0x7f09054b
 
     iput v3, v1, Lcn/com/smartdevices/bracelet/lab/a;->a:I
 

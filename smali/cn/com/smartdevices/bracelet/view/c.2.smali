@@ -6,14 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+.field final synthetic a:Landroid/content/Context;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/view/DynamicView;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/view/DynamicView;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/c;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/c;->b:Lcn/com/smartdevices/bracelet/view/DynamicView;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/view/c;->a:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,21 +29,17 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/c;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/c;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/c;->a:Landroid/content/Context;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->getContext()Landroid/content/Context;
+    const-class v2, Lcn/com/smartdevices/bracelet/weight/RecordWeightActivity;
 
-    move-result-object v1
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/c;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/c;->a:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView;)I
-
-    move-result v2
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView;Landroid/content/Context;I)V
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method

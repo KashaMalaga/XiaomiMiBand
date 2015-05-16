@@ -1,181 +1,118 @@
-.class public Lcom/b/i;
+.class final Lcom/b/i;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field protected a:Ljava/io/File;
+.field protected a:B
 
-.field protected b:[I
+.field protected b:Ljava/util/ArrayList;
 
-.field private c:Ljava/util/ArrayList;
-
-.field private d:Z
+.field private c:B
 
 
 # direct methods
-.method protected constructor <init>(Ljava/io/File;Ljava/util/ArrayList;[I)V
+.method constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/16 v0, 0x8
+
+    iput-byte v0, p0, Lcom/b/i;->c:B
+
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/b/i;->d:Z
+    iput-byte v0, p0, Lcom/b/i;->a:B
 
-    iput-object p1, p0, Lcom/b/i;->a:Ljava/io/File;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object p2, p0, Lcom/b/i;->c:Ljava/util/ArrayList;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p3, p0, Lcom/b/i;->b:[I
+    iput-object v0, p0, Lcom/b/i;->b:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Z)V
-    .locals 0
+.method protected final a(Ljava/io/DataOutputStream;)Ljava/lang/Boolean;
+    .locals 4
 
-    iput-boolean p1, p0, Lcom/b/i;->d:Z
+    const/4 v0, 0x0
 
-    return-void
-.end method
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-.method public a()[B
-    .locals 5
+    move-result-object v1
 
-    new-instance v1, Ljava/io/ByteArrayOutputStream;
+    :try_start_0
+    iget-byte v2, p0, Lcom/b/i;->c:B
 
-    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
+    invoke-virtual {p1, v2}, Ljava/io/DataOutputStream;->writeByte(I)V
 
-    new-instance v2, Ljava/io/DataOutputStream;
+    iget-byte v2, p0, Lcom/b/i;->a:B
 
-    invoke-direct {v2, v1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
+    invoke-virtual {p1, v2}, Ljava/io/DataOutputStream;->writeByte(I)V
 
-    iget-object v0, p0, Lcom/b/i;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
+    move v2, v0
 
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    iget-byte v0, p0, Lcom/b/i;->a:B
 
-    move-result v0
+    if-ge v2, v0, :cond_0
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lcom/b/i;->b:Ljava/util/ArrayList;
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [B
+    check-cast v0, Lcom/b/j;
 
-    :try_start_0
-    array-length v4, v0
+    iget-object v3, v0, Lcom/b/j;->a:[B
 
-    invoke-virtual {v2, v4}, Ljava/io/DataOutputStream;->writeInt(I)V
+    invoke-virtual {p1, v3}, Ljava/io/DataOutputStream;->write([B)V
 
-    invoke-virtual {v2, v0}, Ljava/io/DataOutputStream;->write([B)V
+    iget-short v3, v0, Lcom/b/j;->b:S
+
+    invoke-virtual {p1, v3}, Ljava/io/DataOutputStream;->writeShort(I)V
+
+    iget-object v3, v0, Lcom/b/j;->c:[B
+
+    iget-object v0, v0, Lcom/b/j;->c:[B
+
+    array-length v0, v0
+
+    invoke-static {v3, v0}, Lcom/b/l;->a([BI)[B
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/DataOutputStream;->write([B)V
+
+    add-int/lit8 v0, v2, 0x1
+
+    move v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    move-result-object v0
+
+    :goto_1
+    return-object v0
 
     :catch_0
     move-exception v0
 
-    goto :goto_0
-
-    :cond_0
-    :try_start_1
-    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
-
-    invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-
-    :goto_1
-    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
-
-    move-result-object v0
-
-    return-object v0
-
-    :catch_1
-    move-exception v0
+    move-object v0, v1
 
     goto :goto_1
-.end method
-
-.method protected final b()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/b/i;->d:Z
-
-    return v0
-.end method
-
-.method protected final c()I
-    .locals 4
-
-    const/4 v2, 0x0
-
-    iget-object v0, p0, Lcom/b/i;->c:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return v2
-
-    :cond_0
-    move v1, v2
-
-    move v3, v2
-
-    :goto_1
-    iget-object v0, p0, Lcom/b/i;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge v1, v0, :cond_2
-
-    iget-object v0, p0, Lcom/b/i;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/b/i;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [B
-
-    array-length v0, v0
-
-    :goto_2
-    add-int/2addr v3, v0
-
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_1
-
-    :cond_1
-    move v0, v2
-
-    goto :goto_2
-
-    :cond_2
-    move v2, v3
-
-    goto :goto_0
 .end method

@@ -6,14 +6,8 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/accounts/Account;Landroid/os/Bundle;)Landroid/os/Bundle;
+.method public abstract a()V
 .end method
 
-.method public abstract b(Landroid/accounts/Account;Landroid/os/Bundle;)Landroid/os/Bundle;
-.end method
-
-.method public abstract c(Landroid/accounts/Account;Landroid/os/Bundle;)Landroid/os/Bundle;
-.end method
-
-.method public abstract d(Landroid/accounts/Account;Landroid/os/Bundle;)V
+.method public abstract a(Landroid/os/Bundle;)V
 .end method

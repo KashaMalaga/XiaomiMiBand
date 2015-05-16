@@ -1,69 +1,66 @@
-.class final Lcn/com/smartdevices/bracelet/lua/l;
+.class synthetic Lcn/com/smartdevices/bracelet/lua/l;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->values()[Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lua/l;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/lua/l;->a:[I
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->EXPANDED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcn/com/smartdevices/bracelet/lua/l;->a:[I
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->ANCHORED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_1
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
-    .locals 2
+    goto :goto_1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
+    :catch_1
+    move-exception v0
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;-><init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/lua/j;)V
-
-    return-object v0
-.end method
-
-.method public a(I)[Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
-    .locals 1
-
-    new-array v0, p1, [Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
-
-    return-object v0
-.end method
-
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/lua/l;->a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/lua/l;->a(I)[Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
-
-    move-result-object v0
-
-    return-object v0
+    goto :goto_0
 .end method

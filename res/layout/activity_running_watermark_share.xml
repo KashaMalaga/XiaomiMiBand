@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<RelativeLayout android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/rl_head_title" layout="@layout/title_back" />
-    <ImageView android:id="@id/tv_photo" android:layout_width="fill_parent" android:layout_height="451.79688dip" android:layout_marginBottom="@dimen/running_share_pane_margin" android:scaleType="centerCrop" android:layout_below="@id/rl_head_title" />
-    <FrameLayout android:id="@id/share_pane_container" android:layout_width="fill_parent" android:layout_height="@dimen/running_share_pane_margin" android:layout_alignParentBottom="true" />
+    <ImageView android:id="@id/tv_photo" android:layout_width="fill_parent" android:layout_height="451.79688dip" android:layout_marginBottom="@dimen/running_share_pane_margin" android:scaleType="centerCrop" />
+    <RelativeLayout android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="@dimen/watermark_share_panel_height" android:layout_alignParentBottom="true">
+        <FrameLayout android:id="@id/share_pane_container" android:layout_width="fill_parent" android:layout_height="@dimen/running_share_pane_margin" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
 </RelativeLayout>

@@ -3,13 +3,15 @@
 
 
 # static fields
-.field public static final a:I = 0x0
+.field public static final a:Ljava/lang/String; = "CURRENT_USER_ID"
 
-.field public static final b:I = 0x1
+.field public static final b:Ljava/lang/String; = "device_id"
 
-.field public static final c:I = 0x2
+.field public static final c:Ljava/lang/String; = "uid"
 
-.field private static final d:Ljava/lang/String; = "DeviceSource"
+.field public static final d:Ljava/lang/String; = "security"
+
+.field private static final e:Ljava/lang/String; = "keeper"
 
 
 # direct methods
@@ -21,203 +23,274 @@
     return-void
 .end method
 
-.method public static a(Lcn/com/smartdevices/bracelet/j/h;)V
-    .locals 0
+.method public static a(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/j/h;)V
+    const-string v0, "keeper"
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
-.method public static a(Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;)V
-    .locals 0
-
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;)V
-
-    return-void
-.end method
-
-.method public static a(Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;)V
-    .locals 0
-
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;)V
-
-    return-void
-.end method
-
-.method public static a()Z
-    .locals 1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->l()Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    const-string v1, "debug_channel"
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;->address:Ljava/lang/String;
+    const-string v2, ""
 
-    invoke-static {v0}, Landroid/bluetooth/BluetoothAdapter;->checkBluetoothAddress(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static b()Z
-    .locals 1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->T()Lcn/com/smartdevices/bracelet/j/h;
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/j/h;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-object v0
 .end method
 
-.method public static c()Z
-    .locals 1
+.method public static a(Landroid/content/Context;JLjava/lang/String;)V
+    .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ai()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
+    const-string v0, "keeper"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;->isValid()Z
+    move-result-object v0
 
-    move-result v0
+    const-string v1, "uid"
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0, v1, p1, p2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    const/4 v0, 0x1
+    const-string v1, "security"
 
-    :goto_0
-    return v0
+    invoke-interface {v0, v1, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static d()Z
-    .locals 1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->b()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static e()V
-    .locals 1
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;-><init>()V
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;)V
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
 .end method
 
-.method public static f()V
-    .locals 1
+.method public static a(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 2
 
-    new-instance v0, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
+    const-string v0, "keeper"
 
-    invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;-><init>()V
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;)V
-
-    return-void
-.end method
-
-.method public static g()V
-    .locals 1
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/j/h;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/j/h;-><init>()V
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/j/h;)V
-
-    return-void
-.end method
-
-.method public static h()I
-    .locals 1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->l:Lcn/com/smartdevices/bracelet/config/p;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/p;->a:Ljava/lang/Boolean;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    const-string v1, "device_id"
 
-    move-result v0
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    const/4 v0, 0x2
+    return-void
+.end method
 
-    :goto_0
-    return v0
+.method public static b(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
 
-    :cond_0
-    const/4 v0, 0x1
+    const-string v0, "keeper"
 
-    goto :goto_0
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "debug_host"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static b(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 2
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "NewApi"
+        }
+    .end annotation
+
+    const-string v0, "keeper"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "debug_channel"
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    return-void
+.end method
+
+.method public static c(Landroid/content/Context;)Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "keeper"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v1
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v2, "Locale"
+
+    invoke-virtual {v1}, Ljava/util/Locale;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    invoke-virtual {v1}, Ljava/util/Locale;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static c(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 2
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "NewApi"
+        }
+    .end annotation
+
+    const-string v0, "keeper"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "debug_host"
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    return-void
+.end method
+
+.method public static d(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "keeper"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "device_id"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static e(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "keeper"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "Locale"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    .locals 5
+
+    const-string v0, "keeper"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/model/LoginData;
+
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/model/LoginData;-><init>()V
+
+    const-string v2, "uid"
+
+    const-wide/16 v3, -0x1
+
+    invoke-interface {v0, v2, v3, v4}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v2
+
+    iput-wide v2, v1, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+
+    const-string v2, "security"
+
+    const/4 v3, 0x0
+
+    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcn/com/smartdevices/bracelet/model/LoginData;->security:Ljava/lang/String;
+
+    return-object v1
 .end method

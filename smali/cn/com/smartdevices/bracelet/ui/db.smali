@@ -23,9 +23,7 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 2
-
-    const/4 v1, 0x1
+    .locals 3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dB;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
 
@@ -33,7 +31,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v1, v1}, Landroid/support/v4/view/ViewPager;->a(IZ)V
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/view/ViewPager;->a(IZ)V
 
     return-void
 .end method

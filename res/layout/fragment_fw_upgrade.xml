@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="#ee008ed0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/fw_upgrade_all" android:background="#ee008ed0" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:android_custom="http://schemas.android.com/apk/res-auto">
     <TextView android:textSize="28.0sp" android:textColor="@android:color/white" android:id="@id/fw_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="45.0dip" android:text="@string/fw_upgrade" />
     <TextView android:textSize="12.0sp" android:textColor="#ffaad2e4" android:id="@id/fw_tips_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/fw_upgrade_tips" />

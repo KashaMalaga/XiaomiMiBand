@@ -1,12 +1,12 @@
 .class public Lcn/com/smartdevices/bracelet/relation/db/Friend;
-.super Lcn/com/smartdevices/bracelet/f/D;
+.super Lcn/com/smartdevices/bracelet/d/E;
 
 # interfaces
 .implements Landroid/os/Parcelable;
 
 
 # annotations
-.annotation runtime Lcn/com/smartdevices/bracelet/f/F;
+.annotation runtime Lcn/com/smartdevices/bracelet/d/G;
     a = "friend"
 .end annotation
 
@@ -50,74 +50,74 @@
 
 # instance fields
 .field public n:J
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "user_id"
         b = true
     .end annotation
 .end field
 
 .field public o:Ljava/lang/String;
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "username"
     .end annotation
 .end field
 
 .field public p:Ljava/lang/String;
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "icon"
     .end annotation
 .end field
 
 .field public q:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "weight"
     .end annotation
 .end field
 
 .field public r:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "step"
     .end annotation
 .end field
 
 .field public s:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "sleep"
     .end annotation
 .end field
 
 .field public t:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "careByHim"
     .end annotation
 .end field
 
 .field public u:I
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "careByMe"
     .end annotation
 .end field
 
 .field public v:J
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "updateTime"
     .end annotation
 .end field
 
 .field public w:J
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "detail_update_time"
     .end annotation
 .end field
 
 .field public x:Ljava/lang/String;
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "remark_name"
     .end annotation
 .end field
 
 .field public y:J
-    .annotation runtime Lcn/com/smartdevices/bracelet/f/E;
+    .annotation runtime Lcn/com/smartdevices/bracelet/d/F;
         a = "create_time"
     .end annotation
 .end field
@@ -143,7 +143,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/f/D;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/d/E;-><init>()V
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/relation/db/Friend;->q:I
 
@@ -175,7 +175,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/f/D;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/d/E;-><init>()V
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/relation/db/Friend;->q:I
 

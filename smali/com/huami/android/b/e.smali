@@ -127,7 +127,7 @@
 
     const/4 v0, 0x0
 
-    sget v1, Lcom/xiaomi/hm/health/a/h;->BottomDialog:I
+    sget v1, Lcom/xiaomi/hm/health/a/i;->BottomDialog:I
 
     invoke-virtual {p0, v0, v1}, Lcom/huami/android/b/e;->setStyle(II)V
 

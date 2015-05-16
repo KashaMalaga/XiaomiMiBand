@@ -954,7 +954,7 @@
 .end method
 
 .method public d(I)V
-    .locals 5
+    .locals 6
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->x:I
 
@@ -976,11 +976,8 @@
 
     add-int/lit8 v2, v0, -0x1
 
-    const/4 v0, -0x1
+    const/4 v1, -0x1
 
-    move v1, v0
-
-    :goto_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->e:Lcn/com/smartdevices/bracelet/chart/base/g;
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
@@ -989,55 +986,65 @@
 
     move-result v0
 
-    if-gt v1, v0, :cond_1
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->F:I
 
-    sub-int v0, p1, v1
+    const/16 v4, 0x100
 
-    add-int/2addr v0, v2
+    if-ne v3, v4, :cond_0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:Ljava/util/ArrayList;
+    const/4 v1, -0x3
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->z:Lcn/com/smartdevices/bracelet/chart/b/f;
-
-    invoke-interface {v3, v0}, Lcn/com/smartdevices/bracelet/chart/b/f;->a(I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:Ljava/util/ArrayList;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    add-int/lit8 v0, v0, 0x2
 
     :cond_0
-    add-int/lit8 v0, v1, 0x1
+    :goto_0
+    if-gt v1, v0, :cond_2
 
-    move v1, v0
+    sub-int v3, p1, v1
+
+    add-int/2addr v3, v2
+
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:Ljava/util/ArrayList;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->z:Lcn/com/smartdevices/bracelet/chart/b/f;
+
+    invoke-interface {v4, v3}, Lcn/com/smartdevices/bracelet/chart/b/f;->a(I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:Ljava/util/ArrayList;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_2
+    if-lez v0, :cond_3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:Ljava/util/ArrayList;
 
@@ -1050,7 +1057,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1068,7 +1075,7 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 

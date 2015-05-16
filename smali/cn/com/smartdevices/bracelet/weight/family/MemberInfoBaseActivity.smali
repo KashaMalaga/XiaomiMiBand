@@ -20,7 +20,7 @@
 
 .field protected f:Z
 
-.field protected g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+.field protected g:Lcom/xiaomi/hm/health/bt/profile/B;
 
 .field private h:Landroid/view/View;
 
@@ -50,10 +50,10 @@
 
 
 # virtual methods
-.method protected a()V
+.method protected b()V
     .locals 1
 
-    const v0, 0x7f07020b
+    const v0, 0x7f0d021f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -65,7 +65,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070209
+    const v0, 0x7f0d021d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -80,14 +80,14 @@
     return-void
 .end method
 
-.method public b()V
+.method public c()V
     .locals 2
 
     const-string v0, "MemberInfoBaseActivity"
 
     const-string v1, "onCancel"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -98,7 +98,7 @@
     return-void
 .end method
 
-.method public c()V
+.method public d()V
     .locals 0
 
     return-void
@@ -115,7 +115,7 @@
 
     const-string v1, "onActivityResult "
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x6
 
@@ -144,7 +144,7 @@
 .method public onBackPressed()V
     .locals 0
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->b()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->c()V
 
     return-void
 .end method
@@ -163,17 +163,17 @@
     return-void
 
     :pswitch_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->b()V
-
-    goto :goto_0
-
-    :pswitch_2
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->c()V
 
     goto :goto_0
 
+    :pswitch_2
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->d()V
+
+    goto :goto_0
+
     :pswitch_data_0
-    .packed-switch 0x7f070209
+    .packed-switch 0x7f0d021d
         :pswitch_1
         :pswitch_0
         :pswitch_2

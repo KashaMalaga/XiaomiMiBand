@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/g/a/a;
+.implements Lcom/xiaomi/h/a/a;
 
 
 # static fields
@@ -12,19 +12,19 @@
 # instance fields
 .field private b:Ljava/text/SimpleDateFormat;
 
-.field private c:Lcom/xiaomi/g/l;
+.field private c:Lcom/xiaomi/h/l;
 
-.field private d:Lcom/xiaomi/g/q;
+.field private d:Lcom/xiaomi/h/q;
 
-.field private e:Lcom/xiaomi/g/o;
+.field private e:Lcom/xiaomi/h/o;
 
 .field private f:Ljava/io/Writer;
 
 .field private g:Ljava/io/Reader;
 
-.field private h:Lcom/xiaomi/g/e/f;
+.field private h:Lcom/xiaomi/h/e/f;
 
-.field private i:Lcom/xiaomi/g/e/k;
+.field private i:Lcom/xiaomi/h/e/k;
 
 
 # direct methods
@@ -38,7 +38,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/xiaomi/g/l;Ljava/io/Writer;Ljava/io/Reader;)V
+.method public constructor <init>(Lcom/xiaomi/h/l;Ljava/io/Writer;Ljava/io/Reader;)V
     .locals 3
 
     const/4 v2, 0x0
@@ -53,13 +53,13 @@
 
     iput-object v0, p0, Lcom/xiaomi/e/a/a;->b:Ljava/text/SimpleDateFormat;
 
-    iput-object v2, p0, Lcom/xiaomi/e/a/a;->c:Lcom/xiaomi/g/l;
+    iput-object v2, p0, Lcom/xiaomi/e/a/a;->c:Lcom/xiaomi/h/l;
 
-    iput-object v2, p0, Lcom/xiaomi/e/a/a;->d:Lcom/xiaomi/g/q;
+    iput-object v2, p0, Lcom/xiaomi/e/a/a;->d:Lcom/xiaomi/h/q;
 
-    iput-object v2, p0, Lcom/xiaomi/e/a/a;->e:Lcom/xiaomi/g/o;
+    iput-object v2, p0, Lcom/xiaomi/e/a/a;->e:Lcom/xiaomi/h/o;
 
-    iput-object p1, p0, Lcom/xiaomi/e/a/a;->c:Lcom/xiaomi/g/l;
+    iput-object p1, p0, Lcom/xiaomi/e/a/a;->c:Lcom/xiaomi/h/l;
 
     iput-object p2, p0, Lcom/xiaomi/e/a/a;->f:Ljava/io/Writer;
 
@@ -78,10 +78,10 @@
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/g/l;
+.method static synthetic b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/h/l;
     .locals 1
 
-    iget-object v0, p0, Lcom/xiaomi/e/a/a;->c:Lcom/xiaomi/g/l;
+    iget-object v0, p0, Lcom/xiaomi/e/a/a;->c:Lcom/xiaomi/h/l;
 
     return-object v0
 .end method
@@ -89,37 +89,37 @@
 .method private e()V
     .locals 3
 
-    new-instance v0, Lcom/xiaomi/g/e/a;
+    new-instance v0, Lcom/xiaomi/h/e/a;
 
     iget-object v1, p0, Lcom/xiaomi/e/a/a;->g:Ljava/io/Reader;
 
-    invoke-direct {v0, v1}, Lcom/xiaomi/g/e/a;-><init>(Ljava/io/Reader;)V
+    invoke-direct {v0, v1}, Lcom/xiaomi/h/e/a;-><init>(Ljava/io/Reader;)V
 
     new-instance v1, Lcom/xiaomi/e/a/b;
 
     invoke-direct {v1, p0}, Lcom/xiaomi/e/a/b;-><init>(Lcom/xiaomi/e/a/a;)V
 
-    iput-object v1, p0, Lcom/xiaomi/e/a/a;->h:Lcom/xiaomi/g/e/f;
+    iput-object v1, p0, Lcom/xiaomi/e/a/a;->h:Lcom/xiaomi/h/e/f;
 
-    iget-object v1, p0, Lcom/xiaomi/e/a/a;->h:Lcom/xiaomi/g/e/f;
+    iget-object v1, p0, Lcom/xiaomi/e/a/a;->h:Lcom/xiaomi/h/e/f;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/g/e/a;->a(Lcom/xiaomi/g/e/f;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/h/e/a;->a(Lcom/xiaomi/h/e/f;)V
 
-    new-instance v1, Lcom/xiaomi/g/e/b;
+    new-instance v1, Lcom/xiaomi/h/e/b;
 
     iget-object v2, p0, Lcom/xiaomi/e/a/a;->f:Ljava/io/Writer;
 
-    invoke-direct {v1, v2}, Lcom/xiaomi/g/e/b;-><init>(Ljava/io/Writer;)V
+    invoke-direct {v1, v2}, Lcom/xiaomi/h/e/b;-><init>(Ljava/io/Writer;)V
 
     new-instance v2, Lcom/xiaomi/e/a/c;
 
     invoke-direct {v2, p0}, Lcom/xiaomi/e/a/c;-><init>(Lcom/xiaomi/e/a/a;)V
 
-    iput-object v2, p0, Lcom/xiaomi/e/a/a;->i:Lcom/xiaomi/g/e/k;
+    iput-object v2, p0, Lcom/xiaomi/e/a/a;->i:Lcom/xiaomi/h/e/k;
 
-    iget-object v2, p0, Lcom/xiaomi/e/a/a;->i:Lcom/xiaomi/g/e/k;
+    iget-object v2, p0, Lcom/xiaomi/e/a/a;->i:Lcom/xiaomi/h/e/k;
 
-    invoke-virtual {v1, v2}, Lcom/xiaomi/g/e/b;->a(Lcom/xiaomi/g/e/k;)V
+    invoke-virtual {v1, v2}, Lcom/xiaomi/h/e/b;->a(Lcom/xiaomi/h/e/k;)V
 
     iput-object v0, p0, Lcom/xiaomi/e/a/a;->g:Ljava/io/Reader;
 
@@ -129,13 +129,13 @@
 
     invoke-direct {v0, p0}, Lcom/xiaomi/e/a/d;-><init>(Lcom/xiaomi/e/a/a;)V
 
-    iput-object v0, p0, Lcom/xiaomi/e/a/a;->d:Lcom/xiaomi/g/q;
+    iput-object v0, p0, Lcom/xiaomi/e/a/a;->d:Lcom/xiaomi/h/q;
 
     new-instance v0, Lcom/xiaomi/e/a/e;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/e/a/e;-><init>(Lcom/xiaomi/e/a/a;)V
 
-    iput-object v0, p0, Lcom/xiaomi/e/a/a;->e:Lcom/xiaomi/g/o;
+    iput-object v0, p0, Lcom/xiaomi/e/a/a;->e:Lcom/xiaomi/h/o;
 
     return-void
 .end method
@@ -155,19 +155,19 @@
 
     iget-object v0, p0, Lcom/xiaomi/e/a/a;->g:Ljava/io/Reader;
 
-    check-cast v0, Lcom/xiaomi/g/e/a;
+    check-cast v0, Lcom/xiaomi/h/e/a;
 
-    iget-object v1, p0, Lcom/xiaomi/e/a/a;->h:Lcom/xiaomi/g/e/f;
+    iget-object v1, p0, Lcom/xiaomi/e/a/a;->h:Lcom/xiaomi/h/e/f;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/g/e/a;->b(Lcom/xiaomi/g/e/f;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/h/e/a;->b(Lcom/xiaomi/h/e/f;)V
 
-    new-instance v0, Lcom/xiaomi/g/e/a;
+    new-instance v0, Lcom/xiaomi/h/e/a;
 
-    invoke-direct {v0, p1}, Lcom/xiaomi/g/e/a;-><init>(Ljava/io/Reader;)V
+    invoke-direct {v0, p1}, Lcom/xiaomi/h/e/a;-><init>(Ljava/io/Reader;)V
 
-    iget-object v1, p0, Lcom/xiaomi/e/a/a;->h:Lcom/xiaomi/g/e/f;
+    iget-object v1, p0, Lcom/xiaomi/e/a/a;->h:Lcom/xiaomi/h/e/f;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/g/e/a;->a(Lcom/xiaomi/g/e/f;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/h/e/a;->a(Lcom/xiaomi/h/e/f;)V
 
     iput-object v0, p0, Lcom/xiaomi/e/a/a;->g:Ljava/io/Reader;
 
@@ -181,19 +181,19 @@
 
     iget-object v0, p0, Lcom/xiaomi/e/a/a;->f:Ljava/io/Writer;
 
-    check-cast v0, Lcom/xiaomi/g/e/b;
+    check-cast v0, Lcom/xiaomi/h/e/b;
 
-    iget-object v1, p0, Lcom/xiaomi/e/a/a;->i:Lcom/xiaomi/g/e/k;
+    iget-object v1, p0, Lcom/xiaomi/e/a/a;->i:Lcom/xiaomi/h/e/k;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/g/e/b;->b(Lcom/xiaomi/g/e/k;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/h/e/b;->b(Lcom/xiaomi/h/e/k;)V
 
-    new-instance v0, Lcom/xiaomi/g/e/b;
+    new-instance v0, Lcom/xiaomi/h/e/b;
 
-    invoke-direct {v0, p1}, Lcom/xiaomi/g/e/b;-><init>(Ljava/io/Writer;)V
+    invoke-direct {v0, p1}, Lcom/xiaomi/h/e/b;-><init>(Ljava/io/Writer;)V
 
-    iget-object v1, p0, Lcom/xiaomi/e/a/a;->i:Lcom/xiaomi/g/e/k;
+    iget-object v1, p0, Lcom/xiaomi/e/a/a;->i:Lcom/xiaomi/h/e/k;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/g/e/b;->a(Lcom/xiaomi/g/e/k;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/h/e/b;->a(Lcom/xiaomi/h/e/k;)V
 
     iput-object v0, p0, Lcom/xiaomi/e/a/a;->f:Ljava/io/Writer;
 
@@ -210,15 +210,15 @@
     return-object v0
 .end method
 
-.method public c()Lcom/xiaomi/g/q;
+.method public c()Lcom/xiaomi/h/q;
     .locals 1
 
-    iget-object v0, p0, Lcom/xiaomi/e/a/a;->d:Lcom/xiaomi/g/q;
+    iget-object v0, p0, Lcom/xiaomi/e/a/a;->d:Lcom/xiaomi/h/q;
 
     return-object v0
 .end method
 
-.method public d()Lcom/xiaomi/g/q;
+.method public d()Lcom/xiaomi/h/q;
     .locals 1
 
     const/4 v0, 0x0

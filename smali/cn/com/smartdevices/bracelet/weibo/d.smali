@@ -1,50 +1,38 @@
-.class Lcn/com/smartdevices/bracelet/weibo/d;
+.class Lcn/com/smartdevices/bracelet/weibo/D;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
-
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
+# static fields
+.field private static a:Lcn/com/smartdevices/bracelet/weibo/v;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weibo/d;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
+    new-instance v0, Lcn/com/smartdevices/bracelet/weibo/v;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/weibo/v;-><init>(Lcn/com/smartdevices/bracelet/weibo/w;)V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/weibo/D;->a:Lcn/com/smartdevices/bracelet/weibo/v;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method static synthetic a()Lcn/com/smartdevices/bracelet/weibo/v;
+    .locals 1
 
-# virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+    sget-object v0, Lcn/com/smartdevices/bracelet/weibo/D;->a:Lcn/com/smartdevices/bracelet/weibo/v;
 
-    sget v0, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->a:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/d;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->d(Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;)Lcn/com/smartdevices/bracelet/weibo/v;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weibo/d;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weibo/v;->c(Landroid/content/Context;)V
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/d;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->finish()V
-
-    return-void
+    return-object v0
 .end method

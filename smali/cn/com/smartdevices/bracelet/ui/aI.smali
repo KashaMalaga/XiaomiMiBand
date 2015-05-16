@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lcom/xiaomi/hm/health/bt/profile/a;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+.field final synthetic a:Ljava/io/File;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;Ljava/io/File;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aI;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aI;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/aI;->a:Ljava/io/File;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,108 +26,93 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 7
+.method public a()V
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    return-void
+.end method
+
+.method public a(I)V
+    .locals 2
+
+    new-instance v0, Landroid/os/Message;
+
+    invoke-direct {v0}, Landroid/os/Message;-><init>()V
+
+    const/4 v1, 0x3
+
+    iput v1, v0, Landroid/os/Message;->what:I
+
+    iput p1, v0, Landroid/os/Message;->arg1:I
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aI;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return-void
+.end method
+
+.method public b(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aI;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;I)I
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aI;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Integer;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    return-void
+.end method
+
+.method public c(I)V
+    .locals 2
+
+    new-instance v0, Landroid/os/Message;
+
+    invoke-direct {v0}, Landroid/os/Message;-><init>()V
+
+    const/4 v1, 0x4
+
+    iput v1, v0, Landroid/os/Message;->what:I
+
+    iput p1, v0, Landroid/os/Message;->arg1:I
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aI;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aI;->a:Ljava/io/File;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aI;->a:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
-    mul-int/lit8 v1, v0, 0x64
+    if-eqz v0, :cond_0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aI;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aI;->a:Ljava/io/File;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->b(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->f()I
-
-    move-result v2
-
-    div-int/2addr v1, v2
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->c()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "fw upgrade progress:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, ", "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, "%"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aI;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->i(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/widget/TextView;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/aI;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    const v4, 0x7f09020a
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    aput-object v1, v5, v6
-
-    invoke-virtual {v3, v4, v5}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aI;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->b(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->b(I)V
-
+    :cond_0
     return-void
 .end method

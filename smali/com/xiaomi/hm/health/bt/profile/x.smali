@@ -1,0 +1,156 @@
+.class Lcom/xiaomi/hm/health/bt/profile/x;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/xiaomi/hm/health/bt/b/z;
+
+
+# instance fields
+.field final synthetic a:Lcom/xiaomi/hm/health/bt/profile/v;
+
+
+# direct methods
+.method constructor <init>(Lcom/xiaomi/hm/health/bt/profile/v;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/xiaomi/hm/health/bt/profile/x;->a:Lcom/xiaomi/hm/health/bt/profile/v;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a([B)V
+    .locals 5
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
+
+    array-length v0, p1
+
+    if-ne v0, v4, :cond_1
+
+    aget-byte v0, p1, v2
+
+    and-int/lit16 v0, v0, 0xff
+
+    aget-byte v1, p1, v3
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x8
+
+    or-int/2addr v0, v1
+
+    :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "RealtimeSteps: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/xiaomi/hm/health/bt/profile/x;->a:Lcom/xiaomi/hm/health/bt/profile/v;
+
+    invoke-static {v1, v0}, Lcom/xiaomi/hm/health/bt/profile/v;->a(Lcom/xiaomi/hm/health/bt/profile/v;I)V
+
+    iget-object v1, p0, Lcom/xiaomi/hm/health/bt/profile/x;->a:Lcom/xiaomi/hm/health/bt/profile/v;
+
+    invoke-static {v1}, Lcom/xiaomi/hm/health/bt/profile/v;->a(Lcom/xiaomi/hm/health/bt/profile/v;)Lcom/xiaomi/hm/health/bt/profile/s;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/xiaomi/hm/health/bt/profile/x;->a:Lcom/xiaomi/hm/health/bt/profile/v;
+
+    invoke-static {v1}, Lcom/xiaomi/hm/health/bt/profile/v;->a(Lcom/xiaomi/hm/health/bt/profile/v;)Lcom/xiaomi/hm/health/bt/profile/s;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/xiaomi/hm/health/bt/profile/s;->b(I)V
+
+    :cond_0
+    :goto_1
+    return-void
+
+    :cond_1
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_2
+
+    aget-byte v0, p1, v2
+
+    and-int/lit16 v0, v0, 0xff
+
+    aget-byte v1, p1, v3
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x8
+
+    or-int/2addr v0, v1
+
+    aget-byte v1, p1, v4
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x10
+
+    or-int/2addr v0, v1
+
+    const/4 v1, 0x3
+
+    aget-byte v1, p1, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x18
+
+    or-int/2addr v0, v1
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "MiLiProfile"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "wrong notify data length:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+.end method

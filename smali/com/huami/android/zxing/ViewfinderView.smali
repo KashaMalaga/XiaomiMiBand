@@ -74,7 +74,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/huami/android/a/d;->border_width:I
+    sget v1, Lcom/huami/android/a/e;->border_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -82,7 +82,7 @@
 
     iput v1, p0, Lcom/huami/android/zxing/ViewfinderView;->j:I
 
-    sget v1, Lcom/huami/android/a/d;->border_length:I
+    sget v1, Lcom/huami/android/a/e;->border_length:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -90,7 +90,7 @@
 
     iput v1, p0, Lcom/huami/android/zxing/ViewfinderView;->i:I
 
-    sget v1, Lcom/huami/android/a/d;->scan_font_size:I
+    sget v1, Lcom/huami/android/a/e;->scan_font_size:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -98,7 +98,7 @@
 
     iput v1, p0, Lcom/huami/android/zxing/ViewfinderView;->e:I
 
-    sget v1, Lcom/huami/android/a/d;->scan_font_top_margin:I
+    sget v1, Lcom/huami/android/a/e;->scan_font_top_margin:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -106,7 +106,7 @@
 
     iput v1, p0, Lcom/huami/android/zxing/ViewfinderView;->f:I
 
-    sget v1, Lcom/huami/android/a/k;->scan_label:I
+    sget v1, Lcom/huami/android/a/l;->scan_label:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -114,7 +114,7 @@
 
     iput-object v1, p0, Lcom/huami/android/zxing/ViewfinderView;->g:Ljava/lang/String;
 
-    sget v1, Lcom/huami/android/a/c;->viewfinder_mask:I
+    sget v1, Lcom/huami/android/a/d;->viewfinder_mask:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -176,11 +176,11 @@
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/huami/android/zxing/ViewfinderView;->getMeasuredWidth()I
 
-    move-result v7
+    move-result v11
 
     invoke-virtual/range {p0 .. p0}, Lcom/huami/android/zxing/ViewfinderView;->getMeasuredHeight()I
 
-    move-result v8
+    move-result v7
 
     move-object/from16 v0, p0
 
@@ -204,11 +204,9 @@
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
-    move-result v10
+    iget v8, v1, Landroid/graphics/Rect;->left:I
 
-    iget v9, v1, Landroid/graphics/Rect;->left:I
-
-    iget v11, v1, Landroid/graphics/Rect;->top:I
+    iget v9, v1, Landroid/graphics/Rect;->top:I
 
     iget v12, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -228,9 +226,9 @@
 
     const/4 v3, 0x0
 
-    int-to-float v4, v7
+    int-to-float v4, v11
 
-    int-to-float v5, v11
+    int-to-float v5, v9
 
     move-object/from16 v0, p0
 
@@ -242,9 +240,9 @@
 
     const/4 v2, 0x0
 
-    int-to-float v3, v11
+    int-to-float v3, v9
 
-    int-to-float v4, v9
+    int-to-float v4, v8
 
     add-int/lit8 v1, v12, 0x1
 
@@ -262,9 +260,9 @@
 
     int-to-float v2, v1
 
-    int-to-float v3, v11
+    int-to-float v3, v9
 
-    int-to-float v4, v7
+    int-to-float v4, v11
 
     add-int/lit8 v1, v12, 0x1
 
@@ -284,9 +282,9 @@
 
     int-to-float v3, v1
 
-    int-to-float v4, v7
+    int-to-float v4, v11
 
-    int-to-float v5, v8
+    int-to-float v5, v7
 
     move-object/from16 v0, p0
 
@@ -304,15 +302,15 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    int-to-float v2, v9
+    int-to-float v2, v8
 
-    int-to-float v3, v11
+    int-to-float v3, v9
 
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->i:I
 
-    add-int/2addr v1, v9
+    add-int/2addr v1, v8
 
     int-to-float v4, v1
 
@@ -320,7 +318,7 @@
 
     iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->j:I
 
-    add-int/2addr v1, v11
+    add-int/2addr v1, v9
 
     int-to-float v5, v1
 
@@ -340,7 +338,7 @@
 
     int-to-float v2, v1
 
-    int-to-float v3, v11
+    int-to-float v3, v9
 
     int-to-float v4, v13
 
@@ -348,7 +346,7 @@
 
     iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->j:I
 
-    add-int/2addr v1, v11
+    add-int/2addr v1, v9
 
     int-to-float v5, v1
 
@@ -360,7 +358,7 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    int-to-float v2, v9
+    int-to-float v2, v8
 
     move-object/from16 v0, p0
 
@@ -374,7 +372,7 @@
 
     iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->i:I
 
-    add-int/2addr v1, v9
+    add-int/2addr v1, v8
 
     int-to-float v4, v1
 
@@ -416,15 +414,15 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    int-to-float v2, v9
+    int-to-float v2, v8
 
-    int-to-float v3, v11
+    int-to-float v3, v9
 
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->j:I
 
-    add-int/2addr v1, v9
+    add-int/2addr v1, v8
 
     int-to-float v4, v1
 
@@ -432,7 +430,7 @@
 
     iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->i:I
 
-    add-int/2addr v1, v11
+    add-int/2addr v1, v9
 
     int-to-float v5, v1
 
@@ -444,7 +442,7 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    int-to-float v2, v9
+    int-to-float v2, v8
 
     move-object/from16 v0, p0
 
@@ -458,7 +456,7 @@
 
     iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->j:I
 
-    add-int/2addr v1, v9
+    add-int/2addr v1, v8
 
     int-to-float v4, v1
 
@@ -480,7 +478,7 @@
 
     int-to-float v2, v1
 
-    int-to-float v3, v11
+    int-to-float v3, v9
 
     int-to-float v4, v13
 
@@ -488,7 +486,7 @@
 
     iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->i:I
 
-    add-int/2addr v1, v11
+    add-int/2addr v1, v9
 
     int-to-float v5, v1
 
@@ -540,7 +538,7 @@
 
     iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->j:I
 
-    add-int v14, v9, v1
+    add-int v10, v8, v1
 
     move-object/from16 v0, p0
 
@@ -552,7 +550,7 @@
 
     iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->j:I
 
-    add-int/2addr v11, v1
+    add-int v14, v9, v1
 
     move-object/from16 v0, p0
 
@@ -560,7 +558,7 @@
 
     sub-int v9, v12, v1
 
-    sub-int v1, v9, v11
+    sub-int v1, v9, v14
 
     div-int/lit8 v1, v1, 0x4
 
@@ -580,7 +578,7 @@
 
     if-lt v2, v9, :cond_2
 
-    sub-int v2, v11, v1
+    sub-int v2, v14, v1
 
     move-object/from16 v0, p0
 
@@ -593,7 +591,7 @@
 
     add-int/2addr v1, v2
 
-    if-le v1, v9, :cond_4
+    if-le v1, v9, :cond_5
 
     move v5, v9
 
@@ -602,7 +600,7 @@
 
     iget-object v1, v0, Lcom/huami/android/zxing/ViewfinderView;->b:Landroid/graphics/Rect;
 
-    iput v14, v1, Landroid/graphics/Rect;->left:I
+    iput v10, v1, Landroid/graphics/Rect;->left:I
 
     move-object/from16 v0, p0
 
@@ -620,18 +618,18 @@
 
     iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->l:I
 
-    if-ge v1, v11, :cond_3
+    if-ge v1, v14, :cond_4
 
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/huami/android/zxing/ViewfinderView;->b:Landroid/graphics/Rect;
 
-    iput v11, v1, Landroid/graphics/Rect;->top:I
+    iput v14, v1, Landroid/graphics/Rect;->top:I
 
     :goto_2
     new-instance v1, Landroid/graphics/LinearGradient;
 
-    int-to-float v2, v14
+    int-to-float v2, v10
 
     move-object/from16 v0, p0
 
@@ -639,7 +637,7 @@
 
     int-to-float v3, v3
 
-    int-to-float v4, v14
+    int-to-float v4, v10
 
     int-to-float v5, v5
 
@@ -739,24 +737,27 @@
 
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/huami/android/zxing/ViewfinderView;->e:I
+    iget-object v1, v0, Lcom/huami/android/zxing/ViewfinderView;->n:Landroid/graphics/Paint;
 
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/huami/android/zxing/ViewfinderView;->g:Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
-    move-result v2
+    move-result v1
 
-    mul-int/2addr v1, v2
+    float-to-int v1, v1
 
-    sub-int v1, v10, v1
+    sub-int v1, v11, v1
 
     div-int/lit8 v1, v1, 0x2
 
-    add-int/2addr v1, v14
+    if-gtz v1, :cond_3
 
+    move v1, v10
+
+    :cond_3
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/huami/android/zxing/ViewfinderView;->g:Ljava/lang/String;
@@ -783,9 +784,9 @@
 
     move-object/from16 v1, p0
 
-    move v4, v14
+    move v4, v10
 
-    move v5, v11
+    move v5, v14
 
     move v6, v13
 
@@ -795,7 +796,7 @@
 
     goto/16 :goto_0
 
-    :cond_3
+    :cond_4
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/huami/android/zxing/ViewfinderView;->b:Landroid/graphics/Rect;
@@ -808,7 +809,7 @@
 
     goto/16 :goto_2
 
-    :cond_4
+    :cond_5
     move v5, v1
 
     goto/16 :goto_1

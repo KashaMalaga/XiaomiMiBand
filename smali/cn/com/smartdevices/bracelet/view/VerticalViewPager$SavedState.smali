@@ -27,9 +27,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/W;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/X;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/W;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/X;-><init>()V
 
     invoke-static {v0}, Landroid/support/v4/g/e;->a(Landroid/support/v4/g/g;)Landroid/os/Parcelable$Creator;
 

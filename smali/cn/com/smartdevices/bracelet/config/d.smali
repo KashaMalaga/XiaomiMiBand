@@ -29,7 +29,7 @@
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->i()Ljava/io/File;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->j()Ljava/io/File;
 
     move-result-object v1
 
@@ -41,7 +41,7 @@
 
     if-nez v0, :cond_1
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->s:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->t:Z
 
     if-eqz v0, :cond_0
 
@@ -58,7 +58,7 @@
     :cond_1
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/config/d;->a:Landroid/content/Context;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/g/a;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/e/a;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -66,7 +66,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/config/d;->a:Landroid/content/Context;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/g/a;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/e/a;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -88,11 +88,11 @@
 
     move-result v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(ZZ)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->a(ZZ)V
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/config/b;->a(Lcn/com/smartdevices/bracelet/config/b;)V
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->s:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->t:Z
 
     if-eqz v0, :cond_0
 
@@ -109,7 +109,7 @@
     :catch_0
     move-exception v0
 
-    sget-boolean v1, Lcn/com/smartdevices/bracelet/config/b;->s:Z
+    sget-boolean v1, Lcn/com/smartdevices/bracelet/config/b;->t:Z
 
     if-eqz v1, :cond_0
 

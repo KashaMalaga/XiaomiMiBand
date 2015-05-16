@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/relation/db/e;
-.super Lcn/com/smartdevices/bracelet/f/C;
+.super Lcn/com/smartdevices/bracelet/d/D;
 
 
 # static fields
@@ -14,7 +14,7 @@
             "<",
             "Ljava/lang/Class",
             "<+",
-            "Lcn/com/smartdevices/bracelet/f/D;",
+            "Lcn/com/smartdevices/bracelet/d/E;",
             ">;>;"
         }
     .end annotation
@@ -59,7 +59,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, p1, v0, v1}, Lcn/com/smartdevices/bracelet/f/C;-><init>(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-direct {p0, p1, v0, v1}, Lcn/com/smartdevices/bracelet/d/D;-><init>(Landroid/content/Context;Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
             "<",
             "Ljava/lang/Class",
             "<+",
-            "Lcn/com/smartdevices/bracelet/f/D;",
+            "Lcn/com/smartdevices/bracelet/d/E;",
             ">;>;"
         }
     .end annotation
@@ -90,7 +90,7 @@
 
     const-class v0, Lcn/com/smartdevices/bracelet/relation/db/g;
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/db/e;->a(Ljava/lang/Class;)Lcn/com/smartdevices/bracelet/f/z;
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/db/e;->a(Ljava/lang/Class;)Lcn/com/smartdevices/bracelet/d/A;
 
     move-result-object v0
 
@@ -104,7 +104,7 @@
 
     const-class v0, Lcn/com/smartdevices/bracelet/relation/db/d;
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/db/e;->a(Ljava/lang/Class;)Lcn/com/smartdevices/bracelet/f/z;
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/db/e;->a(Ljava/lang/Class;)Lcn/com/smartdevices/bracelet/d/A;
 
     move-result-object v0
 
@@ -118,7 +118,7 @@
 
     const-class v0, Lcn/com/smartdevices/bracelet/relation/db/b;
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/db/e;->a(Ljava/lang/Class;)Lcn/com/smartdevices/bracelet/f/z;
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/db/e;->a(Ljava/lang/Class;)Lcn/com/smartdevices/bracelet/d/A;
 
     move-result-object v0
 

@@ -29,7 +29,7 @@
 
     const/4 v3, 0x0
 
-    const v0, 0x7f090182
+    const v0, 0x7f090217
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;I)V
 
@@ -53,7 +53,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "TYPE_WEIGHT"
 
@@ -63,32 +63,34 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->f()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/datasource/DeviceSource;->unbindWeight()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->i()V
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->i()V
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/Keeper;->setSyncWeightInfoToServer(I)V
 
     :goto_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/e/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/g/a;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/e/a;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/eK;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/eM;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/eK;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/eM;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/k/g;->c(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/k/j;->c(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
 
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/eL;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/eN;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/eL;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/eN;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
 
     const-wide/16 v2, 0xbb8
 
@@ -97,13 +99,34 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->e()V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->c(Landroid/content/Context;)Z
 
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/z;->e(J)V
+    move-result v0
 
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/z;->d(J)V
+    if-eqz v0, :cond_1
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/z;->b(I)V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->a()Lcn/com/smartdevices/bracelet/x;
+
+    move-result-object v0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readBraceletBtInfo()Lcom/xiaomi/hm/health/bt/BraceletBtInfo;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/xiaomi/hm/health/bt/BraceletBtInfo;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)Z
+
+    :cond_1
+    invoke-static {}, Lcn/com/smartdevices/bracelet/datasource/DeviceSource;->unbindBracelet()V
+
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/Keeper;->keepSyncTime(J)V
+
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/Keeper;->keepSyncRealStepTime(J)V
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/Keeper;->keepNeedBind(I)V
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/Keeper;->setSyncBraceletInfoToServer(I)V
 
     invoke-static {p0, v3}, Lcn/com/smartdevices/bracelet/G;->c(Landroid/content/Context;I)V
 
@@ -148,7 +171,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f070209
+    .packed-switch 0x7f0d021d
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -158,13 +181,13 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 5
 
-    const v4, 0x7f07026e
+    const v4, 0x7f0d0285
 
     const/4 v3, 0x4
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03007b
+    const v0, 0x7f030083
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->setContentView(I)V
 
@@ -183,7 +206,7 @@
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->a:Ljava/lang/String;
 
     :cond_0
-    const v0, 0x7f070209
+    const v0, 0x7f0d021d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -191,7 +214,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07020b
+    const v0, 0x7f0d021f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -217,7 +240,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v0, 0x7f07026b
+    const v0, 0x7f0d0282
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -225,11 +248,11 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0900b1
+    const v1, 0x7f090146
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    const v0, 0x7f07026d
+    const v0, 0x7f0d0284
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -237,7 +260,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0900c3
+    const v1, 0x7f090158
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -251,11 +274,11 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v1, 0x7f0900c4
+    const v1, 0x7f090159
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    const v0, 0x7f07026a
+    const v0, 0x7f0d0281
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -263,7 +286,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f0201b3
+    const v1, 0x7f0201da
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

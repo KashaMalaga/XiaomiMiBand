@@ -1,168 +1,46 @@
-.class Lcn/com/smartdevices/bracelet/weight/q;
-.super Lcom/d/a/a/h;
-
-
-# instance fields
-.field final synthetic a:Landroid/content/Context;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/model/SyncResult;
-
-.field final synthetic c:Ljava/util/List;
-
-.field final synthetic d:Lcn/com/smartdevices/bracelet/weight/o;
+.class public Lcn/com/smartdevices/bracelet/weight/Q;
+.super Lcom/huami/android/view/b;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/o;Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/SyncResult;Ljava/util/List;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/q;->d:Lcn/com/smartdevices/bracelet/weight/o;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/weight/q;->a:Landroid/content/Context;
-
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/weight/q;->b:Lcn/com/smartdevices/bracelet/model/SyncResult;
-
-    iput-object p4, p0, Lcn/com/smartdevices/bracelet/weight/q;->c:Ljava/util/List;
-
-    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcom/huami/android/view/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 4
+.method protected inflateLayout()I
+    .locals 1
 
-    const-string v0, "WeightInfoManager"
+    const v0, 0x7f0300b6
 
-    const-string v1, "Sync WeightInfos To Server Failure!!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz p3, :cond_0
-
-    new-instance v0, Ljava/lang/String;
-
-    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
-
-    const-string v1, "WeightInfoManager"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Response : "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 5
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 3
 
-    const/4 v4, 0x1
-
-    const-string v0, "WeightInfoManager"
-
-    const-string v1, "Sync WeightInfos To Server Success!!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz p3, :cond_1
-
-    new-instance v0, Ljava/lang/String;
-
-    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
-
-    const-string v1, "WeightInfoManager"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Response : "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/q;->a:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-string v0, "WeightInfoManager"
-
-    const-string v1, "Result OK!!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/q;->b:Lcn/com/smartdevices/bracelet/model/SyncResult;
-
-    iput-boolean v4, v0, Lcn/com/smartdevices/bracelet/model/SyncResult;->result:Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/q;->c:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-super {p0, p1, p2, p3}, Lcom/huami/android/view/b;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const v0, 0x7f0d033c
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    check-cast v0, Landroid/widget/TextView;
 
-    iput v4, v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+    new-instance v2, Lcn/com/smartdevices/bracelet/weight/R;
 
-    goto :goto_0
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/weight/R;-><init>(Lcn/com/smartdevices/bracelet/weight/Q;)V
 
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/q;->d:Lcn/com/smartdevices/bracelet/weight/o;
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/q;->c:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/o;->d(Ljava/util/List;)V
-
-    :cond_1
-    return-void
+    return-object v1
 .end method

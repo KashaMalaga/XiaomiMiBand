@@ -30,7 +30,7 @@
 .method private setTitleBack()V
     .locals 2
 
-    const v0, 0x7f07003d
+    const v0, 0x7f0d003e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->findViewById(I)Landroid/view/View;
 
@@ -38,7 +38,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f090402
+    const v1, 0x7f090485
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->getString(I)Ljava/lang/String;
 
@@ -86,9 +86,9 @@
 .method public onChildClick(Landroid/widget/ExpandableListView;Landroid/view/View;IIJ)Z
     .locals 6
 
-    const/4 v1, 0x0
-
     const/4 v0, 0x1
+
+    const/4 v1, 0x0
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
@@ -117,7 +117,9 @@
     :cond_1
     const/4 v2, 0x0
 
-    if-ne v0, v3, :cond_4
+    const/4 v5, 0x2
+
+    if-ne v5, v3, :cond_4
 
     invoke-static {p0, v4}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->buildIntent(Landroid/content/Context;Lcn/com/smartdevices/bracelet/partner/Partner;)Landroid/content/Intent;
 
@@ -231,11 +233,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03003d
+    const v0, 0x7f030040
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->setContentView(I)V
 
-    const v0, 0x7f07003d
+    const v0, 0x7f0d003e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->findViewById(I)Landroid/view/View;
 
@@ -243,7 +245,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f090402
+    const v1, 0x7f090485
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -267,7 +269,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
-    const v0, 0x7f070181
+    const v0, 0x7f0d018f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->findViewById(I)Landroid/view/View;
 
@@ -342,7 +344,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x2
 
     iget-object v2, p1, Lcn/com/smartdevices/bracelet/eventbus/EventServiceListLoad;->partners:Ljava/util/List;
 
@@ -360,28 +362,28 @@
 .method public onEvent(Lcn/com/smartdevices/bracelet/eventbus/EventServiceStateChanged;)V
     .locals 5
 
-    const/4 v1, 0x1
-
     iget-boolean v0, p1, Lcn/com/smartdevices/bracelet/eventbus/EventServiceStateChanged;->success:Z
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/eventbus/EventServiceStateChanged;->action:I
+    iget v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventServiceStateChanged;->action:I
 
-    if-nez v2, :cond_0
+    if-nez v1, :cond_0
 
-    move v0, v1
+    const/4 v0, 0x1
 
     :cond_0
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
+
+    const/4 v2, 0x2
 
     iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventServiceStateChanged;->thirdAppId:Ljava/lang/String;
 
     iget-object v4, p1, Lcn/com/smartdevices/bracelet/eventbus/EventServiceStateChanged;->url:Ljava/lang/String;
 
-    invoke-virtual {v2, v1, v3, v0, v4}, Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;->updatePartnerItem(ILjava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {v1, v2, v3, v0, v4}, Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;->updatePartnerItem(ILjava/lang/String;ILjava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->mListAdapter:Lcn/com/smartdevices/bracelet/partner/PartnerListAdapter;
 

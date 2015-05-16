@@ -35,13 +35,13 @@
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/push/service/i;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/g/l;
+    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/h/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/xiaomi/g/l;->c()V
+    invoke-virtual {v0}, Lcom/xiaomi/h/l;->c()V
     :try_end_0
-    .catch Lcom/xiaomi/g/C; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/xiaomi/h/C; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_0
     :goto_0

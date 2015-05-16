@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/gps/services/r;
+.implements Lcn/com/smartdevices/bracelet/gps/services/t;
 
 
 # instance fields

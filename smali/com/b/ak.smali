@@ -1,82 +1,190 @@
-.class Lcom/b/ak;
-.super Ljava/io/ByteArrayOutputStream;
+.class public Lcom/b/ak;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field final synthetic a:Lcom/b/aj;
+# static fields
+.field private static a:Lcom/b/ak;
 
 
 # direct methods
-.method constructor <init>(Lcom/b/aj;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lcom/b/ak;->a:Lcom/b/aj;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
+    sput-object v0, Lcom/b/ak;->a:Lcom/b/ak;
 
     return-void
 .end method
 
+.method private constructor <init>()V
+    .locals 0
 
-# virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lcom/b/ak;->count:I
+    return-void
+.end method
 
-    if-lez v0, :cond_0
+.method static a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
 
-    iget-object v0, p0, Lcom/b/ak;->buf:[B
+    new-instance v0, Ljava/text/DecimalFormat;
 
-    iget v1, p0, Lcom/b/ak;->count:I
+    const-string v1, "#"
 
-    add-int/lit8 v1, v1, -0x1
+    new-instance v2, Ljava/text/DecimalFormatSymbols;
 
-    aget-byte v0, v0, v1
+    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const/16 v1, 0xd
+    invoke-direct {v2, v3}, Ljava/text/DecimalFormatSymbols;-><init>(Ljava/util/Locale;)V
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {v0, v1, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;Ljava/text/DecimalFormatSymbols;)V
 
-    iget v0, p0, Lcom/b/ak;->count:I
+    invoke-virtual {v0, p1}, Ljava/text/DecimalFormat;->applyPattern(Ljava/lang/String;)V
 
-    add-int/lit8 v0, v0, -0x1
+    invoke-virtual {v0, p0}, Ljava/text/DecimalFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static a(I)[B
+    .locals 3
+
+    const/4 v0, 0x4
+
+    new-array v0, v0, [B
+
+    const/4 v1, 0x0
+
+    and-int/lit16 v2, p0, 0xff
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
+
+    const/4 v1, 0x1
+
+    shr-int/lit8 v2, p0, 0x8
+
+    and-int/lit16 v2, v2, 0xff
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
+
+    const/4 v1, 0x2
+
+    shr-int/lit8 v2, p0, 0x10
+
+    and-int/lit16 v2, v2, 0xff
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
+
+    const/4 v1, 0x3
+
+    shr-int/lit8 v2, p0, 0x18
+
+    and-int/lit16 v2, v2, 0xff
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
+
+    return-object v0
+.end method
+
+.method public static a(J)[B
+    .locals 6
+
+    const/16 v0, 0x8
+
+    new-array v1, v0, [B
+
+    const/4 v0, 0x0
 
     :goto_0
-    :try_start_0
-    new-instance v1, Ljava/lang/String;
+    array-length v2, v1
 
-    iget-object v2, p0, Lcom/b/ak;->buf:[B
+    if-ge v0, v2, :cond_0
 
-    const/4 v3, 0x0
+    mul-int/lit8 v2, v0, 0x8
 
-    iget-object v4, p0, Lcom/b/ak;->a:Lcom/b/aj;
+    shr-long v2, p0, v2
 
-    invoke-static {v4}, Lcom/b/aj;->a(Lcom/b/aj;)Ljava/nio/charset/Charset;
+    const-wide/16 v4, 0xff
 
-    move-result-object v4
+    and-long/2addr v2, v4
 
-    invoke-virtual {v4}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
+    long-to-int v2, v2
 
-    move-result-object v4
+    int-to-byte v2, v2
 
-    invoke-direct {v1, v2, v3, v0, v4}, Ljava/lang/String;-><init>([BIILjava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+    aput-byte v2, v1, v0
 
-    return-object v1
-
-    :cond_0
-    iget v0, p0, Lcom/b/ak;->count:I
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    return-object v1
+.end method
 
-    new-instance v1, Ljava/lang/AssertionError;
+.method static a(Ljava/lang/String;)[B
+    .locals 1
 
-    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    throw v1
+    move-result v0
+
+    invoke-static {v0}, Lcom/b/ak;->a(I)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static b(I)[B
+    .locals 3
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [B
+
+    const/4 v1, 0x0
+
+    and-int/lit16 v2, p0, 0xff
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
+
+    const/4 v1, 0x1
+
+    shr-int/lit8 v2, p0, 0x8
+
+    and-int/lit16 v2, v2, 0xff
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
+
+    return-object v0
+.end method
+
+.method static b(Ljava/lang/String;)[B
+    .locals 1
+
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/b/ak;->b(I)[B
+
+    move-result-object v0
+
+    return-object v0
 .end method

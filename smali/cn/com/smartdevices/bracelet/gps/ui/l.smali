@@ -6,7 +6,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/H;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/I;
 
 .field private b:I
 
@@ -14,10 +14,10 @@
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/H;ILandroid/widget/EditText;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/I;ILandroid/widget/EditText;)V
     .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/L;->a:Lcn/com/smartdevices/bracelet/gps/ui/H;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/L;->a:Lcn/com/smartdevices/bracelet/gps/ui/I;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -73,9 +73,9 @@
     :cond_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/L;->c:Landroid/widget/EditText;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/L;->a:Lcn/com/smartdevices/bracelet/gps/ui/H;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/L;->a:Lcn/com/smartdevices/bracelet/gps/ui/I;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/ui/H;->a(Lcn/com/smartdevices/bracelet/gps/ui/H;)Landroid/view/animation/Animation;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/ui/I;->a(Lcn/com/smartdevices/bracelet/gps/ui/I;)Landroid/view/animation/Animation;
 
     move-result-object v2
 

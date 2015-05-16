@@ -186,7 +186,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0700b1
+    const v0, 0x7f0d00ab
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -196,7 +196,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/D;->b:Landroid/widget/ImageView;
 
-    const v0, 0x7f0700b2
+    const v0, 0x7f0d00ac
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -206,7 +206,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/D;->a:Landroid/widget/TextView;
 
-    const v0, 0x7f0700b0
+    const v0, 0x7f0d00aa
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

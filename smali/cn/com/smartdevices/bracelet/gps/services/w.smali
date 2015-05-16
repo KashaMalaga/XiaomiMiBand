@@ -34,7 +34,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_ACTION_CONN_STATUS_CHANGED:Ljava/lang/String;
+    sget-object v1, Lcom/xiaomi/hm/health/bt/bleservice/BLEService;->h:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -42,13 +42,13 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_EXTRA_PARAM:Ljava/lang/String;
+    sget-object v0, Lcom/xiaomi/hm/health/bt/bleservice/BLEService;->p:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    check-cast v0, Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    check-cast v0, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;
 
     const-string v1, "Step"
 
@@ -62,7 +62,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->a()I
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->a()I
 
     move-result v3
 
@@ -78,7 +78,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/services/W;->a:Lcn/com/smartdevices/bracelet/gps/services/U;
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/gps/services/U;->f()Z
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/gps/services/U;->e()Z
 
     move-result v3
 
@@ -90,9 +90,9 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->h()Z
 
     move-result v0
 
@@ -100,7 +100,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/W;->a:Lcn/com/smartdevices/bracelet/gps/services/U;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/U;->f()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/U;->e()Z
 
     move-result v0
 

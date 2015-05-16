@@ -1,92 +1,109 @@
 .class Lcn/com/smartdevices/bracelet/view/z;
-.super Landroid/view/View;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/view/RippleBackground;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/view/A;
 
-.field private b:F
+.field final synthetic b:Lcn/com/smartdevices/bracelet/view/RippleBackground;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/view/RippleBackground;Landroid/content/Context;)V
-    .locals 1
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/z;->a:Lcn/com/smartdevices/bracelet/view/RippleBackground;
-
-    invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/z;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method private a()F
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/z;->b:F
-
-    return v0
-.end method
-
-.method private a(F)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/view/RippleBackground;Lcn/com/smartdevices/bracelet/view/A;)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/view/z;->b:F
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/z;->b:Lcn/com/smartdevices/bracelet/view/RippleBackground;
 
-    return-void
-.end method
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/view/z;->a:Lcn/com/smartdevices/bracelet/view/A;
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/view/z;F)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/view/z;->a(F)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected onDraw(Landroid/graphics/Canvas;)V
-    .locals 4
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/z;->a:Lcn/com/smartdevices/bracelet/view/RippleBackground;
+    const-string v0, "update"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/RippleBackground;->b(Lcn/com/smartdevices/bracelet/view/RippleBackground;)I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    int-to-float v0, v0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/z;->a:Lcn/com/smartdevices/bracelet/view/RippleBackground;
+    move-result-object v2
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/RippleBackground;->c(Lcn/com/smartdevices/bracelet/view/RippleBackground;)I
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result v1
+    move-result-object v2
 
-    int-to-float v1, v1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/z;->a()F
+    move-result-object v1
+
+    const-string v2, " ; RADIUS: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/z;->b:Lcn/com/smartdevices/bracelet/view/RippleBackground;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/view/RippleBackground;->getWidth()I
 
     move-result v2
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/z;->a:Lcn/com/smartdevices/bracelet/view/RippleBackground;
+    div-int/lit8 v2, v2, 0x2
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/view/RippleBackground;->d(Lcn/com/smartdevices/bracelet/view/RippleBackground;)F
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result v3
+    move-result-object v1
 
-    sub-float/2addr v2, v3
+    const-string v2, " ; ripple:"
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/z;->a:Lcn/com/smartdevices/bracelet/view/RippleBackground;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/view/RippleBackground;->e(Lcn/com/smartdevices/bracelet/view/RippleBackground;)Landroid/graphics/Paint;
+    move-result-object v1
 
-    move-result-object v3
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/z;->b:Lcn/com/smartdevices/bracelet/view/RippleBackground;
 
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/view/RippleBackground;->a(Lcn/com/smartdevices/bracelet/view/RippleBackground;)F
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/z;->a:Lcn/com/smartdevices/bracelet/view/A;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/view/A;->a(Lcn/com/smartdevices/bracelet/view/A;F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/z;->a:Lcn/com/smartdevices/bracelet/view/A;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/A;->invalidate()V
 
     return-void
 .end method

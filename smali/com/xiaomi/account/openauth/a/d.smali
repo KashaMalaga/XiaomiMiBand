@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/account/openauth/a/d;
+.class final Lcom/xiaomi/account/openauth/a/d;
 .super Ljava/lang/Object;
 
 # interfaces

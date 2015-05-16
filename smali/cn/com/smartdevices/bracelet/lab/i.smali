@@ -48,15 +48,15 @@
     return-void
 
     :pswitch_0
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/u;
+    new-instance v0, Lcom/xiaomi/hm/health/bt/a/u;
 
     new-instance v1, Lcn/com/smartdevices/bracelet/lab/j;
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/j;-><init>(Lcn/com/smartdevices/bracelet/lab/i;)V
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/a/u;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v0, v1}, Lcom/xiaomi/hm/health/bt/a/u;-><init>(Lcom/xiaomi/hm/health/bt/a/b;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/u;->d()V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/a/u;->f()V
 
     const/4 v0, 0x2
 
@@ -80,7 +80,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/h;->a(Lcn/com/smartdevices/bracelet/lab/h;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/h;->a(Lcn/com/smartdevices/bracelet/lab/h;)Lcom/xiaomi/hm/health/bt/profile/v;
 
     move-result-object v3
 
@@ -88,9 +88,9 @@
 
     invoke-direct {v4, p0, v0}, Lcn/com/smartdevices/bracelet/lab/k;-><init>(Lcn/com/smartdevices/bracelet/lab/i;Z)V
 
-    invoke-direct {v1, v2, v3, v0, v4}, Lcn/com/smartdevices/bracelet/lab/f;-><init>(Lcn/com/smartdevices/bracelet/lab/d;Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;ZLcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v1, v2, v3, v0, v4}, Lcn/com/smartdevices/bracelet/lab/f;-><init>(Lcn/com/smartdevices/bracelet/lab/d;Lcom/xiaomi/hm/health/bt/profile/v;ZLcom/xiaomi/hm/health/bt/a/b;)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/f;->c()V
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/f;->e()V
 
     goto :goto_0
 

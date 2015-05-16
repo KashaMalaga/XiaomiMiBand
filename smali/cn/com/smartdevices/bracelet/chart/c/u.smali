@@ -773,7 +773,7 @@
 .method public static d(Landroid/content/Context;)Z
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->i()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/G;->h()Z
 
     move-result v0
 

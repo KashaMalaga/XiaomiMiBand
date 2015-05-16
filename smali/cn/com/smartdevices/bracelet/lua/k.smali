@@ -3,24 +3,24 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)V
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
     invoke-direct {p0}, Landroid/support/v4/widget/bi;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/j;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/j;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lua/k;-><init>(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lua/k;-><init>(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)V
 
     return-void
 .end method
@@ -30,17 +30,17 @@
 .method public a(I)V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mAnchorPoint:F
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$200(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mAnchorPoint:F
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$200(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v1
 
@@ -50,10 +50,10 @@
 
     float-to-int v0, v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
 
     move-result-object v1
 
@@ -63,10 +63,10 @@
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideOffset:F
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideOffset:F
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v1
 
@@ -76,57 +76,57 @@
 
     if-nez v1, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$600(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Lcn/com/smartdevices/bracelet/lua/m;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$600(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     move-result-object v0
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lua/m;->a:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->EXPANDED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->updateObscuredViewVisibility()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->updateObscuredViewVisibility()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideableView:Landroid/view/View;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$700(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/view/View;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideableView:Landroid/view/View;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$700(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->dispatchOnPanelExpanded(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->dispatchOnPanelExpanded(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lua/m;->a:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->EXPANDED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    # setter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$602(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/m;)Lcn/com/smartdevices/bracelet/lua/m;
+    # setter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$602(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideOffset:F
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideOffset:F
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v1
 
     int-to-float v0, v0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v2
 
@@ -138,70 +138,70 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$600(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Lcn/com/smartdevices/bracelet/lua/m;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$600(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     move-result-object v0
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lua/m;->c:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->ANCHORED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->updateObscuredViewVisibility()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->updateObscuredViewVisibility()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideableView:Landroid/view/View;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$700(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/view/View;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideableView:Landroid/view/View;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$700(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->dispatchOnPanelAnchored(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->dispatchOnPanelAnchored(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lua/m;->c:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->ANCHORED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    # setter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$602(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/m;)Lcn/com/smartdevices/bracelet/lua/m;
+    # setter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$602(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$600(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Lcn/com/smartdevices/bracelet/lua/m;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$600(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     move-result-object v0
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lua/m;->b:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->COLLAPSED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideableView:Landroid/view/View;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$700(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/view/View;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideableView:Landroid/view/View;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$700(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->dispatchOnPanelCollapsed(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->dispatchOnPanelCollapsed(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lua/m;->b:Lcn/com/smartdevices/bracelet/lua/m;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;->COLLAPSED:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
-    # setter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/m;
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$602(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/m;)Lcn/com/smartdevices/bracelet/lua/m;
+    # setter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideState:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$602(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayoutSavedState$SlideState;
 
     goto :goto_0
 .end method
@@ -215,7 +215,7 @@
 
     const/4 v4, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
     const/4 v1, 0x0
 
@@ -223,30 +223,30 @@
 
     move-result-object v1
 
-    # setter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->isPressed:Ljava/lang/Boolean;
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$802(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;Ljava/lang/Boolean;)Ljava/lang/Boolean;
+    # setter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->isPressed:Ljava/lang/Boolean;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$802(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsSlidingUp:Z
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$1000(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Z
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mIsSlidingUp:Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$1000(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # invokes: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getSlidingTop()I
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$1100(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # invokes: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->getSlidingTop()I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$1100(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v0
 
     :goto_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mAnchorPoint:F
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$200(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mAnchorPoint:F
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$200(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v1
 
@@ -254,26 +254,26 @@
 
     if-eqz v1, :cond_5
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsSlidingUp:Z
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$1000(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Z
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mIsSlidingUp:Z
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$1000(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mAnchorPoint:F
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$200(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mAnchorPoint:F
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$200(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v2
 
@@ -285,10 +285,10 @@
 
     int-to-float v1, v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v2
 
@@ -305,10 +305,10 @@
 
     if-nez v2, :cond_4
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideOffset:F
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideOffset:F
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v2
 
@@ -321,10 +321,10 @@
     if-ltz v2, :cond_4
 
     :cond_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v1
 
@@ -332,9 +332,9 @@
 
     :cond_1
     :goto_2
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getPullDownDockEnable()Ljava/lang/Boolean;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->getPullDownDockEnable()Ljava/lang/Boolean;
 
     move-result-object v1
 
@@ -344,10 +344,10 @@
 
     if-nez v1, :cond_7
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
 
     move-result-object v1
 
@@ -357,25 +357,25 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/support/v4/widget/bf;->a(II)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->invalidate()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->invalidate()V
 
     :goto_3
     return-void
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # invokes: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getSlidingTop()I
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$1100(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # invokes: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->getSlidingTop()I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$1100(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v1
 
@@ -384,24 +384,24 @@
     goto :goto_0
 
     :cond_3
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mPanelHeight:I
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$1200(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mPanelHeight:I
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$1200(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mAnchorPoint:F
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$200(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mAnchorPoint:F
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$200(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v2
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v3
 
@@ -413,10 +413,10 @@
 
     sub-int/2addr v1, v2
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mPanelHeight:I
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$1200(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mPanelHeight:I
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$1200(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v2
 
@@ -424,10 +424,10 @@
 
     int-to-float v1, v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v2
 
@@ -442,10 +442,10 @@
 
     if-nez v2, :cond_1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideOffset:F
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideOffset:F
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v2
 
@@ -457,10 +457,10 @@
 
     if-gez v2, :cond_1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideOffset:F
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideOffset:F
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v2
 
@@ -472,19 +472,19 @@
 
     int-to-float v0, v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v1
 
     int-to-float v1, v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mAnchorPoint:F
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$200(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mAnchorPoint:F
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$200(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v2
 
@@ -505,10 +505,10 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideOffset:F
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideOffset:F
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v1
 
@@ -519,10 +519,10 @@
     if-lez v1, :cond_1
 
     :cond_6
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v1
 
@@ -531,15 +531,15 @@
     goto/16 :goto_2
 
     :cond_7
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getSlideThreshhold()F
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->getSlideThreshhold()F
 
     move-result v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getSlideThreshhold2()F
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->getSlideThreshhold2()F
 
     move-result v2
 
@@ -547,10 +547,10 @@
 
     if-eqz v3, :cond_8
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideOffset:F
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)F
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideOffset:F
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$500(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)F
 
     move-result v3
 
@@ -558,10 +558,10 @@
 
     if-lez v1, :cond_8
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
 
     move-result-object v1
 
@@ -569,10 +569,10 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v4}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v4
 
@@ -580,10 +580,10 @@
 
     int-to-float v0, v0
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v4}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v4
 
@@ -598,17 +598,17 @@
     invoke-virtual {v1, v3, v0}, Landroid/support/v4/widget/bf;->a(II)Z
 
     :goto_4
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->invalidate()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->invalidate()V
 
     goto/16 :goto_3
 
     :cond_8
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/bf;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$400(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Landroid/support/v4/widget/bf;
 
     move-result-object v1
 
@@ -624,14 +624,14 @@
 .method public a(Landroid/view/View;IIII)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # invokes: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->onPanelDragged(I)V
-    invoke-static {v0, p3}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$900(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;I)V
+    # invokes: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->onPanelDragged(I)V
+    invoke-static {v0, p3}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$900(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->invalidate()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->invalidate()V
 
     return-void
 .end method
@@ -639,10 +639,10 @@
 .method public a(Landroid/view/View;I)Z
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsUnableToDrag:Z
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$100(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Z
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mIsUnableToDrag:Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$100(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Z
 
     move-result v0
 
@@ -658,9 +658,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$LayoutParams;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout$LayoutParams;
 
-    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$LayoutParams;->slideable:Z
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout$LayoutParams;->slideable:Z
 
     goto :goto_0
 .end method
@@ -668,10 +668,10 @@
 .method public b(Landroid/view/View;)I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v0
 
@@ -681,26 +681,26 @@
 .method public b(Landroid/view/View;II)I
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsSlidingUp:Z
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$1000(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Z
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mIsSlidingUp:Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$1000(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # invokes: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getSlidingTop()I
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$1100(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # invokes: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->getSlidingTop()I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$1100(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v0
 
@@ -709,10 +709,10 @@
     :goto_0
     if-le p2, v0, :cond_1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsPullDownEnabled:Z
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$1300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Z
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mIsPullDownEnabled:Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$1300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)Z
 
     move-result v2
 
@@ -722,16 +722,16 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getPaddingTop()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->getPaddingTop()I
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideRange:I
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->mSlideRange:I
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$300(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;)I
 
     move-result v1
 
@@ -744,9 +744,9 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getPullDownDistance()I
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->getPullDownDistance()I
 
     move-result v2
 
@@ -762,11 +762,11 @@
 .method public b(Landroid/view/View;I)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->setAllChildrenVisible()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->setAllChildrenVisible()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/k;->a:Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;
 
     const/4 v1, 0x1
 
@@ -774,8 +774,8 @@
 
     move-result-object v1
 
-    # setter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->isPressed:Ljava/lang/Boolean;
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$802(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;Ljava/lang/Boolean;)Ljava/lang/Boolean;
+    # setter for: Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->isPressed:Ljava/lang/Boolean;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;->access$802(Lcn/com/smartdevices/bracelet/lua/ScrollSlidingUpPanelLayout;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
     return-void
 .end method

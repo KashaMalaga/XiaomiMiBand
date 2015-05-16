@@ -431,7 +431,7 @@
     :try_start_0
     const-string v1, "lining.jpg"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/b/a;->a(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/a/a;->a(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v3
 
@@ -478,7 +478,7 @@
 
     const-string v3, "Taking Photo of Partner appear IO error"
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -493,7 +493,7 @@
 
     const-string v4, "Taking Photo of Partner error"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -517,7 +517,7 @@
 
     const-string v3, "Taking Photo of Partner appear IO error"
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -551,7 +551,7 @@
 
     const-string v3, "Taking Photo of Partner appear IO error"
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_5
 
@@ -618,7 +618,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/k/d;->a(Landroid/content/Context;)Ljava/util/Map;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/k/g;->a(Landroid/content/Context;)Ljava/util/Map;
 
     move-result-object v3
 
@@ -643,7 +643,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->d()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->e()Ljava/lang/String;
 
     move-result-object v5
 
@@ -854,7 +854,7 @@
 
     const-string v0, "lining_tmp.jpg"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b/a;->a(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/a/a;->a(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
@@ -907,7 +907,7 @@
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->mTaskIsRunning:Z
 
-    const v0, 0x7f0903ec
+    const v0, 0x7f09052d
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/G;->a(Landroid/app/Activity;I)V
 
@@ -942,7 +942,7 @@
     :sswitch_3
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->mErrorView:Landroid/view/View;
 
-    const v1, 0x7f070115
+    const v1, 0x7f0d010f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -956,7 +956,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->mErrorView:Landroid/view/View;
 
-    const v1, 0x7f070114
+    const v1, 0x7f0d010e
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -980,10 +980,10 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0700e0 -> :sswitch_1
-        0x7f070110 -> :sswitch_2
-        0x7f070111 -> :sswitch_0
-        0x7f070113 -> :sswitch_3
+        0x7f0d00da -> :sswitch_1
+        0x7f0d010a -> :sswitch_2
+        0x7f0d010b -> :sswitch_0
+        0x7f0d010d -> :sswitch_3
     .end sparse-switch
 .end method
 
@@ -998,7 +998,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->setContentView(I)V
 
-    const v0, 0x7f070116
+    const v0, 0x7f0d0110
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -1008,7 +1008,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->mLoadProgress:Landroid/widget/ProgressBar;
 
-    const v0, 0x7f070112
+    const v0, 0x7f0d010c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -1018,7 +1018,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->mWebContainer:Landroid/webkit/WebView;
 
-    const v0, 0x7f070113
+    const v0, 0x7f0d010d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -1026,7 +1026,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->mErrorView:Landroid/view/View;
 
-    const v0, 0x7f070111
+    const v0, 0x7f0d010b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -1036,7 +1036,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->mUnBindButton:Landroid/widget/ImageButton;
 
-    const v0, 0x7f070110
+    const v0, 0x7f0d010a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -1044,7 +1044,7 @@
 
     check-cast v0, Landroid/widget/ImageButton;
 
-    const v1, 0x7f07010f
+    const v1, 0x7f0d0109
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -1052,7 +1052,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->mTitleBar:Landroid/view/View;
 
-    const v1, 0x7f070114
+    const v1, 0x7f0d010e
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -1060,7 +1060,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->mProgressBar:Landroid/view/View;
 
-    const v1, 0x7f070115
+    const v1, 0x7f0d010f
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -1068,7 +1068,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->mErrorLabel:Landroid/view/View;
 
-    const v1, 0x7f0700e0
+    const v1, 0x7f0d00da
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -1168,7 +1168,7 @@
     invoke-virtual {v0, v4}, Landroid/widget/ImageButton;->setVisibility(I)V
 
     :goto_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->g()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v0
 
@@ -1180,7 +1180,7 @@
     :catch_0
     move-exception v0
 
-    const v0, 0x7f09042e
+    const v0, 0x7f0904a9
 
     invoke-static {p0, v0, v4}, Lcom/huami/android/view/a;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -1259,7 +1259,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0903eb
+    const v0, 0x7f09052c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->getString(I)Ljava/lang/String;
 
@@ -1272,7 +1272,7 @@
     return-void
 
     :cond_1
-    const v0, 0x7f0903ed
+    const v0, 0x7f09052e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->getString(I)Ljava/lang/String;
 
@@ -1311,7 +1311,7 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f0903f0
+    const v0, 0x7f090531
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->getString(I)Ljava/lang/String;
 
@@ -1322,7 +1322,7 @@
     goto :goto_0
 
     :cond_3
-    const v0, 0x7f0903ee
+    const v0, 0x7f09052f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->getString(I)Ljava/lang/String;
 
@@ -1441,7 +1441,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->mPartnerSelectImageFragment:Lcn/com/smartdevices/bracelet/partner/PartnerSelectImageFragment;
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aa;->showPanel(Landroid/app/Activity;Landroid/app/DialogFragment;)V
+    invoke-static {p0, v0}, Lcom/huami/android/view/b;->showPanel(Landroid/app/Activity;Landroid/app/DialogFragment;)V
 
     return-void
 .end method

@@ -47,7 +47,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/c;->a:Lcn/com/smartdevices/bracelet/lab/ui/b;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/b;->a()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/b;->b()V
 
     :goto_0
     monitor-exit v1

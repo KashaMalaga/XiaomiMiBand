@@ -37,7 +37,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weibo/w;->a:Landroid/content/Context;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weibo/q;->e(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weibo/q;->f(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -57,7 +57,7 @@
 
     const-string v1, "return [loginState null]"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_1
@@ -100,7 +100,7 @@
 
     const-string v2, "Get login state from server & Save login state"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weibo/w;->a:Landroid/content/Context;
 
@@ -115,7 +115,7 @@
 
     const-string v2, "Set sync token tag"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -128,14 +128,14 @@
 
     const-string v1, "return [unbind state]"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
     :cond_5
     const/4 v2, -0x1
 
-    if-ne v1, v2, :cond_6
+    if-ne v1, v2, :cond_7
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/w;->b:Lcn/com/smartdevices/bracelet/weibo/v;
 
@@ -145,13 +145,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_6
 
     const-string v0, "WeiboHealthManager"
 
-    const-string v1, "return [Invalid bind state]"
+    const-string v1, "Invalid bind state"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/w;->a:Landroid/content/Context;
 
@@ -159,32 +159,39 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->a(Landroid/content/Context;I)V
 
+    :cond_6
+    const-string v0, "WeiboHealthManager"
+
+    const-string v1, "return [Invalid bind state]"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
+
     goto :goto_1
 
-    :cond_6
+    :cond_7
     iget-wide v2, v0, Lcn/com/smartdevices/bracelet/model/ThirdLoginState;->expiresIn:J
 
-    if-ne v1, v4, :cond_7
+    if-ne v1, v4, :cond_8
 
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
 
-    if-lez v0, :cond_7
+    if-lez v0, :cond_8
 
     cmp-long v0, v2, v5
 
-    if-lez v0, :cond_7
+    if-lez v0, :cond_8
 
     const-string v0, "WeiboHealthManager"
 
     const-string v1, "return [bind state valid]"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    :cond_7
+    :cond_8
     cmp-long v0, v2, v5
 
     if-gtz v0, :cond_1

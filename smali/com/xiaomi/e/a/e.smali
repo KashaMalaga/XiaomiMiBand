@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/g/o;
+.implements Lcom/xiaomi/h/o;
 
 
 # instance fields
@@ -61,7 +61,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/e/a/e;->a:Lcom/xiaomi/e/a/a;
 
-    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/g/l;
+    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/h/l;
 
     move-result-object v1
 
@@ -127,7 +127,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/e/a/e;->a:Lcom/xiaomi/e/a/a;
 
-    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/g/l;
+    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/h/l;
 
     move-result-object v1
 
@@ -193,7 +193,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/e/a/e;->a:Lcom/xiaomi/e/a/a;
 
-    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/g/l;
+    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/h/l;
 
     move-result-object v1
 
@@ -261,7 +261,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/e/a/e;->a:Lcom/xiaomi/e/a/a;
 
-    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/g/l;
+    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/h/l;
 
     move-result-object v1
 

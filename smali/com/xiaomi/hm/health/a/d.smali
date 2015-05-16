@@ -3,95 +3,55 @@
 
 
 # static fields
-.field public static final bg_item:I = 0x7f020011
+.field public static final action_bar_h:I = 0x7f080010
 
-.field public static final btn_blue_bg:I = 0x7f020022
+.field public static final btn_bg_radius:I = 0x7f080003
 
-.field public static final btn_red_bg:I = 0x7f02003a
+.field public static final btn_bg_radius_small:I = 0x7f080004
 
-.field public static final btn_transparent_bg:I = 0x7f02005a
+.field public static final click_button_h:I = 0x7f080007
 
-.field public static final click_btn_bg:I = 0x7f020071
+.field public static final click_button_text_size:I = 0x7f080005
 
-.field public static final custom_toast_bg:I = 0x7f020080
+.field public static final click_button_w:I = 0x7f08000a
 
-.field public static final ic_home_back:I = 0x7f0200b1
+.field public static final common_list_item_left_right_padding:I = 0x7f080011
 
-.field public static final ic_home_back_normal:I = 0x7f0200b2
+.field public static final common_list_item_main_font:I = 0x7f080017
 
-.field public static final ic_home_back_pressed:I = 0x7f0200b3
+.field public static final dialog_title_margin_bottom:I = 0x7f080006
 
-.field public static final ic_indicator_prev:I = 0x7f0200b4
+.field public static final dynamic_info_height:I = 0x7f080014
 
-.field public static final ic_indicator_prev_light:I = 0x7f0200b6
+.field public static final dynamic_info_title:I = 0x7f080015
 
-.field public static final ic_launcher:I = 0x7f0200be
+.field public static final dynamic_info_value:I = 0x7f080016
 
-.field public static final left_round_button_bg:I = 0x7f020126
+.field public static final dynamic_info_width:I = 0x7f080013
 
-.field public static final progress:I = 0x7f020150
+.field public static final font_size_f1:I = 0x7f08000c
 
-.field public static final progress_icon:I = 0x7f020151
+.field public static final font_size_f2:I = 0x7f08000d
 
-.field public static final right_round_button_bg:I = 0x7f020155
+.field public static final font_size_f3:I = 0x7f08000e
 
-.field public static final round_button_bg:I = 0x7f020156
+.field public static final font_size_f4:I = 0x7f08000f
 
-.field public static final share_facebook:I = 0x7f020170
+.field public static final item_height:I = 0x7f080012
 
-.field public static final share_facebook_selector:I = 0x7f020171
+.field public static final mili_margin:I = 0x7f080008
 
-.field public static final share_facebook_uninstall:I = 0x7f020172
+.field public static final mili_normal_txt_size:I = 0x7f080000
 
-.field public static final share_line:I = 0x7f020173
+.field public static final round_bg_radius:I = 0x7f080002
 
-.field public static final share_line_selector:I = 0x7f020174
+.field public static final round_bg_stroke:I = 0x7f080001
 
-.field public static final share_line_uninstall:I = 0x7f020175
+.field public static final round_btn_radius:I = 0x7f08000b
 
-.field public static final share_miliao:I = 0x7f020176
+.field public static final share_pane_margin:I = 0x7f080018
 
-.field public static final share_miliao_selector:I = 0x7f020177
-
-.field public static final share_miliao_uninstall:I = 0x7f020178
-
-.field public static final share_pengyouquan_select:I = 0x7f020179
-
-.field public static final share_pengyouquan_selector:I = 0x7f02017a
-
-.field public static final share_pengyouquan_uninstall:I = 0x7f02017b
-
-.field public static final share_qq_select:I = 0x7f02017c
-
-.field public static final share_qq_selector:I = 0x7f02017d
-
-.field public static final share_qq_uninstall:I = 0x7f02017e
-
-.field public static final share_qq_zone_select:I = 0x7f02017f
-
-.field public static final share_qq_zone_selector:I = 0x7f020180
-
-.field public static final share_qq_zone_uninstall:I = 0x7f020181
-
-.field public static final share_split:I = 0x7f020182
-
-.field public static final share_twitter:I = 0x7f020183
-
-.field public static final share_twitter_selector:I = 0x7f020184
-
-.field public static final share_twitter_uninstall:I = 0x7f020185
-
-.field public static final share_weibo_select:I = 0x7f020186
-
-.field public static final share_weibo_selector:I = 0x7f020187
-
-.field public static final share_weibo_uninstall:I = 0x7f020188
-
-.field public static final share_weixin_select:I = 0x7f020189
-
-.field public static final share_weixin_selector:I = 0x7f02018a
-
-.field public static final share_weixin_uninstall:I = 0x7f02018b
+.field public static final stroke_width_minus:I = 0x7f080009
 
 
 # direct methods

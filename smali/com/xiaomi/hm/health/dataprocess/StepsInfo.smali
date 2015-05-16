@@ -537,7 +537,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -562,6 +562,14 @@
     .locals 0
 
     iput p1, p0, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->runtime:I
+
+    return-void
+.end method
+
+.method public setSportDay(Lcom/xiaomi/hm/health/dataprocess/SportDay;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/xiaomi/hm/health/dataprocess/StepsInfo;->sDay:Lcom/xiaomi/hm/health/dataprocess/SportDay;
 
     return-void
 .end method

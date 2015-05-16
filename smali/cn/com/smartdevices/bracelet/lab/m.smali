@@ -58,7 +58,7 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->j()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readApkVersion()Ljava/lang/String;
 
     move-result-object v1
 
@@ -68,11 +68,11 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->q()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readFeatureVisited()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->a()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->clearFeatureVisited()V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/lab/m;->a:Ljava/util/Map;
 
@@ -121,7 +121,7 @@
 
     if-eqz v4, :cond_3
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->d(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepFeatureVisited(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -253,7 +253,7 @@
 .method public static a()Z
     .locals 4
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->q()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readFeatureVisited()Ljava/lang/String;
 
     move-result-object v1
 
@@ -357,7 +357,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->q()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readFeatureVisited()Ljava/lang/String;
 
     move-result-object v2
 
@@ -411,7 +411,7 @@
     return v0
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->q()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readFeatureVisited()Ljava/lang/String;
 
     move-result-object v0
 
@@ -485,7 +485,7 @@
 .method public static b()V
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->g()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v0
 
@@ -519,7 +519,7 @@
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/lab/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->q()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readFeatureVisited()Ljava/lang/String;
 
     move-result-object v0
 
@@ -544,7 +544,7 @@
 
     const-string v1, "SITUP,ROPE_SKIPPING,SPORT_VOTE,ACTION_TAG"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->d(Ljava/lang/String;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/Keeper;->keepFeatureVisited(Ljava/lang/String;)V
 
     :cond_2
     const-string v1, "SERVICE"
@@ -557,7 +557,7 @@
 
     const-string v0, "WEIXIN_BIND,QQ_HEALTH,YUANMENG,BOHE,ANNUAL_REPORT"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->d(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepFeatureVisited(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -565,7 +565,7 @@
 .method public static b(Ljava/lang/String;)V
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->q()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readFeatureVisited()Ljava/lang/String;
 
     move-result-object v0
 
@@ -579,7 +579,7 @@
     return-void
 
     :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->d(Ljava/lang/String;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/Keeper;->keepFeatureVisited(Ljava/lang/String;)V
 
     goto :goto_0
 .end method

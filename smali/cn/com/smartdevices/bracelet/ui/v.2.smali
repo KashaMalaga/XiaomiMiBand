@@ -40,11 +40,11 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/l;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/l;->c()Z
 
     move-result v0
 
@@ -54,7 +54,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(J)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Keeper;->keepBraceletStatisticTime(J)V
 
     :cond_0
     return-void

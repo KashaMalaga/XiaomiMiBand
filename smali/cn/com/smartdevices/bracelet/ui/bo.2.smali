@@ -1,54 +1,76 @@
-.class Lcn/com/smartdevices/bracelet/ui/bo;
-.super Landroid/support/v13/app/h;
+.class public Lcn/com/smartdevices/bracelet/ui/bo;
+.super Landroid/app/Fragment;
+
+
+# static fields
+.field protected static b:Landroid/widget/TextView;
 
 
 # instance fields
-.field final synthetic c:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+.field public a:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;Landroid/app/FragmentManager;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bo;->c:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
-
-    invoke-direct {p0, p2}, Landroid/support/v13/app/h;-><init>(Landroid/app/FragmentManager;)V
+    invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)Landroid/app/Fragment;
-    .locals 1
+.method protected a(Landroid/view/View;Lcn/com/smartdevices/bracelet/ui/bw;)V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bo;->c:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
+    const v0, 0x7f0d009a
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->k(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/app/Fragment;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Landroid/view/View;
 
-    return-object v0
-.end method
+    const v0, 0x7f0d009b
 
-.method public b()I
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bo;->c:Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;->k(Lcn/com/smartdevices/bracelet/ui/InstructionWeightActivity;)Ljava/util/ArrayList;
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    check-cast v0, Landroid/widget/TextView;
 
-    move-result v0
+    sput-object v0, Lcn/com/smartdevices/bracelet/ui/bo;->b:Landroid/widget/TextView;
 
-    return v0
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/bo;->b:Landroid/widget/TextView;
+
+    iget-object v1, p2, Lcn/com/smartdevices/bracelet/ui/bw;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    const v0, 0x7f0d009c
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iget-object v1, p2, Lcn/com/smartdevices/bracelet/ui/bw;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    const v0, 0x7f0d009d
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iget-object v1, p2, Lcn/com/smartdevices/bracelet/ui/bw;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

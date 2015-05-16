@@ -1,19 +1,21 @@
-.class Lcn/com/smartdevices/bracelet/gps/ui/aB;
+.class Lcn/com/smartdevices/bracelet/gps/ui/ab;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+
+.field private b:F
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aB;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/ab;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,64 +24,80 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aB;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;
+    const/4 v2, 0x0
 
-    const v1, 0x7f090214
+    if-nez p1, :cond_1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->getString(I)Ljava/lang/String;
+    :cond_0
+    :goto_0
+    return v2
 
-    move-result-object v0
+    :cond_1
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->vp_mark_pager:I
 
-    new-instance v1, Lcom/huami/android/b/a/d;
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
-    invoke-direct {v1}, Lcom/huami/android/b/a/d;-><init>()V
+    move-result v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/aB;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;
+    if-ne v0, v1, :cond_0
 
-    const v3, 0x7f090354
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->getString(I)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v2
+    if-nez v0, :cond_2
 
-    iput-object v2, v1, Lcom/huami/android/b/a/d;->a:Ljava/lang/String;
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
+    move-result v0
 
-    move-result-object v2
+    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ab;->b:F
 
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->g:Lcn/com/smartdevices/bracelet/config/a/b;
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ab;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->c(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Z
 
-    const-string v2, "http://paopaotuan.org/"
+    move-result v0
 
-    iput-object v2, v1, Lcom/huami/android/b/a/d;->d:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    const-string v2, ""
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ab;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
-    iput-object v2, v1, Lcom/huami/android/b/a/d;->c:Ljava/lang/String;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/aB;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lcom/huami/android/b/a/d;->e:Ljava/lang/String;
-
-    iput-object v0, v1, Lcom/huami/android/b/a/d;->b:Ljava/lang/String;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aB;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;)Lcom/huami/android/b/a/h;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->d(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Lcn/com/smartdevices/bracelet/gps/ui/am;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/huami/android/b/a/h;->a(Lcom/huami/android/b/a/d;)V
+    if-eqz v0, :cond_0
 
-    return-void
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ab;->b:F
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
+
+    move-result v1
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ab;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->d(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Lcn/com/smartdevices/bracelet/gps/ui/am;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/am;->b()V
+
+    goto :goto_0
 .end method

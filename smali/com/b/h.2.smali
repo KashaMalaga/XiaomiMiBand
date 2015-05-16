@@ -6,34 +6,62 @@
 
 
 # instance fields
-.field protected a:[B
+.field protected a:B
 
-.field protected b:S
+.field protected b:[B
 
-.field protected c:[B
+.field protected c:D
+
+.field protected d:I
+
+.field protected e:I
+
+.field protected f:D
+
+.field protected g:B
+
+.field protected h:B
+
+.field protected i:[B
+
+.field protected j:B
 
 
 # direct methods
 .method constructor <init>()V
-    .locals 1
+    .locals 5
+
+    const/16 v4, 0x64
+
+    const-wide/16 v2, 0x0
+
+    const/4 v1, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x10
+    iput-byte v1, p0, Lcom/b/h;->a:B
 
-    new-array v0, v0, [B
+    new-array v0, v4, [B
 
-    iput-object v0, p0, Lcom/b/h;->a:[B
+    iput-object v0, p0, Lcom/b/h;->b:[B
 
-    const/4 v0, 0x0
+    iput-wide v2, p0, Lcom/b/h;->c:D
 
-    iput-short v0, p0, Lcom/b/h;->b:S
+    iput v1, p0, Lcom/b/h;->d:I
 
-    const/16 v0, 0x20
+    iput v1, p0, Lcom/b/h;->e:I
 
-    new-array v0, v0, [B
+    iput-wide v2, p0, Lcom/b/h;->f:D
 
-    iput-object v0, p0, Lcom/b/h;->c:[B
+    iput-byte v1, p0, Lcom/b/h;->g:B
+
+    iput-byte v1, p0, Lcom/b/h;->h:B
+
+    new-array v0, v4, [B
+
+    iput-object v0, p0, Lcom/b/h;->i:[B
+
+    iput-byte v1, p0, Lcom/b/h;->j:B
 
     return-void
 .end method

@@ -11,10 +11,10 @@
     return-void
 .end method
 
-.method protected static a(Landroid/location/Location;Lcom/b/m;IBJ)Lcom/b/e;
+.method protected static a(Landroid/location/Location;Lcom/b/o;IBJZ)Lcom/b/e;
     .locals 1
 
-    invoke-static/range {p0 .. p5}, Lcom/b/j;->a(Landroid/location/Location;Lcom/b/m;IBJ)Lcom/b/e;
+    invoke-static/range {p0 .. p6}, Lcom/b/l;->a(Landroid/location/Location;Lcom/b/o;IBJZ)Lcom/b/e;
 
     move-result-object v0
 

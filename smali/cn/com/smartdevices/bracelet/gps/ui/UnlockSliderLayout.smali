@@ -86,9 +86,9 @@
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->j:Z
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/ab;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/Z;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/ab;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/Z;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->k:Ljava/lang/Runnable;
 
@@ -251,7 +251,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020162
+    sget v2, Lcom/xiaomi/hm/health/b/a/h;->running_screen_unlock_holder:I
 
     invoke-static {v1, v2, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -346,7 +346,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->d:Landroid/content/Context;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/d/i;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/f/l;->b(Landroid/content/Context;)V
 
     const/4 v0, 0x1
 
@@ -380,7 +380,7 @@
 
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f07015a
+    sget v0, Lcom/xiaomi/hm/health/b/a/i;->unlock_slider:I
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->findViewById(I)Landroid/view/View;
 
@@ -455,7 +455,7 @@
     :cond_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->g:Landroid/os/Handler;
 
-    const/16 v2, 0x64
+    const/4 v2, 0x6
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -478,8 +478,6 @@
     iput-boolean v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->j:Z
 
     goto :goto_0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

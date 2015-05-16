@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -22,34 +22,32 @@
 
 
 # virtual methods
-.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method public onClick(Landroid/view/View;)V
+    .locals 3
 
-    if-eqz p2, :cond_0
+    new-instance v0, Landroid/os/Bundle;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    const-string v1, "Days"
 
-    move-result-object v0
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    const/16 v1, 0x1e
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Lcom/xiaomi/hm/health/bt/AlarmClockItem;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->setDuration(I)V
+    move-result-object v2
 
-    :goto_0
+    invoke-virtual {v2}, Lcom/xiaomi/hm/health/bt/AlarmClockItem;->getCoded()I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+
+    const-class v2, Lcn/com/smartdevices/bracelet/ui/cw;
+
+    invoke-static {v1, v2, v0}, Lcom/huami/android/view/b;->showPanel(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;)V
+
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->setDuration(I)V
-
-    goto :goto_0
 .end method

@@ -51,7 +51,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
 
-    const v1, 0x7f090336
+    const v1, 0x7f0903c9
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->c(Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;I)V
 
@@ -91,7 +91,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weibo/l;->a:Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;
 
-    const v1, 0x7f090332
+    const v1, 0x7f0903c5
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;->c(Lcn/com/smartdevices/bracelet/weibo/BindHealthActivity;I)V
 

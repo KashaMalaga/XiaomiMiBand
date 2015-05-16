@@ -41,7 +41,7 @@
                         <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
                             <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/goal_weight" style="@style/ListItemTitleText" />
                         </LinearLayout>
-                        <TextView android:id="@id/device_set_goal_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="未设定" style="@style/ListItemValueText" />
+                        <TextView android:id="@id/device_set_goal_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/not_set" style="@style/ListItemValueText" />
                         <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                     </LinearLayout>
                     <include layout="@layout/split_line_with_margin" />

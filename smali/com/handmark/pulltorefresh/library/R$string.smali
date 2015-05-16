@@ -3,17 +3,17 @@
 
 
 # static fields
-.field public static final pull_to_refresh_from_bottom_pull_label:I = 0x7f090003
+.field public static final pull_to_refresh_from_bottom_pull_label:I = 0x7f09001c
 
-.field public static final pull_to_refresh_from_bottom_refreshing_label:I = 0x7f090005
+.field public static final pull_to_refresh_from_bottom_refreshing_label:I = 0x7f09001e
 
-.field public static final pull_to_refresh_from_bottom_release_label:I = 0x7f090004
+.field public static final pull_to_refresh_from_bottom_release_label:I = 0x7f09001d
 
-.field public static final pull_to_refresh_pull_label:I = 0x7f090000
+.field public static final pull_to_refresh_pull_label:I = 0x7f090019
 
-.field public static final pull_to_refresh_refreshing_label:I = 0x7f090002
+.field public static final pull_to_refresh_refreshing_label:I = 0x7f09001b
 
-.field public static final pull_to_refresh_release_label:I = 0x7f090001
+.field public static final pull_to_refresh_release_label:I = 0x7f09001a
 
 
 # direct methods

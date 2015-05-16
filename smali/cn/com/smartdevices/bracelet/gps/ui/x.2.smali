@@ -35,7 +35,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/ui/n;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/ui/o;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/x;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
@@ -98,9 +98,9 @@
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     const-string v2, "result"
 
@@ -108,7 +108,7 @@
 
     move-result v1
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     const-string v2, "message"
 
@@ -146,7 +146,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -157,15 +157,15 @@
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    instance-of v0, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;
+    instance-of v0, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     const-string v2, "result"
 
@@ -173,7 +173,7 @@
 
     move-result v1
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     const-string v3, "message"
 
@@ -211,14 +211,14 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->a:Ljava/lang/String;
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->a:Ljava/lang/String;
 
     if-eqz v1, :cond_3
 
     :try_start_0
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     const-string v1, "nextLatestTrackId"
 
@@ -251,11 +251,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;
 
     if-eqz v0, :cond_2
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     const-string v2, "fromTimeStamp"
 
@@ -263,7 +263,7 @@
 
     move-result-wide v1
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     const-string v4, "toTimeStamp"
 
@@ -311,7 +311,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090408
+    sget v1, Lcom/xiaomi/hm/health/b/a/n;->running_failed_to_get_history_neterror:I
 
     const/4 v2, 0x0
 
@@ -354,15 +354,15 @@
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    instance-of v0, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;
+    instance-of v0, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     const-string v2, "result"
 
@@ -370,7 +370,7 @@
 
     move-result v1
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     const-string v3, "message"
 
@@ -408,9 +408,9 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->a:Ljava/lang/String;
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->a:Ljava/lang/String;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/x;->i:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 
@@ -422,7 +422,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;
 
     if-nez v0, :cond_6
 
@@ -446,7 +446,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -463,7 +463,7 @@
 
     if-ne v6, v2, :cond_0
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     const-string v2, "fromTimeStamp"
 
@@ -471,7 +471,7 @@
 
     move-result-wide v1
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;->b:Landroid/os/Bundle;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/sync/DataSyncObject;->b:Landroid/os/Bundle;
 
     const-string v3, "toTimeStamp"
 
@@ -512,7 +512,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0903d1
+    sget v1, Lcom/xiaomi/hm/health/b/a/n;->running_history_no_more_data:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -559,7 +559,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0903d2
+    sget v1, Lcom/xiaomi/hm/health/b/a/n;->running_history_no_data_refresh:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -616,8 +616,6 @@
     invoke-virtual {v0, v3}, Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;->setVisibility(I)V
 
     goto/16 :goto_0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -56,23 +56,24 @@ localization_zh_rTW_table = {
         {str="≈3個肉包子",	calories=816},
     },
 
-    ok='確定',
+    ok="確定",
 
-    hour='小時',
-    minute='分鐘',
-    month='月',
-    day='日',
+    hour="小時",
+    minute="分鐘",
+    month="月",
+    day="日",
     step="步",
-    km='公里',
-    minute_format='%d分鐘',
-    hour_minute_format='%d小時%d分鐘',
-    hour_format='%d小時',
+    km="公里",
+    mile="英里",
+    minute_format="%d分鐘",
+    hour_minute_format="%d小時%d分鐘",
+    hour_format="%d小時",
 
-    welcome_use='小米手環绑定成功',
-    last_week_walked_format='上周共行走%d步',
-    last_week_walked_info_format='共走了%d公里、消耗%d大卡',
-    last_month_walked_format='上月共行走%d步',
-    last_month_walked_info_format='共走了%d公里、消耗%d大卡',
+    welcome_use="小米手環绑定成功",
+    last_week_walked_format="上周共行走%d步",
+    last_week_walked_info_format="共走了%s、消耗%d大卡",
+    last_month_walked_format="上月共行走%d步",
+    last_month_walked_info_format="共走了%s、消耗%d大卡",
 
     get_over_format=", 輕鬆甩掉%d克肥肉",
     click_to_get_help="點擊查看如何玩轉小米手環",
@@ -186,12 +187,13 @@ localization_zh_rTW_table = {
     weather_tips_info = "仰臥起坐、跳繩、平板支撐都是很棒的室內活動哦",
 
     ---------------Weight scale -------------------
-    welcome_use_weight_scale = "小米智能秤綁定成功",
-    welcome_use_weight_scale_info = "點擊查看如何玩轉體重秤",
+
+    welcome_use_weight_scale = "小米智慧體重機綁定成功",
+    welcome_use_weight_scale_info = "點選查看如何玩轉體重機",
     welcome_use_weight_scale_not_bind = "点击綁定小米智能秤",
 
     welcome_use_mi_health="歡迎使用小米運動",
 
-    select_devices="还没有绑定设备哦, 点击绑定吧",
+    select_devices="還沒有綁定設備哦, 點選綁定吧",
     daily_steps_not_comlete = "今天還差%s步就達成目標啦！",
 }

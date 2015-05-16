@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/view/DynamicView;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+    .locals 2
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -35,35 +35,13 @@
 
     move-result v0
 
-    const v1, 0x3e478084
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
-    const/high16 v2, 0x3f800000
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->d(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
 
-    sub-float/2addr v2, v1
+    move-result-object v1
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;)F
-
-    move-result v3
-
-    mul-float/2addr v0, v2
-
-    add-float/2addr v0, v1
-
-    mul-float/2addr v0, v3
-
-    float-to-int v0, v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
-
-    int-to-float v0, v0
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;F)F
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/a/a;->a(Landroid/view/View;)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setRotationY(F)V
 
     return-void
 .end method

@@ -19,7 +19,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x8
+    const/4 v0, 0x3
 
     iput-byte v0, p0, Lcom/b/g;->c:B
 
@@ -39,7 +39,7 @@
 
 # virtual methods
 .method protected final a(Ljava/io/DataOutputStream;)Ljava/lang/Boolean;
-    .locals 4
+    .locals 9
 
     const/4 v0, 0x0
 
@@ -59,9 +59,13 @@
     move v2, v0
 
     :goto_0
-    iget-byte v0, p0, Lcom/b/g;->a:B
+    iget-object v0, p0, Lcom/b/g;->b:Ljava/util/ArrayList;
 
-    if-ge v2, v0, :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-ge v2, v0, :cond_2
 
     iget-object v0, p0, Lcom/b/g;->b:Ljava/util/ArrayList;
 
@@ -71,25 +75,87 @@
 
     check-cast v0, Lcom/b/h;
 
-    iget-object v3, v0, Lcom/b/h;->a:[B
+    iget-byte v3, v0, Lcom/b/h;->a:B
 
-    invoke-virtual {p1, v3}, Ljava/io/DataOutputStream;->write([B)V
+    invoke-virtual {p1, v3}, Ljava/io/DataOutputStream;->writeByte(I)V
 
-    iget-short v3, v0, Lcom/b/h;->b:S
+    iget-byte v3, v0, Lcom/b/h;->a:B
 
-    invoke-virtual {p1, v3}, Ljava/io/DataOutputStream;->writeShort(I)V
+    new-array v4, v3, [B
 
-    iget-object v3, v0, Lcom/b/h;->c:[B
+    iget-object v5, v0, Lcom/b/h;->b:[B
 
-    iget-object v0, v0, Lcom/b/h;->c:[B
+    const/4 v6, 0x0
 
-    array-length v0, v0
+    const/4 v7, 0x0
 
-    invoke-static {v3, v0}, Lcom/b/j;->a([BI)[B
+    iget-byte v3, v0, Lcom/b/h;->a:B
 
-    move-result-object v0
+    iget-object v8, v0, Lcom/b/h;->b:[B
 
-    invoke-virtual {p1, v0}, Ljava/io/DataOutputStream;->write([B)V
+    array-length v8, v8
+
+    if-ge v3, v8, :cond_0
+
+    iget-byte v3, v0, Lcom/b/h;->a:B
+
+    :goto_1
+    invoke-static {v5, v6, v4, v7, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    invoke-virtual {p1, v4}, Ljava/io/DataOutputStream;->write([B)V
+
+    iget-wide v3, v0, Lcom/b/h;->c:D
+
+    invoke-virtual {p1, v3, v4}, Ljava/io/DataOutputStream;->writeDouble(D)V
+
+    iget v3, v0, Lcom/b/h;->d:I
+
+    invoke-virtual {p1, v3}, Ljava/io/DataOutputStream;->writeInt(I)V
+
+    iget v3, v0, Lcom/b/h;->e:I
+
+    invoke-virtual {p1, v3}, Ljava/io/DataOutputStream;->writeInt(I)V
+
+    iget-wide v3, v0, Lcom/b/h;->f:D
+
+    invoke-virtual {p1, v3, v4}, Ljava/io/DataOutputStream;->writeDouble(D)V
+
+    iget-byte v3, v0, Lcom/b/h;->g:B
+
+    invoke-virtual {p1, v3}, Ljava/io/DataOutputStream;->writeByte(I)V
+
+    iget-byte v3, v0, Lcom/b/h;->h:B
+
+    invoke-virtual {p1, v3}, Ljava/io/DataOutputStream;->writeByte(I)V
+
+    iget-byte v3, v0, Lcom/b/h;->h:B
+
+    new-array v4, v3, [B
+
+    iget-object v5, v0, Lcom/b/h;->i:[B
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    iget-byte v3, v0, Lcom/b/h;->h:B
+
+    iget-object v8, v0, Lcom/b/h;->i:[B
+
+    array-length v8, v8
+
+    if-ge v3, v8, :cond_1
+
+    iget-byte v3, v0, Lcom/b/h;->h:B
+
+    :goto_2
+    invoke-static {v5, v6, v4, v7, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    invoke-virtual {p1, v4}, Ljava/io/DataOutputStream;->write([B)V
+
+    iget-byte v0, v0, Lcom/b/h;->j:B
+
+    invoke-virtual {p1, v0}, Ljava/io/DataOutputStream;->writeByte(I)V
 
     add-int/lit8 v0, v2, 0x1
 
@@ -98,6 +164,20 @@
     goto :goto_0
 
     :cond_0
+    iget-object v3, v0, Lcom/b/h;->b:[B
+
+    array-length v3, v3
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v3, v0, Lcom/b/h;->i:[B
+
+    array-length v3, v3
+
+    goto :goto_2
+
+    :cond_2
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -106,7 +186,7 @@
 
     move-result-object v0
 
-    :goto_1
+    :goto_3
     return-object v0
 
     :catch_0
@@ -114,5 +194,5 @@
 
     move-object v0, v1
 
-    goto :goto_1
+    goto :goto_3
 .end method

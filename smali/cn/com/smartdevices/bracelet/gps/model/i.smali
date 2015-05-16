@@ -2,72 +2,91 @@
 .super Ljava/lang/Object;
 
 
-# static fields
-.field public static final a:I = 0x0
-
-.field public static final b:I = 0x1
-
-.field public static final c:I = 0x2
-
-
 # instance fields
-.field public d:F
+.field public a:Ljava/lang/String;
 
-.field public e:J
+.field public b:Ljava/lang/String;
 
-.field public f:J
+.field public c:Ljava/lang/String;
 
-.field public g:I
+.field public d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JFJ)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/model/i;->g:I
-
-    iput p3, p0, Lcn/com/smartdevices/bracelet/gps/model/i;->d:F
-
-    iput-wide p4, p0, Lcn/com/smartdevices/bracelet/gps/model/i;->e:J
-
-    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/model/i;->f:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eqz p1, :cond_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    instance-of v1, p1, Lcn/com/smartdevices/bracelet/gps/model/i;
+    const-string v1, "RunningPace [kilometer="
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    :goto_0
-    return v0
+    move-result-object v0
 
-    :cond_1
-    check-cast p1, Lcn/com/smartdevices/bracelet/gps/model/i;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/model/i;->a:Ljava/lang/String;
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/model/i;->f:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v3, p1, Lcn/com/smartdevices/bracelet/gps/model/i;->f:J
+    move-result-object v0
 
-    cmp-long v1, v1, v3
+    const-string v1, ", costTime="
 
-    if-nez v1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    goto :goto_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/model/i;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", pace="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/model/i;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", speed="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/model/i;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

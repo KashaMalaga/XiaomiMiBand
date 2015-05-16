@@ -42,7 +42,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/xiaomi/hm/health/a/g;->share_prepare_tips:I
+    sget v2, Lcom/xiaomi/hm/health/a/h;->share_prepare_tips:I
 
     invoke-virtual {v1, v2}, Lcom/huami/android/b/a/e;->a(I)V
 

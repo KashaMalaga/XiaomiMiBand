@@ -28,6 +28,9 @@
 .method public abstract a()Landroid/location/Location;
 .end method
 
+.method public abstract a(Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;)V
+.end method
+
 .method public abstract a(Lcn/com/smartdevices/bracelet/gps/services/a/a;)V
 .end method
 
@@ -46,16 +49,16 @@
 .method public abstract b(Lcn/com/smartdevices/bracelet/gps/services/a/b;)V
 .end method
 
-.method public abstract c(J)I
+.method public abstract c()I
 .end method
 
-.method public abstract c()Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
+.method public abstract c(J)I
 .end method
 
 .method public abstract c(Lcn/com/smartdevices/bracelet/gps/services/a/b;)V
 .end method
 
-.method public abstract d()J
+.method public abstract d()Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;
 .end method
 
 .method public abstract d(J)V
@@ -70,13 +73,16 @@
 .method public abstract e(J)V
 .end method
 
-.method public abstract f()V
+.method public abstract f()J
 .end method
 
 .method public abstract f(J)V
 .end method
 
-.method public abstract g()Ljava/util/ArrayList;
+.method public abstract g()V
+.end method
+
+.method public abstract h()Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -88,20 +94,20 @@
     .end annotation
 .end method
 
-.method public abstract h()Ljava/io/File;
+.method public abstract i()Ljava/io/File;
 .end method
 
-.method public abstract i()F
+.method public abstract j()F
 .end method
 
-.method public abstract j()I
+.method public abstract k()I
 .end method
 
-.method public abstract k()Ljava/io/File;
+.method public abstract l()Ljava/io/File;
 .end method
 
-.method public abstract l()V
+.method public abstract m()V
 .end method
 
-.method public abstract m()I
+.method public abstract n()I
 .end method

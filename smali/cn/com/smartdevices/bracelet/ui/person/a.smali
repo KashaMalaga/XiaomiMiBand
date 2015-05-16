@@ -13,11 +13,11 @@
 
 .field private d:Lkankan/wheel/widget/WheelView;
 
-.field private e:Lcn/com/smartdevices/bracelet/ui/cX;
+.field private e:Lcn/com/smartdevices/bracelet/ui/cY;
 
 .field private f:Lkankan/wheel/widget/WheelView;
 
-.field private g:Lcn/com/smartdevices/bracelet/ui/cX;
+.field private g:Lcn/com/smartdevices/bracelet/ui/cY;
 
 .field private h:I
 
@@ -132,7 +132,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0d0003
+    const v2, 0x7f0c0003
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -175,7 +175,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Lkankan/wheel/widget/WheelView;->a(Ljava/lang/String;)Lkankan/wheel/widget/WheelView;
 
@@ -190,7 +190,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0d0002
+    const v2, 0x7f0c0002
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -314,17 +314,17 @@
     if-eq v1, v2, :cond_2
 
     :cond_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->g:Lcn/com/smartdevices/bracelet/ui/cX;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->g:Lcn/com/smartdevices/bracelet/ui/cY;
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->k:I
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/cX;->c(I)V
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/cY;->c(I)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->g:Lcn/com/smartdevices/bracelet/ui/cX;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->g:Lcn/com/smartdevices/bracelet/ui/cY;
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->j:I
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/cX;->d(I)V
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/cY;->d(I)V
 
     const-string v1, "WeightWrapper"
 
@@ -376,7 +376,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->j:I
 
@@ -516,7 +516,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->k:I
 
@@ -532,16 +532,16 @@
     goto :goto_0
 .end method
 
-.method public a(Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cX;Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cX;)V
+.method public a(Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cY;Lkankan/wheel/widget/WheelView;Lcn/com/smartdevices/bracelet/ui/cY;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->d:Lkankan/wheel/widget/WheelView;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->e:Lcn/com/smartdevices/bracelet/ui/cX;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->e:Lcn/com/smartdevices/bracelet/ui/cY;
 
     iput-object p3, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->f:Lkankan/wheel/widget/WheelView;
 
-    iput-object p4, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->g:Lcn/com/smartdevices/bracelet/ui/cX;
+    iput-object p4, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->g:Lcn/com/smartdevices/bracelet/ui/cY;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/person/a;->d()V
 
@@ -629,7 +629,7 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide v0, 0x400451eb851eb852L
 

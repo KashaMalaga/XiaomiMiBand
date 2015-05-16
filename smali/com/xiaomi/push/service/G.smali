@@ -159,7 +159,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/xiaomi/push/service/XMPushService;->a(Ljava/lang/String;[B)V
     :try_end_1
-    .catch Lcom/xiaomi/g/C; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Lcom/xiaomi/h/C; {:try_start_1 .. :try_end_1} :catch_2
 
     goto :goto_1
 
@@ -209,7 +209,7 @@
 
     invoke-virtual {v1, v2}, Lcom/xiaomi/push/service/XMPushService;->a(Lcom/xiaomi/push/service/e;)V
     :try_end_2
-    .catch Lcom/xiaomi/g/C; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Lcom/xiaomi/h/C; {:try_start_2 .. :try_end_2} :catch_2
 
     goto :goto_1
 

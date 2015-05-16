@@ -15,7 +15,7 @@
 # instance fields
 .field protected b:I
 
-.field private final c:Lcn/com/smartdevices/bracelet/a/b;
+.field private final c:Lcom/xiaomi/hm/health/bt/a/b;
 
 .field private final g:Lcn/com/smartdevices/bracelet/gps/services/X;
 
@@ -40,7 +40,7 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/services/V;-><init>(Lcn/com/smartdevices/bracelet/gps/services/U;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->c:Lcn/com/smartdevices/bracelet/a/b;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->c:Lcom/xiaomi/hm/health/bt/a/b;
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->b:I
 
@@ -58,7 +58,7 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->i:Landroid/content/Context;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->b()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/c/a;->f()Z
 
     move-result v0
 
@@ -69,7 +69,7 @@
     iput v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->b:I
 
     :goto_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/U;->g()Z
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/U;->f()Z
 
     move-result v0
 
@@ -85,7 +85,7 @@
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_ACTION_CONN_STATUS_CHANGED:Ljava/lang/String;
+    sget-object v1, Lcom/xiaomi/hm/health/bt/bleservice/BLEService;->h:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
@@ -97,7 +97,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/c/a;->e()Z
 
     move-result v0
 
@@ -116,7 +116,7 @@
 
     const-string v1, "RtStep.NO_BINDED_DEVICES"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -125,7 +125,7 @@
 
     const-string v1, "Dont support"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method
@@ -148,17 +148,28 @@
 
 
 # virtual methods
-.method protected abstract a(I)V
+.method public a()V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->j:Landroid/content/BroadcastReceiver;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->i:Landroid/content/Context;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->j:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->j:Landroid/content/BroadcastReceiver;
+
+    :cond_0
+    return-void
 .end method
 
-.method protected a()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/U;->g()Z
-
-    move-result v0
-
-    return v0
+.method protected abstract a(I)V
 .end method
 
 .method protected a(Z)Z
@@ -184,15 +195,15 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->h:Z
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->n()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->l()Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->h()Z
 
     move-result v0
 
@@ -200,7 +211,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->g:Lcn/com/smartdevices/bracelet/gps/services/X;
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/e/d;->b(ZLcn/com/smartdevices/bracelet/e/c;)V
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/gps/c/a;->a(ZLcom/xiaomi/hm/health/bt/IRealtimeStepsChangedCB;)Z
 
     :goto_0
     const/4 v0, 0x0
@@ -220,7 +231,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->n()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->l()Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;
 
     move-result-object v2
 
@@ -232,52 +243,31 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public c()V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->j:Landroid/content/BroadcastReceiver;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->i:Landroid/content/Context;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->j:Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->j:Landroid/content/BroadcastReceiver;
-
-    :cond_0
-    return-void
-.end method
-
-.method protected d()V
+.method protected c()V
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->n()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->l()Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+    invoke-virtual {v0}, Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;->h()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/E;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/G;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->c:Lcn/com/smartdevices/bracelet/a/b;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->c:Lcom/xiaomi/hm/health/bt/a/b;
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/E;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/G;-><init>(Lcom/xiaomi/hm/health/bt/a/b;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/E;->d()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/G;->f()V
 
     :goto_0
     return-void
@@ -295,7 +285,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->n()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    invoke-static {}, Lcom/xiaomi/hm/health/bt/a;->l()Lcom/xiaomi/hm/health/bt/bleservice/HwConnStatus;
 
     move-result-object v2
 
@@ -307,12 +297,12 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/q;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method protected e()V
+.method protected d()V
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->h:Z
@@ -323,12 +313,12 @@
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/U;->d()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/U;->c()V
 
     goto :goto_0
 .end method
 
-.method protected f()Z
+.method protected e()Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->h:Z
@@ -336,7 +326,7 @@
     return v0
 .end method
 
-.method protected g()Z
+.method protected f()Z
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/U;->b:I

@@ -22,7 +22,7 @@
         <TextView android:paddingLeft="@dimen/main_menu_item_padding" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:text="@string/family_member" style="@style/ListItemTitleText" />
         <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/common_list_item_left_right_padding" android:src="@drawable/ic_indicator_right_arrow" android:layout_alignParentRight="true" />
     </RelativeLayout>
-    <include layout="@layout/split_line_with_margin" />
+    <include android:id="@id/info_weight_family_split" layout="@layout/split_line_with_margin" />
     <RelativeLayout android:id="@id/menu_lab_factory" android:background="@drawable/bg_item" android:layout_width="fill_parent" android:layout_height="@dimen/common_list_item_1_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:onClick="onItemLabClick">
         <TextView android:paddingLeft="@dimen/main_menu_item_padding" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:text="@string/action_pop_lab" style="@style/ListItemTitleText" />
         <ImageView android:id="@id/menu_lab_factory_new_sign" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/new_banner_icon" />

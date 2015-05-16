@@ -136,7 +136,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090473
+    const v1, 0x7f0904f0
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;->getString(I)Ljava/lang/String;
 
@@ -148,11 +148,11 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;->j:Lcom/huami/android/b/f;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/relation/X;
+    new-instance v0, Lcn/com/smartdevices/bracelet/relation/ab;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/relation/X;-><init>(Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;Lcn/com/smartdevices/bracelet/relation/V;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/relation/ab;-><init>(Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;Lcn/com/smartdevices/bracelet/relation/Z;)V
 
     const/4 v1, 0x1
 
@@ -162,7 +162,7 @@
 
     aput-object v2, v1, v3
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/relation/X;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/relation/ab;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     return-void
 .end method
@@ -176,7 +176,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090473
+    const v1, 0x7f0904f0
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;->getString(I)Ljava/lang/String;
 
@@ -188,11 +188,11 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;->j:Lcom/huami/android/b/f;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/relation/X;
+    new-instance v0, Lcn/com/smartdevices/bracelet/relation/ab;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/relation/X;-><init>(Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;Lcn/com/smartdevices/bracelet/relation/V;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/relation/ab;-><init>(Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;Lcn/com/smartdevices/bracelet/relation/Z;)V
 
     const/4 v1, 0x1
 
@@ -202,7 +202,7 @@
 
     aput-object v2, v1, v3
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/relation/X;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/relation/ab;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     return-void
 .end method
@@ -216,11 +216,11 @@
 
     invoke-super {p0, p1}, Lcom/huami/android/ui/ActionBarActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030046
+    const v0, 0x7f030049
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;->setContentView(I)V
 
-    const v0, 0x7f0701b8
+    const v0, 0x7f0d01c6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;->findViewById(I)Landroid/view/View;
 
@@ -230,7 +230,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;->d:Landroid/widget/ImageView;
 
-    const v0, 0x7f070110
+    const v0, 0x7f0d010a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;->findViewById(I)Landroid/view/View;
 
@@ -361,11 +361,11 @@
 
     if-nez v0, :cond_3
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/relation/W;
+    new-instance v0, Lcn/com/smartdevices/bracelet/relation/aa;
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;->g:I
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/relation/W;-><init>(Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;I)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/relation/aa;-><init>(Lcn/com/smartdevices/bracelet/relation/UserQRCardActivity;I)V
 
     new-array v1, v6, [Lcn/com/smartdevices/bracelet/relation/a/a;
 
@@ -373,7 +373,7 @@
 
     aput-object v2, v1, v5
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/relation/W;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/relation/aa;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     :goto_1
     return-void
