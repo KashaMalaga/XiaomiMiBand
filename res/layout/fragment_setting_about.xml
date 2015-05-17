@@ -7,7 +7,8 @@
                 <TextView android:id="@id/home_back" android:text="@string/about" style="@style/BackButton" />
                 <TextView android:id="@id/enable_hidden_feature" android:clickable="true" android:layout_width="80.0dip" android:layout_height="@dimen/action_bar_h" android:layout_alignTop="@id/home_back" android:layout_alignBottom="@id/home_back" android:layout_alignParentRight="true" />
                 <ImageView android:id="@id/logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="120.0dip" android:src="@drawable/ic_about_logo" android:layout_centerHorizontal="true" />
-                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:minWidth="85.0dip" android:layout_below="@id/logo" android:layout_centerHorizontal="true">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:minWidth="85.0dip" android:layout_below="@id/logo" android:layout_centerHorizontal="true"
+                    android:id="@+id/linearLayout">
                     <LinearLayout android:id="@id/setting_about_bracelet_id" android:layout_width="fill_parent" android:layout_height="wrap_content">
                         <TextView android:textSize="12.5sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_about_app" />
                         <TextView android:textSize="12.5sp" android:textColor="#ffffffff" android:id="@id/setting_about_version_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="           " />
@@ -21,6 +22,21 @@
                         <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@id/setting_about_bracelet_bluetooth_address" android:layout_width="wrap_content" android:layout_height="wrap_content" />
                     </LinearLayout>
                 </LinearLayout>
+                    <TextView
+                    android:layout_width="match_parent"
+                    android:text="Modificado por KashaMalaga.  Traducción por MrPostman"
+                    android:id="@+id/textView"
+                    android:layout_marginTop="34dp"
+                        android:layout_alignWithParentIfMissing="false"
+                        style="@style/font_white_s16_5"
+                    android:singleLine="true"
+                    android:shadowColor="@color/window_bg"
+                    android:visibility="visible"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical|center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linearLayout"
+                        android:layout_alignRight="@id/enable_hidden_feature" />
             </RelativeLayout>
             <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip">
                 <LinearLayout android:id="@id/setting_feedback" android:background="@drawable/bg_item" android:paddingLeft="@dimen/common_list_item_left_right_padding" android:paddingTop="@dimen/common_list_item_top_bottom_padding" android:paddingRight="@dimen/common_list_item_left_right_padding" android:paddingBottom="@dimen/common_list_item_top_bottom_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:minHeight="@dimen/common_list_item_1_height">

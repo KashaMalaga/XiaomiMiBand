@@ -461,31 +461,6 @@
 
     invoke-virtual {v5, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-boolean v6, p0, Lcn/com/smartdevices/bracelet/ui/dP;->S:Z
-
-    if-nez v6, :cond_1
-
-    invoke-virtual {v0, v7}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v5, v7}, Landroid/view/View;->setVisibility(I)V
-
-    const v0, 0x7f0d03d2
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v7}, Landroid/view/View;->setVisibility(I)V
-
-    const v0, 0x7f0d03d5
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v7}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_1
     const v0, 0x7f0d03d6
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
